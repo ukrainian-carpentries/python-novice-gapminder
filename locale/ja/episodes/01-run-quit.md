@@ -1,18 +1,18 @@
 ---
-title: Running and Quitting
+title: 実行と終了
 teaching: 15
 exercises: 0
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Launch the JupyterLab server.
-- Create a new Python script.
-- Create a Jupyter notebook.
-- Shutdown the JupyterLab server.
-- Understand the difference between a Python script and a Jupyter notebook.
-- Create Markdown cells in a notebook.
-- Create and run Python cells in a notebook.
+- JupyterLabサーバーを起動させる
+- 新しい Python のスクリプトを作成する
+- Jupyter ノートブックを作成する
+- JupyterLabサーバーを停止する
+- PythonスクリプトとJupyterノートブックの違いを理解する
+- ノートブックにMarkdownセルを作成する
+- ノートブックでPythonセルを作成して実行する
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -22,9 +22,9 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-To run Python, we are going to use \[Jupyter Notebooks]\[jupyter] via [JupyterLab][jupyterlab] for the remainder of this workshop. Jupyter notebooks are common in data science and visualization and serve as a convenient common-denominator experience for running Python code interactively where we can easily view and share the results of our Python code.
+このワークショップでPythonを実行するには 、[JupyterLab][jupyterlab] を経由して \[Jupyter Notebooks]\[jupyter] を使います。 Jupyter notebooks はデータサイエンスや可視化の分野において一般的であり、Pythonコードをインタラクティブに実行するための便利な共通分母体験として機能し、Pythonコードの結果を簡単に表示して共有することができます。
 
-There are other ways of editing, managing, and running code. Software developers often use an integrated development environment (IDE) like [PyCharm](https://www.jetbrains.com/pycharm/) or [Visual Studio Code](https://code.visualstudio.com/), or text editors like Vim or Emacs, to create and edit their Python programs. After editing and saving your Python programs you can execute those programs within the IDE itself or directly on the command line. In contrast, Jupyter notebooks let us execute and view the results of our Python code immediately within the notebook.
+これ以外、コードの編集、管理、実行には他の方法があります。 ソフトウェア開発者は、 [PyCharm](https://www.jetbrains) や[Visual Studio Code](https://code.visualstudio.com/)のような統合開発環境 (IDE) 、またはVim や Emacs のようなテキストエディタを使って Python プログラムを作成し編集します。 Pythonプログラムを編集して保存したら、IDE自体またはコマンドラインで直接これらのプログラムを実行できます。 これとは対照的に、Jupyter notebooks はPythonコードの結果をすぐにノートブック内で見ることができます。
 
 JupyterLab has several other handy features:
 
