@@ -440,11 +440,8 @@ ValueError: math domain error
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 [stdlib]: https://docs.python.org/3/library/
-
 [pypi]: https://pypi.python.org/pypi/
-
 [randommod]: https://docs.python.org/3/library/random.html
-
 [pep8-imports]: https://pep8.org/#imports
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
