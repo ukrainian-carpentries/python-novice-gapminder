@@ -313,7 +313,7 @@ You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Typ
   pressing the <kbd>Return</kbd> key when in Edit mode (blue) moves the cursor to the next line
   in the cell just like in a text editor.
 - We need some other way to tell the Notebook we want to run what's in the cell.
-- Pressing <kbd>Shift</kbd>+<kbd>Return</kbd> together will execute the contents of the cell.
+- Pressing <kbd>Shift</kbd>\+<kbd>Return</kbd> together will execute the contents of the cell.
 - Notice that the <kbd>Return</kbd> and <kbd>Shift</kbd> keys on the right of the keyboard are
   right next to each other.
 
@@ -332,162 +332,39 @@ You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Typ
 
 ### Markdown does most of what HTML does.
 
-<div class="row">
+Table: Showing some markdown syntax and its rendered output.
 
-  <div class="col-md-6" markdown="1">
-
-```
-*   Use asterisks
-*   to create
-*   bullet lists.
-```
-
-  
-
-  <div class="col-md-6" markdown="1">
-
-- Use asterisks
-- to create
-- bullet lists.
-
-  </div>
-
-</div>
-
-<div class="row">
-
-  <div class="col-md-6" markdown="1">
-
-```
-1.  Use numbers
-1.  to create
-1.  numbered lists.
-```
-
-  
-
-  <div class="col-md-6" markdown="1">
-
-1. Use numbers
-2. to create
-3. numbered lists.
-
-  
-
-</div>
-
-<div class="row">
-
-  <div class="col-md-6" markdown="1">
-
-```
-*  You can use indents
-	*  To create sublists 
-	*  of the same type
-*  Or sublists
-	1. Of different
-	1. types
-```
-
-  
-
-  <div class="col-md-6" markdown="1">
-
-- You can use indents
-  - To create sublists
-  - of the same type
-- Or sublists
-
-  1. Of different
-  2. types
-
-  </div>
-
-</div>
-
-<div class="row">
-
-  <div class="col-md-6" markdown="1">
-
-```
-# A Level-1 Heading
-```
-
-  
-
-  <div class="col-md-6" markdown="1">
-
-## A Level-1 Heading
-
-  
-
-</div>
-
-<div class="row">
-
-  <div class="col-md-6" markdown="1">
-
-```
-## A Level-2 Heading (etc.)
-```
-
-  
-
-  <div class="col-md-6" markdown="1">
-
-## A Level-2 Heading (etc.)
-
-  
-
-</div>
-
-<div class="row">
-
-  <div class="col-md-6" markdown="1">
-
-```
-Line breaks
-don't matter.
-
-But blank lines
-create new paragraphs.
-```
-
-  
-
-  <div class="col-md-6" markdown="1">
-
-Line breaks
-don't matter.
-
-But blank lines
-create new paragraphs.
-
-  
-
-</div>
-
-<div class="row">
-
-  <div class="col-md-6" markdown="1">
-
-```
-[Create links](http://software-carpentry.org) with `[...](...)`.
-Or use [named links][data_carpentry].
-
-[data_carpentry]: http://datacarpentry.org
-```
-
-  
-
-  <div class="col-md-6" markdown="1">
-
-[Create links](https://software-carpentry.org) with `[...](...)`.
-Or use [named links][data_carpentry].
-
-  
-
-</div>
++---------------------------------------+------------------------------------------------+
+\| Markdown code                         | Rendered output                                |
++=======================================+================================================+
++---------------------------------------+------------------------------------------------+
+\| `                                  | <p></p>                                        | | *   Use asterisks                     | -   Use asterisks                              | | *   to create                         | -   to create                                  | | *   bullet lists.                     | -   bullet lists.                              |
+|`                                   |                                                |
++---------------------------------------+------------------------------------------------+
++---------------------------------------+------------------------------------------------+
+\| `                                  | <p></p>                                        | | 1.   Use numbers                      | 1.   Use numbers                               | | 1.   to create                        | 2.   to create                                 | | 1.   bullet lists.                    | 3.   numbered lists.                           |
+|`                                   |                                                |
++---------------------------------------+------------------------------------------------+
++---------------------------------------+------------------------------------------------+
+\| `                                  | <p></p>                                        | | *  You can use indents                | - You can use indents                          | |   *  To create sublists               |   - To create sublists                         | |   *  of the same type                 |   - of the same type                           | | *  Or sublists                        | - Or sublists                                  | |   1. Of different                     |   1. Of different                              | |   1. types                            |   2. types                                     |
+|`                                   |                                                |
++---------------------------------------+------------------------------------------------+
++---------------------------------------+------------------------------------------------+
+\| `                                  | <p></p>                                        | | # A Level-1 Heading                   | ## A Level-1 Heading                           |
+|`                                   |                                                |
++---------------------------------------+------------------------------------------------+
++---------------------------------------+------------------------------------------------+
+\| `                                  | <p></p>                                        | | ## A Level-2 Heading (etc.)           | ### A Level-2 Heading (etc.)                   |
+|`                                   |                                                |
++---------------------------------------+------------------------------------------------+
++---------------------------------------+------------------------------------------------+
+\| `                                  | <p></p>                                        | | Line breaks                           | Line breaks                                    | | don't matter.                         | don't matter.                                  | |                                       |                                                | | But blank lines                       | But blank lines                                | | create new paragraphs.                | create new paragraphs.                         |
+|`                                   |                                                |
++---------------------------------------+------------------------------------------------+
++---------------------------------------+------------------------------------------------+
+\| ``                                  | <p></p>                                        | | [Links](http://software-carpentry.org)| [Links](https://software-carpentry.org)        | | are created with `[...](...)`.        | are created with `[...](...)`.                 | | Or use [named links][data-carp].      | Or use [named links][data_carpentry].          | |                                       |                                                | | [data-carp]: http://datacarpentry.org |                                                |
+|``                                   |                                                |
++---------------------------------------+------------------------------------------------+
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -567,9 +444,9 @@ x = 6 * 7 + 12
 print(x)
 ```
 
-And then run it with <kbd>Shift</kbd>+<kbd>Return</kbd> to be sure that it works as a code cell.
+And then run it with <kbd>Shift</kbd>\+<kbd>Return</kbd> to be sure that it works as a code cell.
 Now go back to the cell and use <kbd>Esc</kbd> then <kbd>m</kbd> to switch the cell to Markdown
-and "run" it with <kbd>Shift</kbd>+<kbd>Return</kbd>.
+and "run" it with <kbd>Shift</kbd>\+<kbd>Return</kbd>.
 What happened and how might this be useful?
 
 :::::::::::::::  solution
@@ -638,13 +515,9 @@ Practice closing and restarting the JupyterLab server.
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 [jupyterlab]: https://jupyterlab.readthedocs.io/en/stable/
-
 [jupyterlab-ui]: https://jupyterlab.readthedocs.io/en/stable/user/interface.html
-
 [jupyterlab-notebook-docs]: https://jupyterlab.readthedocs.io/en/stable/user/notebook.html
-
 [markdown]: https://en.wikipedia.org/wiki/Markdown
-
 [data_carpentry]: https://datacarpentry.org
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
