@@ -343,7 +343,7 @@ Write an expression to find the Per Capita GDP of Serbia in 2007.
 
 ## Solution
 
-The selection can be done by using the labels for both the row ("Serbia") and the column ("gdpPercap_2007"):
+The selection can be done by using the labels for both the row ("Serbia") and the column ("gdpPercap\_2007"):
 
 ```python
 print(data_europe.loc['Serbia', 'gdpPercap_2007'])
@@ -398,7 +398,7 @@ Belgium     8343.105127     9714.960623    10991.206760
 Clearly, the second statement produces an additional column and an additional row compared to the first statement.\
 What conclusion can we draw? We see that a numerical slice, 0:2, _omits_ the final index (i.e. index 2)
 in the range provided,
-while a named slice, 'gdpPercap_1952':'gdpPercap_1962', _includes_ the final element.
+while a named slice, 'gdpPercap\_1952':'gdpPercap\_1962', _includes_ the final element.
 
 :::::::::::::::::::::::::
 
@@ -728,7 +728,7 @@ This command returns:
 'zfill']
 ```
 
-You can use `help()` or <kbd>Shift</kbd>+<kbd>Tab</kbd> to get more information about what these methods do.
+You can use `help()` or <kbd>Shift</kbd>\+<kbd>Tab</kbd> to get more information about what these methods do.
 
 Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded as `data`.  Then, use `dir()`
 to find the function that prints out the median per-capita GDP across all European countries for each year that information is available.
@@ -759,9 +759,7 @@ for the entire twentieth century?
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 [pandas-dataframe]: https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html
-
 [pandas-series]: https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.html
-
 [numpy]: https://www.numpy.org/
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
