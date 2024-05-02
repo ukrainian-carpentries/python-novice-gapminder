@@ -6,19 +6,19 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Launch the JupyterLab server.
-- Create a new Python script.
-- Create a Jupyter notebook.
-- Shutdown the JupyterLab server.
-- Understand the difference between a Python script and a Jupyter notebook.
-- Create Markdown cells in a notebook.
-- Create and run Python cells in a notebook.
+- Avviare il server di JupyterLab.
+- Creare un nuovo script Python.
+- Creare un Jupyter notebook.
+- Arrestare il server di JupyterLab.
+- Capire la differenza tra uno script Python e un Jupyter notebook.
+- Creare celle Markdown in un notebook.
+- Creare ed eseguire celle Python in un notebook.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can I run Python programs?
+- Come faccio ad eseguire programmi Python?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
