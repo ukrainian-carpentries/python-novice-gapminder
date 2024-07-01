@@ -3,9 +3,7 @@ permalink: index.html
 site: sandpaper::sandpaper_site
 ---
 
-This lesson is an introduction to programming in Python 3 for people with little or no previous
-programming experience. It uses plotting as its motivating example and is designed to be used in
-both [Data Carpentry][dc-lessons] and [Software Carpentry][swc-lessons] workshops.
+Цей урок містить введення до програмування на мові Python для користувачів, які не мають зовсім або мають початковий досвід програмування. Він використовує як мотиваційний приклад побудову графіків, та розроблений для використання на тренінгах [Data Carpentry][dc-lessons] та [Software Carpentry][swc-lessons].
 This lesson references [JupyterLab][jupyterlab] but can be taught using alternative Python 3 interpreters
 as well (e.g., repl.it, Anaconda).
 
