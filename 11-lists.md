@@ -21,7 +21,7 @@ exercises: 10
 
 - Doing calculations with a hundred variables called `pressure_001`, `pressure_002`, etc.,
   would be at least as slow as doing them by hand.
-- Use a *list* to store many values together.
+- Use a _list_ to store many values together.
   - Contained within square brackets `[...]`.
   - Values separated by commas `,`.
 - Use `len` to find out how many values are in a list.
@@ -80,7 +80,7 @@ primes is initially: [2, 3, 5]
 primes has become: [2, 3, 5, 7]
 ```
 
-- `append` is a *method* of lists.
+- `append` is a _method_ of lists.
   - Like a function, but tied to a particular object.
 - Use `object_name.method_name` to call methods.
   - Deliberately resembles the way we refer to things in a library.
@@ -158,8 +158,8 @@ third character: b
 ## Character strings are immutable.
 
 - Cannot change the characters in a string after it has been created.
-  - *Immutable*: can't be changed after creation.
-  - In contrast, lists are *mutable*: they can be modified in place.
+  - _Immutable_: can't be changed after creation.
+  - In contrast, lists are _mutable_: they can be modified in place.
 - Python considers the string to be a single value with parts,
   not a collection of values.
 
@@ -171,7 +171,7 @@ element[0] = 'C'
 TypeError: 'str' object does not support item assignment
 ```
 
-- Lists and character strings are both *collections*.
+- Lists and character strings are both _collections_.
 
 ## Indexing beyond the end of the collection is an error.
 
@@ -244,8 +244,6 @@ Why 'up to'? As we saw in [episode 2](02-variables.md),
 if `stop` is greater than the total length of the list `values`,
 we will still get a list back but it will be shorter than expected.
 
-
-
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -274,11 +272,10 @@ list to string: gold
 ## Solution
 
 1. [`list('some string')`](https://docs.python.org/3/library/stdtypes.html#list) converts a string into a list containing all of its characters.
-2. [`join`](https://docs.python.org/3/library/stdtypes.html#str.join) returns a string that is the *concatenation*
-  of each string element in the list and adds the separator between each element in the list. This results in
-  `x-y-z`. The separator between the elements is the string that provides this method.
-  
-  
+
+2. [`join`](https://docs.python.org/3/library/stdtypes.html#str.join) returns a string that is the _concatenation_
+   of each string element in the list and adds the separator between each element in the list. This results in
+   `x-y-z`. The separator between the elements is the string that provides this method.
 
 :::::::::::::::::::::::::
 
@@ -297,11 +294,11 @@ print(element[-1])
 
 1. How does Python interpret a negative index?
 2. If a list or string has N elements,
-  what is the most negative index that can safely be used with it,
-  and what location does that index represent?
+   what is the most negative index that can safely be used with it,
+   and what location does that index represent?
 3. If `values` is a list, what does `del values[-1]` do?
 4. How can you display all elements but the last one without changing `values`?
-  (Hint: you will need to combine slicing and negative indexing.)
+   (Hint: you will need to combine slicing and negative indexing.)
 
 :::::::::::::::  solution
 
@@ -310,13 +307,14 @@ print(element[-1])
 The program prints `m`.
 
 1. Python interprets a negative index as starting from the end (as opposed to
-  starting from the beginning).  The last element is `-1`.
+   starting from the beginning).  The last element is `-1`.
+
 2. The last index that can safely be used with a list of N elements is element
-  `-N`, which represents the first element.
+   `-N`, which represents the first element.
+
 3. `del values[-1]` removes the last element from the list.
+
 4. `values[:-1]`
-  
-  
 
 :::::::::::::::::::::::::
 
@@ -349,12 +347,11 @@ eniroulf
 ```
 
 1. `stride` is the step size of the slice.
+
 2. The slice `1::2` selects all even-numbered items from a collection: it starts
-  with element `1` (which is the second element, since indexing starts at `0`),
-  goes on until the end (since no `end` is given), and uses a step size of `2`
-  (i.e., selects every second element).
-  
-  
+   with element `1` (which is the second element, since indexing starts at `0`),
+   goes on until the end (since no `end` is given), and uses a step size of `2`
+   (i.e., selects every second element).
 
 :::::::::::::::::::::::::
 
@@ -383,8 +380,6 @@ lithium
 
 The first statement prints the whole string, since the slice goes beyond the total length of the string.
 The second statement returns an empty string, because the slice goes "out of bounds" of the string.
-
-
 
 :::::::::::::::::::::::::
 
@@ -430,8 +425,6 @@ letters is ['d', 'g', 'l', 'o'] and result is None
 `sorted(letters)` returns a sorted copy of the list `letters` (the original
 list `letters` remains unchanged), while `letters.sort()` sorts the list
 `letters` in-place and does not return anything.
-
-
 
 :::::::::::::::::::::::::
 
@@ -482,8 +475,6 @@ towards the same object.
 `new = old[:]` however creates a new list object `new` containing all elements
 from the list `old`; `new` and `old` are different objects.
 
-
-
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -502,5 +493,3 @@ from the list `old`; `new` and `old` are different objects.
 - Indexing beyond the end of the collection is an error.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-

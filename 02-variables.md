@@ -22,7 +22,7 @@ exercises: 10
 - **Variables** are names for values.
 
 - Variable names
-  
+
   - can **only** contain letters, digits, and underscore `_` (typically used to separate words in long variable names)
   - cannot start with a digit
   - are **case sensitive** (age, Age and AGE are three different variables)
@@ -38,7 +38,7 @@ exercises: 10
 
 - Here, Python assigns an age to a variable `age`
   and a name in quotes to a variable `first_name`.
-  
+
   ```python
   age = 42
   first_name = 'Ahmed'
@@ -88,8 +88,8 @@ NameError: name 'last_name' is not defined
 
 ## Variables Persist Between Cells
 
-Be aware that it is the *order* of execution of cells that is important in a Jupyter notebook, not the order
-in which they appear. Python will remember *all* the code that was run previously, including any variables you have
+Be aware that it is the _order_ of execution of cells that is important in a Jupyter notebook, not the order
+in which they appear. Python will remember _all_ the code that was run previously, including any variables you have
 defined, irrespective of the order in the notebook. Therefore if you define variables lower down the notebook and then
 (re)run cells further up, those defined further down will still be present. As an example, create two cells with the
 following content, in this order:
@@ -102,10 +102,9 @@ print(myval)
 myval = 1
 ```
 
-If you execute this in order, the first cell will give an error. However, if you run the first cell *after* the second
+If you execute this in order, the first cell will give an error. However, if you run the first cell _after_ the second
 cell it will print out `1`. To prevent confusion, it can be helpful to use the `Kernel` -> `Restart & Run All` option which
 clears the interpreter and runs everything from a clean slate going top to bottom.
-
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -134,7 +133,7 @@ Age in three years: 45
 - Use the position's index in square brackets to get the character at that
   position.
 
-![A line of Python code, print(atom\_name[0]), demonstrates that using the zero index will output just the initial letter, in this case 'h' for helium.](fig/2_indexing.svg)
+![A line of Python code, print(atom\\_name\[0\]), demonstrates that using the zero index will output just the initial letter, in this case 'h' for helium.](fig/2_indexing.svg)
 
 ```python
 atom_name = 'helium'
@@ -154,7 +153,7 @@ h
 - A slice is a part of a string (or, more generally, a part of any list-like thing).
 - We take a slice with the notation `[start:stop]`, where `start` is the integer
   index of the first element we want and `stop` is the integer index of
-  the element *just after* the last element we want.
+  the element _just after_ the last element we want.
 - The difference between `stop` and `start` is the slice's length.
 - Taking a slice does not change the contents of the original string. Instead,
   taking a slice returns a copy of part of the original string.
@@ -206,7 +205,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 ## Swapping Values
 
 Fill the table showing the values of the variables in this program
-*after* each statement is executed.
+_after_ each statement is executed.
 
 ```python
 # Command  # Value of x   # Value of y   # Value of swap #
@@ -232,8 +231,6 @@ y = swap   # 3.0          # 1.0          # 1.0           #
 
 These three lines exchange the values in `x` and `y` using the `swap`
 variable for temporary storage. This is a fairly common programming idiom.
-
-
 
 :::::::::::::::::::::::::
 
@@ -270,8 +267,6 @@ In the second line, the `position` variable also receives
 the string value `'left'`. In third line, the `initial` variable is given the
 value `'right'`, but the `position` variable retains its string value
 of `'left'`.
-
-
 
 :::::::::::::::::::::::::
 
@@ -335,8 +330,6 @@ from someone who is leaving the lab:
 `minutes` is better because `min` might mean something like "minimum"
 (and actually is an existing built-in function in Python that we will cover later).
 
-
-
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -389,14 +382,18 @@ What would these expressions return?
 ## Solutions
 
 1. `species_name[2:8]` returns the substring `'acia b'`
+
 2. `species_name[11:]` returns the substring `'folia'`, from position 11 until the end
+
 3. `species_name[:4]` returns the substring `'Acac'`, from the start up to but not including position 4
+
 4. `species_name[:]` returns the entire string `'Acacia buxifolia'`
+
 5. `species_name[11:-3]` returns the substring `'fo'`, from the 11th position to the third last position
+
 6. `species_name[-5:-3]` also returns the substring `'fo'`, from the fifth last position to the third last
+
 7. If a part of the slice is out of range, the operation does not fail. `species_name[0:20]` gives the same result as `species_name[0:]`, and `species_name[:103]` gives the same result as `species_name[:]`
-  
-  
 
 :::::::::::::::::::::::::
 
@@ -416,5 +413,3 @@ What would these expressions return?
 - Use meaningful variable names.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-

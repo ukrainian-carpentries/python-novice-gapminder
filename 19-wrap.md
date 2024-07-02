@@ -47,5 +47,3 @@ turn out to be anything but when we have to explain them precisely.
 - Python supports a large and diverse community across academia and industry.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-

@@ -23,5 +23,3 @@ Gather feedback from participants.
 - We are constantly seeking to improve this course.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-

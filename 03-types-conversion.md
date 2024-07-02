@@ -32,7 +32,7 @@ exercises: 10
 
 - Use the built-in function `type` to find out what type a value has.
 - Works on variables as well.
-  - But remember: the *value* has the type --- the *variable* is just a label.
+  - But remember: the _value_ has the type --- the _variable_ is just a label.
 
 ```python
 print(type(52))
@@ -89,7 +89,7 @@ print(full_name)
 Ahmed Walsh
 ```
 
-- Multiplying a character string by an integer *N* creates a new string that consists of that character string repeated  *N* times.
+- Multiplying a character string by an integer _N_ creates a new string that consists of that character string repeated  _N_ times.
   - Since multiplication is repeated addition.
 
 ```python
@@ -193,7 +193,7 @@ first is 2 and second is 5
 
 - The computer reads the value of `variable_one` when doing the multiplication,
   creates a new value, and assigns it to `variable_two`.
-- Afterwards, the value of `variable_two` is set to the new value and *not dependent on `variable_one`* so its value
+- Afterwards, the value of `variable_two` is set to the new value and _not dependent on `variable_one`_ so its value
   does not automatically change when `variable_one` changes.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
@@ -269,13 +269,16 @@ would you use to represent each of the following?  Try to come up with more than
 The answers to the questions are:
 
 1. Integer, since the number of days would lie between 1 and 365.
+
 2. Floating point, since fractional days are required
+
 3. Character string if serial number contains letters and numbers, otherwise integer if the serial number consists only of numerals
+
 4. This will vary! How do you define a specimen's age? whole days since collection (integer)? date and time (string)?
+
 5. Choose floating point to represent population as large aggregates (eg millions), or integer to represent population in units of individuals.
+
 6. Floating point number, since an average is likely to have a fractional part.
-  
-  
 
 :::::::::::::::::::::::::
 
@@ -286,7 +289,7 @@ The answers to the questions are:
 ## Division Types
 
 In Python 3, the `//` operator performs integer (whole-number) floor division, the `/` operator performs floating-point
-division, and the `%` (or *modulo*) operator calculates and returns the remainder from integer division:
+division, and the `%` (or _modulo_) operator calculates and returns the remainder from integer division:
 
 ```python
 print('5 // 3:', 5 // 3)
@@ -434,8 +437,6 @@ third = "1.1"
 
 Answer: 1 and 4
 
-
-
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -447,7 +448,7 @@ Answer: 1 and 4
 Python provides complex numbers,
 which are written as `1.0+2.0j`.
 If `val` is a complex number,
-its real and imaginary parts can be accessed using *dot notation*
+its real and imaginary parts can be accessed using _dot notation_
 as `val.real` and `val.imag`.
 
 ```python
@@ -470,14 +471,14 @@ print(a_complex_number.imag)
 ## Solution
 
 1. Standard mathematics treatments typically use `i` to denote an imaginary number. However, from media reports it
-  was an early convention established from electrical engineering that now presents a technically expensive area to
-  change. [Stack Overflow provides additional explanation and
-  discussion.](https://stackoverflow.com/questions/24812444/why-are-complex-numbers-in-python-denoted-with-j-instead-of-i)
+   was an early convention established from electrical engineering that now presents a technically expensive area to
+   change. Stack Overflow provides additional explanation and
+   discussion.
+
 2. `(4+2j)`
+
 3. `4j` and `Syntax Error: invalid syntax`. In the latter cases, `j` is considered a variable and the statement
-  depends on if `j` is defined and if so, its assigned value.
-  
-  
+   depends on if `j` is defined and if so, its assigned value.
 
 :::::::::::::::::::::::::
 
@@ -495,5 +496,3 @@ print(a_complex_number.imag)
 - Variables only change value when something is assigned to them.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-

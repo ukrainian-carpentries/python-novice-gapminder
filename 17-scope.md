@@ -26,7 +26,7 @@ exercises: 10
   what variable names the author of the function used.
 - People writing functions shouldn't have to worry about
   what variable names the function's caller uses.
-- The part of a program in which a variable is visible is called its *scope*.
+- The part of a program in which a variable is visible is called its _scope_.
 
 ```python
 pressure = 103.9
@@ -36,10 +36,10 @@ def adjust(t):
     return temperature
 ```
 
-- `pressure` is a *global variable*.
+- `pressure` is a _global variable_.
   - Defined outside any particular function.
   - Visible everywhere.
-- `t` and `temperature` are *local variables* in `adjust`.
+- `t` and `temperature` are _local variables_ in `adjust`.
   - Defined in the function.
   - Not visible in the main program.
   - Remember: a function parameter is a variable
@@ -120,15 +120,18 @@ KeyError: 'Friday'
 ## Solution
 
 1. Three levels.
+
 2. `errors_02.py`
+
 3. `print_message`
+
 4. Line 11
+
 5. `KeyError`. These errors occur when we are trying to look up a key that does not exist (usually in a data
-  structure such as a dictionary). We can find more information about the `KeyError` and other built-in exceptions
-  in the [Python docs](https://docs.python.org/3/library/exceptions.html#KeyError).
+   structure such as a dictionary). We can find more information about the `KeyError` and other built-in exceptions
+   in the [Python docs](https://docs.python.org/3/library/exceptions.html#KeyError).
+
 6. `KeyError: 'Friday'`
-  
-  
 
 :::::::::::::::::::::::::
 
@@ -139,5 +142,3 @@ KeyError: 'Friday'
 - The scope of a variable is the part of a program that can 'see' that variable.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-

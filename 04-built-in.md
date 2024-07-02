@@ -32,7 +32,7 @@ adjustment = 0.5   # Neither is this - anything after '#' is ignored.
 ## A function may take zero or more arguments.
 
 - We have seen some functions already --- now let's take a closer look.
-- An *argument* is a value passed into a function.
+- An _argument_ is a value passed into a function.
 - `len` takes exactly one.
 - `int`, `str`, and `float` create a new value from an existing one.
 - `print` takes zero or more.
@@ -264,8 +264,8 @@ NameError: name 'aege' is not defined
 ## What Happens When
 
 1. Explain in simple terms the order of operations in the following program:
-  when does the addition happen, when does the subtraction happen,
-  when is each function called, etc.
+   when does the addition happen, when does the subtraction happen,
+   when is each function called, etc.
 2. What is the final value of `radiance`?
 
 ```python
@@ -278,14 +278,18 @@ radiance = max(2.1, 2.0 + min(radiance, 1.1 * radiance - 0.5))
 ## Solution
 
 1. Order of operations:
-  1. `1.1 * radiance = 1.1`
-  2. `1.1 - 0.5 = 0.6`
-  3. `min(radiance, 0.6) = 0.6`
-  4. `2.0 + 0.6 = 2.6`
-  5. `max(2.1, 2.6) = 2.6`
-2. At the end, `radiance = 2.6`
-  
-  
+
+2. `1.1 * radiance = 1.1`
+
+3. `1.1 - 0.5 = 0.6`
+
+4. `min(radiance, 0.6) = 0.6`
+
+5. `2.0 + 0.6 = 2.6`
+
+6. `max(2.1, 2.6) = 2.6`
+
+7. At the end, `radiance = 2.6`
 
 :::::::::::::::::::::::::
 
@@ -297,7 +301,7 @@ radiance = max(2.1, 2.0 + min(radiance, 1.1 * radiance - 0.5))
 
 1. Predict what each of the `print` statements in the program below will print.
 2. Does `max(len(rich), poor)` run or produce an error message?
-  If it runs, does its result make any sense?
+   If it runs, does its result make any sense?
 
 ```python
 easy_string = "abc"
@@ -339,7 +343,7 @@ print(max(len(rich), len(poor)))
 `max(len(rich), poor)` throws a TypeError. This turns into `max(4, 'tin')` and
 as we discussed earlier a string and integer cannot meaningfully be compared.
 
-```error 
+```error
 TypeError                                 Traceback (most recent call last)
 <ipython-input-65-bc82ad05177a> in <module>
 ----> 1 max(len(rich), poor)
@@ -366,8 +370,6 @@ was not supplied. If it just returned `None`, the error would be much harder to 
 would likely be stored into a variable and used later in the program, only to likely throw
 a runtime error.
 
-
-
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -386,8 +388,6 @@ what index expression will get the last character in the string `name`?
 ## Solution
 
 `name[len(name) - 1]`
-
-
 
 :::::::::::::::::::::::::
 
@@ -420,5 +420,3 @@ unnecessary at the moment, but others are very simple and useful.
 - Fix syntax errors by reading the source code, and runtime errors by tracing the program's execution.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-

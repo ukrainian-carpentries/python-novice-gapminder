@@ -21,7 +21,7 @@ exercises: 10
 
 ## Most of the power of a programming language is in its libraries.
 
-- A *library* is a collection of files (called *modules*) that contains
+- A _library_ is a collection of files (called _modules_) that contains
   functions for use by other programs.
   - May also contain data values (e.g., numerical constants) and other things.
   - Library's contents are supposed to be related, but there's no way to enforce that.
@@ -37,7 +37,6 @@ exercises: 10
 A library is a collection of modules, but the terms are often used
 interchangeably, especially since many libraries only consist of a single
 module, so don't worry if you mix them.
-
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -114,7 +113,7 @@ cos(pi) is -1.0
 
 ## Create an alias for a library module when importing it to shorten programs.
 
-- Use `import ... as ...` to give a library a short *alias* while importing it.
+- Use `import ... as ...` to give a library a short _alias_ while importing it.
 - Then refer to items in the library using that shortened name.
 
 ```python
@@ -137,7 +136,7 @@ cos(pi) is -1.0
 ## Exploring the Math Module
 
 1. What function from the `math` module can you use to calculate a square root
-  *without* using `sqrt`?
+   _without_ using `sqrt`?
 2. Since the library contains this function, why does `sqrt` exist?
 
 :::::::::::::::  solution
@@ -145,17 +144,15 @@ cos(pi) is -1.0
 ## Solution
 
 1. Using `help(math)` we see that we've got `pow(x,y)` in addition to `sqrt(x)`,
-  so we could use `pow(x, 0.5)` to find a square root.
+   so we could use `pow(x, 0.5)` to find a square root.
 
 2. The `sqrt(x)` function is arguably more readable than `pow(x, 0.5)` when
-  implementing equations. Readability is a cornerstone of good programming, so it
-  makes sense to provide a special function for this specific common case.
-  
-  Also, the design of Python's `math` library has its origin in the C standard,
-  which includes both `sqrt(x)` and `pow(x,y)`, so a little bit of the history
-  of programming is showing in Python's function names.
-  
-  
+   implementing equations. Readability is a cornerstone of good programming, so it
+   makes sense to provide a special function for this specific common case.
+
+Also, the design of Python's `math` library has its origin in the C standard,
+which includes both `sqrt(x)` and `pow(x,y)`, so a little bit of the history
+of programming is showing in Python's function names.
 
 :::::::::::::::::::::::::
 
@@ -280,8 +277,6 @@ What has your colleague forgotten to do?
 
 Importing the math module (`import math`)
 
-
-
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -291,7 +286,7 @@ Importing the math module (`import math`)
 ## Importing With Aliases
 
 1. Fill in the blanks so that the program below prints `90.0`.
-2. Rewrite the program so that it uses `import` *without* `as`.
+2. Rewrite the program so that it uses `import` _without_ `as`.
 3. Which form do you find easier to read?
 
 ```python
@@ -324,8 +319,6 @@ of code written by someone else, or when getting back to your own huge piece
 of code after several months, non-abbreviated names are often easier, except
 where there are clear abbreviation conventions.
 
-
-
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -354,15 +347,15 @@ Library calls:
 ## Solution
 
 1. Library calls 1 and 4. In order to directly refer to `sin` and `pi` without
-  the library name as prefix, you need to use the `from ... import ...`
-  statement. Whereas library call 1 specifically imports the two functions
-  `sin` and `pi`, library call 4 imports all functions in the `math` module.
+   the library name as prefix, you need to use the `from ... import ...`
+   statement. Whereas library call 1 specifically imports the two functions
+   `sin` and `pi`, library call 4 imports all functions in the `math` module.
 2. Library call 3. Here `sin` and `pi` are referred to with a shortened library
-  name `m` instead of `math`. Library call 3 does exactly that using the
-  `import ... as ...` syntax - it creates an alias for `math` in the form of
-  the shortened name `m`.
+   name `m` instead of `math`. Library call 3 does exactly that using the
+   `import ... as ...` syntax - it creates an alias for `math` in the form of
+   the shortened name `m`.
 3. Library call 2. Here `sin` and `pi` are referred to with the regular library
-  name `math`, so the regular `import ...` call suffices.
+   name `math`, so the regular `import ...` call suffices.
 
 **Note:** although library call 4 works, importing all names from a module using a wildcard
 import is [not recommended][pep8-imports] as it makes it unclear which names from the module
@@ -370,8 +363,6 @@ are used in the code. In general it is best to make your imports as specific as 
 only import what your code uses. In library call 1, the `import` statement explicitly tells us
 that the `sin` function is imported from the `math` module, but library call 4 does not
 convey this information.
-
-
 
 :::::::::::::::::::::::::
 
@@ -383,7 +374,7 @@ convey this information.
 
 1. Fill in the blanks so that the program below prints `90.0`.
 2. Do you find this version easier to read than preceding ones?
-3. Why *wouldn't* programmers always use this form of `import`?
+3. Why _wouldn't_ programmers always use this form of `import`?
 
 ```python
 ____ math import ____, ____
@@ -406,8 +397,6 @@ The main reason not to use this form of import is to avoid name clashes.
 For instance, you wouldn't import `degrees` this way if you also wanted to
 use the name `degrees` for a variable or function of your own. Or if you
 were to also import a function named `degrees` from another library.
-
-
 
 :::::::::::::::::::::::::
 
@@ -440,12 +429,11 @@ ValueError: math domain error
 ```
 
 1. The logarithm of `x` is only defined for `x > 0`, so 0 is outside the
-  domain of the function.
+   domain of the function.
+
 2. You get an error of type `ValueError`, indicating that the function
-  received an inappropriate argument value. The additional message
-  "math domain error" makes it clearer what the problem is.
-  
-  
+   received an inappropriate argument value. The additional message
+   "math domain error" makes it clearer what the problem is.
 
 :::::::::::::::::::::::::
 
@@ -456,7 +444,6 @@ ValueError: math domain error
 [randommod]: https://docs.python.org/3/library/random.html
 [pep8-imports]: https://pep8.org/#imports
 
-
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - Most of the power of a programming language is in its libraries.
@@ -466,5 +453,3 @@ ValueError: math domain error
 - Create an alias for a library when importing it to shorten programs.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-

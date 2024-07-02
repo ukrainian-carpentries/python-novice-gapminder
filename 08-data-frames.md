@@ -36,9 +36,9 @@ between DataFrames.
 
 To access a value at the position `[i,j]` of a DataFrame, we have two options, depending on
 what is the meaning of `i` in use.
-Remember that a DataFrame provides an *index* as a way to identify the rows of the table;
-a row, then, has a *position* inside the table as well as a *label*, which
-uniquely identifies its *entry* in the DataFrame.
+Remember that a DataFrame provides an _index_ as a way to identify the rows of the table;
+a row, then, has a _position_ inside the table as well as a _label_, which
+uniquely identifies its _entry_ in the DataFrame.
 
 ## Use `DataFrame.iloc[..., ...]` to select values by their (entry) position
 
@@ -196,7 +196,7 @@ Poland               False          False          False
 
 ## Select values or NaN using a Boolean mask.
 
-- A frame full of Booleans is sometimes called a *mask* because of how it can be used.
+- A frame full of Booleans is sometimes called a _mask_ because of how it can be used.
 
 ```python
 mask = subset > 10000
@@ -239,10 +239,11 @@ Learners often struggle here, many may not work with financial data and concepts
 find the example concepts difficult to get their head around. The biggest problem
 though is the line generating the wealth_score, this step needs to be talked through
 throughly:
-* It uses implicit conversion between boolean and float values which 
-has not been covered in the course so far. 
-* The axis=1 argument needs to be explained clearly.
-:::::::::::::::::::::::::::::::::::::::::::::::::
+
+- It uses implicit conversion between boolean and float values which
+  has not been covered in the course so far.
+- The axis=1 argument needs to be explained clearly.
+  :::::::::::::::::::::::::::::::::::::::::::::::::
 
 Pandas vectorizing methods and grouping operations are features that provide users
 much flexibility to analyse their data.
@@ -251,9 +252,9 @@ For instance, let's say we want to have a clearer view on how the European count
 split themselves according to their GDP.
 
 1. We may have a glance by splitting the countries in two groups during the years surveyed,
-  those who presented a GDP *higher* than the European average and those with a *lower* GDP.
-2. We then estimate a *wealthy score* based on the historical (from 1962 to 2007) values,
-  where we account how many times a country has participated in the groups of *lower* or *higher* GDP
+   those who presented a GDP _higher_ than the European average and those with a _lower_ GDP.
+2. We then estimate a _wealthy score_ based on the historical (from 1962 to 2007) values,
+   where we account how many times a country has participated in the groups of _lower_ or _higher_ GDP
 
 ```python
 mask_higher = data > data.mean()
@@ -364,7 +365,7 @@ The output is
 
 1. Do the two statements below produce the same output?
 2. Based on this,
-  what rule governs what is included (or not) in numerical slices and named slices in Pandas?
+   what rule governs what is included (or not) in numerical slices and named slices in Pandas?
 
 ```python
 print(data_europe.iloc[0:2, 0:2])
@@ -394,12 +395,10 @@ Austria     6137.076492     8842.598030    10750.721110
 Belgium     8343.105127     9714.960623    10991.206760
 ```
 
-Clearly, the second statement produces an additional column and an additional row compared to the first statement.  
-What conclusion can we draw? We see that a numerical slice, 0:2, *omits* the final index (i.e. index 2)
+Clearly, the second statement produces an additional column and an additional row compared to the first statement.\
+What conclusion can we draw? We see that a numerical slice, 0:2, _omits_ the final index (i.e. index 2)
 in the range provided,
-while a named slice, 'gdpPercap\_1952':'gdpPercap\_1962', *includes* the final element.
-
-
+while a named slice, 'gdpPercap\_1952':'gdpPercap\_1962', _includes_ the final element.
 
 :::::::::::::::::::::::::
 
@@ -467,8 +466,6 @@ The final step is to write the data that we have been working on to a csv file. 
 with the `to_csv()` function. The only required argument to the function is the filename. Note that the
 file will be written in the directory from which you started the Jupyter or Python session.
 
-
-
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -495,8 +492,6 @@ For each column in `data`, `idxmin` will return the index value corresponding to
 
 You can use these functions whenever you want to get the row index of the minimum/maximum value and not the actual minimum/maximum value.
 
-
-
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -510,9 +505,9 @@ Write an expression to select each of the following:
 
 1. GDP per capita for all countries in 1982.
 2. GDP per capita for Denmark for all years.
-3. GDP per capita for all countries for years *after* 1985.
+3. GDP per capita for all countries for years _after_ 1985.
 4. GDP per capita for each country in 2007 as a multiple of
-  GDP per capita for that country in 1952.
+   GDP per capita for that country in 1952.
 
 :::::::::::::::  solution
 
@@ -761,13 +756,11 @@ but changed several times in the years before then.
 How would you handle this if you were creating a table of GDP per capita for Poland
 for the entire twentieth century?
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 [pandas-dataframe]: https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html
 [pandas-series]: https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.html
 [numpy]: https://www.numpy.org/
-
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
@@ -779,5 +772,3 @@ for the entire twentieth century?
 - Select values or NaN using a Boolean mask.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-

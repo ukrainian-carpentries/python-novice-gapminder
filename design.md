@@ -11,17 +11,16 @@ in order to make the lesson plan more concrete.
 Contributions (both in the form of pull requests with filled-in exercises,
 and comments on specific exercises, ordering, and timings) are greatly appreciated.**
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Process Used
 
 > Michael Pollan's advice if he taught R or Python programming:
-> 
+>
 > 1. Write code.
 > 2. Not too much.
 > 3. Mostly plots.
-> 
+>
 > — [Michael Koontz](https://twitter.com/_mikoontz/status/758021742078025728)
 > {: .quotation}
 
@@ -29,24 +28,24 @@ This lesson was developed using a slimmed-down variant of the "Understanding by 
 The main sections are:
 
 1. Assumptions about audience, time, etc.
-  (The current draft also includes some conclusions and decisions in this
-  section - that should be refactored.)
+   (The current draft also includes some conclusions and decisions in this
+   section - that should be refactored.)
 
 2. Desired results:
-  overall goals, summative assessments at half-day granularity, what learners
-  will be able to do, what learners will know.
+   overall goals, summative assessments at half-day granularity, what learners
+   will be able to do, what learners will know.
 
 3. Learning plan:
-  each episode has a heading that summarizes what will be covered,
-  then estimates time that will be spent on teaching and on exercises,
-  while the exercises are given as bullet points.
+   each episode has a heading that summarizes what will be covered,
+   then estimates time that will be spent on teaching and on exercises,
+   while the exercises are given as bullet points.
 
 ## Stage 1: Assumptions
 
 - Audience
   - Graduate students in numerate disciplines from cosmology to archaeology
   - Who have manipulated data in spreadsheets and with interactive tools like SAS
-  - But have *not* programmed beyond CPD (copy-paste-despair)
+  - But have _not_ programmed beyond CPD (copy-paste-despair)
 - Constraints
   - One full day 09:00-16:30
     - 06:15 class time
@@ -81,7 +80,7 @@ The main sections are:
     - will accept data analysis as an authentic task,
     - and are unlikely to have encountered Pandas,
       so they'll still get something useful out of the lesson
-- Challenges will mostly *not* be "write this code from scratch"
+- Challenges will mostly _not_ be "write this code from scratch"
   - Want lots of short exercises that can reliably be finished in allotted time
   - So use MCQs, fill-in-the-blanks, Parsons Problems, "tweak this code", etc.
 
@@ -222,7 +221,7 @@ I know...
   - Read the data for the Americas and display its summary statistics.
   - What do `.head` and `.tail` do?
   - What string(s) should you pass to `read_csv` to read files from other directories?
-  - How can you *write* CSV data?
+  - How can you _write_ CSV data?
 
 ### [DataFrames](../episodes/08-data-frames.md) (11:15)
 
@@ -237,7 +236,7 @@ I know...
   - What does each line in the following short program do?
   - What do `idxmin` and `idxmax` do?
   - Write expressions to get the GDP per capita for all countries in 1982,
-    for all countries *after* 1985,
+    for all countries _after_ 1985,
     etc.
   - Given the way its borders have changed since 1900,
     what would you do if asked to create a table of GDP per capita for Poland
@@ -289,7 +288,7 @@ I know...
   - Use glob to create lists of files.
   - Write for loops to perform operations on files given their names in a list.
 - Challenges: 10 min
-  - Which filenames are *not* matched by this glob expression?
+  - Which filenames are _not_ matched by this glob expression?
   - Modify this program so that it prints the number of records in the shortest file.
   - Write a program that reads and plots all of the regional data sets.
 
@@ -356,5 +355,3 @@ I know...
   - Collect feedback
 
 ### Finish (16:30)
-
-

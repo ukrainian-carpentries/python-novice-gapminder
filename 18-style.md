@@ -29,7 +29,7 @@ Some points worth highlighting:
 
 - document your code and ensure that assumptions, internal algorithms, expected inputs, expected outputs, etc., are clear
 - use clear, semantically meaningful variable names
-- use white-space, *not* tabs, to indent lines (tabs can cause problems across different text editors, operating systems, and version control systems)
+- use white-space, _not_ tabs, to indent lines (tabs can cause problems across different text editors, operating systems, and version control systems)
 
 ## Follow standard Python style in your code.
 
@@ -41,7 +41,7 @@ Some points worth highlighting:
   Adhering to PEP8 makes it easier for other Python developers to read and understand your code, and to understand what their contributions should look like.
 - To check your code for compliance with PEP8, you can use the [pycodestyle application](https://pypi.org/project/pycodestyle/) and tools like the [black code formatter](https://github.com/psf/black) can automatically format your code to conform to PEP8 and pycodestyle (a Jupyter notebook formatter also exists [nb\_black](https://github.com/dnanhkhoa/nb_black)).
 - Some groups and organizations follow different style guidelines besides PEP8. For example, the [Google style guide on Python](https://google.github.io/styleguide/pyguide.html) makes slightly different recommendations. Google wrote an application that can help you format your code in either their style or PEP8 called [yapf](https://github.com/google/yapf/).
-- With respect to coding style, the key is *consistency*. Choose a style for your project be it PEP8, the Google style, or something else and do your best to ensure that you and anyone else you are collaborating with sticks to it. Consistency within a project is often more impactful than the particular style used. A consistent style will make your software easier to read and understand for others and for your future self.
+- With respect to coding style, the key is _consistency_. Choose a style for your project be it PEP8, the Google style, or something else and do your best to ensure that you and anyone else you are collaborating with sticks to it. Consistency within a project is often more impactful than the particular style used. A consistent style will make your software easier to read and understand for others and for your future self.
 
 ## Use assertions to check for internal errors.
 
@@ -58,7 +58,7 @@ If the assertion is `False`, the Python interpreter raises an `AssertionError` r
 
 ## Use docstrings to provide builtin help.
 
-If the first thing in a function is a character string that is not assigned directly to a variable, Python attaches it to the function, accessible via the builtin help function. This string that provides documentation is also known as a *docstring*.
+If the first thing in a function is a character string that is not assigned directly to a variable, Python attaches it to the function, accessible via the builtin help function. This string that provides documentation is also known as a _docstring_.
 
 ```python
 def average(values):
@@ -82,7 +82,7 @@ average(values)
 
 ## Multiline Strings
 
-Often use *multiline strings* for documentation.
+Often use _multiline strings_ for documentation.
 These start and end with three quote characters (either single or double)
 and end with three matching characters.
 
@@ -172,10 +172,10 @@ def middle(a, b, c):
 1. Read this short program and try to predict what it does.
 2. Run it: how accurate was your prediction?
 3. Refactor the program to make it more readable.
-  Remember to run it after each change to ensure its behavior hasn't changed.
+   Remember to run it after each change to ensure its behavior hasn't changed.
 4. Compare your rewrite with your neighbor's.
-  What did you do the same?
-  What did you do differently, and why?
+   What did you do the same?
+   What did you do differently, and why?
 
 ```python
 n = 10
@@ -253,5 +253,3 @@ et cetera
 - Use docstrings to provide builtin help.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-

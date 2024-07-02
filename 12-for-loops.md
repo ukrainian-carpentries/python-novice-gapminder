@@ -18,11 +18,11 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## A *for loop* executes commands once for each value in a collection.
+## A _for loop_ executes commands once for each value in a collection.
 
 - Doing calculations on the values in a list one by one
   is as painful as working with `pressure_001`, `pressure_002`, etc.
-- A *for loop* tells Python to execute some statements once for each value in a list,
+- A _for loop_ tells Python to execute some statements once for each value in a list,
   a character string,
   or some other collection.
 - "for each thing in this group, do these operations"
@@ -57,13 +57,13 @@ for number in [2, 3, 5]:
 
 - The collection, `[2, 3, 5]`, is what the loop is being run on.
 - The body, `print(number)`, specifies what to do for each value in the collection.
-- The loop variable, `number`, is what changes for each *iteration* of the loop.
+- The loop variable, `number`, is what changes for each _iteration_ of the loop.
   - The "current thing".
 
 ## The first line of the `for` loop must end with a colon, and the body must be indented.
 
-- The colon at the end of the first line signals the start of a *block* of statements.
-- Python uses indentation rather than `{}` or `begin`/`end` to show *nesting*.
+- The colon at the end of the first line signals the start of a _block_ of statements.
+- Python uses indentation rather than `{}` or `begin`/`end` to show _nesting_.
   - Any consistent indentation is legal, but almost everyone uses four spaces.
 
 ```python
@@ -125,7 +125,7 @@ for p in primes:
 ## Use `range` to iterate over a sequence of numbers.
 
 - The built-in function [`range`](https://docs.python.org/3/library/stdtypes.html#range) produces a sequence of numbers.
-  - *Not* a list: the numbers are produced on demand
+  - _Not_ a list: the numbers are produced on demand
     to make looping over large ranges more efficient.
 - `range(N)` is the numbers 0..N-1
   - Exactly the legal indices of a list or character string of length N
@@ -146,7 +146,7 @@ a range is not a list: range(0, 3)
 ## The Accumulator pattern turns many values into one.
 
 - A common pattern in programs is to:
-  1. Initialize an *accumulator* variable to zero, the empty string, or the empty list.
+  1. Initialize an _accumulator_ variable to zero, the empty string, or the empty list.
   2. Update the variable with values from a collection.
 
 ```python
@@ -180,8 +180,6 @@ Is an indentation error a syntax error or a runtime error?
 An IndentationError is a syntax error. Programs with syntax errors cannot be started.
 A program with a runtime error will start but an error will be thrown under certain conditions.
 
-
-
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -203,15 +201,15 @@ for char in "tin":
 
 ## Solution
 
-| Line no | Variables            | 
+| Line no | Variables            |
 | ------- | -------------------- |
-| 1       | total = 0            | 
-| 2       | total = 0 char = 't' | 
-| 3       | total = 1 char = 't' | 
-| 2       | total = 1 char = 'i' | 
-| 3       | total = 2 char = 'i' | 
-| 2       | total = 2 char = 'n' | 
-| 3       | total = 3 char = 'n' | 
+| 1       | total = 0            |
+| 2       | total = 0 char = 't' |
+| 3       | total = 1 char = 't' |
+| 2       | total = 1 char = 'i' |
+| 3       | total = 2 char = 'i' |
+| 2       | total = 2 char = 'n' |
+| 3       | total = 3 char = 'n' |
 
 :::::::::::::::::::::::::
 
@@ -381,11 +379,11 @@ print(cumulative)
 ## Identifying Variable Name Errors
 
 1. Read the code below and try to identify what the errors are
-  *without* running it.
+   _without_ running it.
 2. Run the code and read the error message.
-  What type of `NameError` do you think this is?
-  Is it a string with no quotes, a misspelled variable, or a
-  variable that should have been defined but was not?
+   What type of `NameError` do you think this is?
+   Is it a string with no quotes, a misspelled variable, or a
+   variable that should have been defined but was not?
 3. Fix the error.
 4. Repeat steps 2 and 3, until you have fixed all the errors.
 
@@ -427,7 +425,7 @@ print(message)
 ## Identifying Item Errors
 
 1. Read the code below and try to identify what the errors are
-  *without* running it.
+   _without_ running it.
 2. Run the code, and read the error message. What type of error is it?
 3. Fix the error.
 
@@ -453,7 +451,7 @@ print('My favorite season is ', seasons[3])
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- A *for loop* executes commands once for each value in a collection.
+- A _for loop_ executes commands once for each value in a collection.
 - A `for` loop is made up of a collection, a loop variable, and a body.
 - The first line of the `for` loop must end with a colon, and the body must be indented.
 - Indentation is always meaningful in Python.
@@ -463,5 +461,3 @@ print('My favorite season is ', seasons[3])
 - The Accumulator pattern turns many values into one.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
