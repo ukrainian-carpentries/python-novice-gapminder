@@ -451,7 +451,7 @@ string.</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Variables and Assignment</h1>
-        <p>Last updated on 2024-07-01 |
+        <p>Last updated on 2024-07-02 |
         
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/02-variables.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -633,9 +633,9 @@ subscript.</li>
 <li>Indices are numbered from 0.</li>
 <li>Use the position’s index in square brackets to get the character at
 that position.</li>
-</ul><figure><img src="../fig/2_indexing.svg" alt="A line of Python code, print(atom_name[0]), demonstrates that using the zero index will output just the initial letter, in this case ‘h’ for helium." class="figure mx-auto d-block"><div class="figcaption">A line of Python code, print(atom_name[0]),
-demonstrates that using the zero index will output just the initial
-letter, in this case ‘h’ for helium.</div>
+</ul><figure><img src="../fig/2_indexing.svg" alt="A line of Python code, print(atom\_name0), demonstrates that using the zero index will output just the initial letter, in this case ‘h’ for helium." class="figure mx-auto d-block"><div class="figcaption">A line of Python code, print(atom\_name<span class="math display">\[0\]</span>), demonstrates that using the zero
+index will output just the initial letter, in this case ‘h’ for
+helium.</div>
 </figure><div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -739,7 +739,7 @@ the program does.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -784,7 +784,7 @@ your prediction.)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -824,7 +824,7 @@ the second digit of <code>a</code> via <code>a[1]</code>?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Numbers are not strings or sequences and Python will raise an error
 if you try to perform an index operation on a number. In the <a href="03-types-conversion.html">next lesson on types and type
@@ -880,7 +880,7 @@ inherit from someone who is leaving the lab:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p><code>minutes</code> is better because <code>min</code> might mean
 something like “minimum” (and actually is an existing built-in function
@@ -912,7 +912,7 @@ in Python that we will cover later).</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -960,35 +960,27 @@ of range? (i.e., try <code>species_name[0:20]</code> or
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution6" aria-expanded="false" aria-controls="collapseSolution6">
   <h4 class="accordion-header" id="headingSolution6"> Solutions </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
-<ol style="list-style-type: decimal"><li>
-<code>species_name[2:8]</code> returns the substring
-<code>'acia b'</code>
-</li>
-<li>
-<code>species_name[11:]</code> returns the substring
-<code>'folia'</code>, from position 11 until the end</li>
-<li>
-<code>species_name[:4]</code> returns the substring
+<ol style="list-style-type: decimal"><li><p><code>species_name[2:8]</code> returns the substring
+<code>'acia b'</code></p></li>
+<li><p><code>species_name[11:]</code> returns the substring
+<code>'folia'</code>, from position 11 until the end</p></li>
+<li><p><code>species_name[:4]</code> returns the substring
 <code>'Acac'</code>, from the start up to but not including position
-4</li>
-<li>
-<code>species_name[:]</code> returns the entire string
-<code>'Acacia buxifolia'</code>
-</li>
-<li>
-<code>species_name[11:-3]</code> returns the substring
+4</p></li>
+<li><p><code>species_name[:]</code> returns the entire string
+<code>'Acacia buxifolia'</code></p></li>
+<li><p><code>species_name[11:-3]</code> returns the substring
 <code>'fo'</code>, from the 11th position to the third last
-position</li>
-<li>
-<code>species_name[-5:-3]</code> also returns the substring
-<code>'fo'</code>, from the fifth last position to the third last</li>
-<li>If a part of the slice is out of range, the operation does not fail.
-<code>species_name[0:20]</code> gives the same result as
+position</p></li>
+<li><p><code>species_name[-5:-3]</code> also returns the substring
+<code>'fo'</code>, from the fifth last position to the third
+last</p></li>
+<li><p>If a part of the slice is out of range, the operation does not
+fail. <code>species_name[0:20]</code> gives the same result as
 <code>species_name[0:]</code>, and <code>species_name[:103]</code> gives
-the same result as <code>species_name[:]</code>
-</li>
+the same result as <code>species_name[:]</code></p></li>
 </ol></div>
 </div>
 </div>
@@ -1073,8 +1065,8 @@ string.</li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/instructor/02-variables.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/instructor/02-variables.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2024-07-01",
-  "datePublished": "2024-07-01"
+  "dateModified": "2024-07-02",
+  "datePublished": "2024-07-02"
 }
 
   </script><script>

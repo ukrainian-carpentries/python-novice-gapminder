@@ -454,7 +454,7 @@ a named slice.</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Pandas DataFrames</h1>
-        <p>Last updated on 2024-07-01 |
+        <p>Last updated on 2024-07-02 |
         
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/08-data-frames.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -729,7 +729,16 @@ max      13450.401510    16361.876470    18965.055510</code></pre>
 </div>
 </section><section id="group-by-split-apply-combine"><h2 class="section-heading">Group By: split-apply-combine<a class="anchor" aria-label="anchor" href="#group-by-split-apply-combine"></a>
 </h2>
-<hr class="half-width"><p>Pandas vectorizing methods and grouping operations are features that
+<hr class="half-width"><p>::::::::::::::::::::::::::::::::::::: instructor Learners often
+struggle here, many may not work with financial data and concepts so
+they find the example concepts difficult to get their head around. The
+biggest problem though is the line generating the wealth_score, this
+step needs to be talked through throughly:</p>
+<ul><li>It uses implicit conversion between boolean and float values which
+has not been covered in the course so far.</li>
+<li>The axis=1 argument needs to be explained clearly.
+:::::::::::::::::::::::::::::::::::::::::::::::::</li>
+</ul><p>Pandas vectorizing methods and grouping operations are features that
 provide users much flexibility to analyse their data.</p>
 <p>For instance, let’s say we want to have a clearer view on how the
 European countries split themselves according to their GDP.</p>
@@ -1414,8 +1423,8 @@ a named slice.</li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/08-data-frames.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/08-data-frames.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2024-07-01",
-  "datePublished": "2024-07-01"
+  "dateModified": "2024-07-02",
+  "datePublished": "2024-07-02"
 }
 
   </script><script>
