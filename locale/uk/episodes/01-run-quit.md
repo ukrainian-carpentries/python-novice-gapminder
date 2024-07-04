@@ -1,5 +1,5 @@
 ---
-title: Running and Quitting
+title: Запуск та завершення роботи
 teaching: 15
 exercises: 0
 ---
