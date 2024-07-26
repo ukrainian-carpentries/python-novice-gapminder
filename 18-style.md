@@ -1,21 +1,21 @@
 ---
-title: Programming Style
+title: Стиль програмування
 teaching: 15
 exercises: 15
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Provide sound justifications for basic rules of coding style.
-- Refactor one-page programs to make them more readable and justify the changes.
+- Дотримуйтесь основних правил стилю кодування.
+- Виконуйте рефакторинг односторінкових програм, щоб зробити їх більш читабельними та обґрунтувати зміни.
 - Use Python community coding standards (PEP-8).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can I make my programs more readable?
-- How do most programmers format their code?
+- Як я можу зробити свої програми більш читабельними?
+- Як більшість програмістів форматують свій код?
 - How can programs check their own operation?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::

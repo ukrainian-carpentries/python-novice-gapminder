@@ -4,24 +4,18 @@ site: sandpaper::sandpaper_site
 ---
 
 Цей урок містить введення до програмування на мові Python для користувачів, які не мають зовсім або мають початковий досвід програмування. Він використовує як мотиваційний приклад побудову графіків, та розроблений для використання на тренінгах [Data Carpentry][dc-lessons] та [Software Carpentry][swc-lessons].
-This lesson references [JupyterLab][jupyterlab] but can be taught using alternative Python 3 interpreters
-as well (e.g., repl.it, Anaconda).
+Цей урок використовує [JupyterLab][jupyterlab], але його також можна викладати за допомогою альтернативних інтерпретаторів Python 3 (наприклад, Repl.it, Anaconda).
 
 ::::::::::::::::::::::::::::::::::::::::::  prereq
 
-## Prerequisites
+## Передумови
 
-1. Learners need to understand what files and directories are,
-   what a working directory is,
-   and how to start a Python interpreter.
+1. Слухачі мають розуміти що таке файли та каталоги, що таке робочий каталог, та як запустити інтерпретатор мови Python.
 
-2. Learners must install Python 3 before the class starts.
+2. Слухачі мають встановити Python до початку тренінгу.
 
-3. Learners must get the gapminder data before class starts:
-   please download and unzip the file
-   [python-novice-gapminder-data.zip](episodes/files/python-novice-gapminder-data.zip).
+3. Слухачі мають отримати необхідну збірку даних (gapminder) перед початком тренінгу: будь ласка, завантажте та розархівуйте файл [python-novice-gapminder-data.zip]({{page.root}}/files/python-novice-gapminder-data.zip).
 
-Please see [the setup instructions](learners/setup.md)
-for more details.
+Дивіться [інструкції з налаштування](learners/setup.md) для подальшої інформації.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
