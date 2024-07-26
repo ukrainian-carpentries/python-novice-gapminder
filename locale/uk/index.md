@@ -14,11 +14,8 @@ site: sandpaper::sandpaper_site
 
 2. Слухачі мають встановити Python до початку тренінгу.
 
-3. Learners must get the gapminder data before class starts:
-   please download and unzip the file
-   [python-novice-gapminder-data.zip](episodes/files/python-novice-gapminder-data.zip).
+3. Слухачі мають отримати необхідну збірку даних (gapminder) перед початком тренінгу: будь ласка, завантажте та розархівуйте файл [python-novice-gapminder-data.zip]({{page.root}}/files/python-novice-gapminder-data.zip).
 
-Please see [the setup instructions](learners/setup.md)
-for more details.
+Дивіться [інструкції з налаштування](learners/setup.md) для подальшої інформації.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
