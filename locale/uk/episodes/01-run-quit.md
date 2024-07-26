@@ -38,7 +38,7 @@ JupyterLab має декілька інших зручних функцій:
 
 Each notebook contains one or more cells that contain code, text, or images.
 
-## Getting Started with JupyterLab
+## Початок роботи з JupyterLab
 
 JupyterLab is an application server with a web user interface from [Project Jupyter][jupyter] that
 enables one to work with documents and activities such as Jupyter notebooks, text editors, terminals,
@@ -63,7 +63,7 @@ the initial connection to download and install Anaconda and JupyterLab
 ## JupyterLab? What about Jupyter notebooks?
 
 JupyterLab is the [next stage in the evolution of the Jupyter Notebook](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html#overview).
-If you have prior experience working with Jupyter notebooks, then you will have a good idea of what to expect from JupyterLab.
+Якщо ви використовували Jupyter Notebook раніше, то ви добре зрозумієте діапазон можливостей JupyterLab.
 
 Experienced users of Jupyter notebooks interested in a more detailed discussion of the similarities and differences
 between the JupyterLab and Jupyter notebook user interfaces can find more information in the
