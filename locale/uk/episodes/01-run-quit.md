@@ -6,10 +6,10 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Launch the JupyterLab server.
+- Запуск серверу JupyterLab.
 - Create a new Python script.
 - Create a Jupyter notebook.
-- Shutdown the JupyterLab server.
+- Зупинка серверу JupyterLab.
 - Understand the difference between a Python script and a Jupyter notebook.
 - Create Markdown cells in a notebook.
 - Create and run Python cells in a notebook.
@@ -26,9 +26,9 @@ To run Python, we are going to use \[Jupyter Notebooks]\[jupyter] via [JupyterLa
 
 There are other ways of editing, managing, and running code. Software developers often use an integrated development environment (IDE) like [PyCharm](https://www.jetbrains.com/pycharm/) or [Visual Studio Code](https://code.visualstudio.com/), or text editors like Vim or Emacs, to create and edit their Python programs. After editing and saving your Python programs you can execute those programs within the IDE itself or directly on the command line. In contrast, Jupyter notebooks let us execute and view the results of our Python code immediately within the notebook.
 
-JupyterLab has several other handy features:
+JupyterLab має декілька інших зручних функцій:
 
-- You can easily type, edit, and copy and paste blocks of code.
+- Ви можете легко вводити, редагувати, копіювати та вставляти блоки коду.
 - Tab complete allows you to easily access the names of things you are using
   and learn more about them.
 - It allows you to annotate your code with links, different sized text, bullets, etc.
@@ -71,7 +71,7 @@ between the JupyterLab and Jupyter notebook user interfaces can find more inform
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Starting JupyterLab
+## Початок роботи з JupyterLab
 
 You can start the JupyterLab server through the command line or through an application called
 `Anaconda Navigator`. Anaconda Navigator is included as part of the Anaconda Python distribution.
