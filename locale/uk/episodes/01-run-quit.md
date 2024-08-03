@@ -11,32 +11,31 @@ exercises: 0
 - Створення блокноту Jupyter.
 - Зупинка серверу JupyterLab.
 - Understand the difference between a Python script and a Jupyter notebook.
-- Create Markdown cells in a notebook.
-- Create and run Python cells in a notebook.
+- Створення в блокноті комірок типу Markdown.
+- Створення та виконання в блокноті комірок Python.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can I run Python programs?
+- Як запустити програми Python?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 To run Python, we are going to use \[Jupyter Notebooks]\[jupyter] via [JupyterLab][jupyterlab] for the remainder of this workshop. Jupyter notebooks are common in data science and visualization and serve as a convenient common-denominator experience for running Python code interactively where we can easily view and share the results of our Python code.
 
-There are other ways of editing, managing, and running code. Software developers often use an integrated development environment (IDE) like [PyCharm](https://www.jetbrains.com/pycharm/) or [Visual Studio Code](https://code.visualstudio.com/), or text editors like Vim or Emacs, to create and edit their Python programs. After editing and saving your Python programs you can execute those programs within the IDE itself or directly on the command line. In contrast, Jupyter notebooks let us execute and view the results of our Python code immediately within the notebook.
+Існують й інші способи редагування, управління та виконання коду. Розробники програмного забезпечення часто використовують інтегроване середовище розробки (IDE), подібне до [PyCharm](https://www.jetbrains. om/pycharm/) або [Visual Studio Code](https://code.visualstudio.com/) або текстові редактори такі як Vim або Emacs, щоб створити та відредагувати свої програми Python. Після редагування та збереження ваших програм Python ви можете виконувати ці програми в самому IDE або безпосередньо в командному рядку. На відміну від цього, блокноти Jupyter дозволяють відразу переглянути результати нашого Python коду.
 
 JupyterLab має декілька інших зручних функцій:
 
 - Ви можете легко вводити, редагувати, копіювати та вставляти блоки коду.
-- Tab complete allows you to easily access the names of things you are using
-  and learn more about them.
+- Автодоповнення за допомогою клавіші Tab дозволяє легко отримати доступ до назв об'єктів, які ви використовуєте.
 - It allows you to annotate your code with links, different sized text, bullets, etc.
   to make it more accessible to you and your collaborators.
 - It allows you to display figures next to the code that produces them
   to tell a complete story of the analysis.
 
-Each notebook contains one or more cells that contain code, text, or images.
+Кожен блокнот містить одну або кілька комірок, що містять код, текст або зображення.
 
 ## Початок роботи з JupyterLab
 
