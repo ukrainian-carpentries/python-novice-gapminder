@@ -8,7 +8,7 @@ exercises: 0
 
 - Запуск серверу JupyterLab.
 - Create a new Python script.
-- Create a Jupyter notebook.
+- Створення блокноту Jupyter.
 - Зупинка серверу JupyterLab.
 - Understand the difference between a Python script and a Jupyter notebook.
 - Create Markdown cells in a notebook.
