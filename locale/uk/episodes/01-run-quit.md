@@ -57,9 +57,9 @@ the initial connection to download and install Anaconda and JupyterLab
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## JupyterLab? What about Jupyter notebooks?
+## JupyterLab? А чому не Jupyter Notebook?
 
-JupyterLab is the [next stage in the evolution of the Jupyter Notebook](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html#overview).
+JupyterLab є [подальшим кроком в еволюції Jupyter Notebook](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html#overview).
 Якщо ви використовували Jupyter Notebook раніше, то ви добре зрозумієте діапазон можливостей JupyterLab.
 
 Experienced users of Jupyter notebooks interested in a more detailed discussion of the similarities and differences
