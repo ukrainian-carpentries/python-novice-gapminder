@@ -41,11 +41,9 @@ JupyterLab має декілька інших зручних функцій:
 
 JupyterLab is an application server with a web user interface from [Project Jupyter][jupyter] that
 enables one to work with documents and activities such as Jupyter notebooks, text editors, terminals,
-and even custom components in a flexible, integrated, and extensible manner. JupyterLab requires a
-reasonably up-to-date browser (ideally a current version of Chrome, Safari, or Firefox); Internet
-Explorer versions 9 and below are _not_ supported.
+and even custom components in a flexible, integrated, and extensible manner. JupyterLab вимагає досить оновлений браузер (в ідеалі – поточна версія Chrome, Safari або Firefox); Інтернет браузер версії 9 і нижче _не_ підтримується.
 
-JupyterLab is included as part of the Anaconda Python distribution. If you have not already
+JupyterLab є частиною інсталяційного пакета Anaconda Python. If you have not already
 installed the Anaconda Python distribution, see [the setup instructions](../learners/setup.md)
 for installation instructions.
 
