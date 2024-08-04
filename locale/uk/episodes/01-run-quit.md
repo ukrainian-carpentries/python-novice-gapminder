@@ -50,7 +50,7 @@ for installation instructions.
 In this lesson we will run JupyterLab locally on our own machines so it will not require an internet connection besides
 the initial connection to download and install Anaconda and JupyterLab
 
-- Start the JupyterLab server on your machine
+- Запустіть сервер JupyterLab на вашому комп'ютері
 - Use a web browser to open a special localhost URL that connects to your JupyterLab server
 - The JupyterLab server does the work and the web browser renders the result
 - Type code into the browser and see the results after your JupyterLab server has finished executing your code
