@@ -70,10 +70,9 @@ between the JupyterLab and Jupyter notebook user interfaces can find more inform
 
 ## Початок роботи з JupyterLab
 
-You can start the JupyterLab server through the command line or through an application called
-`Anaconda Navigator`. Anaconda Navigator is included as part of the Anaconda Python distribution.
+Ви можете запустити сервер JupyterLab через командний рядок або через застосунок, що має назву 'Anaconda Navigator'. JupyterLab є частиною інсталяційного пакета Anaconda Python.
 
-### macOS - Command Line
+### macOS - командний рядок
 
 To start the JupyterLab server you will need to access the command line through the Terminal.
 There are two ways to open Terminal on Mac.
