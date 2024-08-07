@@ -75,13 +75,12 @@ between the JupyterLab and Jupyter notebook user interfaces can find more inform
 ### macOS - командний рядок
 
 Для запуску сервера JupyterLab вам потрібно отримати доступ до командного рядка через Terminal.
-There are two ways to open Terminal on Mac.
+Існує два способи відкрити термінал на Mac.
 
-1. In your Applications folder, open Utilities and double-click on Terminal
-2. Press <kbd>Command</kbd> + <kbd>spacebar</kbd> to launch Spotlight. Type `Terminal` and then
-   double-click the search result or hit <kbd>Enter</kbd>
+1. У директорії Applications відкрийте теку Utilities і двічі натисніть Terminal
+2. Натисніть <kbd>Command</kbd> + <kbd>spacebar</kbd> для запуску Spotlight. Введіть `Terminal`, а потім двічі клацніть на результат пошуку або натисніть <kbd>Enter</kbd>
 
-After you have launched Terminal, type the command to launch the JupyterLab server.
+Після запуску Terminal введіть команду для запуску сервера JupyterLab.
 
 ```bash
 $ jupyter lab
