@@ -162,7 +162,7 @@ A screenshot of the default Menu Bar is provided below.
 <p align='center'>   <img alt="JupyterLab Menu Bar" src="fig/0_jupyterlab_menu_bar.png" width="750"/>
 </p>
 
-### Left Sidebar
+### Ліва бічна панель
 
 The left sidebar contains a number of commonly used tabs, such as a file browser (showing the
 contents of the directory where the JupyterLab server was launched), a list of running kernels
