@@ -92,7 +92,7 @@ To start the JupyterLab server you will need to access the Anaconda Prompt.
 
 Press <kbd>Windows Logo Key</kbd> and search for `Anaconda Prompt`, click the result or press enter.
 
-After you have launched the Anaconda Prompt, type the command:
+Після запуску Anaconda Prompt введіть команду:
 
 ```bash
 $ jupyter lab
