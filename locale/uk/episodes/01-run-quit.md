@@ -102,7 +102,7 @@ $ jupyter lab
 
 To start a JupyterLab server from Anaconda Navigator you must first [start Anaconda Navigator (click for detailed instructions on macOS, Windows, and Linux)](https://docs.anaconda.com/free/navigator/getting-started/#navigator-starting-navigator). You can search for Anaconda Navigator via Spotlight on macOS (<kbd>Command</kbd> + <kbd>spacebar</kbd>), the Windows search function (<kbd>Windows Logo Key</kbd>) or opening a terminal shell and executing the `anaconda-navigator` executable from the command line.
 
-After you have launched Anaconda Navigator, click the `Launch` button under JupyterLab. You may need
+Після того, як ви запустили Anaconda Navigator, натисніть кнопку `Launch` під JupyterLab. You may need
 to scroll down to find it.
 
 Here is a screenshot of an Anaconda Navigator page similar to the one that should open on either macOS
@@ -119,7 +119,7 @@ default web browser after starting the JupyterLab server on either macOS or Wind
   <img alt="JupyterLab landing page" src="fig/0_jupyterlab_landing_page.png" width="750"/>
 </p>
 
-## The JupyterLab Interface
+## Інтерфейс JupyterLab
 
 JupyterLab has many features found in traditional integrated development environments (IDEs) but
 is focused on providing flexible building blocks for interactive, exploratory computing.
@@ -128,24 +128,23 @@ The [JupyterLab Interface][jupyterlab-ui]
 consists of the Menu Bar, a collapsable Left Side Bar, and the Main Work Area which contains tabs
 of documents and activities.
 
-### Menu Bar
+### Панель Меню
 
 The Menu Bar at the top of JupyterLab has the top-level menus that expose various actions
-available in JupyterLab along with their keyboard shortcuts (where applicable). The following
-menus are included by default.
+available in JupyterLab along with their keyboard shortcuts (where applicable). Наступні пункти меню наявні за замовчуванням.
 
 - **File:** Actions related to files and directories such as _New_, _Open_, _Close_, _Save_, etc. The _File_ menu also includes the _Shut Down_ action used to shutdown the JupyterLab server.
 - **Edit:** Actions related to editing documents and other activities such as _Undo_, _Cut_, _Copy_, _Paste_, etc.
 - **View:** Actions that alter the appearance of JupyterLab.
 - **Run:** Actions for running code in different activities such as notebooks and code consoles (discussed below).
-- **Kernel:** Actions for managing kernels. Kernels in Jupyter will be explained in more detail below.
+- **Ядро:** Дії щодо управління ядрами. Kernels in Jupyter will be explained in more detail below.
 - **Tabs:** A list of the open documents and activities in the main work area.
 - **Settings:** Common JupyterLab settings can be configured using this menu. There is also an _Advanced Settings Editor_ option in the dropdown menu that provides more fine-grained control of JupyterLab settings and configuration options.
 - **Help:** A list of JupyterLab and kernel help links.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Kernels
+## Ядра
 
 The JupyterLab [docs](https://jupyterlab.readthedocs.io/en/stable/user/documents_kernels.html)
 define kernels as "separate processes started by the server that runs your code in different programming languages and environments."
