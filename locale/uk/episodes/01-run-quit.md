@@ -175,13 +175,13 @@ the default Left Side Bar is provided below.
 The left sidebar can be collapsed or expanded by selecting "Show Left Sidebar" in the View menu or
 by clicking on the active sidebar tab.
 
-### Main Work Area
+### Основна робоча область
 
-The main work area in JupyterLab enables you to arrange documents (notebooks, text files, etc.)
-and other activities (terminals, code consoles, etc.) into panels of tabs that can be resized or
-subdivided. A screenshot of the default Main Work Area is provided below.
+Основна робоча область в JupyterLab дозволяє упорядковувати документи (блокноти, текстові файли та ін.)
+and other activities (terminals, code consoles, etc.) на панелях вкладок, які можуть бути змінені або
+розділені. A screenshot of the default Main Work Area is provided below.
 
-If you do not see the Launcher tab, click the blue plus sign under the "File" and "Edit" menus and it will appear.
+Якщо Ви не бачите вкладку Launcher на панелі запуску, натисніть синій плюс під знаком "Файл" та "Редагувати", і ця вкладка з'явиться.
 
 <p align='center'>   <img alt="JupyterLab Main Work Area" src="fig/0_jupyterlab_main_work_area.png" width="750"/>
 </p>
