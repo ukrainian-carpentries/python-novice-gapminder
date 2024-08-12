@@ -186,9 +186,7 @@ and other activities (terminals, code consoles, etc.) на панелях вкл
 <p align='center'>   <img alt="JupyterLab Main Work Area" src="fig/0_jupyterlab_main_work_area.png" width="750"/>
 </p>
 
-Drag a tab to the center of a tab panel to move the tab to the panel. Subdivide a tab panel by
-dragging a tab to the left, right, top, or bottom of the panel. The work area has a single current
-activity. The tab for the current activity is marked with a colored top border (blue by default).
+Drag a tab to the center of a tab panel to move the tab to the panel. Розділіть панель вкладок за допомогою перетягування вкладки ліворуч, праворуч, до верху або до низу панелі. Робоча панель має одну поточну дію. Вкладка для поточної дії позначена кольоровою верхньою рамкою (за замовчуванням - синьою).
 
 ## Creating a Python script
 
@@ -196,9 +194,9 @@ activity. The tab for the current activity is marked with a colored top border (
   - You can also create a new plain text file by selecting the _New -> Text File_ from the _File_ menu in the Menu Bar.
 - To convert this plain text file to a Python program, select the _Save File As_ action from the _File_ menu in the Menu Bar and give your new text file a name that ends with the `.py` extension.
   - The `.py` extension lets everyone (including the operating system) know that this text file is a Python program.
-  - This is convention, not a requirement.
+  - Це умовність, а не вимога.
 
-## Creating a Jupyter Notebook
+## Створення Jupyter Notebook
 
 To open a new notebook click the Python 3 icon under the _Notebook_ header in the Launcher tab in
 the main work area. You can also create a new notebook by selecting _New -> Notebook_ from the _File_ menu in the Menu Bar.
