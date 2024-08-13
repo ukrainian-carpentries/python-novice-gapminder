@@ -252,9 +252,9 @@ right, top, or bottom of the panel.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Code vs. Text
+## Код проти тексту
 
-Jupyter mixes code and text in different types of blocks, called cells. We often use the term
+Jupyter дозволяє змішувати код і текст у різних типах блоків, які називаються комірками. We often use the term
 "code" to mean "the source code of software written in a language such as Python".
 A "code cell" in a Notebook is a cell that contains software;
 a "text cell" is one that contains ordinary prose written for human beings.
@@ -266,7 +266,7 @@ a "text cell" is one that contains ordinary prose written for human beings.
 - If you press <kbd>Esc</kbd> and <kbd>Return</kbd> alternately, the outer border of your code cell will change from gray to blue.
 - These are the **Command** (gray) and **Edit** (blue) modes of your notebook.
 - Command mode allows you to edit notebook-level features, and Edit mode changes the content of cells.
-- When in Command mode (esc/gray),
+- В командному режимі (esc/сірий),
   - The <kbd>b</kbd> key will make a new cell below the currently selected cell.
   - The <kbd>a</kbd> key will make one above.
   - The <kbd>x</kbd> key will delete the current cell.
