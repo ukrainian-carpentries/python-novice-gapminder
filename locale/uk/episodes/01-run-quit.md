@@ -308,12 +308,11 @@ You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  В�
 - Notice that the <kbd>Return</kbd> and <kbd>Shift</kbd> keys on the right of the keyboard are
   right next to each other.
 
-### The Notebook will turn Markdown into pretty-printed documentation.
+### Notebook підтримує мову розмітки текстів Markdown
 
 - Notebooks can also render [Markdown][markdown].
-  - A simple plain-text format for writing lists, links,
-    and other things that might go into a web page.
-  - Equivalently, a subset of HTML that looks like what you'd send in an old-fashioned email.
+  - Простий текстовий формат для запису списків, посилань та інших елементів, які можуть з'являтися на  вебсторінці.
+  - Власне, це підмножина HTML, яка виглядає у стилі старомодного електронного листа.
 - Turn the current cell into a Markdown cell by entering the Command mode (<kbd>Esc</kbd>/gray)
   and press the <kbd>M</kbd> key.
 - `In [ ]:` will disappear to show it is no longer a code cell and you will be able to write in
@@ -321,7 +320,7 @@ You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  В�
 - Turn the current cell into a Code cell by entering the Command mode (<kbd>Esc</kbd>/gray) and
   press the <kbd>y</kbd> key.
 
-### Markdown does most of what HTML does.
+### Markdown робить більшість того, що робить HTML.
 
 Table: Showing some markdown syntax and its rendered output.
 
@@ -333,7 +332,7 @@ Table: Showing some markdown syntax and its rendered output.
 |`                                   |                                                |
 +---------------------------------------+------------------------------------------------+
 +---------------------------------------+------------------------------------------------+
-\| `                                  | <p></p>                                        | | 1.   Use numbers                      | 1.   Use numbers                               | | 1.   to create                        | 2.   to create                                 | | 1.   bullet lists.                    | 3.   numbered lists.                           |
+\| `                                  | <p></p>                                        | | 1.   Use numbers                      | 1.   Use numbers                               | | 1.   to create                        | 2.   to create                                 | | 1.   bullet lists.                    | 3.   нумеровані списки.                           |
 |`                                   |                                                |
 +---------------------------------------+------------------------------------------------+
 +---------------------------------------+------------------------------------------------+
@@ -359,25 +358,25 @@ Table: Showing some markdown syntax and its rendered output.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Creating Lists in Markdown
+## Створення списків в Markdown
 
 Create a nested list in a Markdown cell in a notebook that looks like this:
 
-1. Get funding.
-2. Do work.
+1. Знайти фінансування.
+2. Виконати роботу.
 
-- Design experiment.
-- Collect data.
-- Analyze.
+- Провести експеримент.
+- Зібрати дані.
+- Провести аналіз.
 
-3. Write up.
-4. Publish.
+3. Написати статтю.
+4. Опублікувати.
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
-This challenge integrates both the numbered list and bullet list.
+Рішення Це завдання поєднує як нумерований, так і маркований списки.
 Note that the bullet list is indented 2 spaces so that it is inline with the items of the numbered list.
 
 ```
@@ -396,11 +395,11 @@ Note that the bullet list is indented 2 spaces so that it is inline with the ite
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## More Math
+## Більше математики
 
 What is displayed when a Python cell in a notebook
 that contains several calculations is executed?
-For example, what happens when this cell is executed?
+Наприклад, що трапиться при виконанні дій наступної комірки?
 
 ```python
 7 * 3
@@ -409,9 +408,9 @@ For example, what happens when this cell is executed?
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
-Python returns the output of the last calculation.
+Python повертає результат останнього розрахунку.
 
 ```python
 3
