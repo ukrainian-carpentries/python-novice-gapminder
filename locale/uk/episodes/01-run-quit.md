@@ -434,17 +434,16 @@ x = 6 * 7 + 12
 print(x)
 ```
 
-And then run it with <kbd>Shift</kbd>\+<kbd>Return</kbd> to be sure that it works as a code cell.
-Now go back to the cell and use <kbd>Esc</kbd> then <kbd>m</kbd> to switch the cell to Markdown
-and "run" it with <kbd>Shift</kbd>\+<kbd>Return</kbd>.
-What happened and how might this be useful?
+А потім запустіть цей код в комірці за допомогою <kbd>Shift</kbd>\+<kbd>Return</kbd>, щоб переконатися, що ця комірка працює як комірка коду.
+Тепер поверніться до комірки та натисніть <kbd>Esc</kbd>, а потім <kbd>m</kbd>, щоб перемкнути комірку на Markdown і "запустити" її за допомогою <kbd>Shift</kbd>\+<kbd>Return</kbd>.
+Що сталося, і як це може бути корисним?
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
-The Python code gets treated like Markdown text.
-The lines appear as if they are part of one contiguous paragraph.
+Код Python розглядається як текст Markdown.
+Рядки виглядають так, ніби вони є частиною одного суміжного абзацу.
 This could be useful to temporarily turn on and off cells in notebooks that get used for multiple purposes.
 
 ```python
@@ -457,39 +456,37 @@ x = 6 * 7 + 12 print(x)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Equations
+## Рівняння
 
-Standard Markdown (such as we're using for these notes) won't render equations,
-but the Notebook will.
-Create a new Markdown cell
-and enter the following:
+Стандартний Markdown (наприклад, такий, що використовується для цих нотаток) не надаватиме рівняння, але Notebook буде.
+Створіть нову комірку Markdown і введіть наступне:
 
 ```
 $\sum_{i=1}^{N} 2^{-i} \approx 1$
 ```
 
-(It's probably easier to copy and paste.)
+(Мабуть, легше скопіювати та вставити.)
 What does it display?
-What do you think the underscore, `_`, circumflex, `^`, and dollar sign, `$`, do?
+Що ви думаєте про підкреслювання, `_`, циркумфлекс, `^` і доларовий знак, `$`, далі?
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
-The notebook shows the equation as it would be rendered from LaTeX equation syntax.
+У блокноті показано рівняння з синтаксисом рівняння LaTeX.
 The dollar sign, `$`, is used to tell Markdown that the text in between is a LaTeX equation.
-If you're not familiar with LaTeX,  underscore, `_`, is used for subscripts and circumflex, `^`, is used for superscripts.
-A pair of curly braces, `{` and `}`, is used to group text together so that the statement `i=1` becomes the subscript and `N` becomes the superscript.
-Similarly, `-i` is in curly braces to make the whole statement the superscript for `2`.
-`\sum` and `\approx` are LaTeX commands for "sum over" and "approximate" symbols.
+Якщо ви не знайомі з LaTeX, підкреслення, `_`, використовується для підрядкових індексів та циркумфлекс, `^`, використовується для верхніх індексів.
+Пара фігурних дужок, `{` та `}`, використовується для групування тексту разом, щоб вираз `i=1` став нижнім та `N` - верхнім індексом.
+Аналогічно, вираз `-i` взятий у фігурні дужки, щоб зробити цей вираз верхнім індексом для `2`.
+`\sum` та `\approx` є командами LaTeX для значень "sum over" й "approximate".
 
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Closing JupyterLab
+## Закриття JupyterLab
 
-- From the Menu Bar select the "File" menu and then choose "Shut Down" at the bottom of the dropdown menu. You will be prompted to confirm that you wish to shutdown the JupyterLab server (don't forget to save your work!). Click "Shut Down" to shutdown the JupyterLab server.
+- From the Menu Bar select the "File" menu and then choose "Shut Down" at the bottom of the dropdown menu. Вам буде запропоновано підтвердити, що Ви бажаєте вимкнути сервер JupyterLab (не забудьте зберегти свою роботу!). Click "Shut Down" to shutdown the JupyterLab server.
 - To restart the JupyterLab server you will need to re-run the following command from a shell.
 
 ```
