@@ -216,17 +216,17 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 
 ## Як це зберігається
 
-- The notebook file is stored in a format called JSON.
-- Just like a webpage, what's saved looks different from what you see in your browser.
-- But this format allows Jupyter to mix source code, text, and images, all in one file.
+- Файл блокноту зберігається у форматі JSON.
+- Подібно до вебсторінки, те, що зберігається, відрізняється від того, що ви бачите у своєму браузері.
+- Але формат JSON дозволяє Jupyter змішувати вихідний код, текст і зображення в одному файлі.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Arranging Documents into Panels of Tabs
+## Упорядкування документів в панелях вкладок
 
-In the JupyterLab Main Work Area you can arrange documents into panels of tabs. Here is an
+У головній робочій області JupyterLab ви можете впорядковувати документи на панелі вкладок. Here is an
 example from the [official documentation][jupyterlab].
 
 <p align='center'>   <img alt="Multi-panel JupyterLab" src="fig/0_multipanel_jupyterlab_screenshot.png" width="750"/>
@@ -240,7 +240,7 @@ workflow?
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 After creating the necessary tabs, you can drag one of the tabs to the center of a panel to
 move the tab to the panel; next you can subdivide a tab panel by dragging a tab to the left,
