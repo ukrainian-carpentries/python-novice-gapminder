@@ -495,9 +495,9 @@ $ jupyter lab
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Closing JupyterLab
+## Закриття JupyterLab
 
-Practice closing and restarting the JupyterLab server.
+Потренуйтеся закривати та перезапускати сервер JupyterLab.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -510,10 +510,10 @@ Practice closing and restarting the JupyterLab server.
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - Python scripts are plain text files.
-- Use the Jupyter Notebook for editing and running Python.
-- The Notebook has Command and Edit modes.
+- Застосування Jupyter Notebook для редагування та запуску Python
+- Jupiter Notebook має режими команд та редагування
 - Use the keyboard and mouse to select and edit cells.
-- The Notebook will turn Markdown into pretty-printed documentation.
-- Markdown does most of what HTML does.
+- Notebook підтримує мову розмітки текстів Markdown
+- Markdown виконує більшість функцій HTML.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
