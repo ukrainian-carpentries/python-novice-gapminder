@@ -271,7 +271,7 @@ a "text cell" is one that contains ordinary prose written for human beings.
   - The <kbd>a</kbd> key will make one above.
   - The <kbd>x</kbd> key will delete the current cell.
   - The <kbd>z</kbd> key will undo your last cell operation (which could be a deletion, creation, etc).
-- All actions can be done using the menus, but there are lots of keyboard shortcuts to speed things up.
+- Усі дії можна виконувати за допомогою меню, але є багато комбінацій клавіш для прискорення процесу.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -285,13 +285,13 @@ Use the shortcuts to undo the last cell operation you performed.
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
-Command mode has a grey border and Edit mode has a blue border.
+Рішення Командний режим має сіру рамку, а режим редагування — синю.
 Use <kbd>Esc</kbd> and <kbd>Return</kbd> to switch between modes.
-You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>b</kbd> or <kbd>a</kbd>.
-You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>x</kbd>.
-You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>z</kbd>.
+You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Введіть <kbd>b</kbd> або <kbd>a</kbd>.
+You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Введіть <kbd>x</kbd>.
+You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Введіть <kbd>z</kbd>.
 
 :::::::::::::::::::::::::
 
@@ -299,8 +299,7 @@ You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Typ
 
 ### Use the keyboard and mouse to select and edit cells.
 
-- Pressing the <kbd>Return</kbd> key turns the border blue and engages Edit mode, which allows
-  you to type within the cell.
+- Якщо натиснути клавішу <kbd>Return</kbd>, рамка стане синьою та ввімкнеться режим редагування, що дозволяє введення команди в комірку.
 - Because we want to be able to write many lines of code in a single cell,
   pressing the <kbd>Return</kbd> key when in Edit mode (blue) moves the cursor to the next line
   in the cell just like in a text editor.
