@@ -201,12 +201,12 @@ Drag a tab to the center of a tab panel to move the tab to the panel. Розді
 To open a new notebook click the Python 3 icon under the _Notebook_ header in the Launcher tab in
 the main work area. You can also create a new notebook by selecting _New -> Notebook_ from the _File_ menu in the Menu Bar.
 
-Additional notes on Jupyter notebooks.
+Додаткові зауваження щодо Jupyter notebooks.
 
-- Notebook files have the extension `.ipynb` to distinguish them from plain-text Python programs.
+- Файли, створені в Jupiter Notebook, мають розширення `.ipynb`, щоб відрізнити їх від програм на Python, створених як звичайний текстовий файл.
 - Notebooks can be exported as Python scripts that can be run from the command line.
 
-Below is a screenshot of a Jupyter notebook running inside JupyterLab. If you are interested in
+Нижче наведено скриншот екрана Jupyter Notebook, який працює в JupyterLab. If you are interested in
 more details, then see the [official notebook documentation][jupyterlab-notebook-docs].
 
 <p align='center'>   <img alt="Example Jupyter Notebook" src="fig/0_jupyterlab_notebook_screenshot.png" width="750"/>
@@ -214,7 +214,7 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## How It's Stored
+## Як це зберігається
 
 - The notebook file is stored in a format called JSON.
 - Just like a webpage, what's saved looks different from what you see in your browser.
