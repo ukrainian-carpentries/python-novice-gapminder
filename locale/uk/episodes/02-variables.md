@@ -19,18 +19,17 @@ exercises: 10
 
 ## Використовуйте змінні для зберігання значень.
 
-- **Variables** are names for values.
+- **Змінні** - це імена значень.
 
-- Variable names
+- Імена змінних
 
   - can **only** contain letters, digits, and underscore `_` (typically used to separate words in long variable names)
-  - cannot start with a digit
+  - не можуть починатися з цифри
   - are **case sensitive** (age, Age and AGE are three different variables)
 
 - The name should also be meaningful so you or another programmer know what it is
 
-- Variable names that start with underscores like `__alistairs_real_age` have a special meaning
-  so we won't do that until we understand the convention.
+- Імена змінних, які починаються з підкреслення, наприклад  __alistairs_real_age, мають особливе значення, тому ми не будемо цього робити, доки не зрозуміємо прийняті в мові Python домовленості.
 
 - In Python the `=` symbol assigns the value on the right to the name on the left.
 
@@ -44,13 +43,13 @@ exercises: 10
   first_name = 'Ahmed'
   ```
 
-## Use `print` to display values.
+## Використовуйте `print` для виведення значень.
 
-- Python has a built-in function called `print` that prints things as text.
-- Call the function (i.e., tell Python to run it) by using its name.
-- Provide values to the function (i.e., the things to print) in parentheses.
+- Python має вбудовану функцію `print`, яка друкує щось як текст.
+- Щоб викликати функцію (тобто, щоб виконати її), треба вказати її ім'я.
+- Щоб передати функції значення (тобто дані для друку), їх треба помістити у дужки.
 - To add a string to the printout, wrap the string in single or double quotes.
-- The values passed to the function are called **arguments**
+- Значення, які передаються до функції, називаються **аргументами**
 
 ```python
 print(first_name, 'is', age, 'years old')
@@ -61,12 +60,11 @@ Ahmed is 42 years old
 ```
 
 - `print` automatically puts a single space between items to separate them.
-- And wraps around to a new line at the end.
+- Також `print` переходить на новий рядок після друку.
 
-## Variables must be created before they are used.
+## Змінні мають бути створені перед їх використанням.
 
-- If a variable doesn't exist yet, or if the name has been mis-spelled,
-  Python reports an error. (Unlike some languages, which "guess" a default value.)
+- Якщо змінна ще не існує, або якщо ім'я було неправильно написано, Python повідомляє про помилку. (На відміну від деяких інших мов, які можуть "вгадати" якесь значення за замовчуванням.)
 
 ```python
 print(last_name)
@@ -81,15 +79,14 @@ NameError                                 Traceback (most recent call last)
 NameError: name 'last_name' is not defined
 ```
 
-- The last line of an error message is usually the most informative.
+- Останній рядок у повідомленні про помилку є найбільш інформативним.
 - We will look at error messages in detail [later](17-scope.md#reading-error-messages).
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Variables Persist Between Cells
+## Змінні зберігаються між комірками
 
-Be aware that it is the _order_ of execution of cells that is important in a Jupyter notebook, not the order
-in which they appear. Python will remember _all_ the code that was run previously, including any variables you have
+Майте на увазі, що в блокноті Jupyter важливий порядок виконання комірок, а не порядок їх появи. Python will remember _all_ the code that was run previously, including any variables you have
 defined, irrespective of the order in the notebook. Therefore if you define variables lower down the notebook and then
 (re)run cells further up, those defined further down will still be present. As an example, create two cells with the
 following content, in this order:
