@@ -1,23 +1,23 @@
 ---
-title: Variables and Assignment
+title: Змінні та присвоєння
 teaching: 10
 exercises: 10
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Write programs that assign scalar values to variables and perform calculations with those values.
-- Correctly trace value changes in programs that use scalar assignment.
+- Створення програм, які присвоюють скалярні значення змінним і виконують обчислення з цими значеннями.
+- Відстеження у програмах значень змінних, які використовують скалярне присвоєння.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can I store data in programs?
+- Як я можу зберігати дані в програмах?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Use variables to store values.
+## Використовуйте змінні для зберігання значень.
 
 - **Variables** are names for values.
 
