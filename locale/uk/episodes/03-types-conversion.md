@@ -1,37 +1,37 @@
 ---
-title: Data Types and Type Conversion
+title: Типи даних та їх перетворення
 teaching: 10
 exercises: 10
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain key differences between integers and floating point numbers.
-- Explain key differences between numbers and character strings.
-- Use built-in functions to convert between integers, floating point numbers, and strings.
+- Визначення ключових відмінностей між цілими числами та числами з плаваючою точкою.
+- З'ясувати ключові відмінності між числами та символьними рядками.
+- Використання вбудованих функцій для перетворення цілих чисел, чисел з плаваючою точкою та рядків.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- What kinds of data do programs store?
-- How can I convert one type to another?
+- Які види даних зберігають програми?
+- Як я можу перетворити один тип в інший?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Every value has a type.
+## Кожне значення має тип.
 
 - Every value in a program has a specific type.
-- Integer (`int`): represents positive or negative whole numbers like 3 or -512.
-- Floating point number (`float`): represents real numbers like 3.14159 or -2.5.
+- Ціле число (`int`): зображує додатні або від’ємні цілі числа, наприклад 3 або -512.
+- Число з плаваючою крапкою (`float`): зображує дійсні числа, наприклад 3.14159 або -2.5.
 - Character string (usually called "string", `str`): text.
-  - Written in either single quotes or double quotes (as long as they match).
-  - The quote marks aren't printed when the string is displayed.
+  - Укладені в одинарні або подвійні лапки (тип лапок має збігатися).
+  - Під час відображення рядку лапки не друкуються.
 
-## Use the built-in function `type` to find the type of a value.
+## Вбудована функція `type` повертає тип значення.
 
-- Use the built-in function `type` to find out what type a value has.
-- Works on variables as well.
+- Використовуйте вбудовану функцію `type`, щоб з'ясувати, який тип має значення.
+- Це також працює зі змінними.
   - But remember: the _value_ has the type --- the _variable_ is just a label.
 
 ```python
@@ -43,8 +43,7 @@ print(type(52))
 ```
 
 ```python
-fitness = 'average'
-print(type(fitness))
+fitness = 'average' print(type(fitness))
 ```
 
 ```output
@@ -53,7 +52,7 @@ print(type(fitness))
 
 ## Types control what operations (or methods) can be performed on a given value.
 
-- A value's type determines what the program can do to it.
+- Тип значення визначає, що може робити з ним програма.
 
 ```python
 print(5 - 3)
@@ -89,8 +88,8 @@ print(full_name)
 Ahmed Walsh
 ```
 
-- Multiplying a character string by an integer _N_ creates a new string that consists of that character string repeated  _N_ times.
-  - Since multiplication is repeated addition.
+- Якщо рядок помножити на ціле число _N_, то це створить новий рядок, який буде містити вихідний рядок, повторений _N_ разів.
+  - Оскільки множення - це повторюване додавання.
 
 ```python
 separator = '=' * 10
@@ -101,9 +100,9 @@ print(separator)
 ==========
 ```
 
-## Strings have a length (but numbers don't).
+## Рядки мають довжину (але числа її не мають).
 
-- The built-in function `len` counts the number of characters in a string.
+- Вбудована функція `len` повертає кількість символів у рядку.
 
 ```python
 print(len(full_name))
@@ -113,7 +112,7 @@ print(len(full_name))
 11
 ```
 
-- But numbers don't have a length (not even zero).
+- Але числа не мають довжини (навіть нульової).
 
 ```python
 print(len(52))
@@ -130,7 +129,7 @@ TypeError: object of type 'int' has no len()
 
 ## Must convert numbers to strings or vice versa when operating on them. {#convert-numbers-and-strings}
 
-- Cannot add numbers and strings.
+- Додавання чисел та рядків неможливе.
 
 ```python
 print(1 + '2')
@@ -145,8 +144,8 @@ TypeError                                 Traceback (most recent call last)
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
 ```
 
-- Not allowed because it's ambiguous: should `1 + '2'` be `3` or `'12'`?
-- Some types can be converted to other types by using the type name as a function.
+- Таке додавання не дозволено, тому що воно не визначене: чи має `1 + '2'` повертати `3` чи `'12'`?
+- Перетворення типу виконується за допомогою функції, яка має те ж саме імʼя, що і потрібний тип.
 
 ```python
 print(1 + int('2'))
@@ -160,8 +159,8 @@ print(str(1) + '2')
 
 ## Can mix integers and floats freely in operations.
 
-- Integers and floating-point numbers can be mixed in arithmetic.
-  - Python 3 automatically converts integers to floats as needed.
+- Цілі та дійсні числа можна використовувати разом для арифметичних дій.
+  - Python 3 автоматично перетворить цілі числа у дійсні, якщо це потрібно.
 
 ```python
 print('half is', 1 / 2.0)
@@ -175,9 +174,8 @@ three squared is 9.0
 
 ## Variables only change value when something is assigned to them.
 
-- If we make one cell in a spreadsheet depend on another,
-  and update the latter,
-  the former updates automatically.
+- Якщо в електронних таблицях ми зробимо одну комірку залежною від іншої та оновимо останню,
+  перша оновиться автоматично.
 - This does **not** happen in programming languages.
 
 ```python
@@ -193,22 +191,21 @@ first is 2 and second is 5
 
 - The computer reads the value of `variable_one` when doing the multiplication,
   creates a new value, and assigns it to `variable_two`.
-- Afterwards, the value of `variable_two` is set to the new value and _not dependent on `variable_one`_ so its value
-  does not automatically change when `variable_one` changes.
+- Після того, як значення `variable_two` встановлено, воно _не залежить від значення `variable_one`_, отже його значення не змінюється автоматично, коли `variable_one` змінюється.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Fractions
+## Дроби
 
 What type of value is 3.4?
-How can you find out?
+Як це можна встановити?
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 It is a floating-point number (often abbreviated "float").
-It is possible to find out by using the built-in function `type()`.
+Це можна перевірити, використовуючи вбудовану функцію `type()`.
 
 ```python
 print(type(3.4))
@@ -224,16 +221,15 @@ print(type(3.4))
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Automatic Type Conversion
+## Автоматичне перетворення типів
 
-What type of value is 3.25 + 4?
+Який тип має вираз 3.25 + 4?
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
-It is a float:
-integers are automatically converted to floats as necessary.
+Це - дійсне число: цілі числа автоматично перетворюються у дійсні, коли це необхідно.
 
 ```python
 result = 3.25 + 4
@@ -250,10 +246,10 @@ print(result, 'is', type(result))
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Choose a Type
+## Вибір типу
 
 What type of value (integer, floating point number, or character string)
-would you use to represent each of the following?  Try to come up with more than one good answer for each problem.  For example, in  # 1, when would counting days with a floating point variable make more sense than using an integer?
+would you use to represent each of the following?  Спробуйте знайти більш ніж одну гарну відповідь для кожної проблеми.  For example, in  # 1, when would counting days with a floating point variable make more sense than using an integer?
 
 1. Number of days since the start of the year.
 2. Time elapsed from the start of the year until now in days.
