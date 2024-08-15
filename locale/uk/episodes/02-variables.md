@@ -87,9 +87,7 @@ NameError: name 'last_name' is not defined
 ## Змінні зберігаються між комірками
 
 Майте на увазі, що в блокноті Jupyter важливий порядок виконання комірок, а не порядок їх появи. Python will remember _all_ the code that was run previously, including any variables you have
-defined, irrespective of the order in the notebook. Therefore if you define variables lower down the notebook and then
-(re)run cells further up, those defined further down will still be present. As an example, create two cells with the
-following content, in this order:
+defined, irrespective of the order in the notebook. Тому, якщо ви визначите змінні нижче в блокноті, а потім (повторно) запустите комірки вище, то ті комірки, що визначені нижче, все одно будуть присутні. Як приклад, створіть дві комірки наступного вмісту у такому порядку:
 
 ```python
 print(myval)
@@ -105,13 +103,13 @@ clears the interpreter and runs everything from a clean slate going top to botto
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Variables can be used in calculations.
+## Змінні можна використовувати для обчислень.
 
-- We can use variables in calculations just as if they were values.
-  - Remember, we assigned the value `42` to `age` a few lines ago.
+- Ми можемо використовувати змінні в обчисленнях так само, як би вони були значеннями.
+  - Пам’ятайте, ми присвоїли значення `42` змінній `age` кількома рядками вище.
 
 ```python
-age = age + 3
+age = age + 3 
 print('Age in three years:', age)
 ```
 
@@ -119,11 +117,10 @@ print('Age in three years:', age)
 Age in three years: 45
 ```
 
-## Use an index to get a single character from a string.
+## Використовуйте індекс, щоб отримати один символ із рядка.
 
 - The characters (individual letters, numbers, and so on) in a string are
-  ordered. For example, the string `'AB'` is not the same as `'BA'`. Because of
-  this ordering, we can treat the string as a list of characters.
+  ordered. Наприклад, рядок `'AB'` не те саме, що `'BA'`. Завдяки такому упорядкуванню ми можемо розглядати рядок як список символів.
 - Each position in the string (first, second, etc.) is given a number. This
   number is called an **index** or sometimes a subscript.
 - Indices are numbered from 0.
