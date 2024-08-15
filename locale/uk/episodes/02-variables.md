@@ -123,11 +123,10 @@ Age in three years: 45
   ordered. Наприклад, рядок `'AB'` не те саме, що `'BA'`. Завдяки такому упорядкуванню ми можемо розглядати рядок як список символів.
 - Each position in the string (first, second, etc.) is given a number. This
   number is called an **index** or sometimes a subscript.
-- Indices are numbered from 0.
-- Use the position's index in square brackets to get the character at that
-  position.
+- Індекси нумеруються від 0.
+- Використовуйте індекс позиції у квадратних дужках, щоб отримати символ з тієї позиції у рядку.
 
-![A line of Python code, print(atom\\_name\[0\]), demonstrates that using the zero index will output just the initial letter, in this case 'h' for helium.](fig/2_indexing.svg)
+![Рядок кода Python, print(atom\\_name\[0\]), демонструє, що використання нульового індексу виведе лише початкову літеру, у цьому випадку 'h' for helium.](fig/2_indexing.svg)
 
 ```python
 atom_name = 'helium'
@@ -138,19 +137,17 @@ print(atom_name[0])
 h
 ```
 
-## Use a slice to get a substring.
+## Використовуйте зріз, щоб отримати підрядок.
 
 - A part of a string is called a **substring**. A substring can be as short as a
   single character.
-- An item in a list is called an element. Whenever we treat a string as if it
-  were a list, the string's elements are its individual characters.
-- A slice is a part of a string (or, more generally, a part of any list-like thing).
+- Список складається з елементів. У випадку, коли рядок розглядається як список, його елементами є окремі символи.
+- Зріз - це частина рядка (в загальному випадку, будь-який вираз).
 - We take a slice with the notation `[start:stop]`, where `start` is the integer
   index of the first element we want and `stop` is the integer index of
   the element _just after_ the last element we want.
-- The difference between `stop` and `start` is the slice's length.
-- Taking a slice does not change the contents of the original string. Instead,
-  taking a slice returns a copy of part of the original string.
+- Проміжок між `stop` and `start` - це довжина зрізу.
+- Визначення зрізу не змінює вміст вихідного рядка. Натомість, визначений зріз повертає копію початкового рядка.
 
 ```python
 atom_name = 'sodium'
@@ -161,7 +158,7 @@ print(atom_name[0:3])
 sod
 ```
 
-## Use the built-in function `len` to find the length of a string.
+## Використовуйте вбудовану функцію `len`, щоб знайти довжину рядка.
 
 ```python
 print(len('helium'))
@@ -176,11 +173,10 @@ print(len('helium'))
 
 ## Python is case-sensitive.
 
-- Python thinks that upper- and lower-case letters are different,
-  so `Name` and `name` are different variables.
-- There are conventions for using upper-case letters at the start of variable names so we will use lower-case letters for now.
+- Python вважає, що букви верхнього та нижнього регістру відрізняються, отже `Name` і `name` - різні змінні.
+- Існують домовленості про використання великих літер на початку імен змінних, тому ми будемо використовувати малі літери.
 
-## Use meaningful variable names.
+## Використовуйте змістовні назви змінних.
 
 - Python doesn't care what you call variables as long as they obey the rules
   (alphanumeric characters and the underscore).
@@ -191,40 +187,40 @@ ewr_422_yY = 'Ahmed'
 print(ewr_422_yY, 'is', flabadab, 'years old')
 ```
 
-- Use meaningful variable names to help other people understand what the program does.
+- Використовуйте змістовні назви змінних, щоб допомогти іншим зрозуміти, що робить програма.
 - The most important "other person" is your future self.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Swapping Values
+## Заміна значень
 
 Fill the table showing the values of the variables in this program
 _after_ each statement is executed.
 
 ```python
-# Command  # Value of x   # Value of y   # Value of swap #
-x = 1.0    #              #              #               #
-y = 3.0    #              #              #               #
-swap = x   #              #              #               #
-x = y      #              #              #               #
-y = swap   #              #              #               #
+# Оператор  # Значення x   # Значення y   # Значення swap #
+x = 1.0     #              #              #               #
+y = 3.0     #              #              #               #
+swap = x    #              #              #               #
+x = y       #              #              #               #
+y = swap    #              #              #               # 
 ```
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 ```output
-# Command  # Value of x   # Value of y   # Value of swap #
-x = 1.0    # 1.0          # not defined  # not defined   #
-y = 3.0    # 1.0          # 3.0          # not defined   #
+# Оператор # Значення x   # Значення y   # Значення swap #
+x = 1.0    # 1.0          # не визначено # не визначено  #
+y = 3.0    # 1.0          # 3.0          # не визначено  #
 swap = x   # 1.0          # 3.0          # 1.0           #
 x = y      # 3.0          # 3.0          # 1.0           #
 y = swap   # 3.0          # 1.0          # 1.0           #
 ```
 
-These three lines exchange the values in `x` and `y` using the `swap`
-variable for temporary storage. This is a fairly common programming idiom.
+Ці три рядки обмінюються значеннями в `x` і `y` використовуючи змінну `swap`
+для тимчасового зберігання. Це досить поширена ідіома програмування.
 
 :::::::::::::::::::::::::
 
@@ -232,9 +228,9 @@ variable for temporary storage. This is a fairly common programming idiom.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Predicting Values
+## Прогнозування значень
 
-What is the final value of `position` in the program below?
+Яким є остаточне значення змінної `position` у програмі нижче?
 (Try to predict the value without running the program,
 then check your prediction.)
 
@@ -246,7 +242,7 @@ initial = 'right'
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 ```python
 print(position)
@@ -257,10 +253,8 @@ left
 ```
 
 The `initial` variable is assigned the value `'left'`.
-In the second line, the `position` variable also receives
-the string value `'left'`. In third line, the `initial` variable is given the
-value `'right'`, but the `position` variable retains its string value
-of `'left'`.
+У другому рядку змінна `position` також отримує
+значення `'left'`. У третьому рядку змінній `initial` надається значення `'right'`, але змінна `position` зберігає своє значення `'left'`.
 
 :::::::::::::::::::::::::
 
@@ -270,17 +264,16 @@ of `'left'`.
 
 ## Challenge
 
-If you assign `a = 123`,
-what happens if you try to get the second digit of `a` via `a[1]`?
+Якщо ви присвоїли `a = 123`,
+що станеться, якщо ви спробуєте отримати другу цифру `a` через `a[1]`?
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 Numbers are not strings or sequences and Python will raise an error if you try to perform an index operation on a
-number. In the [next lesson on types and type conversion](03-types-conversion.md)
-we will learn more about types and how to convert between different types. If you want the Nth digit of a number you
-can convert it into a string using the `str` built-in function and then perform an index operation on that string.
+number. У [наступному уроці про типи даних і перетворення типів](03-types-conversion.md)
+ми дізнаємось більше про типи і як конвертувати один тип в інший. Якщо вам потрібна N-та цифра числа, ви можете перетворити число на рядок за допомогою вбудованої функції `str`, а потім виконати операцію індексування цього рядка.
 
 ```python
 a = 123
@@ -306,10 +299,10 @@ print(a[1])
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Choosing a Name
+## Вибір імені
 
-Which is a better variable name, `m`, `min`, or `minutes`?
-Why?
+Яке ім'я для змінної є кращим: `m`, `min` або `minutes`?
+Чому?
 Hint: think about which code you would rather inherit
 from someone who is leaving the lab:
 
