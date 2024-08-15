@@ -306,13 +306,13 @@ print(a[1])
 Hint: think about which code you would rather inherit
 from someone who is leaving the lab:
 
-1. `ts = m * 60 + s`
-2. `tot_sec = min * 60 + sec`
+1. `ts = m 60 + s`
+2. `tot_sec = min 60 + sec`
 3. `total_seconds = minutes * 60 + seconds`
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 `minutes` is better because `min` might mean something like "minimum"
 (and actually is an existing built-in function in Python that we will cover later).
@@ -323,9 +323,9 @@ from someone who is leaving the lab:
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Slicing practice
+## Практика застосування зрізів
 
-What does the following program print?
+Що друкує наступна програма?
 
 ```python
 atom_name = 'carbon'
@@ -334,7 +334,7 @@ print('atom_name[1:3] is:', atom_name[1:3])
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 ```output
 atom_name[1:3] is: ar
@@ -346,9 +346,9 @@ atom_name[1:3] is: ar
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Slicing concepts
+## Різноманітні види зрізів
 
-Given the following string:
+Є наступний рядок:
 
 ```python
 species_name = "Acacia buxifolia"
@@ -357,30 +357,30 @@ species_name = "Acacia buxifolia"
 What would these expressions return?
 
 1. `species_name[2:8]`
-2. `species_name[11:]` (without a value after the colon)
-3. `species_name[:4]` (without a value before the colon)
-4. `species_name[:]` (just a colon)
+2. `species_name[11:]` (без значення після двокрапки)
+3. `species_name[:4]` (без значення до двокрапки)
+4. `species_name[:]` (тільки двокрапка)
 5. `species_name[11:-3]`
 6. `species_name[-5:-3]`
-7. What happens when you choose a `stop` value which is out of range? (i.e., try `species_name[0:20]` or `species_name[:103]`)
+7. What happens when you choose a `stop` value which is out of range? (тобто спробуйте виконати `species_name[0:20]` або `species_name[:103]`)
 
 :::::::::::::::  solution
 
-## Solutions
+## Рішення
 
-1. `species_name[2:8]` returns the substring `'acia b'`
+1. `species_name[2:8]` повертає підрядок `'acia b'`
 
-2. `species_name[11:]` returns the substring `'folia'`, from position 11 until the end
+2. `species_name[11:]` повертає підрядок `'folia'`, з позиції 11 до кінця рядку
 
-3. `species_name[:4]` returns the substring `'Acac'`, from the start up to but not including position 4
+3. `species_name[:4]` повертає підрядок `Acac'`, з початку рядку до позиції 4, не включаючи цю позицію
 
-4. `species_name[:]` returns the entire string `'Acacia buxifolia'`
+4. `species_name[:]` повертає весь рядок 'Acacia buxifolia'\`
 
-5. `species_name[11:-3]` returns the substring `'fo'`, from the 11th position to the third last position
+5. `species_name[11:-3]` повертає підрядок `'fo'`, з 11 позиції до третьої позиції з кінця рядку, не включаючи її
 
-6. `species_name[-5:-3]` also returns the substring `'fo'`, from the fifth last position to the third last
+6. `species_name[-5:-3]` також повертає підрядок `'fo'`, з п'ятої позиції з кінця до третьої позиції з кінця, не включаючи її
 
-7. If a part of the slice is out of range, the operation does not fail. `species_name[0:20]` gives the same result as `species_name[0:]`, and `species_name[:103]` gives the same result as `species_name[:]`
+7. Якщо частина фрагмента виходить за межі діапазону, операція не повертає помилку. `species_name[0:20]` дає той самий результат, що і `species_name[0:]`, та `species_name[:103]` дає такий самий результат, як `species_name[:]`
 
 :::::::::::::::::::::::::
 
@@ -388,15 +388,15 @@ What would these expressions return?
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Use variables to store values.
-- Use `print` to display values.
+- Використовуйте змінні для зберігання значень.
+- Використовуйте `print` для виводу значень.
 - Variables persist between cells.
-- Variables must be created before they are used.
-- Variables can be used in calculations.
-- Use an index to get a single character from a string.
-- Use a slice to get a substring.
-- Use the built-in function `len` to find the length of a string.
-- Python is case-sensitive.
-- Use meaningful variable names.
+- Змінні мають бути створені перед їх використанням.
+- Змінні можна використовувати для обчислень.
+- Використовуйте індекс, щоб отримати один символ із рядка.
+- Використовуйте зріз, щоб отримати підрядок.
+- Використовуйте вбудовану функцію `len`, щоб знайти довжину рядка.
+- У Python важливо, який регістр використовується.
+- Використовуйте змістовні назви змінних.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
