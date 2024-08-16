@@ -147,13 +147,12 @@ hELLO WORLD!
 12
 ```
 
-- You might even see them chained together.  They operate left to right.
+- Ви навіть можете побачити, як вони зв’язані.  Вони працюють зліва направо.
 
 ```python
-print(my_string.isupper())          # Not all the letters are uppercase
-print(my_string.upper())            # This capitalizes all the letters
-
-print(my_string.upper().isupper())  # Now all the letters are uppercase
+print(my_string.isupper())          # Функція перевіряє, чи всі літери заглавні
+print(my_string.upper())            # Функція перетворює всі літери на заглавні
+print(my_string.upper().isupper())  # Тепер всі літери заглавні
 ```
 
 ```output
@@ -162,16 +161,16 @@ HELLO WORLD
 True
 ```
 
-## Use the built-in function `help` to get help for a function.
+## Використовуйте вбудовану функцію `help`, щоб отримати довідку щодо функції.
 
-- Every built-in function has online documentation.
+- Кожна вбудована функція має онлайн-документацію.
 
 ```python
 help(round)
 ```
 
 ```output
-Help on built-in function round in module builtins:
+Файл допомоги щодо вбудованої функції round зі стандартної бібліотеки Python:
 
 round(number, ndigits=None)
     Round a number to a given precision in decimal digits.
@@ -180,12 +179,12 @@ round(number, ndigits=None)
     the return value has the same type as the number.  ndigits may be negative.
 ```
 
-## The Jupyter Notebook has two ways to get help.
+## Два шляхи отримання допомоги у Jupyter Notebook.
 
 - Option 1: Place the cursor near where the function is invoked in a cell
   (i.e., the function name or its parameters),
-  - Hold down <kbd>Shift</kbd>, and press <kbd>Tab</kbd>.
-  - Do this several times to expand the information returned.
+  - Утримуйте <kbd>Shift</kbd>та натисніть <kbd>Tab</kbd>.
+  - Зробіть це кілька разів для розширення інформації, що повертається.
 - Option 2: Type the function name in a cell with a question mark after it. Then run the cell.
 
 ## Python reports a syntax error when it can't understand the source of a program.
