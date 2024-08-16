@@ -185,14 +185,14 @@ round(number, ndigits=None)
   (i.e., the function name or its parameters),
   - Утримуйте <kbd>Shift</kbd>та натисніть <kbd>Tab</kbd>.
   - Зробіть це кілька разів для розширення інформації, що повертається.
-- Option 2: Type the function name in a cell with a question mark after it. Then run the cell.
+- Варіант 2: Введіть ім'я функції в комірці зі знаком питання після нього. Потім запустіть комірку.
 
-## Python reports a syntax error when it can't understand the source of a program.
+## Python повідомляє про синтаксичну помилку, коли він не може зрозуміти вихідний код програми.
 
-- Won't even try to run the program if it can't be parsed.
+- Він навіть не намагатиметься запустити програму, якщо її неможливо коректно прочитати.
 
 ```python
-# Forgot to close the quote marks around the string.
+# Рядок не взято в лапки.
 name = 'Feng
 ```
 
@@ -204,7 +204,7 @@ SyntaxError: EOL while scanning string literal
 ```
 
 ```python
-# An extra '=' in the assignment.
+# Додатковий знак '=' у присвоєнні. 
 age = = 52
 ```
 
@@ -215,7 +215,7 @@ age = = 52
 SyntaxError: invalid syntax
 ```
 
-- Look more closely at the error message:
+- Подивіться уважніше на повідомлення про помилку:
 
 ```python
 print("hello world"
@@ -228,14 +228,12 @@ print("hello world"
 SyntaxError: unexpected EOF while parsing
 ```
 
-- The message indicates a problem on first line of the input ("line 1").
+- Повідомлення вказує на проблему в першому рядку введеної програми ("line 1").
   - In this case the "ipython-input" section of the file name tells us that
     we are working with input into IPython,
     the Python interpreter used by the Jupyter Notebook.
-- The `-6-` part of the filename indicates that
-  the error occurred in cell 6 of our Notebook.
-- Next is the problematic line of code,
-  indicating the problem with a `^` pointer.
+- Фрагмент `-6-` в назві файлу вказує на те, що помилка сталася в комірці 6.
+- Далі йде проблемний рядок коду, на що вказує символ `^`.
 
 ## Python reports a runtime error when something goes wrong while a program is executing. {#runtime-error}
 
@@ -253,7 +251,7 @@ NameError                                 Traceback (most recent call last)
 NameError: name 'aege' is not defined
 ```
 
-- Fix syntax errors by reading the source and runtime errors by tracing execution.
+- Аналіз вихідного кода дозволяє виправити синтаксичні помилки, а на етапі компілювання можна виправити помилки виконання.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -271,9 +269,9 @@ radiance = max(2.1, 2.0 + min(radiance, 1.1 * radiance - 0.5))
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
-1. Order of operations:
+1. Порядок виконання операцій:
 
 2. `1.1 * radiance = 1.1`
 
@@ -293,11 +291,11 @@ radiance = max(2.1, 2.0 + min(radiance, 1.1 * radiance - 0.5))
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Spot the Difference
+## Знайдіть відмінності
 
-1. Predict what each of the `print` statements in the program below will print.
-2. Does `max(len(rich), poor)` run or produce an error message?
-   If it runs, does its result make any sense?
+1. Подумайте, що виведе кожен з операторів `print` у наведеній нижче програмі.
+2. Функція `max(len(rich), poor)` поверне відповідь або повідомлення про помилку?
+   Якщо поверне відповідь, чи буде вона мати сенс?
 
 ```python
 easy_string = "abc"
@@ -310,7 +308,7 @@ print(max(len(rich), len(poor)))
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 ```python
 print(max(easy_string))
@@ -353,18 +351,15 @@ TypeError: '>' not supported between instances of 'str' and 'int'
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Why Not?
+## Чому ні?
 
-Why is it that `max` and `min` do not return `None` when they are called with no arguments?
+Чому саме `max` і `min` не повертають `None`, коли вони викликаються без аргументів?
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
-`max` and `min` return TypeErrors in this case because the correct number of parameters
-was not supplied. If it just returned `None`, the error would be much harder to trace as it
-would likely be stored into a variable and used later in the program, only to likely throw
-a runtime error.
+`max` and `min` повертають TypeErrors у цьому випадку, тому що не було вказано правильну кількість параметрів. Якби компілятор просто повернув `None`, помилку було б набагато важче відстежити, тому що це значення було б збережено в змінній і використано пізніше в програмі.
 
 :::::::::::::::::::::::::
 
@@ -372,16 +367,14 @@ a runtime error.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Last Character of a String
+## Останній символ рядка
 
-If Python starts counting from zero,
-and `len` returns the number of characters in a string,
-what index expression will get the last character in the string `name`?
-(Note: we will see a simpler way to do this in a later episode.)
+Якщо Python починає рахувати з нуля, та `len` повертає кількість символів у рядку, то який індекс отримає останній символ у рядку `name`?
+(Примітка: ми побачимо простіший спосіб зробити це в подальшому епізоді)
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 `name[len(name) - 1]`
 
@@ -391,28 +384,27 @@ what index expression will get the last character in the string `name`?
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Explore the Python docs!
+## Вивчайте документацію Python!
 
 The [official Python documentation](https://docs.python.org/3/) is arguably the most complete
 source of information about the language. It is available in different languages and contains a lot of useful
 resources. The [Built-in Functions page](https://docs.python.org/3/library/functions.html) contains a catalogue of
-all of these functions, including the ones that we've covered in this lesson. Some of these are more advanced and
-unnecessary at the moment, but others are very simple and useful.
+all of these functions, including the ones that we've covered in this lesson. Деякі з них більш досконалі та на цей час зайві, але інші - дуже прості та корисні.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Use comments to add documentation to programs.
+- Використовуйте коментарі при створенні документації програм.
 - A function may take zero or more arguments.
-- Commonly-used built-in functions include `max`, `min`, and `round`.
-- Functions may only work for certain (combinations of) arguments.
-- Functions may have default values for some arguments.
-- Use the built-in function `help` to get help for a function.
+- Поширені вбудовані функції `max`, `min` та `round`.
+- Функції можуть працювати лише з певними аргументами (комбінаціями аргументів).
+- Функції можуть мати значення за замовчуванням для певних аргументів.
+- Використовуйте вбудовану функцію `help`, щоб отримати довідку щодо функції.
 - The Jupyter Notebook has two ways to get help.
-- Every function returns something.
-- Python reports a syntax error when it can't understand the source of a program.
+- Кожна функція щось повертає.
+- Python повідомляє про синтаксичну помилку, коли він не може зрозуміти джерело програми.
 - Python reports a runtime error when something goes wrong while a program is executing.
-- Fix syntax errors by reading the source code, and runtime errors by tracing the program's execution.
+- Якщо перечитаєте джерело, можна виправити синтаксичні помилки, а якщо відстежите компілювання - помилки виконання.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
