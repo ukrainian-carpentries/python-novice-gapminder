@@ -126,18 +126,18 @@ round(3.712, 1)
 
 ## Функції, приєднані до об'єктів, називаються методами
 
-- Functions take another form that will be common in the pandas episodes.
-- Methods have parentheses like functions, but come after the variable.
-- Some methods are used for internal Python operations, and are marked with double underlines.
+- Функції можуть набувати іншої форми, яка буде типовою для епізодів, пов'язаних з бібліотекою pandas.
+- Методи мають такі дужки як функції, але з'являються в описі оператора після імені змінної.
+- Деякі методи використовуються для внутрішніх операцій Python і відзначаються подвійними підкресленнями.
 
 ```python
-my_string = 'Hello world!'  # creation of a string object 
+my_string = 'Hello world!'  # створення об'єкта - рядка 
 
-print(len(my_string))       # the len function takes a string as an argument and returns the length of the string
+print(len(my_string))       # функція len приймає рядок як аргумент і повертає довжину рядка
 
-print(my_string.swapcase()) # calling the swapcase method on the my_string object
+print(my_string.swapcase()) # виклик методу swapcase для об’єкта my_string
 
-print(my_string.__len__())  # calling the internal __len__ method on the my_string object, used by len(my_string)
+print(my_string.__len__())  # виклик внутрішнього методу __len__ для об’єкта my_string, який використовується функцією len(my_string)
 
 ```
 
