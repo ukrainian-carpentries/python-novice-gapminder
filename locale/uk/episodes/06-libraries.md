@@ -1,5 +1,5 @@
 ---
-title: Libraries
+title: Бібліотеки
 teaching: 10
 exercises: 10
 ---
