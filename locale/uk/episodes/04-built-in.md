@@ -36,9 +36,8 @@ adjustment = 0.5   # Neither is this - anything after '#' is ignored.
 - `len` потребує тільки один аргумент.
 - `int`, `str`, and `float` create a new value from an existing one.
 - `print` takes zero or more.
-- `print` with no arguments prints a blank line.
-  - Must always use parentheses, even if they're empty,
-    so that Python knows a function is being called.
+- `print` без аргументів повертає порожній рядок.
+  - Потрібно завжди використовувати дужки, навіть якщо вони порожні, щоб Python знав, що викликається функція.
 
 ```python
 print('before')
@@ -52,12 +51,10 @@ before
 after
 ```
 
-## Every function returns something.
+## Кожна функція щось повертає.
 
-- Every function call produces some result.
-- If the function doesn't have a useful result to return,
-  it usually returns the special value `None`. `None` is a Python
-  object that stands in anytime there is no value.
+- Кожен виклик функції дає певний результат.
+- Якщо функція не має корисного результату для повернення, то вона зазвичай повертає спеціальне значення `None`. `None` - це об’єкт Python, який застосовується у будь-якому випадку, коли немає значення.
 
 ```python
 result = print('example')
@@ -69,10 +66,10 @@ example
 result of print is None
 ```
 
-## Commonly-used built-in functions include `max`, `min`, and `round`.
+## Поширені вбудовані функції `max`, `min` та `round`.
 
-- Use `max` to find the largest value of one or more values.
-- Use `min` to find the smallest.
+- Використовуйте `max`, щоб знайти найбільше з одного або декількох значень.
+- Використовуйте `min`, щоб знайти найменше значення.
 - Both work on character strings as well as numbers.
   - "Larger" and "smaller" use (0-9, A-Z, a-z) to compare letters.
 
@@ -88,9 +85,9 @@ print(min('a', 'A', '0'))
 
 ## Functions may only work for certain (combinations of) arguments.
 
-- `max` and `min` must be given at least one argument.
-  - "Largest of the empty set" is a meaningless question.
-- And they must be given things that can meaningfully be compared.
+- `max` та `min` мають приймати принаймні один аргумент.
+  - "Найбільше значення з порожньої множини" - запит, який не має сенсу.
+- Крім того, аргументи функцій мають бути порівнюваними.
 
 ```python
 print(max(1, 'a'))
@@ -104,10 +101,10 @@ TypeError                                 Traceback (most recent call last)
 TypeError: '>' not supported between instances of 'str' and 'int'
 ```
 
-## Functions may have default values for some arguments.
+## Функції можуть мати значення за замовчуванням для певних аргументів.
 
-- `round` will round off a floating-point number.
-- By default, rounds to zero decimal places.
+- `round` округлює дійсне число.
+- За замовчуванням округлення відбувається до нуля знаків після точки.
 
 ```python
 round(3.712)
@@ -127,7 +124,7 @@ round(3.712, 1)
 3.7
 ```
 
-## Functions attached to objects are called methods
+## Функції, приєднані до об'єктів, називаються методами
 
 - Functions take another form that will be common in the pandas episodes.
 - Methods have parentheses like functions, but come after the variable.
