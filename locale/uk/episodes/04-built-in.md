@@ -1,28 +1,28 @@
 ---
-title: Built-in Functions and Help
+title: Вбудовані функції та довідка
 teaching: 15
 exercises: 10
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain the purpose of functions.
-- Correctly call built-in Python functions.
-- Correctly nest calls to built-in functions.
-- Use help to display documentation for built-in functions.
-- Correctly describe situations in which SyntaxError and NameError occur.
+- Пояснення призначення функцій.
+- Коректний виклик вбудованих функцій Python.
+- Правильне використання вкладених вбудованих функцій.
+- Використання довідки для відображення документації про вбудовані функції.
+- Правильний опис ситуацій, в яких виникають помилки SyntaxError і NameError.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can I use built-in functions?
-- How can I find out what they do?
-- What kind of errors can occur in programs?
+- Як я можу використовувати вбудовані функції?
+- Як я можу дізнатися, для чого вони призначені?
+- Які помилки можуть виникнути в програмах?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Use comments to add documentation to programs.
+## Використовуйте коментарі при створенні документації програм.
 
 ```python
 # This sentence isn't executed by Python.
@@ -33,7 +33,7 @@ adjustment = 0.5   # Neither is this - anything after '#' is ignored.
 
 - We have seen some functions already --- now let's take a closer look.
 - An _argument_ is a value passed into a function.
-- `len` takes exactly one.
+- `len` потребує тільки один аргумент.
 - `int`, `str`, and `float` create a new value from an existing one.
 - `print` takes zero or more.
 - `print` with no arguments prints a blank line.
