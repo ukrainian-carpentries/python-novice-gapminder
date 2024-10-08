@@ -205,7 +205,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="02-variables.html">2. Variables and Assignment</a>
+        <a href="02-variables.html">2. Змінні та присвоєння</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -214,7 +214,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03-types-conversion.html">3. Data Types and Type Conversion</a>
+        <a href="03-types-conversion.html">3. Типи даних та їх перетворення</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -223,7 +223,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="04-built-in.html">4. Built-in Functions and Help</a>
+        <a href="04-built-in.html">4. Вбудовані функції та довідка</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -232,7 +232,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="05-coffee.html">5. Morning Coffee</a>
+        <a href="05-coffee.html">5. Ранкова кава</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -241,7 +241,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="06-libraries.html">6. Libraries</a>
+        <a href="06-libraries.html">6. Бібліотеки</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -450,7 +450,7 @@ parameters.</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Writing Functions</h1>
-        <p>Last updated on 2024-07-02 |
+        <p>Last updated on 2024-10-08 |
 
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/16-writing-functions.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -1177,35 +1177,46 @@ values. Is the population trending toward a steady state?</p></li>
 </button>
 <div id="collapseSolution9" class="accordion-collapse collapse" data-bs-parent="#accordionSolution9" aria-labelledby="headingSolution9">
 <div class="accordion-body">
-<ol style="list-style-type: decimal"><li><div class="codewrapper sourceCode" id="cb43">
+<ol style="list-style-type: decimal"><li>
+</li></ol><div class="codewrapper sourceCode" id="cb43">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"></code></pre>
-</div></li>
-</ol><p>def logistic_map(x, r): return r * x * (1 - x)</p>
-<pre><code>
-2. ```python
-initial_population = 0.5
-t_final = 10
-r = 1.0
-population = [initial_population]
-for t in range(t_final):
-    population.append( logistic_map(population[t], r) )</code></pre>
-<ol start="3" style="list-style-type: decimal"><li><div class="codewrapper sourceCode" id="cb45">
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a><span class="kw">def</span> logistic_map(x, r):</span>
+<span id="cb43-2"><a href="#cb43-2" tabindex="-1"></a>    <span class="cf">return</span> r <span class="op">*</span> x <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> x)</span></code></pre>
+</div>
+<ol start="2" style="list-style-type: decimal"><li>
+</li></ol><div class="codewrapper sourceCode" id="cb44">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"></code></pre>
-</div></li>
-</ol><p>def iterate(initial_population, t_final, r): population =
-[initial_population] for t in range(t_final): population.append(
-logistic_map(population[t], r) ) return population</p>
-<p>for period in (10, 100, 1000): population = iterate(0.5, period, 1)
-print(population[-1])</p>
-<pre><code>
-```output
-0.06945089389714401
-0.009395779870614648
-0.0009913908614406382</code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a>initial_population <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb44-2"><a href="#cb44-2" tabindex="-1"></a>t_final <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb44-3"><a href="#cb44-3" tabindex="-1"></a>r <span class="op">=</span> <span class="fl">1.0</span></span>
+<span id="cb44-4"><a href="#cb44-4" tabindex="-1"></a>population <span class="op">=</span> [initial_population]</span>
+<span id="cb44-5"><a href="#cb44-5" tabindex="-1"></a></span>
+<span id="cb44-6"><a href="#cb44-6" tabindex="-1"></a><span class="cf">for</span> t <span class="kw">in</span> <span class="bu">range</span>(t_final):</span>
+<span id="cb44-7"><a href="#cb44-7" tabindex="-1"></a>    population.append( logistic_map(population[t], r) )</span></code></pre>
+</div>
+<ol start="3" style="list-style-type: decimal"><li>
+</li></ol><div class="codewrapper sourceCode" id="cb45">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a><span class="kw">def</span> iterate(initial_population, t_final, r):</span>
+<span id="cb45-2"><a href="#cb45-2" tabindex="-1"></a>    population <span class="op">=</span> [initial_population]</span>
+<span id="cb45-3"><a href="#cb45-3" tabindex="-1"></a>    <span class="cf">for</span> t <span class="kw">in</span> <span class="bu">range</span>(t_final):</span>
+<span id="cb45-4"><a href="#cb45-4" tabindex="-1"></a>        population.append( logistic_map(population[t], r) )</span>
+<span id="cb45-5"><a href="#cb45-5" tabindex="-1"></a>    <span class="cf">return</span> population</span>
+<span id="cb45-6"><a href="#cb45-6" tabindex="-1"></a></span>
+<span id="cb45-7"><a href="#cb45-7" tabindex="-1"></a><span class="cf">for</span> period <span class="kw">in</span> (<span class="dv">10</span>, <span class="dv">100</span>, <span class="dv">1000</span>):</span>
+<span id="cb45-8"><a href="#cb45-8" tabindex="-1"></a>    population <span class="op">=</span> iterate(<span class="fl">0.5</span>, period, <span class="dv">1</span>)</span>
+<span id="cb45-9"><a href="#cb45-9" tabindex="-1"></a>    <span class="bu">print</span>(population[<span class="op">-</span><span class="dv">1</span>])</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="fl">0.06945089389714401</span></span>
+<span><span class="fl">0.009395779870614648</span></span>
+<span><span class="fl">0.0009913908614406382</span></span></code></pre>
+</div>
 <p>The population seems to be approaching zero.</p>
 </div>
 </div>
@@ -1345,8 +1356,8 @@ parameters.</li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/16-writing-functions.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/16-writing-functions.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2024-07-02",
-  "datePublished": "2024-10-01"
+  "dateModified": "2024-10-08",
+  "datePublished": "2024-10-08"
 }
 
   </script><script>
