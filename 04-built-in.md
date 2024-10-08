@@ -1,28 +1,28 @@
 ---
-title: Built-in Functions and Help
+title: Вбудовані функції та довідка
 teaching: 15
 exercises: 10
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain the purpose of functions.
-- Correctly call built-in Python functions.
-- Correctly nest calls to built-in functions.
-- Use help to display documentation for built-in functions.
-- Correctly describe situations in which SyntaxError and NameError occur.
+- Пояснення призначення функцій.
+- Коректний виклик вбудованих функцій Python.
+- Правильне використання вкладених вбудованих функцій.
+- Використання довідки для відображення документації про вбудовані функції.
+- Правильний опис ситуацій, в яких виникають помилки SyntaxError і NameError.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can I use built-in functions?
-- How can I find out what they do?
-- What kind of errors can occur in programs?
+- Як я можу використовувати вбудовані функції?
+- Як я можу дізнатися, для чого вони призначені?
+- Які помилки можуть виникнути в програмах?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Use comments to add documentation to programs.
+## Використовуйте коментарі при створенні документації програм.
 
 ```python
 # This sentence isn't executed by Python.
@@ -33,12 +33,11 @@ adjustment = 0.5   # Neither is this - anything after '#' is ignored.
 
 - We have seen some functions already --- now let's take a closer look.
 - An _argument_ is a value passed into a function.
-- `len` takes exactly one.
+- `len` потребує тільки один аргумент.
 - `int`, `str`, and `float` create a new value from an existing one.
 - `print` takes zero or more.
-- `print` with no arguments prints a blank line.
-  - Must always use parentheses, even if they're empty,
-    so that Python knows a function is being called.
+- `print` без аргументів повертає порожній рядок.
+  - Потрібно завжди використовувати дужки, навіть якщо вони порожні, щоб Python знав, що викликається функція.
 
 ```python
 print('before')
@@ -52,12 +51,10 @@ before
 after
 ```
 
-## Every function returns something.
+## Кожна функція щось повертає.
 
-- Every function call produces some result.
-- If the function doesn't have a useful result to return,
-  it usually returns the special value `None`. `None` is a Python
-  object that stands in anytime there is no value.
+- Кожен виклик функції дає певний результат.
+- Якщо функція не має корисного результату для повернення, то вона зазвичай повертає спеціальне значення `None`. `None` - це об’єкт Python, який застосовується у будь-якому випадку, коли немає значення.
 
 ```python
 result = print('example')
@@ -69,10 +66,10 @@ example
 result of print is None
 ```
 
-## Commonly-used built-in functions include `max`, `min`, and `round`.
+## Поширені вбудовані функції `max`, `min` та `round`.
 
-- Use `max` to find the largest value of one or more values.
-- Use `min` to find the smallest.
+- Використовуйте `max`, щоб знайти найбільше з одного або декількох значень.
+- Використовуйте `min`, щоб знайти найменше значення.
 - Both work on character strings as well as numbers.
   - "Larger" and "smaller" use (0-9, A-Z, a-z) to compare letters.
 
@@ -88,9 +85,9 @@ print(min('a', 'A', '0'))
 
 ## Functions may only work for certain (combinations of) arguments.
 
-- `max` and `min` must be given at least one argument.
-  - "Largest of the empty set" is a meaningless question.
-- And they must be given things that can meaningfully be compared.
+- `max` та `min` мають приймати принаймні один аргумент.
+  - "Найбільше значення з порожньої множини" - запит, який не має сенсу.
+- Крім того, аргументи функцій мають бути порівнюваними.
 
 ```python
 print(max(1, 'a'))
@@ -104,10 +101,10 @@ TypeError                                 Traceback (most recent call last)
 TypeError: '>' not supported between instances of 'str' and 'int'
 ```
 
-## Functions may have default values for some arguments.
+## Функції можуть мати значення за замовчуванням для певних аргументів.
 
-- `round` will round off a floating-point number.
-- By default, rounds to zero decimal places.
+- `round` округлює дійсне число.
+- За замовчуванням округлення відбувається до нуля знаків після точки.
 
 ```python
 round(3.712)
@@ -127,20 +124,20 @@ round(3.712, 1)
 3.7
 ```
 
-## Functions attached to objects are called methods
+## Функції, приєднані до об'єктів, називаються методами
 
-- Functions take another form that will be common in the pandas episodes.
-- Methods have parentheses like functions, but come after the variable.
-- Some methods are used for internal Python operations, and are marked with double underlines.
+- Функції можуть набувати іншої форми, яка буде типовою для епізодів, пов'язаних з бібліотекою pandas.
+- Методи мають такі дужки як функції, але з'являються в описі оператора після імені змінної.
+- Деякі методи використовуються для внутрішніх операцій Python і відзначаються подвійними підкресленнями.
 
 ```python
-my_string = 'Hello world!'  # creation of a string object 
+my_string = 'Hello world!'  # створення об'єкта - рядка 
 
-print(len(my_string))       # the len function takes a string as an argument and returns the length of the string
+print(len(my_string))       # функція len приймає рядок як аргумент і повертає довжину рядка
 
-print(my_string.swapcase()) # calling the swapcase method on the my_string object
+print(my_string.swapcase()) # виклик методу swapcase для об’єкта my_string
 
-print(my_string.__len__())  # calling the internal __len__ method on the my_string object, used by len(my_string)
+print(my_string.__len__())  # виклик внутрішнього методу __len__ для об’єкта my_string, який використовується функцією len(my_string)
 
 ```
 
@@ -150,13 +147,12 @@ hELLO WORLD!
 12
 ```
 
-- You might even see them chained together.  They operate left to right.
+- Ви навіть можете побачити, як вони зв’язані.  Вони працюють зліва направо.
 
 ```python
-print(my_string.isupper())          # Not all the letters are uppercase
-print(my_string.upper())            # This capitalizes all the letters
-
-print(my_string.upper().isupper())  # Now all the letters are uppercase
+print(my_string.isupper())          # Функція перевіряє, чи всі літери заглавні
+print(my_string.upper())            # Функція перетворює всі літери на заглавні
+print(my_string.upper().isupper())  # Тепер всі літери заглавні
 ```
 
 ```output
@@ -165,16 +161,16 @@ HELLO WORLD
 True
 ```
 
-## Use the built-in function `help` to get help for a function.
+## Використовуйте вбудовану функцію `help`, щоб отримати довідку щодо функції.
 
-- Every built-in function has online documentation.
+- Кожна вбудована функція має онлайн-документацію.
 
 ```python
 help(round)
 ```
 
 ```output
-Help on built-in function round in module builtins:
+Файл допомоги щодо вбудованої функції round зі стандартної бібліотеки Python:
 
 round(number, ndigits=None)
     Round a number to a given precision in decimal digits.
@@ -183,20 +179,20 @@ round(number, ndigits=None)
     the return value has the same type as the number.  ndigits may be negative.
 ```
 
-## The Jupyter Notebook has two ways to get help.
+## Два шляхи отримання допомоги у Jupyter Notebook.
 
 - Option 1: Place the cursor near where the function is invoked in a cell
   (i.e., the function name or its parameters),
-  - Hold down <kbd>Shift</kbd>, and press <kbd>Tab</kbd>.
-  - Do this several times to expand the information returned.
-- Option 2: Type the function name in a cell with a question mark after it. Then run the cell.
+  - Утримуйте <kbd>Shift</kbd>та натисніть <kbd>Tab</kbd>.
+  - Зробіть це кілька разів для розширення інформації, що повертається.
+- Варіант 2: Введіть ім'я функції в комірці зі знаком питання після нього. Потім запустіть комірку.
 
-## Python reports a syntax error when it can't understand the source of a program.
+## Python повідомляє про синтаксичну помилку, коли він не може зрозуміти вихідний код програми.
 
-- Won't even try to run the program if it can't be parsed.
+- Він навіть не намагатиметься запустити програму, якщо її неможливо коректно прочитати.
 
 ```python
-# Forgot to close the quote marks around the string.
+# Рядок не взято в лапки.
 name = 'Feng
 ```
 
@@ -208,7 +204,7 @@ SyntaxError: EOL while scanning string literal
 ```
 
 ```python
-# An extra '=' in the assignment.
+# Додатковий знак '=' у присвоєнні. 
 age = = 52
 ```
 
@@ -219,7 +215,7 @@ age = = 52
 SyntaxError: invalid syntax
 ```
 
-- Look more closely at the error message:
+- Подивіться уважніше на повідомлення про помилку:
 
 ```python
 print("hello world"
@@ -232,14 +228,12 @@ print("hello world"
 SyntaxError: unexpected EOF while parsing
 ```
 
-- The message indicates a problem on first line of the input ("line 1").
+- Повідомлення вказує на проблему в першому рядку введеної програми ("line 1").
   - In this case the "ipython-input" section of the file name tells us that
     we are working with input into IPython,
     the Python interpreter used by the Jupyter Notebook.
-- The `-6-` part of the filename indicates that
-  the error occurred in cell 6 of our Notebook.
-- Next is the problematic line of code,
-  indicating the problem with a `^` pointer.
+- Фрагмент `-6-` в назві файлу вказує на те, що помилка сталася в комірці 6.
+- Далі йде проблемний рядок коду, на що вказує символ `^`.
 
 ## Python reports a runtime error when something goes wrong while a program is executing. {#runtime-error}
 
@@ -257,7 +251,7 @@ NameError                                 Traceback (most recent call last)
 NameError: name 'aege' is not defined
 ```
 
-- Fix syntax errors by reading the source and runtime errors by tracing execution.
+- Аналіз вихідного кода дозволяє виправити синтаксичні помилки, а на етапі компілювання можна виправити помилки виконання.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -275,9 +269,9 @@ radiance = max(2.1, 2.0 + min(radiance, 1.1 * radiance - 0.5))
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
-1. Order of operations:
+1. Порядок виконання операцій:
 
 2. `1.1 * radiance = 1.1`
 
@@ -297,11 +291,11 @@ radiance = max(2.1, 2.0 + min(radiance, 1.1 * radiance - 0.5))
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Spot the Difference
+## Знайдіть відмінності
 
-1. Predict what each of the `print` statements in the program below will print.
-2. Does `max(len(rich), poor)` run or produce an error message?
-   If it runs, does its result make any sense?
+1. Подумайте, що виведе кожен з операторів `print` у наведеній нижче програмі.
+2. Функція `max(len(rich), poor)` поверне відповідь або повідомлення про помилку?
+   Якщо поверне відповідь, чи буде вона мати сенс?
 
 ```python
 easy_string = "abc"
@@ -314,7 +308,7 @@ print(max(len(rich), len(poor)))
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 ```python
 print(max(easy_string))
@@ -357,18 +351,15 @@ TypeError: '>' not supported between instances of 'str' and 'int'
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Why Not?
+## Чому ні?
 
-Why is it that `max` and `min` do not return `None` when they are called with no arguments?
+Чому саме `max` і `min` не повертають `None`, коли вони викликаються без аргументів?
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
-`max` and `min` return TypeErrors in this case because the correct number of parameters
-was not supplied. If it just returned `None`, the error would be much harder to trace as it
-would likely be stored into a variable and used later in the program, only to likely throw
-a runtime error.
+`max` and `min` повертають TypeErrors у цьому випадку, тому що не було вказано правильну кількість параметрів. Якби компілятор просто повернув `None`, помилку було б набагато важче відстежити, тому що це значення було б збережено в змінній і використано пізніше в програмі.
 
 :::::::::::::::::::::::::
 
@@ -376,16 +367,14 @@ a runtime error.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Last Character of a String
+## Останній символ рядка
 
-If Python starts counting from zero,
-and `len` returns the number of characters in a string,
-what index expression will get the last character in the string `name`?
-(Note: we will see a simpler way to do this in a later episode.)
+Якщо Python починає рахувати з нуля, та `len` повертає кількість символів у рядку, то який індекс отримає останній символ у рядку `name`?
+(Примітка: ми побачимо простіший спосіб зробити це в подальшому епізоді)
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 `name[len(name) - 1]`
 
@@ -395,28 +384,27 @@ what index expression will get the last character in the string `name`?
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Explore the Python docs!
+## Вивчайте документацію Python!
 
 The [official Python documentation](https://docs.python.org/3/) is arguably the most complete
 source of information about the language. It is available in different languages and contains a lot of useful
 resources. The [Built-in Functions page](https://docs.python.org/3/library/functions.html) contains a catalogue of
-all of these functions, including the ones that we've covered in this lesson. Some of these are more advanced and
-unnecessary at the moment, but others are very simple and useful.
+all of these functions, including the ones that we've covered in this lesson. Деякі з них більш досконалі та на цей час зайві, але інші - дуже прості та корисні.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Use comments to add documentation to programs.
+- Використовуйте коментарі при створенні документації програм.
 - A function may take zero or more arguments.
-- Commonly-used built-in functions include `max`, `min`, and `round`.
-- Functions may only work for certain (combinations of) arguments.
-- Functions may have default values for some arguments.
-- Use the built-in function `help` to get help for a function.
+- Поширені вбудовані функції `max`, `min` та `round`.
+- Функції можуть працювати лише з певними аргументами (комбінаціями аргументів).
+- Функції можуть мати значення за замовчуванням для певних аргументів.
+- Використовуйте вбудовану функцію `help`, щоб отримати довідку щодо функції.
 - The Jupyter Notebook has two ways to get help.
-- Every function returns something.
-- Python reports a syntax error when it can't understand the source of a program.
+- Кожна функція щось повертає.
+- Python повідомляє про синтаксичну помилку, коли він не може зрозуміти джерело програми.
 - Python reports a runtime error when something goes wrong while a program is executing.
-- Fix syntax errors by reading the source code, and runtime errors by tracing the program's execution.
+- Якщо перечитаєте джерело, можна виправити синтаксичні помилки, а якщо відстежите компілювання - помилки виконання.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
