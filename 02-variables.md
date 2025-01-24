@@ -23,20 +23,20 @@ exercises: 10
 
 - Імена змінних
 
-  - can **only** contain letters, digits, and underscore `_` (typically used to separate words in long variable names)
+  - можуть складатися **тільки** з букв, цифр та підкреслення `_` (яке звичайно використовується, щоб відокремити слова у довгих назвах змінних)
   - не можуть починатися з цифри
-  - are **case sensitive** (age, Age and AGE are three different variables)
+  - **залежать від регістру** (тобто `age`, `Age` та `AGE` - це три різні змінні)
 
-- The name should also be meaningful so you or another programmer know what it is
+- Ім'я змінної має бути змістовним, щоб ви або інший програміст знали, що це таке
 
-- Імена змінних, які починаються з підкреслення, наприклад  __alistairs_real_age, мають особливе значення, тому ми не будемо цього робити, доки не зрозуміємо прийняті в мові Python домовленості.
+- Імена змінних, які починаються з підкреслення, наприклад `__alistairs_real_age`, мають специфічне значення, тому ми не будемо цього робити, доки не зрозуміємо прийняті в мові Python домовленості.
 
-- In Python the `=` symbol assigns the value on the right to the name on the left.
+- У Python символ `=` використовується для присвоєння значення, яке знаходиться праворуч, до його імені, яке вказано ліворуч.
 
-- The variable is created when a value is assigned to it.
+- Змінна створена, коли їй присвоюється значення.
 
-- Here, Python assigns an age to a variable `age`
-  and a name in quotes to a variable `first_name`.
+- У виразі нижче Python призначає вік змінній `age`
+  та ім'я в лапках - змінній `first_name`.
 
   ```python
   age = 42
@@ -48,7 +48,7 @@ exercises: 10
 - Python має вбудовану функцію `print`, яка друкує щось як текст.
 - Щоб викликати функцію (тобто, щоб виконати її), треба вказати її ім'я.
 - Щоб передати функції значення (тобто дані для друку), їх треба помістити у дужки.
-- To add a string to the printout, wrap the string in single or double quotes.
+- Щоб направити до друку рядок тексту, його треба помістити в одинарні або подвійні лапки.
 - Значення, які передаються до функції, називаються **аргументами**
 
 ```python
@@ -59,7 +59,7 @@ print(first_name, 'is', age, 'years old')
 Ahmed is 42 years old
 ```
 
-- `print` automatically puts a single space between items to separate them.
+- `print` автоматично додає пробіл між надрукованими аргументами, щоб відокремити їх.
 - Також `print` переходить на новий рядок після друку.
 
 ## Змінні мають бути створені перед їх використанням.
@@ -80,14 +80,13 @@ NameError: name 'last_name' is not defined
 ```
 
 - Останній рядок у повідомленні про помилку є найбільш інформативним.
-- We will look at error messages in detail [later](17-scope.md#reading-error-messages).
+- Ми більш детально розглянемо повідомлення про помилки [пізніше](17-scope.md#reading-error-messages).
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
 ## Змінні зберігаються між комірками
 
-Майте на увазі, що в блокноті Jupyter важливий порядок виконання комірок, а не порядок їх появи. Python will remember _all_ the code that was run previously, including any variables you have
-defined, irrespective of the order in the notebook. Тому, якщо ви визначите змінні нижче в блокноті, а потім (повторно) запустите комірки вище, то ті комірки, що визначені нижче, все одно будуть присутні. Як приклад, створіть дві комірки наступного вмісту у такому порядку:
+Майте на увазі, що в блокноті Jupyter важливий порядок виконання комірок, а не порядок їх розташування. Python запам’ятає весь код, який було виконано раніше, у тому числі всі змінні, які ви визначили, незалежно від порядку в блокноті. Тому, якщо ви визначите змінні нижче в блокноті, а потім (повторно) запустите комірки вище, то ті комірки, що визначені нижче, все одно будуть присутні. Як приклад, створіть дві комірки наступного вмісту у такому порядку:
 
 ```python
 print(myval)
@@ -97,9 +96,7 @@ print(myval)
 myval = 1
 ```
 
-If you execute this in order, the first cell will give an error. However, if you run the first cell _after_ the second
-cell it will print out `1`. To prevent confusion, it can be helpful to use the `Kernel` -> `Restart & Run All` option which
-clears the interpreter and runs everything from a clean slate going top to bottom.
+Якщо виконати це послідовно, то перша комірка дасть помилку. Однак, якщо ви запустите першу комірку _після_ другої, вона виведе на екран `1`. Щоб уникнути плутанини, можна скористатися опцією `Kernel` -> `Restart & Run All`, яка перезавантажує інтерпретатор і запускає все з чистого аркуша, зверху вниз.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -119,14 +116,12 @@ Age in three years: 45
 
 ## Використовуйте індекс, щоб отримати один символ із рядка.
 
-- The characters (individual letters, numbers, and so on) in a string are
-  ordered. Наприклад, рядок `'AB'` не те саме, що `'BA'`. Завдяки такому упорядкуванню ми можемо розглядати рядок як список символів.
-- Each position in the string (first, second, etc.) is given a number. This
-  number is called an **index** or sometimes a subscript.
+- Символи (окремі літери, цифри тощо) у рядку є впорядкованими. Наприклад, рядок `'AB'` не те саме, що `'BA'`. Завдяки такому упорядкуванню ми можемо розглядати рядок як список символів.
+- Кожна позиція в рядку (перша, друга тощо) має номер. Це число називається **індексом** або іноді нижнім індексом.
 - Індекси нумеруються від 0.
 - Використовуйте індекс позиції у квадратних дужках, щоб отримати символ з тієї позиції у рядку.
 
-![Рядок кода Python, print(atom\\_name\[0\]), демонструє, що використання нульового індексу виведе лише початкову літеру, у цьому випадку 'h' for helium.](fig/2_indexing.svg)
+![Рядок кода Python, print(atom\\_name\[0\]), демонструє, що використання нульового індексу виведе лише початкову літеру, у цьому випадку 'h' для 'helium'.](fig/2_indexing.svg)
 
 ```python
 atom_name = 'helium'
@@ -139,18 +134,15 @@ h
 
 ## Використовуйте зріз, щоб отримати підрядок.
 
-- A part of a string is called a **substring**. A substring can be as short as a
-  single character.
+- Частина рядка називається **підрядок**. Він може складатися навіть тільки з одного символу.
 - Список складається з елементів. У випадку, коли рядок розглядається як список, його елементами є окремі символи.
-- Зріз - це частина рядка (в загальному випадку, будь-який вираз).
-- We take a slice with the notation `[start:stop]`, where `start` is the integer
-  index of the first element we want and `stop` is the integer index of
-  the element _just after_ the last element we want.
+- Зріз - це частина рядка (в загальному випадку, частина будь-якого обʼєкту, схожого на колекцію).
+- Ми беремо зріз із позначенням `[start:stop]`, де `start` — ціле число, що є індексом першого потрібного нам елементу, а `stop` - ціле число, що є індексом елементу _відразу після_ останнього потрібного нам елементу.
 - Проміжок між `stop` and `start` - це довжина зрізу.
 - Визначення зрізу не змінює вміст вихідного рядка. Натомість, визначений зріз повертає копію початкового рядка.
 
 ```python
-atom_name = 'sodium'
+atom_name = 'sodium' 
 print(atom_name[0:3])
 ```
 
@@ -168,18 +160,16 @@ print(len('helium'))
 6
 ```
 
-- Nested functions are evaluated from the inside out,
-  like in mathematics.
+- Вкладені функції обчислюються зсередини назовні, як у математиці: вирази, що знаходяться всередині дужок, обчислюються першими.
 
-## Python is case-sensitive.
+## Python чутливий до регістру.
 
 - Python вважає, що букви верхнього та нижнього регістру відрізняються, отже `Name` і `name` - різні змінні.
 - Існують домовленості про використання великих літер на початку імен змінних, тому ми будемо використовувати малі літери.
 
 ## Використовуйте змістовні назви змінних.
 
-- Python doesn't care what you call variables as long as they obey the rules
-  (alphanumeric characters and the underscore).
+- Ви можете використовувати будь-які комбінації символів для імен змінних, поки вони задовольняють вищевказані правила (букви, цифри та знак підкреслення).
 
 ```python
 flabadab = 42
@@ -188,7 +178,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 ```
 
 - Використовуйте змістовні назви змінних, щоб допомогти іншим зрозуміти, що робить програма.
-- The most important "other person" is your future self.
+- Найважливіша "інша людина" — це ви в майбутньому.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
