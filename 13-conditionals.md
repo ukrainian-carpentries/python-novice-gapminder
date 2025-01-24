@@ -19,7 +19,7 @@ exercises: 15
 
 ## Use `if` statements to control whether or not a block of code is executed.
 
-- An `if` statement (more properly called a *conditional* statement)
+- An `if` statement (more properly called a _conditional_ statement)
   controls whether some block of code is executed or not.
 - Structure is similar to a `for` statement:
   - First line opens with `if` and ends with a colon
@@ -56,10 +56,10 @@ for m in masses:
 9.22 is large
 ```
 
-## Use `else` to execute a block of code when an `if` condition is *not* true.
+## Use `else` to execute a block of code when an `if` condition is _not_ true.
 
 - `else` can be used following an `if`.
-- Allows us to specify an alternative to execute when the `if` *branch* isn't taken.
+- Allows us to specify an alternative to execute when the `if` _branch_ isn't taken.
 
 ```python
 masses = [3.54, 2.07, 9.22, 1.86, 1.71]
@@ -111,19 +111,19 @@ for m in masses:
 
 ```python
 grade = 85
-if grade >= 70:
-    print('grade is C')
+if grade >= 90:
+    print('grade is A')
 elif grade >= 80:
     print('grade is B')
-elif grade >= 90:
-    print('grade is A')
+elif grade >= 70:
+    print('grade is C')
 ```
 
 ```output
-grade is C
+grade is B
 ```
 
-- Does *not* automatically go back and re-evaluate if values change.
+- Does _not_ automatically go back and re-evaluate if values change.
 
 ```python
 velocity = 10.0
@@ -170,13 +170,13 @@ final velocity: 30.0
 ## Create a table showing variables' values to trace a program's execution.
 
 <table>
-  <tr>   <td><strong>i</strong></td>   <td>0</td>   <td>.</td>   <td>1</td>   <td>.</td>   <td>2</td>   <td>.</td>   <td>3</td>   <td>.</td>   <td>4</td>   <td>.</td>
+  <tbody><tr>   <td><strong>i</strong></td>   <td>0</td>   <td>.</td>   <td>1</td>   <td>.</td>   <td>2</td>   <td>.</td>   <td>3</td>   <td>.</td>   <td>4</td>   <td>.</td>
   </tr>
   <tr>   <td><strong>velocity</strong></td>   <td>10.0</td>   <td>20.0</td>   <td>.</td>   <td>30.0</td>   <td>.</td>   <td>25.0</td>   <td>.</td>   <td>20.0</td>   <td>.</td>   <td>30.0</td>
   </tr>
-</table>
+</tbody></table>
 
-- The program must have a `print` statement *outside* the body of the loop
+- The program must have a `print` statement _outside_ the body of the loop
   to show the final value of `velocity`,
   since its value is updated by the last iteration of the loop.
 
@@ -205,7 +205,7 @@ for i in range(5):
 ```
 
 Just like with arithmetic, you can and should use parentheses whenever there
-is possible ambiguity.  A good general rule is to *always* use parentheses
+is possible ambiguity.  A good general rule is to _always_ use parentheses
 when mixing `and` and `or` in the same condition.  That is, instead of:
 
 ```python
@@ -220,7 +220,6 @@ if mass[i] <= 2 or (mass[i] >= 5 and velocity[i] > 20):
 ```
 
 so it is perfectly clear to a reader (and to Python) what you really mean.
-
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -401,11 +400,9 @@ print(smallest, largest)
 
 - Use `if` statements to control whether or not a block of code is executed.
 - Conditionals are often used inside loops.
-- Use `else` to execute a block of code when an `if` condition is *not* true.
+- Use `else` to execute a block of code when an `if` condition is _not_ true.
 - Use `elif` to specify additional tests.
 - Conditions are tested once, in order.
 - Create a table showing variables' values to trace a program's execution.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
