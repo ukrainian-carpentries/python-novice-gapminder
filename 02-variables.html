@@ -451,7 +451,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Змінні та присвоєння</h1>
-        <p>Last updated on 2025-01-24 |
+        <p>Last updated on 2025-02-22 |
 
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/02-variables.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -708,8 +708,8 @@ NameError: name 'last_name' is not defined</code></pre>
 <div id="заміна-значень" class="callout-inner">
 <h3 class="callout-title">Заміна значень</h3>
 <div class="callout-content">
-<p>Fill the table showing the values of the variables in this program
-<em>after</em> each statement is executed.</p>
+<p>Заповніть таблицю, вказавши значення змінних у цій програмі
+<em>після</em> виконання кожного оператора.</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -757,8 +757,8 @@ NameError: name 'last_name' is not defined</code></pre>
 <h3 class="callout-title">Прогнозування значень</h3>
 <div class="callout-content">
 <p>Яким є остаточне значення змінної <code>position</code> у програмі
-нижче? (Try to predict the value without running the program, then check
-your prediction.)</p>
+нижче? (Спробуйте передбачити значення, не запускаючи програму, а потім
+перевірте свій прогноз.)</p>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -788,21 +788,21 @@ your prediction.)</p>
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="va">left</span></span></code></pre>
 </div>
-<p>The <code>initial</code> variable is assigned the value
-<code>'left'</code>. У другому рядку змінна <code>position</code> також
-отримує значення <code>'left'</code>. У третьому рядку змінній
-<code>initial</code> надається значення <code>'right'</code>, але змінна
+<p>Змінній <code>initial</code> присвоєно значення <code>'left'</code>.
+У другому рядку змінна <code>position</code> також отримує значення
+<code>'left'</code>. У третьому рядку змінній <code>initial</code>
+надається значення <code>'right'</code>, але змінна
 <code>position</code> зберігає своє значення <code>'left'</code>.</p>
 </div>
 </div>
 </div>
 </div>
-<div id="challenge" class="callout challenge">
+<div id="завдання" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="challenge" class="callout-inner">
-<h3 class="callout-title">Challenge</h3>
+<div id="завдання" class="callout-inner">
+<h3 class="callout-title">Завдання</h3>
 <div class="callout-content">
 <p>Якщо ви присвоїли <code>a = 123</code>, що станеться, якщо ви
 спробуєте отримати другу цифру <code>a</code> через
@@ -822,10 +822,9 @@ your prediction.)</p>
 <p>Numbers are not strings or sequences and Python will raise an error
 if you try to perform an index operation on a number. У <a href="03-types-conversion.html">наступному уроці про типи даних і
 перетворення типів</a> ми дізнаємось більше про типи і як конвертувати
-один тип в інший. Якщо вам потрібна N-та цифра числа, ви можете
-перетворити число на рядок за допомогою вбудованої функції
-<code>str</code>, а потім виконати операцію індексування цього
-рядка.</p>
+один тип в інший. If you want the Nth digit of a number you can convert
+it into a string using the <code>str</code> built-in function and then
+perform an index operation on that string.</p>
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -860,10 +859,10 @@ if you try to perform an index operation on a number. У <a href="03-types-conve
 <h3 class="callout-title">Вибір імені</h3>
 <div class="callout-content">
 <p>Яке ім’я для змінної є кращим: <code>m</code>, <code>min</code> або
-<code>minutes</code>? Чому? Hint: think about which code you would
-rather inherit from someone who is leaving the lab:</p>
-<ol style="list-style-type: decimal"><li><code>ts = m 60 + s</code></li>
-<li><code>tot_sec = min 60 + sec</code></li>
+<code>minutes</code>? Чому? Підказка: подумайте, який код ви б хотіли
+успадкувати від того, хто залишає лабораторію:</p>
+<ol style="list-style-type: decimal"><li><code>ts = m * 60 + s</code></li>
+<li><code>tot_sec = min * 60 + sec</code></li>
 <li><code>total_seconds = minutes * 60 + seconds</code></li>
 </ol></div>
 </div>
@@ -932,7 +931,7 @@ in Python that we will cover later).</p>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a>species_name <span class="op">=</span> <span class="st">"Acacia buxifolia"</span></span></code></pre>
 </div>
-<p>What would these expressions return?</p>
+<p>Що виводять ці вирази?</p>
 <ol style="list-style-type: decimal"><li><code>species_name[2:8]</code></li>
 <li>
 <code>species_name[11:]</code> (без значення після двокрапки)</li>
@@ -942,8 +941,9 @@ in Python that we will cover later).</p>
 <code>species_name[:]</code> (тільки двокрапка)</li>
 <li><code>species_name[11:-3]</code></li>
 <li><code>species_name[-5:-3]</code></li>
-<li>What happens when you choose a <code>stop</code> value which is out
-of range? (тобто спробуйте виконати <code>species_name[0:20]</code> або
+<li>Що станеться, якщо ми оберемо значення <code>stop</code>, яке
+виходить за рамки діапазону? (тобто спробуйте виконати
+<code>species_name[0:20]</code> або
 <code>species_name[:103]</code>)</li>
 </ol></div>
 </div>
@@ -990,7 +990,7 @@ buxifolia’`</p></li>
 <div class="callout-content">
 <ul><li>Використовуйте змінні для зберігання значень.</li>
 <li>Використовуйте <code>print</code> для виводу значень.</li>
-<li>Variables persist between cells.</li>
+<li>Змінні зберігаються між комірками.</li>
 <li>Змінні мають бути створені перед їх використанням.</li>
 <li>Змінні можна використовувати для обчислень.</li>
 <li>Використовуйте індекс, щоб отримати один символ із рядка.</li>
@@ -1038,7 +1038,7 @@ buxifolia’`</p></li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/main" class="external-link">sandpaper (0.16.11)</a>, <a href="https://github.com/carpentries/pegboard/tree/main" class="external-link">pegboard (0.7.7)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.5" class="external-link">varnish (1.0.5)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/main" class="external-link">sandpaper (0.16.11)</a>, <a href="https://github.com/carpentries/pegboard/tree/main" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.5" class="external-link">varnish (1.0.5)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -1060,8 +1060,8 @@ buxifolia’`</p></li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/02-variables.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/02-variables.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2025-01-24",
-  "datePublished": "2025-02-18"
+  "dateModified": "2025-02-22",
+  "datePublished": "2025-02-22"
 }
 
   </script><script>
