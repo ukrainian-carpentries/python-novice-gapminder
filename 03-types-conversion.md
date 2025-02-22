@@ -21,10 +21,10 @@ exercises: 10
 
 ## Кожне значення має тип.
 
-- Every value in a program has a specific type.
+- Кожне значення, яке використовує програма, має певний тип.
 - Ціле число (`int`): зображує додатні або від’ємні цілі числа, наприклад 3 або -512.
 - Число з плаваючою крапкою (`float`): зображує дійсні числа, наприклад 3.14159 або -2.5.
-- Character string (usually called "string", `str`): text.
+- Рядки символів (зазвичай просто "рядки", `str`): представляють текст.
   - Укладені в одинарні або подвійні лапки (тип лапок має збігатися).
   - Під час відображення рядку лапки не друкуються.
 
@@ -32,7 +32,7 @@ exercises: 10
 
 - Використовуйте вбудовану функцію `type`, щоб з'ясувати, який тип має значення.
 - Це також працює зі змінними.
-  - But remember: the _value_ has the type --- the _variable_ is just a label.
+  - Але запамʼятайте: _значення_ має свій тип, а _змінна_ тільки вказує на деяке значення.
 
 ```python
 print(type(52))
@@ -50,7 +50,7 @@ fitness = 'average' print(type(fitness))
 <class 'str'>
 ```
 
-## Types control what operations (or methods) can be performed on a given value.
+## Тип визначає, які операції (або методи) можна виконувати над даним значенням.
 
 - Тип значення визначає, що може робити з ним програма.
 
@@ -75,12 +75,12 @@ TypeError                                 Traceback (most recent call last)
 TypeError: unsupported operand type(s) for -: 'str' and 'str'
 ```
 
-## You can use the "+" and "\*" operators on strings.
+## Ви можете використовувати оператори "+" та "\*" для дій над рядками.
 
-- "Adding" character strings concatenates them.
+- "Додавання" рядків об’єднує їх.
 
 ```python
-full_name = 'Ahmed' + ' ' + 'Walsh'
+full_name = 'Ahmed' + ' ' + 'Walsh' 
 print(full_name)
 ```
 
@@ -92,7 +92,7 @@ Ahmed Walsh
   - Оскільки множення - це повторюване додавання.
 
 ```python
-separator = '=' * 10
+separator = '=' * 10 
 print(separator)
 ```
 
@@ -148,7 +148,7 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'
 - Перетворення типу виконується за допомогою функції, яка має те ж саме імʼя, що і потрібний тип.
 
 ```python
-print(1 + int('2'))
+print(1 + int('2')) 
 print(str(1) + '2')
 ```
 
@@ -157,13 +157,13 @@ print(str(1) + '2')
 12
 ```
 
-## Can mix integers and floats freely in operations.
+## З цілими та дійсними числами можна оперувати одночасно.
 
 - Цілі та дійсні числа можна використовувати разом для арифметичних дій.
   - Python 3 автоматично перетворить цілі числа у дійсні, якщо це потрібно.
 
 ```python
-print('half is', 1 / 2.0)
+print('half is', 1 / 2.0) 
 print('three squared is', 3.0 ** 2)
 ```
 
@@ -172,11 +172,11 @@ half is 0.5
 three squared is 9.0
 ```
 
-## Variables only change value when something is assigned to them.
+## Змінні можуть змінити своє значення тільки через присвоєння.
 
 - Якщо в електронних таблицях ми зробимо одну комірку залежною від іншої та оновимо останню,
   перша оновиться автоматично.
-- This does **not** happen in programming languages.
+- Це **не** трапляється у мовах програмування.
 
 ```python
 variable_one = 1
@@ -189,15 +189,14 @@ print('first is', variable_one, 'and second is', variable_two)
 first is 2 and second is 5
 ```
 
-- The computer reads the value of `variable_one` when doing the multiplication,
-  creates a new value, and assigns it to `variable_two`.
+- Комп'ютер зчитує значення `variable_one` під час множення, створює нове значення та призначає цьому значенню ім'я `variable_two`.
 - Після того, як значення `variable_two` встановлено, воно _не залежить від значення `variable_one`_, отже його значення не змінюється автоматично, коли `variable_one` змінюється.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
 ## Дроби
 
-What type of value is 3.4?
+Який тип має значення 3.4?
 Як це можна встановити?
 
 :::::::::::::::  solution
@@ -248,15 +247,14 @@ print(result, 'is', type(result))
 
 ## Вибір типу
 
-What type of value (integer, floating point number, or character string)
-would you use to represent each of the following?  Спробуйте знайти більш ніж одну гарну відповідь для кожної проблеми.  For example, in  # 1, when would counting days with a floating point variable make more sense than using an integer?
+Який тип значення (ціле число, дійсне число або рядок символів) ви б використовували для представлення кожного з наступних значень?  Спробуйте знайти більш ніж одну гарну відповідь для кожної проблеми.  For example, in  # 1, when would counting days with a floating point variable make more sense than using an integer?
 
 1. Кількість днів, які пройшли з початку року.
 2. Час, що пройшов від початку року до сьогоднішнього дня.
 3. Серійний номер лабораторного обладнання.
 4. Вік лабораторного зразка
 5. Поточне населення міста.
-6. Average population of a city over time.
+6. Середня чисельність населення міста протягом певного часу.
 
 :::::::::::::::  solution
 

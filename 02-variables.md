@@ -184,8 +184,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 
 ## Заміна значень
 
-Fill the table showing the values of the variables in this program
-_after_ each statement is executed.
+Заповніть таблицю, вказавши значення змінних у цій програмі _після_ виконання кожного оператора.
 
 ```python
 # Оператор  # Значення x   # Значення y   # Значення swap #
@@ -221,8 +220,7 @@ y = swap   # 3.0          # 1.0          # 1.0           #
 ## Прогнозування значень
 
 Яким є остаточне значення змінної `position` у програмі нижче?
-(Try to predict the value without running the program,
-then check your prediction.)
+(Спробуйте передбачити значення, не запускаючи програму, а потім перевірте свій прогноз.)
 
 ```python
 initial = 'left'
@@ -242,7 +240,7 @@ print(position)
 left
 ```
 
-The `initial` variable is assigned the value `'left'`.
+Змінній `initial` присвоєно значення `'left'`.
 У другому рядку змінна `position` також отримує
 значення `'left'`. У третьому рядку змінній `initial` надається значення `'right'`, але змінна `position` зберігає своє значення `'left'`.
 
@@ -252,7 +250,7 @@ The `initial` variable is assigned the value `'left'`.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Challenge
+## Завдання
 
 Якщо ви присвоїли `a = 123`,
 що станеться, якщо ви спробуєте отримати другу цифру `a` через `a[1]`?
@@ -263,7 +261,8 @@ The `initial` variable is assigned the value `'left'`.
 
 Numbers are not strings or sequences and Python will raise an error if you try to perform an index operation on a
 number. У [наступному уроці про типи даних і перетворення типів](03-types-conversion.md)
-ми дізнаємось більше про типи і як конвертувати один тип в інший. Якщо вам потрібна N-та цифра числа, ви можете перетворити число на рядок за допомогою вбудованої функції `str`, а потім виконати операцію індексування цього рядка.
+ми дізнаємось більше про типи і як конвертувати один тип в інший. If you want the Nth digit of a number you
+can convert it into a string using the `str` built-in function and then perform an index operation on that string.
 
 ```python
 a = 123
@@ -293,11 +292,10 @@ print(a[1])
 
 Яке ім'я для змінної є кращим: `m`, `min` або `minutes`?
 Чому?
-Hint: think about which code you would rather inherit
-from someone who is leaving the lab:
+Підказка: подумайте, який код ви б хотіли успадкувати від того, хто залишає лабораторію:
 
-1. `ts = m 60 + s`
-2. `tot_sec = min 60 + sec`
+1. `ts = m * 60 + s`
+2. `tot_sec = min * 60 + sec`
 3. `total_seconds = minutes * 60 + seconds`
 
 :::::::::::::::  solution
@@ -344,7 +342,7 @@ atom_name[1:3] is: ar
 species_name = "Acacia buxifolia"
 ```
 
-What would these expressions return?
+Що виводять ці вирази?
 
 1. `species_name[2:8]`
 2. `species_name[11:]` (без значення після двокрапки)
@@ -352,7 +350,7 @@ What would these expressions return?
 4. `species_name[:]` (тільки двокрапка)
 5. `species_name[11:-3]`
 6. `species_name[-5:-3]`
-7. What happens when you choose a `stop` value which is out of range? (тобто спробуйте виконати `species_name[0:20]` або `species_name[:103]`)
+7. Що станеться, якщо ми оберемо значення `stop`, яке виходить за рамки діапазону? (тобто спробуйте виконати `species_name[0:20]` або `species_name[:103]`)
 
 :::::::::::::::  solution
 
@@ -380,7 +378,7 @@ What would these expressions return?
 
 - Використовуйте змінні для зберігання значень.
 - Використовуйте `print` для виводу значень.
-- Variables persist between cells.
+- Змінні зберігаються між комірками.
 - Змінні мають бути створені перед їх використанням.
 - Змінні можна використовувати для обчислень.
 - Використовуйте індекс, щоб отримати один символ із рядка.
