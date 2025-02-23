@@ -25,16 +25,16 @@ exercises: 10
 ## Використовуйте коментарі при створенні документації програм.
 
 ```python
-# This sentence isn't executed by Python.
-adjustment = 0.5   # Neither is this - anything after '#' is ignored.
+# Цей рядок Python не виконує. 
+adjustment = 0.5 # Усе після '#' ігнорується.
 ```
 
 ## A function may take zero or more arguments.
 
-- We have seen some functions already --- now let's take a closer look.
-- An _argument_ is a value passed into a function.
+- Ми вже знайомі з деякими функціями --- тепер розглянемо їх докладніше.
+- _Аргумент_ - це значення, яке передається у функцію.
 - `len` потребує тільки один аргумент.
-- `int`, `str`, and `float` create a new value from an existing one.
+- `int`, `str` та `float` створюють нові значення з наявних.
 - `print` takes zero or more.
 - `print` без аргументів повертає порожній рядок.
   - Потрібно завжди використовувати дужки, навіть якщо вони порожні, щоб Python знав, що викликається функція.

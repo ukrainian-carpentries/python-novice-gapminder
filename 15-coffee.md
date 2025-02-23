@@ -1,5 +1,5 @@
 ---
-title: Afternoon Coffee
+title: Післяобідня кава
 teaching: 0
 exercises: 0
 break: 15

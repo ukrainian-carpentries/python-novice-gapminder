@@ -268,11 +268,11 @@ print(result, 'is', type(result))
 
 3. Символьний рядок, якщо серійний номер містить літери та цифри, або ціле число, якщо серійний номер складається лише з цифр.
 
-4. Це залежить від багатьох факторів! Як вимірюється вік зразка? whole days since collection (integer)?  Дата і час (рядок)?
+4. Це залежить від багатьох факторів! Як вимірюється вік зразка? Кількість днів з моменту, коли його було створено (ціле число)?  Дата і час (рядок)?
 
 5. Виберіть дійсне число, щоб представити приблизну кількість населення за допомогою округлення (наприклад, до мільйонів), або ціле число, щоб представити точну кількість населення.
 
-6. Floating point number, since an average is likely to have a fractional part.
+6. Дійсне число, оскільки результат усереднення, швидше за все, буде мати дробну частину.
 
 :::::::::::::::::::::::::
 
@@ -282,8 +282,7 @@ print(result, 'is', type(result))
 
 ## Типи операцій ділення
 
-In Python 3, the `//` operator performs integer (whole-number) floor division, the `/` operator performs floating-point
-division, and the `%` (or _modulo_) operator calculates and returns the remainder from integer division:
+У Python 3 оператор `//` виконує ціле ділення (повертає цілу частину результату), оператор `/` виконує ділення з плаваючою точкою, та оператор '%' (або _модуль_) повертає залишок від цілого ділення:
 
 ```python
 print('5 // 3:', 5 // 3)
@@ -297,20 +296,17 @@ print('5 % 3:', 5 % 3)
 5 % 3: 2
 ```
 
-If `num_subjects` is the number of subjects taking part in a study,
-and `num_per_survey` is the number that can take part in a single survey,
-write an expression that calculates the number of surveys needed
-to reach everyone once.
+Припустимо, що `num_subjects` - це кількість суб'єктів, які беруть участь у дослідженні,
+а `num_per_survey` — кількість, яка може взяти участь в одному опитуванні. Напишіть вираз, який обчислює кількість необхідних опитувань для
+охоплення кожного хоча б один раз.
 
 :::::::::::::::  solution
 
 ## Рішення
 
-We want the minimum number of surveys that reaches everyone once, which is
-the rounded up value of `num_subjects/ num_per_survey`. Це
-еквівалентно виконанню дійсного ділення за допомогою оператору `//` і додаванню 1 до результату. Before
-the division we need to subtract 1 from the number of subjects to deal with
-the case where `num_subjects` is evenly divisible by `num_per_survey`.
+Потрібно визначити мінімальну кількість опитувань для охоплення кожного суб'єкта хоча б один раз, тобто округлене значення `num_subjects/num_per_survey`. Це
+еквівалентно виконанню дійсного ділення за допомогою оператору `//` і додаванню 1 до результату. Перед діленням нам потрібно відняти 1 від кількості `num_subjects`, щоб працювати з
+випадком, коли `num_subjects` порівну ділиться на `num_per_survey`.
 
 ```python
 num_subjects = 600
@@ -359,7 +355,7 @@ ValueError                                Traceback (most recent call last)
 ValueError: could not convert string to float: 'Hello world!'
 ```
 
-Given this information, what do you expect the following program to do?
+Беручи це до уваги, чого чекати від наступної програми?
 
 Що вона робить насправді?
 
@@ -437,8 +433,7 @@ third = "1.1"
 
 ## Комплексні числа
 
-Python provides complex numbers,
-which are written as `1.0+2.0j`.
+Python підтримує комплексні числа, які записуються як `1.0 + 2.0j`.
 If `val` is a complex number,
 its real and imaginary parts can be accessed using _dot notation_
 as `val.real` and `val.imag`.
@@ -478,7 +473,7 @@ print(a_complex_number.imag)
 
 - Кожне значення має тип.
 - Вбудована функція `type` повертає тип значення.
-- Types control what operations can be done on values.
+- Типи контролюють, які операції можна виконувати над значеннями.
 - Рядки можна додавати і помножувати.
 - Рядки мають довжину (але числа її не мають).
 - Необхідно перетворювати числа в рядки або навпаки під час виконання певних операцій.
