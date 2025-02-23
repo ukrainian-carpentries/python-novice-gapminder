@@ -298,7 +298,7 @@ them.</a></li>
 <div class="accordion accordion-flush" id="accordionFlush11">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading11">
-        <a href="10-lunch.html">10. Lunch</a>
+        <a href="10-lunch.html">10. Ланч</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -343,7 +343,7 @@ them.</a></li>
 <div class="accordion accordion-flush" id="accordionFlush16">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading16">
-        <a href="15-coffee.html">15. Afternoon Coffee</a>
+        <a href="15-coffee.html">15. Післяобідня кава</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -452,7 +452,7 @@ them.</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Типи даних та їх перетворення</h1>
-        <p>Last updated on 2025-02-22 |
+        <p>Last updated on 2025-02-23 |
 
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/03-types-conversion.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -712,7 +712,7 @@ three squared is 9.0</code></pre>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>It is a floating-point number (often abbreviated “float”). Це можна
 перевірити, використовуючи вбудовану функцію <code>type()</code>.</p>
@@ -748,7 +748,7 @@ three squared is 9.0</code></pre>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Це - дійсне число: цілі числа автоматично перетворюються у дійсні,
 коли це необхідно.</p>
@@ -795,7 +795,7 @@ more sense than using an integer?</p>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Відповіді на запитання:</p>
 <ol style="list-style-type: decimal"><li><p>Ціле, оскільки число днів належить діапазону від 1 до
@@ -805,12 +805,13 @@ more sense than using an integer?</p>
 <li><p>Символьний рядок, якщо серійний номер містить літери та цифри,
 або ціле число, якщо серійний номер складається лише з цифр.</p></li>
 <li><p>Це залежить від багатьох факторів! Як вимірюється вік зразка?
-whole days since collection (integer)? Дата і час (рядок)?</p></li>
+Кількість днів з моменту, коли його було створено (ціле число)? Дата і
+час (рядок)?</p></li>
 <li><p>Виберіть дійсне число, щоб представити приблизну кількість
 населення за допомогою округлення (наприклад, до мільйонів), або ціле
 число, щоб представити точну кількість населення.</p></li>
-<li><p>Floating point number, since an average is likely to have a
-fractional part.</p></li>
+<li><p>Дійсне число, оскільки результат усереднення, швидше за все, буде
+мати дробну частину.</p></li>
 </ol></div>
 </div>
 </div>
@@ -822,10 +823,10 @@ fractional part.</p></li>
 <div id="типи-операцій-ділення" class="callout-inner">
 <h3 class="callout-title">Типи операцій ділення</h3>
 <div class="callout-content">
-<p>In Python 3, the <code>//</code> operator performs integer
-(whole-number) floor division, the <code>/</code> operator performs
-floating-point division, and the <code>%</code> (or <em>modulo</em>)
-operator calculates and returns the remainder from integer division:</p>
+<p>У Python 3 оператор <code>//</code> виконує ціле ділення (повертає
+цілу частину результату), оператор <code>/</code> виконує ділення з
+плаваючою точкою, та оператор ‘%’ (або <em>модуль</em>) повертає залишок
+від цілого ділення:</p>
 <div class="codewrapper sourceCode" id="cb29">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -840,10 +841,11 @@ operator calculates and returns the remainder from integer division:</p>
 5 / 3: 1.6666666666666667
 5 % 3: 2</code></pre>
 </div>
-<p>If <code>num_subjects</code> is the number of subjects taking part in
-a study, and <code>num_per_survey</code> is the number that can take
-part in a single survey, write an expression that calculates the number
-of surveys needed to reach everyone once.</p>
+<p>Припустимо, що <code>num_subjects</code> - це кількість суб’єктів,
+які беруть участь у дослідженні, а <code>num_per_survey</code> —
+кількість, яка може взяти участь в одному опитуванні. Напишіть вираз,
+який обчислює кількість необхідних опитувань для охоплення кожного хоча
+б один раз.</p>
 </div>
 </div>
 </div>
@@ -854,15 +856,16 @@ of surveys needed to reach everyone once.</p>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
-<p>We want the minimum number of surveys that reaches everyone once,
-which is the rounded up value of
-<code>num_subjects/ num_per_survey</code>. Це еквівалентно виконанню
+<p>Потрібно визначити мінімальну кількість опитувань для охоплення
+кожного суб’єкта хоча б один раз, тобто округлене значення
+<code>num_subjects/num_per_survey</code>. Це еквівалентно виконанню
 дійсного ділення за допомогою оператору <code>//</code> і додаванню 1 до
-результату. Before the division we need to subtract 1 from the number of
-subjects to deal with the case where <code>num_subjects</code> is evenly
-divisible by <code>num_per_survey</code>.</p>
+результату. Перед діленням нам потрібно відняти 1 від кількості
+<code>num_subjects</code>, щоб працювати з випадком, коли
+<code>num_subjects</code> порівну ділиться на
+<code>num_per_survey</code>.</p>
 <div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -920,8 +923,7 @@ ValueError                                Traceback (most recent call last)
 
 ValueError: could not convert string to float: 'Hello world!'</code></pre>
 </div>
-<p>Given this information, what do you expect the following program to
-do?</p>
+<p>Беручи це до уваги, чого чекати від наступної програми?</p>
 <p>Що вона робить насправді?</p>
 <p>Як це пояснити?</p>
 <div class="codewrapper sourceCode" id="cb37">
@@ -939,7 +941,7 @@ do?</p>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <p>Що ви очікуєте від цієї програми? Чому б не очікувати, що у Python 3
 команда <code>int</code> перетворить рядок “3.4” на 3.4 та виконає
@@ -1008,7 +1010,7 @@ explicitly in code.</p>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <p>Правильні відповіді: 1 та 4</p>
 </div>
@@ -1022,9 +1024,9 @@ explicitly in code.</p>
 <div id="комплексні-числа" class="callout-inner">
 <h3 class="callout-title">Комплексні числа</h3>
 <div class="callout-content">
-<p>Python provides complex numbers, which are written as
-<code>1.0+2.0j</code>. If <code>val</code> is a complex number, its real
-and imaginary parts can be accessed using <em>dot notation</em> as
+<p>Python підтримує комплексні числа, які записуються як
+<code>1.0 + 2.0j</code>. If <code>val</code> is a complex number, its
+real and imaginary parts can be accessed using <em>dot notation</em> as
 <code>val.real</code> and <code>val.imag</code>.</p>
 <div class="codewrapper sourceCode" id="cb43">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1054,7 +1056,7 @@ and imaginary parts can be accessed using <em>dot notation</em> as
   Рішення
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li><p>Стандартні математичні позначення зазвичай використовують
 <code>i</code> для позначення комплексного числа. However, from media
@@ -1078,7 +1080,7 @@ Overflow містить додаткові пояснення та обгово�
 <div class="callout-content">
 <ul><li>Кожне значення має тип.</li>
 <li>Вбудована функція <code>type</code> повертає тип значення.</li>
-<li>Types control what operations can be done on values.</li>
+<li>Типи контролюють, які операції можна виконувати над значеннями.</li>
 <li>Рядки можна додавати і помножувати.</li>
 <li>Рядки мають довжину (але числа її не мають).</li>
 <li>Необхідно перетворювати числа в рядки або навпаки під час виконання
@@ -1146,8 +1148,8 @@ Overflow містить додаткові пояснення та обгово�
   "url": "https://swcarpentry.github.io/python-novice-gapminder/instructor/03-types-conversion.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/instructor/03-types-conversion.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2025-02-22",
-  "datePublished": "2025-02-22"
+  "dateModified": "2025-02-23",
+  "datePublished": "2025-02-23"
 }
 
   </script><script>
