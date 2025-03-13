@@ -451,7 +451,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Змінні та присвоєння</h1>
-        <p>Last updated on 2025-02-22 |
+        <p>Last updated on 2025-03-13 |
 
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/02-variables.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -629,9 +629,9 @@ NameError: name 'last_name' is not defined</code></pre>
 <li>Індекси нумеруються від 0.</li>
 <li>Використовуйте індекс позиції у квадратних дужках, щоб отримати
 символ з тієї позиції у рядку.</li>
-</ul><figure><img src="../fig/2_indexing.svg" alt="Рядок кода Python, print(atom\_name0), демонструє, що використання нульового індексу виведе лише початкову літеру, у цьому випадку ‘h’ для ‘helium’." class="figure mx-auto d-block"><div class="figcaption">Рядок кода Python, print(atom\_name<span class="math display">\[0\]</span>), демонструє, що використання
-нульового індексу виведе лише початкову літеру, у цьому випадку ‘h’ для
-‘helium’.</div>
+</ul><figure><img src="../fig/2_indexing.svg" alt="Рядок кода Python, print(atom_name[0]), демонструє, що використання нульового індексу виведе лише початкову літеру, у цьому випадку ‘h’ для ‘helium’." class="figure mx-auto d-block"><div class="figcaption">Рядок кода Python, print(atom_name[0]),
+демонструє, що використання нульового індексу виведе лише початкову
+літеру, у цьому випадку ‘h’ для ‘helium’.</div>
 </figure><div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -732,7 +732,7 @@ NameError: name 'last_name' is not defined</code></pre>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -778,7 +778,7 @@ NameError: name 'last_name' is not defined</code></pre>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -819,7 +819,7 @@ NameError: name 'last_name' is not defined</code></pre>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Numbers are not strings or sequences and Python will raise an error
 if you try to perform an index operation on a number. У <a href="03-types-conversion.html">наступному уроці про типи даних і
@@ -876,7 +876,7 @@ perform an index operation on that string.</p>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p><code>minutes</code> is better because <code>min</code> might mean
 something like “minimum” (and actually is an existing built-in function
@@ -909,7 +909,7 @@ in Python that we will cover later).</p>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -957,7 +957,7 @@ in Python that we will cover later).</p>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li><p><code>species_name[2:8]</code> повертає підрядок
 <code>'acia b'</code></p></li>
@@ -1062,8 +1062,8 @@ buxifolia’`</p></li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/instructor/02-variables.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/instructor/02-variables.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2025-02-22",
-  "datePublished": "2025-03-11"
+  "dateModified": "2025-03-13",
+  "datePublished": "2025-03-13"
 }
 
   </script><script>

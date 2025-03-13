@@ -531,7 +531,7 @@
         
 <section id="aio-01-run-quit"><p>Content from <a href="01-run-quit.html">Запуск та завершення роботи</a></p>
 <hr>
-<p>Last updated on 2025-01-24 |
+<p>Last updated on 2025-03-13 |
 
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/01-run-quit.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -618,10 +618,10 @@ JupyterLab</p>
 <li>Запустіть сервер JupyterLab на вашому комп’ютері</li>
 <li>Використовуйте веббраузер для відкриття спеціальної локальної
 URL-адреси для з’єднання з сервером JupyterLab</li>
-<li>The JupyterLab server does the work and the web browser renders the
-result</li>
-<li>Type code into the browser and see the results after your JupyterLab
-server has finished executing your code</li>
+<li>Сервер JupyterLab виконує обчислювальну роботу, а веббраузер
+відображає її результат</li>
+<li>Введіть код у браузері, і як тільки сервер JupyterLab завершить
+виконання, ви зможете переглянути результати</li>
 </ul>
 <div id="jupyterlab-а-чому-не-jupyter-notebook" class="callout">
 <div class="callout-square">
@@ -654,8 +654,8 @@ JupyterLab і Jupyter Notebook, можуть знайти більше інфо�
 командного рядка через Terminal. Існує два способи відкрити термінал на
 Mac.</p>
 <ol style="list-style-type: decimal">
-<li>In your Applications folder, open Utilities and double-click on
-Terminal</li>
+<li>У каталозі Applications відкрийте підкаталог Utilities і двічі
+натисніть Terminal</li>
 <li>Натисніть <kbd>Command</kbd> + <kbd>spacebar</kbd> для запуску
 Spotlight. Введіть <code>Terminal</code>, а потім двічі клацніть на
 результаті пошуку або натисніть <kbd>Enter</kbd>
@@ -674,8 +674,9 @@ JupyterLab.</p>
 </h3>
 <p>Для запуску сервера JupyterLab вам потрібен застосунок Anaconda
 Prompt.</p>
-<p>Press <kbd>Windows Logo Key</kbd> and search for
-<code>Anaconda Prompt</code>, click the result or press enter.</p>
+<p>Натисніть <kbd>Windows Logo Key</kbd> і знайдіть
+<code>Anaconda Prompt</code>, натисніть на результат пошуку або на
+клавішу enter.</p>
 <p>Після запуску Anaconda Prompt введіть команду:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -762,31 +763,32 @@ JupyterLab.</li>
 <div id="ядра" class="callout-inner">
 <h3 class="callout-title">Ядра</h3>
 <div class="callout-content">
-<p>The JupyterLab <a href="https://jupyterlab.readthedocs.io/en/stable/user/documents_kernels.html" class="external-link">docs</a>
-define kernels as “separate processes started by the server that runs
-your code in different programming languages and environments.” When we
-open a Jupyter Notebook, that starts a kernel - a process - that is
-going to run the code. In this lesson, we’ll be using the Jupyter
-ipython kernel which lets us run Python 3 code interactively.</p>
-<p>Using other Jupyter <a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels" class="external-link">kernels
-for other programming languages</a> would let us write and execute code
-in other programming languages in the same JupyterLab interface, like R,
-Java, Julia, Ruby, JavaScript, Fortran, etc.</p>
+<p><a href="https://jupyterlab.readthedocs.io/en/stable/user/documents_kernels.html" class="external-link">Документація
+JupyterLab</a> визначає ядра як “окремі процеси сервера, що виконують
+ваш код у відповідних мовах програмування та середовищах.” Коли ми
+відкриваємо Jupyter Notebook, то ініціалізується ядро - процес, який
+буде виконувати код. У цьому уроці ми будемо використовувати ядро
+ipython, яке дозволяє запускати Python 3 в інтерактивному режимі.</p>
+<p>Використання інших <a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels" class="external-link">ядер
+Jupyter для інших мов програмування</a> дозволить нам використовувати
+спільний інтерфейс JupyterLab для того, щоб писати та виконувати код,
+наприклад, у таких мовах як R, Java, Julia, Ruby, JavaScript, Fortran,
+тощо.</p>
 </div>
 </div>
 </div>
-<p>A screenshot of the default Menu Bar is provided below.</p>
+<p>Скриншот стандартної панелі меню надано нижче.</p>
 <p align="center">
 <img alt="JupyterLab Menu Bar" src="fig/0_jupyterlab_menu_bar.png" width="750" class="figure"></p>
 </div>
 <div class="section level3">
 <h3 id="ліва-бічна-панель">Ліва бічна панель<a class="anchor" aria-label="anchor" href="#%D0%BB%D1%96%D0%B2%D0%B0-%D0%B1%D1%96%D1%87%D0%BD%D0%B0-%D0%BF%D0%B0%D0%BD%D0%B5%D0%BB%D1%8C"></a>
 </h3>
-<p>The left sidebar contains a number of commonly used tabs, such as a
-file browser (showing the contents of the directory where the JupyterLab
-server was launched), a list of running kernels and terminals, the
-command palette, and a list of open tabs in the main work area. A
-screenshot of the default Left Side Bar is provided below.</p>
+<p>Ліва бічна панель містить ряд найбільш використовуваних вкладок, а
+саме: браузер файлів (відображає вміст каталогу, де був запущений сервер
+JupyterLab), перелік активних ядер і терміналів, панель команд і список
+відкритих вкладок в основній робочій області. Скриншот стандартної лівої
+бічної панелі наведений нижче.</p>
 <p align="center">
 <img alt="JupyterLab Left Side Bar" src="fig/0_jupyterlab_left_side_bar.png" width="250" class="figure"></p>
 <p>Ліву бічну панель можна згорнути або розгорнути вибравши пункт “Show
@@ -797,18 +799,19 @@ Left Sidebar” у меню View, або натиснувши на активн�
 <h3 id="основна-робоча-область">Основна робоча область<a class="anchor" aria-label="anchor" href="#%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%B0-%D1%80%D0%BE%D0%B1%D0%BE%D1%87%D0%B0-%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C"></a>
 </h3>
 <p>Основна робоча область в JupyterLab дозволяє упорядковувати документи
-(блокноти, текстові файли та ін.) and other activities (terminals, code
-consoles, etc.) into panels of tabs that can be resized or subdivided. A
-screenshot of the default Main Work Area is provided below.</p>
+(блокноти, текстові файли та ін.) та інші види застосунків (термінали,
+інтерфейси командного рядка тощо) у панелі вкладок. Ці панелі можна
+зменшити/збільшити або поділити на підрозділи. Скриншот стандартної
+основної робочої області наведено нижче.</p>
 <p>Якщо Ви не бачите вкладку Launcher на панелі запуску, натисніть синій
 плюс під “File” та “Edit” у панелі меню, і ця вкладка з’явиться.</p>
 <p align="center">
 <img alt="JupyterLab Main Work Area" src="fig/0_jupyterlab_main_work_area.png" width="750" class="figure"></p>
-<p>Drag a tab to the center of a tab panel to move the tab to the panel.
-Subdivide a tab panel by dragging a tab to the left, right, top, or
-bottom of the panel. The work area has a single current activity.
-Вкладка для поточної дії позначена кольоровою верхньою рамкою (за
-замовчуванням - синьою).</p>
+<p>Щоб перемістити вкладку на деяку панель, перетягніть її в центр цієї
+панелі. Також ви можете розділити панель вкладок, перетягнувши потрібну
+вкладку ліворуч, праворуч, догори або донизу панелі. Кожна робоча панель
+має одну поточну активну вкладку. Вкладка для поточної дії позначена
+кольоровою верхньою рамкою (за замовчуванням - синьою).</p>
 </div>
 </section><section><h2 class="section-heading" id="створення-скрипту-python">Створення скрипту Python<a class="anchor" aria-label="anchor" href="#%D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B5%D0%BD%D0%BD%D1%8F-%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D1%83-python"></a>
 </h2>
@@ -847,9 +850,9 @@ Notebook</em> у меню <em>File</em> на панелі меню.</p>
 <li>Блокноти можна експортувати як скрипти Python, які можна запускати з
 командного рядка.</li>
 </ul>
-<p>Below is a screenshot of a Jupyter notebook running inside
-JupyterLab. If you are interested in more details, then see the <a href="https://jupyterlab.readthedocs.io/en/stable/user/notebook.html" class="external-link">official
-notebook documentation</a>.</p>
+<p>Нижче наведено скриншот Jupyter Notebook, який був відкритий в
+JupyterLab. Якщо вам цікаві подальші деталі, дивіться <a href="https://jupyterlab.readthedocs.io/en/stable/user/notebook.html" class="external-link">офіційну
+документацію до Jupyter Notebook</a>.</p>
 <p align="center">
 <img alt="Example Jupyter Notebook" src="fig/0_jupyterlab_notebook_screenshot.png" width="750" class="figure"></p>
 <div id="як-це-зберігається" class="callout">
@@ -863,8 +866,8 @@ notebook documentation</a>.</p>
 <li>Файл блокноту зберігається у форматі JSON.</li>
 <li>Подібно до вебсторінки, те, що зберігається, відрізняється від того,
 що ви бачите у своєму браузері.</li>
-<li>But this format allows Jupyter to mix source code, text, and images,
-all in one file.</li>
+<li>Але формат JSON дозволяє Jupyter комбінувати вихідний код, текст і
+графіку в одному файлі.</li>
 </ul>
 </div>
 </div>
@@ -897,7 +900,7 @@ all in one file.</li>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Після створення необхідних вкладок ви можете перетягнути одну з них в
 центр панелі для переміщення вкладки на панель; потім ви можете
@@ -907,18 +910,18 @@ all in one file.</li>
 </div>
 </div>
 </div>
-<div id="code-vs.-text" class="callout">
+<div id="код-або-текст" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="code-vs.-text" class="callout-inner">
-<h3 class="callout-title">Code vs. Text</h3>
+<div id="код-або-текст" class="callout-inner">
+<h3 class="callout-title">Код або текст?</h3>
 <div class="callout-content">
 <p>Jupyter дозволяє змішувати код і текст у різних типах блоків, які
-називаються комірками. We often use the term “code” to mean “the source
-code of software written in a language such as Python”. A “code cell” in
-a Notebook is a cell that contains software; a “text cell” is one that
-contains ordinary prose written for human beings.</p>
+називаються комірками. Термін “код” зазвичай використовується для
+позначення вихідного коду програмного забезпечення, написаного будь-якою
+мовою програмування. “Комірка коду” в Notebook містить код; а “текстова
+комірка” - звичайний текст, який відображується, але не виконується.</p>
 </div>
 </div>
 </div>
@@ -926,8 +929,8 @@ contains ordinary prose written for human beings.</p>
 </h2>
 <hr class="half-width">
 <ul>
-<li>If you press <kbd>Esc</kbd> and <kbd>Return</kbd> alternately, the
-outer border of your code cell will change from gray to blue.</li>
+<li>Якщо ви натиснете <kbd>Esc</kbd> та <kbd>Return</kbd> по черзі, то
+зовнішня межа комірки коду буде змінюватися з сірої на синю.</li>
 <li>Існують сірий - <strong>Command</strong> (командний) та синій -
 <strong>Edit</strong> (редагування) режими вашого блокноту.</li>
 <li>Command mode allows you to edit notebook-level features, and Edit
@@ -952,11 +955,12 @@ mode changes the content of cells.</li>
 <div id="командний-режим-або-режим-редагування" class="callout-inner">
 <h3 class="callout-title">Командний режим або режим редагування</h3>
 <div class="callout-content">
-<p>In the Jupyter notebook page are you currently in Command or Edit
-mode?<br>
-Switch between the modes. Use the shortcuts to generate a new cell. Use
-the shortcuts to delete a cell. Use the shortcuts to undo the last cell
-operation you performed.</p>
+<p>Чи ви зараз перебуваєте в командному режимі чи режимі редагування на
+сторінці Jupyter Notebook?<br>
+Перейдіть з одного режиму в інший, а потім у зворотному напрямку.
+Використайте відповідні швидкі клавіші для видалення комірки.
+Використайте швидкі клавіші, щоб видалити комірку. Нарешті, скасуйте
+останню операцію над коміркою також за допомогою швидких клавіш.</p>
 </div>
 </div>
 </div>
@@ -967,7 +971,7 @@ operation you performed.</p>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Командний режим має сіру рамку, а режим редагування — синю.
 Використовуйте <kbd>Esc</kbd> та <kbd>Return</kbd> для перемикання
@@ -1005,10 +1009,10 @@ operation you performed.</p>
 <h3 id="jupyter-notebook-підтримує-мову-розмітки-текстів-markdown-">Jupyter Notebook підтримує мову розмітки текстів Markdown.<a class="anchor" aria-label="anchor" href="#jupyter-notebook-%D0%BF%D1%96%D0%B4%D1%82%D1%80%D0%B8%D0%BC%D1%83%D1%94-%D0%BC%D0%BE%D0%B2%D1%83-%D1%80%D0%BE%D0%B7%D0%BC%D1%96%D1%82%D0%BA%D0%B8-%D1%82%D0%B5%D0%BA%D1%81%D1%82%D1%96%D0%B2-markdown-"></a>
 </h3>
 <ul>
-<li>Notebooks can also render <a href="https://en.wikipedia.org/wiki/Markdown" class="external-link">Markdown</a>.
+<li>Блокноти також можуть візуалізувати <a href="https://en.wikipedia.org/wiki/Markdown" class="external-link">Markdown</a>.
 <ul>
-<li>A simple plain-text format for writing lists, links, and other
-things that might go into a web page.</li>
+<li>Простий текстовий формат для створення списків, посилань та інших
+елементів, які можуть бути використані на вебсторінці.</li>
 <li>Власне, це підмножина HTML, яка виглядає у стилі старомодного
 електронного листа.</li>
 </ul>
@@ -1024,17 +1028,17 @@ things that might go into a web page.</li>
 </ul>
 </div>
 <div class="section level3">
-<h3 id="markdown-does-most-of-what-html-does-">Markdown does most of what HTML does.<a class="anchor" aria-label="anchor" href="#markdown-does-most-of-what-html-does-"></a>
+<h3 id="markdown-робить-більшість-того-що-можна-зробити-у-html-">Markdown робить більшість того, що можна зробити у HTML.<a class="anchor" aria-label="anchor" href="#markdown-%D1%80%D0%BE%D0%B1%D0%B8%D1%82%D1%8C-%D0%B1%D1%96%D0%BB%D1%8C%D1%88%D1%96%D1%81%D1%82%D1%8C-%D1%82%D0%BE%D0%B3%D0%BE-%D1%89%D0%BE-%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0-%D0%B7%D1%80%D0%BE%D0%B1%D0%B8%D1%82%D0%B8-%D1%83-html-"></a>
 </h3>
-<p>Table: Showing some markdown syntax and its rendered output.</p>
+<p>Таблиця: Елементи синтаксису Markdown та їх зображення.</p>
 <p>+—————————————+————————————————+ | Код Markdown | Виведення |
 +=======================================+================================================+
 +—————————————+————————————————+ |
-<code>| &lt;p&gt;&lt;/p&gt;                                        | | *   Використовуйте зірочки                     | -   Використовуйте зірочки                     |           | *   для створення                         | -   для створення                                  | | *   маркованих списків.                     | -   bullet lists.                              | |</code>
+<code>| &lt;p&gt;&lt;/p&gt;                                        | | *   Використовуйте зірочки                     | -   Використовуйте зірочки                     |           | *   для створення                         | -   для створення                                  | | *   маркованих списків.                     | -   марковані списки.                              | |</code>
 | | +—————————————+————————————————+ +—————————————+————————————————+ |
-<code>| &lt;p&gt;&lt;/p&gt;                                        | | 1.   Use numbers                      | 1.   Use numbers                               | | 1.   to create                        | 2.   to create                                 | | 1.   bullet lists.                    | 3.   нумеровані списки.                           | |</code>
+<code>| &lt;p&gt;&lt;/p&gt;                                        | | 1.   Використовуйте числа                      | 1.   Використовуйте числа                               | | 1.   щоб створити                        | 2.   щоб створити                                 | | 1.   марковані списки.                    | 3.   нумеровані списки.                           | |</code>
 | | +—————————————+————————————————+ +—————————————+————————————————+ |
-<code>| &lt;p&gt;&lt;/p&gt;                                        | | *  You can use indents                | - You can use indents                          | |   *  To create sublists               |   - To create sublists                         | |   *  of the same type                 |   - of the same type                           | | *  Or sublists                        | - Or sublists                                  | |   1. Of different                     |   1. Of different                              | |   1. types                            |   2. types                                     | |</code>
+<code>| &lt;p&gt;&lt;/p&gt;                                        | | *   Можна використовувати відступи                | -  Можна використовувати відступи                         | |   *  Для створення вкладених списків               |   - Для створення  вкладених списків                         | |   *  одного типу                 |   - одного типу                           | | *  Або  вкладених списків                        | - Або  вкладених списків                                 | |   1. Of different                     |   1. Of different                              | |   1. types                            |   2. types                                     | |</code>
 | | +—————————————+————————————————+ +—————————————+————————————————+ |
 <code>| &lt;p&gt;&lt;/p&gt;                                        | | # A Level-1 Heading                   | ## A Level-1 Heading                           | |</code>
 | | +—————————————+————————————————+ +—————————————+————————————————+ |
@@ -1042,7 +1046,7 @@ things that might go into a web page.</li>
 | | +—————————————+————————————————+ +—————————————+————————————————+ |
 <code>| &lt;p&gt;&lt;/p&gt;                                        | | Line breaks                           | Line breaks                                    | | don't matter.                         | don't matter.                                  | |                                       |                                                | | But blank lines                       | But blank lines                                | | create new paragraphs.                | create new paragraphs.                         | |</code>
 | | +—————————————+————————————————+ +—————————————+————————————————+ |
-<code>| &lt;p&gt;&lt;/p&gt;                                        | | [Links](http://software-carpentry.org)| [Links](https://software-carpentry.org)        | | are created with `[...](...)`.        | are created with `[...](...)`.                 | | Or use [named links][data-carp].      | Or use [named links][data_carpentry].          | |                                       |                                                | | [data-carp]: http://datacarpentry.org |                                                | |</code>
+<code>| &lt;p&gt;&lt;/p&gt;                                        | | [Links](http://software-carpentry.org)| [Links](https://software-carpentry.org)        | | are created with `[...](...)`.        | are created with `[...](...)`.                 | | Or use [named links][data-carp].      Або використовуйте [іменовані посилання][data_carpentry].          | |                                       |                                                | | [data-carp]: http://datacarpentry.org |                                                | |</code>
 | | +—————————————+————————————————+</p>
 <div id="створення-списків-в-markdown" class="callout challenge">
 <div class="callout-square">
@@ -1051,8 +1055,8 @@ things that might go into a web page.</li>
 <div id="створення-списків-в-markdown" class="callout-inner">
 <h3 class="callout-title">Створення списків в Markdown</h3>
 <div class="callout-content">
-<p>Create a nested list in a Markdown cell in a notebook that looks like
-this:</p>
+<p>Створіть вкладений список в Markdown-комірці блокноту так, щоб вона
+виглядала наступним чином:</p>
 <ol style="list-style-type: decimal">
 <li>Знайти фінансування.</li>
 <li>Виконати роботу.</li>
@@ -1076,7 +1080,7 @@ this:</p>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Це завдання поєднує як нумерований, так і маркований списки. Зверніть
 увагу, що маркований список має відступ на 2 пробіли, щоб він не
@@ -1100,8 +1104,8 @@ this:</p>
 <h3 class="callout-title">Більше математики</h3>
 <div class="callout-content">
 <p>Що зображується, коли виконується комірка Python в блокноті, що
-містить декілька обчислень? For example, what happens when this cell is
-executed?</p>
+містить декілька обчислень? Наприклад, що трапиться при виконанні
+наступної комірки?</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1118,7 +1122,7 @@ executed?</p>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>Python повертає результат останнього розрахунку.</p>
 <div class="codewrapper sourceCode" id="cb5">
@@ -1130,15 +1134,15 @@ executed?</p>
 </div>
 </div>
 </div>
-<div id="change-an-existing-cell-from-code-to-markdown" class="callout challenge">
+<div id="зміна-типу-вже-наявної-комірки-з-code-на-markdown" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="change-an-existing-cell-from-code-to-markdown" class="callout-inner">
-<h3 class="callout-title">Change an Existing Cell from Code to Markdown</h3>
+<div id="зміна-типу-вже-наявної-комірки-з-code-на-markdown" class="callout-inner">
+<h3 class="callout-title">Зміна типу вже наявної комірки з Code на Markdown</h3>
 <div class="callout-content">
-<p>What happens if you write some Python in a code cell and then you
-switch it to a Markdown cell? Наприклад, напишіть наступний вираз в
+<p>Що станеться, якщо Ви напишете у комірці код Python, а потім
+перемкнете її у режим Markdown? Наприклад, напишіть наступний вираз в
 комірці коду:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1162,12 +1166,12 @@ switch it to a Markdown cell? Наприклад, напишіть наступ�
   Рішення
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <p>Код Python розглядається як текст Markdown. Рядки виглядають так,
-ніби вони є частиною одного суміжного абзацу. This could be useful to
-temporarily turn on and off cells in notebooks that get used for
-multiple purposes.</p>
+ніби вони є частиною одного суміжного абзацу. Це може бути корисним для
+тимчасового вмикання та вимикання комірок у блокнотах, які
+використовуються для різних цілей.</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1184,13 +1188,13 @@ multiple purposes.</p>
 <div id="рівняння" class="callout-inner">
 <h3 class="callout-title">Рівняння</h3>
 <div class="callout-content">
-<p>Standard Markdown (such as we’re using for these notes) won’t render
-equations, but the Notebook will. Створіть нову комірку Markdown і
-введіть наступне:</p>
+<p>Стандартний Markdown (наприклад, такий, що використовується для цих
+нотаток) не відображає рівняння, але Notebook буде це робити. Створіть
+нову комірку Markdown і введіть наступне:</p>
 <pre><code>$\sum_{i=1}^{N} 2^{-i} \approx 1$</code></pre>
-<p>(Мабуть, це легше скопіювати та вставити.) Що зображається? What do
-you think the underscore, <code>_</code>, circumflex, <code>^</code>,
-and dollar sign, <code>$</code>, do?</p>
+<p>(Мабуть, це легше скопіювати та вставити.) Що зображається? Як ви
+думаєте, що роблять підкреслювання <code>_</code>, циркумфлекс
+<code>^</code> і знак долара <code>$</code>?</p>
 </div>
 </div>
 </div>
@@ -1201,25 +1205,26 @@ and dollar sign, <code>$</code>, do?</p>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
-<p>The notebook shows the equation as it would be rendered from LaTeX
-equation syntax. The dollar sign, <code>$</code>, is used to tell
-Markdown that the text in between is a LaTeX equation. If you’re not
-familiar with LaTeX, underscore, <code>_</code>, is used for subscripts
-and circumflex, <code>^</code>, is used for superscripts. A pair of
-curly braces, <code>{</code> and <code>}</code>, is used to group text
-together so that the statement <code>i=1</code> becomes the subscript
-and <code>N</code> becomes the superscript. Аналогічно, вираз
-<code>-i</code> взятий у фігурні дужки, щоб зробити цей вираз верхнім
-індексом для <code>2</code>. <code>\sum</code> та <code>\approx</code> є
-командами LaTeX для значень “sum over” й “approximate”.</p>
+<p>Рівняння зображується у блокноті відповідно до синтаксису, який
+використовується у LaTeX. Знаки долара <code>$</code> використовуються
+для того, щоб повідомити Markdown про те, що текст між цими знаками є
+рівнянням LaTeX. Якщо ви не знайомі з LaTeX, підкреслення <code>_</code>
+використовується для підрядкових індексів та циркумфлекс <code>^</code>
+використовується для верхніх індексів. Пара фігурних дужок
+<code>{</code> та <code>}</code> використовується для групування тексту
+разом, щоб вираз <code>i=1</code> став нижнім, а <code>N</code> -
+верхнім індексом. Аналогічно, вираз <code>-i</code> взятий у фігурні
+дужки, щоб зробити цей вираз верхнім індексом для <code>2</code>.
+<code>\sum</code> та <code>\approx</code> є командами LaTeX для значень
+“sum over” й “approximate”.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="closing-jupyterlab">Closing JupyterLab<a class="anchor" aria-label="anchor" href="#closing-jupyterlab"></a>
+</section><section><h2 class="section-heading" id="вихід-з-jupyterlab">Вихід з JupyterLab<a class="anchor" aria-label="anchor" href="#%D0%B2%D0%B8%D1%85%D1%96%D0%B4-%D0%B7-jupyterlab"></a>
 </h2>
 <hr class="half-width">
 <ul>
@@ -1227,16 +1232,16 @@ and <code>N</code> becomes the superscript. Аналогічно, вираз
 спадного меню. Вам буде запропоновано підтвердити, що Ви бажаєте
 вимкнути сервер JupyterLab (не забудьте зберегти свою роботу!).
 Натисніть “Shut Down”, щоб вимкнути сервер JupyterLab.</li>
-<li>To restart the JupyterLab server you will need to re-run the
-following command from a shell.</li>
+<li>Щоб перезапустити сервер JupyterLab, вам потрібно буде повторно
+виконати наступну команду в терміналі.</li>
 </ul>
 <pre><code>$ jupyter lab</code></pre>
-<div id="closing-jupyterlab-1" class="callout discussion">
+<div id="вихід-з-jupyterlab-1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div id="closing-jupyterlab-1" class="callout-inner">
-<h3 class="callout-title">Closing JupyterLab</h3>
+<div id="вихід-з-jupyterlab-1" class="callout-inner">
+<h3 class="callout-title">Вихід з JupyterLab</h3>
 <div class="callout-content">
 <p>Потренуйтеся закривати та перезапускати сервер JupyterLab.</p>
 </div>
@@ -1250,19 +1255,20 @@ following command from a shell.</li>
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
-<li>Python scripts are plain text files.</li>
+<li>Скрипти Python - це звичайні текстові файли.</li>
 <li>Застосування Jupyter Notebook для редагування та запуску Python</li>
-<li>The Notebook has Command and Edit modes.</li>
-<li>Use the keyboard and mouse to select and edit cells.</li>
+<li>Jupyter Notebook має командний режим та режим редагування.</li>
+<li>Використовуйте клавіатуру та мишу для виділення та редагування
+комірок.</li>
 <li>Notebook підтримує мову розмітки текстів Markdown.</li>
-<li>Markdown does most of what HTML does.</li>
+<li>Markdown робить більшість того, що можна зробити у HTML.</li>
 </ul>
 </div>
 </div>
 </div>
 </section></section><section id="aio-02-variables"><p>Content from <a href="02-variables.html">Змінні та присвоєння</a></p>
 <hr>
-<p>Last updated on 2025-02-22 |
+<p>Last updated on 2025-03-13 |
 
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/02-variables.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1462,9 +1468,9 @@ NameError: name 'last_name' is not defined</code></pre>
 <li>Використовуйте індекс позиції у квадратних дужках, щоб отримати
 символ з тієї позиції у рядку.</li>
 </ul>
-<figure><img src="fig/2_indexing.svg" alt="Рядок кода Python, print(atom\_name0), демонструє, що використання нульового індексу виведе лише початкову літеру, у цьому випадку ‘h’ для ‘helium’." class="figure mx-auto d-block"><div class="figcaption">Рядок кода Python, print(atom\_name<span class="math display">\[0\]</span>), демонструє, що використання
-нульового індексу виведе лише початкову літеру, у цьому випадку ‘h’ для
-‘helium’.</div>
+<figure><img src="fig/2_indexing.svg" alt="Рядок кода Python, print(atom_name[0]), демонструє, що використання нульового індексу виведе лише початкову літеру, у цьому випадку ‘h’ для ‘helium’." class="figure mx-auto d-block"><div class="figcaption">Рядок кода Python, print(atom_name[0]),
+демонструє, що використання нульового індексу виведе лише початкову
+літеру, у цьому випадку ‘h’ для ‘helium’.</div>
 </figure><div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1581,7 +1587,7 @@ NameError: name 'last_name' is not defined</code></pre>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1627,7 +1633,7 @@ NameError: name 'last_name' is not defined</code></pre>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1668,7 +1674,7 @@ NameError: name 'last_name' is not defined</code></pre>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Numbers are not strings or sequences and Python will raise an error
 if you try to perform an index operation on a number. У <a href="03-types-conversion.html">наступному уроці про типи даних і
@@ -1727,7 +1733,7 @@ perform an index operation on that string.</p>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p><code>minutes</code> is better because <code>min</code> might mean
 something like “minimum” (and actually is an existing built-in function
@@ -1760,7 +1766,7 @@ in Python that we will cover later).</p>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1810,7 +1816,7 @@ in Python that we will cover later).</p>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><p><code>species_name[2:8]</code> повертає підрядок
@@ -1863,7 +1869,7 @@ buxifolia’`</p></li>
 </div>
 </section></section><section id="aio-03-types-conversion"><p>Content from <a href="03-types-conversion.html">Типи даних та їх перетворення</a></p>
 <hr>
-<p>Last updated on 2025-02-23 |
+<p>Last updated on 2025-03-13 |
 
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/03-types-conversion.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2054,8 +2060,8 @@ TypeError                                 Traceback (most recent call last)
 
 TypeError: object of type 'int' has no len()</code></pre>
 </div>
-</section><section><h2 class="section-heading" id="convert-numbers-and-strings">Must convert numbers to strings or vice versa when operating on
-them.<a class="anchor" aria-label="anchor" href="#convert-numbers-and-strings"></a>
+</section><section><h2 class="section-heading" id="convert-numbers-and-strings">Необхідно перетворювати числа в рядки або навпаки під час виконання
+певних операцій.<a class="anchor" aria-label="anchor" href="#convert-numbers-and-strings"></a>
 </h2>
 <hr class="half-width">
 <ul>
@@ -2504,7 +2510,8 @@ real and imaginary parts can be accessed using <em>dot notation</em> as
 <ol style="list-style-type: decimal">
 <li>Чому, на вашу думку, Python використовує <code>j</code> замість
 <code>i</code> для уявної частини?</li>
-<li>What do you expect <code>1 + 2j + 3</code> to produce?</li>
+<li>Який результат слід очікувати від виразу
+<code>1 + 2j + 3</code>?</li>
 <li>Що ви очікуєте від <code>4j</code>? А що від <code>4 j</code> або
 <code>4 + j</code>?</li>
 </ol>
@@ -2558,7 +2565,7 @@ Overflow містить додаткові пояснення та обгово�
 </div>
 </section></section><section id="aio-04-built-in"><p>Content from <a href="04-built-in.html">Вбудовані функції та довідка</a></p>
 <hr>
-<p>Last updated on 2025-02-23 |
+<p>Last updated on 2025-03-13 |
 
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/04-built-in.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2606,7 +2613,7 @@ NameError.</li>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># Цей рядок Python не виконує. </span></span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>adjustment <span class="op">=</span> <span class="fl">0.5</span> <span class="co"># Усе після '#' ігнорується.</span></span></code></pre>
 </div>
-</section><section><h2 class="section-heading" id="a-function-may-take-zero-or-more-arguments-">A function may take zero or more arguments.<a class="anchor" aria-label="anchor" href="#a-function-may-take-zero-or-more-arguments-"></a>
+</section><section><h2 class="section-heading" id="функції-можуть-приймати-нуль-або-більше-аргументів-">Функції можуть приймати нуль або більше аргументів.<a class="anchor" aria-label="anchor" href="#%D1%84%D1%83%D0%BD%D0%BA%D1%86%D1%96%D1%97-%D0%BC%D0%BE%D0%B6%D1%83%D1%82%D1%8C-%D0%BF%D1%80%D0%B8%D0%B9%D0%BC%D0%B0%D1%82%D0%B8-%D0%BD%D1%83%D0%BB%D1%8C-%D0%B0%D0%B1%D0%BE-%D0%B1%D1%96%D0%BB%D1%8C%D1%88%D0%B5-%D0%B0%D1%80%D0%B3%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%96%D0%B2-"></a>
 </h2>
 <hr class="half-width">
 <ul>
@@ -2909,8 +2916,8 @@ program is executing.<a class="anchor" aria-label="anchor" href="#runtime-error"
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">53</span></span>
-<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a>remaining <span class="op">=</span> <span class="dv">100</span> <span class="op">-</span> aege <span class="co"># mis-spelled 'age'</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">53</span> </span>
+<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a>remaining <span class="op">=</span> <span class="dv">100</span> <span class="op">-</span> aege <span class="co"># неправильно написано 'age'</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3147,12 +3154,12 @@ including the ones that we’ve covered in this lesson. Деякі з них б�
 довідку щодо функції.</li>
 <li>The Jupyter Notebook has two ways to get help.</li>
 <li>Кожна функція щось повертає.</li>
-<li>Python повідомляє про синтаксичну помилку, коли він не може
-зрозуміти джерело програми.</li>
+<li>Python reports a syntax error when it can’t understand the source of
+a program.</li>
 <li>Python reports a runtime error when something goes wrong while a
 program is executing.</li>
-<li>Якщо перечитаєте джерело, можна виправити синтаксичні помилки, а
-якщо відстежите компілювання - помилки виконання.</li>
+<li>Fix syntax errors by reading the source code, and runtime errors by
+tracing the program’s execution.</li>
 </ul>
 </div>
 </div>
@@ -3397,7 +3404,7 @@ exist?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><p>Using <code>help(math)</code> we see that we’ve got
@@ -3444,7 +3451,7 @@ alternatives?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>The <a href="https://docs.python.org/3/library/random.html" class="external-link">random
 module</a> seems like it could help.</p>
@@ -3522,7 +3529,7 @@ Feel free to use/add intermediate variables.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3561,7 +3568,7 @@ reports an error:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>Importing the math module (<code>import math</code>)</p>
 </div>
@@ -3597,7 +3604,7 @@ reports an error:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3654,7 +3661,7 @@ calls.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution6" aria-expanded="false" aria-controls="collapseSolution6">
   <h4 class="accordion-header" id="headingSolution6"> Show me the solution </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Library calls 1 and 4. In order to directly refer to
@@ -3713,7 +3720,7 @@ convey this information.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution7" aria-expanded="false" aria-controls="collapseSolution7">
   <h4 class="accordion-header" id="headingSolution7"> Show me the solution </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3759,7 +3766,7 @@ it?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution8" aria-expanded="false" aria-controls="collapseSolution8">
   <h4 class="accordion-header" id="headingSolution8"> Show me the solution </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5600,7 +5607,7 @@ per capita over time for Europe.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5635,7 +5642,7 @@ you see (if any)?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5677,7 +5684,7 @@ indexes:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <figure><img src="fig/9_correlations_solution2.png" alt="Correlations Solution 2" class="figure mx-auto d-block"></figure><p>Seems the variability in this value is due to a sharp drop after
 1972. Some geopolitics at play perhaps? Given the dominance of oil
@@ -5714,7 +5721,7 @@ and life expectancy for 2007, normalizing marker size by population:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <figure><img src="fig/9_more_correlations_solution.svg" alt="More Correlations Solution" class="figure mx-auto d-block"></figure><p>A good place to look is the documentation for the plot function -
 help(data_all.plot).</p>
@@ -6791,7 +6798,7 @@ produces 0..9, not 1..10.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>An IndentationError is a syntax error. Programs with syntax errors
 cannot be started. A program with a runtime error will start but an
@@ -6825,7 +6832,7 @@ is executed.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <table class="table">
 <thead><tr class="header">
@@ -6893,7 +6900,7 @@ reverse of the original character string “tin”).</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6934,7 +6941,7 @@ indicated result.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6974,7 +6981,7 @@ indicated result.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7015,7 +7022,7 @@ indicated result.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution6" aria-expanded="false" aria-controls="collapseSolution6">
   <h4 class="accordion-header" id="headingSolution6"> Show me the solution </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7052,7 +7059,7 @@ properly format the acronym.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution7" aria-expanded="false" aria-controls="collapseSolution7">
   <h4 class="accordion-header" id="headingSolution7"> Show me the solution </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7095,7 +7102,7 @@ print a list with the cumulative sum of data. The result should be
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution8" aria-expanded="false" aria-controls="collapseSolution8">
   <h4 class="accordion-header" id="headingSolution8"> Show me the solution </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7148,7 +7155,7 @@ defined but was not?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution9" aria-expanded="false" aria-controls="collapseSolution9">
   <h4 class="accordion-header" id="headingSolution9"> Show me the solution </h4>
 </button>
-<div id="collapseSolution9" class="accordion-collapse collapse" data-bs-parent="#accordionSolution9" aria-labelledby="headingSolution9">
+<div id="collapseSolution9" class="accordion-collapse collapse" aria-labelledby="headingSolution9" data-bs-parent="#accordionSolution9">
 <div class="accordion-body">
 <ul>
 <li>Python variable names are case sensitive: <code>number</code> and
@@ -7202,7 +7209,7 @@ it?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution10" aria-expanded="false" aria-controls="collapseSolution10">
   <h4 class="accordion-header" id="headingSolution10"> Show me the solution </h4>
 </button>
-<div id="collapseSolution10" class="accordion-collapse collapse" data-bs-parent="#accordionSolution10" aria-labelledby="headingSolution10">
+<div id="collapseSolution10" class="accordion-collapse collapse" aria-labelledby="headingSolution10" data-bs-parent="#accordionSolution10">
 <div class="accordion-body">
 <p>This list has 4 elements and the index to access the last element in
 the list is <code>3</code>.</p>
@@ -7625,7 +7632,7 @@ mean.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7671,7 +7678,7 @@ original list’s values were positive.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7716,7 +7723,7 @@ original list’s values were positive.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7764,7 +7771,7 @@ find the range of the data?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -9305,7 +9312,7 @@ KeyError: 'Friday'</code></pre>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><p>Three levels.</p></li>
@@ -9554,7 +9561,7 @@ that <code>help</code> displays it properly.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -9612,7 +9619,7 @@ What did you do differently, and why?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Here’s one solution.</p>
 <div class="codewrapper sourceCode" id="cb9">
@@ -9846,8 +9853,8 @@ industry.</li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/aio.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/aio.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2025-03-11",
-  "datePublished": "2025-03-11"
+  "dateModified": "2025-03-13",
+  "datePublished": "2025-03-13"
 }
 
   </script><script>

@@ -212,7 +212,7 @@
 <li><a href="#%D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B5%D0%BD%D0%BD%D1%8F-%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D1%83-python">Створення скрипту Python</a></li>
 <li><a href="#%D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B1%D0%BB%D0%BE%D0%BA%D0%BD%D0%BE%D1%82%D1%83-jupyter">Створення блокноту Jupyter</a></li>
 <li><a href="#jupyter-notebook-%D0%BC%D0%B0%D1%94-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BD%D0%B8%D0%B9-%D1%80%D0%B5%D0%B6%D0%B8%D0%BC-%D1%82%D0%B0-%D1%80%D0%B5%D0%B6%D0%B8%D0%BC-%D1%80%D0%B5%D0%B4%D0%B0%D0%B3%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F.">Jupyter Notebook має командний режим та режим редагування.</a></li>
-<li><a href="#closing-jupyterlab">Closing JupyterLab</a></li>
+<li><a href="#%D0%B2%D0%B8%D1%85%D1%96%D0%B4-%D0%B7-jupyterlab">Вихід з JupyterLab</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -448,7 +448,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Запуск та завершення роботи</h1>
-        <p>Last updated on 2025-01-24 |
+        <p>Last updated on 2025-03-13 |
 
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/01-run-quit.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -532,10 +532,10 @@ JupyterLab</p>
 <ul><li>Запустіть сервер JupyterLab на вашому комп’ютері</li>
 <li>Використовуйте веббраузер для відкриття спеціальної локальної
 URL-адреси для з’єднання з сервером JupyterLab</li>
-<li>The JupyterLab server does the work and the web browser renders the
-result</li>
-<li>Type code into the browser and see the results after your JupyterLab
-server has finished executing your code</li>
+<li>Сервер JupyterLab виконує обчислювальну роботу, а веббраузер
+відображає її результат</li>
+<li>Введіть код у браузері, і як тільки сервер JupyterLab завершить
+виконання, ви зможете переглянути результати</li>
 </ul><div id="jupyterlab-а-чому-не-jupyter-notebook" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -563,8 +563,8 @@ JupyterLab і Jupyter Notebook, можуть знайти більше інфо�
 <p>Для запуску сервера JupyterLab вам потрібно отримати доступ до
 командного рядка через Terminal. Існує два способи відкрити термінал на
 Mac.</p>
-<ol style="list-style-type: decimal"><li>In your Applications folder, open Utilities and double-click on
-Terminal</li>
+<ol style="list-style-type: decimal"><li>У каталозі Applications відкрийте підкаталог Utilities і двічі
+натисніть Terminal</li>
 <li>Натисніть <kbd>Command</kbd> + <kbd>spacebar</kbd> для запуску
 Spotlight. Введіть <code>Terminal</code>, а потім двічі клацніть на
 результаті пошуку або натисніть <kbd>Enter</kbd>
@@ -581,8 +581,9 @@ JupyterLab.</p>
 <h3 id="користувачі-windows---командний-рядок">Користувачі Windows - Командний рядок<a class="anchor" aria-label="anchor" href="#%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D1%83%D0%B2%D0%B0%D1%87%D1%96-windows---%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BD%D0%B8%D0%B9-%D1%80%D1%8F%D0%B4%D0%BE%D0%BA"></a></h3>
 <p>Для запуску сервера JupyterLab вам потрібен застосунок Anaconda
 Prompt.</p>
-<p>Press <kbd>Windows Logo Key</kbd> and search for
-<code>Anaconda Prompt</code>, click the result or press enter.</p>
+<p>Натисніть <kbd>Windows Logo Key</kbd> і знайдіть
+<code>Anaconda Prompt</code>, натисніть на результат пошуку або на
+клавішу enter.</p>
 <p>Після запуску Anaconda Prompt введіть команду:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -663,30 +664,31 @@ JupyterLab.</li>
 <div id="ядра" class="callout-inner">
 <h3 class="callout-title">Ядра</h3>
 <div class="callout-content">
-<p>The JupyterLab <a href="https://jupyterlab.readthedocs.io/en/stable/user/documents_kernels.html" class="external-link">docs</a>
-define kernels as “separate processes started by the server that runs
-your code in different programming languages and environments.” When we
-open a Jupyter Notebook, that starts a kernel - a process - that is
-going to run the code. In this lesson, we’ll be using the Jupyter
-ipython kernel which lets us run Python 3 code interactively.</p>
-<p>Using other Jupyter <a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels" class="external-link">kernels
-for other programming languages</a> would let us write and execute code
-in other programming languages in the same JupyterLab interface, like R,
-Java, Julia, Ruby, JavaScript, Fortran, etc.</p>
+<p><a href="https://jupyterlab.readthedocs.io/en/stable/user/documents_kernels.html" class="external-link">Документація
+JupyterLab</a> визначає ядра як “окремі процеси сервера, що виконують
+ваш код у відповідних мовах програмування та середовищах.” Коли ми
+відкриваємо Jupyter Notebook, то ініціалізується ядро - процес, який
+буде виконувати код. У цьому уроці ми будемо використовувати ядро
+ipython, яке дозволяє запускати Python 3 в інтерактивному режимі.</p>
+<p>Використання інших <a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels" class="external-link">ядер
+Jupyter для інших мов програмування</a> дозволить нам використовувати
+спільний інтерфейс JupyterLab для того, щоб писати та виконувати код,
+наприклад, у таких мовах як R, Java, Julia, Ruby, JavaScript, Fortran,
+тощо.</p>
 </div>
 </div>
 </div>
-<p>A screenshot of the default Menu Bar is provided below.</p>
+<p>Скриншот стандартної панелі меню надано нижче.</p>
 <p align="center">
 <img alt="JupyterLab Menu Bar" src="fig/0_jupyterlab_menu_bar.png" width="750" class="figure"></p>
 </div>
 <div class="section level3">
 <h3 id="ліва-бічна-панель">Ліва бічна панель<a class="anchor" aria-label="anchor" href="#%D0%BB%D1%96%D0%B2%D0%B0-%D0%B1%D1%96%D1%87%D0%BD%D0%B0-%D0%BF%D0%B0%D0%BD%D0%B5%D0%BB%D1%8C"></a></h3>
-<p>The left sidebar contains a number of commonly used tabs, such as a
-file browser (showing the contents of the directory where the JupyterLab
-server was launched), a list of running kernels and terminals, the
-command palette, and a list of open tabs in the main work area. A
-screenshot of the default Left Side Bar is provided below.</p>
+<p>Ліва бічна панель містить ряд найбільш використовуваних вкладок, а
+саме: браузер файлів (відображає вміст каталогу, де був запущений сервер
+JupyterLab), перелік активних ядер і терміналів, панель команд і список
+відкритих вкладок в основній робочій області. Скриншот стандартної лівої
+бічної панелі наведений нижче.</p>
 <p align="center">
 <img alt="JupyterLab Left Side Bar" src="fig/0_jupyterlab_left_side_bar.png" width="250" class="figure"></p>
 <p>Ліву бічну панель можна згорнути або розгорнути вибравши пункт “Show
@@ -696,18 +698,19 @@ Left Sidebar” у меню View, або натиснувши на активн�
 <div class="section level3">
 <h3 id="основна-робоча-область">Основна робоча область<a class="anchor" aria-label="anchor" href="#%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%B0-%D1%80%D0%BE%D0%B1%D0%BE%D1%87%D0%B0-%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C"></a></h3>
 <p>Основна робоча область в JupyterLab дозволяє упорядковувати документи
-(блокноти, текстові файли та ін.) and other activities (terminals, code
-consoles, etc.) into panels of tabs that can be resized or subdivided. A
-screenshot of the default Main Work Area is provided below.</p>
+(блокноти, текстові файли та ін.) та інші види застосунків (термінали,
+інтерфейси командного рядка тощо) у панелі вкладок. Ці панелі можна
+зменшити/збільшити або поділити на підрозділи. Скриншот стандартної
+основної робочої області наведено нижче.</p>
 <p>Якщо Ви не бачите вкладку Launcher на панелі запуску, натисніть синій
 плюс під “File” та “Edit” у панелі меню, і ця вкладка з’явиться.</p>
 <p align="center">
 <img alt="JupyterLab Main Work Area" src="fig/0_jupyterlab_main_work_area.png" width="750" class="figure"></p>
-<p>Drag a tab to the center of a tab panel to move the tab to the panel.
-Subdivide a tab panel by dragging a tab to the left, right, top, or
-bottom of the panel. The work area has a single current activity.
-Вкладка для поточної дії позначена кольоровою верхньою рамкою (за
-замовчуванням - синьою).</p>
+<p>Щоб перемістити вкладку на деяку панель, перетягніть її в центр цієї
+панелі. Також ви можете розділити панель вкладок, перетягнувши потрібну
+вкладку ліворуч, праворуч, догори або донизу панелі. Кожна робоча панель
+має одну поточну активну вкладку. Вкладка для поточної дії позначена
+кольоровою верхньою рамкою (за замовчуванням - синьою).</p>
 </div>
 </section><section><h2 class="section-heading" id="створення-скрипту-python">Створення скрипту Python<a class="anchor" aria-label="anchor" href="#%D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B5%D0%BD%D0%BD%D1%8F-%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D1%83-python"></a></h2>
 <hr class="half-width"><ul><li>Щоб почати писати нову програму на Python, натисніть піктограму
@@ -735,9 +738,9 @@ Notebook</em> у меню <em>File</em> на панелі меню.</p>
 як звичайний текстовий файл.</li>
 <li>Блокноти можна експортувати як скрипти Python, які можна запускати з
 командного рядка.</li>
-</ul><p>Below is a screenshot of a Jupyter notebook running inside
-JupyterLab. If you are interested in more details, then see the <a href="https://jupyterlab.readthedocs.io/en/stable/user/notebook.html" class="external-link">official
-notebook documentation</a>.</p>
+</ul><p>Нижче наведено скриншот Jupyter Notebook, який був відкритий в
+JupyterLab. Якщо вам цікаві подальші деталі, дивіться <a href="https://jupyterlab.readthedocs.io/en/stable/user/notebook.html" class="external-link">офіційну
+документацію до Jupyter Notebook</a>.</p>
 <p align="center">
 <img alt="Example Jupyter Notebook" src="fig/0_jupyterlab_notebook_screenshot.png" width="750" class="figure"></p>
 <div id="як-це-зберігається" class="callout">
@@ -750,8 +753,8 @@ notebook documentation</a>.</p>
 <ul><li>Файл блокноту зберігається у форматі JSON.</li>
 <li>Подібно до вебсторінки, те, що зберігається, відрізняється від того,
 що ви бачите у своєму браузері.</li>
-<li>But this format allows Jupyter to mix source code, text, and images,
-all in one file.</li>
+<li>Але формат JSON дозволяє Jupyter комбінувати вихідний код, текст і
+графіку в одному файлі.</li>
 </ul></div>
 </div>
 </div>
@@ -783,7 +786,7 @@ all in one file.</li>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Після створення необхідних вкладок ви можете перетягнути одну з них в
 центр панелі для переміщення вкладки на панель; потім ви можете
@@ -793,24 +796,24 @@ all in one file.</li>
 </div>
 </div>
 </div>
-<div id="code-vs.-text" class="callout">
+<div id="код-або-текст" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="code-vs.-text" class="callout-inner">
-<h3 class="callout-title">Code vs. Text</h3>
+<div id="код-або-текст" class="callout-inner">
+<h3 class="callout-title">Код або текст?</h3>
 <div class="callout-content">
 <p>Jupyter дозволяє змішувати код і текст у різних типах блоків, які
-називаються комірками. We often use the term “code” to mean “the source
-code of software written in a language such as Python”. A “code cell” in
-a Notebook is a cell that contains software; a “text cell” is one that
-contains ordinary prose written for human beings.</p>
+називаються комірками. Термін “код” зазвичай використовується для
+позначення вихідного коду програмного забезпечення, написаного будь-якою
+мовою програмування. “Комірка коду” в Notebook містить код; а “текстова
+комірка” - звичайний текст, який відображується, але не виконується.</p>
 </div>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="jupyter-notebook-має-командний-режим-та-режим-редагування-">Jupyter Notebook має командний режим та режим редагування.<a class="anchor" aria-label="anchor" href="#jupyter-notebook-%D0%BC%D0%B0%D1%94-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BD%D0%B8%D0%B9-%D1%80%D0%B5%D0%B6%D0%B8%D0%BC-%D1%82%D0%B0-%D1%80%D0%B5%D0%B6%D0%B8%D0%BC-%D1%80%D0%B5%D0%B4%D0%B0%D0%B3%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-"></a></h2>
-<hr class="half-width"><ul><li>If you press <kbd>Esc</kbd> and <kbd>Return</kbd> alternately, the
-outer border of your code cell will change from gray to blue.</li>
+<hr class="half-width"><ul><li>Якщо ви натиснете <kbd>Esc</kbd> та <kbd>Return</kbd> по черзі, то
+зовнішня межа комірки коду буде змінюватися з сірої на синю.</li>
 <li>Існують сірий - <strong>Command</strong> (командний) та синій -
 <strong>Edit</strong> (редагування) режими вашого блокноту.</li>
 <li>Command mode allows you to edit notebook-level features, and Edit
@@ -832,11 +835,12 @@ mode changes the content of cells.</li>
 <div id="командний-режим-або-режим-редагування" class="callout-inner">
 <h3 class="callout-title">Командний режим або режим редагування</h3>
 <div class="callout-content">
-<p>In the Jupyter notebook page are you currently in Command or Edit
-mode?<br>
-Switch between the modes. Use the shortcuts to generate a new cell. Use
-the shortcuts to delete a cell. Use the shortcuts to undo the last cell
-operation you performed.</p>
+<p>Чи ви зараз перебуваєте в командному режимі чи режимі редагування на
+сторінці Jupyter Notebook?<br>
+Перейдіть з одного режиму в інший, а потім у зворотному напрямку.
+Використайте відповідні швидкі клавіші для видалення комірки.
+Використайте швидкі клавіші, щоб видалити комірку. Нарешті, скасуйте
+останню операцію над коміркою також за допомогою швидких клавіш.</p>
 </div>
 </div>
 </div>
@@ -847,7 +851,7 @@ operation you performed.</p>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Командний режим має сіру рамку, а режим редагування — синю.
 Використовуйте <kbd>Esc</kbd> та <kbd>Return</kbd> для перемикання
@@ -880,9 +884,9 @@ operation you performed.</p>
 </ul></div>
 <div class="section level3">
 <h3 id="jupyter-notebook-підтримує-мову-розмітки-текстів-markdown-">Jupyter Notebook підтримує мову розмітки текстів Markdown.<a class="anchor" aria-label="anchor" href="#jupyter-notebook-%D0%BF%D1%96%D0%B4%D1%82%D1%80%D0%B8%D0%BC%D1%83%D1%94-%D0%BC%D0%BE%D0%B2%D1%83-%D1%80%D0%BE%D0%B7%D0%BC%D1%96%D1%82%D0%BA%D0%B8-%D1%82%D0%B5%D0%BA%D1%81%D1%82%D1%96%D0%B2-markdown-"></a></h3>
-<ul><li>Notebooks can also render <a href="https://en.wikipedia.org/wiki/Markdown" class="external-link">Markdown</a>.
-<ul><li>A simple plain-text format for writing lists, links, and other
-things that might go into a web page.</li>
+<ul><li>Блокноти також можуть візуалізувати <a href="https://en.wikipedia.org/wiki/Markdown" class="external-link">Markdown</a>.
+<ul><li>Простий текстовий формат для створення списків, посилань та інших
+елементів, які можуть бути використані на вебсторінці.</li>
 <li>Власне, це підмножина HTML, яка виглядає у стилі старомодного
 електронного листа.</li>
 </ul></li>
@@ -896,16 +900,16 @@ things that might go into a web page.</li>
 <kbd>y</kbd>.</li>
 </ul></div>
 <div class="section level3">
-<h3 id="markdown-does-most-of-what-html-does-">Markdown does most of what HTML does.<a class="anchor" aria-label="anchor" href="#markdown-does-most-of-what-html-does-"></a></h3>
-<p>Table: Showing some markdown syntax and its rendered output.</p>
+<h3 id="markdown-робить-більшість-того-що-можна-зробити-у-html-">Markdown робить більшість того, що можна зробити у HTML.<a class="anchor" aria-label="anchor" href="#markdown-%D1%80%D0%BE%D0%B1%D0%B8%D1%82%D1%8C-%D0%B1%D1%96%D0%BB%D1%8C%D1%88%D1%96%D1%81%D1%82%D1%8C-%D1%82%D0%BE%D0%B3%D0%BE-%D1%89%D0%BE-%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0-%D0%B7%D1%80%D0%BE%D0%B1%D0%B8%D1%82%D0%B8-%D1%83-html-"></a></h3>
+<p>Таблиця: Елементи синтаксису Markdown та їх зображення.</p>
 <p>+—————————————+————————————————+ | Код Markdown | Виведення |
 +=======================================+================================================+
 +—————————————+————————————————+ |
-<code>| &lt;p&gt;&lt;/p&gt;                                        | | *   Використовуйте зірочки                     | -   Використовуйте зірочки                     |           | *   для створення                         | -   для створення                                  | | *   маркованих списків.                     | -   bullet lists.                              | |</code>
+<code>| &lt;p&gt;&lt;/p&gt;                                        | | *   Використовуйте зірочки                     | -   Використовуйте зірочки                     |           | *   для створення                         | -   для створення                                  | | *   маркованих списків.                     | -   марковані списки.                              | |</code>
 | | +—————————————+————————————————+ +—————————————+————————————————+ |
-<code>| &lt;p&gt;&lt;/p&gt;                                        | | 1.   Use numbers                      | 1.   Use numbers                               | | 1.   to create                        | 2.   to create                                 | | 1.   bullet lists.                    | 3.   нумеровані списки.                           | |</code>
+<code>| &lt;p&gt;&lt;/p&gt;                                        | | 1.   Використовуйте числа                      | 1.   Використовуйте числа                               | | 1.   щоб створити                        | 2.   щоб створити                                 | | 1.   марковані списки.                    | 3.   нумеровані списки.                           | |</code>
 | | +—————————————+————————————————+ +—————————————+————————————————+ |
-<code>| &lt;p&gt;&lt;/p&gt;                                        | | *  You can use indents                | - You can use indents                          | |   *  To create sublists               |   - To create sublists                         | |   *  of the same type                 |   - of the same type                           | | *  Or sublists                        | - Or sublists                                  | |   1. Of different                     |   1. Of different                              | |   1. types                            |   2. types                                     | |</code>
+<code>| &lt;p&gt;&lt;/p&gt;                                        | | *   Можна використовувати відступи                | -  Можна використовувати відступи                         | |   *  Для створення вкладених списків               |   - Для створення  вкладених списків                         | |   *  одного типу                 |   - одного типу                           | | *  Або  вкладених списків                        | - Або  вкладених списків                                 | |   1. Of different                     |   1. Of different                              | |   1. types                            |   2. types                                     | |</code>
 | | +—————————————+————————————————+ +—————————————+————————————————+ |
 <code>| &lt;p&gt;&lt;/p&gt;                                        | | # A Level-1 Heading                   | ## A Level-1 Heading                           | |</code>
 | | +—————————————+————————————————+ +—————————————+————————————————+ |
@@ -913,7 +917,7 @@ things that might go into a web page.</li>
 | | +—————————————+————————————————+ +—————————————+————————————————+ |
 <code>| &lt;p&gt;&lt;/p&gt;                                        | | Line breaks                           | Line breaks                                    | | don't matter.                         | don't matter.                                  | |                                       |                                                | | But blank lines                       | But blank lines                                | | create new paragraphs.                | create new paragraphs.                         | |</code>
 | | +—————————————+————————————————+ +—————————————+————————————————+ |
-<code>| &lt;p&gt;&lt;/p&gt;                                        | | [Links](http://software-carpentry.org)| [Links](https://software-carpentry.org)        | | are created with `[...](...)`.        | are created with `[...](...)`.                 | | Or use [named links][data-carp].      | Or use [named links][data_carpentry].          | |                                       |                                                | | [data-carp]: http://datacarpentry.org |                                                | |</code>
+<code>| &lt;p&gt;&lt;/p&gt;                                        | | [Links](http://software-carpentry.org)| [Links](https://software-carpentry.org)        | | are created with `[...](...)`.        | are created with `[...](...)`.                 | | Or use [named links][data-carp].      Або використовуйте [іменовані посилання][data_carpentry].          | |                                       |                                                | | [data-carp]: http://datacarpentry.org |                                                | |</code>
 | | +—————————————+————————————————+</p>
 <div id="створення-списків-в-markdown" class="callout challenge">
 <div class="callout-square">
@@ -922,8 +926,8 @@ things that might go into a web page.</li>
 <div id="створення-списків-в-markdown" class="callout-inner">
 <h3 class="callout-title">Створення списків в Markdown</h3>
 <div class="callout-content">
-<p>Create a nested list in a Markdown cell in a notebook that looks like
-this:</p>
+<p>Створіть вкладений список в Markdown-комірці блокноту так, щоб вона
+виглядала наступним чином:</p>
 <ol style="list-style-type: decimal"><li>Знайти фінансування.</li>
 <li>Виконати роботу.</li>
 </ol><ul><li>Провести експеримент.</li>
@@ -941,7 +945,7 @@ this:</p>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Це завдання поєднує як нумерований, так і маркований списки. Зверніть
 увагу, що маркований список має відступ на 2 пробіли, щоб він не
@@ -965,8 +969,8 @@ this:</p>
 <h3 class="callout-title">Більше математики</h3>
 <div class="callout-content">
 <p>Що зображується, коли виконується комірка Python в блокноті, що
-містить декілька обчислень? For example, what happens when this cell is
-executed?</p>
+містить декілька обчислень? Наприклад, що трапиться при виконанні
+наступної комірки?</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -983,7 +987,7 @@ executed?</p>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>Python повертає результат останнього розрахунку.</p>
 <div class="codewrapper sourceCode" id="cb5">
@@ -995,15 +999,15 @@ executed?</p>
 </div>
 </div>
 </div>
-<div id="change-an-existing-cell-from-code-to-markdown" class="callout challenge">
+<div id="зміна-типу-вже-наявної-комірки-з-code-на-markdown" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="change-an-existing-cell-from-code-to-markdown" class="callout-inner">
-<h3 class="callout-title">Change an Existing Cell from Code to Markdown</h3>
+<div id="зміна-типу-вже-наявної-комірки-з-code-на-markdown" class="callout-inner">
+<h3 class="callout-title">Зміна типу вже наявної комірки з Code на Markdown</h3>
 <div class="callout-content">
-<p>What happens if you write some Python in a code cell and then you
-switch it to a Markdown cell? Наприклад, напишіть наступний вираз в
+<p>Що станеться, якщо Ви напишете у комірці код Python, а потім
+перемкнете її у режим Markdown? Наприклад, напишіть наступний вираз в
 комірці коду:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1027,12 +1031,12 @@ switch it to a Markdown cell? Наприклад, напишіть наступ�
   Рішення
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <p>Код Python розглядається як текст Markdown. Рядки виглядають так,
-ніби вони є частиною одного суміжного абзацу. This could be useful to
-temporarily turn on and off cells in notebooks that get used for
-multiple purposes.</p>
+ніби вони є частиною одного суміжного абзацу. Це може бути корисним для
+тимчасового вмикання та вимикання комірок у блокнотах, які
+використовуються для різних цілей.</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1049,13 +1053,13 @@ multiple purposes.</p>
 <div id="рівняння" class="callout-inner">
 <h3 class="callout-title">Рівняння</h3>
 <div class="callout-content">
-<p>Standard Markdown (such as we’re using for these notes) won’t render
-equations, but the Notebook will. Створіть нову комірку Markdown і
-введіть наступне:</p>
+<p>Стандартний Markdown (наприклад, такий, що використовується для цих
+нотаток) не відображає рівняння, але Notebook буде це робити. Створіть
+нову комірку Markdown і введіть наступне:</p>
 <pre><code>$\sum_{i=1}^{N} 2^{-i} \approx 1$</code></pre>
-<p>(Мабуть, це легше скопіювати та вставити.) Що зображається? What do
-you think the underscore, <code>_</code>, circumflex, <code>^</code>,
-and dollar sign, <code>$</code>, do?</p>
+<p>(Мабуть, це легше скопіювати та вставити.) Що зображається? Як ви
+думаєте, що роблять підкреслювання <code>_</code>, циркумфлекс
+<code>^</code> і знак долара <code>$</code>?</p>
 </div>
 </div>
 </div>
@@ -1066,38 +1070,39 @@ and dollar sign, <code>$</code>, do?</p>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
-<p>The notebook shows the equation as it would be rendered from LaTeX
-equation syntax. The dollar sign, <code>$</code>, is used to tell
-Markdown that the text in between is a LaTeX equation. If you’re not
-familiar with LaTeX, underscore, <code>_</code>, is used for subscripts
-and circumflex, <code>^</code>, is used for superscripts. A pair of
-curly braces, <code>{</code> and <code>}</code>, is used to group text
-together so that the statement <code>i=1</code> becomes the subscript
-and <code>N</code> becomes the superscript. Аналогічно, вираз
-<code>-i</code> взятий у фігурні дужки, щоб зробити цей вираз верхнім
-індексом для <code>2</code>. <code>\sum</code> та <code>\approx</code> є
-командами LaTeX для значень “sum over” й “approximate”.</p>
+<p>Рівняння зображується у блокноті відповідно до синтаксису, який
+використовується у LaTeX. Знаки долара <code>$</code> використовуються
+для того, щоб повідомити Markdown про те, що текст між цими знаками є
+рівнянням LaTeX. Якщо ви не знайомі з LaTeX, підкреслення <code>_</code>
+використовується для підрядкових індексів та циркумфлекс <code>^</code>
+використовується для верхніх індексів. Пара фігурних дужок
+<code>{</code> та <code>}</code> використовується для групування тексту
+разом, щоб вираз <code>i=1</code> став нижнім, а <code>N</code> -
+верхнім індексом. Аналогічно, вираз <code>-i</code> взятий у фігурні
+дужки, щоб зробити цей вираз верхнім індексом для <code>2</code>.
+<code>\sum</code> та <code>\approx</code> є командами LaTeX для значень
+“sum over” й “approximate”.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="closing-jupyterlab">Closing JupyterLab<a class="anchor" aria-label="anchor" href="#closing-jupyterlab"></a></h2>
+</section><section><h2 class="section-heading" id="вихід-з-jupyterlab">Вихід з JupyterLab<a class="anchor" aria-label="anchor" href="#%D0%B2%D0%B8%D1%85%D1%96%D0%B4-%D0%B7-jupyterlab"></a></h2>
 <hr class="half-width"><ul><li>На панелі меню оберіть меню “File” і натисніть “Shut Down” внизу
 спадного меню. Вам буде запропоновано підтвердити, що Ви бажаєте
 вимкнути сервер JupyterLab (не забудьте зберегти свою роботу!).
 Натисніть “Shut Down”, щоб вимкнути сервер JupyterLab.</li>
-<li>To restart the JupyterLab server you will need to re-run the
-following command from a shell.</li>
+<li>Щоб перезапустити сервер JupyterLab, вам потрібно буде повторно
+виконати наступну команду в терміналі.</li>
 </ul><pre><code>$ jupyter lab</code></pre>
-<div id="closing-jupyterlab-1" class="callout discussion">
+<div id="вихід-з-jupyterlab-1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div id="closing-jupyterlab-1" class="callout-inner">
-<h3 class="callout-title">Closing JupyterLab</h3>
+<div id="вихід-з-jupyterlab-1" class="callout-inner">
+<h3 class="callout-title">Вихід з JupyterLab</h3>
 <div class="callout-content">
 <p>Потренуйтеся закривати та перезапускати сервер JupyterLab.</p>
 </div>
@@ -1110,12 +1115,13 @@ following command from a shell.</li>
 <div class="callout-inner">
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
-<ul><li>Python scripts are plain text files.</li>
+<ul><li>Скрипти Python - це звичайні текстові файли.</li>
 <li>Застосування Jupyter Notebook для редагування та запуску Python</li>
-<li>The Notebook has Command and Edit modes.</li>
-<li>Use the keyboard and mouse to select and edit cells.</li>
+<li>Jupyter Notebook має командний режим та режим редагування.</li>
+<li>Використовуйте клавіатуру та мишу для виділення та редагування
+комірок.</li>
 <li>Notebook підтримує мову розмітки текстів Markdown.</li>
-<li>Markdown does most of what HTML does.</li>
+<li>Markdown робить більшість того, що можна зробити у HTML.</li>
 </ul></div>
 </div>
 </div>
@@ -1177,8 +1183,8 @@ following command from a shell.</li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/01-run-quit.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/01-run-quit.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2025-01-24",
-  "datePublished": "2025-03-11"
+  "dateModified": "2025-03-13",
+  "datePublished": "2025-03-13"
 }
 
   </script><script>
