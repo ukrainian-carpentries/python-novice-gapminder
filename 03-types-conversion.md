@@ -127,7 +127,7 @@ TypeError                                 Traceback (most recent call last)
 TypeError: object of type 'int' has no len()
 ```
 
-## Must convert numbers to strings or vice versa when operating on them. {#convert-numbers-and-strings}
+## Необхідно перетворювати числа в рядки або навпаки під час виконання певних операцій. {#convert-numbers-and-strings}
 
 - Додавання чисел та рядків неможливе.
 
@@ -450,7 +450,7 @@ print(a_complex_number.imag)
 ```
 
 1. Чому, на вашу думку, Python використовує `j` замість `i` для уявної частини?
-2. What do you expect `1 + 2j + 3` to produce?
+2. Який результат слід очікувати від виразу `1 + 2j + 3`?
 3. Що ви очікуєте від `4j`?  А що від `4 j` або `4 + j`?
 
 :::::::::::::::  solution
@@ -458,8 +458,8 @@ print(a_complex_number.imag)
 ## Рішення
 
 1. Стандартні математичні позначення зазвичай використовують `i` для позначення комплексного числа. However, from media reports it
-   was an early convention established from electrical engineering that now presents a technically expensive area to
-   change. [Stack Overflow містить додаткові пояснення та обговорення.](http://stackoverflow.com/questions/24812444/why-are-complex-numbers-in-python-denoted-with-j-instead-of-i)
+  was an early convention established from electrical engineering that now presents a technically expensive area to
+  change. [Stack Overflow містить додаткові пояснення та обговорення.](http://stackoverflow.com/questions/24812444/why-are-complex-numbers-in-python-denoted-with-j-instead-of-i)
 
 2. `(4+2j)`
 
@@ -481,3 +481,5 @@ print(a_complex_number.imag)
 - Змінні можуть набути своє значення тільки через присвоювання.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+

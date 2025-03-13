@@ -47,8 +47,8 @@ JupyterLab є частиною інсталяційного пакета Anacond
 
 - Запустіть сервер JupyterLab на вашому комп'ютері
 - Використовуйте веббраузер для відкриття спеціальної локальної URL-адреси для з'єднання з сервером JupyterLab
-- The JupyterLab server does the work and the web browser renders the result
-- Type code into the browser and see the results after your JupyterLab server has finished executing your code
+- Сервер JupyterLab виконує обчислювальну роботу, а веббраузер відображає її результат
+- Введіть код у браузері, і як тільки сервер JupyterLab завершить виконання, ви зможете переглянути результати
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
@@ -70,7 +70,7 @@ JupyterLab є [подальшим кроком в еволюції Jupyter Noteb
 Для запуску сервера JupyterLab вам потрібно отримати доступ до командного рядка через Terminal.
 Існує два способи відкрити термінал на Mac.
 
-1. In your Applications folder, open Utilities and double-click on Terminal
+1. У каталозі Applications відкрийте підкаталог Utilities і двічі натисніть Terminal
 2. Натисніть <kbd>Command</kbd> + <kbd>spacebar</kbd> для запуску Spotlight. Введіть `Terminal`, а потім двічі клацніть на результаті пошуку або натисніть <kbd>Enter</kbd>
 
 Після запуску Terminal введіть команду для запуску сервера JupyterLab.
@@ -83,7 +83,7 @@ $ jupyter lab
 
 Для запуску сервера JupyterLab вам потрібен застосунок Anaconda Prompt.
 
-Press <kbd>Windows Logo Key</kbd> and search for `Anaconda Prompt`, click the result or press enter.
+Натисніть <kbd>Windows Logo Key</kbd> і знайдіть `Anaconda Prompt`, натисніть на результат пошуку або на клавішу enter.
 
 Після запуску Anaconda Prompt введіть команду:
 
@@ -132,28 +132,23 @@ JupyterLab має багато функцій, які можна знайти в
 
 ## Ядра
 
-The JupyterLab [docs](https://jupyterlab.readthedocs.io/en/stable/user/documents_kernels.html)
-define kernels as "separate processes started by the server that runs your code in different programming languages and environments."
-When we open a Jupyter Notebook, that starts a kernel - a process - that is going to run the code.
-In this lesson, we'll be using the Jupyter ipython kernel which lets us run Python 3 code interactively.
+[Документація JupyterLab](https://jupyterlab.readthedocs.io/en/stable/user/documents_kernels.html)
+визначає ядра як "окремі процеси сервера, що виконують ваш код у відповідних мовах програмування та середовищах."
+Коли ми відкриваємо Jupyter Notebook, то ініціалізується ядро - процес, який буде виконувати код.
+У цьому уроці ми будемо використовувати ядро ipython, яке дозволяє запускати Python 3 в інтерактивному режимі.
 
-Using other Jupyter [kernels for other programming languages](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) would let us
-write and execute code in other programming languages in the same JupyterLab interface, like R, Java, Julia, Ruby, JavaScript, Fortran,
-etc.
+Використання інших [ядер Jupyter для інших мов програмування](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) дозволить нам використовувати спільний інтерфейс JupyterLab для того, щоб писати та виконувати код, наприклад, у таких мовах як R, Java, Julia, Ruby, JavaScript, Fortran, тощо.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-A screenshot of the default Menu Bar is provided below.
+Скриншот стандартної панелі меню надано нижче.
 
 <p align='center'>   <img alt="JupyterLab Menu Bar" src="fig/0_jupyterlab_menu_bar.png" width="750"/>
 </p>
 
 ### Ліва бічна панель
 
-The left sidebar contains a number of commonly used tabs, such as a file browser (showing the
-contents of the directory where the JupyterLab server was launched), a list of running kernels
-and terminals, the command palette, and a list of open tabs in the main work area. A screenshot of
-the default Left Side Bar is provided below.
+Ліва бічна панель містить ряд найбільш використовуваних вкладок, а саме: браузер файлів (відображає вміст каталогу, де був запущений сервер JupyterLab), перелік активних ядер і терміналів, панель команд і список відкритих вкладок в основній робочій області. Скриншот стандартної лівої бічної панелі наведений нижче.
 
 <p align='center'>   <img alt="JupyterLab Left Side Bar" src="fig/0_jupyterlab_left_side_bar.png" width="250"/>
 </p>
@@ -163,17 +158,14 @@ the default Left Side Bar is provided below.
 ### Основна робоча область
 
 Основна робоча область в JupyterLab дозволяє упорядковувати документи (блокноти, текстові файли та ін.)
-and other activities (terminals, code consoles, etc.) into panels of tabs that can be resized or
-subdivided. A screenshot of the default Main Work Area is provided below.
+та інші види застосунків (термінали, інтерфейси командного рядка тощо) у панелі вкладок. Ці панелі можна зменшити/збільшити або поділити на підрозділи. Скриншот стандартної основної робочої області наведено нижче.
 
 Якщо Ви не бачите вкладку Launcher на панелі запуску, натисніть синій плюс під "File" та "Edit" у панелі меню, і ця вкладка з'явиться.
 
 <p align='center'>   <img alt="JupyterLab Main Work Area" src="fig/0_jupyterlab_main_work_area.png" width="750"/>
 </p>
 
-Drag a tab to the center of a tab panel to move the tab to the panel. Subdivide a tab panel by
-dragging a tab to the left, right, top, or bottom of the panel. The work area has a single current
-activity. Вкладка для поточної дії позначена кольоровою верхньою рамкою (за замовчуванням - синьою).
+Щоб перемістити вкладку на деяку панель, перетягніть її в центр цієї панелі. Також ви можете розділити панель вкладок, перетягнувши потрібну вкладку ліворуч, праворуч, догори або донизу панелі. Кожна робоча панель має одну поточну активну вкладку. Вкладка для поточної дії позначена кольоровою верхньою рамкою (за замовчуванням - синьою).
 
 ## Створення скрипту Python
 
@@ -192,8 +184,7 @@ activity. Вкладка для поточної дії позначена ко�
 - Файли, створені в Jupyter Notebook, мають розширення `.ipynb`, щоб відрізнити їх від програм на Python, створених як звичайний текстовий файл.
 - Блокноти можна експортувати як скрипти Python, які можна запускати з командного рядка.
 
-Below is a screenshot of a Jupyter notebook running inside JupyterLab. If you are interested in
-more details, then see the [official notebook documentation][jupyterlab-notebook-docs].
+Нижче наведено скриншот Jupyter Notebook, який був відкритий в JupyterLab. Якщо вам цікаві подальші деталі, дивіться [офіційну документацію до Jupyter Notebook][jupyterlab-notebook-docs].
 
 <p align='center'>   <img alt="Example Jupyter Notebook" src="fig/0_jupyterlab_notebook_screenshot.png" width="750"/>
 </p>
@@ -204,7 +195,7 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 
 - Файл блокноту зберігається у форматі JSON.
 - Подібно до вебсторінки, те, що зберігається, відрізняється від того, що ви бачите у своєму браузері.
-- But this format allows Jupyter to mix source code, text, and images, all in one file.
+- Але формат JSON дозволяє Jupyter комбінувати вихідний код, текст і графіку в одному файлі.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -232,18 +223,16 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Code vs. Text
+## Код або текст?
 
-Jupyter дозволяє змішувати код і текст у різних типах блоків, які називаються комірками. We often use the term
-"code" to mean "the source code of software written in a language such as Python".
-A "code cell" in a Notebook is a cell that contains software;
-a "text cell" is one that contains ordinary prose written for human beings.
+Jupyter дозволяє змішувати код і текст у різних типах блоків, які називаються комірками. Термін "код" зазвичай використовується для позначення вихідного коду програмного забезпечення, написаного будь-якою мовою програмування.
+"Комірка коду" в Notebook містить код; а "текстова комірка" - звичайний текст, який відображується, але не виконується.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Jupyter Notebook має командний режим та режим редагування.
 
-- If you press <kbd>Esc</kbd> and <kbd>Return</kbd> alternately, the outer border of your code cell will change from gray to blue.
+- Якщо ви натиснете <kbd>Esc</kbd> та <kbd>Return</kbd> по черзі, то зовнішня межа комірки коду буде змінюватися з сірої на синю.
 - Існують сірий - **Command** (командний) та синій - **Edit** (редагування) режими вашого блокноту.
 - Command mode allows you to edit notebook-level features, and Edit mode changes the content of cells.
 - В командному режимі (esc/сірий),
@@ -257,11 +246,11 @@ a "text cell" is one that contains ordinary prose written for human beings.
 
 ## Командний режим або режим редагування
 
-In the Jupyter notebook page are you currently in Command or Edit mode?\
-Switch between the modes.
-Use the shortcuts to generate a new cell.
-Use the shortcuts to delete a cell.
-Use the shortcuts to undo the last cell operation you performed.
+Чи ви зараз перебуваєте в командному режимі чи режимі редагування на сторінці Jupyter Notebook?\
+Перейдіть з одного режиму в інший, а потім у зворотному напрямку.
+Використайте відповідні швидкі клавіші для видалення комірки.
+Використайте швидкі клавіші, щоб видалити комірку.
+Нарешті, скасуйте останню операцію над коміркою також за допомогою швидких клавіш.
 
 :::::::::::::::  solution
 
@@ -287,31 +276,30 @@ Use the shortcuts to undo the last cell operation you performed.
 
 ### Jupyter Notebook підтримує мову розмітки текстів Markdown.
 
-- Notebooks can also render [Markdown][markdown].
-  - A simple plain-text format for writing lists, links,
-    and other things that might go into a web page.
+- Блокноти також можуть візуалізувати [Markdown][markdown].
+  - Простий текстовий формат для створення списків, посилань та інших елементів, які можуть бути використані на вебсторінці.
   - Власне, це підмножина HTML, яка виглядає у стилі старомодного електронного листа.
 - Перетворіть поточну комірку на комірку Markdown, увійшовши в командний режим (<kbd>Esc</kbd>/gray) та натиснувши клавішу <kbd>M</kbd>.
 - Позначка `In [ ]:` зникне, щоб показати, що це вже не комірка коду, і ви зможете писати текст у форматі Markdown.
 - Перетворіть поточну комірку на комірку з кодом, увійшовши в командний режим (<kbd>Esc</kbd>/gray) та натиснувши клавішу <kbd>y</kbd>.
 
-### Markdown does most of what HTML does.
+### Markdown робить більшість того, що можна зробити у HTML.
 
-Table: Showing some markdown syntax and its rendered output.
+Таблиця: Елементи синтаксису Markdown та їх зображення.
 
 +---------------------------------------+------------------------------------------------+
 \| Код Markdown                  | Виведення                               |
 +=======================================+================================================+
 +---------------------------------------+------------------------------------------------+
-\| `                                  | <p></p>                                        | | *   Використовуйте зірочки                     | -   Використовуйте зірочки                     |           | *   для створення                         | -   для створення                                  | | *   маркованих списків.                     | -   bullet lists.                              |
+\| `                                  | <p></p>                                        | | *   Використовуйте зірочки                     | -   Використовуйте зірочки                     |           | *   для створення                         | -   для створення                                  | | *   маркованих списків.                     | -   марковані списки.                              |
 |`                                   |                                                |
 +---------------------------------------+------------------------------------------------+
 +---------------------------------------+------------------------------------------------+
-\| `                                  | <p></p>                                        | | 1.   Use numbers                      | 1.   Use numbers                               | | 1.   to create                        | 2.   to create                                 | | 1.   bullet lists.                    | 3.   нумеровані списки.                           |
+\| `                                  | <p></p>                                        | | 1.   Використовуйте числа                      | 1.   Використовуйте числа                               | | 1.   щоб створити                        | 2.   щоб створити                                 | | 1.   марковані списки.                    | 3.   нумеровані списки.                           |
 |`                                   |                                                |
 +---------------------------------------+------------------------------------------------+
 +---------------------------------------+------------------------------------------------+
-\| `                                  | <p></p>                                        | | *  You can use indents                | - You can use indents                          | |   *  To create sublists               |   - To create sublists                         | |   *  of the same type                 |   - of the same type                           | | *  Or sublists                        | - Or sublists                                  | |   1. Of different                     |   1. Of different                              | |   1. types                            |   2. types                                     |
+\| `                                  | <p></p>                                        | | *   Можна використовувати відступи                | -  Можна використовувати відступи                         | |   *  Для створення вкладених списків               |   - Для створення  вкладених списків                         | |   *  одного типу                 |   - одного типу                           | | *  Або  вкладених списків                        | - Або  вкладених списків                                 | |   1. Of different                     |   1. Of different                              | |   1. types                            |   2. types                                     |
 |`                                   |                                                |
 +---------------------------------------+------------------------------------------------+
 +---------------------------------------+------------------------------------------------+
@@ -327,7 +315,7 @@ Table: Showing some markdown syntax and its rendered output.
 |`                                   |                                                |
 +---------------------------------------+------------------------------------------------+
 +---------------------------------------+------------------------------------------------+
-\| ``                                  | <p></p>                                        | | [Links](http://software-carpentry.org)| [Links](https://software-carpentry.org)        | | are created with `[...](...)`.        | are created with `[...](...)`.                 | | Or use [named links][data-carp].      | Or use [named links][data_carpentry].          | |                                       |                                                | | [data-carp]: http://datacarpentry.org |                                                |
+\| ``                                  | <p></p>                                        | | [Links](http://software-carpentry.org)| [Links](https://software-carpentry.org)        | | are created with `[...](...)`.        | are created with `[...](...)`.                 | | Or use [named links][data-carp].      Або використовуйте [іменовані посилання][data_carpentry].          | |                                       |                                                | | [data-carp]: http://datacarpentry.org |                                                |
 |``                                   |                                                |
 +---------------------------------------+------------------------------------------------+
 
@@ -335,7 +323,7 @@ Table: Showing some markdown syntax and its rendered output.
 
 ## Створення списків в Markdown
 
-Create a nested list in a Markdown cell in a notebook that looks like this:
+Створіть вкладений список в Markdown-комірці блокноту так, щоб вона виглядала наступним чином:
 
 1. Знайти фінансування.
 2. Виконати роботу.
@@ -373,7 +361,7 @@ Create a nested list in a Markdown cell in a notebook that looks like this:
 ## Більше математики
 
 Що зображується, коли виконується комірка Python в блокноті, що містить декілька обчислень?
-For example, what happens when this cell is executed?
+Наприклад, що трапиться при виконанні наступної комірки?
 
 ```python
 7 * 3
@@ -396,10 +384,9 @@ Python повертає результат останнього розрахун
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Change an Existing Cell from Code to Markdown
+## Зміна типу вже наявної комірки з Code на Markdown
 
-What happens if you write some Python in a code cell
-and then you switch it to a Markdown cell?
+Що станеться, якщо Ви напишете у комірці код Python, а потім перемкнете її у режим Markdown?
 Наприклад, напишіть наступний вираз в комірці коду:
 
 ```python
@@ -417,7 +404,7 @@ print(x)
 
 Код Python розглядається як текст Markdown.
 Рядки виглядають так, ніби вони є частиною одного суміжного абзацу.
-This could be useful to temporarily turn on and off cells in notebooks that get used for multiple purposes.
+Це може бути корисним для тимчасового вмикання та вимикання комірок у блокнотах, які використовуються для різних цілей.
 
 ```python
 x = 6 * 7 + 12 print(x)
@@ -431,8 +418,7 @@ x = 6 * 7 + 12 print(x)
 
 ## Рівняння
 
-Standard Markdown (such as we're using for these notes) won't render equations,
-but the Notebook will.
+Стандартний Markdown (наприклад, такий, що використовується для цих нотаток) не відображає рівняння, але Notebook буде це робити.
 Створіть нову комірку Markdown і введіть наступне:
 
 ```
@@ -441,16 +427,16 @@ $\sum_{i=1}^{N} 2^{-i} \approx 1$
 
 (Мабуть, це легше скопіювати та вставити.)
 Що зображається?
-What do you think the underscore, `_`, circumflex, `^`, and dollar sign, `$`, do?
+Як ви думаєте, що роблять підкреслювання `_`, циркумфлекс `^` і знак долара `$`?
 
 :::::::::::::::  solution
 
 ## Рішення
 
-The notebook shows the equation as it would be rendered from LaTeX equation syntax.
-The dollar sign, `$`, is used to tell Markdown that the text in between is a LaTeX equation.
-If you're not familiar with LaTeX,  underscore, `_`, is used for subscripts and circumflex, `^`, is used for superscripts.
-A pair of curly braces, `{` and `}`, is used to group text together so that the statement `i=1` becomes the subscript and `N` becomes the superscript.
+Рівняння зображується у блокноті відповідно до синтаксису, який використовується у LaTeX.
+Знаки долара `$` використовуються для того, щоб повідомити Markdown про те, що текст між цими знаками є рівнянням LaTeX.
+Якщо ви не знайомі з LaTeX, підкреслення `_` використовується для підрядкових індексів та циркумфлекс `^` використовується для верхніх індексів.
+Пара фігурних дужок `{` та `}` використовується для групування тексту разом, щоб вираз `i=1` став нижнім, а `N` - верхнім індексом.
 Аналогічно, вираз `-i` взятий у фігурні дужки, щоб зробити цей вираз верхнім індексом для `2`.
 `\sum` та `\approx` є командами LaTeX для значень "sum over" й "approximate".
 
@@ -458,10 +444,10 @@ A pair of curly braces, `{` and `}`, is used to group text together so that the 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Closing JupyterLab
+## Вихід з JupyterLab
 
 - На панелі меню оберіть меню "File" і натисніть "Shut Down" внизу спадного меню. Вам буде запропоновано підтвердити, що Ви бажаєте вимкнути сервер JupyterLab (не забудьте зберегти свою роботу!). Натисніть "Shut Down", щоб вимкнути сервер JupyterLab.
-- To restart the JupyterLab server you will need to re-run the following command from a shell.
+- Щоб перезапустити сервер JupyterLab, вам потрібно буде повторно виконати наступну команду в терміналі.
 
 ```
 $ jupyter lab
@@ -469,7 +455,7 @@ $ jupyter lab
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Closing JupyterLab
+## Вихід з JupyterLab
 
 Потренуйтеся закривати та перезапускати сервер JupyterLab.
 
@@ -483,11 +469,13 @@ $ jupyter lab
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Python scripts are plain text files.
+- Скрипти Python - це звичайні текстові файли.
 - Застосування Jupyter Notebook для редагування та запуску Python
-- The Notebook has Command and Edit modes.
-- Use the keyboard and mouse to select and edit cells.
+- Jupyter Notebook має командний режим та режим редагування.
+- Використовуйте клавіатуру та мишу для виділення та редагування комірок.
 - Notebook підтримує мову розмітки текстів Markdown.
-- Markdown does most of what HTML does.
+- Markdown робить більшість того, що можна зробити у HTML.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
