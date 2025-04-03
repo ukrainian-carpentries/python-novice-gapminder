@@ -259,10 +259,8 @@ left
 
 ## Рішення
 
-Numbers are not strings or sequences and Python will raise an error if you try to perform an index operation on a
-number. У [наступному уроці про типи даних і перетворення типів](03-types-conversion.md)
-ми дізнаємось більше про типи і як конвертувати один тип в інший. If you want the Nth digit of a number you
-can convert it into a string using the `str` built-in function and then perform an index operation on that string.
+Числа не є рядками або послідовностями, і спроба виконати операцію індексу над числом у Python призведе до помилки. У [наступному епізоді про типи даних і перетворення типів](03-types-conversion.md)
+ми дізнаємось більше про типи і як конвертувати один тип в інший. Якщо вам потрібна N-та цифра числа, перетворіть його на рядок за допомогою вбудованої функції `str`, а потім виконайте операцію індексації у цьому рядку.
 
 ```python
 a = 123
@@ -302,8 +300,7 @@ print(a[1])
 
 ## Рішення
 
-`minutes` is better because `min` might mean something like "minimum"
-(and actually is an existing built-in function in Python that we will cover later).
+`minutes` краще, оскільки `min` можна помилково прийняти за "мінімум" (що насправді є вбудованою функцією в Python, яку ми розглянемо пізніше).
 
 :::::::::::::::::::::::::
 

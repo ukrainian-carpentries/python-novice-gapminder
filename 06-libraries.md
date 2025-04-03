@@ -136,7 +136,7 @@ cos(pi) is -1.0
 ## Exploring the Math Module
 
 1. What function from the `math` module can you use to calculate a square root
-   _without_ using `sqrt`?
+  _without_ using `sqrt`?
 2. Since the library contains this function, why does `sqrt` exist?
 
 :::::::::::::::  solution
@@ -144,11 +144,11 @@ cos(pi) is -1.0
 ## Solution
 
 1. Using `help(math)` we see that we've got `pow(x,y)` in addition to `sqrt(x)`,
-   so we could use `pow(x, 0.5)` to find a square root.
+  so we could use `pow(x, 0.5)` to find a square root.
 
 2. The `sqrt(x)` function is arguably more readable than `pow(x, 0.5)` when
-   implementing equations. Readability is a cornerstone of good programming, so it
-   makes sense to provide a special function for this specific common case.
+  implementing equations. Readability is a cornerstone of good programming, so it
+  makes sense to provide a special function for this specific common case.
 
 Also, the design of Python's `math` library has its origin in the C standard,
 which includes both `sqrt(x)` and `pow(x,y)`, so a little bit of the history
@@ -347,15 +347,15 @@ Library calls:
 ## Solution
 
 1. Library calls 1 and 4. In order to directly refer to `sin` and `pi` without
-   the library name as prefix, you need to use the `from ... import ...`
-   statement. Whereas library call 1 specifically imports the two functions
-   `sin` and `pi`, library call 4 imports all functions in the `math` module.
+  the library name as prefix, you need to use the `from ... import ...`
+  statement. Whereas library call 1 specifically imports the two functions
+  `sin` and `pi`, library call 4 imports all functions in the `math` module.
 2. Library call 3. Here `sin` and `pi` are referred to with a shortened library
-   name `m` instead of `math`. Library call 3 does exactly that using the
-   `import ... as ...` syntax - it creates an alias for `math` in the form of
-   the shortened name `m`.
+  name `m` instead of `math`. Library call 3 does exactly that using the
+  `import ... as ...` syntax - it creates an alias for `math` in the form of
+  the shortened name `m`.
 3. Library call 2. Here `sin` and `pi` are referred to with the regular library
-   name `math`, so the regular `import ...` call suffices.
+  name `math`, so the regular `import ...` call suffices.
 
 **Note:** although library call 4 works, importing all names from a module using a wildcard
 import is [not recommended][pep8-imports] as it makes it unclear which names from the module
@@ -429,11 +429,11 @@ ValueError: math domain error
 ```
 
 1. The logarithm of `x` is only defined for `x > 0`, so 0 is outside the
-   domain of the function.
+  domain of the function.
 
 2. You get an error of type `ValueError`, indicating that the function
-   received an inappropriate argument value. The additional message
-   "math domain error" makes it clearer what the problem is.
+  received an inappropriate argument value. The additional message
+  "math domain error" makes it clearer what the problem is.
 
 :::::::::::::::::::::::::
 
@@ -453,3 +453,5 @@ ValueError: math domain error
 - Create an alias for a library when importing it to shorten programs.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+

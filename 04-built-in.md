@@ -35,7 +35,7 @@ adjustment = 0.5 # Усе після '#' ігнорується.
 - _Аргумент_ - це значення, яке передається у функцію.
 - `len` потребує тільки один аргумент.
 - `int`, `str` та `float` створюють нові значення з наявних.
-- `print` takes zero or more.
+- `print` може приймати нуль або більше аргументів.
 - `print` без аргументів повертає порожній рядок.
   - Потрібно завжди використовувати дужки, навіть якщо вони порожні, щоб Python знав, що викликається функція.
 
@@ -70,8 +70,8 @@ result of print is None
 
 - Використовуйте `max`, щоб знайти найбільше з одного або декількох значень.
 - Використовуйте `min`, щоб знайти найменше значення.
-- Both work on character strings as well as numbers.
-  - "Larger" and "smaller" use (0-9, A-Z, a-z) to compare letters.
+- Обидві функції працюють як з рядками символів, так і з числами.
+  - Літери порівнюються у лексикографічному порядку, при цьому цифри "менші" ніж великі літери, а великі літери "менші" ніж малі.
 
 ```python
 print(max(1, 2, 3))
@@ -83,11 +83,11 @@ print(min('a', 'A', '0'))
 0
 ```
 
-## Functions may only work for certain (combinations of) arguments.
+## Функції працюють лише з певними аргументами (або комбінаціями аргументів).
 
 - `max` та `min` мають приймати принаймні один аргумент.
   - "Найбільше значення з порожньої множини" - запит, який не має сенсу.
-- Крім того, аргументи функцій мають бути порівнюваними.
+- Крім того, аргументи цих функцій мають бути порівнюваними.
 
 ```python
 print(max(1, 'a'))
@@ -114,7 +114,7 @@ round(3.712)
 4
 ```
 
-- We can specify the number of decimal places we want.
+- Ми можемо вказати потрібну кількість десяткових знаків після крапки.
 
 ```python
 round(3.712, 1)
@@ -181,8 +181,7 @@ round(number, ndigits=None)
 
 ## Два шляхи отримання допомоги у Jupyter Notebook.
 
-- Option 1: Place the cursor near where the function is invoked in a cell
-  (i.e., the function name or its parameters),
+- Варіант 1: Помістіть курсор біля того місця, де функція викликається в комірці (тобто біля назви функції або її параметрів),
   - Утримуйте <kbd>Shift</kbd>та натисніть <kbd>Tab</kbd>.
   - Зробіть це кілька разів для розширення інформації, що повертається.
 - Варіант 2: Введіть ім'я функції в комірці зі знаком питання після нього. Потім запустіть комірку.
@@ -229,13 +228,11 @@ SyntaxError: unexpected EOF while parsing
 ```
 
 - Повідомлення вказує на проблему в першому рядку введеної програми ("line 1").
-  - In this case the "ipython-input" section of the file name tells us that
-    we are working with input into IPython,
-    the Python interpreter used by the Jupyter Notebook.
+  - У цьому випадку "ipython-input" у назві файлу повідомляє нам, що ми працюємо з IPython, тобто з інтерпретатором Python, який застосовується в Jupyter Notebook.
 - Фрагмент `-6-` в назві файлу вказує на те, що помилка сталася в комірці 6.
 - Далі йде проблемний рядок коду, на що вказує символ `^`.
 
-## Python reports a runtime error when something goes wrong while a program is executing. {#runtime-error}
+## Python повідомляє про помилку виконання, коли щось йде не так під час виконання програми. {#runtime-error}
 
 ```python
 age = 53 
@@ -255,12 +252,10 @@ NameError: name 'aege' is not defined
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## What Happens When
+## Порядок виконання операцій
 
-1. Explain in simple terms the order of operations in the following program:
-  when does the addition happen, when does the subtraction happen,
-  when is each function called, etc.
-2. What is the final value of `radiance`?
+1. Поясніть простими словами порядок виконання операцій у наступній програмі: коли відбувається додавання, коли відбувається віднімання, коли викликається кожна функція тощо.
+2. Яке остаточне значення змінної `radiance`?
 
 ```python
 radiance = 1.0
@@ -283,7 +278,7 @@ radiance = max(2.1, 2.0 + min(radiance, 1.1 * radiance - 0.5))
 
 6. `max(2.1, 2.6) = 2.6`
 
-7. At the end, `radiance = 2.6`
+7. На кінець, `radiance = 2.6`
 
 :::::::::::::::::::::::::
 
@@ -334,8 +329,7 @@ print(max(len(rich), len(poor)))
 4
 ```
 
-`max(len(rich), poor)` throws a TypeError. This turns into `max(4, 'tin')` and
-as we discussed earlier a string and integer cannot meaningfully be compared.
+`max(len(rich), poor)` повертає TypeError. Помилка виникає при виконанні `max(4, 'tin')` тому що, як ми обговорювали раніше, порівнювати рядок і ціле число не можна.
 
 ```error
 TypeError                                 Traceback (most recent call last)
@@ -386,26 +380,23 @@ TypeError: '>' not supported between instances of 'str' and 'int'
 
 ## Вивчайте документацію Python!
 
-The [official Python documentation](https://docs.python.org/3/) is arguably the most complete
-source of information about the language. It is available in different languages and contains a lot of useful
-resources. The [Built-in Functions page](https://docs.python.org/3/library/functions.html) contains a catalogue of
-all of these functions, including the ones that we've covered in this lesson. Деякі з них більш досконалі та на цей час зайві, але інші - дуже прості та корисні.
+[Офіційна документація Python](https://docs.python.org/3/) вочевидь є найповнішим джерелом інформації про мову. Вона доступна різними мовами та містить багато корисних ресурсів. [Сторінка вбудованих функцій](https://docs.python.org/3/library/functions.html) містить каталог усіх таких функцій, включаючи ті, про які ми вже говорили на цьому уроці. Деякі з них більш досконалі та на цей час зайві, але інші - дуже прості та корисні.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - Використовуйте коментарі при створенні документації програм.
-- A function may take zero or more arguments.
+- Функції можуть сприймати нуль або більше аргументів.
 - Поширені вбудовані функції `max`, `min` та `round`.
 - Функції можуть працювати лише з певними аргументами (комбінаціями аргументів).
 - Функції можуть мати значення за замовчуванням для певних аргументів.
 - Використовуйте вбудовану функцію `help`, щоб отримати довідку щодо функції.
-- The Jupyter Notebook has two ways to get help.
+- Є два шляхи отримання допомоги у Jupyter Notebook.
 - Кожна функція щось повертає.
-- Python reports a syntax error when it can't understand the source of a program.
-- Python reports a runtime error when something goes wrong while a program is executing.
-- Fix syntax errors by reading the source code, and runtime errors by tracing the program's execution.
+- Python повідомляє про синтаксичну помилку, коли він не може зрозуміти вихідний код програми.
+- Python повідомляє про помилку виконання (runtime error), коли щось йде не так під час виконання програми.
+- Якщо перечитаєте вихідний код, можна виправити синтаксичні помилки, а якщо відстежите дії інтерпретатора - помилки виконання.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 

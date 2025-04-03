@@ -252,9 +252,9 @@ For instance, let's say we want to have a clearer view on how the European count
 split themselves according to their GDP.
 
 1. We may have a glance by splitting the countries in two groups during the years surveyed,
-   those who presented a GDP _higher_ than the European average and those with a _lower_ GDP.
+  those who presented a GDP _higher_ than the European average and those with a _lower_ GDP.
 2. We then estimate a _wealthy score_ based on the historical (from 1962 to 2007) values,
-   where we account how many times a country has participated in the groups of _lower_ or _higher_ GDP
+  where we account how many times a country has participated in the groups of _lower_ or _higher_ GDP
 
 ```python
 mask_higher = data > data.mean()
@@ -365,7 +365,7 @@ The output is
 
 1. Do the two statements below produce the same output?
 2. Based on this,
-   what rule governs what is included (or not) in numerical slices and named slices in Pandas?
+  what rule governs what is included (or not) in numerical slices and named slices in Pandas?
 
 ```python
 print(data_europe.iloc[0:2, 0:2])
@@ -507,7 +507,7 @@ Write an expression to select each of the following:
 2. GDP per capita for Denmark for all years.
 3. GDP per capita for all countries for years _after_ 1985.
 4. GDP per capita for each country in 2007 as a multiple of
-   GDP per capita for that country in 1952.
+  GDP per capita for that country in 1952.
 
 :::::::::::::::  solution
 
@@ -772,3 +772,5 @@ for the entire twentieth century?
 - Select values or NaN using a Boolean mask.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
