@@ -260,16 +260,16 @@ to find out what `DataFrame.head` and `DataFrame.tail` do.
 
 1. What method call will display the first three rows of this data?
 2. What method call will display the last three columns of this data?
-   (Hint: you may need to change your view of the data.)
+  (Hint: you may need to change your view of the data.)
 
 :::::::::::::::  solution
 
 ## Solution
 
 1. We can check out the first five rows of `data_americas` by executing `data_americas.head()`
-   which lets us view the beginning of the DataFrame. We can specify the number of rows we wish
-   to see by specifying the parameter `n` in our call to `data_americas.head()`.
-   To view the first three rows, execute:
+  which lets us view the beginning of the DataFrame. We can specify the number of rows we wish
+  to see by specifying the parameter `n` in our call to `data_americas.head()`.
+  To view the first three rows, execute:
 
 ```python
 data_americas.head(n=3)
@@ -302,9 +302,9 @@ Brazil        9065.800825
 ```
 
 2. To check out the last three rows of `data_americas`, we would use the command,
-   `americas.tail(n=3)`, analogous to `head()` used above. However, here we want to look at
-   the last three columns so we need to change our view and then use `tail()`. To do so, we
-   create a new DataFrame in which rows and columns are switched:
+  `americas.tail(n=3)`, analogous to `head()` used above. However, here we want to look at
+  the last three columns so we need to change our view and then use `tail()`. To do so, we
+  create a new DataFrame in which rows and columns are switched:
 
 ```python
 americas_flipped = data_americas.T
@@ -436,3 +436,5 @@ e.g., `data_americas.to_csv` or `data_oceania.to_csv`
 - Use `DataFrame.describe` to get summary statistics about data.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
