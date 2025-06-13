@@ -1,5 +1,5 @@
 ---
-title: Conditionals
+title: Умовні оператори
 teaching: 10
 exercises: 15
 ---
@@ -22,7 +22,7 @@ exercises: 15
 - An `if` statement (more properly called a _conditional_ statement)
   controls whether some block of code is executed or not.
 - Structure is similar to a `for` statement:
-  - First line opens with `if` and ends with a colon
+  - Перший рядок починається з \`if' і закінчується двокрапкою
   - Body containing one or more statements is indented (usually by 4 spaces)
 
 ```python
@@ -39,9 +39,9 @@ if mass > 3.0:
 3.54 is large
 ```
 
-## Conditionals are often used inside loops.
+## Умовні оператори часто використовуються всередині циклів.
 
-- Not much point using a conditional when we know the value (as above).
+- Немає особливого сенсу використовувати умовний оператор, коли ми знаємо точне значення (як у прикладі вище).
 - But useful when we have a collection to process.
 
 ```python
@@ -58,7 +58,7 @@ for m in masses:
 
 ## Use `else` to execute a block of code when an `if` condition is _not_ true.
 
-- `else` can be used following an `if`.
+- `else` можна використовувати після `if`.
 - Allows us to specify an alternative to execute when the `if` _branch_ isn't taken.
 
 ```python
@@ -240,7 +240,7 @@ print(pressure)
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
 ```output
 25.0
@@ -275,7 +275,7 @@ print(result)
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
 ```python
 original = [-1.5, 0.2, 0.4, 0.0, -1.3, 0.4]
@@ -309,7 +309,7 @@ for filename in glob.glob('data/*.csv'):
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
 ```python
 import glob
@@ -332,7 +332,7 @@ Modify this program so that it finds the largest and smallest values in the list
 no matter what the range of values originally is.
 
 ```python
-values = [...some test data...]
+values = [...деякі тестові дані...]
 smallest, largest = None, None
 for v in values:
     if ____:
@@ -348,7 +348,7 @@ to find the range of the data?
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
 ```python
 values = [-2,1,65,78,-54,-24,100]

@@ -148,9 +148,9 @@ result of call is: None
 ## Identifying Syntax Errors
 
 1. Read the code below and try to identify what the errors are
-   _without_ running it.
+  _without_ running it.
 2. Run the code and read the error message.
-   Is it a `SyntaxError` or an `IndentationError`?
+  Is it a `SyntaxError` or an `IndentationError`?
 3. Fix the error.
 4. Repeat steps 2 and 3 until you have fixed all the errors.
 
@@ -248,12 +248,12 @@ result of call is: None
 ## Solution
 
 1. The problem with the example is that the function `print_time()` is defined _after_ the call to the function is made. Python
-   doesn't know how to resolve the name `print_time` since it hasn't been defined yet and will raise a `NameError` e.g.,
-   `NameError: name 'print_time' is not defined`
+  doesn't know how to resolve the name `print_time` since it hasn't been defined yet and will raise a `NameError` e.g.,
+  `NameError: name 'print_time' is not defined`
 
 2. The first line of output `11:37:59` is printed by the first line of code, `result = print_time(11, 37, 59)` that binds the value
-   returned by invoking `print_time` to the variable `result`. The second line is from the second print call to print the contents
-   of the `result` variable.
+  returned by invoking `print_time` to the variable `result`. The second line is from the second print call to print the contents
+  of the `result` variable.
 
 3. `print_time()` does not explicitly `return` a value, so it automatically returns `None`.
 
@@ -363,12 +363,12 @@ print_date(day=1, month=2, year=2003)
 1. `2003/2/1`
 
 2. We saw examples of using _named arguments_ when working with the pandas library. For example, when reading in a dataset
-   using `data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')`, the last argument `index_col` is a
-   named argument.
+  using `data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')`, the last argument `index_col` is a
+  named argument.
 
 3. Using named arguments can make code more readable since one can see from the function call what name the different arguments
-   have inside the function. It can also reduce the chances of passing arguments in the wrong order, since by using named arguments
-   the order doesn't matter.
+  have inside the function. It can also reduce the chances of passing arguments in the wrong order, since by using named arguments
+  the order doesn't matter.
 
 :::::::::::::::::::::::::
 
@@ -463,7 +463,7 @@ japan = data_asia.loc['Japan']
 ```
 
 1. Complete the statements below to obtain the average GDP for Japan
-   across the years reported for the 1980s.
+  across the years reported for the 1980s.
 
 ```python
 year = 1983
@@ -483,10 +483,10 @@ def avg_gdp_in_decade(country, continent, year):
 ```
 
 3. How would you generalize this function
-   if you did not know beforehand which specific years occurred as columns in the data?
-   For instance, what if we also had data from years ending in 1 and 9 for each decade?
-   (Hint: use the columns to filter out the ones that correspond to the decade,
-   instead of enumerating them in the code.)
+  if you did not know beforehand which specific years occurred as columns in the data?
+  For instance, what if we also had data from years ending in 1 and 9 for each decade?
+  (Hint: use the columns to filter out the ones that correspond to the decade,
+  instead of enumerating them in the code.)
 
 :::::::::::::::  solution
 
@@ -552,22 +552,22 @@ a growth model that computes a new population density (between  0 and 1) based o
 density. In the model, time takes discrete values 0, 1, 2, ...
 
 1. Define a function called `logistic_map` that takes two inputs: `x`, representing the current
-   population (at time `t`), and a parameter `r = 1`. This function should return a value
-   representing the state of the system (population) at time `t + 1`, using the mapping function:
+  population (at time `t`), and a parameter `r = 1`. This function should return a value
+  representing the state of the system (population) at time `t + 1`, using the mapping function:
 
 `f(t+1) = r * f(t) * [1 - f(t)]`
 
 2. Using a `for` or `while` loop, iterate the `logistic_map` function defined in part 1, starting
-   from an initial population of 0.5, for a period of time `t_final = 10`. Store the intermediate
-   results in a list so that after the loop terminates you have accumulated a sequence of values
-   representing the state of the logistic map at times `t = [0,1,...,t_final]` (11 values in total).
-   Print this list to see the evolution of the population.
+  from an initial population of 0.5, for a period of time `t_final = 10`. Store the intermediate
+  results in a list so that after the loop terminates you have accumulated a sequence of values
+  representing the state of the logistic map at times `t = [0,1,...,t_final]` (11 values in total).
+  Print this list to see the evolution of the population.
 
 3. Encapsulate the logic of your loop into a function called `iterate` that takes the initial
-   population as its first input, the parameter `t_final` as its second input and the parameter
-   `r` as its third input. The function should return the list of values representing the state of
-   the logistic map at times `t = [0,1,...,t_final]`. Run this function for periods `t_final = 100`
-   and `1000` and print some of the values. Is the population trending toward a steady state?
+  population as its first input, the parameter `t_final` as its second input and the parameter
+  `r` as its third input. The function should return the list of values representing the state of
+  the logistic map at times `t = [0,1,...,t_final]`. Run this function for periods `t_final = 100`
+  and `1000` and print some of the values. Is the population trending toward a steady state?
 
 :::::::::::::::  solution
 
@@ -678,3 +678,5 @@ value of this column for every row in the dataframe.
 - Functions may return a result to their caller using `return`.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+

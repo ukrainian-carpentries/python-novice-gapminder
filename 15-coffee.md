@@ -14,3 +14,5 @@ Over break, reflect on and discuss the following:
   with doing the simplest thing that could possibly work._
 - What are the pros / cons of making a variable global or local to a function?
 - When would you consider turning a block of code into a function definition?
+
+

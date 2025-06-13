@@ -1,19 +1,19 @@
 ---
-title: Plotting
+title: Побудова графіків
 teaching: 15
 exercises: 15
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Create a time series plot showing a single data set.
-- Create a scatter plot showing relationship between two data sets.
+- Створення графіку часового ряду, який відповідає одному набору даних.
+- Створення діаграми розсіювання, яка показує зв’язок між двома наборами даних.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can I plot my data?
+- Як побудувати графік за моїми даними?
 - How can I save my plot for publishing?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -60,9 +60,9 @@ if several are created by a single cell.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Plot data directly from a [`Pandas dataframe`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html).
+## Побудова графіків безпосередньо з [Pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html).
 
-- We can also plot [Pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
+- Для побудови графіків можна також використовувати [фрейми даних Pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
 - Before plotting, we convert the column headings from a `string` to `integer` data type, since they represent numerical values,
   using [str.replace()](https://pandas.pydata.org/docs/reference/api/pandas.Series.str.replace.html) to remove the `gpdPercap_`
   prefix and then [astype(int)](https://pandas.pydata.org/docs/reference/api/pandas.Series.astype.html)
@@ -90,10 +90,10 @@ data.loc['Australia'].plot()
 
 ![](fig/9_gdp_australia.svg){alt='GDP plot for Australia'}
 
-## Select and transform data, then plot it.
+## Виділіть та трансформуйте дані, а потім побудуйте графік.
 
 - By default, [`DataFrame.plot`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html#pandas.DataFrame.plot) plots with the rows as the X axis.
-- We can transpose the data in order to plot multiple series.
+- Ми можемо транспонувати дані, щоб побудувати кілька графіків разом.
 
 ```python
 data.T.plot()
@@ -102,7 +102,7 @@ plt.ylabel('GDP per capita')
 
 ![](fig/9_gdp_australia_nz.svg){alt='GDP plot for Australia and New Zealand'}
 
-## Many styles of plot are available.
+## Доступні багато стилів графіків.
 
 - For example, do a bar plot using a fancier style.
 
@@ -116,7 +116,7 @@ plt.ylabel('GDP per capita')
 
 ## Data can also be plotted by calling the `matplotlib` `plot` function directly.
 
-- The command is `plt.plot(x, y)`
+- Формат команди є таким: `plt.plot(x, y)`
 - The color and format of markers can also be specified as an additional optional argument e.g., `b-` is a blue line, `g--` is a green dashed line.
 
 ## Get Australia data from dataframe
@@ -149,27 +149,27 @@ plt.ylabel('GDP per capita ($)')
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Adding a Legend
+## Додавання легенди
 
 Often when plotting multiple datasets on the same figure it is desirable to have
 a legend describing the data.
 
-This can be done in `matplotlib` in two stages:
+Це можна зробити в `matplotlib` за два етапи:
 
-- Provide a label for each dataset in the figure:
+- Вкажіть мітку для кожного набору даних у графіку:
 
 ```python
 plt.plot(years, gdp_australia, label='Australia')
 plt.plot(years, gdp_nz, label='New Zealand')
 ```
 
-- Instruct `matplotlib` to create the legend.
+- Доручіть `matplotlib` створити легенду.
 
 ```python
 plt.legend()
 ```
 
-By default matplotlib will attempt to place the legend in a suitable position. If you
+За замовчуванням matplotlib спробує розмістити легенду у відповідному місці. If you
 would rather specify a position this can be done with the `loc=` argument, e.g to place
 the legend in the upper left corner of the plot, specify `loc='upper left'`
 
@@ -177,7 +177,7 @@ the legend in the upper left corner of the plot, specify `loc='upper left'`
 
 ![](fig/9_gdp_australia_nz_formatted.svg){alt='GDP formatted plot for Australia and New Zealand'}
 
-- Plot a scatter plot correlating the GDP of Australia and New Zealand
+- Побудуйте точкову діаграму співвідношення ВВП Австралії та Нової Зеландії
 - Use either `plt.scatter` or `DataFrame.plot.scatter`
 
 ```python
@@ -194,7 +194,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Minima and Maxima
+## Мінімум та максимум
 
 Fill in the blanks below to plot the minimum GDP per capita over time
 for all the countries in Europe.
@@ -210,7 +210,7 @@ plt.xticks(rotation=90)
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 ```python
 data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
@@ -228,16 +228,14 @@ plt.xticks(rotation=90)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Correlations
+## Співвідношення
 
-Modify the example in the notes to create a scatter plot showing
-the relationship between the minimum and maximum GDP per capita
-among the countries in Asia for each year in the data set.
-What relationship do you see (if any)?
+Модифікуйте приклад у примітках, щоб створити діаграму розсіювання, що показує співвідношення між мінімальним і максимальним ВВП на душу населення серед країн Азії за кожен рік у наборі даних.
+Який зв’язок ви бачите (якщо такий є)?
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 ```python
 data_asia = pd.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
@@ -374,3 +372,5 @@ Whenever you are generating plots to go into a paper or a presentation, there ar
 - Can plot many sets of data together.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
