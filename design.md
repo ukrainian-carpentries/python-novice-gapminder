@@ -59,17 +59,15 @@ The main sections are:
   - Use the Jupyter Notebook
     - Authentic tool used by many instructors
     - There isn't really an alternative
-    - And means that even people who have seen a bit of Python before
-      will probably learn something
+    - І це означає, що навіть ті, хто вже трохи працював із Python, скоріше за все, дізнаються для себе щось нове
 - Motivating Example
-  - Creating 2D plots suitable for inclusion in papers
-  - Appeals to almost everyone
+  - Створення двовимірних графіків, придатних для включення до наукових публікацій
+  - Цікавий майже всім
   - Makes lesson usable by both Carpentries
-    - And means that even people who have seen a bit of Python before
-      will probably learn something
-- Data
+    - І це означає, що навіть ті, хто вже трохи працював із Python, скоріше за все, дізнаються для себе щось нове
+- Дані
   - Use the gapminder data throughout
-  - But break into multiple files by continent
+  - Але розділіть на кілька файлів за континентальною ознакою
     - To make display of output from examples tidier
       (e.g., use Australia/New Zealand, which is only two lines)
     - And allow examples showing use of multiple data sets
