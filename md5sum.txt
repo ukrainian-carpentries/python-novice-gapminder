@@ -31,4 +31,4 @@
 "learners/reference.md" "83455507826f97738bd199caeb43b8f4" "site/built/reference.md" "2024-07-02"
 "learners/setup.md" "1c2fd2d21466128382e8dd00aa2db818" "site/built/setup.md" "2025-04-24"
 "profiles/learner-profiles.md" "e290155c306ac4384e86a1395bd0ace9" "site/built/learner-profiles.md" "2025-02-23"
-"renv/profiles/lesson-requirements/renv.lock" NA "site/built/renv.lock" "2025-07-15"
+"renv/profiles/lesson-requirements/renv.lock" NA "site/built/renv.lock" "2025-07-22"
