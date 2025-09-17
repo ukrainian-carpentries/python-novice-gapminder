@@ -28,17 +28,17 @@ This lesson was developed using a slimmed-down variant of the "Understanding by 
 The main sections are:
 
 1. Assumptions about audience, time, etc.
-  (The current draft also includes some conclusions and decisions in this
-  section - that should be refactored.)
+   (The current draft also includes some conclusions and decisions in this
+   section - that should be refactored.)
 
 2. Desired results:
-  overall goals, summative assessments at half-day granularity, what learners
-  will be able to do, what learners will know.
+   overall goals, summative assessments at half-day granularity, what learners
+   will be able to do, what learners will know.
 
 3. Learning plan:
-  each episode has a heading that summarizes what will be covered,
-  then estimates time that will be spent on teaching and on exercises,
-  while the exercises are given as bullet points.
+   each episode has a heading that summarizes what will be covered,
+   then estimates time that will be spent on teaching and on exercises,
+   while the exercises are given as bullet points.
 
 ## Stage 1: Assumptions
 
