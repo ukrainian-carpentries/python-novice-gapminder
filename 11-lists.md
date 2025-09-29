@@ -274,8 +274,8 @@ list to string: gold
 1. [`list('some string')`](https://docs.python.org/3/library/stdtypes.html#list) converts a string into a list containing all of its characters.
 
 2. [`join`](https://docs.python.org/3/library/stdtypes.html#str.join) returns a string that is the _concatenation_
-  of each string element in the list and adds the separator between each element in the list. This results in
-  `x-y-z`. The separator between the elements is the string that provides this method.
+   of each string element in the list and adds the separator between each element in the list. This results in
+   `x-y-z`. The separator between the elements is the string that provides this method.
 
 :::::::::::::::::::::::::
 
@@ -294,11 +294,11 @@ print(element[-1])
 
 1. How does Python interpret a negative index?
 2. If a list or string has N elements,
-  what is the most negative index that can safely be used with it,
-  and what location does that index represent?
+   what is the most negative index that can safely be used with it,
+   and what location does that index represent?
 3. If `values` is a list, what does `del values[-1]` do?
 4. How can you display all elements but the last one without changing `values`?
-  (Hint: you will need to combine slicing and negative indexing.)
+   (Hint: you will need to combine slicing and negative indexing.)
 
 :::::::::::::::  solution
 
@@ -307,10 +307,10 @@ print(element[-1])
 The program prints `m`.
 
 1. Python interprets a negative index as starting from the end (as opposed to
-  starting from the beginning).  The last element is `-1`.
+   starting from the beginning).  The last element is `-1`.
 
 2. The last index that can safely be used with a list of N elements is element
-  `-N`, which represents the first element.
+   `-N`, which represents the first element.
 
 3. `del values[-1]` removes the last element from the list.
 
@@ -349,9 +349,9 @@ eniroulf
 1. `stride` is the step size of the slice.
 
 2. The slice `1::2` selects all even-numbered items from a collection: it starts
-  with element `1` (which is the second element, since indexing starts at `0`),
-  goes on until the end (since no `end` is given), and uses a step size of `2`
-  (i.e., selects every second element).
+   with element `1` (which is the second element, since indexing starts at `0`),
+   goes on until the end (since no `end` is given), and uses a step size of `2`
+   (i.e., selects every second element).
 
 :::::::::::::::::::::::::
 

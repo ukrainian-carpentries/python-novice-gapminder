@@ -24,7 +24,7 @@ exercises: 0
 
 Для роботи з Python, протягом цього семінару ми будемо використовувати \[блокноти Jupyter]\[jupyter] у середовищі [JupyterLab][jupyterlab]. Блокноти Jupyter широко застосовуються з метою аналізу та візуалізації даних, а також є зручним інструментальним засобом для запуску коду на Python в інтерактивному режимі, де ми можемо легко переглядати результати його виконання, та ділитися нашим кодом з іншими.
 
-Існують й інші способи редагування, організації та виконання коду. Розробники програмного забезпечення часто використовують інтегроване середовище розробки (IDE), подібне до [PyCharm](https://www.jetbrains. om/pycharm/) або [Visual Studio Code](https://code.visualstudio.com/) або текстові редактори такі як Vim або Emacs, щоб створити та відредагувати свої програми Python. Після редагування та збереження ваших програм Python ви можете виконувати ці програми в самому IDE або безпосередньо в командному рядку. На відміну від цього, блокноти Jupyter дозволяють відразу переглянути результати нашого Python коду.
+Існують й інші способи редагування, організації та виконання коду. Розробники програмного забезпечення часто використовують інтегроване середовище розробки (IDE), подібне до [PyCharm](https://www.jetbrains.сom/pycharm/) або [Visual Studio Code](https://code.visualstudio.com/) або текстові редактори такі як Vim або Emacs, щоб створити та відредагувати свої програми Python. Після редагування та збереження ваших програм Python ви можете виконувати ці програми в самому IDE або безпосередньо в командному рядку. На відміну від цього, блокноти Jupyter дозволяють відразу переглянути результати нашого Python коду.
 
 JupyterLab має декілька інших зручних функцій:
 
@@ -93,7 +93,7 @@ $ jupyter lab
 
 ### Anaconda Navigator
 
-Для запуску серверу JupyterLab з Anaconda Navigator ви маєте спочатку [запустити Anaconda Navigator (натисніть для докладних інструкцій з macOS, Windows та Linux)](https://docs.anaconda.com/free/navigator/getting-started/#navigator-starting-navigator). Ви можете виконати пошук Anaconda Navigator через Spotlight на macOS (<kbd>Command</kbd> + <kbd>spacebar</kbd>), скористатися функцією пошуку Windows (<kbd>ключ Windows Logo</kbd>) або відкривши термінал та виконавши команду `anaconda-navigator` у командному рядку.
+Для запуску серверу JupyterLab з Anaconda Navigator ви маєте спочатку [запустити Anaconda Navigator (натисніть для докладних інструкцій з macOS, Windows та Linux)](https://docs.anaconda.com/free/navigator/getting-started/#navigator-starting-navigator). Ви можете виконати пошук Anaconda Navigator через Spotlight на macOS (<kbd>Command</kbd> + <kbd>spacebar</kbd>), скористатися функцією пошуку Windows (<kbd>клавіша Windows Logo</kbd>) або відкривши термінал та виконавши команду `anaconda-navigator` у командному рядку.
 
 Після того, як ви запустили Anaconda Navigator, натисніть кнопку `Launch` під JupyterLab. Можливо, вам знадобиться продивитись список донизу, аби знайти її.
 

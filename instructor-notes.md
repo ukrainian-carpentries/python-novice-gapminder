@@ -1,5 +1,5 @@
 ---
-title: Instructors' Guide
+title: Поради інструктору
 ---
 
 ## General Notes
@@ -15,7 +15,7 @@ Don't tell people to Google things.
 to help novices build a workable mental model of how programming works.
 Until they have that model,
 they will not know what to search for or how to recognize a helpful answer.
-Telling them to Google can also give the impression that we think their problem is trivial.
+Пропозиція пошукати відповідь в Google може створити враження, що ми вважаємо їх проблему тривіальною.
 (That said, if learners have done enough programming before to be past these issues,
 having them search for solutions online can help them solidify their understanding.)
 It's also worth quoting
@@ -25,3 +25,5 @@ comment about online search:
 "If you find anything,
 other folks were confused enough to bother with a blog or Stack Overflow post,
 so it's probably not trivial."
+
+
