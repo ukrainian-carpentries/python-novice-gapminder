@@ -70,14 +70,13 @@ The main sections are:
   - Але розділіть на кілька файлів за континентальною ознакою
     - To make display of output from examples tidier
       (e.g., use Australia/New Zealand, which is only two lines)
-    - And allow examples showing use of multiple data sets
-- Focus on Pandas instead of NumPy
-  - Makes lesson usable by both Data Carpentry and Software Carpentry
+    - І дозволити приклади, що показують використання декількох наборів даних
+- Зробити фокус на Pandas замість NumPy
+  - Зробити урок придатним до використання для Data Carpentry та Software Carpentry
   - Genuine novices are likely to want data analysis
   - And people with some prior experience:
-    - will accept data analysis as an authentic task,
-    - and are unlikely to have encountered Pandas,
-      so they'll still get something useful out of the lesson
+    - сприймуть аналіз даних як реальне завдання,
+    - і навряд чи стикалися з Pandas, тому вони все одно отримають щось корисне з уроку
 - Challenges will mostly _not_ be "write this code from scratch"
   - Want lots of short exercises that can reliably be finished in allotted time
   - So use MCQs, fill-in-the-blanks, Parsons Problems, "tweak this code", etc.
@@ -118,15 +117,15 @@ I know...
   - Document purpose and use
 - ...that there is no magic: the programs they use are no different
   in principle from those they build
-- ...how to assign values to variables
+- ... як призначити значення змінним
 - ...what integers, floats, strings, NumPy arrays, and Pandas dataframes are
-- ...how to trace the execution of a `for` loop
-- ...how to trace the execution of `if`/`else` statements
+- ...як відстежувати виконання циклу `for`
+- ...як відстежувати виконання команд `if`/`else`
 - ...how to create and index lists
-- ...how to create and index NumPy arrays
+- ... як створити та індексувати масиви NumPy
 - ...how to create and index Pandas dataframes
 - ...how to create time series plots
-- ...the difference between defining and calling a function
+- ... різниця між визначенням і викликом функції
 - ...where to find documentation on standard libraries
 - ...how to find out what else scientific Python offers
 
@@ -195,9 +194,9 @@ I know...
   - Given what we have seen so far,
     what index expression will get the last character in a string?
 
-### [Coffee](../episodes/05-coffee.md): 15 min (10:20)
+### [Перерва на каву](../episodes/05-coffee.md): 15 min (10:20)
 
-### [Libraries](../episodes/06-libraries.md) (10:35)
+### [Бібліотеки](../episodes/06-libraries.md) (10:35)
 
 - Teaching: 10 min
   - Explain what software libraries are and why programmers create and use them.
@@ -209,7 +208,7 @@ I know...
   - If `help(math)` produces an error, what have you forgotten to do?
   - Fill in the blanks in code below so that the import statement and program run.
 
-### [Reading Tabular Data](../episodes/07-reading-tabular.md) (10:55)
+### [Читання табличних данних](../episodes/07-reading-tabular.md) (10:55)
 
 - Teaching: 10 min
   - Import the Pandas library.
@@ -240,7 +239,7 @@ I know...
     what would you do if asked to create a table of GDP per capita for Poland
     for the Twentieth Century?
 
-### [Plotting](../episodes/09-plotting.md) (11:45)
+### [Побудова графіків](../episodes/09-plotting.md) (11:45)
 
 - Teaching: 15 min
   - Create a time series plot showing a single data set.
@@ -250,9 +249,9 @@ I know...
   - Modify the example to create a scatter plot of GDP per capita in Asian countries.
   - Explain what each argument to `plot` does in the following example.
 
-### [Lunch](../episodes/10-lunch.md) (12:15): 45 min
+### [Перерва](../episodes/10-lunch.md) (12:15): 45 min
 
-### [Lists](../episodes/11-lists.md) (13:00)
+### [Списки](../episodes/11-lists.md) (13:00)
 
 - Teaching: 10 min
   - Explain why programs need collections of values.
@@ -266,7 +265,7 @@ I know...
   - What are the differences between sorting these two ways?
   - What is the difference between `new = old` and `new = old[:]`?
 
-### [Loops](../episodes/12-for-loops.md) (13:20)
+### [Цикли](../episodes/12-for-loops.md) (13:20)
 
 - Teaching: 10 min
   - Explain what for loops are normally used for.
@@ -328,7 +327,7 @@ I know...
   - Modify this program so that it always finds the largest and smallest values in a list
     no matter what the list's values are.
 
-### [Programming Style](../episodes/18-style.md) (15:25)
+### [Стиль програмування](../episodes/18-style.md) (15:25)
 
 - Teaching: 15 min
   - How can I make my programs more readable?
@@ -339,7 +338,7 @@ I know...
   - Turn the comments in this program into docstrings.
   - Rewrite this short program to be more readable.
 
-### [Wrap-Up](../episodes/19-wrap.md) (15:55)
+### [Підведення підсумків](../episodes/19-wrap.md) (15:55)
 
 - Teaching: 20 min
   - Name and locate scientific Python community sites for software, workshops, and help.

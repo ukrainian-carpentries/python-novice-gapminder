@@ -1,5 +1,5 @@
 ---
-title: Setup
+title: Інструкції з налаштування
 ---
 
 ## Getting the Data

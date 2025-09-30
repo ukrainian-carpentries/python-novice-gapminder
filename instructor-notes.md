@@ -16,8 +16,8 @@ to help novices build a workable mental model of how programming works.
 Until they have that model,
 they will not know what to search for or how to recognize a helpful answer.
 Пропозиція пошукати відповідь в Google може створити враження, що ми вважаємо їх проблему тривіальною.
-(That said, if learners have done enough programming before to be past these issues,
-having them search for solutions online can help them solidify their understanding.)
+(Однак, якщо учні раніше достатньо займались програмуванням, щоб подолати ці проблеми,
+підштовхування їх шукати рішення в Інтернеті може допомогти їм зміцнити своє розуміння.)
 It's also worth quoting
 [Trevor King]([https://github.com/swcarpentry/python-novice-](https://github.com/swcarpentry/python-novice-)
 gapminder/issues/22#issuecomment-182573516)'s
