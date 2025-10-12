@@ -6,9 +6,9 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Be able to read and write globbing expressions that match sets of files.
-- Use glob to create lists of files.
-- Write for loops to perform operations on files given their names in a list.
+- Навчіться читати та писати вирази модулю glob, які відповідають наборам файлів.
+- Використовуйте модуль glob для створення списків файлів
+- Напишіть цикли for для виконання операцій над файлами, зазначеними в списку.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -20,8 +20,8 @@ exercises: 10
 
 ## Use a `for` loop to process files given a list of their names.
 
-- A filename is a character string.
-- And lists can contain character strings.
+- Ім'я файлу - це рядок символів.
+- І списки можуть містити рядки символів.
 
 ```python
 import pandas as pd
@@ -51,17 +51,17 @@ gdpPercap_2007    944
 dtype: float64
 ```
 
-## Use [`glob.glob`](https://docs.python.org/3/library/glob.html#glob.glob) to find sets of files whose names match a pattern.
+## Використовуйте [`glob.glob`](https://docs.python.org/3/library/glob.html#glob.glob), щоб знайти набори файлів, імена яких відповідають шаблону.
 
-- In Unix, the term "globbing" means "matching a set of files with a pattern".
+- В Unix термін "globbing" означає "відповідність набору файлів шаблону".
 - The most common patterns are:
-  - `*` meaning "match zero or more characters"
-  - `?` meaning "match exactly one character"
-- Python's standard library contains the [`glob`](https://docs.python.org/3/library/glob.html) module to provide pattern matching functionality
-- The [`glob`](https://docs.python.org/3/library/glob.html) module contains a function also called `glob` to match file patterns
+  - `*` означає "відповідати нулю або більшій кількості символів"
+  - `?` означає "відповідати в точності одному символу"
+- Python містить бібліотеку [`glob`](https://docs.python.org/3/library/glob.html) для забезпечення функції зіставлення шаблонів
+- Бібліотека [`glob`](https://docs.python.org/3/library/glob.html) містить функцію, яка також називається `glob` для відповідності шаблонам файлів.
 - E.g., `glob.glob('*.txt')` matches all files in the current directory
   whose names end with `.txt`.
-- Result is a (possibly empty) list of character strings.
+- Результатом є (можливо, порожній) список рядків символів.
 
 ```python
 import glob
@@ -75,14 +75,14 @@ all csv files in data directory: ['data/gapminder_all.csv', 'data/gapminder_gdp_
 ```
 
 ```python
-print('all PDB files:', glob.glob('*.pdb'))
+print('all PDB files:', glob.glob(' .pdb'))
 ```
 
 ```output
 all PDB files: []
 ```
 
-## Use `glob` and `for` to process batches of files.
+## Використовуйте `glob` і `for` для обробки пакетів файлів.
 
 - Helps a lot if the files are named and stored systematically and consistently
   so that simple patterns will find the right data.
@@ -102,16 +102,16 @@ data/gapminder_gdp_europe.csv 973.5331948
 data/gapminder_gdp_oceania.csv 10039.59564
 ```
 
-- This includes all data, as well as per-region data.
-- Use a more specific pattern in the exercises to exclude the whole data set.
+- Це включає всі дані, а також дані по регіонах.
+- Використовуйте більш конкретний шаблон у вправах, щоб виключити весь набір даних.
 - But note that the minimum of the entire data set is also the minimum of one of the data sets,
   which is a nice check on correctness.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Determining Matches
+## Визначення збігів
 
-Which of these files is _not_ matched by the expression `glob.glob('data/*as*.csv')`?
+Який із цих файлів _не_ відповідає виразу `glob.glob('data/*as*.csv')`?
 
 1. `data/gapminder_gdp_africa.csv`
 2. `data/gapminder_gdp_americas.csv`
@@ -129,7 +129,7 @@ Which of these files is _not_ matched by the expression `glob.glob('data/*as*.cs
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Minimum File Size
+## Мінімальний розмір файлу
 
 Modify this program so that it prints the number of records in
 the file that has the fewest records.
@@ -149,7 +149,7 @@ returns a tuple with the number of rows and columns of the data frame.
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 ```python
 import glob
@@ -172,11 +172,9 @@ What other special strings does the [`float` function][float-function] recognize
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Comparing Data
+## Порівняння даних
 
-Write a program that reads in the regional data sets
-and plots the average GDP per capita for each region over time
-in a single chart. Pandas will raise an error if it encounters
+Напишіть програму, яка читає регіональні набори даних і будує графік середнього ВВП на душу населення для кожного регіону в часі в одній діаграмі. Pandas will raise an error if it encounters
 non-numeric columns in a dataframe computation so you may need
 to either filter out those columns or tell pandas to ignore them.
 
@@ -262,6 +260,8 @@ function.
 
 - Use a `for` loop to process files given a list of their names.
 - Use `glob.glob` to find sets of files whose names match a pattern.
-- Use `glob` and `for` to process batches of files.
+- Використовуйте `glob` і `for` для обробки пакетів файлів.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+

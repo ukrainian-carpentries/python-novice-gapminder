@@ -7,7 +7,7 @@ break: 15
 
 ## Reflection exercise
 
-Over break, reflect on and discuss the following:
+За кавою подумайте та обговоріть наступне:
 
 - A common refrain in software engineering is "Don't Repeat Yourself". How do the techniques we've learned in the last
   lessons help us avoid repeating ourselves? _Note that in practice there is some nuance to this and should be balanced

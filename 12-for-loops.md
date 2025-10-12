@@ -6,9 +6,9 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain what for loops are normally used for.
-- Trace the execution of a simple (unnested) loop and correctly state the values of variables in each iteration.
-- Write for loops that use the Accumulator pattern to aggregate values.
+- Поясніть, для чого зазвичай використовуються цикли for.
+- Проаналізуйте виконання простого (невкладеного) циклу та правильно вкажіть значення змінних у кожній ітерації.
+- Напишіть цикли for, які використовують шаблон накопичувача для агрегування значень.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -32,7 +32,7 @@ for number in [2, 3, 5]:
     print(number)
 ```
 
-- This `for` loop is equivalent to:
+- Цей цикл `for` є еквівалентним наступному:
 
 ```python
 print(2)
@@ -40,7 +40,7 @@ print(3)
 print(5)
 ```
 
-- And the `for` loop's output is:
+- І результат циклу `for` є таким:
 
 ```output
 2
@@ -48,7 +48,7 @@ print(5)
 5
 ```
 
-## A `for` loop is made up of a collection, a loop variable, and a body.
+## Цикл `for` складається з колекції, змінної циклу та тіла циклу.
 
 ```python
 for number in [2, 3, 5]:
@@ -56,15 +56,15 @@ for number in [2, 3, 5]:
 ```
 
 - The collection, `[2, 3, 5]`, is what the loop is being run on.
-- The body, `print(number)`, specifies what to do for each value in the collection.
-- The loop variable, `number`, is what changes for each _iteration_ of the loop.
+- Тіло циклу, `print(number)`, визначає, що робити для кожного значення в колекції.
+- Змінна циклу, `number`, змінюється для кожної ітерації циклу.
   - The "current thing".
 
 ## The first line of the `for` loop must end with a colon, and the body must be indented.
 
 - The colon at the end of the first line signals the start of a _block_ of statements.
 - Python uses indentation rather than `{}` or `begin`/`end` to show _nesting_.
-  - Any consistent indentation is legal, but almost everyone uses four spaces.
+  - Будь-який послідовний відступ є допустимим, але майже усі використовують чотири пробіли.
 
 ```python
 for number in [2, 3, 5]:
@@ -92,11 +92,11 @@ IndentationError: unexpected indent
 - This error can be fixed by removing the extra spaces
   at the beginning of the second line.
 
-## Loop variables can be called anything.
+## Змінні циклу можна називати як завгодно.
 
-- As with all variables, loop variables are:
-  - Created on demand.
-  - Meaningless: their names can be anything at all.
+- Як і всі інші змінні, змінні циклу:
+  - Створюються за потреби
+  - Не несуть смислового навантаження: їх імена можуть бути будь-якими.
 
 ```python
 for kitten in [2, 3, 5]:
@@ -106,7 +106,7 @@ for kitten in [2, 3, 5]:
 ## The body of a loop can contain many statements.
 
 - But no loop should be more than a few lines long.
-- Hard for human beings to keep larger chunks of code in mind.
+- Людям важко запам’ятати великі фрагменти коду.
 
 ```python
 primes = [2, 3, 5]
@@ -122,9 +122,9 @@ for p in primes:
 5 25 125
 ```
 
-## Use `range` to iterate over a sequence of numbers.
+## Використовуйте `range` для перебору послідовності чисел.
 
-- The built-in function [`range`](https://docs.python.org/3/library/stdtypes.html#range) produces a sequence of numbers.
+- Вбудована функція [`range`](https://docs.python.org/3/library/stdtypes.html#range) створює послідовність чисел.
   - _Not_ a list: the numbers are produced on demand
     to make looping over large ranges more efficient.
 - `range(N)` is the numbers 0..N-1
@@ -461,3 +461,5 @@ print('My favorite season is ', seasons[3])
 - The Accumulator pattern turns many values into one.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+

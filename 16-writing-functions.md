@@ -7,7 +7,7 @@ exercises: 15
 ::::::::::::::::::::::::::::::::::::::: objectives
 
 - Explain and identify the difference between function definition and function call.
-- Write a function that takes a small, fixed number of arguments and produces a single result.
+- Напишіть функцію, яка використовує невелику фіксовану кількість вхідних аргументів, а видає єдиний результат.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -17,27 +17,27 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Break programs down into functions to make them easier to understand.
+## Розбийте програми на функції, щоб їх було легше зрозуміти.
 
 - Human beings can only keep a few items in working memory at a time.
 - Understand larger/more complicated ideas by understanding and combining pieces.
-  - Components in a machine.
-  - Lemmas when proving theorems.
-- Functions serve the same purpose in programs.
+  - Компоненти в машині.
+  - Леми при доведенні теорем.
+- Функції служать тій же меті в програмах.
   - _Encapsulate_ complexity so that we can treat it as a single "thing".
 - Also enables _re-use_.
   - Write one time, use many times.
 
 ## Define a function using `def` with a name, parameters, and a block of code.
 
-- Begin the definition of a new function with `def`.
-- Followed by the name of the function.
-  - Must obey the same rules as variable names.
+- Почніть визначення нової функції з `def`.
+- Далі йде назва функції.
+  - Назви функцій мають відповідати тим самим правилам, що й імена змінних.
 - Then _parameters_ in parentheses.
-  - Empty parentheses if the function doesn't take any inputs.
+  - Порожні дужки, якщо функція не приймає жодних вхідних даних.
   - We will discuss this in detail in a moment.
-- Then a colon.
-- Then an indented block of code.
+- Потім двокрапка.
+- Потім блок коду з відступом.
 
 ```python
 def print_greeting():
@@ -46,11 +46,11 @@ def print_greeting():
     print('Right?')
 ```
 
-## Defining a function does not run it.
+## Визначення функції не запускає її.
 
 - Defining a function does not run it.
-  - Like assigning a value to a variable.
-- Must call the function to execute the code it contains.
+  - Як присвоєння значення змінній.
+- Необхідно викликати функцію, щоб виконати код, який вона містить.
 
 ```python
 print_greeting()
@@ -62,9 +62,9 @@ Hello!
 
 ## Arguments in a function call are matched to its defined parameters.
 
-- Functions are most useful when they can operate on different data.
-- Specify _parameters_ when defining a function.
-  - These become variables when the function is executed.
+- Функції найбільш корисні, коли вони можуть працювати з різними даними.
+- Укажіть _параметри_ під час визначення функції.
+  - Вони стають змінними під час виконання функції.
   - Are assigned the arguments in the call (i.e., the values passed to the function).
   - If you don't name the arguments when using them in the call, the arguments will be matched to
     parameters in the order the parameters are defined in the function.
@@ -98,13 +98,13 @@ print_date(month=3, day=19, year=1871)
   `()` contains the ingredients for the function
   while the body contains the recipe.
 
-## Functions may return a result to their caller using `return`.
+## Функції можуть повертати результат до свого виклику за допомогою `return`.
 
 - Use `return ...` to give a value back to the caller.
-- May occur anywhere in the function.
+- Може виникнути будь-де у функції.
 - But functions are easier to understand if `return` occurs:
-  - At the start to handle special cases.
-  - At the very end, with a final result.
+  - На початку функції для обробки особливих випадків.
+  - У самому кінці з остаточним результатом.
 
 ```python
 def average(values):
@@ -123,7 +123,7 @@ average of actual values: 2.6666666666666665
 ```
 
 ```python
-print('average of empty list:', average([]))
+print('середнє порожнього списку:', average([]))
 ```
 
 ```output
@@ -145,14 +145,14 @@ result of call is: None
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Identifying Syntax Errors
+## Виявлення синтаксичних помилок
 
 1. Read the code below and try to identify what the errors are
-  _without_ running it.
-2. Run the code and read the error message.
-  Is it a `SyntaxError` or an `IndentationError`?
-3. Fix the error.
-4. Repeat steps 2 and 3 until you have fixed all the errors.
+   _without_ running it.
+2. Запустіть код і прочитайте повідомлення про помилку.
+   Це `SyntaxError` чи `IndentationError`?
+3. Виправте помилку.
+4. Повторюйте кроки 2 та 3 доки не виправите всі помилки.
 
 ```python
 def another_function
@@ -163,7 +163,7 @@ def another_function
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 ```python
 def another_function():
@@ -178,9 +178,9 @@ def another_function():
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Definition and Use
+## Визначення та використання
 
-What does the following program print?
+Що друкує наступна програма?
 
 ```python
 def report(pressure):
@@ -191,7 +191,7 @@ print('calling', report, 22.5)
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 ```output
 calling <function report at 0x7fd128ff1bf8> 22.5
@@ -215,9 +215,9 @@ pressure is 22.5
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Order of Operations
+## Порядок виконання операцій
 
-1. What's wrong in this example?
+1. Що не так у цьому прикладі?
 
 ```python
 result = print_time(11, 37, 59)
@@ -245,15 +245,15 @@ result of call is: None
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 1. The problem with the example is that the function `print_time()` is defined _after_ the call to the function is made. Python
-  doesn't know how to resolve the name `print_time` since it hasn't been defined yet and will raise a `NameError` e.g.,
-  `NameError: name 'print_time' is not defined`
+   doesn't know how to resolve the name `print_time` since it hasn't been defined yet and will raise a `NameError` e.g.,
+   `NameError: name 'print_time' is not defined`
 
 2. The first line of output `11:37:59` is printed by the first line of code, `result = print_time(11, 37, 59)` that binds the value
-  returned by invoking `print_time` to the variable `result`. The second line is from the second print call to print the contents
-  of the `result` variable.
+   returned by invoking `print_time` to the variable `result`. The second line is from the second print call to print the contents
+   of the `result` variable.
 
 3. `print_time()` does not explicitly `return` a value, so it automatically returns `None`.
 
@@ -263,7 +263,7 @@ result of call is: None
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Encapsulation
+## Інкапсуляція
 
 Fill in the blanks to create a function that takes a single filename as an argument,
 loads the data in the file named by the argument,
@@ -279,7 +279,7 @@ def min_in_data(____):
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 ```python
 import pandas as pd
@@ -297,9 +297,8 @@ def min_in_data(filename):
 
 ## Find the First
 
-Fill in the blanks to create a function that takes a list of numbers as an argument
-and returns the first negative value in the list.
-What does your function do if the list is empty? What if the list has no negative numbers?
+Заповніть порожні поля, щоб створити функцію, яка приймає список чисел як аргумент і повертає перше від’ємне значення в списку.
+Що робить ваша функція, якщо список порожній? What if the list has no negative numbers?
 
 ```python
 def first_negative(values):
@@ -310,7 +309,7 @@ def first_negative(values):
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 ```python
 def first_negative(values):
@@ -358,17 +357,17 @@ print_date(day=1, month=2, year=2003)
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 1. `2003/2/1`
 
 2. We saw examples of using _named arguments_ when working with the pandas library. For example, when reading in a dataset
-  using `data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')`, the last argument `index_col` is a
-  named argument.
+   using `data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')`, the last argument `index_col` is a
+   named argument.
 
 3. Using named arguments can make code more readable since one can see from the function call what name the different arguments
-  have inside the function. It can also reduce the chances of passing arguments in the wrong order, since by using named arguments
-  the order doesn't matter.
+   have inside the function. It can also reduce the chances of passing arguments in the wrong order, since by using named arguments
+   the order doesn't matter.
 
 :::::::::::::::::::::::::
 
@@ -463,7 +462,7 @@ japan = data_asia.loc['Japan']
 ```
 
 1. Complete the statements below to obtain the average GDP for Japan
-  across the years reported for the 1980s.
+   across the years reported for the 1980s.
 
 ```python
 year = 1983
@@ -483,10 +482,10 @@ def avg_gdp_in_decade(country, continent, year):
 ```
 
 3. How would you generalize this function
-  if you did not know beforehand which specific years occurred as columns in the data?
-  For instance, what if we also had data from years ending in 1 and 9 for each decade?
-  (Hint: use the columns to filter out the ones that correspond to the decade,
-  instead of enumerating them in the code.)
+   if you did not know beforehand which specific years occurred as columns in the data?
+   For instance, what if we also had data from years ending in 1 and 9 for each decade?
+   (Hint: use the columns to filter out the ones that correspond to the decade,
+   instead of enumerating them in the code.)
 
 :::::::::::::::  solution
 
@@ -552,22 +551,22 @@ a growth model that computes a new population density (between  0 and 1) based o
 density. In the model, time takes discrete values 0, 1, 2, ...
 
 1. Define a function called `logistic_map` that takes two inputs: `x`, representing the current
-  population (at time `t`), and a parameter `r = 1`. This function should return a value
-  representing the state of the system (population) at time `t + 1`, using the mapping function:
+   population (at time `t`), and a parameter `r = 1`. This function should return a value
+   representing the state of the system (population) at time `t + 1`, using the mapping function:
 
 `f(t+1) = r * f(t) * [1 - f(t)]`
 
 2. Using a `for` or `while` loop, iterate the `logistic_map` function defined in part 1, starting
-  from an initial population of 0.5, for a period of time `t_final = 10`. Store the intermediate
-  results in a list so that after the loop terminates you have accumulated a sequence of values
-  representing the state of the logistic map at times `t = [0,1,...,t_final]` (11 values in total).
-  Print this list to see the evolution of the population.
+   from an initial population of 0.5, for a period of time `t_final = 10`. Store the intermediate
+   results in a list so that after the loop terminates you have accumulated a sequence of values
+   representing the state of the logistic map at times `t = [0,1,...,t_final]` (11 values in total).
+   Print this list to see the evolution of the population.
 
 3. Encapsulate the logic of your loop into a function called `iterate` that takes the initial
-  population as its first input, the parameter `t_final` as its second input and the parameter
-  `r` as its third input. The function should return the list of values representing the state of
-  the logistic map at times `t = [0,1,...,t_final]`. Run this function for periods `t_final = 100`
-  and `1000` and print some of the values. Is the population trending toward a steady state?
+   population as its first input, the parameter `t_final` as its second input and the parameter
+   `r` as its third input. The function should return the list of values representing the state of
+   the logistic map at times `t = [0,1,...,t_final]`. Run this function for periods `t_final = 100`
+   and `1000` and print some of the values. Is the population trending toward a steady state?
 
 :::::::::::::::  solution
 

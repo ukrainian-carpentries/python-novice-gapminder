@@ -6,7 +6,7 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Correctly write programs that use if and else statements and simple Boolean expressions (without logical operators).
+- Правильно писати програми, які використовують оператори if та else, та прості булеві вирази (без логічних операторів).
 - Trace the execution of unnested conditionals and conditionals inside loops.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -17,11 +17,11 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Use `if` statements to control whether or not a block of code is executed.
+## Використовуйте команди `if`, щоб контролювати, чи виконується блок коду.
 
 - An `if` statement (more properly called a _conditional_ statement)
   controls whether some block of code is executed or not.
-- Structure is similar to a `for` statement:
+- Його синтаксис подібний до синтаксису оператора `for`:
   - Перший рядок починається з \`if' і закінчується двокрапкою
   - Body containing one or more statements is indented (usually by 4 spaces)
 
@@ -42,7 +42,7 @@ if mass > 3.0:
 ## Умовні оператори часто використовуються всередині циклів.
 
 - Немає особливого сенсу використовувати умовний оператор, коли ми знаємо точне значення (як у прикладі вище).
-- But useful when we have a collection to process.
+- Але це корисно, коли у нас є колекція для обробки.
 
 ```python
 masses = [3.54, 2.07, 9.22, 1.86, 1.71]
@@ -56,10 +56,10 @@ for m in masses:
 9.22 is large
 ```
 
-## Use `else` to execute a block of code when an `if` condition is _not_ true.
+## Використовуйте `else` для виконання блоку коду, коли умова `if` не виконується.
 
 - `else` можна використовувати після `if`.
-- Allows us to specify an alternative to execute when the `if` _branch_ isn't taken.
+- Це дозволяє вказати альтернативу для виконання, коли умова _гілки_ `if` не виконується.
 
 ```python
 masses = [3.54, 2.07, 9.22, 1.86, 1.71]
@@ -78,11 +78,11 @@ for m in masses:
 1.71 is small
 ```
 
-## Use `elif` to specify additional tests.
+## Використовуйте `elif` для визначення додаткових перевірок.
 
 - May want to provide several alternative choices, each with its own test.
 - Use `elif` (short for "else if") and a condition to specify these.
-- Always associated with an `if`.
+- Завжди асоціюється з `if`.
 - Must come before the `else` (which is the "catch all").
 
 ```python
@@ -106,8 +106,8 @@ for m in masses:
 
 ## Conditions are tested once, in order.
 
-- Python steps through the branches of the conditional in order, testing each in turn.
-- So ordering matters.
+- Python послідовно проходить гілки умовного оператора, перевіряючи кожну по черзі.
+- Отже, порядок має значення.
 
 ```python
 grade = 85
@@ -167,7 +167,7 @@ moving too slow
 final velocity: 30.0
 ```
 
-## Create a table showing variables' values to trace a program's execution.
+## Створіть таблицю зі значеннями змінних для відстеження виконання програми.
 
 <table>
   <tbody><tr>   <td><strong>i</strong></td>   <td>0</td>   <td>.</td>   <td>1</td>   <td>.</td>   <td>2</td>   <td>.</td>   <td>3</td>   <td>.</td>   <td>4</td>   <td>.</td>
@@ -225,9 +225,9 @@ so it is perfectly clear to a reader (and to Python) what you really mean.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Tracing Execution
+## Відстеження виконання
 
-What does this program print?
+Що надрукує ця програма?
 
 ```python
 pressure = 71.9
@@ -252,7 +252,7 @@ print(pressure)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Trimming Values
+## Обрізання значень
 
 Fill in the blanks so that this program creates a new list
 containing zeroes where the original list's values were negative
@@ -294,7 +294,7 @@ print(result)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Processing Small Files
+## Обробка малих файлів
 
 Modify this program so that it only processes files with fewer than 50 records.
 
@@ -326,7 +326,7 @@ for filename in glob.glob('data/*.csv'):
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Initializing
+## Ініціалізація
 
 Modify this program so that it finds the largest and smallest values in the list
 no matter what the range of values originally is.
@@ -399,9 +399,9 @@ print(smallest, largest)
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - Use `if` statements to control whether or not a block of code is executed.
-- Conditionals are often used inside loops.
+- Умовні оператори часто використовуються всередині циклів.
 - Use `else` to execute a block of code when an `if` condition is _not_ true.
-- Use `elif` to specify additional tests.
+- Використовуйте `elif` для визначення додаткових перевірок.
 - Conditions are tested once, in order.
 - Create a table showing variables' values to trace a program's execution.
 
