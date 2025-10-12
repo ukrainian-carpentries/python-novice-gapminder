@@ -250,7 +250,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="07-reading-tabular.html">7. Reading Tabular Data into DataFrames</a>
+        <a href="07-reading-tabular.html">7. Зчитування табличних даних у датафрейми</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -307,13 +307,14 @@
       <div class="accordion-body">
         <ul><li><a href="#a-for-loop-executes-commands-once-for-each-value-in-a-collection.">A <em>for loop</em> executes commands once for each value in a
 collection.</a></li>
-<li><a href="#a-for-loop-is-made-up-of-a-collection-a-loop-variable-and-a-body.">A <code>for</code> loop is made up of a collection, a loop variable,
-and a body.</a></li>
+<li><a href="#%D1%86%D0%B8%D0%BA%D0%BB-for-%D1%81%D0%BA%D0%BB%D0%B0%D0%B4%D0%B0%D1%94%D1%82%D1%8C%D1%81%D1%8F-%D0%B7-%D0%BA%D0%BE%D0%BB%D0%B5%D0%BA%D1%86%D1%96%D1%97-%D0%B7%D0%BC%D1%96%D0%BD%D0%BD%D0%BE%D1%97-%D1%86%D0%B8%D0%BA%D0%BB%D1%83-%D1%82%D0%B0-%D1%82%D1%96%D0%BB%D0%B0-%D1%86%D0%B8%D0%BA%D0%BB%D1%83.">Цикл <code>for</code> складається з колекції, змінної циклу та тіла
+циклу.</a></li>
 <li><a href="#the-first-line-of-the-for-loop-must-end-with-a-colon-and-the-body-must-be-indented.">The first line of the <code>for</code> loop must end with a colon,
 and the body must be indented.</a></li>
-<li><a href="#loop-variables-can-be-called-anything.">Loop variables can be called anything.</a></li>
+<li><a href="#%D0%B7%D0%BC%D1%96%D0%BD%D0%BD%D1%96-%D1%86%D0%B8%D0%BA%D0%BB%D1%83-%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0-%D0%BD%D0%B0%D0%B7%D0%B8%D0%B2%D0%B0%D1%82%D0%B8-%D1%8F%D0%BA-%D0%B7%D0%B0%D0%B2%D0%B3%D0%BE%D0%B4%D0%BD%D0%BE.">Змінні циклу можна називати як завгодно.</a></li>
 <li><a href="#the-body-of-a-loop-can-contain-many-statements.">The body of a loop can contain many statements.</a></li>
-<li><a href="#use-range-to-iterate-over-a-sequence-of-numbers.">Use <code>range</code> to iterate over a sequence of numbers.</a></li>
+<li><a href="#%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D0%B9%D1%82%D0%B5-range-%D0%B4%D0%BB%D1%8F-%D0%BF%D0%B5%D1%80%D0%B5%D0%B1%D0%BE%D1%80%D1%83-%D0%BF%D0%BE%D1%81%D0%BB%D1%96%D0%B4%D0%BE%D0%B2%D0%BD%D0%BE%D1%81%D1%82%D1%96-%D1%87%D0%B8%D1%81%D0%B5%D0%BB.">Використовуйте <code>range</code> для перебору послідовності
+чисел.</a></li>
 <li><a href="#the-accumulator-pattern-turns-many-values-into-one.">The Accumulator pattern turns many values into one.</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -360,7 +361,7 @@ and the body must be indented.</a></li>
 <div class="accordion accordion-flush" id="accordionFlush18">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading18">
-        <a href="17-scope.html">17. Variable Scope</a>
+        <a href="17-scope.html">17. Область видимості змінної</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -451,7 +452,7 @@ and the body must be indented.</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>For Loops</h1>
-        <p>Останнє оновлення 2024-07-02 |
+        <p>Останнє оновлення 2025-10-12 |
 
         <a href="https://github.com/ukrainian-carpentries/python-novice-gapminder/edit/main/episodes/12-for-loops.md" class="external-link">Редагувати цю сторінку <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -478,11 +479,11 @@ and the body must be indented.</a></li>
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Цілі</h3>
-<ul><li>Explain what for loops are normally used for.</li>
-<li>Trace the execution of a simple (unnested) loop and correctly state
-the values of variables in each iteration.</li>
-<li>Write for loops that use the Accumulator pattern to aggregate
-values.</li>
+<ul><li>Поясніть, для чого зазвичай використовуються цикли for.</li>
+<li>Проаналізуйте виконання простого (невкладеного) циклу та правильно
+вкажіть значення змінних у кожній ітерації.</li>
+<li>Напишіть цикли for, які використовують шаблон накопичувача для
+агрегування значень.</li>
 </ul></div>
 </div>
 </div>
@@ -502,7 +503,7 @@ each value in a list, a character string, or some other collection.</li>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>]:</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>    <span class="bu">print</span>(number)</span></code></pre>
 </div>
-<ul><li>This <code>for</code> loop is equivalent to:</li>
+<ul><li>Цей цикл <code>for</code> є еквівалентним наступному:</li>
 </ul><div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -510,7 +511,7 @@ each value in a list, a character string, or some other collection.</li>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">3</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">5</span>)</span></code></pre>
 </div>
-<ul><li>And the <code>for</code> loop’s output is:</li>
+<ul><li>І результат циклу <code>for</code> є таким:</li>
 </ul><div class="codewrapper">
 <h3 class="code-label">ВИХІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -518,8 +519,8 @@ each value in a list, a character string, or some other collection.</li>
 <span><span class="fl">3</span></span>
 <span><span class="fl">5</span></span></code></pre>
 </div>
-</section><section><h2 class="section-heading" id="a-for-loop-is-made-up-of-a-collection-a-loop-variable-and-a-body-">A <code>for</code> loop is made up of a collection, a loop variable,
-and a body.<a class="anchor" aria-label="anchor" href="#a-for-loop-is-made-up-of-a-collection-a-loop-variable-and-a-body-"></a></h2>
+</section><section><h2 class="section-heading" id="цикл-for-складається-з-колекції-змінної-циклу-та-тіла-циклу-">Цикл <code>for</code> складається з колекції, змінної циклу та тіла
+циклу.<a class="anchor" aria-label="anchor" href="#%D1%86%D0%B8%D0%BA%D0%BB-for-%D1%81%D0%BA%D0%BB%D0%B0%D0%B4%D0%B0%D1%94%D1%82%D1%8C%D1%81%D1%8F-%D0%B7-%D0%BA%D0%BE%D0%BB%D0%B5%D0%BA%D1%86%D1%96%D1%97-%D0%B7%D0%BC%D1%96%D0%BD%D0%BD%D0%BE%D1%97-%D1%86%D0%B8%D0%BA%D0%BB%D1%83-%D1%82%D0%B0-%D1%82%D1%96%D0%BB%D0%B0-%D1%86%D0%B8%D0%BA%D0%BB%D1%83-"></a></h2>
 <hr class="half-width"><div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -528,10 +529,10 @@ and a body.<a class="anchor" aria-label="anchor" href="#a-for-loop-is-made-up-of
 </div>
 <ul><li>The collection, <code>[2, 3, 5]</code>, is what the loop is being
 run on.</li>
-<li>The body, <code>print(number)</code>, specifies what to do for each
-value in the collection.</li>
-<li>The loop variable, <code>number</code>, is what changes for each
-<em>iteration</em> of the loop.
+<li>Тіло циклу, <code>print(number)</code>, визначає, що робити для
+кожного значення в колекції.</li>
+<li>Змінна циклу, <code>number</code>, змінюється для кожної ітерації
+циклу.
 <ul><li>The “current thing”.</li>
 </ul></li>
 </ul></section><section><h2 class="section-heading" id="the-first-line-of-the-for-loop-must-end-with-a-colon-and-the-body-must-be-indented-">The first line of the <code>for</code> loop must end with a colon,
@@ -540,8 +541,8 @@ and the body must be indented.<a class="anchor" aria-label="anchor" href="#the-f
 <em>block</em> of statements.</li>
 <li>Python uses indentation rather than <code>{}</code> or
 <code>begin</code>/<code>end</code> to show <em>nesting</em>.
-<ul><li>Any consistent indentation is legal, but almost everyone uses four
-spaces.</li>
+<ul><li>Будь-який послідовний відступ є допустимим, але майже усі
+використовують чотири пробіли.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -571,10 +572,11 @@ IndentationError: unexpected indent</code></pre>
 </div>
 <ul><li>This error can be fixed by removing the extra spaces at the
 beginning of the second line.</li>
-</ul></section><section><h2 class="section-heading" id="loop-variables-can-be-called-anything-">Loop variables can be called anything.<a class="anchor" aria-label="anchor" href="#loop-variables-can-be-called-anything-"></a></h2>
-<hr class="half-width"><ul><li>As with all variables, loop variables are:
-<ul><li>Created on demand.</li>
-<li>Meaningless: their names can be anything at all.</li>
+</ul></section><section><h2 class="section-heading" id="змінні-циклу-можна-називати-як-завгодно-">Змінні циклу можна називати як завгодно.<a class="anchor" aria-label="anchor" href="#%D0%B7%D0%BC%D1%96%D0%BD%D0%BD%D1%96-%D1%86%D0%B8%D0%BA%D0%BB%D1%83-%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0-%D0%BD%D0%B0%D0%B7%D0%B8%D0%B2%D0%B0%D1%82%D0%B8-%D1%8F%D0%BA-%D0%B7%D0%B0%D0%B2%D0%B3%D0%BE%D0%B4%D0%BD%D0%BE-"></a></h2>
+<hr class="half-width"><ul><li>Як і всі інші змінні, змінні циклу:
+<ul><li>Створюються за потреби</li>
+<li>Не несуть смислового навантаження: їх імена можуть бути
+будь-якими.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -584,7 +586,7 @@ beginning of the second line.</li>
 </div>
 </section><section><h2 class="section-heading" id="the-body-of-a-loop-can-contain-many-statements-">The body of a loop can contain many statements.<a class="anchor" aria-label="anchor" href="#the-body-of-a-loop-can-contain-many-statements-"></a></h2>
 <hr class="half-width"><ul><li>But no loop should be more than a few lines long.</li>
-<li>Hard for human beings to keep larger chunks of code in mind.</li>
+<li>Людям важко запам’ятати великі фрагменти коду.</li>
 </ul><div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -601,9 +603,10 @@ beginning of the second line.</li>
 3 9 27
 5 25 125</code></pre>
 </div>
-</section><section><h2 class="section-heading" id="use-range-to-iterate-over-a-sequence-of-numbers-">Use <code>range</code> to iterate over a sequence of numbers.<a class="anchor" aria-label="anchor" href="#use-range-to-iterate-over-a-sequence-of-numbers-"></a></h2>
-<hr class="half-width"><ul><li>The built-in function <a href="https://docs.python.org/3/library/stdtypes.html#range" class="external-link"><code>range</code></a>
-produces a sequence of numbers.
+</section><section><h2 class="section-heading" id="використовуйте-range-для-перебору-послідовності-чисел-">Використовуйте <code>range</code> для перебору послідовності
+чисел.<a class="anchor" aria-label="anchor" href="#%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D0%B9%D1%82%D0%B5-range-%D0%B4%D0%BB%D1%8F-%D0%BF%D0%B5%D1%80%D0%B5%D0%B1%D0%BE%D1%80%D1%83-%D0%BF%D0%BE%D1%81%D0%BB%D1%96%D0%B4%D0%BE%D0%B2%D0%BD%D0%BE%D1%81%D1%82%D1%96-%D1%87%D0%B8%D1%81%D0%B5%D0%BB-"></a></h2>
+<hr class="half-width"><ul><li>Вбудована функція <a href="https://docs.python.org/3/library/stdtypes.html#range" class="external-link"><code>range</code></a>
+створює послідовність чисел.
 <ul><li>
 <em>Not</em> a list: the numbers are produced on demand to make
 looping over large ranges more efficient.</li>
@@ -1162,8 +1165,8 @@ have a meaningful name to the looping variable).</li>
   "url": "https://ukrainian-carpentries.github.io/python-novice-gapminder/12-for-loops.html",
   "identifier": "https://ukrainian-carpentries.github.io/python-novice-gapminder/12-for-loops.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2024-07-02",
-  "datePublished": "2025-10-07"
+  "dateModified": "2025-10-12",
+  "datePublished": "2025-10-12"
 }
 
   </script><script>
