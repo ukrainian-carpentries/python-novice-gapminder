@@ -135,7 +135,7 @@ memory usage: 208.0+ bytes
 
 - Зверніть увагу, що це дані, _а не_ метод.  (Відсутні дужки)
   - Подібно до `math.pi`.
-  - So do not use `()` to try to call it.
+  - Тому не використовуйте `()`, тому що це - не функція.
 - Called a _member variable_, or just _member_.
 
 ```python
@@ -177,8 +177,8 @@ gdpPercap_2007  34435.36744  25185.00911
 
 ## Використовуйте `DataFrame.describe`, щоб отримати зведену статистику даних.
 
-`DataFrame.describe()` gets the summary statistics of only the columns that have numerical data.
-All other columns are ignored, unless you use the argument `include='all'`.
+`DataFrame.describe()` отримує зведену статистику лише для стовпців, які містять числові дані.
+Якщо ви не використовуєте аргумент `include='all'`, усі інші стовпці ігноруються.
 
 ```python
 print(data_oceania_country.describe())
@@ -216,25 +216,21 @@ min      18363.324940    21050.413770    23189.801350    25185.009110
 max      23424.766830    26997.936570    30687.754730    34435.367440
 ```
 
-- Not particularly useful with just two records,
-  but very helpful when there are thousands.
+- Це не додає багато нової інформації у випадку лише двох записів, але дуже корисно, коли їх тисячі.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Читання інших даних
+## Ще одна вправа на читання даних
 
-Read the data in `gapminder_gdp_americas.csv`
-(which should be in the same directory as `gapminder_gdp_oceania.csv`)
-into a variable called `data_americas`
-and display its summary statistics.
+Зчитайте дані з файлу `gapminder_gdp_americas.csv` (який має бути в тому ж каталозі, що й `gapminder_gdp_oceania.csv`) у змінну `data_americas` і відобразіть її зведену статистику.
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
-Щоб зчитати CSV-файл, ми використовуємо функцію pd.read_csv і передаємо їй ім'я файлу 'data/gapminder_gdp_americas.csv' як аргумент.
-We also once again pass the column name `'country'` to the parameter `index_col` in order to index by country.
-The summary statistics can be displayed with the `DataFrame.describe()` method.
+Щоб зчитати CSV-файл, ми використовуємо функцію `pd.read_csv` і передаємо їй ім'я файлу `'data/gapminder_gdp_americas.csv'` як аргумент.
+Також ми передаємо назву стовпця `'country'` у параметрі `index_col`, щоб індексувати за країною.
+Зведену статистику можна показати за допомогою методу `DataFrame.describe()`.
 
 ```python
 data_americas = pd.read_csv('data/gapminder_gdp_americas.csv', index_col='country')
@@ -249,15 +245,15 @@ data_americas.describe()
 
 ## Перевірка даних
 
-Після введення датафрейму `data_americas`, попрацюйте з довідкою `help(data_americas.head)` і `help(data_americas.tail)`, щоб дізнатися про призначення команд `DataFrame.head` і `DataFrame.tail`.
+Після введення датафрейму `data_americas` попрацюйте з довідкою `help(data_americas.head)` та `help(data_americas.tail)`, щоб дізнатися про призначення команд `DataFrame.head` та `DataFrame.tail`.
 
 1. Виклик якого методу виведе перші три рядки цього датафрейму?
 2. Виклик якого методу виведе останні три стовпці цього датафрейму?
-   (Підказка: вам може знадобитися змінити спосіб перегляду даних.)
+   (Підказка: вам може знадобитися змінити спосіб перегляду даних).
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 1. We can check out the first five rows of `data_americas` by executing `data_americas.head()`
    which lets us view the beginning of the DataFrame. Ми можемо вказати кількість рядків, які ми хочемо бачити, визначивши параметр `n` у нашому виклику `americas.head()`.
@@ -368,9 +364,9 @@ your_home_directory
 
 :::::::::::::::  solution
 
-## Рішення
+## Solution
 
-We need to specify the path to the file of interest in the call to `pd.read_csv`. По-перше, потрібно «вистрибнути» з теки `thesis` за допомогою '../', а потім зайти у теку `field_data` за допомогою 'field_data/'. Після цього вказати назву файлу \`microbes.csv.
+We need to specify the path to the file of interest in the call to `pd.read_csv`. По-перше, потрібно «вистрибнути» з теки `thesis` за допомогою '../', а потім зайти у теку `field_data` за допомогою 'field_data/'. Then we can specify the filename \\`microbes.csv.
 The result is as follows:
 
 ```python
@@ -393,7 +389,7 @@ write one of your dataframes to a file called `processed.csv`.
 
 :::::::::::::::  solution
 
-## Рішення
+## Solution
 
 In order to write the DataFrame `data_americas` to a file called `processed.csv`, execute the following command:
 
