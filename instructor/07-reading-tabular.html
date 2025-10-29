@@ -453,7 +453,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Зчитування табличних даних у датафрейми</h1>
-        <p>Останнє оновлення 2025-10-12 |
+        <p>Останнє оновлення 2025-10-29 |
 
         <a href="https://github.com/ukrainian-carpentries/python-novice-gapminder/edit/main/episodes/07-reading-tabular.md" class="external-link">Редагувати цю сторінку <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -642,7 +642,8 @@ memory usage: 208.0+ bytes</code></pre>
 стовпці датафрейму.<a class="anchor" aria-label="anchor" href="#%D0%B7%D0%BC%D1%96%D0%BD%D0%BD%D0%B0-dataframe-columns-%D0%B7%D0%B1%D0%B5%D1%80%D1%96%D0%B3%D0%B0%D1%94-%D1%96%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D1%96%D1%8E-%D0%BF%D1%80%D0%BE-%D1%81%D1%82%D0%BE%D0%B2%D0%BF%D1%86%D1%96-%D0%B4%D0%B0%D1%82%D0%B0%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D1%83-"></a></h2>
 <hr class="half-width"><ul><li>Зверніть увагу, що це дані, <em>а не</em> метод. (Відсутні дужки)
 <ul><li>Подібно до <code>math.pi</code>.</li>
-<li>So do not use <code>()</code> to try to call it.</li>
+<li>Тому не використовуйте <code>()</code>, тому що це - не
+функція.</li>
 </ul></li>
 <li>Called a <em>member variable</em>, or just <em>member</em>.</li>
 </ul><div class="codewrapper sourceCode" id="cb8">
@@ -688,9 +689,9 @@ gdpPercap_2007  34435.36744  25185.00911</code></pre>
 </div>
 </section><section><h2 class="section-heading" id="використовуйте-dataframe-describe-щоб-отримати-зведену-статистику-даних-">Використовуйте <code>DataFrame.describe</code>, щоб отримати зведену
 статистику даних.<a class="anchor" aria-label="anchor" href="#%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D0%B9%D1%82%D0%B5-dataframe-describe-%D1%89%D0%BE%D0%B1-%D0%BE%D1%82%D1%80%D0%B8%D0%BC%D0%B0%D1%82%D0%B8-%D0%B7%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D1%83-%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D1%83-%D0%B4%D0%B0%D0%BD%D0%B8%D1%85-"></a></h2>
-<hr class="half-width"><p><code>DataFrame.describe()</code> gets the summary statistics of only
-the columns that have numerical data. All other columns are ignored,
-unless you use the argument <code>include='all'</code>.</p>
+<hr class="half-width"><p><code>DataFrame.describe()</code> отримує зведену статистику лише для
+стовпців, які містять числові дані. Якщо ви не використовуєте аргумент
+<code>include='all'</code>, усі інші стовпці ігноруються.</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -729,38 +730,37 @@ min      18363.324940    21050.413770    23189.801350    25185.009110
 75%      22159.406358    25511.055870    28813.266385    32122.777857
 max      23424.766830    26997.936570    30687.754730    34435.367440</code></pre>
 </div>
-<ul><li>Not particularly useful with just two records, but very helpful when
-there are thousands.</li>
-</ul><div id="читання-інших-даних" class="callout challenge">
+<ul><li>Це не додає багато нової інформації у випадку лише двох записів, але
+дуже корисно, коли їх тисячі.</li>
+</ul><div id="ще-одна-вправа-на-читання-даних" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Вправа</span>
-<div id="читання-інших-даних" class="callout-inner">
-<h3 class="callout-title">Читання інших даних</h3>
+<div id="ще-одна-вправа-на-читання-даних" class="callout-inner">
+<h3 class="callout-title">Ще одна вправа на читання даних</h3>
 <div class="callout-content">
-<p>Read the data in <code>gapminder_gdp_americas.csv</code> (which
-should be in the same directory as
-<code>gapminder_gdp_oceania.csv</code>) into a variable called
-<code>data_americas</code> and display its summary statistics.</p>
+<p>Зчитайте дані з файлу <code>gapminder_gdp_americas.csv</code> (який
+має бути в тому ж каталозі, що й <code>gapminder_gdp_oceania.csv</code>)
+у змінну <code>data_americas</code> і відобразіть її зведену
+статистику.</p>
 </div>
 </div>
 </div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1">
-  Рішення
-  </h4>
+  <h4 class="accordion-header" id="headingSolution1"> Відповідь </h4>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<p>Щоб зчитати CSV-файл, ми використовуємо функцію pd.read_csv і
-передаємо їй ім’я файлу ‘data/gapminder_gdp_americas.csv’ як аргумент.
-We also once again pass the column name <code>'country'</code> to the
-parameter <code>index_col</code> in order to index by country. The
-summary statistics can be displayed with the
-<code>DataFrame.describe()</code> method.</p>
+<p>Щоб зчитати CSV-файл, ми використовуємо функцію
+<code>pd.read_csv</code> і передаємо їй ім’я файлу
+<code>'data/gapminder_gdp_americas.csv'</code> як аргумент. Також ми
+передаємо назву стовпця <code>'country'</code> у параметрі
+<code>index_col</code>, щоб індексувати за країною. Зведену статистику
+можна показати за допомогою методу
+<code>DataFrame.describe()</code>.</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -779,22 +779,20 @@ summary statistics can be displayed with the
 <div id="перевірка-даних" class="callout-inner">
 <h3 class="callout-title">Перевірка даних</h3>
 <div class="callout-content">
-<p>Після введення датафрейму <code>data_americas</code>, попрацюйте з
-довідкою <code>help(data_americas.head)</code> і
+<p>Після введення датафрейму <code>data_americas</code> попрацюйте з
+довідкою <code>help(data_americas.head)</code> та
 <code>help(data_americas.tail)</code>, щоб дізнатися про призначення
-команд <code>DataFrame.head</code> і <code>DataFrame.tail</code>.</p>
+команд <code>DataFrame.head</code> та <code>DataFrame.tail</code>.</p>
 <ol style="list-style-type: decimal"><li>Виклик якого методу виведе перші три рядки цього датафрейму?</li>
 <li>Виклик якого методу виведе останні три стовпці цього датафрейму?
-(Підказка: вам може знадобитися змінити спосіб перегляду даних.)</li>
+(Підказка: вам може знадобитися змінити спосіб перегляду даних).</li>
 </ol></div>
 </div>
 </div>
 <div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2">
-  Рішення
-  </h4>
+  <h4 class="accordion-header" id="headingSolution2"> Відповідь </h4>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
@@ -925,17 +923,15 @@ of code by ‘chaining’ the commands:</p>
 <div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
-  <h4 class="accordion-header" id="headingSolution3">
-  Рішення
-  </h4>
+  <h4 class="accordion-header" id="headingSolution3"> Показати відповіді </h4>
 </button>
 <div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>We need to specify the path to the file of interest in the call to
 <code>pd.read_csv</code>. По-перше, потрібно «вистрибнути» з теки
 <code>thesis</code> за допомогою ‘../’, а потім зайти у теку
-<code>field_data</code> за допомогою ‘field_data/’. Після цього вказати
-назву файлу `microbes.csv. The result is as follows:</p>
+<code>field_data</code> за допомогою ‘field_data/’. Then we can specify
+the filename \`microbes.csv. The result is as follows:</p>
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -965,9 +961,7 @@ one of your dataframes to a file called <code>processed.csv</code>. Ви
 <div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
-  <h4 class="accordion-header" id="headingSolution4">
-  Рішення
-  </h4>
+  <h4 class="accordion-header" id="headingSolution4"> Показати відповіді </h4>
 </button>
 <div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
@@ -1075,8 +1069,8 @@ the dataframe’s columns.</li>
   "url": "https://ukrainian-carpentries.github.io/python-novice-gapminder/instructor/07-reading-tabular.html",
   "identifier": "https://ukrainian-carpentries.github.io/python-novice-gapminder/instructor/07-reading-tabular.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2025-10-12",
-  "datePublished": "2025-10-28"
+  "dateModified": "2025-10-29",
+  "datePublished": "2025-10-29"
 }
 
   </script><script>
