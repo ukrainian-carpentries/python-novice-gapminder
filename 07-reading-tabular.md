@@ -289,16 +289,15 @@ Bolivia       3822.137084
 Brazil        9065.800825
 ```
 
-2. To check out the last three rows of `data_americas`, we would use the command,
-   `americas.tail(n=3)`, analogous to `head()` used above. Однак тут ми хочемо переглянути останні три стовпці, отже, нам потрібно змінити подання інформації, а потім використати `tail()`. To do so, we
+2. Щоб перевірити останні три рядки `data_americas`, ми можемо використати команду `data_americas.tail(n=3)`, яка аналогічна методу `head()`, що застосовувався вище. However, here we want to look at
+   the last three columns so we need to change our view and then use `tail()`. To do so, we
    create a new DataFrame in which rows and columns are switched:
 
 ```python
 americas_flipped = data_americas.T
 ```
 
-We can then view the last three columns of `americas` by viewing the last three rows
-of `americas_flipped`:
+Тепер ми можемо переглянути останні три стовпці `data_americas` за допомогою перегляду останніх трьох рядків `americas_flipped`:
 
 ```python
 americas_flipped.tail(n=3)
