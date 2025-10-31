@@ -750,9 +750,11 @@ max      23424.766830    26997.936570    30687.754730    34435.367440</code></pr
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Відповідь </h4>
+  <h4 class="accordion-header" id="headingSolution1">
+  Відповідь
+  </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Щоб зчитати CSV-файл, ми використовуємо функцію
 <code>pd.read_csv</code> і передаємо їй ім’я файлу
@@ -792,9 +794,11 @@ max      23424.766830    26997.936570    30687.754730    34435.367440</code></pr
 <div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Відповідь </h4>
+  <h4 class="accordion-header" id="headingSolution2">
+  Відповідь
+  </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>We can check out the first five rows of <code>data_americas</code>
 by executing <code>data_americas.head()</code> which lets us view the
@@ -902,8 +906,8 @@ of code by ‘chaining’ the commands:</p>
 <div id="reading-files-in-other-directories" class="callout-inner">
 <h3 class="callout-title">Reading Files in Other Directories</h3>
 <div class="callout-content">
-<p>The data for your current project is stored in a file called
-<code>microbes.csv</code>, which is located in a folder called
+<p>Дані вашого поточного проєкту зберігаються у файлі під назвою
+<code>microbes.csv</code>, який знаходиться в каталозі
 <code>field_data</code>. You are doing analysis in a notebook called
 <code>analysis.ipynb</code> in a sibling folder called
 <code>thesis</code>:</p>
@@ -916,23 +920,25 @@ of code by ‘chaining’ the commands:</p>
 +-- thesis/
     +-- analysis.ipynb</code></pre>
 </div>
-<p>Які значення потрібно передати в <code>read_csv</code>, щоб прочитати
-<code>microbes.csv</code> у <code>analysis.ipynb</code>?</p>
+<p>What value(s) should you pass to <code>read_csv</code> to read
+<code>microbes.csv</code> in <code>analysis.ipynb</code>?</p>
 </div>
 </div>
 </div>
 <div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
-  <h4 class="accordion-header" id="headingSolution3"> Показати відповіді </h4>
+  <h4 class="accordion-header" id="headingSolution3">
+  Відповідь
+  </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>We need to specify the path to the file of interest in the call to
-<code>pd.read_csv</code>. По-перше, потрібно «вистрибнути» з теки
-<code>thesis</code> за допомогою ‘../’, а потім зайти у теку
-<code>field_data</code> за допомогою ‘field_data/’. Then we can specify
-the filename \`microbes.csv. The result is as follows:</p>
+<code>pd.read_csv</code>. We first need to ‘jump’ out of the folder
+<code>thesis</code> using ‘../’ and then into the folder
+<code>field_data</code> using ‘field_data/’. Після цього вказати назву
+файлу <code>microbes.csv</code>. Кінцевий результат наступний:</p>
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -962,19 +968,21 @@ one of your dataframes to a file called <code>processed.csv</code>. Ви
 <div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
-  <h4 class="accordion-header" id="headingSolution4"> Показати відповіді </h4>
+  <h4 class="accordion-header" id="headingSolution4">
+  Відповідь
+  </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
-<p>In order to write the DataFrame <code>data_americas</code> to a file
-called <code>processed.csv</code>, execute the following command:</p>
+<p>Щоб записати датафрейм <code>americas</code> у файл
+<code>processed.csv</code>, виконайте таку команду:</p>
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a>americas.to_csv(<span class="st">'processed.csv'</span>)</span></code></pre>
 </div>
-<p>For help on <code>read_csv</code> or <code>to_csv</code>, you could
-execute, for example:</p>
+<p>Щоб отримати довідку щодо <code>read_csv</code> або
+<code>to_csv</code>, ви можете виконати, наприклад:</p>
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1000,13 +1008,14 @@ of a DataFrame e.g., <code>data_americas.to_csv</code> or
 <div class="callout-content">
 <ul><li>Use the Pandas library to get basic statistics out of tabular
 data.</li>
-<li>Використовуйте <code>index_col</code>, щоб вказати, що значення
-стовпця мають використовуватися як заголовки рядків.</li>
+<li>Use <code>index_col</code> to specify that a column’s values should
+be used as row headings.</li>
 <li>Use <code>DataFrame.info</code> to find out more about a
 dataframe.</li>
-<li>The <code>DataFrame.columns</code> variable stores information about
-the dataframe’s columns.</li>
-<li>Use <code>DataFrame.T</code> to transpose a dataframe.</li>
+<li>Змінна <code>DataFrame.columns</code> зберігає інформацію про
+стовпці датафрейму.</li>
+<li>Використовуйте <code>DataFrame.T</code>, щоб транспонувати
+датафрейм.</li>
 <li>Використовуйте <code>DataFrame.describe</code>, щоб отримати зведену
 статистику даних.</li>
 </ul></div>
