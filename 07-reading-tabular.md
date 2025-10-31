@@ -346,8 +346,7 @@ data_americas.T.tail(n=3).T
 
 ## Reading Files in Other Directories
 
-The data for your current project is stored in a file called `microbes.csv`,
-which is located in a folder called `field_data`.
+Дані вашого поточного проєкту зберігаються у файлі під назвою `microbes.csv`, який знаходиться в каталозі `field_data`.
 You are doing analysis in a notebook called `analysis.ipynb`
 in a sibling folder called `thesis`:
 
@@ -359,14 +358,15 @@ your_home_directory
     +-- analysis.ipynb
 ```
 
-Які значення потрібно передати в `read_csv`, щоб прочитати `microbes.csv` у `analysis.ipynb`?
+What value(s) should you pass to `read_csv` to read `microbes.csv` in `analysis.ipynb`?
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
-We need to specify the path to the file of interest in the call to `pd.read_csv`. По-перше, потрібно «вистрибнути» з теки `thesis` за допомогою '../', а потім зайти у теку `field_data` за допомогою 'field_data/'. Then we can specify the filename \\`microbes.csv.
-The result is as follows:
+We need to specify the path to the file of interest in the call to `pd.read_csv`. We first need to 'jump' out of
+the folder `thesis` using '../' and then into the folder `field_data` using 'field\_data/'. Після цього вказати назву файлу `microbes.csv`.
+Кінцевий результат наступний:
 
 ```python
 data_microbes = pd.read_csv('../field_data/microbes.csv')
@@ -388,15 +388,15 @@ write one of your dataframes to a file called `processed.csv`.
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
-In order to write the DataFrame `data_americas` to a file called `processed.csv`, execute the following command:
+Щоб записати датафрейм `americas` у файл `processed.csv`, виконайте таку команду:
 
 ```python
 americas.to_csv('processed.csv')
 ```
 
-For help on `read_csv` or `to_csv`, you could execute, for example:
+Щоб отримати довідку щодо `read_csv` або `to_csv`, ви можете виконати, наприклад:
 
 ```python
 help(data_americas.to_csv)
@@ -414,10 +414,10 @@ e.g., `data_americas.to_csv` or `data_oceania.to_csv`
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - Use the Pandas library to get basic statistics out of tabular data.
-- Використовуйте `index_col`, щоб вказати, що значення стовпця мають використовуватися як заголовки рядків.
+- Use `index_col` to specify that a column's values should be used as row headings.
 - Use `DataFrame.info` to find out more about a dataframe.
-- The `DataFrame.columns` variable stores information about the dataframe's columns.
-- Use `DataFrame.T` to transpose a dataframe.
+- Змінна `DataFrame.columns` зберігає інформацію про стовпці датафрейму.
+- Використовуйте `DataFrame.T`, щоб транспонувати датафрейм.
 - Використовуйте `DataFrame.describe`, щоб отримати зведену статистику даних.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
