@@ -1,5 +1,5 @@
 ---
-title: Фрейми даних Pandas
+title: Pandas DataFrames
 teaching: 15
 exercises: 15
 ---
