@@ -281,8 +281,8 @@
 <li><a href="#%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82-%D0%B7%D1%80%D1%96%D0%B7%D1%83-%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0-%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D0%B2%D0%B0%D1%82%D0%B8-%D0%B2-%D0%BF%D0%BE%D0%B4%D0%B0%D0%BB%D1%8C%D1%88%D0%B8%D1%85-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D1%96%D1%8F%D1%85.">Результат зрізу можна використовувати в подальших операціях.</a></li>
 <li><a href="#%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D0%B9%D1%82%D0%B5-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D1%96%D1%97-%D0%BF%D0%BE%D1%80%D1%96%D0%B2%D0%BD%D1%8F%D0%BD%D0%BD%D1%8F-%D0%B4%D0%BB%D1%8F-%D0%B2%D0%B8%D0%B1%D0%BE%D1%80%D1%83-%D0%B4%D0%B0%D0%BD%D0%B8%D1%85-%D0%BD%D0%B0-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%96-%D0%BF%D0%B5%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%BD%D1%8F.">Використовуйте операції порівняння для вибору даних на основі
 певного значення.</a></li>
-<li><a href="#%D0%B2%D0%B8%D0%B1%D0%B5%D1%80%D1%96%D1%82%D1%8C-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B0%D0%B1%D0%BE-nan-%D0%B7%D0%B0-%D0%B4%D0%BE%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D0%BE%D1%8E-%D0%B1%D1%83%D0%BB%D0%B5%D0%B2%D0%BE%D1%97-%D0%BC%D0%B0%D1%81%D0%BA%D0%B8.">Виберіть значення або NaN за допомогою булевої маски.</a></li>
-<li><a href="#%D0%B3%D1%80%D1%83%D0%BF%D1%83%D0%B2%D0%B0%D1%82%D0%B8-%D0%B7%D0%B0-%D1%80%D0%BE%D0%B7%D0%B4%D1%96%D0%BB%D0%B8%D1%82%D0%B8---%D0%B7%D0%B0%D1%81%D1%82%D0%BE%D1%81%D1%83%D0%B2%D0%B0%D1%82%D0%B8---%D0%BA%D0%BE%D0%BC%D0%B1%D1%96%D0%BD%D1%83%D0%B2%D0%B0%D1%82%D0%B8">Групувати за: розділити - застосувати - комбінувати</a></li>
+<li><a href="#select-values-or-nan-using-a-boolean-mask.">Select values or NaN using a Boolean mask.</a></li>
+<li><a href="#group-by-split-apply-combine">Group By: split-apply-combine</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -455,7 +455,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Pandas DataFrames</h1>
-        <p>Останнє оновлення 2025-11-05 |
+        <p>Останнє оновлення 2025-11-09 |
 
         <a href="https://github.com/ukrainian-carpentries/python-novice-gapminder/edit/main/episodes/08-data-frames.md" class="external-link">Редагувати цю сторінку <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -587,9 +587,10 @@ Name: gdpPercap_1952, dtype: float64</code></pre>
 <ul><li>Той самий результат можна отримати, якщо надрукувати
 <code>data["gdpPercap_1952"]</code>
 </li>
-<li>Also get the same result printing <code>data.gdpPercap_1952</code>
-(not recommended, because easily confused with <code>.</code> notation
-for methods)</li>
+<li>Більш того, той самий результат можна отримати, застосовуючи нотацію
+<code>data.gdpPercap_1952</code> (але не рекомендується, оскільки її
+легко сплутати з позначенням <code>.</code> для використання
+методів)</li>
 </ul></section><section><h2 class="section-heading" id="вибирайте-кілька-стовпців-або-рядків-за-допомогою-dataframe-loc-та-визначеного-зрізу-">Вибирайте кілька стовпців або рядків за допомогою
 <code>DataFrame.loc</code> та визначеного зрізу.<a class="anchor" aria-label="anchor" href="#%D0%B2%D0%B8%D0%B1%D0%B8%D1%80%D0%B0%D0%B9%D1%82%D0%B5-%D0%BA%D1%96%D0%BB%D1%8C%D0%BA%D0%B0-%D1%81%D1%82%D0%BE%D0%B2%D0%BF%D1%86%D1%96%D0%B2-%D0%B0%D0%B1%D0%BE-%D1%80%D1%8F%D0%B4%D0%BA%D1%96%D0%B2-%D0%B7%D0%B0-%D0%B4%D0%BE%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D0%BE%D1%8E-dataframe-loc-%D1%82%D0%B0-%D0%B2%D0%B8%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B7%D1%80%D1%96%D0%B7%D1%83-"></a></h2>
 <hr class="half-width"><div class="codewrapper sourceCode" id="cb9">
@@ -608,16 +609,15 @@ Netherlands    12790.849560    15363.251360    18794.745670
 Norway         13450.401510    16361.876470    18965.055510
 Poland          5338.752143     6557.152776     8006.506993</code></pre>
 </div>
-<p>У наведеному вище коді ми бачимо, що <strong>зріз із використанням
-<code>loc</code> має обидва виміри</strong>, на відміну від
-<strong>зрізу із застосуванням <code>iloc</code></strong>, де зріз
-включає все, крім кінцевого індексу.</p>
+<p>In the above code, we discover that <strong>slicing using
+<code>loc</code> is inclusive at both ends</strong>, which differs from
+<strong>slicing using <code>iloc</code></strong>, where slicing
+indicates everything up to but not including the final index.</p>
 </section><section><h2 class="section-heading" id="результат-зрізу-можна-використовувати-в-подальших-операціях-">Результат зрізу можна використовувати в подальших операціях.<a class="anchor" aria-label="anchor" href="#%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82-%D0%B7%D1%80%D1%96%D0%B7%D1%83-%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0-%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D0%B2%D0%B0%D1%82%D0%B8-%D0%B2-%D0%BF%D0%BE%D0%B4%D0%B0%D0%BB%D1%8C%D1%88%D0%B8%D1%85-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D1%96%D1%8F%D1%85-"></a></h2>
 <hr class="half-width"><ul><li>Usually don’t just print a slice.</li>
 <li>Усі статистичні оператори, які працюють зі цілими фреймами даних,
 так само працюють зі зрізами.</li>
-<li>Наприклад, обчислення максимальної кількості за стовпцями
-зрізу.</li>
+<li>E.g., calculate max of a slice.</li>
 </ul><div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -647,7 +647,7 @@ dtype: float64</code></pre>
 </section><section><h2 class="section-heading" id="використовуйте-операції-порівняння-для-вибору-даних-на-основі-певного-значення-">Використовуйте операції порівняння для вибору даних на основі
 певного значення.<a class="anchor" aria-label="anchor" href="#%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D0%B9%D1%82%D0%B5-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D1%96%D1%97-%D0%BF%D0%BE%D1%80%D1%96%D0%B2%D0%BD%D1%8F%D0%BD%D0%BD%D1%8F-%D0%B4%D0%BB%D1%8F-%D0%B2%D0%B8%D0%B1%D0%BE%D1%80%D1%83-%D0%B4%D0%B0%D0%BD%D0%B8%D1%85-%D0%BD%D0%B0-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%96-%D0%BF%D0%B5%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%BD%D1%8F-"></a></h2>
 <hr class="half-width"><ul><li>Порівняння здійснюється поелементно.</li>
-<li>Повертає фрейм даних подібної форми, що містить <code>True</code> і
+<li>Returns a similarly-shaped dataframe of <code>True</code> and
 <code>False</code>.</li>
 </ul><div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -680,7 +680,7 @@ Netherlands           True           True           True
 Norway                True           True           True
 Poland               False          False          False</code></pre>
 </div>
-</section><section><h2 class="section-heading" id="виберіть-значення-або-nan-за-допомогою-булевої-маски-">Виберіть значення або NaN за допомогою булевої маски.<a class="anchor" aria-label="anchor" href="#%D0%B2%D0%B8%D0%B1%D0%B5%D1%80%D1%96%D1%82%D1%8C-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B0%D0%B1%D0%BE-nan-%D0%B7%D0%B0-%D0%B4%D0%BE%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D0%BE%D1%8E-%D0%B1%D1%83%D0%BB%D0%B5%D0%B2%D0%BE%D1%97-%D0%BC%D0%B0%D1%81%D0%BA%D0%B8-"></a></h2>
+</section><section><h2 class="section-heading" id="select-values-or-nan-using-a-boolean-mask-">Select values or NaN using a Boolean mask.<a class="anchor" aria-label="anchor" href="#select-values-or-nan-using-a-boolean-mask-"></a></h2>
 <hr class="half-width"><ul><li>A frame full of Booleans is sometimes called a <em>mask</em> because
 of how it can be used.</li>
 </ul><div class="codewrapper sourceCode" id="cb17">
@@ -700,8 +700,8 @@ Netherlands     12790.84956     15363.25136     18794.74567
 Norway          13450.40151     16361.87647     18965.05551
 Poland                  NaN             NaN             NaN</code></pre>
 </div>
-<ul><li>Отримайте значення, якщо маска є істинною, і NaN (не число), якщо
-вона хибна.</li>
+<ul><li>Get the value where the mask is true, and NaN (Not a Number) where
+it is false.</li>
 <li>Це зручно, оскільки операції на кшталт max, min, average автоматично
 ігнорують значення NaN.</li>
 </ul><div class="codewrapper sourceCode" id="cb19">
@@ -722,15 +722,15 @@ min      12790.849560    10022.401310    12269.273780
 75%      13285.513523    15862.563915    18879.900590
 max      13450.401510    16361.876470    18965.055510</code></pre>
 </div>
-</section><section><h2 class="section-heading" id="групувати-за-розділити---застосувати---комбінувати">Групувати за: розділити - застосувати - комбінувати<a class="anchor" aria-label="anchor" href="#%D0%B3%D1%80%D1%83%D0%BF%D1%83%D0%B2%D0%B0%D1%82%D0%B8-%D0%B7%D0%B0-%D1%80%D0%BE%D0%B7%D0%B4%D1%96%D0%BB%D0%B8%D1%82%D0%B8---%D0%B7%D0%B0%D1%81%D1%82%D0%BE%D1%81%D1%83%D0%B2%D0%B0%D1%82%D0%B8---%D0%BA%D0%BE%D0%BC%D0%B1%D1%96%D0%BD%D1%83%D0%B2%D0%B0%D1%82%D0%B8"></a></h2>
+</section><section><h2 class="section-heading" id="group-by-split-apply-combine">Group By: split-apply-combine<a class="anchor" aria-label="anchor" href="#group-by-split-apply-combine"></a></h2>
 <hr class="half-width"><p>::::::::::::::::::::::::::::::::::::: instructor Learners often
 struggle here, many may not work with financial data and concepts so
 they find the example concepts difficult to get their head around. Однак
-основна проблема полягає в рядку, який обчислює wealth_score; цей крок
-потребує ретельного обговорення:</p>
-<ul><li>It uses implicit conversion between boolean and float values which
-has not been covered in the course so far.</li>
-<li>The axis=1 argument needs to be explained clearly.
+основна проблема полягає в рядку, який обчислює
+<code>wealth_score</code>; цей крок потребує ретельного обговорення:</p>
+<ul><li>Він використовує неявне перетворення між булевим і дійсним
+значенням, яке ще не розглядалося в курсі.</li>
+<li>Параметр axis=1 також потребує чіткого пояснення.
 :::::::::::::::::::::::::::::::::::::::::::::::::</li>
 </ul><p>Методи векторизації та операції групування Pandas — це функції, які
 надають користувачам велику гнучкість для аналізу своїх даних.</p>
@@ -785,9 +785,9 @@ Turkey                    0.000000
 United Kingdom            1.000000
 dtype: float64</code></pre>
 </div>
-<p>Finally, for each group in the <code>wealth_score</code> table, we
-sum their (financial) contribution across the years surveyed using
-chained methods:</p>
+<p>Нарешті, для кожної групи в таблиці <code>wealth_score</code> ми
+підсумовуємо їх (фінансовий) внесок за роки дослідження, використовуючи
+ланцюжок методів:</p>
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -840,13 +840,13 @@ chained methods:</p>
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">
-  Рішення
+  Відповідь
   </h4>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<p>Вибір можна зробити за допомогою мітки (“Сербія”) для рядка, та мітки
-(“gdpPercap_2007”) для стовпця:</p>
+<p>Вибір можна зробити за допомогою мітки “Сербія” для рядка, та мітки
+“gdpPercap_2007” для стовпця:</p>
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -871,8 +871,8 @@ chained methods:</p>
 <h3 class="callout-title">Extent of Slicing</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>Чи дають два наведені нижче твердження однаковий результат?</li>
-<li>Based on this, what rule governs what is included (or not) in
-numerical slices and named slices in Pandas?</li>
+<li>На основі цього, яке правило визначає, що включено (чи ні) до
+числових та іменованих зрізів у Pandas?</li>
 </ol><div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -886,7 +886,7 @@ numerical slices and named slices in Pandas?</li>
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">
-  Рішення
+  Відповідь
   </h4>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
@@ -901,7 +901,7 @@ country
 Albania     1601.056136     1942.284244
 Austria     6137.076492     8842.598030</code></pre>
 </div>
-<p>Друге твердження дає:</p>
+<p>The second statement gives:</p>
 <div class="codewrapper">
 <h3 class="code-label">ВИХІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -913,10 +913,9 @@ Belgium     8343.105127     9714.960623    10991.206760</code></pre>
 </div>
 <p>Clearly, the second statement produces an additional column and an
 additional row compared to the first statement.<br>
-Який висновок ми можемо зробити? We see that a numerical slice, 0:2,
-<em>omits</em> the final index (i.e. index 2) in the range provided,
-while a named slice, ‘gdpPercap_1952’:‘gdpPercap_1962’,
-<em>includes</em> the final element.</p>
+Який висновок ми можемо зробити? Ми бачимо, що числовий зріз 0:2 <em>не
+включає</em> кінцевий індекс (тобто, індекс 2), тоді як іменований зріз
+‘gdpPercap_1952’:‘gdpPercap_1962’ <em>включає</em> кінцевий елемент.</p>
 </div>
 </div>
 </div>
@@ -1432,8 +1431,8 @@ century?</p>
   "url": "https://ukrainian-carpentries.github.io/python-novice-gapminder/08-data-frames.html",
   "identifier": "https://ukrainian-carpentries.github.io/python-novice-gapminder/08-data-frames.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2025-11-05",
-  "datePublished": "2025-11-05"
+  "dateModified": "2025-11-09",
+  "datePublished": "2025-11-09"
 }
 
   </script><script>
