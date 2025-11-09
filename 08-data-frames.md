@@ -107,7 +107,7 @@ Name: gdpPercap_1952, dtype: float64
 ```
 
 - Той самий результат можна отримати, якщо надрукувати `data["gdpPercap_1952"]`
-- Also get the same result printing `data.gdpPercap_1952` (not recommended, because easily confused with `.` notation for methods)
+- Більш того, той самий результат можна отримати, застосовуючи нотацію `data.gdpPercap_1952` (але не рекомендується, оскільки її легко сплутати з позначенням `.` для використання методів)
 
 ## Вибирайте кілька стовпців або рядків за допомогою `DataFrame.loc` та визначеного зрізу.
 
@@ -125,13 +125,15 @@ Norway         13450.401510    16361.876470    18965.055510
 Poland          5338.752143     6557.152776     8006.506993
 ```
 
-У наведеному вище коді ми бачимо, що **зріз із використанням `loc` має обидва виміри**, на відміну від **зрізу із застосуванням `iloc`**, де зріз включає все, крім кінцевого індексу.
+In the above code, we discover that **slicing using `loc` is inclusive at both
+ends**, which differs from **slicing using `iloc`**, where slicing indicates
+everything up to but not including the final index.
 
 ## Результат зрізу можна використовувати в подальших операціях.
 
 - Usually don't just print a slice.
 - Усі статистичні оператори, які працюють зі цілими фреймами даних, так само працюють зі зрізами.
-- Наприклад, обчислення максимальної кількості за стовпцями зрізу.
+- E.g., calculate max of a slice.
 
 ```python
 print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].max())
@@ -158,7 +160,7 @@ dtype: float64
 ## Використовуйте операції порівняння для вибору даних на основі певного значення.
 
 - Порівняння здійснюється поелементно.
-- Повертає фрейм даних подібної форми, що містить `True` і `False`.
+- Returns a similarly-shaped dataframe of `True` and `False`.
 
 ```python
 # Use a subset of data to keep output readable.
@@ -189,7 +191,7 @@ Norway                True           True           True
 Poland               False          False          False
 ```
 
-## Виберіть значення або NaN за допомогою булевої маски.
+## Select values or NaN using a Boolean mask.
 
 - A frame full of Booleans is sometimes called a _mask_ because of how it can be used.
 
@@ -208,7 +210,7 @@ Norway          13450.40151     16361.87647     18965.05551
 Poland                  NaN             NaN             NaN
 ```
 
-- Отримайте значення, якщо маска є істинною, і NaN (не число), якщо вона хибна.
+- Get the value where the mask is true, and NaN (Not a Number) where it is false.
 - Це зручно, оскільки операції на кшталт max, min, average автоматично ігнорують значення NaN.
 
 ```python
@@ -227,15 +229,14 @@ min      12790.849560    10022.401310    12269.273780
 max      13450.401510    16361.876470    18965.055510
 ```
 
-## Групувати за: розділити - застосувати - комбінувати
+## Group By: split-apply-combine
 
 ::::::::::::::::::::::::::::::::::::: instructor
 Learners often struggle here, many may not work with financial data and concepts so they
-find the example concepts difficult to get their head around. Однак основна проблема полягає в рядку, який обчислює wealth_score; цей крок потребує ретельного обговорення:
+find the example concepts difficult to get their head around. Однак основна проблема полягає в рядку, який обчислює `wealth_score`; цей крок потребує ретельного обговорення:
 
-- It uses implicit conversion between boolean and float values which
-  has not been covered in the course so far.
-- The axis=1 argument needs to be explained clearly.
+- Він використовує неявне перетворення між булевим і дійсним значенням, яке ще не розглядалося в курсі.
+- Параметр axis=1 також потребує чіткого пояснення.
   :::::::::::::::::::::::::::::::::::::::::::::::::
 
 Методи векторизації та операції групування Pandas — це функції, які надають користувачам велику гнучкість для аналізу своїх даних.
@@ -286,8 +287,7 @@ United Kingdom            1.000000
 dtype: float64
 ```
 
-Finally, for each group in the `wealth_score` table, we sum their (financial) contribution
-across the years surveyed using chained methods:
+Нарешті, для кожної групи в таблиці `wealth_score` ми підсумовуємо їх (фінансовий) внесок за роки дослідження, використовуючи ланцюжок методів:
 
 ```python
 print(data.groupby(wealth_score).sum())
@@ -329,9 +329,9 @@ data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
-Вибір можна зробити за допомогою мітки ("Сербія") для рядка, та мітки ("gdpPercap\_2007") для стовпця:
+Вибір можна зробити за допомогою мітки "Сербія" для рядка, та мітки "gdpPercap\_2007" для стовпця:
 
 ```python
 print(data_europe.loc['Serbia', 'gdpPercap_2007'])
@@ -352,8 +352,7 @@ print(data_europe.loc['Serbia', 'gdpPercap_2007'])
 ## Extent of Slicing
 
 1. Чи дають два наведені нижче твердження однаковий результат?
-2. Based on this,
-   what rule governs what is included (or not) in numerical slices and named slices in Pandas?
+2. На основі цього, яке правило визначає, що включено (чи ні) до числових та іменованих зрізів у Pandas?
 
 ```python
 print(data_europe.iloc[0:2, 0:2])
@@ -362,7 +361,7 @@ print(data_europe.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 Ні, вони не дають однакові результати! Результатом першого виразу є:
 
@@ -373,7 +372,7 @@ Albania     1601.056136     1942.284244
 Austria     6137.076492     8842.598030
 ```
 
-Друге твердження дає:
+The second statement gives:
 
 ```output
         gdpPercap_1952  gdpPercap_1957  gdpPercap_1962
@@ -384,9 +383,7 @@ Belgium     8343.105127     9714.960623    10991.206760
 ```
 
 Clearly, the second statement produces an additional column and an additional row compared to the first statement.  
-Який висновок ми можемо зробити? We see that a numerical slice, 0:2, _omits_ the final index (i.e. index 2)
-in the range provided,
-while a named slice, 'gdpPercap\_1952':'gdpPercap\_1962', _includes_ the final element.
+Який висновок ми можемо зробити? Ми бачимо, що числовий зріз 0:2 _не включає_ кінцевий індекс (тобто, індекс 2), тоді як іменований зріз 'gdpPercap\_1952':'gdpPercap\_1962' _включає_ кінцевий елемент.
 
 :::::::::::::::::::::::::
 
