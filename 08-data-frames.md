@@ -407,7 +407,7 @@ fourth.to_csv('result.csv')
 
 ## Рішення
 
-Let's go through this piece of code line by line.
+Перегляньмо цей фрагмент коду рядок за рядком.
 
 ```python
 first = pd.read_csv('data/gapminder_all.csv', index_col='country')
@@ -420,8 +420,7 @@ row labels in the dataframe.
 second = first[first['continent'] == 'Americas']
 ```
 
-This line makes a selection: only those rows of `first` for which the 'continent' column matches
-'Americas' are extracted. Зверніть увагу, як логічний вираз у дужках, `first['continent'] == 'Americas'`, використовується для вибору лише тих рядків, де вираз є істинним.
+Цей рядок фільтрує дані: вибираються лише ті рядки з `first`, у яких стовпець 'continent' містить значення 'Americas'. Зверніть увагу, як логічний вираз у дужках, `first['continent'] == 'Americas'`, використовується для вибору лише тих рядків, де вираз є істинним.
 Спробуйте надрукувати цей вираз! Чи можете ви також надрукувати його окремі елементи True/False?
 (підказка: спочатку призначте вираз певній змінній)
 
