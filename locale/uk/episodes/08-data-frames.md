@@ -405,7 +405,7 @@ fourth.to_csv('result.csv')
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 Перегляньмо цей фрагмент коду рядок за рядком.
 
@@ -466,7 +466,7 @@ print(data.idxmax())
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 For each column in `data`, `idxmin` will return the index value corresponding to each column's minimum;
 `idxmax` will do accordingly the same for each column's maximum value.
@@ -492,7 +492,7 @@ You can use these functions whenever you want to get the row index of the minimu
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 1:
 
@@ -544,7 +544,7 @@ However, there are many others. Наприклад, можна отримати 
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 1\. Доступ до одного стовпця:
 
@@ -716,7 +716,7 @@ to find the function that prints out the median per-capita GDP across all Europe
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 Серед багатьох варіантів `dir()` пропонує функцію `median()` як можливість.  Таким чином,
 
