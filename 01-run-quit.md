@@ -299,7 +299,7 @@ Jupyter дозволяє змішувати код і текст у різних
 |`                                   |                                                |
 +---------------------------------------+------------------------------------------------+
 +---------------------------------------+------------------------------------------------+
-\| `                                  | <p></p>                                        | | *  You can use indents                | - You can use indents                          | |   *  To create sublists               |   - To create sublists                         | |   *  of the same type                 |   - of the same type                           | | *  Or sublists                        | - Or sublists                                  | |   1. Of different                     |   1. Of different                              | |   1. types                            |   2. types                                     |
+\| `                                  | <p></p>                                        | | *  You can use indents                | - You can use indents                          | |   *  To create sublists               |   - To create sublists                         | |   *  of the same type                 |   - of the same type                           | | *  Or sublists                        | - Or sublists                                  | |   1. Of different                     |   1. Of different                              | |   1. типів                            |   2. types                                     |
 |`                                   |                                                |
 +---------------------------------------+------------------------------------------------+
 +---------------------------------------+------------------------------------------------+
@@ -315,7 +315,7 @@ Jupyter дозволяє змішувати код і текст у різних
 |`                                   |                                                |
 +---------------------------------------+------------------------------------------------+
 +---------------------------------------+------------------------------------------------+
-\| ``                                  | <p></p>                                        | | [Links](http://software-carpentry.org)| [Links](https://software-carpentry.org)        | | are created with `[...](...)`.        | are created with `[...](...)`.                 | | Or use [named links][data-carp].      | Or use [named links][data_carpentry].          | |                                       |                                                | | [data-carp]: http://datacarpentry.org |                                                |
+\| ``                                  | <p></p>                                        | | [Links](http://software-carpentry.org)| [Links](https://software-carpentry.org)        | | are created with `[...](...)`.        | are created with `[...](...)`.                 | | Або використовуйте [іменовані посилання][data-carp].      | Or use [named links][data_carpentry].          | |                                       |                                                | | [data-carp]: http://datacarpentry.org |                                                |
 |``                                   |                                                |
 +---------------------------------------+------------------------------------------------+
 
