@@ -718,7 +718,7 @@ to find the function that prints out the median per-capita GDP across all Europe
 
 ## Відповідь
 
-Серед багатьох варіантів `dir()` пропонує функцію `median()` як можливість.  Таким чином,
+Among many choices, `dir()` lists the `median()` function as a possibility.  Таким чином,
 
 ```python
 data.median()

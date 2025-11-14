@@ -82,7 +82,7 @@ print('all PDB files:', glob.glob(' .pdb'))
 all PDB files: []
 ```
 
-## Використовуйте `glob` і `for` для обробки пакетів файлів.
+## Use `glob` and `for` to process batches of files.
 
 - Helps a lot if the files are named and stored systematically and consistently
   so that simple patterns will find the right data.
@@ -260,7 +260,7 @@ function.
 
 - Use a `for` loop to process files given a list of their names.
 - Use `glob.glob` to find sets of files whose names match a pattern.
-- Використовуйте `glob` і `for` для обробки пакетів файлів.
+- Use `glob` and `for` to process batches of files.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
