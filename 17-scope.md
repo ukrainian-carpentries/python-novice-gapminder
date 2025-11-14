@@ -8,7 +8,7 @@ exercises: 10
 
 - Визначення локальних і глобальних змінних.
 - Ідентифікація параметрів як локальних змінних.
-- Аналіз звіту системної діагностики (traceback) та визначення файлу, функції й номера рядка, у якому сталася помилка, а також типу помилки й тексту повідомлення про неї.
+- Read a traceback and determine the file, function, and line number on which the error occurred, the type of error, and the error message.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -85,7 +85,7 @@ print(clip(value))
 
 Read the traceback below, and identify the following:
 
-1. Скільки рівнів має системна діагностика?
+1. How many levels does the traceback have?
 2. Як називається файл, у якому сталася помилка?
 3. Як називається функція, у якій сталася помилка?
 4. В якому рядку цієї функції виникла помилка?

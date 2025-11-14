@@ -170,20 +170,20 @@ plt.legend()
 
 ![](fig/9_gdp_australia_nz_formatted.svg){alt='Форматований графік ВВП для Австралії та Нової Зеландії'}
 
-- Побудуйте точкову діаграму співвідношення ВВП Австралії та Нової Зеландії
+- Plot a scatter plot correlating the GDP of Australia and New Zealand
 - Use either `plt.scatter` or `DataFrame.plot.scatter`
 
 ```python
 plt.scatter(gdp_australia, gdp_nz)
 ```
 
-![](fig/9_gdp_correlation_plt.svg){alt='Точкова діаграма, створена за допомогою plt.scatter'}
+![](fig/9_gdp_correlation_plt.svg){alt='GDP correlation using plt.scatter'}
 
 ```python
 data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 ```
 
-![](fig/9_gdp_correlation_data.svg){alt='Точкова діаграма кореляції ВВП, побудована за допомогою data.T.plot.scatter.'}
+![](fig/9_gdp_correlation_data.svg){alt='GDP correlation using data.T.plot.scatter'}
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
