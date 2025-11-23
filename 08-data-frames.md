@@ -393,7 +393,8 @@ Clearly, the second statement produces an additional column and an additional ro
 
 ## Реконструювання даних
 
-Поясніть, що робить кожен рядок у наступній короткій програмі: що в `first`, `second`, etc.?
+Explain what each line in the following short program does:
+what is in `first`, `second`, etc.?
 
 ```python
 first = pd.read_csv('data/gapminder_all.csv', index_col='country')
@@ -413,8 +414,7 @@ fourth.to_csv('result.csv')
 first = pd.read_csv('data/gapminder_all.csv', index_col='country')
 ```
 
-В цьому рядку дані про ВВП з усіх країн завантажуються у фрейм даних `first`. The `index_col='country'` parameter selects which column to use as the
-row labels in the dataframe.
+В цьому рядку дані про ВВП з усіх країн завантажуються у датафрейм `first`. Параметр `index_col='country'` вказує, який стовпець використовується як заголовки рядків у датафреймі.
 
 ```python
 second = first[first['continent'] == 'Americas']
@@ -428,14 +428,14 @@ second = first[first['continent'] == 'Americas']
 third = second.drop('Puerto Rico')
 ```
 
-Як підказує синтаксис, цей код видаляє рядок з міткою 'Puerto Rico' з фрейму даних `second`. The
+Як підказує синтаксис, цей код видаляє рядок з міткою 'Puerto Rico' з датафрейму `second`. The
 resulting dataframe `third` has one row less than the original dataframe `second`.
 
 ```python
 fourth = third.drop('continent', axis = 1)
 ```
 
-Знову ми застосовуємо функцію drop, але в цьому випадку ми видаляємо не рядок, а цілий стовпець.
+Знову ми застосовуємо функцію `drop`, але в цьому випадку ми видаляємо не рядок, а цілий стовпець.
 To accomplish this, we need to specify also the `axis` parameter (we want to drop the second column
 which has index 1).
 
@@ -443,9 +443,7 @@ which has index 1).
 fourth.to_csv('result.csv')
 ```
 
-The final step is to write the data that we have been working on to a csv file. Pandas makes this easy
-with the `to_csv()` function. Єдиним обов’язковим аргументом для функції є ім’я файлу. Note that the
-file will be written in the directory from which you started the Jupyter or Python session.
+Останнім кроком є ​​збереження даних, над якими ми працювали, у файл csv. Pandas спрощує це завдання за допомогою функції `to_csv()`. Єдиним обов’язковим аргументом для функції є ім’я файлу. Зверніть увагу, що файл буде записано в каталозі, з якого ви розпочали сесію Jupyter або Python.
 
 :::::::::::::::::::::::::
 
