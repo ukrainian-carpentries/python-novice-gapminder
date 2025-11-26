@@ -454,7 +454,7 @@ fourth.to_csv('result.csv')
 ## Вибір індексів
 
 Поясніть простими словами, що роблять `idxmin` і `idxmax` у короткій програмі нижче.
-When would you use these methods?
+У яких випадках ви б використовували ці методи?
 
 ```python
 data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
@@ -466,10 +466,9 @@ print(data.idxmax())
 
 ## Відповідь
 
-For each column in `data`, `idxmin` will return the index value corresponding to each column's minimum;
-`idxmax` will do accordingly the same for each column's maximum value.
+Для кожного стовпця в `data`, `idxmin` поверне значення індексу, що відповідає мінімуму кожного стовпця; `idxmax` зробить те саме для максимального значення кожного стовпця.
 
-You can use these functions whenever you want to get the row index of the minimum/maximum value and not the actual minimum/maximum value.
+Ви можете використовувати ці функції щоразу, коли потрібно отримати індекс рядка з мінімальним або максимальним значенням, а не саме значення.
 
 :::::::::::::::::::::::::
 
@@ -484,9 +483,8 @@ You can use these functions whenever you want to get the row index of the minimu
 
 1. ВВП на душу населення для всіх країн у 1982 році.
 2. ВВП на душу населення для Данії за всі роки.
-3. GDP per capita for all countries for years _after_ 1985.
-4. GDP per capita for each country in 2007 as a multiple of
-   GDP per capita for that country in 1952.
+3. ВВП на душу населення для всіх країн за роки _після_ 1985 року.
+4. ВВП на душу населення у 2007 році для кожної країни, виражене як кратне до ВВП на душу населення цієї ж країни у 1952 році.
 
 :::::::::::::::  solution
 
@@ -510,7 +508,7 @@ data.loc['Denmark',:]
 data.loc[:,'gdpPercap_1985':]
 ```
 
-Pandas is smart enough to recognize the number at the end of the column label and does not give you an error, although no column named `gdpPercap_1985` actually exists. This is useful if new columns are added to the CSV file later.
+Pandas is smart enough to recognize the number at the end of the column label and does not give you an error, although no column named `gdpPercap_1985` actually exists. Це зручно, якщо нові стовпці додаються до файлу CSV пізніше.
 
 4:
 
@@ -527,18 +525,18 @@ data['gdpPercap_2007']/data['gdpPercap_1952']
 ## Багато способів доступу
 
 There are at least two ways of accessing a value or slice of a DataFrame: by name or index.
-However, there are many others. Наприклад, можна отримати окремий стовпець або рядок як `DataFrame`
+Однак існує багато інших варіантів. Наприклад, можна отримати окремий стовпець або рядок як `DataFrame`
 або `Series` об'єкт.
 
-Запропонуйте різні способи виконання наступних операцій з фреймами даних:
+Запропонуйте різні способи виконання наступних операцій з датафреймами:
 
 1. Доступ до одного стовпця
 2. Доступ до одного рядку
-3. Доступ до окремого елемента фрейму даних
+3. Доступ до окремого елемента датафрейму
 4. Доступ до декількох стовпців
 5. Доступ до декількох рядків
-6. Доступ до підмножини визначених рядків і стовпців
-7. Доступ до підмножини рядків і діапазонів стовпців
+6. Access a subset of specific rows and columns
+7. Access a subset of row and column ranges
 
 :::::::::::::::  solution
 
@@ -585,7 +583,7 @@ data.iloc[[row_index]]   # as a DataFrame
 data[data.index == "row_name"]
 ```
 
-3\. Доступ до окремого елемента фрейму даних:
+3\. Доступ до окремого елемента датафрейму:
 
 ```python
 # by column/row names
@@ -646,7 +644,7 @@ data.loc[["row1", "row2", "row3"]]
 data.iloc[[row1_index, row2_index, row3_index]]
 ```
 
-6\. Доступ до підмножини визначених рядків і стовпців
+6\. Access a subset of specific rows and columns
 
 ```python
 # by names
@@ -662,7 +660,7 @@ data[["col1", "col2", "col3"]].iloc[[row1_index, row2_index, row3_index]]
 data.iloc[:, [col1_index, col2_index, col3_index]].loc[["row1", "row2", "row3"]]
 ```
 
-7\. Доступ до підмножини рядків і діапазонів стовпців
+7\. Access a subset of row and column ranges
 
 ```python
 # by name
@@ -686,7 +684,7 @@ data.iloc[:, col1_index:col2_index].loc["row1":"row2"]
 
 ## Пошук доступних методів використовуючи функцію `dir()`
 
-Python includes a `dir()` function that can be used to display all of the available methods (functions) that are built into a data object.  In Episode 4, we used some methods with a string. But we can see many more are available by using `dir()`:
+У Python є функція `dir()`, яка дозволяє переглянути всі доступні методи (функції), які вбудовані в об’єкт даних.  В епізоді 4 ми використали деякі методи для рядка. Але за допомогою `dir()` можна побачити ще більше доступних методів:
 
 ```python
 my_string = 'Hello world!'   # creation of a string object 
@@ -707,9 +705,9 @@ dir(my_string)
 'zfill']
 ```
 
-You can use `help()` or <kbd>Shift</kbd>\+<kbd>Tab</kbd> to get more information about what these methods do.
+Ви можете використати `help()` або <kbd>Shift</kbd>\+<kbd>Tab</kbd>, щоб дізнатися більше про призначення цих методів.
 
-Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded as `data`.  Then, use `dir()`
+Припустимо, що Pandas вже імпортовано, а дані Gapminder про ВВП Європи завантажено в змінну `data`.  Then, use `dir()`
 to find the function that prints out the median per-capita GDP across all European countries for each year that information is available.
 
 :::::::::::::::  solution
@@ -728,12 +726,11 @@ data.median()
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Інтерпретація
+## Interpretation
 
 Poland's borders have been stable since 1945,
 but changed several times in the years before then.
-How would you handle this if you were creating a table of GDP per capita for Poland
-for the entire twentieth century?
+Як би ви врахували це при створенні таблиці ВВП на душу населення для Польщі за все ХХ століття?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -744,11 +741,11 @@ for the entire twentieth century?
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - Використовуйте `DataFrame.iloc[..., ...]` для вибору значень за їх позицією
-- Використовуйте `:` окремо для позначення всіх стовпців або всіх рядків.
-- Вибирайте кілька стовпців або рядків за допомогою `DataFrame.loc` та визначеного зрізу.
+- Use `:` on its own to mean all columns or all rows.
+- Select multiple columns or rows using `DataFrame.loc` and a named slice.
 - Результат застосування операції зрізу може бути використаний у подальших операціях.
-- Використовуйте порівняння для вибору даних на основі певного значення.
-- Виберіть значення або NaN за допомогою булевої маски.
+- Use comparisons to select data based on value.
+- Select values or NaN using a Boolean mask.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
