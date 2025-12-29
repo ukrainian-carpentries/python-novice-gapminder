@@ -282,7 +282,7 @@
 <div class="accordion accordion-flush" id="accordionFlush9">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading9">
-        <a href="08-data-frames.html">8. Pandas DataFrames</a>
+        <a href="08-data-frames.html">8. Датафрейми Pandas</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -318,7 +318,7 @@
 <div class="accordion accordion-flush" id="accordionFlush13">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading13">
-        <a href="12-for-loops.html">12. For Loops</a>
+        <a href="12-for-loops.html">12. Цикли for</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -390,7 +390,7 @@
 <div class="accordion accordion-flush" id="accordionFlush21">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading21">
-        <a href="20-feedback.html">20. Feedback</a>
+        <a href="20-feedback.html">20. Зворотний зв'язок</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -448,13 +448,13 @@
           Попередній: Бібліотеки
         </a>
         <a class="chapter-link float-end" href="08-data-frames.html" rel="next">
-          Далі: Pandas DataFrames...
+          Далі: Датафрейми Pandas...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Зчитування табличних даних у датафрейми</h1>
-        <p>Останнє оновлення 2025-10-31 |
+        <p>Останнє оновлення 2025-12-29 |
 
         <a href="https://github.com/ukrainian-carpentries/python-novice-gapminder/edit/main/episodes/07-reading-tabular.md" class="external-link">Редагувати цю сторінку <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -644,7 +644,7 @@ memory usage: 208.0+ bytes</code></pre>
 <li>Тому не використовуйте <code>()</code>, тому що це - не
 функція.</li>
 </ul></li>
-<li>Called a <em>member variable</em>, or just <em>member</em>.</li>
+<li>Ця змінна називається атрибутом.</li>
 </ul><div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -663,7 +663,7 @@ memory usage: 208.0+ bytes</code></pre>
 <hr class="half-width"><ul><li>Іноді потрібно розглядати стовпці як рядки та навпаки.</li>
 <li>Транспонування (written <code>.T</code>) не копіює дані, а лише
 змінює їх подання.</li>
-<li>Like <code>columns</code>, it is a member variable.</li>
+<li>Подібно до <code>columns</code>, це атрибут датафрейму.</li>
 </ul><div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -799,10 +799,11 @@ max      23424.766830    26997.936570    30687.754730    34435.367440</code></pr
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
-<ol style="list-style-type: decimal"><li>We can check out the first five rows of <code>data_americas</code>
-by executing <code>data_americas.head()</code> which lets us view the
-beginning of the DataFrame. Ми можемо вказати кількість рядків, які ми
-хочемо бачити, визначивши параметр <code>n</code> у нашому виклику
+<ol style="list-style-type: decimal"><li>Ми можемо побачити перші п’ять рядків датафрейму
+<code>data_americas</code> за допомогою
+<code>data_americas.head()</code>, що дозволяє нам швидко переглянути
+його структуру. Ми можемо вказати кількість рядків, які ми хочемо
+бачити, визначивши параметр <code>n</code> у нашому виклику
 <code>americas.head()</code>. Для перегляду перших трьох рядків
 виконайте:</li>
 </ol><div class="codewrapper sourceCode" id="cb15">
@@ -839,10 +840,10 @@ Brazil        9065.800825</code></pre>
 </div>
 <ol start="2" style="list-style-type: decimal"><li>Щоб перевірити останні три рядки <code>data_americas</code>, ми
 можемо використати команду <code>data_americas.tail(n=3)</code>, яка
-аналогічна методу <code>head()</code>, що застосовувався вище. However,
-here we want to look at the last three columns so we need to change our
-view and then use <code>tail()</code>. To do so, we create a new
-DataFrame in which rows and columns are switched:</li>
+аналогічна методу <code>head()</code>, що застосовувався вище. Однак тут
+ми хочемо переглянути останні три стовпці, тому нам потрібно змінити
+подання інформації, а потім використати метод <code>tail()</code>. Для
+цього ми маємо транспонувати цей датафрейм:</li>
 </ol><div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -879,15 +880,16 @@ gdpPercap_1997             8792.57       35767.4  9230.24   10165.5
 gdpPercap_2002             11460.6       39097.1     7727   8605.05
 gdpPercap_2007             18008.5       42951.7  10611.5   11415.8</code></pre>
 </div>
-<p>This shows the data that we want, but we may prefer to display three
-columns instead of three rows, so we can flip it back:</p>
+<p>Це показує потрібні нам дані, але якщо ми віддаємо перевагу перегляду
+трьох стовпців замість трьох рядків, ми можемо додатково транспонувати
+останній результат:</p>
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a>americas_flipped.tail(n<span class="op">=</span><span class="dv">3</span>).T    </span></code></pre>
 </div>
-<p><strong>Note:</strong> we could have done the above in a single line
-of code by ‘chaining’ the commands:</p>
+<p><strong>Примітка:</strong> того самого результату можна було досягти
+за допомогою однієї команди, об’єднавши команди в ‘ланцюжок’:</p>
 <div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -897,18 +899,18 @@ of code by ‘chaining’ the commands:</p>
 </div>
 </div>
 </div>
-<div id="reading-files-in-other-directories" class="callout challenge">
+<div id="читання-файлів-в-інших-каталогах" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Вправа</span>
-<div id="reading-files-in-other-directories" class="callout-inner">
-<h3 class="callout-title">Reading Files in Other Directories</h3>
+<div id="читання-файлів-в-інших-каталогах" class="callout-inner">
+<h3 class="callout-title">Читання файлів в інших каталогах</h3>
 <div class="callout-content">
 <p>Дані вашого поточного проєкту зберігаються у файлі під назвою
 <code>microbes.csv</code>, який знаходиться в каталозі
-<code>field_data</code>. You are doing analysis in a notebook called
-<code>analysis.ipynb</code> in a sibling folder called
+<code>field_data</code>. Ви виконуєте аналіз у блокноті під назвою
+<code>analysis.ipynb</code>, який розміщено у сусідньому каталозі
 <code>thesis</code>:</p>
 <div class="codewrapper">
 <h3 class="code-label">ВИХІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -919,8 +921,9 @@ of code by ‘chaining’ the commands:</p>
 +-- thesis/
     +-- analysis.ipynb</code></pre>
 </div>
-<p>What value(s) should you pass to <code>read_csv</code> to read
-<code>microbes.csv</code> in <code>analysis.ipynb</code>?</p>
+<p>Які значення вам потрібно передати у функцію <code>read_csv</code>,
+щоб прочитати <code>microbes.csv</code> з блокнота
+<code>analysis.ipynb</code>?</p>
 </div>
 </div>
 </div>
@@ -933,11 +936,11 @@ of code by ‘chaining’ the commands:</p>
 </button>
 <div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
-<p>We need to specify the path to the file of interest in the call to
-<code>pd.read_csv</code>. We first need to ‘jump’ out of the folder
-<code>thesis</code> using ‘../’ and then into the folder
-<code>field_data</code> using ‘field_data/’. Після цього вказати назву
-файлу <code>microbes.csv</code>. Кінцевий результат наступний:</p>
+<p>Нам треба вказати шлях до потрібного файлу як аргумент функції
+<code>pd.read_csv</code>. По-перше, потрібно ‘вийти’ з каталогу
+<code>thesis</code> за допомогою ‘../’, а потім ‘зайти’ у каталог
+<code>field_data</code> за допомогою ‘field_data/’. Після цього вказати
+назву файлу <code>microbes.csv</code>. Кінцевий результат наступний:</p>
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -955,12 +958,12 @@ of code by ‘chaining’ the commands:</p>
 <div id="запис-даних" class="callout-inner">
 <h3 class="callout-title">Запис даних</h3>
 <div class="callout-content">
-<p>As well as the <code>read_csv</code> function for reading data from a
-file, Pandas provides a <code>to_csv</code> function to write dataframes
-to files. Applying what you’ve learned about reading from files, write
-one of your dataframes to a file called <code>processed.csv</code>. Ви
-можете скористатися <code>help</code>, щоб отримати інформацію про
-застосування <code>to_csv</code>.</p>
+<p>Окрім функції <code>read_csv</code> для зчитування даних з файлу,
+Pandas надає функцію <code>to_csv</code> для запису датафреймів у файли.
+Використовуючи знання про читання з файлів, запишіть один з ваших
+датафреймів у файл під назвою <code>processed.csv</code>. Ви можете
+скористатися <code>help</code>, щоб отримати інформацію про застосування
+<code>to_csv</code>.</p>
 </div>
 </div>
 </div>
@@ -989,11 +992,11 @@ one of your dataframes to a file called <code>processed.csv</code>. Ви
 <span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a><span class="bu">help</span>(pd.read_csv)</span></code></pre>
 </div>
 <p>Зауважте, що команди <code>help(to_csv)</code> або
-<code>help(pd.to_csv)</code> є помилковими! This is due to the fact that
-<code>to_csv</code> is not a global Pandas function, but a member
-function of DataFrames. This means you can only call it on an instance
-of a DataFrame e.g., <code>data_americas.to_csv</code> or
-<code>data_oceania.to_csv</code></p>
+<code>help(pd.to_csv)</code> є помилковими! Це пов’язано з тим, що
+<code>to_csv</code> є не глобальною функцією Pandas, а методом,
+визначеним для датафреймів. Це означає, що ви можете викликати його лише
+для будь-якого датафрейма, наприклад, <code>data_americas.to_csv</code>
+або <code>data_oceania.to_csv</code></p>
 </div>
 </div>
 </div>
@@ -1009,8 +1012,8 @@ of a DataFrame e.g., <code>data_americas.to_csv</code> or
 data.</li>
 <li>Use <code>index_col</code> to specify that a column’s values should
 be used as row headings.</li>
-<li>Use <code>DataFrame.info</code> to find out more about a
-dataframe.</li>
+<li>Використовуйте <code>DataFrame.info</code>, щоб дізнатися більше про
+структуру датафрейму.</li>
 <li>Змінна <code>DataFrame.columns</code> зберігає інформацію про
 стовпці датафрейму.</li>
 <li>Використовуйте <code>DataFrame.T</code>, щоб транспонувати
@@ -1032,7 +1035,7 @@ dataframe.</li>
           Попередній: Бібліотеки
         </a>
         <a class="chapter-link float-end" href="08-data-frames.html" rel="next">
-          Далі: Pandas DataFrames...
+          Далі: Датафрейми Pandas...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -1080,8 +1083,8 @@ dataframe.</li>
   "url": "https://ukrainian-carpentries.github.io/python-novice-gapminder/07-reading-tabular.html",
   "identifier": "https://ukrainian-carpentries.github.io/python-novice-gapminder/07-reading-tabular.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2025-10-31",
-  "datePublished": "2025-12-23"
+  "dateModified": "2025-12-29",
+  "datePublished": "2025-12-29"
 }
 
   </script><script>
