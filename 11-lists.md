@@ -6,21 +6,20 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Поясніть, навіщо програмам потрібні набори значень.
-- Напишіть програми, які створюють списки, індексують їх, а також розрізають і змінюють їх через присвоювання значень та виклик методів.
+- Explain why programs need collections of values.
+- Write programs that create flat lists, index them, slice them, and modify them through assignment and method calls.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- Як зберігати декілька значень?
+- How can I store multiple values?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Список є структурою даних, яка містить в собі багато значень.
+## A list stores many values in a single structure.
 
-- Doing calculations with a hundred variables called `pressure_001`, `pressure_002`, etc.,
-  would be at least as slow as doing them by hand.
+- Виконання обчислень із сотнею змінних під назвою `pressure_001`, `pressure_002` тощо, було б принаймні так само повільно, як робити їх вручну.
 - Використовуйте список для зберігання багатьох значень разом.
   - Список позначається квадратними дужками `[...]`.
   - Значення розділяються комами `,`.
@@ -56,8 +55,8 @@ fourth item of pressures: 0.276
 - Використовуйте індексний вираз ліворуч від знаку присвоєння, щоб замінити значення.
 
 ```python
-pressures[0] = 0.265
-print('pressures is now:', pressures)
+pressures[0] = 0.265 
+print('нові значення pressures:', pressures)
 ```
 
 ```output
@@ -70,17 +69,17 @@ print('pressures is now:', pressures)
 
 ```python
 primes = [2, 3, 5]
-print('primes is initially:', primes)
+print('Початкові значення primes:', primes)
 primes.append(7)
-print('primes has become:', primes)
+print('Список primes змінився:', primes)
 ```
 
 ```output
-primes is initially: [2, 3, 5]
-primes has become: [2, 3, 5, 7]
+Початкові значення primes: [2, 3, 5] 
+Список primes змінився: [2, 3, 5, 7]
 ```
 
-- `append` is a _method_ of lists.
+- `append` є _методом_ списків.
   - Методи подібні функціям, але вони прив’язані до певних об’єктів.
 - Для виклику методів використовується синтаксис `object_name.method_name` .
   - Deliberately resembles the way we refer to things in a library.
@@ -105,32 +104,31 @@ primes has finally become: [2, 3, 5, 7, 11, 13, 17, 19, [37, 41, 43, 47]]
 ```
 
 Note that while `extend` maintains the "flat" structure of the list, appending a list to a list means
-the last element in `primes` will itself be a list, not an integer. Lists can contain values of any
-type; therefore, lists of lists are possible.
+the last element in `primes` will itself be a list, not an integer. Списки можуть містити значення будь-якого типу; отже, можливі списки списків.
 
 ## Use `del` to remove items from a list entirely.
 
 - We use `del list_name[index]` to remove an element from a list (in the example, 9 is not a prime number) and thus shorten it.
-- `del` - це оператор мови програмування, а не функція і не метод.
+- `del` is not a function or a method, but a statement in the language.
 
 ```python
 primes = [2, 3, 5, 7, 9]
-print('primes before removing last item:', primes)
+print('primes перед видаленням останнього елементу:', primes)
 del primes[4]
-print('primes after removing last item:', primes)
+print('primes після видалення останнього елементу:', primes)
 ```
 
 ```output
-primes before removing last item: [2, 3, 5, 7, 9]
-primes after removing last item: [2, 3, 5, 7]
+primes перед видаленням останнього елементу: [2, 3, 5, 7, 9]
+primes після видалення останнього елементу: [2, 3, 5, 7]
 ```
 
 ## Порожній список не містить жодних значень.
 
 - Use `[]` on its own to represent a list that doesn't contain any values.
   - Порожній список - це "нуль списків."
-- Корисно у якості початкової точки для введення значень
-  (як ми побачимо в [наступному епізоді](12-for-loops.md)).
+- Helpful as a starting point for collecting values
+  (which we will see in the [next episode](12-for-loops.md)).
 
 ## Списки можуть містити значення різних типів.
 
@@ -146,8 +144,8 @@ goals = [1, 'Створити списки.', 2, 'Вилучити елемен�
 
 ```python
 element = 'carbon'
-print('zeroth character:', element[0])
-print('third character:', element[3])
+print('нульовий символ:', element[0])
+print('третій символ:', element[3])
 ```
 
 ```output
@@ -171,7 +169,7 @@ element[0] = 'C'
 TypeError: 'str' object does not support item assignment
 ```
 
-- Lists and character strings are both _collections_.
+- Списки та рядки символів є _колекціями_.
 
 ## Indexing beyond the end of the collection is an error.
 
@@ -229,7 +227,7 @@ print('second time:', values)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Наскільки є великим зріз?
+## How Large is a Slice?
 
 If `start` and `stop` are both non-negative integers,
 how long is the list `values[start:stop]`?

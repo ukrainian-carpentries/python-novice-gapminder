@@ -9,10 +9,9 @@ break: 15
 
 За кавою подумайте та обговоріть наступне:
 
-- A common refrain in software engineering is "Don't Repeat Yourself". How do the techniques we've learned in the last
-  lessons help us avoid repeating ourselves? _Note that in practice there is some nuance to this and should be balanced
+- Поширений рефрен у програмній інженерії -- "Не повторюйте себе". Яким чином техніки, які ми вивчали на попередньому занятті, допомагають нам не повторюватися? _Note that in practice there is some nuance to this and should be balanced
   with doing the simplest thing that could possibly work._
-- What are the pros / cons of making a variable global or local to a function?
+- Якими є плюси / мінуси створення змінної як глобальної або локальної у функції?
 - When would you consider turning a block of code into a function definition?
 
 
