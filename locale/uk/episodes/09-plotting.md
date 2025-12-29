@@ -7,7 +7,7 @@ exercises: 15
 ::::::::::::::::::::::::::::::::::::::: objectives
 
 - Створення графіку часового ряду, який відповідає одному набору даних.
-- Створення діаграми розсіювання, яка показує зв’язок між двома наборами даних.
+- Create a scatter plot showing relationship between two data sets.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -42,11 +42,12 @@ plt.ylabel('Position (km)')
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Display All Open Figures
+## Зображення всіх графіків з програмного коду
 
 У прикладі з Jupyter Notebook виконання комірки призводить до побудови графіку безпосередньо під кодом.
 Графік також зберігається у блокноті для подальшого перегляду.
-Проте, інші середовища Python, такі як інтерактивна сесія Python, що ініціюється з термінала, або Python скрипт, виконаний за допомогою командного рядка, потребують додаткової команди для зображення графіку.
+However, other Python environments like an interactive Python session started from a terminal
+or a Python script executed via the command line require an additional command to display the figure.
 
 Доручіть `matplotlib` зобразити графік:
 
@@ -58,10 +59,10 @@ plt.show()
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Побудова графіків безпосередньо з [Pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html).
+## Побудова графіків безпосередньо з [датафреймів Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html).
 
-- Для побудови графіків можна також використовувати [фрейми даних Pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
-- Перед побудовою графіку ми перетворюємо назви стовпців із типу `string` на `integer`, оскільки вони представляють числові значення. Для цього використовуємо метод [str.replace()](https://pandas.pydata.org/docs/reference/api/pandas.Series.str.replace. tml), щоб видалити префікс `gpdPercap_`, а потім [astype(int)](https://pandas.pydata.org/docs/reference/api/pandas.Series.astype. tml), щоб перетворити ряд значень рядка (`['1952', '1957', ...'2007']`) у ряд цілих чисел: `[1925, 1957, ..., 2007]`.
+- Для побудови графіків можна також використовувати [датафрейми Pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
+- Перед побудовою графіку ми перетворюємо назви стовпців із типу `string` на `integer`, оскільки вони представляють числові значення. Для цього використовуємо метод [str.replace()](https://pandas.pydata.org/docs/reference/api/pandas.Series.str.replace.html), щоб видалити префікс `gpdPercap_`, а потім [astype(int)](https://pandas.pydata.org/docs/reference/api/pandas.Series.astype.html), щоб перетворити ряд значень рядка (`['1952', '1957', ...'2007']`) у ряд цілих чисел: `[1925, 1957, ..., 2007]`.
 
 ```python
 import pandas as pd
@@ -99,7 +100,7 @@ plt.ylabel('GDP per capita')
 
 ## Доступні багато стилів графіків.
 
-- For example, do a bar plot using a fancier style.
+- Наприклад, можна створити стовпчикову діаграму з більш вишуканим стилем.
 
 ```python
 plt.style.use('ggplot')
@@ -146,8 +147,7 @@ plt.ylabel('GDP per capita ($)')
 
 ## Додавання легенди
 
-Often when plotting multiple datasets on the same figure it is desirable to have
-a legend describing the data.
+Зазвичай при побудові графіків з кількох наборів даних разом, бажано мати легенду, що описує ці дані.
 
 Це можна зробити в `matplotlib` за два етапи:
 
@@ -170,24 +170,24 @@ plt.legend()
 
 ![](fig/9_gdp_australia_nz_formatted.svg){alt='Форматований графік ВВП для Австралії та Нової Зеландії'}
 
-- Plot a scatter plot correlating the GDP of Australia and New Zealand
-- Use either `plt.scatter` or `DataFrame.plot.scatter`
+- Побудуйте точкову діаграму співвідношення ВВП Австралії та Нової Зеландії
+- Використовуйте `plt.scatter` або `DataFrame.plot.scatter`
 
 ```python
 plt.scatter(gdp_australia, gdp_nz)
 ```
 
-![](fig/9_gdp_correlation_plt.svg){alt='GDP correlation using plt.scatter'}
+![](fig/9_gdp_correlation_plt.svg){alt='Точкова діаграма, створена за допомогою plt.scatter'}
 
 ```python
 data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 ```
 
-![](fig/9_gdp_correlation_data.svg){alt='GDP correlation using data.T.plot.scatter'}
+![](fig/9_gdp_correlation_data.svg){alt='Точкова діаграма кореляції ВВП, побудована за допомогою data.T.plot.scatter.'}
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Мінімум та максимум
+## Minima and Maxima
 
 Заповніть порожні поля нижче, щоб побудувати графік мінімального ВВП на душу населення протягом часу для всіх країн Європи.
 Потім побудуйте графік максимального ВВП на душу населення в Європі.
@@ -202,7 +202,7 @@ plt.xticks(rotation=90)
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 ```python
 data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
@@ -227,22 +227,20 @@ plt.xticks(rotation=90)
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 ```python
 data_asia = pd.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
 data_asia.describe().T.plot(kind='scatter', x='min', y='max')
 ```
 
-![](fig/9_correlations_solution1.svg){alt='Співвідношення Рішення 1'}
+![](fig/9_correlations_solution1.svg){alt='Співвідношення - Відповідь 1'}
 
-No particular correlations can be seen between the minimum and maximum GDP values
-year on year. Здається, статки азійських країн не зростають і не падають разом.
+Між мінімальним і максимальним значеннями ВВП за роками не спостерігається чіткої залежності. Здається, статки азійських країн не зростають і не падають разом.
 
 :::::::::::::::::::::::::
 
-You might note that the variability in the maximum is much higher than
-that of the minimum.  Зверніть увагу на максимальні значення та відповідні індекси:
+Ви можете помітити, що варіабельність максимальних значень значно вища, ніж варіабельність мінімальних значень.  Зверніть увагу на максимальні значення та відповідні індекси:
 
 ```python
 data_asia = pd.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
@@ -253,13 +251,12 @@ print(data_asia.idxmin())
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
-![](fig/9_correlations_solution2.png){alt='Співвідношення Рішення 2'}
+![](fig/9_correlations_solution2.png){alt='Співвідношення - Відповідь 2'}
 
-Seems the variability in this value is due to a sharp drop after 1972.
-Some geopolitics at play perhaps? Given the dominance of oil producing countries,
-maybe the Brent crude index would make an interesting comparison?
+Здається, варіабельність цього значення зумовлена різким спадом після 1972 року.
+Можливо, тут зіграли роль геополітичні чинники? Враховуючи домінування нафтовидобувних країн, можливо, індекс нафти Brent стане цікавим об'єктом для порівняння?
 У той час як М’янма постійно має найнижчий ВВП, країна з найвищим ВВП змінюється більш помітно.
 
 :::::::::::::::::::::::::
@@ -284,11 +281,11 @@ data_all.plot(kind='scatter', x='gdpPercap_2007', y='lifeExp_2007',
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 ![](fig/9_more_correlations_solution.svg){alt='More Correlations Solution'}
 
-Гарне місце для пошуку документації до функції графіків -
+Гарне місце для пошуку документації до функції plot -
 help(data\_all.plot).
 
 kind - Як вже було показано, цей параметр визначає тип графіку, який буде створено.
@@ -320,7 +317,7 @@ plt.savefig('my_figure.png')
 Зауважимо, що функції в `plt` посилаються на глобальну змінну графіка і після того, як графік виведено на екран (наприклад, за допомогою `plt.show`) matplotlib змусить цю змінну посилатися на новий порожній графік.
 Тому переконайтеся, що ви викликаєте `plt.savefig` перед тим, як графік буде зображено на екрані, інакше ви можете створити файл із порожнім графіком.
 
-При використанні фреймів даних дані часто генеруються та виводяться на екрані однією лінією.
+When using dataframes, data is often generated and plotted to screen in one line.
 На додаток до `plt.savefig`, ми можемо зберегти посилання на поточний графік у локальну змінну (використовуючи `plt.gcf`), а потім викликати `savefig` метод цієї змінної для збереження графіка у файл.
 
 ```python
@@ -337,7 +334,7 @@ fig.savefig('my_figure.png')
 
 Щоразу, коли ви створюєте графіки для статті чи презентації, варто врахувати кілька речей, щоб переконатися, що всі зрозуміють ваші графіки.
 
-- Завжди перевіряйте, що ваш текст достатньо великий для читання. Використовуйте параметр `fontsize` в `xlabel`, `ylabel`, `title`, та `legend`, а також [`tick_params` з `labelsize`](https://matplotlib.org/2.1.1/api/_as_gen/matplotlib.pyplot.tick_params.html) щоб збільшити розмір чисел на ваших осях.
+- Always make sure your text is large enough to read. Use the `fontsize` parameter in `xlabel`, `ylabel`, `title`, and `legend`, and [`tick_params` with `labelsize`](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.tick_params.html) to increase the text size of the numbers on your axes.
 - Також слід подбати, щоб елементи графіка були добре помітними. Використовуйте `s`, щоб збільшити розмір маркерів діаграми розсіювання, і `linewidth`, щоб збільшити розміри ліній вашого графіка.
 - Якщо розрізняти елементи графіка тільки за кольором, це може ускладнити його сприйняття для людей із дальтонізмом або тих, хто переглядає матеріали в чорно-білому вигляді (наприклад, після друку). Для ліній можна використовувати параметр `linestyle`, щоб задати різні стилі ліній. Для діаграм розсіювання `marker` дозволяє змінювати форму ваших точок. Якщо ви не впевнені у вибраній кольоровій палітрі, скористайтеся інструментами на кшталт [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) або [Color Oracle](https://colororacle.org/) щоб імітувати, як виглядатимуть ваші графіки для людей з дальтонізмом.
 
@@ -346,8 +343,8 @@ fig.savefig('my_figure.png')
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - [`matplotlib`](https://matplotlib.org/) — це найпоширеніша наукова бібліотека для побудови графіків у Python.
-- Побудова графіків можлива безпосередньо з використанням фреймів даних Pandas.
-- Побудова графіків включає виділення та трансформацію даних.
+- Plot data directly from a Pandas dataframe.
+- Select and transform data, then plot it.
 - Many styles of plot are available: see the [Python Graph Gallery](https://python-graph-gallery.com/matplotlib/) for more options.
 - Can plot many sets of data together.
 

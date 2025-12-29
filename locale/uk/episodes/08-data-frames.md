@@ -1,5 +1,5 @@
 ---
-title: Pandas DataFrames
+title: Датафрейми Pandas
 teaching: 15
 exercises: 15
 ---

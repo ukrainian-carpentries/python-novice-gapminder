@@ -1,5 +1,5 @@
 ---
-title: For Loops
+title: Цикли for
 teaching: 10
 exercises: 15
 ---
@@ -14,29 +14,29 @@ exercises: 15
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can I make a program do many things?
+- Як змусити програму робити багато речей?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## A _for loop_ executes commands once for each value in a collection.
+## Цикл for виконує команди один раз для кожного значення в колекції.
 
 - Doing calculations on the values in a list one by one
   is as painful as working with `pressure_001`, `pressure_002`, etc.
 - A _for loop_ tells Python to execute some statements once for each value in a list,
   a character string,
   or some other collection.
-- "for each thing in this group, do these operations"
+- "для кожного елемента в цій групі виконайте ці операції"
 
 ```python
-for number in [2, 3, 5]:
-    print(number)
+for number in [2, 3, 5]: 
+     print(number)
 ```
 
 - Цей цикл `for` є еквівалентним наступному:
 
 ```python
-print(2)
-print(3)
+print(2) 
+print(3) 
 print(5)
 ```
 
@@ -51,19 +51,19 @@ print(5)
 ## Цикл `for` складається з колекції, змінної циклу та тіла циклу.
 
 ```python
-for number in [2, 3, 5]:
+for number in [2, 3, 5]: 
     print(number)
 ```
 
-- The collection, `[2, 3, 5]`, is what the loop is being run on.
+- Колекція `[2, 3, 5]` є те, що опрацьовується в циклі.
 - Тіло циклу, `print(number)`, визначає, що робити для кожного значення в колекції.
 - Змінна циклу, `number`, змінюється для кожної ітерації циклу.
-  - The "current thing".
+  - "Поточне значення".
 
-## The first line of the `for` loop must end with a colon, and the body must be indented.
+## Перший рядок циклу `for` має закінчуватися двокрапкою, а тіло циклу має бути з відступом.
 
-- The colon at the end of the first line signals the start of a _block_ of statements.
-- Python uses indentation rather than `{}` or `begin`/`end` to show _nesting_.
+- Двокрапка в кінці першого рядка вказує на початок блоку операторів.
+- Python використовує відступ, а не `{}` або `begin`/`end`, щоб показати _вкладеність_.
   - Будь-який послідовний відступ є допустимим, але майже усі використовують чотири пробіли.
 
 ```python
@@ -75,7 +75,7 @@ print(number)
 IndentationError: expected an indented block
 ```
 
-- Indentation is always meaningful in Python.
+- Відступи у Python завжди важливі.
 
 ```python
 firstName = "Jon"
@@ -89,8 +89,8 @@ firstName = "Jon"
 IndentationError: unexpected indent
 ```
 
-- This error can be fixed by removing the extra spaces
-  at the beginning of the second line.
+- Ця помилка може бути виправлена шляхом видалення зайвих пробілів
+  на початку другого рядку.
 
 ## Змінні циклу можна називати як завгодно.
 
@@ -99,36 +99,36 @@ IndentationError: unexpected indent
   - Не несуть смислового навантаження: їх імена можуть бути будь-якими.
 
 ```python
-for kitten in [2, 3, 5]:
+for kitten in [2, 3, 5]: 
     print(kitten)
 ```
 
-## The body of a loop can contain many statements.
+## Тіло циклу може містити багато операторів.
 
-- But no loop should be more than a few lines long.
+- Але жоден цикл не повинен мати довжину більше кількох рядків.
 - Людям важко запам’ятати великі фрагменти коду.
 
 ```python
 primes = [2, 3, 5]
-for p in primes:
-    squared = p ** 2
-    cubed = p ** 3
+for p in primes: 
+    squared = p ** 2 
+    cubed = p ** 3 
     print(p, squared, cubed)
 ```
 
 ```output
-2 4 8
-3 9 27
+2 4 8 
+3 9 27 
 5 25 125
 ```
 
 ## Використовуйте `range` для перебору послідовності чисел.
 
 - Вбудована функція [`range`](https://docs.python.org/3/library/stdtypes.html#range) створює послідовність чисел.
-  - _Not_ a list: the numbers are produced on demand
-    to make looping over large ranges more efficient.
-- `range(N)` is the numbers 0..N-1
-  - Exactly the legal indices of a list or character string of length N
+  - _Не_ список: номери виробляються на вимогу,
+    щоб зробити цикл у великих діапазонах більш ефективним.
+- `range(N)` є набором чисел 0..N-1
+  - Точні індекси списку або рядка символів довжиною N
 
 ```python
 print('a range is not a list: range(0, 3)')

@@ -1,5 +1,5 @@
 ---
-title: Feedback
+title: Зворотний зв'язок
 teaching: 0
 exercises: 15
 ---
@@ -12,7 +12,7 @@ exercises: 15
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How did the class go?
+- Як пройшов урок?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -20,7 +20,7 @@ Gather feedback from participants.
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- We are constantly seeking to improve this course.
+- Ми постійно прагнемо покращити цей курс.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 

@@ -136,7 +136,7 @@ memory usage: 208.0+ bytes
 - Зверніть увагу, що це дані, _а не_ метод.  (Відсутні дужки)
   - Подібно до `math.pi`.
   - Тому не використовуйте `()`, тому що це - не функція.
-- Called a _member variable_, or just _member_.
+- Ця змінна називається атрибутом.
 
 ```python
 print(data_oceania_country.columns)
@@ -153,7 +153,7 @@ Index(['gdpPercap_1952', 'gdpPercap_1957', 'gdpPercap_1962', 'gdpPercap_1967',
 
 - Іноді потрібно розглядати стовпці як рядки та навпаки.
 - Транспонування (written `.T`) не копіює дані, а лише змінює їх подання.
-- Like `columns`, it is a member variable.
+- Подібно до `columns`, це атрибут датафрейму.
 
 ```python
 print(data_oceania_country.T)
@@ -255,8 +255,7 @@ data_americas.describe()
 
 ## Відповідь
 
-1. We can check out the first five rows of `data_americas` by executing `data_americas.head()`
-   which lets us view the beginning of the DataFrame. Ми можемо вказати кількість рядків, які ми хочемо бачити, визначивши параметр `n` у нашому виклику `americas.head()`.
+1. Ми можемо побачити перші п’ять рядків датафрейму `data_americas` за допомогою `data_americas.head()`, що дозволяє нам швидко переглянути його структуру. Ми можемо вказати кількість рядків, які ми хочемо бачити, визначивши параметр `n` у нашому виклику `americas.head()`.
    Для перегляду перших трьох рядків виконайте:
 
 ```python
@@ -289,9 +288,7 @@ Bolivia       3822.137084
 Brazil        9065.800825
 ```
 
-2. Щоб перевірити останні три рядки `data_americas`, ми можемо використати команду `data_americas.tail(n=3)`, яка аналогічна методу `head()`, що застосовувався вище. However, here we want to look at
-   the last three columns so we need to change our view and then use `tail()`. To do so, we
-   create a new DataFrame in which rows and columns are switched:
+2. Щоб перевірити останні три рядки `data_americas`, ми можемо використати команду `data_americas.tail(n=3)`, яка аналогічна методу `head()`, що застосовувався вище. Однак тут ми хочемо переглянути останні три стовпці, тому нам потрібно змінити подання інформації, а потім використати метод `tail()`. Для цього ми маємо транспонувати цей датафрейм:
 
 ```python
 americas_flipped = data_americas.T
@@ -325,14 +322,13 @@ gdpPercap_2002             11460.6       39097.1     7727   8605.05
 gdpPercap_2007             18008.5       42951.7  10611.5   11415.8
 ```
 
-This shows the data that we want, but we may prefer to display three columns instead of three rows,
-so we can flip it back:
+Це показує потрібні нам дані, але якщо ми віддаємо перевагу перегляду трьох стовпців замість трьох рядків, ми можемо додатково транспонувати останній результат:
 
 ```python
 americas_flipped.tail(n=3).T    
 ```
 
-**Note:** we could have done the above in a single line of code by 'chaining' the commands:
+**Примітка:** того самого результату можна було досягти за допомогою однієї команди, об’єднавши команди в 'ланцюжок':
 
 ```python
 data_americas.T.tail(n=3).T
@@ -344,11 +340,11 @@ data_americas.T.tail(n=3).T
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Reading Files in Other Directories
+## Читання файлів в інших каталогах
 
 Дані вашого поточного проєкту зберігаються у файлі під назвою `microbes.csv`, який знаходиться в каталозі `field_data`.
-You are doing analysis in a notebook called `analysis.ipynb`
-in a sibling folder called `thesis`:
+Ви виконуєте аналіз у блокноті під назвою `analysis.ipynb`, який
+розміщено у сусідньому каталозі `thesis`:
 
 ```output
 your_home_directory
@@ -358,14 +354,13 @@ your_home_directory
     +-- analysis.ipynb
 ```
 
-What value(s) should you pass to `read_csv` to read `microbes.csv` in `analysis.ipynb`?
+Які значення вам потрібно передати у функцію `read_csv`, щоб прочитати `microbes.csv` з блокнота `analysis.ipynb`?
 
 :::::::::::::::  solution
 
 ## Відповідь
 
-We need to specify the path to the file of interest in the call to `pd.read_csv`. We first need to 'jump' out of
-the folder `thesis` using '../' and then into the folder `field_data` using 'field\_data/'. Після цього вказати назву файлу `microbes.csv`.
+Нам треба вказати шлях до потрібного файлу як аргумент функції `pd.read_csv`. По-перше, потрібно 'вийти' з каталогу `thesis` за допомогою '../', а потім 'зайти' у каталог `field_data` за допомогою 'field_data/'. Після цього вказати назву файлу `microbes.csv`.
 Кінцевий результат наступний:
 
 ```python
@@ -380,10 +375,10 @@ data_microbes = pd.read_csv('../field_data/microbes.csv')
 
 ## Запис даних
 
-As well as the `read_csv` function for reading data from a file,
-Pandas provides a `to_csv` function to write dataframes to files.
-Applying what you've learned about reading from files,
-write one of your dataframes to a file called `processed.csv`.
+Окрім функції `read_csv` для зчитування даних з файлу,
+Pandas надає функцію `to_csv` для запису датафреймів у файли.
+Використовуючи знання про читання з файлів,
+запишіть один з ваших датафреймів у файл під назвою `processed.csv`.
 Ви можете скористатися `help`, щоб отримати інформацію про застосування `to_csv`.
 
 :::::::::::::::  solution
@@ -403,9 +398,8 @@ help(data_americas.to_csv)
 help(pd.read_csv)
 ```
 
-Зауважте, що команди `help(to_csv)` або `help(pd.to_csv)` є помилковими! This is due to the fact that `to_csv` is not a global Pandas function, but
-a member function of DataFrames. This means you can only call it on an instance of a DataFrame
-e.g., `data_americas.to_csv` or `data_oceania.to_csv`
+Зауважте, що команди `help(to_csv)` або `help(pd.to_csv)` є помилковими! Це пов'язано з тим, що `to_csv` є не глобальною функцією Pandas, а методом, визначеним для датафреймів. Це означає, що ви можете викликати його лише для будь-якого датафрейма,
+наприклад, `data_americas.to_csv` або `data_oceania.to_csv`
 
 :::::::::::::::::::::::::
 
@@ -415,7 +409,7 @@ e.g., `data_americas.to_csv` or `data_oceania.to_csv`
 
 - Use the Pandas library to get basic statistics out of tabular data.
 - Use `index_col` to specify that a column's values should be used as row headings.
-- Use `DataFrame.info` to find out more about a dataframe.
+- Використовуйте `DataFrame.info`, щоб дізнатися більше про структуру датафрейму.
 - Змінна `DataFrame.columns` зберігає інформацію про стовпці датафрейму.
 - Використовуйте `DataFrame.T`, щоб транспонувати датафрейм.
 - Використовуйте `DataFrame.describe`, щоб отримати зведену статистику даних.
