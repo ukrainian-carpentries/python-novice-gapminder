@@ -270,20 +270,21 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#note-about-pandas-dataframesseries">Note about Pandas DataFrames/Series</a></li>
+        <ul><li><a href="#%D0%B4%D0%B0%D1%82%D0%B0%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B8-%D1%82%D0%B0-%D1%81%D0%B5%D1%80%D1%96%D1%97-%D1%83-pandas">Датафрейми та серії у Pandas</a></li>
 <li><a href="#%D0%B2%D0%B8%D0%B1%D1%96%D1%80-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D1%8C">Вибір значень</a></li>
 <li><a href="#%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D0%B9%D1%82%D0%B5-dataframe.iloc...-...-%D0%B4%D0%BB%D1%8F-%D0%B2%D0%B8%D0%B1%D0%BE%D1%80%D1%83-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D1%8C-%D0%B7%D0%B0-%D1%97%D1%85-%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D1%96%D1%94%D1%8E">Використовуйте <code>DataFrame.iloc[..., ...]</code> для вибору
 значень за їх позицією</a></li>
 <li><a href="#use-dataframe.loc...-...-to-select-values-by-their-entry-label.">Use <code>DataFrame.loc[..., ...]</code> to select values by their
 (entry) label.</a></li>
-<li><a href="#use-on-its-own-to-mean-all-columns-or-all-rows.">Use <code>:</code> on its own to mean all columns or all rows.</a></li>
+<li><a href="#%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D0%B9%D1%82%D0%B5-%D0%BB%D0%B8%D1%88%D0%B5-%D0%B7%D0%B0%D0%BC%D1%96%D1%81%D1%82%D1%8C-%D0%BC%D1%96%D1%82%D0%BA%D0%B8-%D0%B4%D0%BB%D1%8F-%D0%BF%D0%BE%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B2%D1%81%D1%96%D1%85-%D1%81%D1%82%D0%BE%D0%B2%D0%BF%D1%86%D1%96%D0%B2-%D0%B0%D0%B1%D0%BE-%D0%B2%D1%81%D1%96%D1%85-%D1%80%D1%8F%D0%B4%D0%BA%D1%96%D0%B2.">Використовуйте лише <code>:</code> замість мітки для позначення всіх
+стовпців або всіх рядків.</a></li>
 <li><a href="#%D0%B2%D0%B8%D0%B1%D0%B8%D1%80%D0%B0%D0%B9%D1%82%D0%B5-%D0%BA%D1%96%D0%BB%D1%8C%D0%BA%D0%B0-%D1%81%D1%82%D0%BE%D0%B2%D0%BF%D1%86%D1%96%D0%B2-%D0%B0%D0%B1%D0%BE-%D1%80%D1%8F%D0%B4%D0%BA%D1%96%D0%B2-%D0%B7%D0%B0-%D0%B4%D0%BE%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D0%BE%D1%8E-dataframe.loc-%D1%82%D0%B0-%D0%B2%D0%B8%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B7%D1%80%D1%96%D0%B7%D1%83.">Вибирайте кілька стовпців або рядків за допомогою
 <code>DataFrame.loc</code> та визначеного зрізу.</a></li>
 <li><a href="#%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82-%D0%B7%D1%80%D1%96%D0%B7%D1%83-%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0-%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D0%B2%D0%B0%D1%82%D0%B8-%D0%B2-%D0%BF%D0%BE%D0%B4%D0%B0%D0%BB%D1%8C%D1%88%D0%B8%D1%85-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D1%96%D1%8F%D1%85.">Результат зрізу можна використовувати в подальших операціях.</a></li>
 <li><a href="#%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D0%B9%D1%82%D0%B5-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D1%96%D1%97-%D0%BF%D0%BE%D1%80%D1%96%D0%B2%D0%BD%D1%8F%D0%BD%D0%BD%D1%8F-%D0%B4%D0%BB%D1%8F-%D0%B2%D0%B8%D0%B1%D0%BE%D1%80%D1%83-%D0%B4%D0%B0%D0%BD%D0%B8%D1%85-%D0%BD%D0%B0-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%96-%D0%BF%D0%B5%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%BD%D1%8F.">Використовуйте операції порівняння для вибору даних на основі
 певного значення.</a></li>
-<li><a href="#select-values-or-nan-using-a-boolean-mask.">Select values or NaN using a Boolean mask.</a></li>
-<li><a href="#group-by-split-apply-combine">Group By: split-apply-combine</a></li>
+<li><a href="#%D0%B2%D0%B8%D0%B1%D1%96%D1%80-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D1%8C-%D0%B0%D0%B1%D0%BE-nan-%D0%B7%D0%B0-%D0%B4%D0%BE%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D0%BE%D1%8E-%D0%B1%D1%83%D0%BB%D0%B5%D0%B2%D0%BE%D1%97-%D0%BC%D0%B0%D1%81%D0%BA%D0%B8.">Вибір значень або NaN за допомогою булевої маски.</a></li>
+<li><a href="#group-by-%D0%B3%D1%80%D1%83%D0%BF%D1%83%D1%94-%D0%B7%D0%B0%D1%81%D1%82%D0%BE%D1%81%D0%BE%D0%B2%D1%83%D1%94-%D1%82%D0%B0-%D0%BA%D0%BE%D0%BC%D0%B1%D1%96%D0%BD%D1%83%D1%94">Group By: групує, застосовує та комбінує</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -456,7 +457,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Датафрейми Pandas</h1>
-        <p>Останнє оновлення 2025-12-29 |
+        <p>Останнє оновлення 2026-01-05 |
 
         <a href="https://github.com/ukrainian-carpentries/python-novice-gapminder/edit/main/episodes/08-data-frames.md" class="external-link">Редагувати цю сторінку <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -495,22 +496,23 @@
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="note-about-pandas-dataframesseries">Note about Pandas DataFrames/Series<a class="anchor" aria-label="anchor" href="#note-about-pandas-dataframesseries"></a></h2>
-<hr class="half-width"><p>A <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html" class="external-link">DataFrame</a>
-is a collection of <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.html" class="external-link">Series</a>;
-The DataFrame is the way Pandas represents a table, and Series is the
-data-structure Pandas use to represent a column.</p>
-<p>Pandas is built on top of the <a href="https://www.numpy.org/" class="external-link">Numpy</a> library, which in practice means
-that most of the methods defined for Numpy Arrays apply to Pandas
-Series/DataFrames.</p>
+<section><h2 class="section-heading" id="датафрейми-та-серії-у-pandas">Датафрейми та серії у Pandas<a class="anchor" aria-label="anchor" href="#%D0%B4%D0%B0%D1%82%D0%B0%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B8-%D1%82%D0%B0-%D1%81%D0%B5%D1%80%D1%96%D1%97-%D1%83-pandas"></a></h2>
+<hr class="half-width"><p>Датафрейм (<a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html" class="external-link">DataFrame</a>)
+містить декілька серій (<a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.html" class="external-link">Series</a>);
+Датафрейм — це спосіб представлення таблиці в Pandas, а серія — це
+структура даних, яку Pandas використовує для представлення окремого
+стовпця.</p>
+<p>Pandas побудована на основі бібліотеки <a href="https://www.numpy.org/" class="external-link">Numpy</a>, що означає, що більшість
+методів для масивів Numpy також застосовується до датафреймів та серій у
+Pandas.</p>
 <p>Що робить Pandas таким привабливим? Це потужний інтерфейс для доступу
 до окремих записів таблиці, належної обробки відсутніх значень та
 підтримки операцій з датафреймами, подібних до тих, що застосовуються в
 реляційних базах даних.</p>
 </section><section><h2 class="section-heading" id="вибір-значень">Вибір значень<a class="anchor" aria-label="anchor" href="#%D0%B2%D0%B8%D0%B1%D1%96%D1%80-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D1%8C"></a></h2>
-<hr class="half-width"><p>To access a value at the position <code>[i,j]</code> of a DataFrame,
-we have two options, depending on what is the meaning of <code>i</code>
-in use. Remember that a DataFrame provides an <em>index</em> as a way to
+<hr class="half-width"><p>Існує два способи доступу до значення в позиції <code>[i,j]</code> у
+датафреймі, залежно від того, як інтерпретується <code>i</code>.
+Remember that a DataFrame provides an <em>index</em> as a way to
 identify the rows of the table; a row, then, has a <em>position</em>
 inside the table as well as a <em>label</em>, which uniquely identifies
 its <em>entry</em> in the DataFrame.</p>
@@ -532,7 +534,8 @@ its <em>entry</em> in the DataFrame.</p>
 </div>
 </section><section><h2 class="section-heading" id="use-dataframe-loc--------to-select-values-by-their-entry-label-">Use <code>DataFrame.loc[..., ...]</code> to select values by their
 (entry) label.<a class="anchor" aria-label="anchor" href="#use-dataframe-loc--------to-select-values-by-their-entry-label-"></a></h2>
-<hr class="half-width"><ul><li>Can specify location by row and/or column name.</li>
+<hr class="half-width"><ul><li>Можна вказати розташування, використовуючи заголовок рядку та/або
+стовпця.</li>
 </ul><div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -543,7 +546,8 @@ its <em>entry</em> in the DataFrame.</p>
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="fl">1601.056136</span></span></code></pre>
 </div>
-</section><section><h2 class="section-heading" id="use-on-its-own-to-mean-all-columns-or-all-rows-">Use <code>:</code> on its own to mean all columns or all rows.<a class="anchor" aria-label="anchor" href="#use-on-its-own-to-mean-all-columns-or-all-rows-"></a></h2>
+</section><section><h2 class="section-heading" id="використовуйте-лише-замість-мітки-для-позначення-всіх-стовпців-або-всіх-рядків-">Використовуйте лише <code>:</code> замість мітки для позначення всіх
+стовпців або всіх рядків.<a class="anchor" aria-label="anchor" href="#%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D0%B9%D1%82%D0%B5-%D0%BB%D0%B8%D1%88%D0%B5-%D0%B7%D0%B0%D0%BC%D1%96%D1%81%D1%82%D1%8C-%D0%BC%D1%96%D1%82%D0%BA%D0%B8-%D0%B4%D0%BB%D1%8F-%D0%BF%D0%BE%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B2%D1%81%D1%96%D1%85-%D1%81%D1%82%D0%BE%D0%B2%D0%BF%D1%86%D1%96%D0%B2-%D0%B0%D0%B1%D0%BE-%D0%B2%D1%81%D1%96%D1%85-%D1%80%D1%8F%D0%B4%D0%BA%D1%96%D0%B2-"></a></h2>
 <hr class="half-width"><ul><li>Це відповідає звичайному синтаксису зрізів у Python.</li>
 </ul><div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -612,15 +616,15 @@ Netherlands    12790.849560    15363.251360    18794.745670
 Norway         13450.401510    16361.876470    18965.055510
 Poland          5338.752143     6557.152776     8006.506993</code></pre>
 </div>
-<p>In the above code, we discover that <strong>slicing using
-<code>loc</code> is inclusive at both ends</strong>, which differs from
-<strong>slicing using <code>iloc</code></strong>, where slicing
-indicates everything up to but not including the final index.</p>
+<p>У наведеному вище коді ми бачимо, що <strong>зріз із використанням
+<code>loc</code> включає дані на обох вказаних кінцях</strong>, на
+відміну від <strong>зрізу із застосуванням <code>iloc</code></strong>,
+де зріз не включає кінцевий індекс.</p>
 </section><section><h2 class="section-heading" id="результат-зрізу-можна-використовувати-в-подальших-операціях-">Результат зрізу можна використовувати в подальших операціях.<a class="anchor" aria-label="anchor" href="#%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82-%D0%B7%D1%80%D1%96%D0%B7%D1%83-%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0-%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D0%B2%D0%B0%D1%82%D0%B8-%D0%B2-%D0%BF%D0%BE%D0%B4%D0%B0%D0%BB%D1%8C%D1%88%D0%B8%D1%85-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D1%96%D1%8F%D1%85-"></a></h2>
-<hr class="half-width"><ul><li>Usually don’t just print a slice.</li>
+<hr class="half-width"><ul><li>Зазвичай зрізи формуються не тільки для друку.</li>
 <li>Усі статистичні оператори, які працюють зі цілими фреймами даних,
 так само працюють зі зрізами.</li>
-<li>E.g., calculate max of a slice.</li>
+<li>Наприклад, обчислення максимальних значень у зрізі.</li>
 </ul><div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -655,11 +659,11 @@ dtype: float64</code></pre>
 </ul><div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="co"># Use a subset of data to keep output readable.</span></span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="co"># Використовуємо частину даних, щоб результат був читабельним</span></span>
 <span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>subset <span class="op">=</span> data.loc[<span class="st">'Italy'</span>:<span class="st">'Poland'</span>, <span class="st">'gdpPercap_1962'</span>:<span class="st">'gdpPercap_1972'</span>]</span>
 <span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Subset of data:</span><span class="ch">\n</span><span class="st">'</span>, subset)</span>
 <span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a><span class="co"># Which values were greater than 10000 ?</span></span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a><span class="co"># Які значення перевищують 10000 ?</span></span>
 <span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">Where are values large?</span><span class="ch">\n</span><span class="st">'</span>, subset <span class="op">&gt;</span> <span class="dv">10000</span>)</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -683,9 +687,9 @@ Netherlands           True           True           True
 Norway                True           True           True
 Poland               False          False          False</code></pre>
 </div>
-</section><section><h2 class="section-heading" id="select-values-or-nan-using-a-boolean-mask-">Select values or NaN using a Boolean mask.<a class="anchor" aria-label="anchor" href="#select-values-or-nan-using-a-boolean-mask-"></a></h2>
-<hr class="half-width"><ul><li>A frame full of Booleans is sometimes called a <em>mask</em> because
-of how it can be used.</li>
+</section><section><h2 class="section-heading" id="вибір-значень-або-nan-за-допомогою-булевої-маски-">Вибір значень або NaN за допомогою булевої маски.<a class="anchor" aria-label="anchor" href="#%D0%B2%D0%B8%D0%B1%D1%96%D1%80-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D1%8C-%D0%B0%D0%B1%D0%BE-nan-%D0%B7%D0%B0-%D0%B4%D0%BE%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D0%BE%D1%8E-%D0%B1%D1%83%D0%BB%D0%B5%D0%B2%D0%BE%D1%97-%D0%BC%D0%B0%D1%81%D0%BA%D0%B8-"></a></h2>
+<hr class="half-width"><ul><li>Датафрейм, що містить лише булеві значення, іноді називають маскою
+через спосіб його використання.</li>
 </ul><div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -703,8 +707,8 @@ Netherlands     12790.84956     15363.25136     18794.74567
 Norway          13450.40151     16361.87647     18965.05551
 Poland                  NaN             NaN             NaN</code></pre>
 </div>
-<ul><li>Get the value where the mask is true, and NaN (Not a Number) where
-it is false.</li>
+<ul><li>Результат містить оригінальні значення, коли умова виконується, та
+NaN (Not a Number - не число) у решті випадків.</li>
 <li>Це зручно, оскільки операції на кшталт max, min, average автоматично
 ігнорують значення NaN.</li>
 </ul><div class="codewrapper sourceCode" id="cb19">
@@ -725,7 +729,7 @@ min      12790.849560    10022.401310    12269.273780
 75%      13285.513523    15862.563915    18879.900590
 max      13450.401510    16361.876470    18965.055510</code></pre>
 </div>
-</section><section><h2 class="section-heading" id="group-by-split-apply-combine">Group By: split-apply-combine<a class="anchor" aria-label="anchor" href="#group-by-split-apply-combine"></a></h2>
+</section><section><h2 class="section-heading" id="group-by-групує-застосовує-та-комбінує">Group By: групує, застосовує та комбінує<a class="anchor" aria-label="anchor" href="#group-by-%D0%B3%D1%80%D1%83%D0%BF%D1%83%D1%94-%D0%B7%D0%B0%D1%81%D1%82%D0%BE%D1%81%D0%BE%D0%B2%D1%83%D1%94-%D1%82%D0%B0-%D0%BA%D0%BE%D0%BC%D0%B1%D1%96%D0%BD%D1%83%D1%94"></a></h2>
 <hr class="half-width"><p>::::::::::::::::::::::::::::::::::::: instructor Learners often
 struggle here, many may not work with financial data and concepts so
 they find the example concepts difficult to get their head around. Однак
@@ -865,13 +869,13 @@ dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="extent-of-slicing" class="callout challenge">
+<div id="межі-зрізу" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Вправа</span>
-<div id="extent-of-slicing" class="callout-inner">
-<h3 class="callout-title">Extent of Slicing</h3>
+<div id="межі-зрізу" class="callout-inner">
+<h3 class="callout-title">Межі зрізу</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>Чи дають два наведені нижче твердження однаковий результат?</li>
 <li>На основі цього, яке правило визначає, що включено (чи ні) до
@@ -904,7 +908,7 @@ country
 Albania     1601.056136     1942.284244
 Austria     6137.076492     8842.598030</code></pre>
 </div>
-<p>The second statement gives:</p>
+<p>Другий вираз дає:</p>
 <div class="codewrapper">
 <h3 class="code-label">ВИХІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -914,8 +918,8 @@ Albania     1601.056136     1942.284244     2312.888958
 Austria     6137.076492     8842.598030    10750.721110
 Belgium     8343.105127     9714.960623    10991.206760</code></pre>
 </div>
-<p>Clearly, the second statement produces an additional column and an
-additional row compared to the first statement.<br>
+<p>Вочевидь, другий вираз повертає додатковий стовпець і додатковий
+рядок у порівнянні з першим.<br>
 Який висновок ми можемо зробити? Ми бачимо, що числовий зріз 0:2 <em>не
 включає</em> кінцевий індекс (тобто, індекс 2), тоді як іменований зріз
 ‘gdpPercap_1952’:‘gdpPercap_1962’ <em>включає</em> кінцевий елемент.</p>
@@ -931,8 +935,9 @@ additional row compared to the first statement.<br>
 <div id="реконструювання-даних" class="callout-inner">
 <h3 class="callout-title">Реконструювання даних</h3>
 <div class="callout-content">
-<p>Explain what each line in the following short program does: what is
-in <code>first</code>, <code>second</code>, etc.?</p>
+<p>Опишіть, що робить кожен рядок наведеної короткої програми та які
+значення зберігаються в змінних <code>first</code>, <code>second</code>
+тощо?</p>
 <div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -981,8 +986,8 @@ in <code>first</code>, <code>second</code>, etc.?</p>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a>third <span class="op">=</span> second.drop(<span class="st">'Puerto Rico'</span>)</span></code></pre>
 </div>
 <p>Як підказує синтаксис, цей код видаляє рядок з міткою ‘Puerto Rico’ з
-датафрейму <code>second</code>. The resulting dataframe
-<code>third</code> has one row less than the original dataframe
+датафрейму <code>second</code>. У результаті датафрейм
+<code>third</code> містить на один рядок менше, ніж вихідний датафрейм
 <code>second</code>.</p>
 <div class="codewrapper sourceCode" id="cb35">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -990,9 +995,9 @@ in <code>first</code>, <code>second</code>, etc.?</p>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a>fourth <span class="op">=</span> third.drop(<span class="st">'continent'</span>, axis <span class="op">=</span> <span class="dv">1</span>)</span></code></pre>
 </div>
 <p>Знову ми застосовуємо функцію <code>drop</code>, але в цьому випадку
-ми видаляємо не рядок, а цілий стовпець. To accomplish this, we need to
-specify also the <code>axis</code> parameter (we want to drop the second
-column which has index 1).</p>
+ми видаляємо не рядок, а цілий стовпець. Для цього нам також потрібно
+вказати параметр <code>axis</code> (ми хочемо видалити другий стовпець,
+який має індекс 1).</p>
 <div class="codewrapper sourceCode" id="cb36">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1116,9 +1121,9 @@ column label and does not give you an error, although no column named
 <div id="багато-способів-доступу" class="callout-inner">
 <h3 class="callout-title">Багато способів доступу</h3>
 <div class="callout-content">
-<p>There are at least two ways of accessing a value or slice of a
-DataFrame: by name or index. Однак існує багато інших варіантів.
-Наприклад, можна отримати окремий стовпець або рядок як
+<p>Отримати значення або зріз з датафрейму можна щонайменше двома
+способами: за назвою або за індексом. Однак існує багато інших
+варіантів. Наприклад, можна отримати окремий стовпець або рядок як
 <code>DataFrame</code> або <code>Series</code> об’єкт.</p>
 <p>Запропонуйте різні способи виконання наступних операцій з
 датафреймами:</p>
@@ -1127,8 +1132,8 @@ DataFrame: by name or index. Однак існує багато інших ва�
 <li>Доступ до окремого елемента датафрейму</li>
 <li>Доступ до декількох стовпців</li>
 <li>Доступ до декількох рядків</li>
-<li>Access a subset of specific rows and columns</li>
-<li>Access a subset of row and column ranges</li>
+<li>Доступ до підмножини, заданої визначеними рядками та стовпцями</li>
+<li>Доступ до підмножини, заданої діапазонами рядків та стовпців</li>
 </ol></div>
 </div>
 </div>
@@ -1243,7 +1248,7 @@ DataFrame: by name or index. Однак існує багато інших ва�
 <span id="cb46-4"><a href="#cb46-4" tabindex="-1"></a><span class="co"># by index</span></span>
 <span id="cb46-5"><a href="#cb46-5" tabindex="-1"></a>data.iloc[[row1_index, row2_index, row3_index]]</span></code></pre>
 </div>
-<p>6. Access a subset of specific rows and columns</p>
+<p>6. Доступ до підмножини, заданої визначеними рядками та стовпцями</p>
 <div class="codewrapper sourceCode" id="cb47">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1259,7 +1264,7 @@ DataFrame: by name or index. Однак існує багато інших ва�
 <span id="cb47-10"><a href="#cb47-10" tabindex="-1"></a><span class="co"># column indices + row names</span></span>
 <span id="cb47-11"><a href="#cb47-11" tabindex="-1"></a>data.iloc[:, [col1_index, col2_index, col3_index]].loc[[<span class="st">"row1"</span>, <span class="st">"row2"</span>, <span class="st">"row3"</span>]]</span></code></pre>
 </div>
-<p>7. Access a subset of row and column ranges</p>
+<p>7. Доступ до підмножини, заданої діапазонами рядків та стовпців</p>
 <div class="codewrapper sourceCode" id="cb48">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1317,10 +1322,9 @@ DataFrame: by name or index. Однак існує багато інших ва�
 <kbd>Shift</kbd>+<kbd>Tab</kbd>, щоб дізнатися більше про призначення
 цих методів.</p>
 <p>Припустимо, що Pandas вже імпортовано, а дані Gapminder про ВВП
-Європи завантажено в змінну <code>data</code>. Then, use
-<code>dir()</code> to find the function that prints out the median
-per-capita GDP across all European countries for each year that
-information is available.</p>
+Європи завантажено в змінну <code>data</code>. Тоді скористайтеся
+<code>dir()</code>, щоб знайти функцію, яка друкує середній ВВП на душу
+населення для всіх європейських країн за кожен доступний рік.</p>
 </div>
 </div>
 </div>
@@ -1333,8 +1337,8 @@ information is available.</p>
 </button>
 <div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
-<p>Among many choices, <code>dir()</code> lists the
-<code>median()</code> function as a possibility. Таким чином,</p>
+<p>Серед багатьох варіантів <code>dir()</code> пропонує функцію
+<code>median()</code>. Таким чином,</p>
 <div class="codewrapper sourceCode" id="cb51">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1344,17 +1348,17 @@ information is available.</p>
 </div>
 </div>
 </div>
-<div id="interpretation" class="callout discussion">
+<div id="інтерпретація-даних" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <span class="callout-header">Обговорення</span>
-<div id="interpretation" class="callout-inner">
-<h3 class="callout-title">Interpretation</h3>
+<div id="інтерпретація-даних" class="callout-inner">
+<h3 class="callout-title">Інтерпретація даних</h3>
 <div class="callout-content">
-<p>Poland’s borders have been stable since 1945, but changed several
-times in the years before then. Як би ви врахували це при створенні
-таблиці ВВП на душу населення для Польщі за все ХХ століття?</p>
+<p>Кордони Польщі стабільні з 1945 року, але до цього кілька разів
+змінювалися. Як би ви врахували це при створенні таблиці ВВП на душу
+населення для Польщі за все ХХ століття?</p>
 </div>
 </div>
 </div>
@@ -1367,13 +1371,15 @@ times in the years before then. Як би ви врахували це при с
 <div class="callout-content">
 <ul><li>Використовуйте <code>DataFrame.iloc[..., ...]</code> для вибору
 значень за їх позицією</li>
-<li>Use <code>:</code> on its own to mean all columns or all rows.</li>
-<li>Select multiple columns or rows using <code>DataFrame.loc</code> and
-a named slice.</li>
+<li>Використовуйте лише <code>:</code> замість міток для позначення всіх
+стовпців або всіх рядків.</li>
+<li>Вибирайте кілька стовпців або рядків за допомогою
+<code>DataFrame.loc</code> та зрізу, заданого іменами стовпців або
+рядків.</li>
 <li>Результат застосування операції зрізу може бути використаний у
 подальших операціях.</li>
 <li>Use comparisons to select data based on value.</li>
-<li>Select values or NaN using a Boolean mask.</li>
+<li>Вибирайте значення або NaN за допомогою булевої маски.</li>
 </ul></div>
 </div>
 </div>
@@ -1437,8 +1443,8 @@ a named slice.</li>
   "url": "https://ukrainian-carpentries.github.io/python-novice-gapminder/instructor/08-data-frames.html",
   "identifier": "https://ukrainian-carpentries.github.io/python-novice-gapminder/instructor/08-data-frames.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2025-12-29",
-  "datePublished": "2025-12-30"
+  "dateModified": "2026-01-05",
+  "datePublished": "2026-01-05"
 }
 
   </script><script>

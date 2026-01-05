@@ -288,7 +288,7 @@ Pandas</a>.</li>
 <li><a href="#%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BD%D1%96-%D0%B1%D0%B0%D0%B3%D0%B0%D1%82%D0%BE-%D1%81%D1%82%D0%B8%D0%BB%D1%96%D0%B2-%D0%B3%D1%80%D0%B0%D1%84%D1%96%D0%BA%D1%96%D0%B2.">Доступні багато стилів графіків.</a></li>
 <li><a href="#%D0%B3%D1%80%D0%B0%D1%84%D1%96%D0%BA-%D1%82%D0%B0%D0%BA%D0%BE%D0%B6-%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0-%D0%BF%D0%BE%D0%B1%D1%83%D0%B4%D1%83%D0%B2%D0%B0%D1%82%D0%B8-%D0%B2%D0%B8%D0%BA%D0%BB%D0%B8%D0%BA%D0%B0%D0%B2%D1%88%D0%B8-%D0%B1%D0%B5%D0%B7%D0%BF%D0%BE%D1%81%D0%B5%D1%80%D0%B5%D0%B4%D0%BD%D1%8C%D0%BE-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D1%96%D1%8E-plot-%D0%B1%D1%96%D0%B1%D0%BB%D1%96%D0%BE%D1%82%D0%B5%D0%BA%D0%B8-matplotlib.">Графік також можна побудувати, викликавши безпосередньо функцію
 <code>plot</code> бібліотеки <code>matplotlib</code>.</a></li>
-<li><a href="#get-australia-data-from-dataframe">Get Australia data from dataframe</a></li>
+<li><a href="#%D0%BE%D1%82%D1%80%D0%B8%D0%BC%D0%B0%D1%94%D0%BC%D0%BE-%D0%B4%D0%B0%D0%BD%D1%96-%D0%B0%D0%B2%D1%81%D1%82%D1%80%D0%B0%D0%BB%D1%96%D1%97-%D0%B7-%D0%B4%D0%B0%D1%82%D0%B0%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D1%83.">Отримаємо дані Австралії з датафрейму.</a></li>
 <li><a href="#%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0-%D0%BF%D0%BE%D0%B1%D1%83%D0%B4%D1%83%D0%B2%D0%B0%D1%82%D0%B8-%D0%BA%D1%96%D0%BB%D1%8C%D0%BA%D0%B0-%D0%B3%D1%80%D0%B0%D1%84%D1%96%D0%BA%D1%96%D0%B2-%D0%B7%D0%B0-%D1%80%D1%96%D0%B7%D0%BD%D0%B8%D0%BC%D0%B8-%D0%BD%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D0%BC%D0%B8-%D0%B4%D0%B0%D0%BD%D0%B8%D1%85-%D0%BE%D0%B4%D0%BD%D0%BE%D1%87%D0%B0%D1%81%D0%BD%D0%BE.">Можна побудувати кілька графіків за різними наборами даних
 одночасно.</a></li>
         </ul></div><!--/div.accordion-body-->
@@ -454,7 +454,7 @@ Pandas</a>.</li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Побудова графіків</h1>
-        <p>Останнє оновлення 2025-12-29 |
+        <p>Останнє оновлення 2026-01-05 |
 
         <a href="https://github.com/ukrainian-carpentries/python-novice-gapminder/edit/main/episodes/09-plotting.md" class="external-link">Редагувати цю сторінку <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -486,8 +486,8 @@ Pandas</a>.</li>
 <h3 class="card-title">Цілі</h3>
 <ul><li>Створення графіку часового ряду, який відповідає одному набору
 даних.</li>
-<li>Create a scatter plot showing relationship between two data
-sets.</li>
+<li>Створення точкової діаграми, або діаграми розсіювання, яка показує
+зв’язок між двома наборами даних.</li>
 </ul></div>
 </div>
 </div>
@@ -527,10 +527,10 @@ Python.<a class="anchor" aria-label="anchor" href="#matplotlib-%D1%94-%D0%BD%D0%
 <div class="callout-content">
 <p>У прикладі з Jupyter Notebook виконання комірки призводить до
 побудови графіку безпосередньо під кодом. Графік також зберігається у
-блокноті для подальшого перегляду. However, other Python environments
-like an interactive Python session started from a terminal or a Python
-script executed via the command line require an additional command to
-display the figure.</p>
+блокноті для подальшого перегляду. Проте, інші середовища Python, такі
+як інтерактивна сесія Python, що виконується у терміналі, або Python
+скрипт, виконаний за допомогою командного рядка, потребують додаткової
+команди для зображення графіку.</p>
 <p>Доручіть <code>matplotlib</code> зобразити графік:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -603,7 +603,7 @@ Pandas</a>.</li>
 <li>Колір та формат маркерів також можна вказати як додатковий
 необов’язковий аргумент, тобто, <code>b-</code> - це синя лінія,
 <code>g--</code> - це зелена пунктирна лінія.</li>
-</ul></section><section><h2 class="section-heading" id="get-australia-data-from-dataframe">Get Australia data from dataframe<a class="anchor" aria-label="anchor" href="#get-australia-data-from-dataframe"></a></h2>
+</ul></section><section><h2 class="section-heading" id="отримаємо-дані-австралії-з-датафрейму-">Отримаємо дані Австралії з датафрейму.<a class="anchor" aria-label="anchor" href="#%D0%BE%D1%82%D1%80%D0%B8%D0%BC%D0%B0%D1%94%D0%BC%D0%BE-%D0%B4%D0%B0%D0%BD%D1%96-%D0%B0%D0%B2%D1%81%D1%82%D1%80%D0%B0%D0%BB%D1%96%D1%97-%D0%B7-%D0%B4%D0%B0%D1%82%D0%B0%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D1%83-"></a></h2>
 <hr class="half-width"><div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -676,13 +676,13 @@ Pandas</a>.</li>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>data.T.plot.scatter(x <span class="op">=</span> <span class="st">'Australia'</span>, y <span class="op">=</span> <span class="st">'New Zealand'</span>)</span></code></pre>
 </div>
-<figure><img src="../fig/9_gdp_correlation_data.svg" alt="Точкова діаграма кореляції ВВП, побудована за допомогою data.T.plot.scatter." class="figure mx-auto d-block"></figure><div id="minima-and-maxima" class="callout challenge">
+<figure><img src="../fig/9_gdp_correlation_data.svg" alt="Точкова діаграма кореляції ВВП, побудована за допомогою data.T.plot.scatter." class="figure mx-auto d-block"></figure><div id="мінімуми-та-максимуми" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Вправа</span>
-<div id="minima-and-maxima" class="callout-inner">
-<h3 class="callout-title">Minima and Maxima</h3>
+<div id="мінімуми-та-максимуми" class="callout-inner">
+<h3 class="callout-title">Мінімуми та максимуми</h3>
 <div class="callout-content">
 <p>Заповніть порожні поля нижче, щоб побудувати графік мінімального ВВП
 на душу населення протягом часу для всіх країн Європи. Потім побудуйте
@@ -706,7 +706,7 @@ Pandas</a>.</li>
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -717,7 +717,7 @@ Pandas</a>.</li>
 <span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'best'</span>)</span>
 <span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">90</span>)</span></code></pre>
 </div>
-<figure><img src="../fig/9_minima_maxima_solution.png" alt="Minima Maxima Solution" class="figure mx-auto d-block"></figure></div>
+<figure><img src="../fig/9_minima_maxima_solution.png" alt="Рішення для графіків мінімуму та максимуму" class="figure mx-auto d-block"></figure></div>
 </div>
 </div>
 </div>
@@ -743,7 +743,7 @@ Pandas</a>.</li>
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -788,7 +788,7 @@ Pandas</a>.</li>
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <figure><img src="../fig/9_correlations_solution2.png" alt="Співвідношення - Відповідь 2" class="figure mx-auto d-block"></figure><p>Здається, варіабельність цього значення зумовлена різким спадом після
 1972 року. Можливо, тут зіграли роль геополітичні чинники? Враховуючи
@@ -807,8 +807,9 @@ Pandas</a>.</li>
 <div id="більше-кореляцій" class="callout-inner">
 <h3 class="callout-title">Більше кореляцій</h3>
 <div class="callout-content">
-<p>This short program creates a plot showing the correlation between GDP
-and life expectancy for 2007, normalizing marker size by population:</p>
+<p>Ця коротка програма створює графік, який ілюструє взаємозв’язок між
+ВВП і очікуваною тривалістю життя на 2007 рік, змінюючи розмір маркера в
+залежності із чисельністю населення:</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -828,14 +829,14 @@ and life expectancy for 2007, normalizing marker size by population:</p>
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
-<figure><img src="../fig/9_more_correlations_solution.svg" alt="More Correlations Solution" class="figure mx-auto d-block"></figure><p>Гарне місце для пошуку документації до функції plot -
+<figure><img src="../fig/9_more_correlations_solution.svg" alt="Більше кореляцій - Відповідь" class="figure mx-auto d-block"></figure><p>Гарне місце для пошуку документації до функції plot -
 help(data_all.plot).</p>
 <p>kind - Як вже було показано, цей параметр визначає тип графіку, який
 буде створено.</p>
-<p>x and y - A column name or index that determines what data will be
-placed on the x and y axes of the plot</p>
+<p>x та y - імена стовпців або індекси, що визначають, які дані будуть
+розміщені на графіку на осях x та y</p>
 <p>s - Інформацію про цей аргумент можна знайти в документації
 plt.scatter. Це одне число або одне значення для кожної точки даних.
 Визначає розмір маркера.</p>
@@ -869,11 +870,12 @@ pdf, ps, eps і svg).</p>
 на новий порожній графік. Тому переконайтеся, що ви викликаєте
 <code>plt.savefig</code> перед тим, як графік буде зображено на екрані,
 інакше ви можете створити файл із порожнім графіком.</p>
-<p>When using dataframes, data is often generated and plotted to screen
-in one line. На додаток до <code>plt.savefig</code>, ми можемо зберегти
-посилання на поточний графік у локальну змінну (використовуючи
-<code>plt.gcf</code>), а потім викликати <code>savefig</code> метод цієї
-змінної для збереження графіка у файл.</p>
+<p>При використанні датафреймів дані зазвичай генеруються та виводяться
+на екрані одним рядком коду. На додаток до <code>plt.savefig</code>, ми
+можемо зберегти посилання на поточний графік у локальну змінну
+(використовуючи <code>plt.gcf</code>), а потім викликати
+<code>savefig</code> метод цієї змінної для збереження графіка у
+файл.</p>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -895,11 +897,12 @@ in one line. На додаток до <code>plt.savefig</code>, ми можем�
 <p>Щоразу, коли ви створюєте графіки для статті чи презентації, варто
 врахувати кілька речей, щоб переконатися, що всі зрозуміють ваші
 графіки.</p>
-<ul><li>Always make sure your text is large enough to read. Use the
-<code>fontsize</code> parameter in <code>xlabel</code>,
-<code>ylabel</code>, <code>title</code>, and <code>legend</code>, and <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.tick_params.html" class="external-link"><code>tick_params</code>
-with <code>labelsize</code></a> to increase the text size of the numbers
-on your axes.</li>
+<ul><li>Завжди стежте за тим, щоб розмір тексту був зручним для читання.
+Використовуйте параметр <code>fontsize</code> в <code>xlabel</code>,
+<code>ylabel</code>, <code>title</code>, та <code>legend</code>, а також
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.tick_params.html" class="external-link"><code>tick_params</code>
+з <code>labelsize</code></a> щоб збільшити розмір тексту на осях
+графіку.</li>
 <li>Також слід подбати, щоб елементи графіка були добре помітними.
 Використовуйте <code>s</code>, щоб збільшити розмір маркерів діаграми
 розсіювання, і <code>linewidth</code>, щоб збільшити розміри ліній
@@ -926,11 +929,11 @@ on your axes.</li>
 <ul><li>
 <a href="https://matplotlib.org/" class="external-link"><code>matplotlib</code></a> — це
 найпоширеніша наукова бібліотека для побудови графіків у Python.</li>
-<li>Plot data directly from a Pandas dataframe.</li>
-<li>Select and transform data, then plot it.</li>
+<li>Будуйте графіки безпосередньо з датафрейму Pandas.</li>
+<li>Побудова графіків включає вибір та трансформацію даних.</li>
 <li>Many styles of plot are available: see the <a href="https://python-graph-gallery.com/matplotlib/" class="external-link">Python Graph
 Gallery</a> for more options.</li>
-<li>Can plot many sets of data together.</li>
+<li>На одному графіку можна одразу зобразити кілька наборів даних.</li>
 </ul></div>
 </div>
 </div>
@@ -994,8 +997,8 @@ Gallery</a> for more options.</li>
   "url": "https://ukrainian-carpentries.github.io/python-novice-gapminder/instructor/09-plotting.html",
   "identifier": "https://ukrainian-carpentries.github.io/python-novice-gapminder/instructor/09-plotting.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2025-12-29",
-  "datePublished": "2025-12-30"
+  "dateModified": "2026-01-05",
+  "datePublished": "2026-01-05"
 }
 
   </script><script>
