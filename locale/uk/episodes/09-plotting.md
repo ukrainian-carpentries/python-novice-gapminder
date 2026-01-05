@@ -7,7 +7,7 @@ exercises: 15
 ::::::::::::::::::::::::::::::::::::::: objectives
 
 - Створення графіку часового ряду, який відповідає одному набору даних.
-- Create a scatter plot showing relationship between two data sets.
+- Створення точкової діаграми, або діаграми розсіювання, яка показує зв’язок між двома наборами даних.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -46,8 +46,7 @@ plt.ylabel('Position (km)')
 
 У прикладі з Jupyter Notebook виконання комірки призводить до побудови графіку безпосередньо під кодом.
 Графік також зберігається у блокноті для подальшого перегляду.
-However, other Python environments like an interactive Python session started from a terminal
-or a Python script executed via the command line require an additional command to display the figure.
+Проте, інші середовища Python, такі як інтерактивна сесія Python, що виконується у терміналі, або Python скрипт, виконаний за допомогою командного рядка, потребують додаткової команди для зображення графіку.
 
 Доручіть `matplotlib` зобразити графік:
 
@@ -115,7 +114,7 @@ plt.ylabel('GDP per capita')
 - Формат команди є таким: `plt.plot(x, y)`
 - Колір та формат маркерів також можна вказати як додатковий необов'язковий аргумент, тобто, `b-` - це синя лінія, `g--` - це зелена пунктирна лінія.
 
-## Get Australia data from dataframe
+## Отримаємо дані Австралії з датафрейму.
 
 ```python
 years = data.columns
@@ -187,7 +186,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Minima and Maxima
+## Мінімуми та максимуми
 
 Заповніть порожні поля нижче, щоб побудувати графік мінімального ВВП на душу населення протягом часу для всіх країн Європи.
 Потім побудуйте графік максимального ВВП на душу населення в Європі.
@@ -212,7 +211,7 @@ plt.legend(loc='best')
 plt.xticks(rotation=90)
 ```
 
-![](fig/9_minima_maxima_solution.png){alt='Minima Maxima Solution'}
+![](fig/9_minima_maxima_solution.png){alt='Рішення для графіків мінімуму та максимуму'}
 
 :::::::::::::::::::::::::
 
@@ -267,9 +266,7 @@ print(data_asia.idxmin())
 
 ## Більше кореляцій
 
-This short program creates a plot showing
-the correlation between GDP and life expectancy for 2007,
-normalizing marker size by population:
+Ця коротка програма створює графік, який ілюструє взаємозв’язок між ВВП і очікуваною тривалістю життя на 2007 рік, змінюючи розмір маркера в залежності із чисельністю населення:
 
 ```python
 data_all = pd.read_csv('data/gapminder_all.csv', index_col='country')
@@ -283,15 +280,15 @@ data_all.plot(kind='scatter', x='gdpPercap_2007', y='lifeExp_2007',
 
 ## Відповідь
 
-![](fig/9_more_correlations_solution.svg){alt='More Correlations Solution'}
+![](fig/9_more_correlations_solution.svg){alt='Більше кореляцій - Відповідь'}
 
 Гарне місце для пошуку документації до функції plot -
 help(data\_all.plot).
 
 kind - Як вже було показано, цей параметр визначає тип графіку, який буде створено.
 
-x and y - A column name or index that determines what data will be
-placed on the x and y axes of the plot
+x та y - імена стовпців або індекси, що визначають, які дані будуть розміщені на графіку
+на осях x та y
 
 s - Інформацію про цей аргумент можна знайти в документації plt.scatter.
 Це одне число або одне значення для кожної точки даних. Визначає розмір маркера.
@@ -317,7 +314,7 @@ plt.savefig('my_figure.png')
 Зауважимо, що функції в `plt` посилаються на глобальну змінну графіка і після того, як графік виведено на екран (наприклад, за допомогою `plt.show`) matplotlib змусить цю змінну посилатися на новий порожній графік.
 Тому переконайтеся, що ви викликаєте `plt.savefig` перед тим, як графік буде зображено на екрані, інакше ви можете створити файл із порожнім графіком.
 
-When using dataframes, data is often generated and plotted to screen in one line.
+При використанні датафреймів дані зазвичай генеруються та виводяться на екрані одним рядком коду.
 На додаток до `plt.savefig`, ми можемо зберегти посилання на поточний графік у локальну змінну (використовуючи `plt.gcf`), а потім викликати `savefig` метод цієї змінної для збереження графіка у файл.
 
 ```python
@@ -334,7 +331,7 @@ fig.savefig('my_figure.png')
 
 Щоразу, коли ви створюєте графіки для статті чи презентації, варто врахувати кілька речей, щоб переконатися, що всі зрозуміють ваші графіки.
 
-- Always make sure your text is large enough to read. Use the `fontsize` parameter in `xlabel`, `ylabel`, `title`, and `legend`, and [`tick_params` with `labelsize`](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.tick_params.html) to increase the text size of the numbers on your axes.
+- Завжди стежте за тим, щоб розмір тексту був зручним для читання. Використовуйте параметр `fontsize` в `xlabel`, `ylabel`, `title`, та `legend`, а також [`tick_params` з `labelsize`](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.tick_params.html) щоб збільшити розмір тексту на осях графіку.
 - Також слід подбати, щоб елементи графіка були добре помітними. Використовуйте `s`, щоб збільшити розмір маркерів діаграми розсіювання, і `linewidth`, щоб збільшити розміри ліній вашого графіка.
 - Якщо розрізняти елементи графіка тільки за кольором, це може ускладнити його сприйняття для людей із дальтонізмом або тих, хто переглядає матеріали в чорно-білому вигляді (наприклад, після друку). Для ліній можна використовувати параметр `linestyle`, щоб задати різні стилі ліній. Для діаграм розсіювання `marker` дозволяє змінювати форму ваших точок. Якщо ви не впевнені у вибраній кольоровій палітрі, скористайтеся інструментами на кшталт [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) або [Color Oracle](https://colororacle.org/) щоб імітувати, як виглядатимуть ваші графіки для людей з дальтонізмом.
 
@@ -343,10 +340,10 @@ fig.savefig('my_figure.png')
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - [`matplotlib`](https://matplotlib.org/) — це найпоширеніша наукова бібліотека для побудови графіків у Python.
-- Plot data directly from a Pandas dataframe.
-- Select and transform data, then plot it.
+- Будуйте графіки безпосередньо з датафрейму Pandas.
+- Побудова графіків включає вибір та трансформацію даних.
 - Many styles of plot are available: see the [Python Graph Gallery](https://python-graph-gallery.com/matplotlib/) for more options.
-- Can plot many sets of data together.
+- На одному графіку можна одразу зобразити кілька наборів даних.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
