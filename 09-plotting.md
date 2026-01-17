@@ -342,7 +342,7 @@ fig.savefig('my_figure.png')
 - [`matplotlib`](https://matplotlib.org/) — це найпоширеніша наукова бібліотека для побудови графіків у Python.
 - Будуйте графіки безпосередньо з датафрейму Pandas.
 - Побудова графіків включає вибір та трансформацію даних.
-- Many styles of plot are available: see the [Python Graph Gallery](https://python-graph-gallery.com/matplotlib/) for more options.
+- Існує широкий вибір стилів побудови графіків: дивіться [Python Graph Gallery](https://python-graph-gallery.com/matplotlib/), щоб ознайомитися з іншими варіантами.
 - На одному графіку можна одразу зобразити кілька наборів даних.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
