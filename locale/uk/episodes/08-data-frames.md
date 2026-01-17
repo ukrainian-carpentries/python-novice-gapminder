@@ -30,9 +30,7 @@ Pandas побудована на основі бібліотеки [Numpy][numpy
 ## Вибір значень
 
 Існує два способи доступу до значення в позиції `[i,j]` у датафреймі, залежно від того, як інтерпретується `i`.
-Remember that a DataFrame provides an _index_ as a way to identify the rows of the table;
-a row, then, has a _position_ inside the table as well as a _label_, which
-uniquely identifies its _entry_ in the DataFrame.
+Пам’ятайте, що датафрейм використовує _індекс_ для ідентифікації рядків таблиці; отже, кожен рядок має _позицію_ в таблиці, а також _заголовок рядка_ (_мітку_), яка однозначно визначає цей рядок у датафреймі.
 
 ## Використовуйте `DataFrame.iloc[..., ...]` для вибору значень за їх позицією
 
@@ -48,7 +46,7 @@ print(data.iloc[0, 0])
 1601.056136
 ```
 
-## Use `DataFrame.loc[..., ...]` to select values by their (entry) label.
+## Використовуйте `DataFrame.loc[..., ...]` для доступу до значень за їхніми мітками.
 
 - Можна вказати розташування, використовуючи заголовок рядку та/або стовпця.
 
@@ -154,7 +152,7 @@ dtype: float64
 ## Використовуйте операції порівняння для вибору даних на основі певного значення.
 
 - Порівняння здійснюється поелементно.
-- Returns a similarly-shaped dataframe of `True` and `False`.
+- Повертає датафрейм подібної форми, що містить значення `True` та `False`.
 
 ```python
 # Використовуємо частину даних, щоб результат був читабельним
@@ -499,7 +497,7 @@ data.loc['Denmark',:]
 data.loc[:,'gdpPercap_1985':]
 ```
 
-Pandas is smart enough to recognize the number at the end of the column label and does not give you an error, although no column named `gdpPercap_1985` actually exists. Це зручно, якщо нові стовпці додаються до файлу CSV пізніше.
+Пакет pandas досить розумний, щоб розпізнати число в кінці заголовку стовпця й не видати помилки, навіть якщо стовпця з назвою `gdpPercap_1985` не існує. Це зручно, якщо нові стовпці додаються до файлу CSV пізніше.
 
 4:
 
