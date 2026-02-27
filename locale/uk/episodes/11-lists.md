@@ -266,11 +266,11 @@ list to string: gold
 
 ## Рішення
 
-1. [`list('some string')`](https://docs.python.org/3/library/stdtypes.html#list) converts a string into a list containing all of its characters.
+1. [`list('some string')`](https://docs.python.org/3/library/stdtypes.html#list) перетворює рядок на список окремих символів.
 
-2. [`join`](https://docs.python.org/3/library/stdtypes.html#str.join) returns a string that is the _concatenation_
-   of each string element in the list and adds the separator between each element in the list. This results in
-   `x-y-z`. The separator between the elements is the string that provides this method.
+2. [`join`](https://docs.python.org/3/library/stdtypes.html#str.join) повертає рядок, який є _конкатенацією_
+   всіх елементів, та додає роздільник між кожним елементом у списку. У результаті отримуємо
+   `x-y-z`. Рядок, який викликає цей метод, виступає роздільником між елементами.
 
 :::::::::::::::::::::::::
 
@@ -288,12 +288,12 @@ print(element[-1])
 ```
 
 1. Як Python інтерпретує від'ємний індекс?
-2. If a list or string has N elements,
-   what is the most negative index that can safely be used with it,
-   and what location does that index represent?
-3. If `values` is a list, what does `del values[-1]` do?
-4. How can you display all elements but the last one without changing `values`?
-   (Hint: you will need to combine slicing and negative indexing.)
+2. Якщо список або рядок має N елементів,
+   який найбільший від'ємний індекс можна безпечно використовувати для даного рядка,
+   і яку позицію він означає?
+3. Якщо `values` є списком, що відбувається при виконанні `del values[-1]`?
+4. Як можна показати всі елементи, окрім останнього, не змінюючи `values`?
+   (Підказка: вам знадобиться одночасно використати зрізи та від’ємну індексацію.)
 
 :::::::::::::::  solution
 
