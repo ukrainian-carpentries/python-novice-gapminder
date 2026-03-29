@@ -407,8 +407,8 @@ help(pd.read_csv)
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Use the Pandas library to get basic statistics out of tabular data.
-- Use `index_col` to specify that a column's values should be used as row headings.
+- Використовуйте бібліотеку Pandas для обчислення базової статистики з табличних даних.
+- Використовуйте `index_col`, щоб призначити значення стовпця як заголовки рядків.
 - Використовуйте `DataFrame.info`, щоб дізнатися більше про структуру датафрейму.
 - Змінна `DataFrame.columns` зберігає інформацію про стовпці датафрейму.
 - Використовуйте `DataFrame.T`, щоб транспонувати датафрейм.
