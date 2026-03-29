@@ -147,7 +147,7 @@ a range is not a list: range(0, 3)
 
 - A common pattern in programs is to:
   1. Initialize an _accumulator_ variable to zero, the empty string, or the empty list.
-  2. Update the variable with values from a collection.
+  2. Оновлення змінної значеннями з колекції.
 
 ```python
 # Sum the first 10 integers.
@@ -162,22 +162,22 @@ print(total)
 ```
 
 - Read `total = total + (number + 1)` as:
-  - Add 1 to the current value of the loop variable `number`.
+  - Додати 1 до поточного значення змінної циклу `number`.
   - Add that to the current value of the accumulator variable `total`.
   - Assign that to `total`, replacing the current value.
 - We have to add `number + 1` because `range` produces 0..9, not 1..10.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Classifying Errors
+## Класифікація помилок
 
-Is an indentation error a syntax error or a runtime error?
+Чи є помилка відступу синтаксичною чи помилкою виконання?
 
 :::::::::::::::  solution
 
 ## Solution
 
-An IndentationError is a syntax error. Programs with syntax errors cannot be started.
+An IndentationError is a syntax error. Неможливо запустити програми з синтаксичними помилками.
 A program with a runtime error will start but an error will be thrown under certain conditions.
 
 :::::::::::::::::::::::::
@@ -186,10 +186,9 @@ A program with a runtime error will start but an error will be thrown under cert
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Tracing Execution
+## Відстеження виконання
 
-Create a table showing the numbers of the lines that are executed when this program runs,
-and the values of the variables after each line is executed.
+Створіть таблицю з номерами рядків, які виконуються під час виконання цієї програми, і значення змінних після виконання кожного рядка.
 
 ```python
 total = 0
@@ -199,17 +198,17 @@ for char in "tin":
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
-| Line no | Variables            |
-| ------- | -------------------- |
-| 1       | total = 0            |
-| 2       | total = 0 char = 't' |
-| 3       | total = 1 char = 't' |
-| 2       | total = 1 char = 'i' |
-| 3       | total = 2 char = 'i' |
-| 2       | total = 2 char = 'n' |
-| 3       | total = 3 char = 'n' |
+| Номер рядка | Значення змінних     |
+| ----------- | -------------------- |
+| 1           | total = 0            |
+| 2           | total = 0 char = 't' |
+| 3           | total = 1 char = 't' |
+| 2           | total = 1 char = 'i' |
+| 3           | total = 2 char = 'i' |
+| 2           | total = 2 char = 'n' |
+| 3           | total = 3 char = 'n' |
 
 :::::::::::::::::::::::::
 
@@ -219,8 +218,7 @@ for char in "tin":
 
 ## Reversing a String
 
-Fill in the blanks in the program below so that it prints "nit"
-(the reverse of the original character string "tin").
+Заповніть порожні місця в програмі нижче, щоб вона друкувала "nit" (зворотний вихідний рядок символів "tin").
 
 ```python
 original = "tin"
@@ -232,7 +230,7 @@ print(result)
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 ```python
 original = "tin"
@@ -248,7 +246,7 @@ print(result)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Practice Accumulating
+## Практика накопичення.
 
 Fill in the blanks in each of the programs below
 to produce the indicated result.
@@ -263,7 +261,7 @@ print(total)
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 ```python
 total = 0
@@ -275,7 +273,7 @@ print(total)
 :::::::::::::::::::::::::
 
 ```python
-# List of word lengths: ["red", "green", "blue"] => [3, 5, 4]
+# Список довжин слів: ["red", "green", "blue"] => [3, 5, 4]
 lengths = ____
 for word in ["red", "green", "blue"]:
     lengths.____(____)
@@ -284,7 +282,7 @@ print(lengths)
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 ```python
 lengths = []
@@ -296,7 +294,7 @@ print(lengths)
 :::::::::::::::::::::::::
 
 ```python
-# Concatenate all words: ["red", "green", "blue"] => "redgreenblue"
+# Об’єднайте всі слова: ["red", "green", "blue"] => "redgreenblue"
 words = ["red", "green", "blue"]
 result = ____
 for ____ in ____:
@@ -306,7 +304,7 @@ print(result)
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 ```python
 words = ["red", "green", "blue"]
@@ -325,7 +323,7 @@ a for loop.
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 ```python
 acronym = ""
@@ -344,7 +342,7 @@ print(acronym)
 
 Reorder and properly indent the lines of code below
 so that they print a list with the cumulative sum of data.
-The result should be `[1, 3, 5, 10]`.
+Результатом має бути `[1, 3, 5, 10]`.
 
 ```python
 cumulative.append(total)
@@ -358,7 +356,7 @@ data = [1,2,2,5]
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 ```python
 total = 0
@@ -389,7 +387,7 @@ print(cumulative)
 
 ```python
 for number in range(10):
-    # use a if the number is a multiple of 3, otherwise use b
+    # використовуйте a, якщо число кратне 3, інакше використовуйте b
     if (Number % 3) == 0:
         message = message + a
     else:
@@ -399,7 +397,7 @@ print(message)
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 - Python variable names are case sensitive: `number` and `Number` refer to different variables.
 - The variable `message` needs to be initialized as an empty string.
@@ -408,7 +406,7 @@ print(message)
 ```python
 message = ""
 for number in range(10):
-    # use a if the number is a multiple of 3, otherwise use b
+    # використовуйте a, якщо число кратне 3, інакше використовуйте b
     if (number % 3) == 0:
         message = message + "a"
     else:
@@ -436,7 +434,7 @@ print('My favorite season is ', seasons[4])
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
 This list has 4 elements and the index to access the last element in the list is `3`.
 

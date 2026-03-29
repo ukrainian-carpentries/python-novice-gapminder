@@ -207,7 +207,7 @@ second time: [3, 5]
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 ```python
 values = []
@@ -225,17 +225,17 @@ print('second time:', values)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Яким є розмір зрізу?
+## Який розмір має зріз?
 
 Якщо `start` і `stop` є невід'ємними цілими числами,
 якою є довжина списку `values[start:stop:]`?
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
-Список `values[start:stop]` має до `stop - start` елементів.  Наприклад, `values[1:4]` має 3 елементи `values[1]`, `values[2]`, та `values[3]`.
-Чому 'до'? Як ми бачили у [епізоді 2](02-variables.md),
+Список `values[start:stop]` може містити щонайбільше `stop - start` елементів.  Наприклад, `values[1:4]` має 3 елементи `values[1]`, `values[2]`, та `values[3]`.
+Why 'up to'? Як ми бачили у [епізоді 2](02-variables.md),
 якщо `stop` перевищує загальну довжину списку `values`,
 результатом усе одно буде список, але коротший, ніж очікувалося.
 
@@ -245,9 +245,9 @@ print('second time:', values)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Від рядків до списків і назад.
+## Від рядків до списків і назад
 
-Нехай є:
+Given this:
 
 ```python
 print('string to list:', list('tin'))
@@ -260,11 +260,11 @@ list to string: gold
 ```
 
 1. Що робить команда `list('some string')`?
-2. Що генерує команда `'-'.join(['x', 'y', 'z'])`?
+2. What does `'-'.join(['x', 'y', 'z'])` generate?
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 1. [`list('some string')`](https://docs.python.org/3/library/stdtypes.html#list) перетворює рядок на список окремих символів.
 
@@ -297,15 +297,14 @@ print(element[-1])
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 Програма надрукує `m`.
 
-1. Python interprets a negative index as starting from the end (as opposed to
-   starting from the beginning).  The last element is `-1`.
+1. Python інтерпретує від’ємний індекс як відлік з кінця (на відміну від
+   звичайного відліку з початку).  Останній елемент має індекс `-1`.
 
-2. The last index that can safely be used with a list of N elements is element
-   `-N`, which represents the first element.
+2. Найменший від'ємний індекс, який можна безпечно використовувати зі списком із N елементів - це індекс `-N`, який представляє перший елемент.
 
 3. `del values[-1]` видаляє останній елемент зі списку.
 
@@ -317,7 +316,7 @@ print(element[-1])
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Перехід по списку
+## Stepping Through a List
 
 Що друкує наступна програма?
 
@@ -332,16 +331,16 @@ print(element[::-1])
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
-The program prints
+Програма виводить
 
 ```python
 furn
 eniroulf
 ```
 
-1. `stride` є розміром кроку зрізу.
+1. `stride` is the step size of the slice.
 
 2. Зріз `1::2` вибирає всі елементи з парними номерами з колекції: він починається з елементу `1` (який є другим елементом, оскільки індексація починається з `0`), продовжується до кінця (оскільки `end` не задано) і використовує розмір кроку `2` (таким чином обираючи кожний другий елемент).
 
@@ -351,7 +350,7 @@ eniroulf
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Границі зрізу
+## Slice Bounds
 
 Що друкує наступна програма?
 
@@ -363,15 +362,15 @@ print(element[-1:3])
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 ```output
 lithium
 
 ```
 
-The first statement prints the whole string, since the slice goes beyond the total length of the string.
-The second statement returns an empty string, because the slice goes "out of bounds" of the string.
+Перша команда повертає весь рядок, оскільки зріз перевищує загальну довжину рядка.
+Друга команда повертає порожній рядок, оскільки зріз виходить "за межі" рядка.
 
 :::::::::::::::::::::::::
 
@@ -382,7 +381,7 @@ The second statement returns an empty string, because the slice goes "out of bou
 ## Сортування на місці чи у новий список
 
 Що друкують ці дві програми?
-Простими словами поясніть різницю між `sorted(letters)` and `letters.sort()`.
+In simple terms, explain the difference between `sorted(letters)` and `letters.sort()`.
 
 ```python
 # Program A
@@ -400,7 +399,7 @@ print('letters is', letters, 'and result is', result)
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 Програма А надрукує
 
@@ -414,9 +413,9 @@ letters is ['g', 'o', 'l', 'd'] and result is ['d', 'g', 'l', 'o']
 letters is ['d', 'g', 'l', 'o'] and result is None
 ```
 
-`sorted(letters)` returns a sorted copy of the list `letters` (the original
-list `letters` remains unchanged), while `letters.sort()` sorts the list
-`letters` in-place and does not return anything.
+`sorted(letters)` повертає відсортовану копію списку `letters` (оригінальний
+список `letters` залишається незмінним), тоді як `letters.sort()` сортує список
+`letters` безпосередньо і нічого не повертає.
 
 :::::::::::::::::::::::::
 
@@ -427,7 +426,7 @@ list `letters` remains unchanged), while `letters.sort()` sorts the list
 ## Копіювання (чи ні)
 
 Що друкують ці дві програми?
-Простими словами поясніть різницю між `new = old` and `new = old[:]`.
+In simple terms, explain the difference between `new = old` and `new = old[:]`.
 
 ```python
 # Program A
@@ -447,7 +446,7 @@ print('new is', new, 'and old is', old)
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 Програма А надрукує
 
@@ -461,11 +460,9 @@ new is ['D', 'o', 'l', 'd'] and old is ['D', 'o', 'l', 'd']
 new is ['D', 'o', 'l', 'd'] and old is ['g', 'o', 'l', 'd']
 ```
 
-`new = old` makes `new` a reference to the list `old`; `new` and `old` point
-towards the same object.
+Оператор `new = old` призводить до того, що `new` посилається на той самий об’єкт списку, що й `old`.
 
-`new = old[:]` however creates a new list object `new` containing all elements
-from the list `old`; `new` and `old` are different objects.
+Однак `new = old[:]` навпаки створює окремий список `new`, який містить усі елементи зі списку `old`; тому `new` та `old` є різними об'єктами.
 
 :::::::::::::::::::::::::
 
@@ -473,7 +470,7 @@ from the list `old`; `new` and `old` are different objects.
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Список є структурою даних, яка містить багато значень.
+- A list stores many values in a single structure.
 - Щоб отримати елемент списку, використовуйте його індекс.
 - Значення елементів списків можна замінити шляхом присвоєння.
 - Додавання елементів до списку подовжує його.
@@ -482,7 +479,7 @@ from the list `old`; `new` and `old` are different objects.
 - Списки можуть містити значення різних типів.
 - Рядки символів можна індексувати як списки.
 - Рядки символів незмінні.
-- Indexing beyond the end of the collection is an error.
+- Звернення до індексу за межами колекції призводить до помилки.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
