@@ -21,8 +21,7 @@
         <img id="swc-logo" alt="Software Carpentry" src="assets/images/software-logo.svg"></div>
     </div>
     <div class="selector-container">
-      <div id="theme-selector">
-        <li class="nav-item dropdown" id="theme-button-list">
+      <menu class="theme-selector" id="theme-selector-menu"><li class="nav-item dropdown theme-button-list" id="theme-button-list-menu">
           <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
             <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><i data-feather="chevron-down"></i>
           </button>
@@ -45,10 +44,7 @@
                 <svg class="bi ms-auto d-none"><use href="#check2"></use></svg></button>
             </li>
           </ul></li>
-      </div>
-
-
-      <div class="dropdown" id="instructor-dropdown">
+    </menu><div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Версія для слухача <i data-feather="chevron-down"></i>
         </button>
@@ -105,15 +101,11 @@
     -->
     <a id="search-button" class="btn btn-primary" href="aio.html" role="button" aria-label="Пошук на сторінці «All In One».">Пошук на сторінці «All In One».</a>
   </div><!--/div.container-fluid -->
-</nav><div class="col-md-12 mobile-title">
-  Побудова графіків і програмування на Python
-</div>
-
-<aside class="col-md-12 lesson-progress"><div style="width: 21%" class="percentage">
+</nav><aside class="col-md-12 lesson-progress"><div style="width: 21%" class="percentage">
     21%
   </div>
   <div class="progress software">
-    <div class="progress-bar software" role="progressbar" style="width: 21%" aria-valuenow="21" aria-label="Хід уроку" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar software" role="progressbar" aria-label="Хід уроку" aria-valuemin="0" aria-valuemax="100" aria-valuenow="21" style="width: 21%">
     </div>
   </div>
 </aside><div class="container">
@@ -121,13 +113,12 @@
         <!-- START: inst/pkgdown/templates/navbar.html -->
 <div id="sidebar-col" class="col-lg-4">
   <div id="sidebar" class="sidebar">
-      <nav aria-labelledby="flush-headingEleven"><button role="button" aria-label="закрити меню" alt="закрити меню" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Згорнути " data-episodes="Епізоди ">
+      <nav aria-labelledby="flush-collapse-chapters-toggle"><button role="button" aria-label="Згорнути" alt="Згорнути" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Згорнути " data-episodes="Епізоди ">
           <i class="search-icon" data-feather="x" role="img"></i>
         </button>
         <div class="sidebar-inner">
           <div class="row mobile-row" id="theme-row-mobile">
-            <div class="col" id="theme-selector">
-              <li class="nav-item dropdown" id="theme-button-list">
+            <menu class="col theme-selector" id="theme-selector-sidebar"><li class="nav-item dropdown theme-button-list" id="theme-button-list-sidebar">
                 <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
                   <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><span class="d-lg-none ms-1" id="bd-theme-text">Toggle Theme</span>
                 </button>
@@ -150,19 +141,18 @@
                       <svg class="bi ms-auto d-none"><use href="#check2"></use></svg></button>
                   </li>
                 </ul></li>
-            </div>
-          </div>
+            </menu></div>
           <div class="row mobile-row">
             <div class="col">
               <div class="sidenav-view-selector">
-                <div class="accordion accordion-flush" id="accordionFlush9">
+                <div class="accordion accordion-flush" id="accordion-instructor-toggle">
                   <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingNine">
-                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                    <h2 class="accordion-header" id="flush-heading-instructor-toggle">
+                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-instructor-toggle" aria-expanded="false" aria-controls="flush-collapse-instructor-toggle">
                         <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> Версія для слухача
                       </button>
                     </h2>
-                    <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
+                    <div id="flush-collapse-instructor-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-instructor-toggle">
                       <div class="accordion-body">
                         <a href="instructor/06-libraries.html">Версія для інструктора</a>
                       </div>
@@ -174,15 +164,15 @@
 
             <hr></div><!--/div.mobile-row -->
 
-          <div class="accordion accordion-flush" id="accordionFlush11">
+          <div class="accordion accordion-flush" id="accordion-chapters-toggle">
             <div class="accordion-item">
 
-              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
-                <h2 class="accordion-header chapters" id="flush-headingEleven">
+              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-chapters-toggle" aria-expanded="false" aria-controls="flush-collapse-chapters-toggle">
+                <h2 class="accordion-header chapters" id="flush-heading-chapters-toggle">
                   ЕПІЗОДИ
                 </h2>
               </button>
-              <div id="flush-collapseEleven" class="accordion-collapse show collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
+              <div id="flush-collapse-chapters-toggle" class="accordion-collapse show collapse" data-bs-parent="#accordion-chapters-toggle">
 
                 <div class="accordion-body">
                   <div class="accordion accordion-flush" id="accordionFlush1">
@@ -250,7 +240,7 @@
       </button>
     </div><!--/div.accordion-header-->
 
-    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#%D0%B1%D1%96%D0%BB%D1%8C%D1%88%D0%B0-%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B0-%D0%BF%D0%BE%D1%82%D1%83%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D1%96-%D0%BC%D0%BE%D0%B2%D0%B8-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%BF%D0%BE%D0%BB%D1%8F%D0%B3%D0%B0%D1%94-%D0%B2-%D1%97%D1%97-%D0%B1%D1%96%D0%B1%D0%BB%D1%96%D0%BE%D1%82%D0%B5%D0%BA%D0%B0%D1%85.">Більша частина потужності мови програмування полягає в її
 бібліотеках.</a></li>
@@ -398,14 +388,14 @@
               </div>
             </div>
 
-            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordionFlush12">
+            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordion-resources-toggle">
               <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwelve">
-                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                <h2 class="accordion-header" id="flush-heading-resources-toggle">
+                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-resources-toggle" aria-expanded="false" aria-controls="flush-collapse-resources-toggle">
                     РЕСУРСИ
                   </button>
                 </h2>
-                <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
+                <div id="flush-collapse-resources-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-resources-toggle">
                   <div class="accordion-body">
                     <ul><li>
                         <a href="key-points.html">Ключові моменти</a>
@@ -435,7 +425,7 @@
 
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
-    <nav class="lesson-content mx-md-4" aria-label="Попередній і наступний розділ"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
+    <nav class="lesson-content mx-md-4" aria-label="Попередній і наступний розділ Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="05-coffee.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Попередній</a>
         <a class="chapter-link float-end" href="07-reading-tabular.html">Далі<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -540,10 +530,10 @@
 </ul><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'pi is'</span>, math.pi)</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'cos(pi) is'</span>, math.cos(math.pi))</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="im">import</span> math</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a><span class="bu">print</span>(<span class="st">'pi is'</span>, math.pi)</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="bu">print</span>(<span class="st">'cos(pi) is'</span>, math.cos(math.pi))</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ВИХІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -563,7 +553,7 @@ cos(pi) is -1.0</code></pre>
 </ul><div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">help</span>(math)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="bu">help</span>(math)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ВИХІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -600,9 +590,9 @@ FUNCTIONS
 </ul><div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> cos, pi</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'cos(pi) is'</span>, cos(pi))</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="im">from</span> math <span class="im">import</span> cos, pi</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1" aria-label="code-block-5-3"></a><span class="bu">print</span>(<span class="st">'cos(pi) is'</span>, cos(pi))</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ВИХІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -618,9 +608,9 @@ FUNCTIONS
 </ul><div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="im">import</span> math <span class="im">as</span> m</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'cos(pi) is'</span>, m.cos(m.pi))</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="im">import</span> math <span class="im">as</span> m</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1" aria-label="code-block-7-3"></a><span class="bu">print</span>(<span class="st">'cos(pi) is'</span>, m.cos(m.pi))</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ВИХІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -656,7 +646,7 @@ FUNCTIONS
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li><p>Використовуючи <code>help(math)</code> ми бачимо, що у нас є
 <code>pow(x,y)</code> на додаток до <code>sqrt(x)</code>, отже ми можемо
@@ -686,7 +676,7 @@ FUNCTIONS
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>bases <span class="op">=</span> <span class="st">'ACTTGCTTGAC'</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a>bases <span class="op">=</span> <span class="st">'ACTTGCTTGAC'</span></span></code></pre>
 </div>
 <ol style="list-style-type: decimal"><li>Який модуль зі <a href="https://docs.python.org/3/library/" class="external-link">стандартної бібліотеки</a>
 може допомогти?</li>
@@ -702,7 +692,7 @@ FUNCTIONS
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Здається, модуль <a href="https://docs.python.org/3/library/random.html" class="external-link">random</a> може
 допомогти.</p>
@@ -714,18 +704,18 @@ FUNCTIONS
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> randrange</span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>random_index <span class="op">=</span> randrange(<span class="bu">len</span>(bases))</span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="bu">print</span>(bases[random_index])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="im">from</span> random <span class="im">import</span> randrange</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a>random_index <span class="op">=</span> randrange(<span class="bu">len</span>(bases))</span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1" aria-label="code-block-10-4"></a><span class="bu">print</span>(bases[random_index])</span></code></pre>
 </div>
 <p>або більш компактно:</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> randrange</span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="bu">print</span>(bases[randrange(<span class="bu">len</span>(bases))])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="im">from</span> random <span class="im">import</span> randrange</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1" aria-label="code-block-11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1" aria-label="code-block-11-3"></a><span class="bu">print</span>(bases[randrange(<span class="bu">len</span>(bases))])</span></code></pre>
 </div>
 <p>Можливо, ви знайшли ще функцію <a href="https://docs.python.org/3/library/random.html#random.sample" class="external-link"><code>random.sample</code></a>?
 Ця функція дозволяє використовувати трохи менше коду, але може бути
@@ -733,9 +723,9 @@ FUNCTIONS
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> sample</span>
-<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="bu">print</span>(sample(bases, <span class="dv">1</span>)[<span class="dv">0</span>])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="im">from</span> random <span class="im">import</span> sample</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1" aria-label="code-block-12-2"></a></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1" aria-label="code-block-12-3"></a><span class="bu">print</span>(sample(bases, <span class="dv">1</span>)[<span class="dv">0</span>])</span></code></pre>
 </div>
 <p>Зверніть увагу, що ця функція повертає список (list) значень. Ми
 дізнаємося про списки у <a href="11-lists.html">епізоді 11</a>.</p>
@@ -744,9 +734,9 @@ FUNCTIONS
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> choice</span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="bu">print</span>(choice(bases))</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="im">from</span> random <span class="im">import</span> choice</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1" aria-label="code-block-13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1" aria-label="code-block-13-3"></a><span class="bu">print</span>(choice(bases))</span></code></pre>
 </div>
 </div>
 </div>
@@ -767,12 +757,12 @@ FUNCTIONS
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>bases<span class="op">=</span><span class="st">"ACTTGCTTGAC"</span></span>
-<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a><span class="im">import</span> random</span>
-<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a>___ <span class="op">=</span> random.randrange(n_bases)</span>
-<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a>___ <span class="op">=</span> <span class="bu">len</span>(bases)</span>
-<span id="cb14-6"><a href="#cb14-6" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"random base "</span>, bases[___], <span class="st">"base index"</span>, ___)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a>bases<span class="op">=</span><span class="st">"ACTTGCTTGAC"</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a><span class="im">import</span> math</span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1" aria-label="code-block-14-3"></a><span class="im">import</span> random</span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1" aria-label="code-block-14-4"></a>___ <span class="op">=</span> random.randrange(n_bases)</span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1" aria-label="code-block-14-5"></a>___ <span class="op">=</span> <span class="bu">len</span>(bases)</span>
+<span id="cb14-6"><a href="#cb14-6" tabindex="-1" aria-label="code-block-14-6"></a><span class="bu">print</span>(<span class="st">"random base "</span>, bases[___], <span class="st">"base index"</span>, ___)</span></code></pre>
 </div>
 </div>
 </div>
@@ -784,17 +774,17 @@ FUNCTIONS
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="im">import</span> math </span>
-<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a><span class="im">import</span> random</span>
-<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a>bases <span class="op">=</span> <span class="st">"ACTTGCTTGAC"</span> </span>
-<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a>n_bases <span class="op">=</span> <span class="bu">len</span>(bases)</span>
-<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a>idx <span class="op">=</span> random.randrange(n_bases)</span>
-<span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"random base"</span>, bases[idx], <span class="st">"base index"</span>, idx)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="im">import</span> math </span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1" aria-label="code-block-15-2"></a><span class="im">import</span> random</span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1" aria-label="code-block-15-3"></a>bases <span class="op">=</span> <span class="st">"ACTTGCTTGAC"</span> </span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1" aria-label="code-block-15-4"></a>n_bases <span class="op">=</span> <span class="bu">len</span>(bases)</span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1" aria-label="code-block-15-5"></a>idx <span class="op">=</span> random.randrange(n_bases)</span>
+<span id="cb15-6"><a href="#cb15-6" tabindex="-1" aria-label="code-block-15-6"></a><span class="bu">print</span>(<span class="st">"random base"</span>, bases[idx], <span class="st">"base index"</span>, idx)</span></code></pre>
 </div>
 </div>
 </div>
@@ -826,7 +816,7 @@ FUNCTIONS
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>Імпортувати модуль math (<code>import math</code>)</p>
 </div>
@@ -849,9 +839,9 @@ FUNCTIONS
 </ol><div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="im">import</span> math <span class="im">as</span> m</span>
-<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>angle <span class="op">=</span> ____.degrees(____.pi <span class="op">/</span> <span class="dv">2</span>)</span>
-<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a><span class="bu">print</span>(____)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="im">import</span> math <span class="im">as</span> m</span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1" aria-label="code-block-17-2"></a>angle <span class="op">=</span> ____.degrees(____.pi <span class="op">/</span> <span class="dv">2</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1" aria-label="code-block-17-3"></a><span class="bu">print</span>(____)</span></code></pre>
 </div>
 </div>
 </div>
@@ -863,22 +853,22 @@ FUNCTIONS
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="im">import</span> math <span class="im">as</span> m</span>
-<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a>angle <span class="op">=</span> m.degrees(m.pi <span class="op">/</span> <span class="dv">2</span>)</span>
-<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a><span class="bu">print</span>(angle)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="im">import</span> math <span class="im">as</span> m</span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1" aria-label="code-block-18-2"></a>angle <span class="op">=</span> m.degrees(m.pi <span class="op">/</span> <span class="dv">2</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1" aria-label="code-block-18-3"></a><span class="bu">print</span>(angle)</span></code></pre>
 </div>
 <p>можна записати як</p>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a>angle <span class="op">=</span> math.degrees(math.pi <span class="op">/</span> <span class="dv">2</span>)</span>
-<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a><span class="bu">print</span>(angle)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a><span class="im">import</span> math</span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1" aria-label="code-block-19-2"></a>angle <span class="op">=</span> math.degrees(math.pi <span class="op">/</span> <span class="dv">2</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1" aria-label="code-block-19-3"></a><span class="bu">print</span>(angle)</span></code></pre>
 </div>
 <p>Оскільки ви щойно написали код і знайомі з ним, вам справді легше
 читати першу версію. Але при спробі прочитати величезну купу коду,
@@ -918,7 +908,7 @@ FUNCTIONS
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>Виклики бібліотеки 1 та 4. Для прямого посилання на <code>sin</code>
 та <code>pi</code> без назви бібліотеки як префікса, вам потрібно
@@ -962,9 +952,9 @@ FUNCTIONS
 </ol><div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a>____ math <span class="im">import</span> ____, ____</span>
-<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a>angle <span class="op">=</span> degrees(pi <span class="op">/</span> <span class="dv">2</span>)</span>
-<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a><span class="bu">print</span>(angle)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" tabindex="-1" aria-label="code-block-20-1"></a>____ math <span class="im">import</span> ____, ____</span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1" aria-label="code-block-20-2"></a>angle <span class="op">=</span> degrees(pi <span class="op">/</span> <span class="dv">2</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1" aria-label="code-block-20-3"></a><span class="bu">print</span>(angle)</span></code></pre>
 </div>
 </div>
 </div>
@@ -976,14 +966,14 @@ FUNCTIONS
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> degrees, pi</span>
-<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a>angle <span class="op">=</span> degrees(pi <span class="op">/</span> <span class="dv">2</span>)</span>
-<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a><span class="bu">print</span>(angle)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" tabindex="-1" aria-label="code-block-21-1"></a><span class="im">from</span> math <span class="im">import</span> degrees, pi</span>
+<span id="cb21-2"><a href="#cb21-2" tabindex="-1" aria-label="code-block-21-2"></a>angle <span class="op">=</span> degrees(pi <span class="op">/</span> <span class="dv">2</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" tabindex="-1" aria-label="code-block-21-3"></a><span class="bu">print</span>(angle)</span></code></pre>
 </div>
 <p>Скоріше за все, цю версію легше читати, оскільки вона менш насичена.
 Основною причиною не використовувати цю форму імпорту є уникнення збігу
@@ -1010,8 +1000,8 @@ FUNCTIONS
 </ol><div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> log</span>
-<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a>log(<span class="dv">0</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1" aria-label="code-block-22-1"></a><span class="im">from</span> math <span class="im">import</span> log</span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1" aria-label="code-block-22-2"></a>log(<span class="dv">0</span>)</span></code></pre>
 </div>
 </div>
 </div>
@@ -1023,7 +1013,7 @@ FUNCTIONS
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">ВИХІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1067,7 +1057,7 @@ error” пояснює, в чому полягає проблема.</p></li>
 </div>
 </div>
 </section></div> <!-- / div.lesson-content -->
-    </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Попередній і наступний розділ"><div class="d-block d-sm-block d-md-none">
+    </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Попередній і наступний розділ Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="05-coffee.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Попередній</a>
         <a class="chapter-link float-end" href="07-reading-tabular.html">Далі<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -1127,7 +1117,7 @@ error” пояснює, в чому полягає проблема.</p></li>
   "identifier": "https://ukrainian-carpentries.github.io/python-novice-gapminder/06-libraries.html",
   "dateCreated": "2016-01-07",
   "dateModified": "2025-04-24",
-  "datePublished": "2026-03-31"
+  "datePublished": "2026-04-07"
 }
 
   </script><script>

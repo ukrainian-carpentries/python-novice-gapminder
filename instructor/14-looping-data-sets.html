@@ -21,8 +21,7 @@
         <img id="swc-logo" alt="Software Carpentry" src="../assets/images/software-logo.svg"></div>
     </div>
     <div class="selector-container">
-      <div id="theme-selector">
-        <li class="nav-item dropdown" id="theme-button-list">
+      <menu class="theme-selector" id="theme-selector-menu"><li class="nav-item dropdown theme-button-list" id="theme-button-list-menu">
           <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
             <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><i data-feather="chevron-down"></i>
           </button>
@@ -45,10 +44,7 @@
                 <svg class="bi ms-auto d-none"><use href="#check2"></use></svg></button>
             </li>
           </ul></li>
-      </div>
-
-
-      <div class="dropdown" id="instructor-dropdown">
+    </menu><div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Версія для інструктора <i data-feather="chevron-down"></i>
         </button>
@@ -105,15 +101,11 @@
     -->
     <a id="search-button" class="btn btn-primary" href="../instructor/aio.html" role="button" aria-label="Пошук на сторінці «All In One».">Пошук на сторінці «All In One».</a>
   </div><!--/div.container-fluid -->
-</nav><div class="col-md-12 mobile-title">
-  Побудова графіків і програмування на Python
-</div>
-
-<aside class="col-md-12 lesson-progress"><div style="width: 69%" class="percentage">
+</nav><aside class="col-md-12 lesson-progress"><div style="width: 69%" class="percentage">
     69%
   </div>
   <div class="progress software">
-    <div class="progress-bar software" role="progressbar" style="width: 69%" aria-valuenow="69" aria-label="Хід уроку" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar software" role="progressbar" aria-label="Хід уроку" aria-valuemin="0" aria-valuemax="100" aria-valuenow="69" style="width: 69%">
     </div>
   </div>
 </aside><div class="container">
@@ -121,13 +113,12 @@
         <!-- START: inst/pkgdown/templates/navbar.html -->
 <div id="sidebar-col" class="col-lg-4">
   <div id="sidebar" class="sidebar">
-      <nav aria-labelledby="flush-headingEleven"><button role="button" aria-label="закрити меню" alt="закрити меню" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Згорнути " data-episodes="Епізоди ">
+      <nav aria-labelledby="flush-collapse-chapters-toggle"><button role="button" aria-label="Згорнути" alt="Згорнути" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Згорнути " data-episodes="Епізоди ">
           <i class="search-icon" data-feather="x" role="img"></i>
         </button>
         <div class="sidebar-inner">
           <div class="row mobile-row" id="theme-row-mobile">
-            <div class="col" id="theme-selector">
-              <li class="nav-item dropdown" id="theme-button-list">
+            <menu class="col theme-selector" id="theme-selector-sidebar"><li class="nav-item dropdown theme-button-list" id="theme-button-list-sidebar">
                 <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
                   <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><span class="d-lg-none ms-1" id="bd-theme-text">Toggle Theme</span>
                 </button>
@@ -150,19 +141,18 @@
                       <svg class="bi ms-auto d-none"><use href="#check2"></use></svg></button>
                   </li>
                 </ul></li>
-            </div>
-          </div>
+            </menu></div>
           <div class="row mobile-row">
             <div class="col">
               <div class="sidenav-view-selector">
-                <div class="accordion accordion-flush" id="accordionFlush9">
+                <div class="accordion accordion-flush" id="accordion-instructor-toggle">
                   <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingNine">
-                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                    <h2 class="accordion-header" id="flush-heading-instructor-toggle">
+                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-instructor-toggle" aria-expanded="false" aria-controls="flush-collapse-instructor-toggle">
                         <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> Версія для інструктора
                       </button>
                     </h2>
-                    <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
+                    <div id="flush-collapse-instructor-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-instructor-toggle">
                       <div class="accordion-body">
                         <a href="../14-looping-data-sets.html">Версія для слухача</a>
                       </div>
@@ -174,15 +164,15 @@
 
             <hr></div><!--/div.mobile-row -->
 
-          <div class="accordion accordion-flush" id="accordionFlush11">
+          <div class="accordion accordion-flush" id="accordion-chapters-toggle">
             <div class="accordion-item">
 
-              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
-                <h2 class="accordion-header chapters" id="flush-headingEleven">
+              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-chapters-toggle" aria-expanded="false" aria-controls="flush-collapse-chapters-toggle">
+                <h2 class="accordion-header chapters" id="flush-heading-chapters-toggle">
                   ЕПІЗОДИ
                 </h2>
               </button>
-              <div id="flush-collapseEleven" class="accordion-collapse show collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
+              <div id="flush-collapse-chapters-toggle" class="accordion-collapse show collapse" data-bs-parent="#accordion-chapters-toggle">
 
                 <div class="accordion-body">
                   <div class="accordion accordion-flush" id="accordionFlush1">
@@ -322,7 +312,7 @@
       </button>
     </div><!--/div.accordion-header-->
 
-    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#use-a-for-loop-to-process-files-given-a-list-of-their-names.">Use a <code>for</code> loop to process files given a list of their
 names.</a></li>
@@ -394,14 +384,14 @@ files.</a></li>
               </div>
             </div>
 
-            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordionFlush12">
+            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordion-resources-toggle">
               <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwelve">
-                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                <h2 class="accordion-header" id="flush-heading-resources-toggle">
+                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-resources-toggle" aria-expanded="false" aria-controls="flush-collapse-resources-toggle">
                     РЕСУРСИ
                   </button>
                 </h2>
-                <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
+                <div id="flush-collapse-resources-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-resources-toggle">
                   <div class="accordion-body">
                     <ul><li>
                         <a href="../instructor/key-points.html">Ключові моменти</a>
@@ -431,7 +421,7 @@ files.</a></li>
 
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
-    <nav class="lesson-content mx-md-4" aria-label="Попередній і наступний розділ"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
+    <nav class="lesson-content mx-md-4" aria-label="Попередній і наступний розділ Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/13-conditionals.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Попередній</a>
         <a class="chapter-link float-end" href="../instructor/15-coffee.html">Далі<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -494,10 +484,10 @@ names.<a class="anchor" aria-label="anchor" href="#use-a-for-loop-to-process-fil
 </ul><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="cf">for</span> filename <span class="kw">in</span> [<span class="st">'data/gapminder_gdp_africa.csv'</span>, <span class="st">'data/gapminder_gdp_asia.csv'</span>]:</span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>    data <span class="op">=</span> pd.read_csv(filename, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>    <span class="bu">print</span>(filename, data.<span class="bu">min</span>())</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="cf">for</span> filename <span class="kw">in</span> [<span class="st">'data/gapminder_gdp_africa.csv'</span>, <span class="st">'data/gapminder_gdp_asia.csv'</span>]:</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a>    data <span class="op">=</span> pd.read_csv(filename, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a>    <span class="bu">print</span>(filename, data.<span class="bu">min</span>())</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ВИХІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -543,8 +533,8 @@ current directory whose names end with <code>.txt</code>.</li>
 </ul><div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="im">import</span> glob</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'all csv files in data directory:'</span>, glob.glob(<span class="st">'data/*.csv'</span>))</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="im">import</span> glob</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a><span class="bu">print</span>(<span class="st">'all csv files in data directory:'</span>, glob.glob(<span class="st">'data/*.csv'</span>))</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ВИХІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -556,7 +546,7 @@ current directory whose names end with <code>.txt</code>.</li>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'all PDB files:'</span>, glob.glob(<span class="st">' .pdb'</span>))</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="bu">print</span>(<span class="st">'all PDB files:'</span>, glob.glob(<span class="st">' .pdb'</span>))</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ВИХІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -570,9 +560,9 @@ consistently so that simple patterns will find the right data.</li>
 </ul><div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="cf">for</span> filename <span class="kw">in</span> glob.glob(<span class="st">'data/gapminder_*.csv'</span>):</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>    data <span class="op">=</span> pd.read_csv(filename)</span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>    <span class="bu">print</span>(filename, data[<span class="st">'gdpPercap_1952'</span>].<span class="bu">min</span>())</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="cf">for</span> filename <span class="kw">in</span> glob.glob(<span class="st">'data/gapminder_*.csv'</span>):</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a>    data <span class="op">=</span> pd.read_csv(filename)</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1" aria-label="code-block-7-3"></a>    <span class="bu">print</span>(filename, data[<span class="st">'gdpPercap_1952'</span>].<span class="bu">min</span>())</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ВИХІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -630,13 +620,13 @@ file that has the fewest records.</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="im">import</span> glob</span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>fewest <span class="op">=</span> ____</span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="cf">for</span> filename <span class="kw">in</span> glob.glob(<span class="st">'data/*.csv'</span>):</span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>    dataframe <span class="op">=</span> pd.____(filename)</span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>    fewest <span class="op">=</span> <span class="bu">min</span>(____, dataframe.shape[<span class="dv">0</span>])</span>
-<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'smallest file has'</span>, fewest, <span class="st">'records'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="im">import</span> glob</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1" aria-label="code-block-9-3"></a>fewest <span class="op">=</span> ____</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1" aria-label="code-block-9-4"></a><span class="cf">for</span> filename <span class="kw">in</span> glob.glob(<span class="st">'data/*.csv'</span>):</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1" aria-label="code-block-9-5"></a>    dataframe <span class="op">=</span> pd.____(filename)</span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1" aria-label="code-block-9-6"></a>    fewest <span class="op">=</span> <span class="bu">min</span>(____, dataframe.shape[<span class="dv">0</span>])</span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1" aria-label="code-block-9-7"></a><span class="bu">print</span>(<span class="st">'smallest file has'</span>, fewest, <span class="st">'records'</span>)</span></code></pre>
 </div>
 <p>Note that the <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.shape.html" class="external-link"><code>DataFrame.shape()</code>
 method</a> returns a tuple with the number of rows and columns of the
@@ -654,13 +644,13 @@ data frame.</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="im">import</span> glob</span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>fewest <span class="op">=</span> <span class="bu">float</span>(<span class="st">'Inf'</span>)</span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="cf">for</span> filename <span class="kw">in</span> glob.glob(<span class="st">'data/*.csv'</span>):</span>
-<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a>    dataframe <span class="op">=</span> pd.read_csv(filename)</span>
-<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a>    fewest <span class="op">=</span> <span class="bu">min</span>(fewest, dataframe.shape[<span class="dv">0</span>])</span>
-<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'smallest file has'</span>, fewest, <span class="st">'records'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="im">import</span> glob</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a>fewest <span class="op">=</span> <span class="bu">float</span>(<span class="st">'Inf'</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1" aria-label="code-block-10-4"></a><span class="cf">for</span> filename <span class="kw">in</span> glob.glob(<span class="st">'data/*.csv'</span>):</span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1" aria-label="code-block-10-5"></a>    dataframe <span class="op">=</span> pd.read_csv(filename)</span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1" aria-label="code-block-10-6"></a>    fewest <span class="op">=</span> <span class="bu">min</span>(fewest, dataframe.shape[<span class="dv">0</span>])</span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1" aria-label="code-block-10-7"></a><span class="bu">print</span>(<span class="st">'smallest file has'</span>, fewest, <span class="st">'records'</span>)</span></code></pre>
 </div>
 <p>You might have chosen to initialize the <code>fewest</code> variable
 with a number greater than the numbers you’re dealing with, but that
@@ -701,37 +691,37 @@ the path ’data/gapminder\_gdp\_a\_specific\_region.csv’.</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="im">import</span> glob</span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>,<span class="dv">1</span>)</span>
-<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="cf">for</span> filename <span class="kw">in</span> glob.glob(<span class="st">'data/gapminder_gdp*.csv'</span>):</span>
-<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>    dataframe <span class="op">=</span> pd.read_csv(filename)</span>
-<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>    <span class="co"># extract &lt;region&gt; from the filename, expected to be in the format 'data/gapminder_gdp_&lt;region&gt;.csv'.</span></span>
-<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a>    <span class="co"># we will split the string using the split method and `_` as our separator,</span></span>
-<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a>    <span class="co"># retrieve the last string in the list that split returns (`&lt;region&gt;.csv`), </span></span>
-<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a>    <span class="co"># and then remove the `.csv` extension from that string.</span></span>
-<span id="cb11-11"><a href="#cb11-11" tabindex="-1"></a>    <span class="co"># </span><span class="al">NOTE</span><span class="co">: the pathlib module covered in the next callout also offers</span></span>
-<span id="cb11-12"><a href="#cb11-12" tabindex="-1"></a>    <span class="co"># convenient abstractions for working with filesystem paths and could solve this as well:</span></span>
-<span id="cb11-13"><a href="#cb11-13" tabindex="-1"></a>    <span class="co"># from pathlib import Path</span></span>
-<span id="cb11-14"><a href="#cb11-14" tabindex="-1"></a>    <span class="co"># region = Path(filename).stem.split('_')[-1]</span></span>
-<span id="cb11-15"><a href="#cb11-15" tabindex="-1"></a>    region <span class="op">=</span> filename.split(<span class="st">'_'</span>)[<span class="op">-</span><span class="dv">1</span>][:<span class="op">-</span><span class="dv">4</span>]</span>
-<span id="cb11-16"><a href="#cb11-16" tabindex="-1"></a>    <span class="co"># extract the years from the columns of the dataframe </span></span>
-<span id="cb11-17"><a href="#cb11-17" tabindex="-1"></a>    headings <span class="op">=</span> dataframe.columns[<span class="dv">1</span>:]</span>
-<span id="cb11-18"><a href="#cb11-18" tabindex="-1"></a>    years <span class="op">=</span> headings.<span class="bu">str</span>.split(<span class="st">'_'</span>).<span class="bu">str</span>.get(<span class="dv">1</span>)</span>
-<span id="cb11-19"><a href="#cb11-19" tabindex="-1"></a>    <span class="co"># pandas raises errors when it encounters non-numeric columns in a dataframe computation</span></span>
-<span id="cb11-20"><a href="#cb11-20" tabindex="-1"></a>    <span class="co"># but we can tell pandas to ignore them with the `numeric_only` parameter</span></span>
-<span id="cb11-21"><a href="#cb11-21" tabindex="-1"></a>    dataframe.mean(numeric_only<span class="op">=</span><span class="va">True</span>).plot(ax<span class="op">=</span>ax, label<span class="op">=</span>region)</span>
-<span id="cb11-22"><a href="#cb11-22" tabindex="-1"></a>    <span class="co"># </span><span class="al">NOTE</span><span class="co">: another way of doing this selects just the columns with gdp in their name using the filter method</span></span>
-<span id="cb11-23"><a href="#cb11-23" tabindex="-1"></a>    <span class="co"># dataframe.filter(like="gdp").mean().plot(ax=ax, label=region)</span></span>
-<span id="cb11-24"><a href="#cb11-24" tabindex="-1"></a><span class="co"># set the title and labels</span></span>
-<span id="cb11-25"><a href="#cb11-25" tabindex="-1"></a>ax.set_title(<span class="st">'GDP Per Capita for Regions Over Time'</span>)</span>
-<span id="cb11-26"><a href="#cb11-26" tabindex="-1"></a>ax.set_xticks(<span class="bu">range</span>(<span class="bu">len</span>(years)))</span>
-<span id="cb11-27"><a href="#cb11-27" tabindex="-1"></a>ax.set_xticklabels(years)</span>
-<span id="cb11-28"><a href="#cb11-28" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Year'</span>)</span>
-<span id="cb11-29"><a href="#cb11-29" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb11-30"><a href="#cb11-30" tabindex="-1"></a>plt.legend()</span>
-<span id="cb11-31"><a href="#cb11-31" tabindex="-1"></a>plt.show()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="im">import</span> glob</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1" aria-label="code-block-11-2"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1" aria-label="code-block-11-3"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1" aria-label="code-block-11-4"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>,<span class="dv">1</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1" aria-label="code-block-11-5"></a><span class="cf">for</span> filename <span class="kw">in</span> glob.glob(<span class="st">'data/gapminder_gdp*.csv'</span>):</span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1" aria-label="code-block-11-6"></a>    dataframe <span class="op">=</span> pd.read_csv(filename)</span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1" aria-label="code-block-11-7"></a>    <span class="co"># extract &lt;region&gt; from the filename, expected to be in the format 'data/gapminder_gdp_&lt;region&gt;.csv'.</span></span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1" aria-label="code-block-11-8"></a>    <span class="co"># we will split the string using the split method and `_` as our separator,</span></span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1" aria-label="code-block-11-9"></a>    <span class="co"># retrieve the last string in the list that split returns (`&lt;region&gt;.csv`), </span></span>
+<span id="cb11-10"><a href="#cb11-10" tabindex="-1" aria-label="code-block-11-10"></a>    <span class="co"># and then remove the `.csv` extension from that string.</span></span>
+<span id="cb11-11"><a href="#cb11-11" tabindex="-1" aria-label="code-block-11-11"></a>    <span class="co"># </span><span class="al">NOTE</span><span class="co">: the pathlib module covered in the next callout also offers</span></span>
+<span id="cb11-12"><a href="#cb11-12" tabindex="-1" aria-label="code-block-11-12"></a>    <span class="co"># convenient abstractions for working with filesystem paths and could solve this as well:</span></span>
+<span id="cb11-13"><a href="#cb11-13" tabindex="-1" aria-label="code-block-11-13"></a>    <span class="co"># from pathlib import Path</span></span>
+<span id="cb11-14"><a href="#cb11-14" tabindex="-1" aria-label="code-block-11-14"></a>    <span class="co"># region = Path(filename).stem.split('_')[-1]</span></span>
+<span id="cb11-15"><a href="#cb11-15" tabindex="-1" aria-label="code-block-11-15"></a>    region <span class="op">=</span> filename.split(<span class="st">'_'</span>)[<span class="op">-</span><span class="dv">1</span>][:<span class="op">-</span><span class="dv">4</span>]</span>
+<span id="cb11-16"><a href="#cb11-16" tabindex="-1" aria-label="code-block-11-16"></a>    <span class="co"># extract the years from the columns of the dataframe </span></span>
+<span id="cb11-17"><a href="#cb11-17" tabindex="-1" aria-label="code-block-11-17"></a>    headings <span class="op">=</span> dataframe.columns[<span class="dv">1</span>:]</span>
+<span id="cb11-18"><a href="#cb11-18" tabindex="-1" aria-label="code-block-11-18"></a>    years <span class="op">=</span> headings.<span class="bu">str</span>.split(<span class="st">'_'</span>).<span class="bu">str</span>.get(<span class="dv">1</span>)</span>
+<span id="cb11-19"><a href="#cb11-19" tabindex="-1" aria-label="code-block-11-19"></a>    <span class="co"># pandas raises errors when it encounters non-numeric columns in a dataframe computation</span></span>
+<span id="cb11-20"><a href="#cb11-20" tabindex="-1" aria-label="code-block-11-20"></a>    <span class="co"># but we can tell pandas to ignore them with the `numeric_only` parameter</span></span>
+<span id="cb11-21"><a href="#cb11-21" tabindex="-1" aria-label="code-block-11-21"></a>    dataframe.mean(numeric_only<span class="op">=</span><span class="va">True</span>).plot(ax<span class="op">=</span>ax, label<span class="op">=</span>region)</span>
+<span id="cb11-22"><a href="#cb11-22" tabindex="-1" aria-label="code-block-11-22"></a>    <span class="co"># </span><span class="al">NOTE</span><span class="co">: another way of doing this selects just the columns with gdp in their name using the filter method</span></span>
+<span id="cb11-23"><a href="#cb11-23" tabindex="-1" aria-label="code-block-11-23"></a>    <span class="co"># dataframe.filter(like="gdp").mean().plot(ax=ax, label=region)</span></span>
+<span id="cb11-24"><a href="#cb11-24" tabindex="-1" aria-label="code-block-11-24"></a><span class="co"># set the title and labels</span></span>
+<span id="cb11-25"><a href="#cb11-25" tabindex="-1" aria-label="code-block-11-25"></a>ax.set_title(<span class="st">'GDP Per Capita for Regions Over Time'</span>)</span>
+<span id="cb11-26"><a href="#cb11-26" tabindex="-1" aria-label="code-block-11-26"></a>ax.set_xticks(<span class="bu">range</span>(<span class="bu">len</span>(years)))</span>
+<span id="cb11-27"><a href="#cb11-27" tabindex="-1" aria-label="code-block-11-27"></a>ax.set_xticklabels(years)</span>
+<span id="cb11-28"><a href="#cb11-28" tabindex="-1" aria-label="code-block-11-28"></a>ax.set_xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb11-29"><a href="#cb11-29" tabindex="-1" aria-label="code-block-11-29"></a>plt.tight_layout()</span>
+<span id="cb11-30"><a href="#cb11-30" tabindex="-1" aria-label="code-block-11-30"></a>plt.legend()</span>
+<span id="cb11-31"><a href="#cb11-31" tabindex="-1" aria-label="code-block-11-31"></a>plt.show()</span></code></pre>
 </div>
 </div>
 </div>
@@ -754,12 +744,12 @@ attributes.</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
-<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>p <span class="op">=</span> Path(<span class="st">"data/gapminder_gdp_africa.csv"</span>)</span>
-<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a><span class="bu">print</span>(p.parent)</span>
-<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a><span class="bu">print</span>(p.stem)</span>
-<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a><span class="bu">print</span>(p.suffix)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1" aria-label="code-block-12-2"></a></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1" aria-label="code-block-12-3"></a>p <span class="op">=</span> Path(<span class="st">"data/gapminder_gdp_africa.csv"</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1" aria-label="code-block-12-4"></a><span class="bu">print</span>(p.parent)</span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1" aria-label="code-block-12-5"></a><span class="bu">print</span>(p.stem)</span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1" aria-label="code-block-12-6"></a><span class="bu">print</span>(p.suffix)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ВИХІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -790,7 +780,7 @@ files.</li>
 </div>
 </div>
 </section></div> <!-- / div.lesson-content -->
-    </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Попередній і наступний розділ"><div class="d-block d-sm-block d-md-none">
+    </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Попередній і наступний розділ Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/13-conditionals.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Попередній</a>
         <a class="chapter-link float-end" href="../instructor/15-coffee.html">Далі<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -850,7 +840,7 @@ files.</li>
   "identifier": "https://ukrainian-carpentries.github.io/python-novice-gapminder/instructor/14-looping-data-sets.html",
   "dateCreated": "2016-01-07",
   "dateModified": "2025-11-14",
-  "datePublished": "2026-03-31"
+  "datePublished": "2026-04-07"
 }
 
   </script><script>

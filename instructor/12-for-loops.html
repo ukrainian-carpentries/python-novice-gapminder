@@ -21,8 +21,7 @@
         <img id="swc-logo" alt="Software Carpentry" src="../assets/images/software-logo.svg"></div>
     </div>
     <div class="selector-container">
-      <div id="theme-selector">
-        <li class="nav-item dropdown" id="theme-button-list">
+      <menu class="theme-selector" id="theme-selector-menu"><li class="nav-item dropdown theme-button-list" id="theme-button-list-menu">
           <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
             <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><i data-feather="chevron-down"></i>
           </button>
@@ -45,10 +44,7 @@
                 <svg class="bi ms-auto d-none"><use href="#check2"></use></svg></button>
             </li>
           </ul></li>
-      </div>
-
-
-      <div class="dropdown" id="instructor-dropdown">
+    </menu><div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Версія для інструктора <i data-feather="chevron-down"></i>
         </button>
@@ -105,15 +101,11 @@
     -->
     <a id="search-button" class="btn btn-primary" href="../instructor/aio.html" role="button" aria-label="Пошук на сторінці «All In One».">Пошук на сторінці «All In One».</a>
   </div><!--/div.container-fluid -->
-</nav><div class="col-md-12 mobile-title">
-  Побудова графіків і програмування на Python
-</div>
-
-<aside class="col-md-12 lesson-progress"><div style="width: 58%" class="percentage">
+</nav><aside class="col-md-12 lesson-progress"><div style="width: 58%" class="percentage">
     58%
   </div>
   <div class="progress software">
-    <div class="progress-bar software" role="progressbar" style="width: 58%" aria-valuenow="58" aria-label="Хід уроку" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar software" role="progressbar" aria-label="Хід уроку" aria-valuemin="0" aria-valuemax="100" aria-valuenow="58" style="width: 58%">
     </div>
   </div>
 </aside><div class="container">
@@ -121,13 +113,12 @@
         <!-- START: inst/pkgdown/templates/navbar.html -->
 <div id="sidebar-col" class="col-lg-4">
   <div id="sidebar" class="sidebar">
-      <nav aria-labelledby="flush-headingEleven"><button role="button" aria-label="закрити меню" alt="закрити меню" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Згорнути " data-episodes="Епізоди ">
+      <nav aria-labelledby="flush-collapse-chapters-toggle"><button role="button" aria-label="Згорнути" alt="Згорнути" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Згорнути " data-episodes="Епізоди ">
           <i class="search-icon" data-feather="x" role="img"></i>
         </button>
         <div class="sidebar-inner">
           <div class="row mobile-row" id="theme-row-mobile">
-            <div class="col" id="theme-selector">
-              <li class="nav-item dropdown" id="theme-button-list">
+            <menu class="col theme-selector" id="theme-selector-sidebar"><li class="nav-item dropdown theme-button-list" id="theme-button-list-sidebar">
                 <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
                   <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><span class="d-lg-none ms-1" id="bd-theme-text">Toggle Theme</span>
                 </button>
@@ -150,19 +141,18 @@
                       <svg class="bi ms-auto d-none"><use href="#check2"></use></svg></button>
                   </li>
                 </ul></li>
-            </div>
-          </div>
+            </menu></div>
           <div class="row mobile-row">
             <div class="col">
               <div class="sidenav-view-selector">
-                <div class="accordion accordion-flush" id="accordionFlush9">
+                <div class="accordion accordion-flush" id="accordion-instructor-toggle">
                   <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingNine">
-                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                    <h2 class="accordion-header" id="flush-heading-instructor-toggle">
+                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-instructor-toggle" aria-expanded="false" aria-controls="flush-collapse-instructor-toggle">
                         <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> Версія для інструктора
                       </button>
                     </h2>
-                    <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
+                    <div id="flush-collapse-instructor-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-instructor-toggle">
                       <div class="accordion-body">
                         <a href="../12-for-loops.html">Версія для слухача</a>
                       </div>
@@ -174,15 +164,15 @@
 
             <hr></div><!--/div.mobile-row -->
 
-          <div class="accordion accordion-flush" id="accordionFlush11">
+          <div class="accordion accordion-flush" id="accordion-chapters-toggle">
             <div class="accordion-item">
 
-              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
-                <h2 class="accordion-header chapters" id="flush-headingEleven">
+              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-chapters-toggle" aria-expanded="false" aria-controls="flush-collapse-chapters-toggle">
+                <h2 class="accordion-header chapters" id="flush-heading-chapters-toggle">
                   ЕПІЗОДИ
                 </h2>
               </button>
-              <div id="flush-collapseEleven" class="accordion-collapse show collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
+              <div id="flush-collapse-chapters-toggle" class="accordion-collapse show collapse" data-bs-parent="#accordion-chapters-toggle">
 
                 <div class="accordion-body">
                   <div class="accordion accordion-flush" id="accordionFlush1">
@@ -304,7 +294,7 @@
       </button>
     </div><!--/div.accordion-header-->
 
-    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#%D1%86%D0%B8%D0%BA%D0%BB-for-%D0%B2%D0%B8%D0%BA%D0%BE%D0%BD%D1%83%D1%94-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B8-%D0%BE%D0%B4%D0%B8%D0%BD-%D1%80%D0%B0%D0%B7-%D0%B4%D0%BB%D1%8F-%D0%BA%D0%BE%D0%B6%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B2-%D0%BA%D0%BE%D0%BB%D0%B5%D0%BA%D1%86%D1%96%D1%97.">Цикл for виконує команди один раз для кожного значення в
 колекції.</a></li>
@@ -399,14 +389,14 @@
               </div>
             </div>
 
-            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordionFlush12">
+            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordion-resources-toggle">
               <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwelve">
-                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                <h2 class="accordion-header" id="flush-heading-resources-toggle">
+                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-resources-toggle" aria-expanded="false" aria-controls="flush-collapse-resources-toggle">
                     РЕСУРСИ
                   </button>
                 </h2>
-                <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
+                <div id="flush-collapse-resources-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-resources-toggle">
                   <div class="accordion-body">
                     <ul><li>
                         <a href="../instructor/key-points.html">Ключові моменти</a>
@@ -436,7 +426,7 @@
 
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
-    <nav class="lesson-content mx-md-4" aria-label="Попередній і наступний розділ"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
+    <nav class="lesson-content mx-md-4" aria-label="Попередній і наступний розділ Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/11-lists.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Попередній</a>
         <a class="chapter-link float-end" href="../instructor/13-conditionals.html">Далі<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -503,16 +493,16 @@ each value in a list, a character string, or some other collection.</li>
 </ul><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>]: </span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>     <span class="bu">print</span>(number)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="cf">for</span> number <span class="kw">in</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>]: </span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a>     <span class="bu">print</span>(number)</span></code></pre>
 </div>
 <ul><li>Цей цикл <code>for</code> є еквівалентним наступному:</li>
 </ul><div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">2</span>) </span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">3</span>) </span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">5</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="bu">print</span>(<span class="dv">2</span>) </span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a><span class="bu">print</span>(<span class="dv">3</span>) </span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a><span class="bu">print</span>(<span class="dv">5</span>)</span></code></pre>
 </div>
 <ul><li>І результат циклу <code>for</code> є таким:</li>
 </ul><div class="codewrapper">
@@ -527,8 +517,8 @@ each value in a list, a character string, or some other collection.</li>
 <hr class="half-width"><div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>]: </span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>    <span class="bu">print</span>(number)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="cf">for</span> number <span class="kw">in</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>]: </span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a>    <span class="bu">print</span>(number)</span></code></pre>
 </div>
 <ul><li>Колекція <code>[2, 3, 5]</code> є те, що опрацьовується в
 циклі.</li>
@@ -550,8 +540,8 @@ each value in a list, a character string, or some other collection.</li>
 </ul><div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>]:</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="bu">print</span>(number)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="cf">for</span> number <span class="kw">in</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>]:</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a><span class="bu">print</span>(number)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ПОМИЛКА<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -562,8 +552,8 @@ each value in a list, a character string, or some other collection.</li>
 </ul><div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>firstName <span class="op">=</span> <span class="st">"Jon"</span></span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  lastName <span class="op">=</span> <span class="st">"Smith"</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a>firstName <span class="op">=</span> <span class="st">"Jon"</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a>  lastName <span class="op">=</span> <span class="st">"Smith"</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ПОМИЛКА<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -584,8 +574,8 @@ IndentationError: unexpected indent</code></pre>
 </ul><div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="cf">for</span> kitten <span class="kw">in</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>]: </span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>    <span class="bu">print</span>(kitten)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="cf">for</span> kitten <span class="kw">in</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>]: </span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a>    <span class="bu">print</span>(kitten)</span></code></pre>
 </div>
 </section><section><h2 class="section-heading" id="тіло-циклу-може-містити-багато-операторів-">Тіло циклу може містити багато операторів.<a class="anchor" aria-label="anchor" href="#%D1%82%D1%96%D0%BB%D0%BE-%D1%86%D0%B8%D0%BA%D0%BB%D1%83-%D0%BC%D0%BE%D0%B6%D0%B5-%D0%BC%D1%96%D1%81%D1%82%D0%B8%D1%82%D0%B8-%D0%B1%D0%B0%D0%B3%D0%B0%D1%82%D0%BE-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%96%D0%B2-"></a></h2>
 <hr class="half-width"><ul><li>Але жоден цикл не повинен мати довжину більше кількох рядків.</li>
@@ -593,11 +583,11 @@ IndentationError: unexpected indent</code></pre>
 </ul><div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>primes <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>]</span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="cf">for</span> p <span class="kw">in</span> primes: </span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>    squared <span class="op">=</span> p <span class="op">**</span> <span class="dv">2</span> </span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a>    cubed <span class="op">=</span> p <span class="op">**</span> <span class="dv">3</span> </span>
-<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a>    <span class="bu">print</span>(p, squared, cubed)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a>primes <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>]</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a><span class="cf">for</span> p <span class="kw">in</span> primes: </span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a>    squared <span class="op">=</span> p <span class="op">**</span> <span class="dv">2</span> </span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1" aria-label="code-block-10-4"></a>    cubed <span class="op">=</span> p <span class="op">**</span> <span class="dv">3</span> </span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1" aria-label="code-block-10-5"></a>    <span class="bu">print</span>(p, squared, cubed)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ВИХІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -621,9 +611,9 @@ IndentationError: unexpected indent</code></pre>
 </ul><div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'a range is not a list: range(0, 3)'</span>)</span>
-<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">3</span>):</span>
-<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>    <span class="bu">print</span>(number)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="bu">print</span>(<span class="st">'a range is not a list: range(0, 3)'</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1" aria-label="code-block-12-2"></a><span class="cf">for</span> number <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">3</span>):</span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1" aria-label="code-block-12-3"></a>    <span class="bu">print</span>(number)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ВИХІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -642,11 +632,11 @@ string, or the empty list.</li>
 </ul><div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="co"># Sum the first 10 integers.</span></span>
-<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
-<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a>   total <span class="op">=</span> total <span class="op">+</span> (number <span class="op">+</span> <span class="dv">1</span>)</span>
-<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a><span class="bu">print</span>(total)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="co"># Sum the first 10 integers.</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1" aria-label="code-block-14-3"></a><span class="cf">for</span> number <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1" aria-label="code-block-14-4"></a>   total <span class="op">=</span> total <span class="op">+</span> (number <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1" aria-label="code-block-14-5"></a><span class="bu">print</span>(total)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ВИХІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -701,9 +691,9 @@ an error will be thrown under certain conditions.</p>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a><span class="cf">for</span> char <span class="kw">in</span> <span class="st">"tin"</span>:</span>
-<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>    total <span class="op">=</span> total <span class="op">+</span> <span class="dv">1</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1" aria-label="code-block-16-2"></a><span class="cf">for</span> char <span class="kw">in</span> <span class="st">"tin"</span>:</span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1" aria-label="code-block-16-3"></a>    total <span class="op">=</span> total <span class="op">+</span> <span class="dv">1</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -748,11 +738,11 @@ an error will be thrown under certain conditions.</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>original <span class="op">=</span> <span class="st">"tin"</span></span>
-<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>result <span class="op">=</span> ____</span>
-<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a><span class="cf">for</span> char <span class="kw">in</span> original:</span>
-<span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a>    result <span class="op">=</span> ____</span>
-<span id="cb17-5"><a href="#cb17-5" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a>original <span class="op">=</span> <span class="st">"tin"</span></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1" aria-label="code-block-17-2"></a>result <span class="op">=</span> ____</span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1" aria-label="code-block-17-3"></a><span class="cf">for</span> char <span class="kw">in</span> original:</span>
+<span id="cb17-4"><a href="#cb17-4" tabindex="-1" aria-label="code-block-17-4"></a>    result <span class="op">=</span> ____</span>
+<span id="cb17-5"><a href="#cb17-5" tabindex="-1" aria-label="code-block-17-5"></a><span class="bu">print</span>(result)</span></code></pre>
 </div>
 </div>
 </div>
@@ -767,11 +757,11 @@ an error will be thrown under certain conditions.</p>
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a>original <span class="op">=</span> <span class="st">"tin"</span></span>
-<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a>result <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a><span class="cf">for</span> char <span class="kw">in</span> original:</span>
-<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a>    result <span class="op">=</span> char <span class="op">+</span> result</span>
-<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a>original <span class="op">=</span> <span class="st">"tin"</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1" aria-label="code-block-18-2"></a>result <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1" aria-label="code-block-18-3"></a><span class="cf">for</span> char <span class="kw">in</span> original:</span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1" aria-label="code-block-18-4"></a>    result <span class="op">=</span> char <span class="op">+</span> result</span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1" aria-label="code-block-18-5"></a><span class="bu">print</span>(result)</span></code></pre>
 </div>
 </div>
 </div>
@@ -790,11 +780,11 @@ indicated result.</p>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="co"># Total length of the strings in the list: ["red", "green", "blue"] =&gt; 12</span></span>
-<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> [<span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"blue"</span>]:</span>
-<span id="cb19-4"><a href="#cb19-4" tabindex="-1"></a>    ____ <span class="op">=</span> ____ <span class="op">+</span> <span class="bu">len</span>(word)</span>
-<span id="cb19-5"><a href="#cb19-5" tabindex="-1"></a><span class="bu">print</span>(total)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a><span class="co"># Total length of the strings in the list: ["red", "green", "blue"] =&gt; 12</span></span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1" aria-label="code-block-19-2"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1" aria-label="code-block-19-3"></a><span class="cf">for</span> word <span class="kw">in</span> [<span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"blue"</span>]:</span>
+<span id="cb19-4"><a href="#cb19-4" tabindex="-1" aria-label="code-block-19-4"></a>    ____ <span class="op">=</span> ____ <span class="op">+</span> <span class="bu">len</span>(word)</span>
+<span id="cb19-5"><a href="#cb19-5" tabindex="-1" aria-label="code-block-19-5"></a><span class="bu">print</span>(total)</span></code></pre>
 </div>
 </div>
 </div>
@@ -809,10 +799,10 @@ indicated result.</p>
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> [<span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"blue"</span>]:</span>
-<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a>    total <span class="op">=</span> total <span class="op">+</span> <span class="bu">len</span>(word)</span>
-<span id="cb20-4"><a href="#cb20-4" tabindex="-1"></a><span class="bu">print</span>(total)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" tabindex="-1" aria-label="code-block-20-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1" aria-label="code-block-20-2"></a><span class="cf">for</span> word <span class="kw">in</span> [<span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"blue"</span>]:</span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1" aria-label="code-block-20-3"></a>    total <span class="op">=</span> total <span class="op">+</span> <span class="bu">len</span>(word)</span>
+<span id="cb20-4"><a href="#cb20-4" tabindex="-1" aria-label="code-block-20-4"></a><span class="bu">print</span>(total)</span></code></pre>
 </div>
 </div>
 </div>
@@ -831,11 +821,11 @@ indicated result.</p>
 <div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="co"># Список довжин слів: ["red", "green", "blue"] =&gt; [3, 5, 4]</span></span>
-<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a>lengths <span class="op">=</span> ____</span>
-<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> [<span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"blue"</span>]:</span>
-<span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a>    lengths.____(____)</span>
-<span id="cb21-5"><a href="#cb21-5" tabindex="-1"></a><span class="bu">print</span>(lengths)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" tabindex="-1" aria-label="code-block-21-1"></a><span class="co"># Список довжин слів: ["red", "green", "blue"] =&gt; [3, 5, 4]</span></span>
+<span id="cb21-2"><a href="#cb21-2" tabindex="-1" aria-label="code-block-21-2"></a>lengths <span class="op">=</span> ____</span>
+<span id="cb21-3"><a href="#cb21-3" tabindex="-1" aria-label="code-block-21-3"></a><span class="cf">for</span> word <span class="kw">in</span> [<span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"blue"</span>]:</span>
+<span id="cb21-4"><a href="#cb21-4" tabindex="-1" aria-label="code-block-21-4"></a>    lengths.____(____)</span>
+<span id="cb21-5"><a href="#cb21-5" tabindex="-1" aria-label="code-block-21-5"></a><span class="bu">print</span>(lengths)</span></code></pre>
 </div>
 </div>
 </div>
@@ -850,10 +840,10 @@ indicated result.</p>
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a>lengths <span class="op">=</span> []</span>
-<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> [<span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"blue"</span>]:</span>
-<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a>    lengths.append(<span class="bu">len</span>(word))</span>
-<span id="cb22-4"><a href="#cb22-4" tabindex="-1"></a><span class="bu">print</span>(lengths)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1" aria-label="code-block-22-1"></a>lengths <span class="op">=</span> []</span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1" aria-label="code-block-22-2"></a><span class="cf">for</span> word <span class="kw">in</span> [<span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"blue"</span>]:</span>
+<span id="cb22-3"><a href="#cb22-3" tabindex="-1" aria-label="code-block-22-3"></a>    lengths.append(<span class="bu">len</span>(word))</span>
+<span id="cb22-4"><a href="#cb22-4" tabindex="-1" aria-label="code-block-22-4"></a><span class="bu">print</span>(lengths)</span></code></pre>
 </div>
 </div>
 </div>
@@ -872,12 +862,12 @@ indicated result.</p>
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="co"># Об’єднайте всі слова: ["red", "green", "blue"] =&gt; "redgreenblue"</span></span>
-<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a>words <span class="op">=</span> [<span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"blue"</span>]</span>
-<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a>result <span class="op">=</span> ____</span>
-<span id="cb23-4"><a href="#cb23-4" tabindex="-1"></a><span class="cf">for</span> ____ <span class="kw">in</span> ____:</span>
-<span id="cb23-5"><a href="#cb23-5" tabindex="-1"></a>    ____</span>
-<span id="cb23-6"><a href="#cb23-6" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" tabindex="-1" aria-label="code-block-23-1"></a><span class="co"># Об’єднайте всі слова: ["red", "green", "blue"] =&gt; "redgreenblue"</span></span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1" aria-label="code-block-23-2"></a>words <span class="op">=</span> [<span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"blue"</span>]</span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1" aria-label="code-block-23-3"></a>result <span class="op">=</span> ____</span>
+<span id="cb23-4"><a href="#cb23-4" tabindex="-1" aria-label="code-block-23-4"></a><span class="cf">for</span> ____ <span class="kw">in</span> ____:</span>
+<span id="cb23-5"><a href="#cb23-5" tabindex="-1" aria-label="code-block-23-5"></a>    ____</span>
+<span id="cb23-6"><a href="#cb23-6" tabindex="-1" aria-label="code-block-23-6"></a><span class="bu">print</span>(result)</span></code></pre>
 </div>
 </div>
 </div>
@@ -892,11 +882,11 @@ indicated result.</p>
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a>words <span class="op">=</span> [<span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"blue"</span>]</span>
-<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a>result <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> words:</span>
-<span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a>    result <span class="op">=</span> result <span class="op">+</span> word</span>
-<span id="cb24-5"><a href="#cb24-5" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" tabindex="-1" aria-label="code-block-24-1"></a>words <span class="op">=</span> [<span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"blue"</span>]</span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1" aria-label="code-block-24-2"></a>result <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb24-3"><a href="#cb24-3" tabindex="-1" aria-label="code-block-24-3"></a><span class="cf">for</span> word <span class="kw">in</span> words:</span>
+<span id="cb24-4"><a href="#cb24-4" tabindex="-1" aria-label="code-block-24-4"></a>    result <span class="op">=</span> result <span class="op">+</span> word</span>
+<span id="cb24-5"><a href="#cb24-5" tabindex="-1" aria-label="code-block-24-5"></a><span class="bu">print</span>(result)</span></code></pre>
 </div>
 </div>
 </div>
@@ -930,10 +920,10 @@ properly format the acronym.</p>
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a>acronym <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> [<span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"blue"</span>]:</span>
-<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a>    acronym <span class="op">=</span> acronym <span class="op">+</span> word[<span class="dv">0</span>].upper()</span>
-<span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a><span class="bu">print</span>(acronym)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" tabindex="-1" aria-label="code-block-25-1"></a>acronym <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1" aria-label="code-block-25-2"></a><span class="cf">for</span> word <span class="kw">in</span> [<span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"blue"</span>]:</span>
+<span id="cb25-3"><a href="#cb25-3" tabindex="-1" aria-label="code-block-25-3"></a>    acronym <span class="op">=</span> acronym <span class="op">+</span> word[<span class="dv">0</span>].upper()</span>
+<span id="cb25-4"><a href="#cb25-4" tabindex="-1" aria-label="code-block-25-4"></a><span class="bu">print</span>(acronym)</span></code></pre>
 </div>
 </div>
 </div>
@@ -953,13 +943,13 @@ print a list with the cumulative sum of data. Результатом має бу
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a>cumulative.append(total)</span>
-<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> data:</span>
-<span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a>cumulative <span class="op">=</span> []</span>
-<span id="cb26-4"><a href="#cb26-4" tabindex="-1"></a>total <span class="op">=</span> total <span class="op">+</span> number</span>
-<span id="cb26-5"><a href="#cb26-5" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb26-6"><a href="#cb26-6" tabindex="-1"></a><span class="bu">print</span>(cumulative)</span>
-<span id="cb26-7"><a href="#cb26-7" tabindex="-1"></a>data <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">5</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1" aria-label="code-block-26-1"></a>cumulative.append(total)</span>
+<span id="cb26-2"><a href="#cb26-2" tabindex="-1" aria-label="code-block-26-2"></a><span class="cf">for</span> number <span class="kw">in</span> data:</span>
+<span id="cb26-3"><a href="#cb26-3" tabindex="-1" aria-label="code-block-26-3"></a>cumulative <span class="op">=</span> []</span>
+<span id="cb26-4"><a href="#cb26-4" tabindex="-1" aria-label="code-block-26-4"></a>total <span class="op">=</span> total <span class="op">+</span> number</span>
+<span id="cb26-5"><a href="#cb26-5" tabindex="-1" aria-label="code-block-26-5"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb26-6"><a href="#cb26-6" tabindex="-1" aria-label="code-block-26-6"></a><span class="bu">print</span>(cumulative)</span>
+<span id="cb26-7"><a href="#cb26-7" tabindex="-1" aria-label="code-block-26-7"></a>data <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">5</span>]</span></code></pre>
 </div>
 </div>
 </div>
@@ -974,13 +964,13 @@ print a list with the cumulative sum of data. Результатом має бу
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a>data <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">5</span>]</span>
-<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a>cumulative <span class="op">=</span> []</span>
-<span id="cb27-4"><a href="#cb27-4" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> data:</span>
-<span id="cb27-5"><a href="#cb27-5" tabindex="-1"></a>    total <span class="op">=</span> total <span class="op">+</span> number</span>
-<span id="cb27-6"><a href="#cb27-6" tabindex="-1"></a>    cumulative.append(total)</span>
-<span id="cb27-7"><a href="#cb27-7" tabindex="-1"></a><span class="bu">print</span>(cumulative)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" tabindex="-1" aria-label="code-block-27-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1" aria-label="code-block-27-2"></a>data <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">5</span>]</span>
+<span id="cb27-3"><a href="#cb27-3" tabindex="-1" aria-label="code-block-27-3"></a>cumulative <span class="op">=</span> []</span>
+<span id="cb27-4"><a href="#cb27-4" tabindex="-1" aria-label="code-block-27-4"></a><span class="cf">for</span> number <span class="kw">in</span> data:</span>
+<span id="cb27-5"><a href="#cb27-5" tabindex="-1" aria-label="code-block-27-5"></a>    total <span class="op">=</span> total <span class="op">+</span> number</span>
+<span id="cb27-6"><a href="#cb27-6" tabindex="-1" aria-label="code-block-27-6"></a>    cumulative.append(total)</span>
+<span id="cb27-7"><a href="#cb27-7" tabindex="-1" aria-label="code-block-27-7"></a><span class="bu">print</span>(cumulative)</span></code></pre>
 </div>
 </div>
 </div>
@@ -1005,13 +995,13 @@ defined but was not?</li>
 </ol><div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
-<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a>    <span class="co"># використовуйте a, якщо число кратне 3, інакше використовуйте b</span></span>
-<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a>    <span class="cf">if</span> (Number <span class="op">%</span> <span class="dv">3</span>) <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a>        message <span class="op">=</span> message <span class="op">+</span> a</span>
-<span id="cb28-5"><a href="#cb28-5" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb28-6"><a href="#cb28-6" tabindex="-1"></a>        message <span class="op">=</span> message <span class="op">+</span> <span class="st">"b"</span></span>
-<span id="cb28-7"><a href="#cb28-7" tabindex="-1"></a><span class="bu">print</span>(message)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" tabindex="-1" aria-label="code-block-28-1"></a><span class="cf">for</span> number <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1" aria-label="code-block-28-2"></a>    <span class="co"># використовуйте a, якщо число кратне 3, інакше використовуйте b</span></span>
+<span id="cb28-3"><a href="#cb28-3" tabindex="-1" aria-label="code-block-28-3"></a>    <span class="cf">if</span> (Number <span class="op">%</span> <span class="dv">3</span>) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb28-4"><a href="#cb28-4" tabindex="-1" aria-label="code-block-28-4"></a>        message <span class="op">=</span> message <span class="op">+</span> a</span>
+<span id="cb28-5"><a href="#cb28-5" tabindex="-1" aria-label="code-block-28-5"></a>    <span class="cf">else</span>:</span>
+<span id="cb28-6"><a href="#cb28-6" tabindex="-1" aria-label="code-block-28-6"></a>        message <span class="op">=</span> message <span class="op">+</span> <span class="st">"b"</span></span>
+<span id="cb28-7"><a href="#cb28-7" tabindex="-1" aria-label="code-block-28-7"></a><span class="bu">print</span>(message)</span></code></pre>
 </div>
 </div>
 </div>
@@ -1032,14 +1022,14 @@ not the undefined variable <code>a</code>.</li>
 </ul><div class="codewrapper sourceCode" id="cb29">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a>message <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb29-2"><a href="#cb29-2" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
-<span id="cb29-3"><a href="#cb29-3" tabindex="-1"></a>    <span class="co"># використовуйте a, якщо число кратне 3, інакше використовуйте b</span></span>
-<span id="cb29-4"><a href="#cb29-4" tabindex="-1"></a>    <span class="cf">if</span> (number <span class="op">%</span> <span class="dv">3</span>) <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb29-5"><a href="#cb29-5" tabindex="-1"></a>        message <span class="op">=</span> message <span class="op">+</span> <span class="st">"a"</span></span>
-<span id="cb29-6"><a href="#cb29-6" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb29-7"><a href="#cb29-7" tabindex="-1"></a>        message <span class="op">=</span> message <span class="op">+</span> <span class="st">"b"</span></span>
-<span id="cb29-8"><a href="#cb29-8" tabindex="-1"></a><span class="bu">print</span>(message)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" tabindex="-1" aria-label="code-block-29-1"></a>message <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb29-2"><a href="#cb29-2" tabindex="-1" aria-label="code-block-29-2"></a><span class="cf">for</span> number <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb29-3"><a href="#cb29-3" tabindex="-1" aria-label="code-block-29-3"></a>    <span class="co"># використовуйте a, якщо число кратне 3, інакше використовуйте b</span></span>
+<span id="cb29-4"><a href="#cb29-4" tabindex="-1" aria-label="code-block-29-4"></a>    <span class="cf">if</span> (number <span class="op">%</span> <span class="dv">3</span>) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb29-5"><a href="#cb29-5" tabindex="-1" aria-label="code-block-29-5"></a>        message <span class="op">=</span> message <span class="op">+</span> <span class="st">"a"</span></span>
+<span id="cb29-6"><a href="#cb29-6" tabindex="-1" aria-label="code-block-29-6"></a>    <span class="cf">else</span>:</span>
+<span id="cb29-7"><a href="#cb29-7" tabindex="-1" aria-label="code-block-29-7"></a>        message <span class="op">=</span> message <span class="op">+</span> <span class="st">"b"</span></span>
+<span id="cb29-8"><a href="#cb29-8" tabindex="-1" aria-label="code-block-29-8"></a><span class="bu">print</span>(message)</span></code></pre>
 </div>
 </div>
 </div>
@@ -1061,8 +1051,8 @@ it?</li>
 </ol><div class="codewrapper sourceCode" id="cb30">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a>seasons <span class="op">=</span> [<span class="st">'Spring'</span>, <span class="st">'Summer'</span>, <span class="st">'Fall'</span>, <span class="st">'Winter'</span>]</span>
-<span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'My favorite season is '</span>, seasons[<span class="dv">4</span>])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" tabindex="-1" aria-label="code-block-30-1"></a>seasons <span class="op">=</span> [<span class="st">'Spring'</span>, <span class="st">'Summer'</span>, <span class="st">'Fall'</span>, <span class="st">'Winter'</span>]</span>
+<span id="cb30-2"><a href="#cb30-2" tabindex="-1" aria-label="code-block-30-2"></a><span class="bu">print</span>(<span class="st">'My favorite season is '</span>, seasons[<span class="dv">4</span>])</span></code></pre>
 </div>
 </div>
 </div>
@@ -1079,8 +1069,8 @@ the list is <code>3</code>.</p>
 <div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a>seasons <span class="op">=</span> [<span class="st">'Spring'</span>, <span class="st">'Summer'</span>, <span class="st">'Fall'</span>, <span class="st">'Winter'</span>]</span>
-<span id="cb31-2"><a href="#cb31-2" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'My favorite season is '</span>, seasons[<span class="dv">3</span>])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" tabindex="-1" aria-label="code-block-31-1"></a>seasons <span class="op">=</span> [<span class="st">'Spring'</span>, <span class="st">'Summer'</span>, <span class="st">'Fall'</span>, <span class="st">'Winter'</span>]</span>
+<span id="cb31-2"><a href="#cb31-2" tabindex="-1" aria-label="code-block-31-2"></a><span class="bu">print</span>(<span class="st">'My favorite season is '</span>, seasons[<span class="dv">3</span>])</span></code></pre>
 </div>
 </div>
 </div>
@@ -1109,7 +1099,7 @@ have a meaningful name to the looping variable).</li>
 </div>
 </div>
 </section></div> <!-- / div.lesson-content -->
-    </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Попередній і наступний розділ"><div class="d-block d-sm-block d-md-none">
+    </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Попередній і наступний розділ Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/11-lists.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Попередній</a>
         <a class="chapter-link float-end" href="../instructor/13-conditionals.html">Далі<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -1169,7 +1159,7 @@ have a meaningful name to the looping variable).</li>
   "identifier": "https://ukrainian-carpentries.github.io/python-novice-gapminder/instructor/12-for-loops.html",
   "dateCreated": "2016-01-07",
   "dateModified": "2026-03-29",
-  "datePublished": "2026-03-31"
+  "datePublished": "2026-04-07"
 }
 
   </script><script>

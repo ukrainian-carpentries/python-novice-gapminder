@@ -21,8 +21,7 @@
         <img id="swc-logo" alt="Software Carpentry" src="assets/images/software-logo.svg"></div>
     </div>
     <div class="selector-container">
-      <div id="theme-selector">
-        <li class="nav-item dropdown" id="theme-button-list">
+      <menu class="theme-selector" id="theme-selector-menu"><li class="nav-item dropdown theme-button-list" id="theme-button-list-menu">
           <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
             <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><i data-feather="chevron-down"></i>
           </button>
@@ -45,10 +44,7 @@
                 <svg class="bi ms-auto d-none"><use href="#check2"></use></svg></button>
             </li>
           </ul></li>
-      </div>
-
-
-      <div class="dropdown" id="instructor-dropdown">
+    </menu><div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Версія для слухача <i data-feather="chevron-down"></i>
         </button>
@@ -105,15 +101,11 @@
     -->
     <a id="search-button" class="btn btn-primary" href="aio.html" role="button" aria-label="Пошук на сторінці «All In One».">Пошук на сторінці «All In One».</a>
   </div><!--/div.container-fluid -->
-</nav><div class="col-md-12 mobile-title">
-  Побудова графіків і програмування на Python
-</div>
-
-<aside class="col-md-12 lesson-progress"><div style="width: 86%" class="percentage">
+</nav><aside class="col-md-12 lesson-progress"><div style="width: 86%" class="percentage">
     86%
   </div>
   <div class="progress software">
-    <div class="progress-bar software" role="progressbar" style="width: 86%" aria-valuenow="86" aria-label="Хід уроку" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar software" role="progressbar" aria-label="Хід уроку" aria-valuemin="0" aria-valuemax="100" aria-valuenow="86" style="width: 86%">
     </div>
   </div>
 </aside><div class="container">
@@ -121,13 +113,12 @@
         <!-- START: inst/pkgdown/templates/navbar.html -->
 <div id="sidebar-col" class="col-lg-4">
   <div id="sidebar" class="sidebar">
-      <nav aria-labelledby="flush-headingEleven"><button role="button" aria-label="закрити меню" alt="закрити меню" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Згорнути " data-episodes="Епізоди ">
+      <nav aria-labelledby="flush-collapse-chapters-toggle"><button role="button" aria-label="Згорнути" alt="Згорнути" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Згорнути " data-episodes="Епізоди ">
           <i class="search-icon" data-feather="x" role="img"></i>
         </button>
         <div class="sidebar-inner">
           <div class="row mobile-row" id="theme-row-mobile">
-            <div class="col" id="theme-selector">
-              <li class="nav-item dropdown" id="theme-button-list">
+            <menu class="col theme-selector" id="theme-selector-sidebar"><li class="nav-item dropdown theme-button-list" id="theme-button-list-sidebar">
                 <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
                   <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><span class="d-lg-none ms-1" id="bd-theme-text">Toggle Theme</span>
                 </button>
@@ -150,19 +141,18 @@
                       <svg class="bi ms-auto d-none"><use href="#check2"></use></svg></button>
                   </li>
                 </ul></li>
-            </div>
-          </div>
+            </menu></div>
           <div class="row mobile-row">
             <div class="col">
               <div class="sidenav-view-selector">
-                <div class="accordion accordion-flush" id="accordionFlush9">
+                <div class="accordion accordion-flush" id="accordion-instructor-toggle">
                   <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingNine">
-                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                    <h2 class="accordion-header" id="flush-heading-instructor-toggle">
+                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-instructor-toggle" aria-expanded="false" aria-controls="flush-collapse-instructor-toggle">
                         <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> Версія для слухача
                       </button>
                     </h2>
-                    <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
+                    <div id="flush-collapse-instructor-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-instructor-toggle">
                       <div class="accordion-body">
                         <a href="instructor/18-style.html">Версія для інструктора</a>
                       </div>
@@ -174,15 +164,15 @@
 
             <hr></div><!--/div.mobile-row -->
 
-          <div class="accordion accordion-flush" id="accordionFlush11">
+          <div class="accordion accordion-flush" id="accordion-chapters-toggle">
             <div class="accordion-item">
 
-              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
-                <h2 class="accordion-header chapters" id="flush-headingEleven">
+              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-chapters-toggle" aria-expanded="false" aria-controls="flush-collapse-chapters-toggle">
+                <h2 class="accordion-header chapters" id="flush-heading-chapters-toggle">
                   ЕПІЗОДИ
                 </h2>
               </button>
-              <div id="flush-collapseEleven" class="accordion-collapse show collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
+              <div id="flush-collapse-chapters-toggle" class="accordion-collapse show collapse" data-bs-parent="#accordion-chapters-toggle">
 
                 <div class="accordion-body">
                   <div class="accordion accordion-flush" id="accordionFlush1">
@@ -358,7 +348,7 @@
       </button>
     </div><!--/div.accordion-header-->
 
-    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#coding-style">Coding style</a></li>
 <li><a href="#follow-standard-python-style-in-your-code.">Follow standard Python style in your code.</a></li>
@@ -392,14 +382,14 @@
               </div>
             </div>
 
-            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordionFlush12">
+            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordion-resources-toggle">
               <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwelve">
-                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                <h2 class="accordion-header" id="flush-heading-resources-toggle">
+                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-resources-toggle" aria-expanded="false" aria-controls="flush-collapse-resources-toggle">
                     РЕСУРСИ
                   </button>
                 </h2>
-                <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
+                <div id="flush-collapse-resources-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-resources-toggle">
                   <div class="accordion-body">
                     <ul><li>
                         <a href="key-points.html">Ключові моменти</a>
@@ -429,7 +419,7 @@
 
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
-    <nav class="lesson-content mx-md-4" aria-label="Попередній і наступний розділ"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
+    <nav class="lesson-content mx-md-4" aria-label="Попередній і наступний розділ Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="17-scope.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Попередній</a>
         <a class="chapter-link float-end" href="19-wrap.html">Далі<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -527,10 +517,10 @@ context in which your code is executing is as you expect.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="kw">def</span> calc_bulk_density(mass, volume):</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>    <span class="co">'''Return dry bulk density = powder mass / powder volume.'''</span></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>    <span class="cf">assert</span> volume <span class="op">&gt;</span> <span class="dv">0</span></span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>    <span class="cf">return</span> mass <span class="op">/</span> volume</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="kw">def</span> calc_bulk_density(mass, volume):</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a>    <span class="co">'''Return dry bulk density = powder mass / powder volume.'''</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a>    <span class="cf">assert</span> volume <span class="op">&gt;</span> <span class="dv">0</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a>    <span class="cf">return</span> mass <span class="op">/</span> volume</span></code></pre>
 </div>
 <p>If the assertion is <code>False</code>, the Python interpreter raises
 an <code>AssertionError</code> runtime exception. The source code for
@@ -547,14 +537,14 @@ documentation is also known as a <em>docstring</em>.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="kw">def</span> average(values):</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>    <span class="co">"Return average of values, or None if no values are supplied."</span></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(values) <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(values) <span class="op">/</span> <span class="bu">len</span>(values)</span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="bu">help</span>(average)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="kw">def</span> average(values):</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a>    <span class="co">"Return average of values, or None if no values are supplied."</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a>    <span class="cf">if</span> <span class="bu">len</span>(values) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1" aria-label="code-block-2-5"></a>        <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1" aria-label="code-block-2-6"></a>    <span class="cf">return</span> <span class="bu">sum</span>(values) <span class="op">/</span> <span class="bu">len</span>(values)</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1" aria-label="code-block-2-7"></a></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1" aria-label="code-block-2-8"></a><span class="bu">help</span>(average)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ВИХІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -578,10 +568,10 @@ with three matching characters.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co">"""This string spans</span></span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="co">multiple lines.</span></span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="co">Blank lines are allowed."""</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="co">"""This string spans</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a><span class="co">multiple lines.</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a><span class="co">Blank lines are allowed."""</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -600,22 +590,22 @@ be? Will any lines produce a syntax error or a runtime error?</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co">"Find maximum edit distance between multiple sequences."</span></span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="co"># This finds the maximum distance between all sequences.</span></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="kw">def</span> overall_max(sequences):</span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>    <span class="co">'''Determine overall maximum edit distance.'''</span></span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>    highest <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>    <span class="cf">for</span> left <span class="kw">in</span> sequences:</span>
-<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>        <span class="cf">for</span> right <span class="kw">in</span> sequences:</span>
-<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>            <span class="co">'''Avoid checking sequence against itself.'''</span></span>
-<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>            <span class="cf">if</span> left <span class="op">!=</span> right:</span>
-<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a>                this <span class="op">=</span> edit_distance(left, right)</span>
-<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a>                highest <span class="op">=</span> <span class="bu">max</span>(highest, this)</span>
-<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a></span>
-<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a>    <span class="co"># Report.</span></span>
-<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a>    <span class="cf">return</span> highest</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="co">"Find maximum edit distance between multiple sequences."</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a><span class="co"># This finds the maximum distance between all sequences.</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1" aria-label="code-block-5-3"></a></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1" aria-label="code-block-5-4"></a><span class="kw">def</span> overall_max(sequences):</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1" aria-label="code-block-5-5"></a>    <span class="co">'''Determine overall maximum edit distance.'''</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1" aria-label="code-block-5-6"></a></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1" aria-label="code-block-5-7"></a>    highest <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1" aria-label="code-block-5-8"></a>    <span class="cf">for</span> left <span class="kw">in</span> sequences:</span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1" aria-label="code-block-5-9"></a>        <span class="cf">for</span> right <span class="kw">in</span> sequences:</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1" aria-label="code-block-5-10"></a>            <span class="co">'''Avoid checking sequence against itself.'''</span></span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1" aria-label="code-block-5-11"></a>            <span class="cf">if</span> left <span class="op">!=</span> right:</span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1" aria-label="code-block-5-12"></a>                this <span class="op">=</span> edit_distance(left, right)</span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1" aria-label="code-block-5-13"></a>                highest <span class="op">=</span> <span class="bu">max</span>(highest, this)</span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1" aria-label="code-block-5-14"></a></span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1" aria-label="code-block-5-15"></a>    <span class="co"># Report.</span></span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1" aria-label="code-block-5-16"></a>    <span class="cf">return</span> highest</span></code></pre>
 </div>
 </div>
 </div>
@@ -641,12 +631,12 @@ that <code>help</code> displays it properly.</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="kw">def</span> middle(a, b, c):</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>    <span class="co"># Return the middle value of three.</span></span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>    <span class="co"># Assumes the values can actually be compared.</span></span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>    values <span class="op">=</span> [a, b, c]</span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>    values.sort()</span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>    <span class="cf">return</span> values[<span class="dv">1</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="kw">def</span> middle(a, b, c):</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a>    <span class="co"># Return the middle value of three.</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a>    <span class="co"># Assumes the values can actually be compared.</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1" aria-label="code-block-6-4"></a>    values <span class="op">=</span> [a, b, c]</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1" aria-label="code-block-6-5"></a>    values.sort()</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1" aria-label="code-block-6-6"></a>    <span class="cf">return</span> values[<span class="dv">1</span>]</span></code></pre>
 </div>
 </div>
 </div>
@@ -656,17 +646,17 @@ that <code>help</code> displays it properly.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Показати відповіді </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="kw">def</span> middle(a, b, c):</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>    <span class="co">'''Return the middle value of three.</span></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="co">    Assumes the values can actually be compared.'''</span></span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>    values <span class="op">=</span> [a, b, c]</span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>    values.sort()</span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>    <span class="cf">return</span> values[<span class="dv">1</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="kw">def</span> middle(a, b, c):</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a>    <span class="co">'''Return the middle value of three.</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1" aria-label="code-block-7-3"></a><span class="co">    Assumes the values can actually be compared.'''</span></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1" aria-label="code-block-7-4"></a>    values <span class="op">=</span> [a, b, c]</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1" aria-label="code-block-7-5"></a>    values.sort()</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1" aria-label="code-block-7-6"></a>    <span class="cf">return</span> values[<span class="dv">1</span>]</span></code></pre>
 </div>
 </div>
 </div>
@@ -689,21 +679,21 @@ What did you do differently, and why?</li>
 </ol><div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'et cetera'</span></span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="bu">print</span>(s)</span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="cf">while</span> i <span class="op">&lt;</span> n:</span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>    <span class="co"># print('at', j)</span></span>
-<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>    new <span class="op">=</span> <span class="st">''</span></span>
-<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(s)):</span>
-<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a>        left <span class="op">=</span> j<span class="op">-</span><span class="dv">1</span></span>
-<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a>        right <span class="op">=</span> (j<span class="op">+</span><span class="dv">1</span>)<span class="op">%</span><span class="bu">len</span>(s)</span>
-<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a>        <span class="cf">if</span> s[left]<span class="op">==</span>s[right]: new <span class="op">=</span> new <span class="op">+</span> <span class="st">'-'</span></span>
-<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a>        <span class="cf">else</span>: new <span class="op">=</span> new <span class="op">+</span> <span class="st">'*'</span></span>
-<span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a>    s<span class="op">=</span><span class="st">''</span>.join(new)</span>
-<span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a>    <span class="bu">print</span>(s)</span>
-<span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a>    i <span class="op">+=</span> <span class="dv">1</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a>n <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a>s <span class="op">=</span> <span class="st">'et cetera'</span></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a><span class="bu">print</span>(s)</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1" aria-label="code-block-8-4"></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1" aria-label="code-block-8-5"></a><span class="cf">while</span> i <span class="op">&lt;</span> n:</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1" aria-label="code-block-8-6"></a>    <span class="co"># print('at', j)</span></span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1" aria-label="code-block-8-7"></a>    new <span class="op">=</span> <span class="st">''</span></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1" aria-label="code-block-8-8"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(s)):</span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1" aria-label="code-block-8-9"></a>        left <span class="op">=</span> j<span class="op">-</span><span class="dv">1</span></span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1" aria-label="code-block-8-10"></a>        right <span class="op">=</span> (j<span class="op">+</span><span class="dv">1</span>)<span class="op">%</span><span class="bu">len</span>(s)</span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1" aria-label="code-block-8-11"></a>        <span class="cf">if</span> s[left]<span class="op">==</span>s[right]: new <span class="op">=</span> new <span class="op">+</span> <span class="st">'-'</span></span>
+<span id="cb8-12"><a href="#cb8-12" tabindex="-1" aria-label="code-block-8-12"></a>        <span class="cf">else</span>: new <span class="op">=</span> new <span class="op">+</span> <span class="st">'*'</span></span>
+<span id="cb8-13"><a href="#cb8-13" tabindex="-1" aria-label="code-block-8-13"></a>    s<span class="op">=</span><span class="st">''</span>.join(new)</span>
+<span id="cb8-14"><a href="#cb8-14" tabindex="-1" aria-label="code-block-8-14"></a>    <span class="bu">print</span>(s)</span>
+<span id="cb8-15"><a href="#cb8-15" tabindex="-1" aria-label="code-block-8-15"></a>    i <span class="op">+=</span> <span class="dv">1</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -713,37 +703,37 @@ What did you do differently, and why?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Показати відповіді </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Here’s one solution.</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="kw">def</span> string_machine(input_string, iterations):</span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="co">    Takes input_string and generates a new string with -'s and *'s</span></span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="co">    corresponding to characters that have identical adjacent characters</span></span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a><span class="co">    or not, respectively.  Iterates through this procedure with the resultant</span></span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a><span class="co">    strings for the supplied number of iterations.</span></span>
-<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a>    <span class="bu">print</span>(input_string)</span>
-<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a>    input_string_length <span class="op">=</span> <span class="bu">len</span>(input_string)</span>
-<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a>    old <span class="op">=</span> input_string</span>
-<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(iterations):</span>
-<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a>        new <span class="op">=</span> <span class="st">''</span></span>
-<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a>        <span class="co"># iterate through characters in previous string</span></span>
-<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(input_string_length):</span>
-<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a>            left <span class="op">=</span> j<span class="op">-</span><span class="dv">1</span></span>
-<span id="cb9-16"><a href="#cb9-16" tabindex="-1"></a>            right <span class="op">=</span> (j<span class="op">+</span><span class="dv">1</span>) <span class="op">%</span> input_string_length  <span class="co"># ensure right index wraps around</span></span>
-<span id="cb9-17"><a href="#cb9-17" tabindex="-1"></a>            <span class="cf">if</span> old[left] <span class="op">==</span> old[right]:</span>
-<span id="cb9-18"><a href="#cb9-18" tabindex="-1"></a>                new <span class="op">=</span> new <span class="op">+</span> <span class="st">'-'</span></span>
-<span id="cb9-19"><a href="#cb9-19" tabindex="-1"></a>            <span class="cf">else</span>:</span>
-<span id="cb9-20"><a href="#cb9-20" tabindex="-1"></a>                new <span class="op">=</span> new <span class="op">+</span> <span class="st">'*'</span></span>
-<span id="cb9-21"><a href="#cb9-21" tabindex="-1"></a>        <span class="bu">print</span>(new)</span>
-<span id="cb9-22"><a href="#cb9-22" tabindex="-1"></a>        <span class="co"># store new string as old</span></span>
-<span id="cb9-23"><a href="#cb9-23" tabindex="-1"></a>        old <span class="op">=</span> new     </span>
-<span id="cb9-24"><a href="#cb9-24" tabindex="-1"></a></span>
-<span id="cb9-25"><a href="#cb9-25" tabindex="-1"></a>string_machine(<span class="st">'et cetera'</span>, <span class="dv">10</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="kw">def</span> string_machine(input_string, iterations):</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a>    <span class="co">"""</span></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1" aria-label="code-block-9-3"></a><span class="co">    Takes input_string and generates a new string with -'s and *'s</span></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1" aria-label="code-block-9-4"></a><span class="co">    corresponding to characters that have identical adjacent characters</span></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1" aria-label="code-block-9-5"></a><span class="co">    or not, respectively.  Iterates through this procedure with the resultant</span></span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1" aria-label="code-block-9-6"></a><span class="co">    strings for the supplied number of iterations.</span></span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1" aria-label="code-block-9-7"></a><span class="co">    """</span></span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1" aria-label="code-block-9-8"></a>    <span class="bu">print</span>(input_string)</span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1" aria-label="code-block-9-9"></a>    input_string_length <span class="op">=</span> <span class="bu">len</span>(input_string)</span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1" aria-label="code-block-9-10"></a>    old <span class="op">=</span> input_string</span>
+<span id="cb9-11"><a href="#cb9-11" tabindex="-1" aria-label="code-block-9-11"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(iterations):</span>
+<span id="cb9-12"><a href="#cb9-12" tabindex="-1" aria-label="code-block-9-12"></a>        new <span class="op">=</span> <span class="st">''</span></span>
+<span id="cb9-13"><a href="#cb9-13" tabindex="-1" aria-label="code-block-9-13"></a>        <span class="co"># iterate through characters in previous string</span></span>
+<span id="cb9-14"><a href="#cb9-14" tabindex="-1" aria-label="code-block-9-14"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(input_string_length):</span>
+<span id="cb9-15"><a href="#cb9-15" tabindex="-1" aria-label="code-block-9-15"></a>            left <span class="op">=</span> j<span class="op">-</span><span class="dv">1</span></span>
+<span id="cb9-16"><a href="#cb9-16" tabindex="-1" aria-label="code-block-9-16"></a>            right <span class="op">=</span> (j<span class="op">+</span><span class="dv">1</span>) <span class="op">%</span> input_string_length  <span class="co"># ensure right index wraps around</span></span>
+<span id="cb9-17"><a href="#cb9-17" tabindex="-1" aria-label="code-block-9-17"></a>            <span class="cf">if</span> old[left] <span class="op">==</span> old[right]:</span>
+<span id="cb9-18"><a href="#cb9-18" tabindex="-1" aria-label="code-block-9-18"></a>                new <span class="op">=</span> new <span class="op">+</span> <span class="st">'-'</span></span>
+<span id="cb9-19"><a href="#cb9-19" tabindex="-1" aria-label="code-block-9-19"></a>            <span class="cf">else</span>:</span>
+<span id="cb9-20"><a href="#cb9-20" tabindex="-1" aria-label="code-block-9-20"></a>                new <span class="op">=</span> new <span class="op">+</span> <span class="st">'*'</span></span>
+<span id="cb9-21"><a href="#cb9-21" tabindex="-1" aria-label="code-block-9-21"></a>        <span class="bu">print</span>(new)</span>
+<span id="cb9-22"><a href="#cb9-22" tabindex="-1" aria-label="code-block-9-22"></a>        <span class="co"># store new string as old</span></span>
+<span id="cb9-23"><a href="#cb9-23" tabindex="-1" aria-label="code-block-9-23"></a>        old <span class="op">=</span> new     </span>
+<span id="cb9-24"><a href="#cb9-24" tabindex="-1" aria-label="code-block-9-24"></a></span>
+<span id="cb9-25"><a href="#cb9-25" tabindex="-1" aria-label="code-block-9-25"></a>string_machine(<span class="st">'et cetera'</span>, <span class="dv">10</span>)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ВИХІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -777,7 +767,7 @@ What did you do differently, and why?</li>
 </div>
 </div>
 </section></div> <!-- / div.lesson-content -->
-    </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Попередній і наступний розділ"><div class="d-block d-sm-block d-md-none">
+    </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Попередній і наступний розділ Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="17-scope.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Попередній</a>
         <a class="chapter-link float-end" href="19-wrap.html">Далі<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -837,7 +827,7 @@ What did you do differently, and why?</li>
   "identifier": "https://ukrainian-carpentries.github.io/python-novice-gapminder/18-style.html",
   "dateCreated": "2016-01-07",
   "dateModified": "2025-10-12",
-  "datePublished": "2026-03-31"
+  "datePublished": "2026-04-07"
 }
 
   </script><script>

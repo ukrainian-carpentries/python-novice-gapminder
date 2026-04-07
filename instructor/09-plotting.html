@@ -21,8 +21,7 @@
         <img id="swc-logo" alt="Software Carpentry" src="../assets/images/software-logo.svg"></div>
     </div>
     <div class="selector-container">
-      <div id="theme-selector">
-        <li class="nav-item dropdown" id="theme-button-list">
+      <menu class="theme-selector" id="theme-selector-menu"><li class="nav-item dropdown theme-button-list" id="theme-button-list-menu">
           <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
             <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><i data-feather="chevron-down"></i>
           </button>
@@ -45,10 +44,7 @@
                 <svg class="bi ms-auto d-none"><use href="#check2"></use></svg></button>
             </li>
           </ul></li>
-      </div>
-
-
-      <div class="dropdown" id="instructor-dropdown">
+    </menu><div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Версія для інструктора <i data-feather="chevron-down"></i>
         </button>
@@ -105,15 +101,11 @@
     -->
     <a id="search-button" class="btn btn-primary" href="../instructor/aio.html" role="button" aria-label="Пошук на сторінці «All In One».">Пошук на сторінці «All In One».</a>
   </div><!--/div.container-fluid -->
-</nav><div class="col-md-12 mobile-title">
-  Побудова графіків і програмування на Python
-</div>
-
-<aside class="col-md-12 lesson-progress"><div style="width: 37%" class="percentage">
+</nav><aside class="col-md-12 lesson-progress"><div style="width: 37%" class="percentage">
     37%
   </div>
   <div class="progress software">
-    <div class="progress-bar software" role="progressbar" style="width: 37%" aria-valuenow="37" aria-label="Хід уроку" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar software" role="progressbar" aria-label="Хід уроку" aria-valuemin="0" aria-valuemax="100" aria-valuenow="37" style="width: 37%">
     </div>
   </div>
 </aside><div class="container">
@@ -121,13 +113,12 @@
         <!-- START: inst/pkgdown/templates/navbar.html -->
 <div id="sidebar-col" class="col-lg-4">
   <div id="sidebar" class="sidebar">
-      <nav aria-labelledby="flush-headingEleven"><button role="button" aria-label="закрити меню" alt="закрити меню" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Згорнути " data-episodes="Епізоди ">
+      <nav aria-labelledby="flush-collapse-chapters-toggle"><button role="button" aria-label="Згорнути" alt="Згорнути" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Згорнути " data-episodes="Епізоди ">
           <i class="search-icon" data-feather="x" role="img"></i>
         </button>
         <div class="sidebar-inner">
           <div class="row mobile-row" id="theme-row-mobile">
-            <div class="col" id="theme-selector">
-              <li class="nav-item dropdown" id="theme-button-list">
+            <menu class="col theme-selector" id="theme-selector-sidebar"><li class="nav-item dropdown theme-button-list" id="theme-button-list-sidebar">
                 <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
                   <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><span class="d-lg-none ms-1" id="bd-theme-text">Toggle Theme</span>
                 </button>
@@ -150,19 +141,18 @@
                       <svg class="bi ms-auto d-none"><use href="#check2"></use></svg></button>
                   </li>
                 </ul></li>
-            </div>
-          </div>
+            </menu></div>
           <div class="row mobile-row">
             <div class="col">
               <div class="sidenav-view-selector">
-                <div class="accordion accordion-flush" id="accordionFlush9">
+                <div class="accordion accordion-flush" id="accordion-instructor-toggle">
                   <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingNine">
-                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                    <h2 class="accordion-header" id="flush-heading-instructor-toggle">
+                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-instructor-toggle" aria-expanded="false" aria-controls="flush-collapse-instructor-toggle">
                         <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> Версія для інструктора
                       </button>
                     </h2>
-                    <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
+                    <div id="flush-collapse-instructor-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-instructor-toggle">
                       <div class="accordion-body">
                         <a href="../09-plotting.html">Версія для слухача</a>
                       </div>
@@ -174,15 +164,15 @@
 
             <hr></div><!--/div.mobile-row -->
 
-          <div class="accordion accordion-flush" id="accordionFlush11">
+          <div class="accordion accordion-flush" id="accordion-chapters-toggle">
             <div class="accordion-item">
 
-              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
-                <h2 class="accordion-header chapters" id="flush-headingEleven">
+              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-chapters-toggle" aria-expanded="false" aria-controls="flush-collapse-chapters-toggle">
+                <h2 class="accordion-header chapters" id="flush-heading-chapters-toggle">
                   ЕПІЗОДИ
                 </h2>
               </button>
-              <div id="flush-collapseEleven" class="accordion-collapse show collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
+              <div id="flush-collapse-chapters-toggle" class="accordion-collapse show collapse" data-bs-parent="#accordion-chapters-toggle">
 
                 <div class="accordion-body">
                   <div class="accordion accordion-flush" id="accordionFlush1">
@@ -277,7 +267,7 @@
       </button>
     </div><!--/div.accordion-header-->
 
-    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#matplotlib-%D1%94-%D0%BD%D0%B0%D0%B9%D0%BF%D0%BE%D1%88%D0%B8%D1%80%D0%B5%D0%BD%D1%96%D1%88%D0%BE%D1%8E-%D0%BD%D0%B0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D1%8E-%D0%B1%D1%96%D0%B1%D0%BB%D1%96%D0%BE%D1%82%D0%B5%D0%BA%D0%BE%D1%8E-%D0%B4%D0%BB%D1%8F-%D0%B2%D1%96%D0%B7%D1%83%D0%B0%D0%BB%D1%96%D0%B7%D0%B0%D1%86%D1%96%D1%97-%D0%B4%D0%B0%D0%BD%D0%B8%D1%85-%D0%B2-python."></a><a href="https://matplotlib.org/" class="external-link"><code>matplotlib</code></a> є
 найпоширенішою науковою бібліотекою для візуалізації даних в
@@ -400,14 +390,14 @@ Pandas</a>.</li>
               </div>
             </div>
 
-            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordionFlush12">
+            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordion-resources-toggle">
               <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwelve">
-                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                <h2 class="accordion-header" id="flush-heading-resources-toggle">
+                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-resources-toggle" aria-expanded="false" aria-controls="flush-collapse-resources-toggle">
                     РЕСУРСИ
                   </button>
                 </h2>
-                <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
+                <div id="flush-collapse-resources-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-resources-toggle">
                   <div class="accordion-body">
                     <ul><li>
                         <a href="../instructor/key-points.html">Ключові моменти</a>
@@ -437,7 +427,7 @@ Pandas</a>.</li>
 
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
-    <nav class="lesson-content mx-md-4" aria-label="Попередній і наступний розділ"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
+    <nav class="lesson-content mx-md-4" aria-label="Попередній і наступний розділ Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/08-data-frames.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Попередній</a>
         <a class="chapter-link float-end" href="../instructor/10-lunch.html">Далі<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -503,18 +493,18 @@ Python.<a class="anchor" aria-label="anchor" href="#matplotlib-%D1%94-%D0%BD%D0%
 </ul><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre>
 </div>
 <ul><li>Створення простих графіків є (відносно) нескладним.</li>
 </ul><div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>time <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>position <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">100</span>, <span class="dv">200</span>, <span class="dv">300</span>]</span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>plt.plot(time, position)</span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>plt.xlabel(<span class="st">'Time (hr)'</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>plt.ylabel(<span class="st">'Position (km)'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a>time <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a>position <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">100</span>, <span class="dv">200</span>, <span class="dv">300</span>]</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a>plt.plot(time, position)</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1" aria-label="code-block-2-5"></a>plt.xlabel(<span class="st">'Time (hr)'</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1" aria-label="code-block-2-6"></a>plt.ylabel(<span class="st">'Position (km)'</span>)</span></code></pre>
 </div>
 <figure><img src="../fig/9_simple_position_time_plot.svg" alt="Лінійний графік, що показує залежність позиції (км) від часу (год), використовуючи дані з наведеного вище коду. За замовчуванням графік має синю лінію на білому фоні, а вісі масштабуються автоматично відповідно до діапазону вхідних даних." class="figure mx-auto d-block"></figure><div id="зображення-всіх-графіків-з-програмного-коду" class="callout">
 <div class="callout-square">
@@ -535,7 +525,7 @@ Python.<a class="anchor" aria-label="anchor" href="#matplotlib-%D1%94-%D0%BD%D0%
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>plt.show()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a>plt.show()</span></code></pre>
 </div>
 <p>Цю команду також можна використати в блокноті - наприклад, для
 зображення декількох графіків одночасно, якщо відповідний командний код
@@ -557,23 +547,23 @@ Pandas</a>.</li>
 </ul><div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_oceania.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="co"># Extract year from last 4 characters of each column name</span></span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="co"># The current column names are structured as 'gdpPercap_(year)', </span></span>
-<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="co"># so we want to keep the (year) part only for clarity when plotting GDP vs. years</span></span>
-<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="co"># To do this we use replace(), which removes from the string the characters stated in the argument</span></span>
-<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="co"># This method works on strings, so we use replace() from Pandas Series.str vectorized string functions</span></span>
-<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a>years <span class="op">=</span> data.columns.<span class="bu">str</span>.replace(<span class="st">'gdpPercap_'</span>, <span class="st">''</span>)</span>
-<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a><span class="co"># Convert year values to integers, saving results back to dataframe</span></span>
-<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a></span>
-<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a>data.columns <span class="op">=</span> years.astype(<span class="bu">int</span>)</span>
-<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a></span>
-<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a>data.loc[<span class="st">'Australia'</span>].plot()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a>data <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_oceania.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1" aria-label="code-block-4-5"></a><span class="co"># Extract year from last 4 characters of each column name</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1" aria-label="code-block-4-6"></a><span class="co"># The current column names are structured as 'gdpPercap_(year)', </span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1" aria-label="code-block-4-7"></a><span class="co"># so we want to keep the (year) part only for clarity when plotting GDP vs. years</span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1" aria-label="code-block-4-8"></a><span class="co"># To do this we use replace(), which removes from the string the characters stated in the argument</span></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1" aria-label="code-block-4-9"></a><span class="co"># This method works on strings, so we use replace() from Pandas Series.str vectorized string functions</span></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1" aria-label="code-block-4-10"></a></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1" aria-label="code-block-4-11"></a>years <span class="op">=</span> data.columns.<span class="bu">str</span>.replace(<span class="st">'gdpPercap_'</span>, <span class="st">''</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1" aria-label="code-block-4-12"></a></span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1" aria-label="code-block-4-13"></a><span class="co"># Convert year values to integers, saving results back to dataframe</span></span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1" aria-label="code-block-4-14"></a></span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1" aria-label="code-block-4-15"></a>data.columns <span class="op">=</span> years.astype(<span class="bu">int</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" tabindex="-1" aria-label="code-block-4-16"></a></span>
+<span id="cb4-17"><a href="#cb4-17" tabindex="-1" aria-label="code-block-4-17"></a>data.loc[<span class="st">'Australia'</span>].plot()</span></code></pre>
 </div>
 <figure><img src="../fig/9_gdp_australia.svg" alt="Графік, що показує дані ВВП Австралії" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="виділіть-та-трансформуйте-дані-а-потім-побудуйте-графік-">Виділіть та трансформуйте дані, а потім побудуйте графік.<a class="anchor" aria-label="anchor" href="#%D0%B2%D0%B8%D0%B4%D1%96%D0%BB%D1%96%D1%82%D1%8C-%D1%82%D0%B0-%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%84%D0%BE%D1%80%D0%BC%D1%83%D0%B9%D1%82%D0%B5-%D0%B4%D0%B0%D0%BD%D1%96-%D0%B0-%D0%BF%D0%BE%D1%82%D1%96%D0%BC-%D0%BF%D0%BE%D0%B1%D1%83%D0%B4%D1%83%D0%B9%D1%82%D0%B5-%D0%B3%D1%80%D0%B0%D1%84%D1%96%D0%BA-"></a></h2>
 <hr class="half-width"><ul><li>За замовчуванням, <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html#pandas.DataFrame.plot" class="external-link"><code>DataFrame.plot</code></a>
@@ -583,8 +573,8 @@ Pandas</a>.</li>
 </ul><div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>data.T.plot()</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>plt.ylabel(<span class="st">'GDP per capita'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a>data.T.plot()</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a>plt.ylabel(<span class="st">'GDP per capita'</span>)</span></code></pre>
 </div>
 <figure><img src="../fig/9_gdp_australia_nz.svg" alt="Графік ВВП для Австралії та Нової Зеландії" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="доступні-багато-стилів-графіків-">Доступні багато стилів графіків.<a class="anchor" aria-label="anchor" href="#%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BD%D1%96-%D0%B1%D0%B0%D0%B3%D0%B0%D1%82%D0%BE-%D1%81%D1%82%D0%B8%D0%BB%D1%96%D0%B2-%D0%B3%D1%80%D0%B0%D1%84%D1%96%D0%BA%D1%96%D0%B2-"></a></h2>
 <hr class="half-width"><ul><li>Наприклад, можна створити стовпчикову діаграму з більш вишуканим
@@ -592,9 +582,9 @@ Pandas</a>.</li>
 </ul><div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>plt.style.use(<span class="st">'ggplot'</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>data.T.plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>plt.ylabel(<span class="st">'GDP per capita'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a>plt.style.use(<span class="st">'ggplot'</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a>data.T.plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a>plt.ylabel(<span class="st">'GDP per capita'</span>)</span></code></pre>
 </div>
 <figure><img src="../fig/9_gdp_bar.svg" alt="Стовпчикова діаграма ВВП для Австралії" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="графік-також-можна-побудувати-викликавши-безпосередньо-функцію-plot-бібліотеки-matplotlib-">Графік також можна побудувати, викликавши безпосередньо функцію
 <code>plot</code> бібліотеки <code>matplotlib</code>.<a class="anchor" aria-label="anchor" href="#%D0%B3%D1%80%D0%B0%D1%84%D1%96%D0%BA-%D1%82%D0%B0%D0%BA%D0%BE%D0%B6-%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0-%D0%BF%D0%BE%D0%B1%D1%83%D0%B4%D1%83%D0%B2%D0%B0%D1%82%D0%B8-%D0%B2%D0%B8%D0%BA%D0%BB%D0%B8%D0%BA%D0%B0%D0%B2%D1%88%D0%B8-%D0%B1%D0%B5%D0%B7%D0%BF%D0%BE%D1%81%D0%B5%D1%80%D0%B5%D0%B4%D0%BD%D1%8C%D0%BE-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D1%96%D1%8E-plot-%D0%B1%D1%96%D0%B1%D0%BB%D1%96%D0%BE%D1%82%D0%B5%D0%BA%D0%B8-matplotlib-"></a></h2>
@@ -607,28 +597,28 @@ Pandas</a>.</li>
 <hr class="half-width"><div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>years <span class="op">=</span> data.columns</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>gdp_australia <span class="op">=</span> data.loc[<span class="st">'Australia'</span>]</span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>plt.plot(years, gdp_australia, <span class="st">'g--'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a>years <span class="op">=</span> data.columns</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a>gdp_australia <span class="op">=</span> data.loc[<span class="st">'Australia'</span>]</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1" aria-label="code-block-7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1" aria-label="code-block-7-4"></a>plt.plot(years, gdp_australia, <span class="st">'g--'</span>)</span></code></pre>
 </div>
 <figure><img src="../fig/9_gdp_australia_formatted.svg" alt="Форматований графік ВВП для Австралії" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="можна-побудувати-кілька-графіків-за-різними-наборами-даних-одночасно-">Можна побудувати кілька графіків за різними наборами даних
 одночасно.<a class="anchor" aria-label="anchor" href="#%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0-%D0%BF%D0%BE%D0%B1%D1%83%D0%B4%D1%83%D0%B2%D0%B0%D1%82%D0%B8-%D0%BA%D1%96%D0%BB%D1%8C%D0%BA%D0%B0-%D0%B3%D1%80%D0%B0%D1%84%D1%96%D0%BA%D1%96%D0%B2-%D0%B7%D0%B0-%D1%80%D1%96%D0%B7%D0%BD%D0%B8%D0%BC%D0%B8-%D0%BD%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D0%BC%D0%B8-%D0%B4%D0%B0%D0%BD%D0%B8%D1%85-%D0%BE%D0%B4%D0%BD%D0%BE%D1%87%D0%B0%D1%81%D0%BD%D0%BE-"></a></h2>
 <hr class="half-width"><div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="co"># Select two countries' worth of data.</span></span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>gdp_australia <span class="op">=</span> data.loc[<span class="st">'Australia'</span>]</span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>gdp_nz <span class="op">=</span> data.loc[<span class="st">'New Zealand'</span>]</span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="co"># Plot with differently-colored markers.</span></span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>plt.plot(years, gdp_australia, <span class="st">'b-'</span>, label<span class="op">=</span><span class="st">'Australia'</span>)</span>
-<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>plt.plot(years, gdp_nz, <span class="st">'g-'</span>, label<span class="op">=</span><span class="st">'New Zealand'</span>)</span>
-<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a></span>
-<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="co"># Create legend.</span></span>
-<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper left'</span>)</span>
-<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
-<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a>plt.ylabel(<span class="st">'GDP per capita ($)'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="co"># Select two countries' worth of data.</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a>gdp_australia <span class="op">=</span> data.loc[<span class="st">'Australia'</span>]</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a>gdp_nz <span class="op">=</span> data.loc[<span class="st">'New Zealand'</span>]</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1" aria-label="code-block-8-4"></a></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1" aria-label="code-block-8-5"></a><span class="co"># Plot with differently-colored markers.</span></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1" aria-label="code-block-8-6"></a>plt.plot(years, gdp_australia, <span class="st">'b-'</span>, label<span class="op">=</span><span class="st">'Australia'</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1" aria-label="code-block-8-7"></a>plt.plot(years, gdp_nz, <span class="st">'g-'</span>, label<span class="op">=</span><span class="st">'New Zealand'</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1" aria-label="code-block-8-8"></a></span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1" aria-label="code-block-8-9"></a><span class="co"># Create legend.</span></span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1" aria-label="code-block-8-10"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper left'</span>)</span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1" aria-label="code-block-8-11"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" tabindex="-1" aria-label="code-block-8-12"></a>plt.ylabel(<span class="st">'GDP per capita ($)'</span>)</span></code></pre>
 </div>
 <div id="додавання-легенди" class="callout">
 <div class="callout-square">
@@ -645,14 +635,14 @@ Pandas</a>.</li>
 </ul><div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>plt.plot(years, gdp_australia, label<span class="op">=</span><span class="st">'Australia'</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>plt.plot(years, gdp_nz, label<span class="op">=</span><span class="st">'New Zealand'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a>plt.plot(years, gdp_australia, label<span class="op">=</span><span class="st">'Australia'</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a>plt.plot(years, gdp_nz, label<span class="op">=</span><span class="st">'New Zealand'</span>)</span></code></pre>
 </div>
 <ul><li>Доручіть <code>matplotlib</code> створити легенду.</li>
 </ul><div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>plt.legend()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a>plt.legend()</span></code></pre>
 </div>
 <p>За замовчуванням matplotlib спробує розмістити легенду у відповідному
 місці. Якщо необхідно вказати конкретне розташування, можна застосувати
@@ -669,12 +659,12 @@ Pandas</a>.</li>
 </ul><div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>plt.scatter(gdp_australia, gdp_nz)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a>plt.scatter(gdp_australia, gdp_nz)</span></code></pre>
 </div>
 <figure><img src="../fig/9_gdp_correlation_plt.svg" alt="Точкова діаграма, створена за допомогою plt.scatter" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>data.T.plot.scatter(x <span class="op">=</span> <span class="st">'Australia'</span>, y <span class="op">=</span> <span class="st">'New Zealand'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a>data.T.plot.scatter(x <span class="op">=</span> <span class="st">'Australia'</span>, y <span class="op">=</span> <span class="st">'New Zealand'</span>)</span></code></pre>
 </div>
 <figure><img src="../fig/9_gdp_correlation_data.svg" alt="Точкова діаграма кореляції ВВП, побудована за допомогою data.T.plot.scatter." class="figure mx-auto d-block"></figure><div id="мінімуми-та-максимуми" class="callout challenge">
 <div class="callout-square">
@@ -690,11 +680,11 @@ Pandas</a>.</li>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>data_europe <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_europe.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>data_europe.____.plot(label<span class="op">=</span><span class="st">'min'</span>)</span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>data_europe.____</span>
-<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'best'</span>)</span>
-<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">90</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a>data_europe <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_europe.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1" aria-label="code-block-13-2"></a>data_europe.____.plot(label<span class="op">=</span><span class="st">'min'</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1" aria-label="code-block-13-3"></a>data_europe.____</span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1" aria-label="code-block-13-4"></a>plt.legend(loc<span class="op">=</span><span class="st">'best'</span>)</span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1" aria-label="code-block-13-5"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">90</span>)</span></code></pre>
 </div>
 </div>
 </div>
@@ -706,16 +696,16 @@ Pandas</a>.</li>
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>data_europe <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_europe.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
-<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>data_europe.<span class="bu">min</span>().plot(label<span class="op">=</span><span class="st">'min'</span>)</span>
-<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>data_europe.<span class="bu">max</span>().plot(label<span class="op">=</span><span class="st">'max'</span>)</span>
-<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'best'</span>)</span>
-<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">90</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a>data_europe <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_europe.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a>data_europe.<span class="bu">min</span>().plot(label<span class="op">=</span><span class="st">'min'</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1" aria-label="code-block-14-3"></a>data_europe.<span class="bu">max</span>().plot(label<span class="op">=</span><span class="st">'max'</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1" aria-label="code-block-14-4"></a>plt.legend(loc<span class="op">=</span><span class="st">'best'</span>)</span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1" aria-label="code-block-14-5"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">90</span>)</span></code></pre>
 </div>
 <figure><img src="../fig/9_minima_maxima_solution.png" alt="Рішення для графіків мінімуму та максимуму" class="figure mx-auto d-block"></figure></div>
 </div>
@@ -743,13 +733,13 @@ Pandas</a>.</li>
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a>data_asia <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_asia.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
-<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>data_asia.describe().T.plot(kind<span class="op">=</span><span class="st">'scatter'</span>, x<span class="op">=</span><span class="st">'min'</span>, y<span class="op">=</span><span class="st">'max'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a>data_asia <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_asia.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1" aria-label="code-block-15-2"></a>data_asia.describe().T.plot(kind<span class="op">=</span><span class="st">'scatter'</span>, x<span class="op">=</span><span class="st">'min'</span>, y<span class="op">=</span><span class="st">'max'</span>)</span></code></pre>
 </div>
 <figure><img src="../fig/9_correlations_solution1.svg" alt="Співвідношення - Відповідь 1" class="figure mx-auto d-block"></figure><p>Між мінімальним і максимальним значеннями ВВП за роками не
 спостерігається чіткої залежності. Здається, статки азійських країн не
@@ -773,10 +763,10 @@ Pandas</a>.</li>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a>data_asia <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_asia.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
-<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>data_asia.<span class="bu">max</span>().plot()</span>
-<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a><span class="bu">print</span>(data_asia.idxmax())</span>
-<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a><span class="bu">print</span>(data_asia.idxmin())</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a>data_asia <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_asia.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1" aria-label="code-block-16-2"></a>data_asia.<span class="bu">max</span>().plot()</span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1" aria-label="code-block-16-3"></a><span class="bu">print</span>(data_asia.idxmax())</span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1" aria-label="code-block-16-4"></a><span class="bu">print</span>(data_asia.idxmin())</span></code></pre>
 </div>
 </div>
 </div>
@@ -788,7 +778,7 @@ Pandas</a>.</li>
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <figure><img src="../fig/9_correlations_solution2.png" alt="Співвідношення - Відповідь 2" class="figure mx-auto d-block"></figure><p>Здається, варіабельність цього значення зумовлена різким спадом після
 1972 року. Можливо, тут зіграли роль геополітичні чинники? Враховуючи
@@ -813,9 +803,9 @@ Pandas</a>.</li>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>data_all <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_all.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
-<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>data_all.plot(kind<span class="op">=</span><span class="st">'scatter'</span>, x<span class="op">=</span><span class="st">'gdpPercap_2007'</span>, y<span class="op">=</span><span class="st">'lifeExp_2007'</span>,</span>
-<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a>              s<span class="op">=</span>data_all[<span class="st">'pop_2007'</span>]<span class="op">/</span><span class="fl">1e6</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a>data_all <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_all.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1" aria-label="code-block-17-2"></a>data_all.plot(kind<span class="op">=</span><span class="st">'scatter'</span>, x<span class="op">=</span><span class="st">'gdpPercap_2007'</span>, y<span class="op">=</span><span class="st">'lifeExp_2007'</span>,</span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1" aria-label="code-block-17-3"></a>              s<span class="op">=</span>data_all[<span class="st">'pop_2007'</span>]<span class="op">/</span><span class="fl">1e6</span>)</span></code></pre>
 </div>
 <p>Використовуючи онлайн-довідку та інші ресурси, поясніть роль кожного
 аргументу, який передається у функцію plot.</p>
@@ -829,7 +819,7 @@ Pandas</a>.</li>
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <figure><img src="../fig/9_more_correlations_solution.svg" alt="Більше кореляцій - Відповідь" class="figure mx-auto d-block"></figure><p>Гарне місце для пошуку документації до функції plot -
 help(data_all.plot).</p>
@@ -859,7 +849,7 @@ matplotlib.pyplot є функція, яка виконує це: <a href="https:
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a>plt.savefig(<span class="st">'my_figure.png'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a>plt.savefig(<span class="st">'my_figure.png'</span>)</span></code></pre>
 </div>
 <p>збереже поточний графік у файл <code>my_figure.png</code>. Формат
 файлу буде автоматично визначено з розширення імені файлу (інші формати:
@@ -879,9 +869,9 @@ pdf, ps, eps і svg).</p>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a>data.plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span>
-<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a>fig <span class="op">=</span> plt.gcf() <span class="co"># get current figure</span></span>
-<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a>fig.savefig(<span class="st">'my_figure.png'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a>data.plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1" aria-label="code-block-19-2"></a>fig <span class="op">=</span> plt.gcf() <span class="co"># get current figure</span></span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1" aria-label="code-block-19-3"></a>fig.savefig(<span class="st">'my_figure.png'</span>)</span></code></pre>
 </div>
 </div>
 </div>
@@ -938,7 +928,7 @@ Gallery</a>, щоб ознайомитися з іншими варіантам�
 </div>
 </div>
 </section></div> <!-- / div.lesson-content -->
-    </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Попередній і наступний розділ"><div class="d-block d-sm-block d-md-none">
+    </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Попередній і наступний розділ Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/08-data-frames.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Попередній</a>
         <a class="chapter-link float-end" href="../instructor/10-lunch.html">Далі<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -998,7 +988,7 @@ Gallery</a>, щоб ознайомитися з іншими варіантам�
   "identifier": "https://ukrainian-carpentries.github.io/python-novice-gapminder/instructor/09-plotting.html",
   "dateCreated": "2016-01-07",
   "dateModified": "2026-01-17",
-  "datePublished": "2026-03-31"
+  "datePublished": "2026-04-07"
 }
 
   </script><script>
