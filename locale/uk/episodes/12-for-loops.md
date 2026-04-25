@@ -6,22 +6,21 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Поясніть, для чого зазвичай використовуються цикли for.
-- Проаналізуйте виконання простого (невкладеного) циклу та правильно вкажіть значення змінних у кожній ітерації.
-- Напишіть цикли for, які використовують шаблон накопичувача для агрегування значень.
+- Explain what for loops are normally used for.
+- Trace the execution of a simple (unnested) loop and correctly state the values of variables in each iteration.
+- Write for loops that use the Accumulator pattern to aggregate values.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- Як змусити програму робити багато речей?
+- How can I make a program do many things?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Цикл for виконує команди один раз для кожного значення в колекції.
+## _Цикл for_ виконує команди один раз для кожного значення в колекції.
 
-- Doing calculations on the values in a list one by one
-  is as painful as working with `pressure_001`, `pressure_002`, etc.
+- Виконання обчислень над елементами списку окремо є таким самим виснажливим, як і робота зі змінними на кшталт `pressure_001`, `pressure_002` і так далі.
 - A _for loop_ tells Python to execute some statements once for each value in a list,
   a character string,
   or some other collection.
@@ -55,10 +54,10 @@ for number in [2, 3, 5]:
     print(number)
 ```
 
-- Колекція `[2, 3, 5]` є те, що опрацьовується в циклі.
+- The collection, `[2, 3, 5]`, is what the loop is being run on.
 - Тіло циклу, `print(number)`, визначає, що робити для кожного значення в колекції.
-- Змінна циклу, `number`, змінюється для кожної ітерації циклу.
-  - "Поточне значення".
+- The loop variable, `number`, is what changes for each _iteration_ of the loop.
+  - The "current thing".
 
 ## Перший рядок циклу `for` має закінчуватися двокрапкою, а тіло циклу має бути з відступом.
 
