@@ -58,7 +58,7 @@
         </ul></div>
     </div>
   </div>
-  <hr></header><nav class="navbar navbar-expand-xl bottom-nav software" aria-label="Головна навігація"><div class="container-fluid nav-container">
+</header><nav class="navbar navbar-expand-xl bottom-nav software" aria-label="Головна навігація"><div class="container-fluid nav-container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключити навігацію">
       <span class="navbar-toggler-icon"></span>
       <span class="menu-title">Меню</span>
@@ -107,12 +107,8 @@
     -->
     <a id="search-button" class="btn btn-primary" href="../instructor/aio.html" role="button" aria-label="Пошук на сторінці «All In One».">Пошук на сторінці «All In One».</a>
   </div><!--/div.container-fluid -->
-</nav><aside class="col-md-12 lesson-progress"><div style="width: 37%" class="percentage">
-    37%
-  </div>
-  <div class="progress software">
-    <div class="progress-bar software" role="progressbar" aria-label="Хід уроку" aria-valuemin="0" aria-valuemax="100" aria-valuenow="37" style="width: 37%">
-    </div>
+</nav><aside class="col-md-12 lesson-progress"><div class="progress software">
+    <div class="progress-bar software" role="progressbar" style="width: 37%" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100" aria-label="Хід уроку">37%</div>
   </div>
 </aside><div class="container">
       <div class="row">
@@ -168,7 +164,7 @@
               </div><!--div.sidenav-view-selector -->
             </div><!--/div.col -->
 
-            <hr></div><!--/div.mobile-row -->
+          </div><!--/div.mobile-row -->
 
           <div class="accordion accordion-flush" id="accordion-chapters-toggle">
             <div class="accordion-item">
@@ -434,8 +430,8 @@ Pandas</a>.</li>
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Попередній і наступний розділ Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="../instructor/08-data-frames.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Попередній</a>
-        <a class="chapter-link float-end" href="../instructor/10-lunch.html">Далі<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link" href="../instructor/08-data-frames.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Попередній</a>
+        <a class="chapter-link float-end" href="../instructor/10-lunch.html" rel="next">Далі<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -448,7 +444,7 @@ Pandas</a>.</li>
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
-      <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
+    </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Побудова графіків</h1>
         <p>Останнє оновлення 2026-01-17 |
 
@@ -702,7 +698,7 @@ Pandas</a>.</li>
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -739,7 +735,7 @@ Pandas</a>.</li>
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -784,7 +780,7 @@ Pandas</a>.</li>
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <figure><img src="../fig/9_correlations_solution2.png" alt="Співвідношення - Відповідь 2" class="figure mx-auto d-block"></figure><p>Здається, варіабельність цього значення зумовлена різким спадом після
 1972 року. Можливо, тут зіграли роль геополітичні чинники? Враховуючи
@@ -825,7 +821,7 @@ Pandas</a>.</li>
   Відповідь
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <figure><img src="../fig/9_more_correlations_solution.svg" alt="Більше кореляцій - Відповідь" class="figure mx-auto d-block"></figure><p>Гарне місце для пошуку документації до функції plot -
 help(data_all.plot).</p>
@@ -971,7 +967,7 @@ Gallery</a>, щоб ознайомитися з іншими варіантам�
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Шаблон ліцензовано за <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a>. Автори шаблону: <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Створено за допомогою <a href="https://github.com/carpentries/sandpaper/tree/main" class="external-link">sandpaper (0.20.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/main" class="external-link">pegboard (0.7.9)</a> та <a href="https://github.com/carpentries/varnish/tree/main" class="external-link">varnish (1.1.0)</a></p>
+        <p>Створено за допомогою <a href="https://github.com/carpentries/sandpaper/tree/main" class="external-link">sandpaper (0.20.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/main" class="external-link">pegboard (0.7.9)</a> та <a href="https://github.com/carpentries/varnish/tree/main" class="external-link">varnish (1.1.1.9000)</a></p>
 		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -994,7 +990,7 @@ Gallery</a>, щоб ознайомитися з іншими варіантам�
   "identifier": "https://ukrainian-carpentries.github.io/python-novice-gapminder/instructor/09-plotting.html",
   "dateCreated": "2016-01-07",
   "dateModified": "2026-01-17",
-  "datePublished": "2026-04-28"
+  "datePublished": "2026-05-05"
 }
 
   </script><script>

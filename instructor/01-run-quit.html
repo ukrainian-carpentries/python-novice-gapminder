@@ -58,7 +58,7 @@
         </ul></div>
     </div>
   </div>
-  <hr></header><nav class="navbar navbar-expand-xl bottom-nav software" aria-label="Головна навігація"><div class="container-fluid nav-container">
+</header><nav class="navbar navbar-expand-xl bottom-nav software" aria-label="Головна навігація"><div class="container-fluid nav-container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключити навігацію">
       <span class="navbar-toggler-icon"></span>
       <span class="menu-title">Меню</span>
@@ -107,12 +107,8 @@
     -->
     <a id="search-button" class="btn btn-primary" href="../instructor/aio.html" role="button" aria-label="Пошук на сторінці «All In One».">Пошук на сторінці «All In One».</a>
   </div><!--/div.container-fluid -->
-</nav><aside class="col-md-12 lesson-progress"><div style="width: 0%" class="percentage">
-    0%
-  </div>
-  <div class="progress software">
-    <div class="progress-bar software" role="progressbar" aria-label="Хід уроку" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" style="width: 0%">
-    </div>
+</nav><aside class="col-md-12 lesson-progress"><div class="progress software">
+    <div class="progress-bar software" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Хід уроку">0%</div>
   </div>
 </aside><div class="container">
       <div class="row">
@@ -168,7 +164,7 @@
               </div><!--div.sidenav-view-selector -->
             </div><!--/div.col -->
 
-            <hr></div><!--/div.mobile-row -->
+          </div><!--/div.mobile-row -->
 
           <div class="accordion accordion-flush" id="accordion-chapters-toggle">
             <div class="accordion-item">
@@ -429,8 +425,8 @@
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Попередній і наступний розділ Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="../instructor/index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Попередній</a>
-        <a class="chapter-link float-end" href="../instructor/02-variables.html">Далі<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link" href="../instructor/index.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Попередній</a>
+        <a class="chapter-link float-end" href="../instructor/02-variables.html" rel="next">Далі<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -443,7 +439,7 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
-      <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
+    </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Запуск та завершення роботи</h1>
         <p>Останнє оновлення 2025-11-12 |
 
@@ -790,7 +786,7 @@ JupyterLab. Якщо вам цікаві подальші деталі, диві
   Рішення
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Після створення необхідних вкладок ви можете перетягнути одну з них в
 центр панелі для переміщення вкладки на панель; потім ви можете
@@ -857,7 +853,7 @@ JupyterLab. Якщо вам цікаві подальші деталі, диві
   Рішення
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Командний режим має сіру рамку, а режим редагування — синю.
 Використовуйте <kbd>Esc</kbd> та <kbd>Return</kbd> для перемикання
@@ -908,11 +904,11 @@ JupyterLab. Якщо вам цікаві подальші деталі, диві
 <div class="section level3">
 <h3 id="markdown-робить-більшість-того-що-можна-зробити-у-html-">Markdown робить більшість того, що можна зробити у HTML.<a class="anchor" aria-label="anchor" href="#markdown-%D1%80%D0%BE%D0%B1%D0%B8%D1%82%D1%8C-%D0%B1%D1%96%D0%BB%D1%8C%D1%88%D1%96%D1%81%D1%82%D1%8C-%D1%82%D0%BE%D0%B3%D0%BE-%D1%89%D0%BE-%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0-%D0%B7%D1%80%D0%BE%D0%B1%D0%B8%D1%82%D0%B8-%D1%83-html-"></a></h3>
 <p>Таблиця: Елементи синтаксису Markdown та їх зображення.</p>
-<table class="table"><colgroup><col width="47%"><col width="52%"></colgroup><thead><tr class="header"><th>Код Markdown</th>
+<table class="table"><colgroup><col width="47%"><col width="52%"></colgroup><thead><tr><th>Код Markdown</th>
 <th>Відображений результат</th>
-</tr></thead><tbody><tr class="odd"><td></td>
+</tr></thead><tbody><tr><td></td>
 <td></td>
-</tr><tr class="even"><td><pre><code>*   Використовуйте зірочки,
+</tr><tr><td><pre><code>*   Використовуйте зірочки,
 *   щоб створювати
 *   марковані списки.</code></pre></td>
 <td>
@@ -922,9 +918,9 @@ JupyterLab. Якщо вам цікаві подальші деталі, диві
 <li>щоб створювати</li>
 <li>марковані списки.</li>
 </ul></td>
-</tr><tr class="odd"><td></td>
+</tr><tr><td></td>
 <td></td>
-</tr><tr class="even"><td><pre><code>1.   Використовуйте числа,
+</tr><tr><td><pre><code>1.   Використовуйте числа,
 1.   щоб створювати
 1.   нумеровані списки.</code></pre></td>
 <td>
@@ -934,9 +930,9 @@ JupyterLab. Якщо вам цікаві подальші деталі, диві
 <li>щоб створювати</li>
 <li>нумеровані списки.</li>
 </ol></td>
-</tr><tr class="odd"><td></td>
+</tr><tr><td></td>
 <td></td>
-</tr><tr class="even"><td><pre><code>*  Можна використовувати відступи
+</tr><tr><td><pre><code>*  Можна використовувати відступи
   *  Щоб створювати вкладені списки
   *  того самого типу
 *  Або вкладені списки
@@ -954,26 +950,26 @@ JupyterLab. Якщо вам цікаві подальші деталі, диві
 <li>типів</li>
 </ol></li>
 </ul></td>
-</tr><tr class="odd"><td></td>
+</tr><tr><td></td>
 <td></td>
-</tr><tr class="even"><td><pre><code><span><span class="co"># Заголовок першого рівня</span></span></code></pre></td>
+</tr><tr><td><pre><code><span><span class="co"># Заголовок першого рівня</span></span></code></pre></td>
 <td>
 <p>
 </p>
 <h2 id="заголовок-першого-рівня">Заголовок першого рівня</h2>
 </td>
-</tr><tr class="odd"><td></td>
+</tr><tr><td></td>
 <td></td>
-</tr><tr class="even"><td><pre><code><span><span class="co">## Заголовок другого рівня (тощо)</span></span></code></pre></td>
+</tr><tr><td><pre><code><span><span class="co">## Заголовок другого рівня (тощо)</span></span></code></pre></td>
 <td>
 <p>
 </p>
 <h3 id="заголовок-другого-рівня-тощо">Заголовок другого рівня
 (тощо)</h3>
 </td>
-</tr><tr class="odd"><td></td>
+</tr><tr><td></td>
 <td></td>
-</tr><tr class="even"><td><pre><code>Переноси рядків
+</tr><tr><td><pre><code>Переноси рядків
 не мають значення.
 
 Але порожні рядки
@@ -984,9 +980,9 @@ JupyterLab. Якщо вам цікаві подальші деталі, диві
 <p>Переноси рядків не мають значення.</p>
 <p>Але порожні рядки створюють нові абзаци.</p>
 </td>
-</tr><tr class="odd"><td></td>
+</tr><tr><td></td>
 <td></td>
-</tr><tr class="even"><td><pre><code>[Посилання](http://software-carpentry.org)
+</tr><tr><td><pre><code>[Посилання](http://software-carpentry.org)
 створюються за допомогою `[...](...)`.
 Або використовуйте
 [іменовані посилання][data-carp].
@@ -1025,7 +1021,7 @@ JupyterLab. Якщо вам цікаві подальші деталі, диві
   Рішення
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Це завдання поєднує як нумерований, так і маркований списки. Зверніть
 увагу, що маркований список має відступ на 2 пробіли, щоб він не
@@ -1068,7 +1064,7 @@ JupyterLab. Якщо вам цікаві подальші деталі, диві
   Рішення
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>Python повертає результат останнього розрахунку.</p>
 <div class="codewrapper sourceCode" id="cb12">
@@ -1114,7 +1110,7 @@ Markdown</h3>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <p>Код Python розглядається як текст Markdown. Рядки виглядають так,
 ніби вони є частиною одного суміжного абзацу. Це може бути корисним для
@@ -1154,7 +1150,7 @@ Markdown</h3>
   Рішення
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
 <p>Рівняння зображується у блокноті відповідно до синтаксису, який
 використовується у LaTeX. Знаки долара <code>$</code> використовуються
@@ -1248,7 +1244,7 @@ Markdown</h3>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Шаблон ліцензовано за <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a>. Автори шаблону: <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Створено за допомогою <a href="https://github.com/carpentries/sandpaper/tree/main" class="external-link">sandpaper (0.20.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/main" class="external-link">pegboard (0.7.9)</a> та <a href="https://github.com/carpentries/varnish/tree/main" class="external-link">varnish (1.1.0)</a></p>
+        <p>Створено за допомогою <a href="https://github.com/carpentries/sandpaper/tree/main" class="external-link">sandpaper (0.20.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/main" class="external-link">pegboard (0.7.9)</a> та <a href="https://github.com/carpentries/varnish/tree/main" class="external-link">varnish (1.1.1.9000)</a></p>
 		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -1271,7 +1267,7 @@ Markdown</h3>
   "identifier": "https://ukrainian-carpentries.github.io/python-novice-gapminder/instructor/01-run-quit.html",
   "dateCreated": "2016-01-07",
   "dateModified": "2025-11-12",
-  "datePublished": "2026-04-28"
+  "datePublished": "2026-05-05"
 }
 
   </script><script>
