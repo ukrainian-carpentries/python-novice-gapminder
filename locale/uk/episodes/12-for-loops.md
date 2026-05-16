@@ -7,8 +7,8 @@ exercises: 15
 ::::::::::::::::::::::::::::::::::::::: objectives
 
 - Пояснити, для чого зазвичай використовуються цикли for.
-- Trace the execution of a simple (unnested) loop and correctly state the values of variables in each iteration.
-- Write for loops that use the Accumulator pattern to aggregate values.
+- Проаналізувати виконання простого (не вкладеного) циклу та правильно вказати значення змінних у кожній ітерації.
+- Написати цикли for, які використовують шаблон накопичувача для агрегування значень.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
