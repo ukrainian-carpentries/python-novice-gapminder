@@ -235,7 +235,7 @@ print('second time:', values)
 ## Відповідь
 
 Список `values[start:stop]` може містити щонайбільше `stop - start` елементів.  Наприклад, `values[1:4]` має 3 елементи `values[1]`, `values[2]`, та `values[3]`.
-Why 'up to'? Як ми бачили у [епізоді 2](02-variables.md),
+Чому 'щонайбільше'? Як ми бачили у [епізоді 2](02-variables.md),
 якщо `stop` перевищує загальну довжину списку `values`,
 результатом усе одно буде список, але коротший, ніж очікувалося.
 
@@ -247,7 +247,7 @@ Why 'up to'? Як ми бачили у [епізоді 2](02-variables.md),
 
 ## Від рядків до списків і назад
 
-Given this:
+Нехай ми маємо наступне:
 
 ```python
 print('string to list:', list('tin'))
@@ -260,7 +260,7 @@ list to string: gold
 ```
 
 1. Що робить команда `list('some string')`?
-2. What does `'-'.join(['x', 'y', 'z'])` generate?
+2. Що створює команда `'-'.join(['x', 'y', 'z'])`?
 
 :::::::::::::::  solution
 
@@ -278,7 +278,7 @@ list to string: gold
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Working With the End
+## Робота з кінцем
 
 Що друкує наступна програма?
 
@@ -316,7 +316,7 @@ print(element[-1])
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Stepping Through a List
+## Рух по списку
 
 Що друкує наступна програма?
 
@@ -327,7 +327,7 @@ print(element[::-1])
 ```
 
 1. Якщо ми визначаємо зріз як `low:high:stride`, що робить `stride`?
-2. What expression would select all of the even-numbered items from a collection?
+2. Яка команда дозволить вибрати з колекції всі елементи з парними індексами?
 
 :::::::::::::::  solution
 
