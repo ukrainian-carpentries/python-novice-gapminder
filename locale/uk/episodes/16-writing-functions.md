@@ -19,7 +19,7 @@ exercises: 15
 
 ## Розбийте програми на функції, щоб їх було легше зрозуміти.
 
-- Human beings can only keep a few items in working memory at a time.
+- Людина може одночасно зберігати лише декілька речей у своїй робочій пам’яті.
 - Understand larger/more complicated ideas by understanding and combining pieces.
   - Компоненти в машині.
   - Леми при доведенні теорем.
