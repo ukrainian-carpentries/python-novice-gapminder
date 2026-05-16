@@ -6,7 +6,7 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain what for loops are normally used for.
+- Пояснити, для чого зазвичай використовуються цикли for.
 - Trace the execution of a simple (unnested) loop and correctly state the values of variables in each iteration.
 - Write for loops that use the Accumulator pattern to aggregate values.
 
