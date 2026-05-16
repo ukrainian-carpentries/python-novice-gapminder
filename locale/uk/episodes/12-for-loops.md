@@ -21,9 +21,7 @@ exercises: 15
 ## _Цикл for_ виконує команди один раз для кожного значення в колекції.
 
 - Виконання обчислень над елементами списку окремо є таким самим виснажливим, як і робота зі змінними на кшталт `pressure_001`, `pressure_002` і так далі.
-- A _for loop_ tells Python to execute some statements once for each value in a list,
-  a character string,
-  or some other collection.
+- _Цикл for_ вказує Python, що треба виконати набір інструкцій для кожного елемента списку, рядка або іншої колекції.
 - "для кожного елемента в цій групі виконайте ці операції"
 
 ```python
@@ -54,10 +52,10 @@ for number in [2, 3, 5]:
     print(number)
 ```
 
-- The collection, `[2, 3, 5]`, is what the loop is being run on.
+- Колекція `[2, 3, 5]` - це те, що опрацьовується в циклі.
 - Тіло циклу, `print(number)`, визначає, що робити для кожного значення в колекції.
-- The loop variable, `number`, is what changes for each _iteration_ of the loop.
-  - The "current thing".
+- Змінна циклу, `number`, змінюється для кожної _ітерації_ циклу.
+  - Це - "поточне значення".
 
 ## Перший рядок циклу `for` має закінчуватися двокрапкою, а тіло циклу має бути з відступом.
 
@@ -145,11 +143,11 @@ a range is not a list: range(0, 3)
 ## The Accumulator pattern turns many values into one.
 
 - A common pattern in programs is to:
-  1. Initialize an _accumulator_ variable to zero, the empty string, or the empty list.
+  1. Встановлення початкового значення для _накопичувальної_ змінної : нуль, порожній рядок або порожній список.
   2. Оновлення змінної значеннями з колекції.
 
 ```python
-# Sum the first 10 integers.
+# Знайти суму перших 10 цілих чисел.
 total = 0
 for number in range(10):
    total = total + (number + 1)
@@ -160,11 +158,11 @@ print(total)
 55
 ```
 
-- Read `total = total + (number + 1)` as:
+- Оператор `total = total + (number + 1)` інтерпретується наступним чином:
   - Додати 1 до поточного значення змінної циклу `number`.
-  - Add that to the current value of the accumulator variable `total`.
-  - Assign that to `total`, replacing the current value.
-- We have to add `number + 1` because `range` produces 0..9, not 1..10.
+  - Додати це до поточного значення змінної-накопичувача `total`.
+  - Присвойте це змінній `total`, замінивши поточне значення.
+- Ми маємо додавати `number + 1`, тому що `range` генерує значення 0..9, а не 1..10.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -174,10 +172,10 @@ print(total)
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
-An IndentationError is a syntax error. Неможливо запустити програми з синтаксичними помилками.
-A program with a runtime error will start but an error will be thrown under certain conditions.
+IndentationError є синтаксичною помилкою. Неможливо запустити програми з синтаксичними помилками.
+Програма з помилкою виконання може запуститися, але помилка з’являється за певних умов.
 
 :::::::::::::::::::::::::
 
@@ -215,7 +213,7 @@ for char in "tin":
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Reversing a String
+## Зміна порядку символів у рядку
 
 Заповніть порожні місця в програмі нижче, щоб вона друкувала "nit" (зворотний вихідний рядок символів "tin").
 
@@ -247,8 +245,8 @@ print(result)
 
 ## Практика накопичення.
 
-Fill in the blanks in each of the programs below
-to produce the indicated result.
+Заповніть порожні місця в програмі нижче,
+для створення зазначеного результату.
 
 ```python
 # Total length of the strings in the list: ["red", "green", "blue"] => 12
@@ -315,8 +313,7 @@ print(result)
 
 :::::::::::::::::::::::::
 
-**Create an acronym:** Starting from the list `["red", "green", "blue"]`, create the acronym `"RGB"` using
-a for loop.
+**Створіть акронім:** За допомогою циклу for сформуйте акронім `"RGB"` зі списку `["red", "green", "blue"]`.
 
 **Hint:** You may need to use a string method to properly format the acronym.
 
@@ -337,7 +334,7 @@ print(acronym)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Cumulative Sum
+## Накопичувальна сума
 
 Reorder and properly indent the lines of code below
 so that they print a list with the cumulative sum of data.
@@ -373,16 +370,16 @@ print(cumulative)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Identifying Variable Name Errors
+## Виявлення помилок в іменах змінних
 
 1. Read the code below and try to identify what the errors are
    _without_ running it.
-2. Run the code and read the error message.
-   What type of `NameError` do you think this is?
+2. Запустіть код і прочитайте повідомлення про помилку.
+   Як ви думаєте, який це тип `NameError`?
    Is it a string with no quotes, a misspelled variable, or a
    variable that should have been defined but was not?
-3. Fix the error.
-4. Repeat steps 2 and 3, until you have fixed all the errors.
+3. Виправте помилку.
+4. Повторюйте кроки 2 і 3, доки не виправите всі помилки.
 
 ```python
 for number in range(10):
@@ -398,8 +395,8 @@ print(message)
 
 ## Рішення
 
-- Python variable names are case sensitive: `number` and `Number` refer to different variables.
-- The variable `message` needs to be initialized as an empty string.
+- Імена змінних Python чутливі до регістру: `number` та `Number` вказують на різні змінні.
+- Змінна `message` має бути ініціалізована як порожній рядок.
 - We want to add the string `"a"` to `message`, not the undefined variable `a`.
 
 ```python
@@ -423,8 +420,8 @@ print(message)
 
 1. Read the code below and try to identify what the errors are
    _without_ running it.
-2. Run the code, and read the error message. What type of error is it?
-3. Fix the error.
+2. Запустіть код і прочитайте повідомлення про помилку. Який це тип помилки?
+3. Виправте помилку.
 
 ```python
 seasons = ['Spring', 'Summer', 'Fall', 'Winter']
@@ -448,12 +445,12 @@ print('My favorite season is ', seasons[3])
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- A _for loop_ executes commands once for each value in a collection.
-- A `for` loop is made up of a collection, a loop variable, and a body.
-- The first line of the `for` loop must end with a colon, and the body must be indented.
-- Indentation is always meaningful in Python.
+- Цикл for виконує команди один раз для кожного значення в колекції.
+- Цикл `for` складається з колекції, змінної циклу та тіла циклу.
+- Перший рядок циклу `for` має закінчуватися двокрапкою, а тіло циклу має бути з відступом.
+- Відступи у Python завжди важливі.
 - Loop variables can be called anything (but it is strongly advised to have a meaningful name to the looping variable).
-- The body of a loop can contain many statements.
+- Тіло циклу може містити багато операторів.
 - Use `range` to iterate over a sequence of numbers.
 - The Accumulator pattern turns many values into one.
 
