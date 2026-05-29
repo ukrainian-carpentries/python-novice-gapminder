@@ -397,7 +397,7 @@ print(message)
 
 - Імена змінних Python чутливі до регістру: `number` та `Number` вказують на різні змінні.
 - Змінна `message` має бути ініціалізована як порожній рядок.
-- We want to add the string `"a"` to `message`, not the undefined variable `a`.
+- Потрібно додати рядок з вмістом`"a"` до `message`, а не невизначену змінну `a`.
 
 ```python
 message = ""
