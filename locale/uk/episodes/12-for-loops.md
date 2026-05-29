@@ -432,7 +432,7 @@ print('My favorite season is ', seasons[4])
 
 ## Рішення
 
-This list has 4 elements and the index to access the last element in the list is `3`.
+Цей список має 4 елементи, тому індекс для доступу до останнього елемента у списку становить `3`.
 
 ```python
 seasons = ['Spring', 'Summer', 'Fall', 'Winter']
@@ -451,7 +451,7 @@ print('My favorite season is ', seasons[3])
 - Відступи у Python завжди важливі.
 - Loop variables can be called anything (but it is strongly advised to have a meaningful name to the looping variable).
 - Тіло циклу може містити багато операторів.
-- Use `range` to iterate over a sequence of numbers.
+- Використовуйте `range` для перебору послідовності чисел.
 - The Accumulator pattern turns many values into one.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
