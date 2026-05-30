@@ -123,7 +123,7 @@ elif grade >= 70:
 grade is B
 ```
 
-- Does _not_ automatically go back and re-evaluate if values change.
+- Програма _не_ повертається назад автоматично і _не_ переоцінює значення, якщо вони змінюються.
 
 ```python
 velocity = 10.0
