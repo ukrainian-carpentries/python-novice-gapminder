@@ -83,7 +83,7 @@ for m in masses:
 - May want to provide several alternative choices, each with its own test.
 - Use `elif` (short for "else if") and a condition to specify these.
 - Завжди асоціюється з `if`.
-- Must come before the `else` (which is the "catch all").
+- Має йти перед `else` (що є блоком для решти випадків).
 
 ```python
 masses = [3.54, 2.07, 9.22, 1.86, 1.71]
@@ -104,7 +104,7 @@ for m in masses:
 1.71 is small
 ```
 
-## Conditions are tested once, in order.
+## Умови перевіряються один раз, послідовно.
 
 - Python послідовно проходить гілки умовного оператора, перевіряючи кожну по черзі.
 - Отже, порядок має значення.
