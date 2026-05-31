@@ -182,8 +182,7 @@ to either filter out those columns or tell pandas to ignore them.
 
 ## Рішення
 
-This solution builds a useful legend by using the [string `split` method][split-method] to
-extract the `region` from the path 'data/gapminder\\_gdp\\_a\\_specific\\_region.csv'.
+Це рішення створює корисну легенду за допомогою [string `split` method][split-method] для вилучення `region` зі шляху 'data/gapminder\\_gdp\\_a\\_specific\\_region.csv'.
 
 ```python
 import glob
@@ -241,9 +240,7 @@ print(p.suffix)
 ```
 
 ```output
-data
-gapminder_gdp_africa
-.csv
+data/gapminder_gdp_africa.csv
 ```
 
 **Hint:** Check all available attributes and methods on the `Path` object with the `dir()`
