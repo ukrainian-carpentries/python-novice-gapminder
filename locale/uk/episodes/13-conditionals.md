@@ -206,7 +206,7 @@ for i in range(5):
 
 Just like with arithmetic, you can and should use parentheses whenever there
 is possible ambiguity.  A good general rule is to _always_ use parentheses
-when mixing `and` and `or` in the same condition.  That is, instead of:
+when mixing `and` and `or` in the same condition.  Таким чином, замість:
 
 ```python
 if mass[i] <= 2 or mass[i] >= 5 and velocity[i] > 20:
@@ -219,7 +219,7 @@ if (mass[i] <= 2 or mass[i] >= 5) and velocity[i] > 20:
 if mass[i] <= 2 or (mass[i] >= 5 and velocity[i] > 20):
 ```
 
-so it is perfectly clear to a reader (and to Python) what you really mean.
+внаслідок чого читачеві (і Python) буде цілком зрозуміло, що ви насправді маєте на увазі.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -296,7 +296,7 @@ print(result)
 
 ## Обробка малих файлів
 
-Modify this program so that it only processes files with fewer than 50 records.
+Змініть цю програму так, щоб вона обробляла лише файли, які містять менше ніж 50 записів.
 
 ```python
 import glob
@@ -328,8 +328,7 @@ for filename in glob.glob('data/*.csv'):
 
 ## Ініціалізація
 
-Modify this program so that it finds the largest and smallest values in the list
-no matter what the range of values originally is.
+Змініть цю програму так, щоб знайти найбільше та найменше значення у списку незалежно від початкового діапазону значень.
 
 ```python
 values = [...деякі тестові дані...]
@@ -362,13 +361,13 @@ for v in values:
 print(smallest, largest)
 ```
 
-If you wrote `== None` instead of `is None`, that works too, but Python programmers always
-write `is None` because of the special way `None` works in the language.
+Якщо ви напишете `== None` замість `is None`, це теж працює, але програмісти Python завжди
+пишуть `is None` через особливий спосіб обробки `None` у мові.
 
 It can be argued that an advantage of using this method would be to make the code more readable.
 However, a disadvantage is that this code is not efficient because within each iteration of the
 `for` loop statement, there are two more loops that run over two numbers each (the `min` and
-`max` functions). It would be more efficient to iterate over each number just once:
+`max` functions). Було б ефективніше опрацьовувати кожне число лише один раз:
 
 ```python
 values = [-2,1,65,78,-54,-24,100]
@@ -381,9 +380,9 @@ for v in values:
 print(smallest, largest)
 ```
 
-Now we have one loop, but four comparison tests. There are two ways we could improve it further:
+Тепер маємо один цикл, але чотири тестові порівняння. There are two ways we could improve it further:
 either use fewer comparisons in each iteration, or use two loops that each contain only one
-comparison test. The simplest solution is often the best:
+comparison test. Найпростіше рішення часто є найкращим:
 
 ```python
 values = [-2,1,65,78,-54,-24,100]
@@ -398,12 +397,12 @@ print(smallest, largest)
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Use `if` statements to control whether or not a block of code is executed.
+- Використовуйте оператори if, щоб контролювати виконання блоку коду.
 - Умовні оператори часто використовуються всередині циклів.
 - Use `else` to execute a block of code when an `if` condition is _not_ true.
 - Використовуйте `elif` для визначення додаткових перевірок.
-- Conditions are tested once, in order.
-- Create a table showing variables' values to trace a program's execution.
+- Умови перевіряються один раз, послідовно.
+- Створюйте таблицю зі значеннями змінних для відстеження виконання програми.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
