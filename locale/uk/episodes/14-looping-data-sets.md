@@ -256,7 +256,7 @@ function.
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - Use a `for` loop to process files given a list of their names.
-- Use `glob.glob` to find sets of files whose names match a pattern.
+- Використовуйте `glob.glob` для пошуку наборів файлів, імена яких відповідають шаблону.
 - Use `glob` and `for` to process batches of files.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
