@@ -7,7 +7,7 @@ exercises: 15
 ::::::::::::::::::::::::::::::::::::::: objectives
 
 - Explain and identify the difference between function definition and function call.
-- Напишіть функцію, яка використовує невелику фіксовану кількість вхідних аргументів, а видає єдиний результат.
+- Write a function that takes a small, fixed number of arguments and produces a single result.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -17,27 +17,27 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Розбийте програми на функції, щоб їх було легше зрозуміти.
+## Break programs down into functions to make them easier to understand.
 
-- Людина може одночасно зберігати лише декілька речей у своїй робочій пам’яті.
+- Human beings can only keep a few items in working memory at a time.
 - Understand larger/more complicated ideas by understanding and combining pieces.
-  - Компоненти в машині.
-  - Леми при доведенні теорем.
-- Функції служать тій же меті в програмах.
-  - _Encapsulate_ complexity so that we can treat it as a single "thing".
-- Also enables _re-use_.
+  - Components in a machine.
+  - Lemmas when proving theorems.
+- Functions serve the same purpose in programs.
+  - *Encapsulate* complexity so that we can treat it as a single "thing".
+- Also enables *re-use*.
   - Write one time, use many times.
 
 ## Define a function using `def` with a name, parameters, and a block of code.
 
-- Почніть визначення нової функції з `def`.
-- Далі йде назва функції.
-  - Назви функцій мають відповідати тим самим правилам, що й імена змінних.
-- Then _parameters_ in parentheses.
-  - Порожні дужки, якщо функція не приймає жодних вхідних даних.
+- Begin the definition of a new function with `def`.
+- Followed by the name of the function.
+  - Must obey the same rules as variable names.
+- Then *parameters* in parentheses.
+  - Empty parentheses if the function doesn't take any inputs.
   - We will discuss this in detail in a moment.
-- Потім двокрапка.
-- Потім блок коду з відступом.
+- Then a colon.
+- Then an indented block of code.
 
 ```python
 def print_greeting():
@@ -46,11 +46,11 @@ def print_greeting():
     print('Right?')
 ```
 
-## Визначення функції не запускає її.
+## Defining a function does not run it.
 
 - Defining a function does not run it.
-  - Як присвоєння значення змінній.
-- Необхідно викликати функцію, щоб виконати код, який вона містить.
+  - Like assigning a value to a variable.
+- Must call the function to execute the code it contains.
 
 ```python
 print_greeting()
@@ -62,9 +62,9 @@ Hello!
 
 ## Arguments in a function call are matched to its defined parameters.
 
-- Функції найбільш корисні, коли вони можуть працювати з різними даними.
-- Укажіть _параметри_ під час визначення функції.
-  - Вони стають змінними під час виконання функції.
+- Functions are most useful when they can operate on different data.
+- Specify *parameters* when defining a function.
+  - These become variables when the function is executed.
   - Are assigned the arguments in the call (i.e., the values passed to the function).
   - If you don't name the arguments when using them in the call, the arguments will be matched to
     parameters in the order the parameters are defined in the function.
@@ -98,13 +98,13 @@ print_date(month=3, day=19, year=1871)
   `()` contains the ingredients for the function
   while the body contains the recipe.
 
-## Функції можуть повертати результат до свого виклику за допомогою `return`.
+## Functions may return a result to their caller using `return`.
 
 - Use `return ...` to give a value back to the caller.
-- Може виникнути будь-де у функції.
+- May occur anywhere in the function.
 - But functions are easier to understand if `return` occurs:
-  - На початку функції для обробки особливих випадків.
-  - У самому кінці з остаточним результатом.
+  - At the start to handle special cases.
+  - At the very end, with a final result.
 
 ```python
 def average(values):
@@ -123,7 +123,7 @@ average of actual values: 2.6666666666666665
 ```
 
 ```python
-print('середнє порожнього списку:', average([]))
+print('average of empty list:', average([]))
 ```
 
 ```output
@@ -145,14 +145,14 @@ result of call is: None
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Виявлення синтаксичних помилок
+## Identifying Syntax Errors
 
 1. Read the code below and try to identify what the errors are
-   _without_ running it.
-2. Запустіть код і прочитайте повідомлення про помилку.
-   Це `SyntaxError` чи `IndentationError`?
-3. Виправте помилку.
-4. Повторюйте кроки 2 та 3 доки не виправите всі помилки.
+  *without* running it.
+2. Run the code and read the error message.
+  Is it a `SyntaxError` or an `IndentationError`?
+3. Fix the error.
+4. Repeat steps 2 and 3 until you have fixed all the errors.
 
 ```python
 def another_function
@@ -163,7 +163,7 @@ def another_function
 
 :::::::::::::::  solution
 
-## Рішення
+## Solution
 
 ```python
 def another_function():
@@ -178,9 +178,9 @@ def another_function():
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Визначення та використання
+## Definition and Use
 
-Що друкує наступна програма?
+What does the following program print?
 
 ```python
 def report(pressure):
@@ -191,7 +191,7 @@ print('calling', report, 22.5)
 
 :::::::::::::::  solution
 
-## Рішення
+## Solution
 
 ```output
 calling <function report at 0x7fd128ff1bf8> 22.5
@@ -215,45 +215,45 @@ pressure is 22.5
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Порядок виконання операцій
+## Order of Operations
 
-1. Що не так у цьому прикладі?
-
-```python
-result = print_time(11, 37, 59)
-
-def print_time(hour, minute, second):
-   time_string = str(hour) + ':' + str(minute) + ':' + str(second)
-   print(time_string)
-```
+1. What's wrong in this example?
+  
+  ```python
+  result = print_time(11, 37, 59)
+  
+  def print_time(hour, minute, second):
+     time_string = str(hour) + ':' + str(minute) + ':' + str(second)
+     print(time_string)
+  ```
 
 2. After fixing the problem above, explain why running this example code:
-
-```python
-result = print_time(11, 37, 59)
-print('result of call is:', result)
-```
-
-gives this output:
-
-```output
-11:37:59
-result of call is: None
-```
+  
+  ```python
+  result = print_time(11, 37, 59)
+  print('result of call is:', result)
+  ```
+  
+  gives this output:
+  
+  ```output
+  11:37:59
+  result of call is: None
+  ```
 
 3. Why is the result of the call `None`?
 
 :::::::::::::::  solution
 
-## Рішення
+## Solution
 
-1. The problem with the example is that the function `print_time()` is defined _after_ the call to the function is made. Python
-   doesn't know how to resolve the name `print_time` since it hasn't been defined yet and will raise a `NameError` e.g.,
-   `NameError: name 'print_time' is not defined`
+1. The problem with the example is that the function `print_time()` is defined *after* the call to the function is made. Python
+  doesn't know how to resolve the name `print_time` since it hasn't been defined yet and will raise a `NameError` e.g.,
+  `NameError: name 'print_time' is not defined`
 
 2. The first line of output `11:37:59` is printed by the first line of code, `result = print_time(11, 37, 59)` that binds the value
-   returned by invoking `print_time` to the variable `result`. The second line is from the second print call to print the contents
-   of the `result` variable.
+  returned by invoking `print_time` to the variable `result`. The second line is from the second print call to print the contents
+  of the `result` variable.
 
 3. `print_time()` does not explicitly `return` a value, so it automatically returns `None`.
 
@@ -263,7 +263,7 @@ result of call is: None
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Інкапсуляція
+## Encapsulation
 
 Fill in the blanks to create a function that takes a single filename as an argument,
 loads the data in the file named by the argument,
@@ -279,7 +279,7 @@ def min_in_data(____):
 
 :::::::::::::::  solution
 
-## Рішення
+## Solution
 
 ```python
 import pandas as pd
@@ -297,8 +297,9 @@ def min_in_data(filename):
 
 ## Find the First
 
-Заповніть порожні поля, щоб створити функцію, яка приймає список чисел як аргумент і повертає перше від’ємне значення в списку.
-Що робить ваша функція, якщо список порожній? What if the list has no negative numbers?
+Fill in the blanks to create a function that takes a list of numbers as an argument
+and returns the first negative value in the list.
+What does your function do if the list is empty? What if the list has no negative numbers?
 
 ```python
 def first_negative(values):
@@ -309,7 +310,7 @@ def first_negative(values):
 
 :::::::::::::::  solution
 
-## Рішення
+## Solution
 
 ```python
 def first_negative(values):
@@ -345,7 +346,7 @@ def print_date(year, month, day):
     print(joined)
 ```
 
-We saw that we can call the function using _named arguments_, like this:
+We saw that we can call the function using *named arguments*, like this:
 
 ```python
 print_date(day=1, month=2, year=2003)
@@ -357,17 +358,17 @@ print_date(day=1, month=2, year=2003)
 
 :::::::::::::::  solution
 
-## Рішення
+## Solution
 
 1. `2003/2/1`
-
-2. We saw examples of using _named arguments_ when working with the pandas library. For example, when reading in a dataset
-   using `data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')`, the last argument `index_col` is a
-   named argument.
-
+2. We saw examples of using *named arguments* when working with the pandas library. For example, when reading in a dataset
+  using `data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')`, the last argument `index_col` is a
+  named argument.
 3. Using named arguments can make code more readable since one can see from the function call what name the different arguments
-   have inside the function. It can also reduce the chances of passing arguments in the wrong order, since by using named arguments
-   the order doesn't matter.
+  have inside the function. It can also reduce the chances of passing arguments in the wrong order, since by using named arguments
+  the order doesn't matter.
+  
+  
 
 :::::::::::::::::::::::::
 
@@ -462,69 +463,69 @@ japan = data_asia.loc['Japan']
 ```
 
 1. Complete the statements below to obtain the average GDP for Japan
-   across the years reported for the 1980s.
-
-```python
-year = 1983
-gdp_decade = 'gdpPercap_' + str(year // ____)
-avg = (japan.loc[gdp_decade + ___] + japan.loc[gdp_decade + ___]) / 2
-```
+  across the years reported for the 1980s.
+  
+  ```python
+  year = 1983
+  gdp_decade = 'gdpPercap_' + str(year // ____)
+  avg = (japan.loc[gdp_decade + ___] + japan.loc[gdp_decade + ___]) / 2
+  ```
 
 2. Abstract the code above into a single function.
-
-```python
-def avg_gdp_in_decade(country, continent, year):
-    data_countries = pd.read_csv('data/gapminder_gdp_'+___+'.csv',delimiter=',',index_col=0)
-    ____
-    ____
-    ____
-    return avg
-```
+  
+  ```python
+  def avg_gdp_in_decade(country, continent, year):
+      data_countries = pd.read_csv('data/gapminder_gdp_'+___+'.csv',delimiter=',',index_col=0)
+      ____
+      ____
+      ____
+      return avg
+  ```
 
 3. How would you generalize this function
-   if you did not know beforehand which specific years occurred as columns in the data?
-   For instance, what if we also had data from years ending in 1 and 9 for each decade?
-   (Hint: use the columns to filter out the ones that correspond to the decade,
-   instead of enumerating them in the code.)
+  if you did not know beforehand which specific years occurred as columns in the data?
+  For instance, what if we also had data from years ending in 1 and 9 for each decade?
+  (Hint: use the columns to filter out the ones that correspond to the decade,
+  instead of enumerating them in the code.)
 
 :::::::::::::::  solution
 
 ## Solution
 
 1. The average GDP for Japan across the years reported for the 1980s is computed with:
-
-```python
-year = 1983
-gdp_decade = 'gdpPercap_' + str(year // 10)
-avg = (japan.loc[gdp_decade + '2'] + japan.loc[gdp_decade + '7']) / 2
-```
+  
+  ```python
+  year = 1983
+  gdp_decade = 'gdpPercap_' + str(year // 10)
+  avg = (japan.loc[gdp_decade + '2'] + japan.loc[gdp_decade + '7']) / 2
+  ```
 
 2. That code as a function is:
-
-```python
-def avg_gdp_in_decade(country, continent, year):
-    data_countries = pd.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
-    c = data_countries.loc[country]
-    gdp_decade = 'gdpPercap_' + str(year // 10)
-    avg = (c.loc[gdp_decade + '2'] + c.loc[gdp_decade + '7'])/2
-    return avg
-```
+  
+  ```python
+  def avg_gdp_in_decade(country, continent, year):
+      data_countries = pd.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
+      c = data_countries.loc[country]
+      gdp_decade = 'gdpPercap_' + str(year // 10)
+      avg = (c.loc[gdp_decade + '2'] + c.loc[gdp_decade + '7'])/2
+      return avg
+  ```
 
 3. To obtain the average for the relevant years, we need to loop over them:
-
-```python
-def avg_gdp_in_decade(country, continent, year):
-    data_countries = pd.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
-    c = data_countries.loc[country]
-    gdp_decade = 'gdpPercap_' + str(year // 10)
-    total = 0.0
-    num_years = 0
-    for yr_header in c.index: # c's index contains reported years
-        if yr_header.startswith(gdp_decade):
-            total = total + c.loc[yr_header]
-            num_years = num_years + 1
-    return total/num_years
-```
+  
+  ```python
+  def avg_gdp_in_decade(country, continent, year):
+      data_countries = pd.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
+      c = data_countries.loc[country]
+      gdp_decade = 'gdpPercap_' + str(year // 10)
+      total = 0.0
+      num_years = 0
+      for yr_header in c.index: # c's index contains reported years
+          if yr_header.startswith(gdp_decade):
+              total = total + c.loc[yr_header]
+              num_years = num_years + 1
+      return total/num_years
+  ```
 
 The function can now be called by:
 
@@ -551,67 +552,66 @@ a growth model that computes a new population density (between  0 and 1) based o
 density. In the model, time takes discrete values 0, 1, 2, ...
 
 1. Define a function called `logistic_map` that takes two inputs: `x`, representing the current
-   population (at time `t`), and a parameter `r = 1`. This function should return a value
-   representing the state of the system (population) at time `t + 1`, using the mapping function:
-
-`f(t+1) = r * f(t) * [1 - f(t)]`
+  population (at time `t`), and a parameter `r = 1`. This function should return a value
+  representing the state of the system (population) at time `t + 1`, using the mapping function:
+  
+  `f(t+1) = r * f(t) * [1 - f(t)]`
 
 2. Using a `for` or `while` loop, iterate the `logistic_map` function defined in part 1, starting
-   from an initial population of 0.5, for a period of time `t_final = 10`. Store the intermediate
-   results in a list so that after the loop terminates you have accumulated a sequence of values
-   representing the state of the logistic map at times `t = [0,1,...,t_final]` (11 values in total).
-   Print this list to see the evolution of the population.
+  from an initial population of 0.5, for a period of time `t_final = 10`. Store the intermediate
+  results in a list so that after the loop terminates you have accumulated a sequence of values
+  representing the state of the logistic map at times `t = [0,1,...,t_final]` (11 values in total).
+  Print this list to see the evolution of the population.
 
 3. Encapsulate the logic of your loop into a function called `iterate` that takes the initial
-   population as its first input, the parameter `t_final` as its second input and the parameter
-   `r` as its third input. The function should return the list of values representing the state of
-   the logistic map at times `t = [0,1,...,t_final]`. Run this function for periods `t_final = 100`
-   and `1000` and print some of the values. Is the population trending toward a steady state?
+  population as its first input, the parameter `t_final` as its second input and the parameter
+  `r` as its third input. The function should return the list of values representing the state of
+  the logistic map at times `t = [0,1,...,t_final]`. Run this function for periods `t_final = 100`
+  and `1000` and print some of the values. Is the population trending toward a steady state?
 
 :::::::::::::::  solution
 
 ## Solution
 
 1.
-
-```python
-def logistic_map(x, r):
-    return r * x * (1 - x)
-```
+  ```python
+  def logistic_map(x, r):
+      return r * x * (1 - x)
+  ```
 
 2.
+  ```python
+  initial_population = 0.5
+  t_final = 10
+  r = 1.0
+  population = [initial_population]
 
-```python
-initial_population = 0.5
-t_final = 10
-r = 1.0
-population = [initial_population]
-
-for t in range(t_final):
-    population.append( logistic_map(population[t], r) )
-```
+  for t in range(t_final):
+      population.append( logistic_map(population[t], r) )
+  ```
 
 3.
+  ```python
+  def iterate(initial_population, t_final, r):
+      population = [initial_population]
+      for t in range(t_final):
+          population.append( logistic_map(population[t], r) )
+      return population
+  
+  for period in (10, 100, 1000):
+      population = iterate(0.5, period, 1)
+      print(population[-1])
+  ```
 
-```python
-def iterate(initial_population, t_final, r):
-    population = [initial_population]
-    for t in range(t_final):
-        population.append( logistic_map(population[t], r) )
-    return population
-
-for period in (10, 100, 1000):
-    population = iterate(0.5, period, 1)
-    print(population[-1])
-```
-
-```output
-0.06945089389714401
-0.009395779870614648
-0.0009913908614406382
-```
-
-The population seems to be approaching zero.
+  ```output
+  0.06945089389714401
+  0.009395779870614648
+  0.0009913908614406382
+  ```
+  
+  The population seems to be approaching zero.
+  
+  
 
 :::::::::::::::::::::::::
 
@@ -652,7 +652,7 @@ calculate_life_quartile(62.5)
 
 That function would typically be used within a `for` loop, but Pandas has
 a different, more efficient way of doing the same thing, and that is by
-_applying_ a function to a dataframe or a portion of a dataframe.  Here
+*applying* a function to a dataframe or a portion of a dataframe.  Here
 is an example, using the definition above.
 
 ```python
@@ -665,6 +665,7 @@ On the right side of the `=` we start with `data['lifeExp']`, which is the
 column in the dataframe called `data` labeled `lifExp`.  We use the
 `apply()` to do what it says, apply the `calculate_life_quartile` to the
 value of this column for every row in the dataframe.
+
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 

@@ -1,33 +1,33 @@
 ---
-title: Побудова графіків
+title: Plotting
 teaching: 15
 exercises: 15
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Створення графіку часового ряду, який відповідає одному набору даних.
-- Створення точкової діаграми, або діаграми розсіювання, яка показує зв’язок між двома наборами даних.
+- Create a time series plot showing a single data set.
+- Create a scatter plot showing relationship between two data sets.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- Як побудувати графік за моїми даними?
-- Як зберегти графік для публікації?
+- How can I plot my data?
+- How can I save my plot for publishing?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## [`matplotlib`](https://matplotlib.org/) є найпоширенішою науковою бібліотекою для візуалізації даних в Python.
+## [`matplotlib`](https://matplotlib.org/) is the most widely used scientific plotting library in Python.
 
-- Зазвичай використовується його частина - бібліотека [`matplotlib.pyplot`](https://matplotlib.org/stable/tutorials/introductory/pyplot.html).
-- За замовчуванням Jupyter Notebook відображає графіки безпосередньо в блокноті.
+- Commonly use a sub-library called [`matplotlib.pyplot`](https://matplotlib.org/stable/tutorials/introductory/pyplot.html).
+- The Jupyter Notebook will render plots inline by default.
 
 ```python
 import matplotlib.pyplot as plt
 ```
 
-- Створення простих графіків є (відносно) нескладним.
+- Simple plots are then (fairly) simple to create.
 
 ```python
 time = [0, 1, 2, 3]
@@ -38,30 +38,35 @@ plt.xlabel('Time (hr)')
 plt.ylabel('Position (km)')
 ```
 
-![](fig/9_simple_position_time_plot.svg){alt='Лінійний графік, що показує залежність позиції (км) від часу (год), використовуючи дані з наведеного вище коду. За замовчуванням графік має синю лінію на білому фоні, а вісі масштабуються автоматично відповідно до діапазону вхідних даних.'}
+![](fig/9_simple_position_time_plot.svg){alt='A line chart showing time (hr) relative to position (km), using the values provided in the code block above. By default, the plotted line is blue against a white background, and the axes have been scaled automatically to fit the range of the input data.'}
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Зображення всіх графіків з програмного коду
+## Display All Open Figures
 
-У прикладі з Jupyter Notebook виконання комірки призводить до побудови графіку безпосередньо під кодом.
-Графік також зберігається у блокноті для подальшого перегляду.
-Проте, інші середовища Python, такі як інтерактивна сесія Python, що виконується у терміналі, або Python скрипт, виконаний за допомогою командного рядка, потребують додаткової команди для зображення графіку.
+In our Jupyter Notebook example, running the cell should generate the figure directly below the code.
+The figure is also included in the Notebook document for future viewing.
+However, other Python environments like an interactive Python session started from a terminal
+or a Python script executed via the command line require an additional command to display the figure.
 
-Доручіть `matplotlib` зобразити графік:
+Instruct `matplotlib` to show a figure:
 
 ```python
 plt.show()
 ```
 
-Цю команду також можна використати в блокноті - наприклад, для зображення декількох графіків одночасно, якщо відповідний командний код міститься в одній комірці.
+This command can also be used within a Notebook - for instance, to display multiple figures
+if several are created by a single cell.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Побудова графіків безпосередньо з [датафреймів Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html).
+## Plot data directly from a [`Pandas dataframe`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html).
 
-- Для побудови графіків можна також використовувати [датафрейми Pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
-- Перед побудовою графіку ми перетворюємо назви стовпців із типу `string` на `integer`, оскільки вони представляють числові значення. Для цього використовуємо метод [str.replace()](https://pandas.pydata.org/docs/reference/api/pandas.Series.str.replace.html), щоб видалити префікс `gpdPercap_`, а потім [astype(int)](https://pandas.pydata.org/docs/reference/api/pandas.Series.astype.html), щоб перетворити ряд значень рядка (`['1952', '1957', ...'2007']`) у ряд цілих чисел: `[1925, 1957, ..., 2007]`.
+- We can also plot [Pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
+- Before plotting, we convert the column headings from a `string` to `integer` data type, since they represent numerical values,
+  using [str.replace()](https://pandas.pydata.org/docs/reference/api/pandas.Series.str.replace.html) to remove the `gpdPercap_`
+  prefix and then [astype(int)](https://pandas.pydata.org/docs/reference/api/pandas.Series.astype.html)
+  to convert the series of string values (`['1952', '1957', ..., '2007']`) to a series of integers: `[1925, 1957, ..., 2007]`.
 
 ```python
 import pandas as pd
@@ -83,23 +88,23 @@ data.columns = years.astype(int)
 data.loc['Australia'].plot()
 ```
 
-![](fig/9_gdp_australia.svg){alt='Графік, що показує дані ВВП Австралії'}
+![](fig/9_gdp_australia.svg){alt='GDP plot for Australia'}
 
-## Виділіть та трансформуйте дані, а потім побудуйте графік.
+## Select and transform data, then plot it.
 
-- За замовчуванням, [`DataFrame.plot`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html#pandas.DataFrame.plot) зображує рядки на осі X.
-- Ми можемо транспонувати дані, щоб побудувати кілька графіків разом.
+- By default, [`DataFrame.plot`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html#pandas.DataFrame.plot) plots with the rows as the X axis.
+- We can transpose the data in order to plot multiple series.
 
 ```python
 data.T.plot()
 plt.ylabel('GDP per capita')
 ```
 
-![](fig/9_gdp_australia_nz.svg){alt='Графік ВВП для Австралії та Нової Зеландії'}
+![](fig/9_gdp_australia_nz.svg){alt='GDP plot for Australia and New Zealand'}
 
-## Доступні багато стилів графіків.
+## Many styles of plot are available.
 
-- Наприклад, можна створити стовпчикову діаграму з більш вишуканим стилем.
+- For example, do a bar plot using a fancier style.
 
 ```python
 plt.style.use('ggplot')
@@ -107,14 +112,14 @@ data.T.plot(kind='bar')
 plt.ylabel('GDP per capita')
 ```
 
-![](fig/9_gdp_bar.svg){alt='Стовпчикова діаграма ВВП для Австралії'}
+![](fig/9_gdp_bar.svg){alt='GDP barplot for Australia'}
 
-## Графік також можна побудувати, викликавши безпосередньо функцію `plot` бібліотеки `matplotlib`.
+## Data can also be plotted by calling the `matplotlib` `plot` function directly.
 
-- Формат команди є таким: `plt.plot(x, y)`
-- Колір та формат маркерів також можна вказати як додатковий необов'язковий аргумент, тобто, `b-` - це синя лінія, `g--` - це зелена пунктирна лінія.
+- The command is `plt.plot(x, y)`
+- The color and format of markers can also be specified as an additional optional argument e.g., `b-` is a blue line, `g--` is a green dashed line.
 
-## Отримаємо дані Австралії з датафрейму.
+## Get Australia data from dataframe
 
 ```python
 years = data.columns
@@ -123,9 +128,9 @@ gdp_australia = data.loc['Australia']
 plt.plot(years, gdp_australia, 'g--')
 ```
 
-![](fig/9_gdp_australia_formatted.svg){alt='Форматований графік ВВП для Австралії'}
+![](fig/9_gdp_australia_formatted.svg){alt='GDP formatted plot for Australia'}
 
-## Можна побудувати кілька графіків за різними наборами даних одночасно.
+## Can plot many sets of data together.
 
 ```python
 # Select two countries' worth of data.
@@ -144,52 +149,56 @@ plt.ylabel('GDP per capita ($)')
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Додавання легенди
+## Adding a Legend
 
-Зазвичай при побудові графіків з кількох наборів даних разом, бажано мати легенду, що описує ці дані.
+Often when plotting multiple datasets on the same figure it is desirable to have
+a legend describing the data.
 
-Це можна зробити в `matplotlib` за два етапи:
+This can be done in `matplotlib` in two stages:
 
-- Вкажіть мітку для кожного набору даних у графіку:
+- Provide a label for each dataset in the figure:
 
 ```python
 plt.plot(years, gdp_australia, label='Australia')
 plt.plot(years, gdp_nz, label='New Zealand')
 ```
 
-- Доручіть `matplotlib` створити легенду.
+- Instruct `matplotlib` to create the legend.
 
 ```python
 plt.legend()
 ```
 
-За замовчуванням matplotlib спробує розмістити легенду у відповідному місці. Якщо необхідно вказати конкретне розташування, можна застосувати аргументи функції `loc=`, наприклад, щоб розмістити легенду в лівому верхньому куті графіку, задайте `loc='upper left'`
+By default matplotlib will attempt to place the legend in a suitable position. If you
+would rather specify a position this can be done with the `loc=` argument, e.g to place
+the legend in the upper left corner of the plot, specify `loc='upper left'`
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-![](fig/9_gdp_australia_nz_formatted.svg){alt='Форматований графік ВВП для Австралії та Нової Зеландії'}
+![](fig/9_gdp_australia_nz_formatted.svg){alt='GDP formatted plot for Australia and New Zealand'}
 
-- Побудуйте точкову діаграму співвідношення ВВП Австралії та Нової Зеландії
-- Використовуйте `plt.scatter` або `DataFrame.plot.scatter`
+- Plot a scatter plot correlating the GDP of Australia and New Zealand
+- Use either `plt.scatter` or `DataFrame.plot.scatter`
 
 ```python
 plt.scatter(gdp_australia, gdp_nz)
 ```
 
-![](fig/9_gdp_correlation_plt.svg){alt='Точкова діаграма, створена за допомогою plt.scatter'}
+![](fig/9_gdp_correlation_plt.svg){alt='GDP correlation using plt.scatter'}
 
 ```python
 data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 ```
 
-![](fig/9_gdp_correlation_data.svg){alt='Точкова діаграма кореляції ВВП, побудована за допомогою data.T.plot.scatter.'}
+![](fig/9_gdp_correlation_data.svg){alt='GDP correlation using data.T.plot.scatter'}
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Мінімуми та максимуми
+## Minima and Maxima
 
-Заповніть порожні поля нижче, щоб побудувати графік мінімального ВВП на душу населення протягом часу для всіх країн Європи.
-Потім побудуйте графік максимального ВВП на душу населення в Європі.
+Fill in the blanks below to plot the minimum GDP per capita over time
+for all the countries in Europe.
+Modify it again to plot the maximum GDP per capita over time for Europe.
 
 ```python
 data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
@@ -201,7 +210,7 @@ plt.xticks(rotation=90)
 
 :::::::::::::::  solution
 
-## Відповідь
+## Solution
 
 ```python
 data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
@@ -211,7 +220,9 @@ plt.legend(loc='best')
 plt.xticks(rotation=90)
 ```
 
-![](fig/9_minima_maxima_solution.png){alt='Рішення для графіків мінімуму та максимуму'}
+![](fig/9_minima_maxima_solution.png){alt='Minima Maxima Solution'}
+
+
 
 :::::::::::::::::::::::::
 
@@ -219,27 +230,32 @@ plt.xticks(rotation=90)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Співвідношення
+## Correlations
 
-Модифікуйте приклад у примітках, щоб створити діаграму розсіювання, що показує співвідношення між мінімальним і максимальним ВВП на душу населення серед країн Азії за кожен рік у наборі даних.
-Який зв’язок ви бачите (якщо такий є)?
+Modify the example in the notes to create a scatter plot showing
+the relationship between the minimum and maximum GDP per capita
+among the countries in Asia for each year in the data set.
+What relationship do you see (if any)?
 
 :::::::::::::::  solution
 
-## Відповідь
+## Solution
 
 ```python
 data_asia = pd.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
 data_asia.describe().T.plot(kind='scatter', x='min', y='max')
 ```
 
-![](fig/9_correlations_solution1.svg){alt='Співвідношення - Відповідь 1'}
+![](fig/9_correlations_solution1.svg){alt='Correlations Solution 1'}
 
-Між мінімальним і максимальним значеннями ВВП за роками не спостерігається чіткої залежності. Здається, статки азійських країн не зростають і не падають разом.
+No particular correlations can be seen between the minimum and maximum GDP values
+year on year. It seems the fortunes of asian countries do not rise and fall together.
+
 
 :::::::::::::::::::::::::
 
-Ви можете помітити, що варіабельність максимальних значень значно вища, ніж варіабельність мінімальних значень.  Зверніть увагу на максимальні значення та відповідні індекси:
+You might note that the variability in the maximum is much higher than
+that of the minimum.  Take a look at the maximum and the max indexes:
 
 ```python
 data_asia = pd.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
@@ -250,13 +266,17 @@ print(data_asia.idxmin())
 
 :::::::::::::::  solution
 
-## Відповідь
+## Solution
 
-![](fig/9_correlations_solution2.png){alt='Співвідношення - Відповідь 2'}
+![](fig/9_correlations_solution2.png){alt='Correlations Solution 2'}
 
-Здається, варіабельність цього значення зумовлена різким спадом після 1972 року.
-Можливо, тут зіграли роль геополітичні чинники? Враховуючи домінування нафтовидобувних країн, можливо, індекс нафти Brent стане цікавим об'єктом для порівняння?
-У той час як М’янма постійно має найнижчий ВВП, країна з найвищим ВВП змінюється більш помітно.
+Seems the variability in this value is due to a sharp drop after 1972.
+Some geopolitics at play perhaps? Given the dominance of oil producing countries,
+maybe the Brent crude index would make an interesting comparison?
+Whilst Myanmar consistently has the lowest GDP, the highest GDP nation has varied
+more notably.
+
+
 
 :::::::::::::::::::::::::
 
@@ -264,9 +284,11 @@ print(data_asia.idxmin())
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Більше кореляцій
+## More Correlations
 
-Ця коротка програма створює графік, який ілюструє взаємозв’язок між ВВП і очікуваною тривалістю життя на 2007 рік, змінюючи розмір маркера в залежності із чисельністю населення:
+This short program creates a plot showing
+the correlation between GDP and life expectancy for 2007,
+normalizing marker size by population:
 
 ```python
 data_all = pd.read_csv('data/gapminder_all.csv', index_col='country')
@@ -274,24 +296,28 @@ data_all.plot(kind='scatter', x='gdpPercap_2007', y='lifeExp_2007',
               s=data_all['pop_2007']/1e6)
 ```
 
-Використовуючи онлайн-довідку та інші ресурси, поясніть роль кожного аргументу, який передається у функцію plot.
+Using online help and other resources,
+explain what each argument to `plot` does.
 
 :::::::::::::::  solution
 
-## Відповідь
+## Solution
 
-![](fig/9_more_correlations_solution.svg){alt='Більше кореляцій - Відповідь'}
+![](fig/9_more_correlations_solution.svg){alt='More Correlations Solution'}
 
-Гарне місце для пошуку документації до функції plot -
+A good place to look is the documentation for the plot function -
 help(data\_all.plot).
 
-kind - Як вже було показано, цей параметр визначає тип графіку, який буде створено.
+kind - As seen already this determines the kind of plot to be drawn.
 
-x та y - імена стовпців або індекси, що визначають, які дані будуть розміщені на графіку
-на осях x та y
+x and y - A column name or index that determines what data will be
+placed on the x and y axes of the plot
 
-s - Інформацію про цей аргумент можна знайти в документації plt.scatter.
-Це одне число або одне значення для кожної точки даних. Визначає розмір маркера.
+s - Details for this can be found in the documentation of plt.scatter.
+A single number or one value for each data point. Determines the size
+of the plotted points.
+
+
 
 :::::::::::::::::::::::::
 
@@ -299,23 +325,32 @@ s - Інформацію про цей аргумент можна знайти 
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Збереження вашого графіка в файл
+## Saving your plot to a file
 
-Якщо вас влаштовує побудований графік, можливо, ви захочете зберегти його у файл — наприклад, для включення у публікацію. У модулі matplotlib.pyplot є функція, яка виконує це:
+If you are satisfied with the plot you see you may want to save it to a file,
+perhaps to include it in a publication. There is a function in the
+matplotlib.pyplot module that accomplishes this:
 [savefig](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html).
-Виклик цієї функції
+Calling this function, e.g. with
 
 ```python
 plt.savefig('my_figure.png')
 ```
 
-збереже поточний графік у файл `my_figure.png`. Формат файлу буде автоматично визначено з розширення імені файлу (інші формати: pdf, ps, eps і svg).
+will save the current figure to the file `my_figure.png`. The file format
+will automatically be deduced from the file name extension (other formats
+are pdf, ps, eps and svg).
 
-Зауважимо, що функції в `plt` посилаються на глобальну змінну графіка і після того, як графік виведено на екран (наприклад, за допомогою `plt.show`) matplotlib змусить цю змінну посилатися на новий порожній графік.
-Тому переконайтеся, що ви викликаєте `plt.savefig` перед тим, як графік буде зображено на екрані, інакше ви можете створити файл із порожнім графіком.
+Note that functions in `plt` refer to a global figure variable
+and after a figure has been displayed to the screen (e.g. with `plt.show`)
+matplotlib will make this  variable refer to a new empty figure.
+Therefore, make sure you call `plt.savefig` before the plot is displayed to
+the screen, otherwise you may find a file with an empty plot.
 
-При використанні датафреймів дані зазвичай генеруються та виводяться на екрані одним рядком коду.
-На додаток до `plt.savefig`, ми можемо зберегти посилання на поточний графік у локальну змінну (використовуючи `plt.gcf`), а потім викликати `savefig` метод цієї змінної для збереження графіка у файл.
+When using dataframes, data is often generated and plotted to screen in one line.
+In addition to using `plt.savefig`, we can save a reference to the current figure
+in a local variable (with `plt.gcf`) and call the `savefig` class method from
+that variable to save the figure to file.
 
 ```python
 data.plot(kind='bar')
@@ -327,23 +362,24 @@ fig.savefig('my_figure.png')
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Зробіть ваш графік доступним
+## Making your plots accessible
 
-Щоразу, коли ви створюєте графіки для статті чи презентації, варто врахувати кілька речей, щоб переконатися, що всі зрозуміють ваші графіки.
+Whenever you are generating plots to go into a paper or a presentation, there are a few things you can do to make sure that everyone can understand your plots.
 
-- Завжди стежте за тим, щоб розмір тексту був зручним для читання. Використовуйте параметр `fontsize` в `xlabel`, `ylabel`, `title`, та `legend`, а також [`tick_params` з `labelsize`](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.tick_params.html) щоб збільшити розмір тексту на осях графіку.
-- Також слід подбати, щоб елементи графіка були добре помітними. Використовуйте `s`, щоб збільшити розмір маркерів діаграми розсіювання, і `linewidth`, щоб збільшити розміри ліній вашого графіка.
-- Якщо розрізняти елементи графіка тільки за кольором, це може ускладнити його сприйняття для людей із дальтонізмом або тих, хто переглядає матеріали в чорно-білому вигляді (наприклад, після друку). Для ліній можна використовувати параметр `linestyle`, щоб задати різні стилі ліній. Для діаграм розсіювання `marker` дозволяє змінювати форму ваших точок. Якщо ви не впевнені у вибраній кольоровій палітрі, скористайтеся інструментами на кшталт [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) або [Color Oracle](https://colororacle.org/) щоб імітувати, як виглядатимуть ваші графіки для людей з дальтонізмом.
+- Always make sure your text is large enough to read. Use the `fontsize` parameter in `xlabel`, `ylabel`, `title`, and `legend`, and [`tick_params` with `labelsize`](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.tick_params.html) to increase the text size of the numbers on your axes.
+- Similarly, you should make your graph elements easy to see. Use `s` to increase the size of your scatterplot markers and `linewidth` to increase the sizes of your plot lines.
+- Using color (and nothing else) to distinguish between different plot elements will make your plots unreadable to anyone who is colorblind, or who happens to have a black-and-white office printer. For lines, the `linestyle` parameter lets you use different types of lines. For scatterplots, `marker` lets you change the shape of your points. If you're unsure about your colors, you can use [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) or [Color Oracle](https://colororacle.org/) to simulate what your plots would look like to those with colorblindness.
+  
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- [`matplotlib`](https://matplotlib.org/) — це найпоширеніша наукова бібліотека для побудови графіків у Python.
-- Будуйте графіки безпосередньо з датафрейму Pandas.
-- Побудова графіків включає вибір та трансформацію даних.
-- Існує широкий вибір стилів побудови графіків: дивіться [Python Graph Gallery](https://python-graph-gallery.com/matplotlib/), щоб ознайомитися з іншими варіантами.
-- На одному графіку можна одразу зобразити кілька наборів даних.
+- [`matplotlib`](https://matplotlib.org/) is the most widely used scientific plotting library in Python.
+- Plot data directly from a Pandas dataframe.
+- Select and transform data, then plot it.
+- Many styles of plot are available: see the [Python Graph Gallery](https://python-graph-gallery.com/matplotlib/) for more options.
+- Can plot many sets of data together.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 

@@ -12,23 +12,25 @@ exercises: 0
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- Що саме ми вивчили?
+- What have we learned?
 - What else is out there and where do I find it?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Leslie Lamport once said, "Writing is nature's way of showing you how sloppy your thinking is."
-Те саме стосується програмування: багато речей, які здаються очевидними, коли ми думаємо про них, виявляються чим завгодно, але тільки тоді, коли ми маємо їх точно пояснити.
+The same is true of programming:
+many things that seem obvious when we're thinking about them
+turn out to be anything but when we have to explain them precisely.
 
 ## Python supports a large and diverse community across academia and industry.
 
-- [Документація з Python 3](https://docs.python.org/3/) охоплює ядро мови
-  та стандартну бібліотеку.
+- The [Python 3 documentation](https://docs.python.org/3/) covers the core language
+  and the standard library.
 
-- [PyCon](https://pycon.org/) є найбільшою щорічною конференцією для спільноти Python.
+- [PyCon](https://pycon.org/) is the largest annual conference for the Python community.
 
 - [SciPy](https://scipy.org) is a rich collection of scientific utilities.
-  Це також назва [серії щорічних конференцій](https://conference.scipy.org/).
+  It is also the name of [a series of annual conferences](https://conference.scipy.org/).
 
 - [Jupyter](https://jupyter.org) is the home of Project Jupyter.
 

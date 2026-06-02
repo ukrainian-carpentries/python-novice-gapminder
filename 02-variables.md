@@ -1,55 +1,56 @@
 ---
-title: Змінні та присвоєння
+title: Variables and Assignment
 teaching: 10
 exercises: 10
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Створення програм, які присвоюють скалярні значення змінним і виконують обчислення з цими значеннями.
-- Відстеження у програмах значень змінних, які використовують скалярне присвоєння.
+- Write programs that assign scalar values to variables and perform calculations with those values.
+- Correctly trace value changes in programs that use scalar assignment.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- Як я можу зберігати дані в програмах?
+- How can I store data in programs?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Використовуйте змінні для зберігання значень.
+## Use variables to store values.
 
-- **Змінні** - це імена значень.
+- **Variables** are names for values.
 
-- Імена змінних
+- Variable names
+  
+  - can **only** contain letters, digits, and underscore `_` (typically used to separate words in long variable names)
+  - cannot start with a digit
+  - are **case sensitive** (age, Age and AGE are three different variables)
 
-  - можуть складатися **тільки** з букв, цифр та підкреслення `_` (яке звичайно використовується, щоб відокремити слова у довгих назвах змінних)
-  - не можуть починатися з цифри
-  - **залежать від регістру** (тобто `age`, `Age` та `AGE` - це три різні змінні)
+- The name should also be meaningful so you or another programmer know what it is
 
-- Ім'я змінної має бути змістовним, щоб ви або інший програміст знали, що це таке
+- Variable names that start with underscores like `__alistairs_real_age` have a special meaning
+  so we won't do that until we understand the convention.
 
-- Імена змінних, які починаються з підкреслення, наприклад `__alistairs_real_age`, мають специфічне значення, тому ми не будемо цього робити, доки не зрозуміємо прийняті в мові Python домовленості.
+- In Python the `=` symbol assigns the value on the right to the name on the left.
 
-- У Python символ `=` використовується для присвоєння значення, яке знаходиться праворуч, до його імені, яке вказано ліворуч.
+- The variable is created when a value is assigned to it.
 
-- Змінна створена, коли їй присвоюється значення.
-
-- У виразі нижче Python призначає вік змінній `age`
-  та ім'я в лапках - змінній `first_name`.
-
+- Here, Python assigns an age to a variable `age`
+  and a name in quotes to a variable `first_name`.
+  
   ```python
   age = 42
   first_name = 'Ahmed'
   ```
 
-## Використовуйте `print` для виведення значень.
+## Use `print` to display values.
 
-- Python має вбудовану функцію `print`, яка друкує щось як текст.
-- Щоб викликати функцію (тобто, щоб виконати її), треба вказати її ім'я.
-- Щоб передати функції значення (тобто дані для друку), їх треба помістити у дужки.
-- Щоб направити до друку рядок тексту, його треба помістити в одинарні або подвійні лапки.
-- Значення, які передаються до функції, називаються **аргументами**
+- Python has a built-in function called `print` that prints things as text.
+- Call the function (i.e., tell Python to run it) by using its name.
+- Provide values to the function (i.e., the things to print) in parentheses.
+- To add a string to the printout, wrap the string in single or double quotes.
+- The values passed to the function are called **arguments**
 
 ```python
 print(first_name, 'is', age, 'years old')
@@ -59,12 +60,13 @@ print(first_name, 'is', age, 'years old')
 Ahmed is 42 years old
 ```
 
-- `print` автоматично додає пробіл між надрукованими аргументами, щоб відокремити їх.
-- Також `print` переходить на новий рядок після друку.
+- `print` automatically puts a single space between items to separate them.
+- And wraps around to a new line at the end.
 
-## Змінні мають бути створені перед їх використанням.
+## Variables must be created before they are used.
 
-- Якщо змінна ще не існує, або якщо ім'я було неправильно написано, Python повідомляє про помилку. (На відміну від деяких інших мов, які можуть "вгадати" якесь значення за замовчуванням.)
+- If a variable doesn't exist yet, or if the name has been mis-spelled,
+  Python reports an error. (Unlike some languages, which "guess" a default value.)
 
 ```python
 print(last_name)
@@ -79,14 +81,18 @@ NameError                                 Traceback (most recent call last)
 NameError: name 'last_name' is not defined
 ```
 
-- Останній рядок у повідомленні про помилку є найбільш інформативним.
-- Ми більш детально розглянемо повідомлення про помилки [пізніше](17-scope.md#reading-error-messages).
+- The last line of an error message is usually the most informative.
+- We will look at error messages in detail [later](17-scope.md#reading-error-messages).
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Змінні зберігаються між комірками
+## Variables Persist Between Cells
 
-Майте на увазі, що в блокноті Jupyter важливий порядок виконання комірок, а не порядок їх розташування. Python запам’ятає весь код, який було виконано раніше, у тому числі всі змінні, які ви визначили, незалежно від порядку в блокноті. Тому, якщо ви визначите змінні нижче в блокноті, а потім (повторно) запустите комірки вище, то ті комірки, що визначені нижче, все одно будуть присутні. Як приклад, створіть дві комірки наступного вмісту у такому порядку:
+Be aware that it is the *order* of execution of cells that is important in a Jupyter notebook, not the order
+in which they appear. Python will remember *all* the code that was run previously, including any variables you have
+defined, irrespective of the order in the notebook. Therefore if you define variables lower down the notebook and then
+(re)run cells further up, those defined further down will still be present. As an example, create two cells with the
+following content, in this order:
 
 ```python
 print(myval)
@@ -96,17 +102,20 @@ print(myval)
 myval = 1
 ```
 
-Якщо виконати це послідовно, то перша комірка дасть помилку. Однак, якщо ви запустите першу комірку _після_ другої, вона виведе на екран `1`. Щоб уникнути плутанини, можна скористатися опцією `Kernel` -> `Restart & Run All`, яка перезавантажує інтерпретатор і запускає все з чистого аркуша, зверху вниз.
+If you execute this in order, the first cell will give an error. However, if you run the first cell *after* the second
+cell it will print out `1`. To prevent confusion, it can be helpful to use the `Kernel` -> `Restart & Run All` option which
+clears the interpreter and runs everything from a clean slate going top to bottom.
+
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Змінні можна використовувати для обчислень.
+## Variables can be used in calculations.
 
-- Ми можемо використовувати змінні в обчисленнях так само, як би вони були значеннями.
-  - Пам’ятайте, ми присвоїли значення `42` змінній `age` кількома рядками вище.
+- We can use variables in calculations just as if they were values.
+  - Remember, we assigned the value `42` to `age` a few lines ago.
 
 ```python
-age = age + 3 
+age = age + 3
 print('Age in three years:', age)
 ```
 
@@ -114,14 +123,18 @@ print('Age in three years:', age)
 Age in three years: 45
 ```
 
-## Використовуйте індекс, щоб отримати один символ із рядка.
+## Use an index to get a single character from a string.
 
-- Символи (окремі літери, цифри тощо) у рядку є впорядкованими. Наприклад, рядок `'AB'` не те саме, що `'BA'`. Завдяки такому упорядкуванню ми можемо розглядати рядок як список символів.
-- Кожна позиція в рядку (перша, друга тощо) має номер. Це число називається **індексом** або іноді нижнім індексом.
-- Індекси нумеруються від 0.
-- Використовуйте індекс позиції у квадратних дужках, щоб отримати символ з тієї позиції у рядку.
+- The characters (individual letters, numbers, and so on) in a string are
+  ordered. For example, the string `'AB'` is not the same as `'BA'`. Because of
+  this ordering, we can treat the string as a list of characters.
+- Each position in the string (first, second, etc.) is given a number. This
+  number is called an **index** or sometimes a subscript.
+- Indices are numbered from 0.
+- Use the position's index in square brackets to get the character at that
+  position.
 
-![Рядок кода Python, print(atom\_name[0]), демонструє, що використання нульового індексу виведе лише початкову літеру, у цьому випадку 'h' для 'helium'.](fig/2_indexing.svg)
+![A line of Python code, print(atom\_name[0]), demonstrates that using the zero index will output just the initial letter, in this case 'h' for helium.](fig/2_indexing.svg)
 
 ```python
 atom_name = 'helium'
@@ -132,17 +145,22 @@ print(atom_name[0])
 h
 ```
 
-## Використовуйте зріз, щоб отримати підрядок.
+## Use a slice to get a substring.
 
-- Частина рядка називається **підрядок**. Він може складатися навіть тільки з одного символу.
-- Список складається з елементів. У випадку, коли рядок розглядається як список, його елементами є окремі символи.
-- Зріз - це частина рядка (в загальному випадку, частина будь-якого обʼєкту, схожого на колекцію).
-- Ми беремо зріз із позначенням `[start:stop]`, де `start` — ціле число, що є індексом першого потрібного нам елементу, а `stop` - ціле число, що є індексом елементу _відразу після_ останнього потрібного нам елементу.
-- Проміжок між `stop` and `start` - це довжина зрізу.
-- Визначення зрізу не змінює вміст вихідного рядка. Натомість, визначений зріз повертає копію початкового рядка.
+- A part of a string is called a **substring**. A substring can be as short as a
+  single character.
+- An item in a list is called an element. Whenever we treat a string as if it
+  were a list, the string's elements are its individual characters.
+- A slice is a part of a string (or, more generally, a part of any list-like thing).
+- We take a slice with the notation `[start:stop]`, where `start` is the integer
+  index of the first element we want and `stop` is the integer index of
+  the element *just after* the last element we want.
+- The difference between `stop` and `start` is the slice's length.
+- Taking a slice does not change the contents of the original string. Instead,
+  taking a slice returns a copy of part of the original string.
 
 ```python
-atom_name = 'sodium' 
+atom_name = 'sodium'
 print(atom_name[0:3])
 ```
 
@@ -150,7 +168,7 @@ print(atom_name[0:3])
 sod
 ```
 
-## Використовуйте вбудовану функцію `len`, щоб знайти довжину рядка.
+## Use the built-in function `len` to find the length of a string.
 
 ```python
 print(len('helium'))
@@ -160,16 +178,19 @@ print(len('helium'))
 6
 ```
 
-- Вкладені функції обчислюються зсередини назовні, як у математиці: вирази, що знаходяться всередині дужок, обчислюються першими.
+- Nested functions are evaluated from the inside out,
+  like in mathematics.
 
-## Python чутливий до регістру.
+## Python is case-sensitive.
 
-- Python вважає, що букви верхнього та нижнього регістру відрізняються, отже `Name` і `name` - різні змінні.
-- Існують домовленості про використання великих літер на початку імен змінних, тому ми будемо використовувати малі літери.
+- Python thinks that upper- and lower-case letters are different,
+  so `Name` and `name` are different variables.
+- There are conventions for using upper-case letters at the start of variable names so we will use lower-case letters for now.
 
-## Використовуйте змістовні назви змінних.
+## Use meaningful variable names.
 
-- Ви можете використовувати будь-які комбінації символів для імен змінних, поки вони задовольняють вищевказані правила (букви, цифри та знак підкреслення).
+- Python doesn't care what you call variables as long as they obey the rules
+  (alphanumeric characters and the underscore).
 
 ```python
 flabadab = 42
@@ -177,39 +198,42 @@ ewr_422_yY = 'Ahmed'
 print(ewr_422_yY, 'is', flabadab, 'years old')
 ```
 
-- Використовуйте змістовні назви змінних, щоб допомогти іншим зрозуміти, що робить програма.
-- Найважливіша "інша людина" — це ви в майбутньому.
+- Use meaningful variable names to help other people understand what the program does.
+- The most important "other person" is your future self.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Заміна значень
+## Swapping Values
 
-Заповніть таблицю, вказавши значення змінних у цій програмі _після_ виконання кожного оператора.
+Fill the table showing the values of the variables in this program
+*after* each statement is executed.
 
 ```python
-# Оператор  # Значення x   # Значення y   # Значення swap #
-x = 1.0     #              #              #               #
-y = 3.0     #              #              #               #
-swap = x    #              #              #               #
-x = y       #              #              #               #
-y = swap    #              #              #               # 
+# Command  # Value of x   # Value of y   # Value of swap #
+x = 1.0    #              #              #               #
+y = 3.0    #              #              #               #
+swap = x   #              #              #               #
+x = y      #              #              #               #
+y = swap   #              #              #               #
 ```
 
 :::::::::::::::  solution
 
-## Рішення
+## Solution
 
 ```output
-# Оператор # Значення x   # Значення y   # Значення swap #
-x = 1.0    # 1.0          # не визначено # не визначено  #
-y = 3.0    # 1.0          # 3.0          # не визначено  #
+# Command  # Value of x   # Value of y   # Value of swap #
+x = 1.0    # 1.0          # not defined  # not defined   #
+y = 3.0    # 1.0          # 3.0          # not defined   #
 swap = x   # 1.0          # 3.0          # 1.0           #
 x = y      # 3.0          # 3.0          # 1.0           #
 y = swap   # 3.0          # 1.0          # 1.0           #
 ```
 
-Ці три рядки обмінюються значеннями в `x` і `y` використовуючи змінну `swap`
-для тимчасового зберігання. Це досить поширена ідіома програмування.
+These three lines exchange the values in `x` and `y` using the `swap`
+variable for temporary storage. This is a fairly common programming idiom.
+
+
 
 :::::::::::::::::::::::::
 
@@ -217,10 +241,11 @@ y = swap   # 3.0          # 1.0          # 1.0           #
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Прогнозування значень
+## Predicting Values
 
-Яким є остаточне значення змінної `position` у програмі нижче?
-(Спробуйте передбачити значення, не запускаючи програму, а потім перевірте свій прогноз.)
+What is the final value of `position` in the program below?
+(Try to predict the value without running the program,
+then check your prediction.)
 
 ```python
 initial = 'left'
@@ -230,7 +255,7 @@ initial = 'right'
 
 :::::::::::::::  solution
 
-## Рішення
+## Solution
 
 ```python
 print(position)
@@ -240,9 +265,13 @@ print(position)
 left
 ```
 
-Змінній `initial` присвоєно значення `'left'`.
-У другому рядку змінна `position` також отримує
-значення `'left'`. У третьому рядку змінній `initial` надається значення `'right'`, але змінна `position` зберігає своє значення `'left'`.
+The `initial` variable is assigned the value `'left'`.
+In the second line, the `position` variable also receives
+the string value `'left'`. In third line, the `initial` variable is given the
+value `'right'`, but the `position` variable retains its string value
+of `'left'`.
+
+
 
 :::::::::::::::::::::::::
 
@@ -250,17 +279,19 @@ left
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Завдання
+## Challenge
 
-Якщо ви присвоїли `a = 123`,
-що станеться, якщо ви спробуєте отримати другу цифру `a` через `a[1]`?
+If you assign `a = 123`,
+what happens if you try to get the second digit of `a` via `a[1]`?
 
 :::::::::::::::  solution
 
-## Рішення
+## Solution
 
-Числа не є рядками або послідовностями, і спроба виконати операцію індексу над числом у Python призведе до помилки. У [наступному епізоді про типи даних і перетворення типів](03-types-conversion.md)
-ми дізнаємось більше про типи і як конвертувати один тип в інший. Якщо вам потрібна N-та цифра числа, перетворіть його на рядок за допомогою вбудованої функції `str`, а потім виконайте операцію індексації у цьому рядку.
+Numbers are not strings or sequences and Python will raise an error if you try to perform an index operation on a
+number. In the [next lesson on types and type conversion](03-types-conversion.md)
+we will learn more about types and how to convert between different types. If you want the Nth digit of a number you
+can convert it into a string using the `str` built-in function and then perform an index operation on that string.
 
 ```python
 a = 123
@@ -286,11 +317,12 @@ print(a[1])
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Вибір імені
+## Choosing a Name
 
-Яке ім'я для змінної є кращим: `m`, `min` або `minutes`?
-Чому?
-Підказка: подумайте, який код ви б хотіли успадкувати від того, хто залишає лабораторію:
+Which is a better variable name, `m`, `min`, or `minutes`?
+Why?
+Hint: think about which code you would rather inherit
+from someone who is leaving the lab:
 
 1. `ts = m * 60 + s`
 2. `tot_sec = min * 60 + sec`
@@ -298,9 +330,12 @@ print(a[1])
 
 :::::::::::::::  solution
 
-## Рішення
+## Solution
 
-`minutes` краще, оскільки `min` можна помилково прийняти за "мінімум" (що насправді є вбудованою функцією в Python, яку ми розглянемо пізніше).
+`minutes` is better because `min` might mean something like "minimum"
+(and actually is an existing built-in function in Python that we will cover later).
+
+
 
 :::::::::::::::::::::::::
 
@@ -308,9 +343,9 @@ print(a[1])
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Практика застосування зрізів
+## Slicing practice
 
-Що друкує наступна програма?
+What does the following program print?
 
 ```python
 atom_name = 'carbon'
@@ -319,7 +354,7 @@ print('atom_name[1:3] is:', atom_name[1:3])
 
 :::::::::::::::  solution
 
-## Рішення
+## Solution
 
 ```output
 atom_name[1:3] is: ar
@@ -331,41 +366,37 @@ atom_name[1:3] is: ar
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Різноманітні види зрізів
+## Slicing concepts
 
-Є наступний рядок:
+Given the following string:
 
 ```python
 species_name = "Acacia buxifolia"
 ```
 
-Що виводять ці вирази?
+What would these expressions return?
 
 1. `species_name[2:8]`
-2. `species_name[11:]` (без значення після двокрапки)
-3. `species_name[:4]` (без значення до двокрапки)
-4. `species_name[:]` (тільки двокрапка)
+2. `species_name[11:]` (without a value after the colon)
+3. `species_name[:4]` (without a value before the colon)
+4. `species_name[:]` (just a colon)
 5. `species_name[11:-3]`
 6. `species_name[-5:-3]`
-7. Що станеться, якщо ми оберемо значення `stop`, яке виходить за рамки діапазону? (тобто спробуйте виконати `species_name[0:20]` або `species_name[:103]`)
+7. What happens when you choose a `stop` value which is out of range? (i.e., try `species_name[0:20]` or `species_name[:103]`)
 
 :::::::::::::::  solution
 
-## Рішення
+## Solutions
 
-1. `species_name[2:8]` повертає підрядок `'acia b'`
-
-2. `species_name[11:]` повертає підрядок `'folia'`, з позиції 11 до кінця рядку
-
-3. `species_name[:4]` повертає підрядок `Acac'`, з початку рядку до позиції 4, не включаючи цю позицію
-
-4. `species_name[:]` повертає весь рядок 'Acacia buxifolia'\`
-
-5. `species_name[11:-3]` повертає підрядок `'fo'`, з 11 позиції до третьої позиції з кінця рядку, не включаючи її
-
-6. `species_name[-5:-3]` також повертає підрядок `'fo'`, з п'ятої позиції з кінця до третьої позиції з кінця, не включаючи її
-
-7. Якщо частина фрагмента виходить за межі діапазону, операція не повертає помилку. `species_name[0:20]` дає той самий результат, що і `species_name[0:]`, та `species_name[:103]` дає такий самий результат, як `species_name[:]`
+1. `species_name[2:8]` returns the substring `'acia b'`
+2. `species_name[11:]` returns the substring `'folia'`, from position 11 until the end
+3. `species_name[:4]` returns the substring `'Acac'`, from the start up to but not including position 4
+4. `species_name[:]` returns the entire string `'Acacia buxifolia'`
+5. `species_name[11:-3]` returns the substring `'fo'`, from the 11th position to the third last position
+6. `species_name[-5:-3]` also returns the substring `'fo'`, from the fifth last position to the third last
+7. If a part of the slice is out of range, the operation does not fail. `species_name[0:20]` gives the same result as `species_name[0:]`, and `species_name[:103]` gives the same result as `species_name[:]`
+  
+  
 
 :::::::::::::::::::::::::
 
@@ -373,16 +404,16 @@ species_name = "Acacia buxifolia"
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Використовуйте змінні для зберігання значень.
-- Використовуйте `print` для виводу значень.
-- Змінні зберігаються між комірками.
-- Змінні мають бути створені перед їх використанням.
-- Змінні можна використовувати для обчислень.
-- Використовуйте індекс, щоб отримати один символ із рядка.
-- Використовуйте зріз, щоб отримати підрядок.
-- Використовуйте вбудовану функцію `len`, щоб знайти довжину рядка.
-- У Python важливо, який регістр використовується.
-- Використовуйте змістовні назви змінних.
+- Use variables to store values.
+- Use `print` to display values.
+- Variables persist between cells.
+- Variables must be created before they are used.
+- Variables can be used in calculations.
+- Use an index to get a single character from a string.
+- Use a slice to get a substring.
+- Use the built-in function `len` to find the length of a string.
+- Python is case-sensitive.
+- Use meaningful variable names.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
