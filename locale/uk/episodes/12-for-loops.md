@@ -249,7 +249,7 @@ print(result)
 для створення зазначеного результату.
 
 ```python
-# Total length of the strings in the list: ["red", "green", "blue"] => 12
+# Сума довжин рядків у списку: ["red", "green", "blue"] => 12
 total = 0
 for word in ["red", "green", "blue"]:
     ____ = ____ + len(word)
@@ -372,12 +372,10 @@ print(cumulative)
 
 ## Виявлення помилок в іменах змінних
 
-1. Read the code below and try to identify what the errors are
-   _without_ running it.
+1. Прочитайте наведений нижче код і спробуйте знайти помилки _без_ запуску програми.
 2. Запустіть код і прочитайте повідомлення про помилку.
    Як ви думаєте, який це тип `NameError`?
-   Is it a string with no quotes, a misspelled variable, or a
-   variable that should have been defined but was not?
+   Це рядок без лапок, змінна з орфографічною помилкою чи змінна, яку не було попередньо визначено?
 3. Виправте помилку.
 4. Повторюйте кроки 2 і 3, доки не виправите всі помилки.
 
@@ -418,8 +416,7 @@ print(message)
 
 ## Identifying Item Errors
 
-1. Read the code below and try to identify what the errors are
-   _without_ running it.
+1. Прочитайте наведений нижче код і спробуйте знайти помилки _без_ запуску програми.
 2. Запустіть код і прочитайте повідомлення про помилку. Який це тип помилки?
 3. Виправте помилку.
 
