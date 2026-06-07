@@ -103,7 +103,7 @@ for kitten in [2, 3, 5]:
 ## Тіло циклу може містити багато операторів.
 
 - Але жоден цикл не повинен мати довжину більше кількох рядків.
-- Людям важко запам’ятати великі фрагменти коду.
+- Hard for human beings to keep larger chunks of code in mind.
 
 ```python
 primes = [2, 3, 5]
@@ -124,7 +124,7 @@ for p in primes:
 - Вбудована функція [`range`](https://docs.python.org/3/library/stdtypes.html#range) створює послідовність чисел.
   - _Not_ a list: the numbers are produced on demand
     to make looping over large ranges more efficient.
-- `range(N)` є набором чисел 0..N-1
+- `range(N)` is the numbers 0..N-1
   - Точні індекси списку або рядка символів довжиною N
 
 ```python
@@ -143,7 +143,7 @@ a range is not a list: range(0, 3)
 ## Шаблон накопичення перетворює набір значень на одне підсумкове.
 
 - Поширений алгоритм, який можна побачити у програмах:
-  1. Встановлення початкового значення для _накопичувальної_ змінної : нуль, порожній рядок або порожній список.
+  1. Initialize an _accumulator_ variable to zero, the empty string, or the empty list.
   2. Оновлення змінної значеннями з колекції.
 
 ```python
@@ -158,23 +158,23 @@ print(total)
 55
 ```
 
-- Оператор `total = total + (number + 1)` інтерпретується наступним чином:
+- Read `total = total + (number + 1)` as:
   - Додати 1 до поточного значення змінної циклу `number`.
   - Додати це до поточного значення змінної-накопичувача `total`.
-  - Присвойте це змінній `total`, замінивши поточне значення.
+  - Assign that to `total`, replacing the current value.
 - Ми маємо додавати `number + 1`, тому що `range` генерує значення 0..9, а не 1..10.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
 ## Класифікація помилок
 
-Чи є помилка відступу синтаксичною чи помилкою виконання?
+Is an indentation error a syntax error or a runtime error?
 
 :::::::::::::::  solution
 
 ## Відповідь
 
-IndentationError є синтаксичною помилкою. Неможливо запустити програми з синтаксичними помилками.
+IndentationError є синтаксичною помилкою. Programs with syntax errors cannot be started.
 Програма з помилкою виконання може запуститися, але помилка з’являється за певних умов.
 
 :::::::::::::::::::::::::
