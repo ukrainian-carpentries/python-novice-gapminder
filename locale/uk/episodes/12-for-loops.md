@@ -158,24 +158,24 @@ print(total)
 55
 ```
 
-- Read `total = total + (number + 1)` as:
+- Команда `total = total + (number + 1)` інтерпретується наступним чином:
   - Додати 1 до поточного значення змінної циклу `number`.
   - Додати це до поточного значення змінної-накопичувача `total`.
-  - Assign that to `total`, replacing the current value.
+  - Присвоїти результат змінній `total`, замінивши її поточне значення.
 - Ми маємо додавати `number + 1`, тому що `range` генерує значення 0..9, а не 1..10.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
 ## Класифікація помилок
 
-Is an indentation error a syntax error or a runtime error?
+Чи є помилка відступу (indentation error) синтаксичною помилкою чи помилкою виконання?
 
 :::::::::::::::  solution
 
 ## Відповідь
 
 IndentationError є синтаксичною помилкою. Programs with syntax errors cannot be started.
-Програма з помилкою виконання може запуститися, але помилка з’являється за певних умов.
+A program with a runtime error will start but an error will be thrown under certain conditions.
 
 :::::::::::::::::::::::::
 
@@ -185,7 +185,8 @@ IndentationError є синтаксичною помилкою. Programs with syn
 
 ## Відстеження виконання
 
-Створіть таблицю з номерами рядків, які виконуються під час виконання цієї програми, і значення змінних після виконання кожного рядка.
+Create a table showing the numbers of the lines that are executed when this program runs,
+and the values of the variables after each line is executed.
 
 ```python
 total = 0
