@@ -6,7 +6,7 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Правильно писати програми, які використовують оператори if та else, та прості булеві вирази (без логічних операторів).
+- Correctly write programs that use if and else statements and simple Boolean expressions (without logical operators).
 - Відстежувати виконання невкладених умовних операторів і умовних операторів всередині циклів.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -19,11 +19,11 @@ exercises: 15
 
 ## Використовуйте команди `if`, щоб контролювати, чи виконується блок коду.
 
-- An `if` statement (more properly called a _conditional_ statement)
-  controls whether some block of code is executed or not.
+- Оператор `if` (правильна назва - _умовний_ оператор)
+  контролює, чи буде виконано певний блок коду.
 - Його синтаксис подібний до синтаксису оператора `for`:
   - Перший рядок починається з \`if' і закінчується двокрапкою
-  - Body containing one or more statements is indented (usually by 4 spaces)
+  - Блок коду оператора, що містить одну або кілька команд, має відступ (зазвичай на 4 пробіли)
 
 ```python
 mass = 3.54
@@ -42,7 +42,7 @@ if mass > 3.0:
 ## Умовні оператори часто використовуються всередині циклів.
 
 - Немає особливого сенсу використовувати умовний оператор, коли ми знаємо точне значення (як у прикладі вище).
-- Але це корисно, коли у нас є колекція для обробки.
+- But useful when we have a collection to process.
 
 ```python
 masses = [3.54, 2.07, 9.22, 1.86, 1.71]
@@ -59,7 +59,7 @@ for m in masses:
 ## Використовуйте `else` для виконання блоку коду, коли умова `if` не виконується.
 
 - `else` можна використовувати після `if`.
-- Це дозволяє вказати альтернативу для виконання, коли умова _гілки_ `if` не виконується.
+- Allows us to specify an alternative to execute when the `if` _branch_ isn't taken.
 
 ```python
 masses = [3.54, 2.07, 9.22, 1.86, 1.71]
@@ -78,12 +78,12 @@ for m in masses:
 1.71 is small
 ```
 
-## Використовуйте `elif` для визначення додаткових перевірок.
+## Use `elif` to specify additional tests.
 
 - May want to provide several alternative choices, each with its own test.
 - Use `elif` (short for "else if") and a condition to specify these.
 - Завжди асоціюється з `if`.
-- Має йти перед `else` (що є блоком для решти випадків).
+- Must come before the `else` (which is the "catch all").
 
 ```python
 masses = [3.54, 2.07, 9.22, 1.86, 1.71]
@@ -107,7 +107,7 @@ for m in masses:
 ## Умови перевіряються один раз, послідовно.
 
 - Python послідовно проходить гілки умовного оператора, перевіряючи кожну по черзі.
-- Отже, порядок має значення.
+- So ordering matters.
 
 ```python
 grade = 85
@@ -138,7 +138,7 @@ else:
 adjusting velocity
 ```
 
-- Often use conditionals in a loop to "evolve" the values of variables.
+- Умовні оператори часто використовуються в циклі для послідовної зміни значень змінних.
 
 ```python
 velocity = 10.0
@@ -176,9 +176,7 @@ final velocity: 30.0
   </tr>
 </tbody></table>
 
-- The program must have a `print` statement _outside_ the body of the loop
-  to show the final value of `velocity`,
-  since its value is updated by the last iteration of the loop.
+- Програма повинна мати оператор `print` _поза_ тілом циклу, щоб вивести кінцеве значення `velocity`, оскільки його значення оновлюється під час останньої ітерації циклу.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
