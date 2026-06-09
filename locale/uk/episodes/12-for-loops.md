@@ -184,8 +184,7 @@ A program with a runtime error will start but an error will be thrown under cert
 
 ## Відстеження виконання
 
-Create a table showing the numbers of the lines that are executed when this program runs,
-and the values of the variables after each line is executed.
+Створіть таблицю: номери рядків, що виконуються під час роботи програми, та значення змінних після кожного кроку.
 
 ```python
 total = 0
@@ -213,9 +212,10 @@ for char in "tin":
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Зміна порядку символів у рядку
+## Reversing a String
 
-Заповніть порожні місця в програмі нижче, щоб вона друкувала "nit" (зворотний вихідний рядок символів "tin").
+Fill in the blanks in the program below so that it prints "nit"
+(the reverse of the original character string "tin").
 
 ```python
 original = "tin"
@@ -392,9 +392,9 @@ print(message)
 
 ## Відповідь
 
-- Python variable names are case sensitive: `number` and `Number` refer to different variables.
+- Імена змінних у Python чутливі до регістру: `number` та `Number` вказують на різні змінні.
 - Змінна `message` має бути ініціалізована як порожній рядок.
-- Потрібно додати рядок з вмістом`"a"` до `message`, а не невизначену змінну `a`.
+- We want to add the string `"a"` to `message`, not the undefined variable `a`.
 
 ```python
 message = ""
@@ -441,10 +441,10 @@ print('My favorite season is ', seasons[3])
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- A _for loop_ executes commands once for each value in a collection.
+- Цикл `for` виконує команди один раз для кожного значення в колекції.
 - Цикл `for` складається з колекції, змінної циклу та тіла циклу.
 - Перший рядок циклу `for` має закінчуватися двокрапкою, а тіло циклу має бути з відступом.
-- Indentation is always meaningful in Python.
+- Відступи у Python завжди мають значення.
 - Змінні циклу можна назвати як завгодно (але бажано, щоб їх назва була змістовною).
 - Тіло циклу може містити багато операторів.
 - Використовуйте `range` для перебору послідовності чисел.
