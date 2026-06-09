@@ -173,7 +173,7 @@ print(total)
 
 ## Відповідь
 
-IndentationError є синтаксичною помилкою. Programs with syntax errors cannot be started.
+IndentationError є синтаксичною помилкою. Програми з синтаксичними помилками неможливо запустити.
 A program with a runtime error will start but an error will be thrown under certain conditions.
 
 :::::::::::::::::::::::::
@@ -212,10 +212,9 @@ for char in "tin":
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Reversing a String
+## Зміна порядку символів у рядку на зворотний
 
-Fill in the blanks in the program below so that it prints "nit"
-(the reverse of the original character string "tin").
+Заповніть порожні місця в програмі нижче, щоб вона друкувала "nit" (символи з вихідного рядку "tin" у зворотному порядку).
 
 ```python
 original = "tin"
@@ -394,7 +393,7 @@ print(message)
 
 - Імена змінних у Python чутливі до регістру: `number` та `Number` вказують на різні змінні.
 - Змінна `message` має бути ініціалізована як порожній рядок.
-- We want to add the string `"a"` to `message`, not the undefined variable `a`.
+- Потрібно додати рядок з вмістом `"a"` до `message`, а не невизначену змінну `a`.
 
 ```python
 message = ""
