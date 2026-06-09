@@ -60,7 +60,7 @@ for number in [2, 3, 5]:
 ## Перший рядок циклу `for` має закінчуватися двокрапкою, а тіло циклу має бути з відступом.
 
 - Двокрапка в кінці першого рядка вказує на початок блоку операторів.
-- Python uses indentation rather than `{}` or `begin`/`end` to show _nesting_.
+- Python використовує відступи замість `{}` або `begin`/`end`, щоб показати _вкладеність_.
   - Any consistent indentation is legal, but almost everyone uses four spaces.
 
 ```python
@@ -103,7 +103,7 @@ for kitten in [2, 3, 5]:
 ## Тіло циклу може містити багато операторів.
 
 - Але жоден цикл не повинен мати довжину більше кількох рядків.
-- Hard for human beings to keep larger chunks of code in mind.
+- Людям важко утримувати у пам'яті великі фрагменти коду.
 
 ```python
 primes = [2, 3, 5]
@@ -122,10 +122,9 @@ for p in primes:
 ## Використовуйте `range` для перебору послідовності чисел.
 
 - Вбудована функція [`range`](https://docs.python.org/3/library/stdtypes.html#range) створює послідовність чисел.
-  - _Not_ a list: the numbers are produced on demand
-    to make looping over large ranges more efficient.
-- `range(N)` is the numbers 0..N-1
-  - Точні індекси списку або рядка символів довжиною N
+  - Це _не_ список: числа генеруються за потребою, щоб зробити перебір по великих діапазонах ефективнішим.
+- `range(N)` є послідовністю чисел від 0 до N-1 включно.
+  - Exactly the legal indices of a list or character string of length N
 
 ```python
 print('a range is not a list: range(0, 3)')
@@ -143,7 +142,7 @@ a range is not a list: range(0, 3)
 ## Шаблон накопичення перетворює набір значень на одне підсумкове.
 
 - Поширений алгоритм, який можна побачити у програмах:
-  1. Initialize an _accumulator_ variable to zero, the empty string, or the empty list.
+  1. Надати початкове значення для _накопичувальної змінної_: нуль, порожній рядок або порожній список.
   2. Оновлення змінної значеннями з колекції.
 
 ```python
