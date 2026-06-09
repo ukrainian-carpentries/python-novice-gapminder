@@ -1,12 +1,12 @@
 ---
-title: Wrap-Up
+title: Підбиття підсумків
 teaching: 20
 exercises: 0
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Name and locate scientific Python community sites for software, workshops, and help.
+- Назвіть і знайдіть сайти наукової спільноти Python, присвячені програмному забезпеченню, семінарам і допомозі користувачам.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -18,7 +18,9 @@ exercises: 0
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Leslie Lamport once said, "Writing is nature's way of showing you how sloppy your thinking is."
-Те саме стосується програмування: багато речей, які здаються очевидними, коли ми думаємо про них, виявляються чим завгодно, але тільки тоді, коли ми маємо їх точно пояснити.
+The same is true of programming:
+many things that seem obvious when we're thinking about them
+turn out to be anything but when we have to explain them precisely.
 
 ## Python supports a large and diverse community across academia and industry.
 
