@@ -174,7 +174,7 @@ print(total)
 ## Відповідь
 
 IndentationError є синтаксичною помилкою. Програми з синтаксичними помилками неможливо запустити.
-A program with a runtime error will start but an error will be thrown under certain conditions.
+Програма з помилкою виконання запускається, але за певних умов видається помилка.
 
 :::::::::::::::::::::::::
 
