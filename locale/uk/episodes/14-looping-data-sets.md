@@ -188,28 +188,28 @@ import matplotlib.pyplot as plt
 fig, ax = plt.subplots(1,1)
 for filename in glob.glob('data/gapminder_gdp*.csv'):
     dataframe = pd.read_csv(filename)
-    # extract <region> from the filename, expected to be in the format 'data/gapminder_gdp_<region>.csv'.
-    # we will split the string using the split method and `_` as our separator,
-    # retrieve the last string in the list that split returns (`<region>.csv`), 
-    # and then remove the `.csv` extension from that string.
-    # NOTE: the pathlib module covered in the next callout also offers
-    # convenient abstractions for working with filesystem paths and could solve this as well:
+    # Вилучаємо <region> з назви файлу, який має бути у форматі 'data/gapminder_gdp_<region>.csv'.
+    # Розділимо рядок за допомогою методу split та роздільника `_`,
+    # отримаємо останній рядок зі списку, який повертає split (`<region>.csv`),
+    # а потім видалимо із цього рядка розширення `.csv`.
+    # ПРИМІТКА: модуль pathlib, описаний у наступному блоці, також пропонує
+    # зручні абстракції для роботи зі шляхами файлової системи і може вирішити це завдання:
     # from pathlib import Path
     # region = Path(filename).stem.split('_')[-1]
     region = filename.split('_')[-1][:-4]
-    # extract the years from the columns of the dataframe 
+    # Вилучаємо роки зі стовпців датафрейму
     headings = dataframe.columns[1:]
     years = headings.str.split('_').str.get(1)
-    # pandas raises errors when it encounters non-numeric columns in a dataframe computation
-    # but we can tell pandas to ignore them with the `numeric_only` parameter
+    # Pandas видає помилку, коли зустрічає нечислові стовпці в обчисленнях з датафреймом,
+    # але ми можемо вказати Pandas ігнорувати їх за допомогою параметра `numeric_only`
     dataframe.mean(numeric_only=True).plot(ax=ax, label=region)
-    # NOTE: another way of doing this selects just the columns with gdp in their name using the filter method
+    # ПРИМІТКА: інший спосіб — застосувати метод filter для вибору лише стовпців, що містять gdp у назві
     # dataframe.filter(like="gdp").mean().plot(ax=ax, label=region)
-# set the title and labels
-ax.set_title('GDP Per Capita for Regions Over Time')
+# Встановлюємо заголовок та підписи
+ax.set_title('ВВП на душу населення для регіонів у часі')
 ax.set_xticks(range(len(years)))
 ax.set_xticklabels(years)
-ax.set_xlabel('Year')
+ax.set_xlabel('Рік')
 plt.tight_layout()
 plt.legend()
 plt.show()
