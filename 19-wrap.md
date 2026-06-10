@@ -1,18 +1,18 @@
 ---
-title: Wrap-Up
+title: Підбиття підсумків
 teaching: 20
 exercises: 0
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Name and locate scientific Python community sites for software, workshops, and help.
+- Назвіть і знайдіть сайти наукової спільноти Python, присвячені програмному забезпеченню, семінарам і допомозі користувачам.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- What have we learned?
+- Що саме ми вивчили?
 - What else is out there and where do I find it?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -24,13 +24,13 @@ turn out to be anything but when we have to explain them precisely.
 
 ## Python supports a large and diverse community across academia and industry.
 
-- The [Python 3 documentation](https://docs.python.org/3/) covers the core language
-  and the standard library.
+- [Документація з Python 3](https://docs.python.org/3/) охоплює ядро мови
+  та стандартну бібліотеку.
 
-- [PyCon](https://pycon.org/) is the largest annual conference for the Python community.
+- [PyCon](https://pycon.org/) є найбільшою щорічною конференцією для спільноти Python.
 
 - [SciPy](https://scipy.org) is a rich collection of scientific utilities.
-  It is also the name of [a series of annual conferences](https://conference.scipy.org/).
+  Це також назва [серії щорічних конференцій](https://conference.scipy.org/).
 
 - [Jupyter](https://jupyter.org) is the home of Project Jupyter.
 

@@ -1,48 +1,40 @@
 ---
-title: Pandas DataFrames
+title: Датафрейми Pandas
 teaching: 15
 exercises: 15
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Select individual values from a Pandas dataframe.
-- Select entire rows or entire columns from a dataframe.
-- Select a subset of both rows and columns from a dataframe in a single operation.
-- Select a subset of a dataframe by a single Boolean criterion.
+- Вибір окремих значень з датафрейму Pandas.
+- Виділення цілих рядків або цілих стовпців з датафрейму.
+- Вибір підмножини рядків і стовпців з датафрейму за одну операцію.
+- Вибір підмножини з датафрейму за єдиним булевим критерієм.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can I do statistical analysis of tabular data?
+- Як я можу виконати статистичний аналіз табличних даних?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Note about Pandas DataFrames/Series
+## Датафрейми та серії у Pandas
 
-A [DataFrame][pandas-dataframe] is a collection of [Series][pandas-series];
-The DataFrame is the way Pandas represents a table, and Series is the data-structure
-Pandas use to represent a column.
+Датафрейм ([DataFrame][pandas-dataframe]) містить декілька серій ([Series][pandas-series]); Датафрейм — це спосіб представлення таблиці в Pandas, а серія — це структура даних, яку Pandas використовує для представлення окремого стовпця.
 
-Pandas is built on top of the [Numpy][numpy] library, which in practice means that
-most of the methods defined for Numpy Arrays apply to Pandas Series/DataFrames.
+Pandas побудована на основі бібліотеки [Numpy][numpy], що означає, що більшість методів для масивів Numpy також застосовується до датафреймів та серій у Pandas.
 
-What makes Pandas so attractive is the powerful interface to access individual records
-of the table, proper handling of missing values, and relational-databases operations
-between DataFrames.
+Що робить Pandas таким привабливим? Це потужний інтерфейс для доступу до окремих записів таблиці, належної обробки відсутніх значень та підтримки операцій з датафреймами, подібних до тих, що застосовуються в реляційних базах даних.
 
-## Selecting values
+## Вибір значень
 
-To access a value at the position `[i,j]` of a DataFrame, we have two options, depending on
-what is the meaning of `i` in use.
-Remember that a DataFrame provides an *index* as a way to identify the rows of the table;
-a row, then, has a *position* inside the table as well as a *label*, which
-uniquely identifies its *entry* in the DataFrame.
+Існує два способи доступу до значення в позиції `[i,j]` у датафреймі, залежно від того, як інтерпретується `i`.
+Пам’ятайте, що датафрейм використовує _індекс_ для ідентифікації рядків таблиці; отже, кожен рядок має _позицію_ в таблиці, а також _заголовок рядка_ (_мітку_), яка однозначно визначає цей рядок у датафреймі.
 
-## Use `DataFrame.iloc[..., ...]` to select values by their (entry) position
+## Використовуйте `DataFrame.iloc[..., ...]` для вибору значень за їх позицією
 
-- Can specify location by numerical index analogously to 2D version of character selection in strings.
+- Можна вказати позицію значення за допомогою числового індексу аналогічно 2D-версії вибору символів у рядках.
 
 ```python
 import pandas as pd
@@ -54,9 +46,9 @@ print(data.iloc[0, 0])
 1601.056136
 ```
 
-## Use `DataFrame.loc[..., ...]` to select values by their (entry) label.
+## Використовуйте `DataFrame.loc[..., ...]` для доступу до значень за їхніми мітками.
 
-- Can specify location by row and/or column name.
+- Можна вказати розташування, використовуючи заголовок рядку та/або стовпця.
 
 ```python
 print(data.loc["Albania", "gdpPercap_1952"])
@@ -66,9 +58,9 @@ print(data.loc["Albania", "gdpPercap_1952"])
 1601.056136
 ```
 
-## Use `:` on its own to mean all columns or all rows.
+## Використовуйте лише `:` замість мітки для позначення всіх стовпців або всіх рядків.
 
-- Just like Python's usual slicing notation.
+- Це відповідає звичайному синтаксису зрізів у Python.
 
 ```python
 print(data.loc["Albania", :])
@@ -90,7 +82,7 @@ gdpPercap_2007    5937.029526
 Name: Albania, dtype: float64
 ```
 
-- Would get the same result printing `data.loc["Albania"]` (without a second index).
+- Той самий результат можна отримати, використовуючи `data.loc["Albania"]` (без вказання другого індексу).
 
 ```python
 print(data.loc[:, "gdpPercap_1952"])
@@ -108,10 +100,10 @@ United Kingdom             9979.508487
 Name: gdpPercap_1952, dtype: float64
 ```
 
-- Would get the same result printing `data["gdpPercap_1952"]`
-- Also get the same result printing `data.gdpPercap_1952` (not recommended, because easily confused with `.` notation for methods)
+- Той самий результат можна отримати, якщо надрукувати `data["gdpPercap_1952"]`
+- Більш того, той самий результат можна отримати, застосовуючи нотацію `data.gdpPercap_1952` (але не рекомендується, оскільки її легко сплутати з позначенням `.` для використання методів)
 
-## Select multiple columns or rows using `DataFrame.loc` and a named slice.
+## Вибирайте кілька стовпців або рядків за допомогою `DataFrame.loc` та визначеного зрізу.
 
 ```python
 print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'])
@@ -127,16 +119,13 @@ Norway         13450.401510    16361.876470    18965.055510
 Poland          5338.752143     6557.152776     8006.506993
 ```
 
-In the above code, we discover that **slicing using `loc` is inclusive at both
-ends**, which differs from **slicing using `iloc`**, where slicing indicates
-everything up to but not including the final index.
+У наведеному вище коді ми бачимо, що **зріз із використанням `loc` включає дані на обох вказаних кінцях**, на відміну від **зрізу із застосуванням `iloc`**, де зріз не включає кінцевий індекс.
 
-## Result of slicing can be used in further operations.
+## Результат зрізу можна використовувати в подальших операціях.
 
-- Usually don't just print a slice.
-- All the statistical operators that work on entire dataframes
-  work the same way on slices.
-- E.g., calculate max of a slice.
+- Зазвичай зрізи формуються не тільки для друку.
+- Усі статистичні оператори, які працюють зі цілими фреймами даних, так само працюють зі зрізами.
+- Наприклад, обчислення максимальних значень у зрізі.
 
 ```python
 print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].max())
@@ -160,17 +149,17 @@ gdpPercap_1972    7778.414017
 dtype: float64
 ```
 
-## Use comparisons to select data based on value.
+## Використовуйте операції порівняння для вибору даних на основі певного значення.
 
-- Comparison is applied element by element.
-- Returns a similarly-shaped dataframe of `True` and `False`.
+- Порівняння здійснюється поелементно.
+- Повертає датафрейм подібної форми, що містить значення `True` та `False`.
 
 ```python
-# Use a subset of data to keep output readable.
+# Використовуємо частину даних, щоб результат був читабельним
 subset = data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972']
 print('Subset of data:\n', subset)
 
-# Which values were greater than 10000 ?
+# Які значення перевищують 10000 ?
 print('\nWhere are values large?\n', subset > 10000)
 ```
 
@@ -194,9 +183,9 @@ Norway                True           True           True
 Poland               False          False          False
 ```
 
-## Select values or NaN using a Boolean mask.
+## Вибір значень або NaN за допомогою булевої маски.
 
-- A frame full of Booleans is sometimes called a *mask* because of how it can be used.
+- Датафрейм, що містить лише булеві значення, іноді називають маскою через спосіб його використання.
 
 ```python
 mask = subset > 10000
@@ -213,8 +202,8 @@ Norway          13450.40151     16361.87647     18965.05551
 Poland                  NaN             NaN             NaN
 ```
 
-- Get the value where the mask is true, and NaN (Not a Number) where it is false.
-- Useful because NaNs are ignored by operations like max, min, average, etc.
+- Результат містить оригінальні значення, коли умова виконується, та NaN (Not a Number - не число) у решті випадків.
+- Це зручно, оскільки операції на кшталт max, min, average автоматично ігнорують значення NaN.
 
 ```python
 print(subset[subset > 10000].describe())
@@ -232,28 +221,22 @@ min      12790.849560    10022.401310    12269.273780
 max      13450.401510    16361.876470    18965.055510
 ```
 
-## Group By: split-apply-combine
+## Group By: групує, застосовує та комбінує
 
 ::::::::::::::::::::::::::::::::::::: instructor
 Learners often struggle here, many may not work with financial data and concepts so they
-find the example concepts difficult to get their head around. The biggest problem
-though is the line generating the wealth_score, this step needs to be talked through
-throughly:
-* It uses implicit conversion between boolean and float values which 
-has not been covered in the course so far. 
-* The axis=1 argument needs to be explained clearly.
-:::::::::::::::::::::::::::::::::::::::::::::::::
+find the example concepts difficult to get their head around. Однак основна проблема полягає в рядку, який обчислює `wealth_score`; цей крок потребує ретельного обговорення:
 
-Pandas vectorizing methods and grouping operations are features that provide users
-much flexibility to analyse their data.
+- Він використовує неявне перетворення між булевим і дійсним значенням, яке ще не розглядалося в курсі.
+- Параметр axis=1 також потребує чіткого пояснення.
+  :::::::::::::::::::::::::::::::::::::::::::::::::
 
-For instance, let's say we want to have a clearer view on how the European countries
-split themselves according to their GDP.
+Методи векторизації та операції групування Pandas — це функції, які надають користувачам велику гнучкість для аналізу своїх даних.
 
-1. We may have a glance by splitting the countries in two groups during the years surveyed,
-  those who presented a GDP *higher* than the European average and those with a *lower* GDP.
-2. We then estimate a *wealthy score* based on the historical (from 1962 to 2007) values,
-  where we account how many times a country has participated in the groups of *lower* or *higher* GDP
+Наприклад, скажімо, ми хочемо мати більш чітке уявлення про те, як європейські країни розподілені відповідно до свого ВВП.
+
+1. Ми можемо поглянути на ситуацію, поділивши країни на дві групи за роки спостережень: ті, у яких ВВП _вище_ середнього по Європі, і країни з _нижчим_ ВВП.
+2. Далі ми оцінюємо показник заможності на основі історичних значень (з 1962 по 2007 рік), підраховуючи, скільки разів кожна країна входила до груп із вищим або нижчим ВВП
 
 ```python
 mask_higher = data > data.mean()
@@ -296,8 +279,7 @@ United Kingdom            1.000000
 dtype: float64
 ```
 
-Finally, for each group in the `wealth_score` table, we sum their (financial) contribution
-across the years surveyed using chained methods:
+Нарешті, для кожної групи в таблиці `wealth_score` ми підсумовуємо їх (фінансовий) внесок за роки дослідження, використовуючи ланцюжок методів:
 
 ```python
 print(data.groupby(wealth_score).sum())
@@ -325,10 +307,9 @@ print(data.groupby(wealth_score).sum())
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Selection of Individual Values
+## Вибір індивідуальних значень
 
-Assume Pandas has been imported into your notebook
-and the Gapminder GDP data for Europe has been loaded:
+Припустімо, що Pandas було імпортовано та дані Gapminder про ВВП для Європи завантажено.
 
 ```python
 import pandas as pd
@@ -336,19 +317,19 @@ import pandas as pd
 data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 ```
 
-Write an expression to find the Per Capita GDP of Serbia in 2007.
+Напишіть вираз для визначення ВВП Сербії на душу населення у 2007 році.
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
-The selection can be done by using the labels for both the row ("Serbia") and the column ("gdpPercap\_2007"):
+Вибір можна зробити за допомогою мітки "Сербія" для рядка, та мітки "gdpPercap\_2007" для стовпця:
 
 ```python
 print(data_europe.loc['Serbia', 'gdpPercap_2007'])
 ```
 
-The output is
+Результат є таким
 
 ```output
 9786.534714
@@ -360,11 +341,10 @@ The output is
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Extent of Slicing
+## Межі зрізу
 
-1. Do the two statements below produce the same output?
-2. Based on this,
-  what rule governs what is included (or not) in numerical slices and named slices in Pandas?
+1. Чи дають два наведені нижче твердження однаковий результат?
+2. На основі цього, яке правило визначає, що включено (чи ні) до числових та іменованих зрізів у Pandas?
 
 ```python
 print(data_europe.iloc[0:2, 0:2])
@@ -373,9 +353,9 @@ print(data_europe.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
-No, they do not produce the same output! The output of the first statement is:
+Ні, вони не дають однакові результати! Результатом першого виразу є:
 
 ```output
         gdpPercap_1952  gdpPercap_1957
@@ -384,7 +364,7 @@ Albania     1601.056136     1942.284244
 Austria     6137.076492     8842.598030
 ```
 
-The second statement gives:
+Другий вираз дає:
 
 ```output
         gdpPercap_1952  gdpPercap_1957  gdpPercap_1962
@@ -394,12 +374,8 @@ Austria     6137.076492     8842.598030    10750.721110
 Belgium     8343.105127     9714.960623    10991.206760
 ```
 
-Clearly, the second statement produces an additional column and an additional row compared to the first statement.  
-What conclusion can we draw? We see that a numerical slice, 0:2, *omits* the final index (i.e. index 2)
-in the range provided,
-while a named slice, 'gdpPercap\_1952':'gdpPercap\_1962', *includes* the final element.
-
-
+Вочевидь, другий вираз повертає додатковий стовпець і додатковий рядок у порівнянні з першим.  
+Який висновок ми можемо зробити? Ми бачимо, що числовий зріз 0:2 _не включає_ кінцевий індекс (тобто, індекс 2), тоді як іменований зріз 'gdpPercap\_1952':'gdpPercap\_1962' _включає_ кінцевий елемент.
 
 :::::::::::::::::::::::::
 
@@ -407,10 +383,9 @@ while a named slice, 'gdpPercap\_1952':'gdpPercap\_1962', *includes* the final e
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Reconstructing Data
+## Реконструювання даних
 
-Explain what each line in the following short program does:
-what is in `first`, `second`, etc.?
+Опишіть, що робить кожен рядок наведеної короткої програми та які значення зберігаються в змінних `first`, `second` тощо?
 
 ```python
 first = pd.read_csv('data/gapminder_all.csv', index_col='country')
@@ -422,52 +397,42 @@ fourth.to_csv('result.csv')
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
-Let's go through this piece of code line by line.
+Перегляньмо цей фрагмент коду рядок за рядком.
 
 ```python
 first = pd.read_csv('data/gapminder_all.csv', index_col='country')
 ```
 
-This line loads the dataset containing the GDP data from all countries into a dataframe called
-`first`. The `index_col='country'` parameter selects which column to use as the
-row labels in the dataframe.
+В цьому рядку дані про ВВП з усіх країн завантажуються у датафрейм `first`. Параметр `index_col='country'` вказує, який стовпець використовується як заголовки рядків у датафреймі.
 
 ```python
 second = first[first['continent'] == 'Americas']
 ```
 
-This line makes a selection: only those rows of `first` for which the 'continent' column matches
-'Americas' are extracted. Notice how the Boolean expression inside the brackets,
-`first['continent'] == 'Americas'`, is used to select only those rows where the expression is true.
-Try printing this expression! Can you print also its individual True/False elements?
-(hint: first assign the expression to a variable)
+Цей рядок фільтрує дані: вибираються лише ті рядки з `first`, у яких стовпець 'continent' містить значення 'Americas'. Зверніть увагу, як логічний вираз у дужках, `first['continent'] == 'Americas'`, використовується для вибору лише тих рядків, де вираз є істинним.
+Спробуйте надрукувати цей вираз! Чи можете ви також надрукувати його окремі елементи True/False?
+(підказка: спочатку призначте вираз певній змінній)
 
 ```python
 third = second.drop('Puerto Rico')
 ```
 
-As the syntax suggests, this line drops the row from `second` where the label is 'Puerto Rico'. The
-resulting dataframe `third` has one row less than the original dataframe `second`.
+Як підказує синтаксис, цей код видаляє рядок з міткою 'Puerto Rico' з датафрейму `second`. У результаті датафрейм `third` містить на один рядок менше, ніж вихідний датафрейм `second`.
 
 ```python
 fourth = third.drop('continent', axis = 1)
 ```
 
-Again we apply the drop function, but in this case we are dropping not a row but a whole column.
-To accomplish this, we need to specify also the `axis` parameter (we want to drop the second column
-which has index 1).
+Знову ми застосовуємо функцію `drop`, але в цьому випадку ми видаляємо не рядок, а цілий стовпець.
+Для цього нам також потрібно вказати параметр `axis` (ми хочемо видалити другий стовпець, який має індекс 1).
 
 ```python
 fourth.to_csv('result.csv')
 ```
 
-The final step is to write the data that we have been working on to a csv file. Pandas makes this easy
-with the `to_csv()` function. The only required argument to the function is the filename. Note that the
-file will be written in the directory from which you started the Jupyter or Python session.
-
-
+Останнім кроком є ​​збереження даних, над якими ми працювали, у файл csv. Pandas спрощує це завдання за допомогою функції `to_csv()`. Єдиним обов’язковим аргументом для функції є ім’я файлу. Зверніть увагу, що файл буде записано в каталозі, з якого ви розпочали сесію Jupyter або Python.
 
 :::::::::::::::::::::::::
 
@@ -475,10 +440,10 @@ file will be written in the directory from which you started the Jupyter or Pyth
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Selecting Indices
+## Вибір індексів
 
-Explain in simple terms what `idxmin` and `idxmax` do in the short program below.
-When would you use these methods?
+Поясніть простими словами, що роблять `idxmin` і `idxmax` у короткій програмі нижче.
+У яких випадках ви б використовували ці методи?
 
 ```python
 data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
@@ -488,14 +453,11 @@ print(data.idxmax())
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
-For each column in `data`, `idxmin` will return the index value corresponding to each column's minimum;
-`idxmax` will do accordingly the same for each column's maximum value.
+Для кожного стовпця в `data`, `idxmin` поверне значення індексу, що відповідає мінімуму кожного стовпця; `idxmax` зробить те саме для максимального значення кожного стовпця.
 
-You can use these functions whenever you want to get the row index of the minimum/maximum value and not the actual minimum/maximum value.
-
-
+Ви можете використовувати ці функції щоразу, коли потрібно отримати індекс рядка з мінімальним або максимальним значенням, а не саме значення.
 
 :::::::::::::::::::::::::
 
@@ -503,20 +465,19 @@ You can use these functions whenever you want to get the row index of the minimu
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Practice with Selection
+## Потренуйтеся з вибором
 
-Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded.
-Write an expression to select each of the following:
+Припустімо, що Pandas було імпортовано та дані Gapminder про ВВП для Європи завантажено.
+Напишіть вираз, щоб вибрати кожне з наступного:
 
-1. GDP per capita for all countries in 1982.
-2. GDP per capita for Denmark for all years.
-3. GDP per capita for all countries for years *after* 1985.
-4. GDP per capita for each country in 2007 as a multiple of
-  GDP per capita for that country in 1952.
+1. ВВП на душу населення для всіх країн у 1982 році.
+2. ВВП на душу населення для Данії за всі роки.
+3. ВВП на душу населення для всіх країн за роки _після_ 1985 року.
+4. ВВП на душу населення у 2007 році для кожної країни, виражене як кратне до ВВП на душу населення цієї ж країни у 1952 році.
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
 1:
 
@@ -536,7 +497,7 @@ data.loc['Denmark',:]
 data.loc[:,'gdpPercap_1985':]
 ```
 
-Pandas is smart enough to recognize the number at the end of the column label and does not give you an error, although no column named `gdpPercap_1985` actually exists. This is useful if new columns are added to the CSV file later.
+Пакет pandas досить розумний, щоб розпізнати число в кінці заголовку стовпця й не видати помилки, навіть якщо стовпця з назвою `gdpPercap_1985` не існує. Це зручно, якщо нові стовпці додаються до файлу CSV пізніше.
 
 4:
 
@@ -550,27 +511,27 @@ data['gdpPercap_2007']/data['gdpPercap_1952']
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Many Ways of Access
+## Багато способів доступу
 
-There are at least two ways of accessing a value or slice of a DataFrame: by name or index.
-However, there are many others. For example, a single column or row can be accessed either as a `DataFrame`
-or a `Series` object.
+Отримати значення або зріз з датафрейму можна щонайменше двома способами: за назвою або за індексом.
+Однак існує багато інших варіантів. Наприклад, можна отримати окремий стовпець або рядок як `DataFrame`
+або `Series` об'єкт.
 
-Suggest different ways of doing the following operations on a DataFrame:
+Запропонуйте різні способи виконання наступних операцій з датафреймами:
 
-1. Access a single column
-2. Access a single row
-3. Access an individual DataFrame element
-4. Access several columns
-5. Access several rows
-6. Access a subset of specific rows and columns
-7. Access a subset of row and column ranges
+1. Доступ до одного стовпця
+2. Доступ до одного рядку
+3. Доступ до окремого елемента датафрейму
+4. Доступ до декількох стовпців
+5. Доступ до декількох рядків
+6. Доступ до підмножини, заданої визначеними рядками та стовпцями
+7. Доступ до підмножини, заданої діапазонами рядків та стовпців
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
-1\. Access a single column:
+1\. Доступ до одного стовпця:
 
 ```python
 # by name
@@ -592,7 +553,7 @@ data.iloc[:, [col_index]] # as a DataFrame
 data.T[data.T.index == "col_name"].T
 ```
 
-2\. Access a single row:
+2\. Доступ до одного рядку:
 
 ```python
 # by name using .loc
@@ -611,7 +572,7 @@ data.iloc[[row_index]]   # as a DataFrame
 data[data.index == "row_name"]
 ```
 
-3\. Access an individual DataFrame element:
+3\. Доступ до окремого елемента датафрейму:
 
 ```python
 # by column/row names
@@ -651,7 +612,7 @@ data.iloc[:, [col_index]].loc[["row_name"]]  # as a DataFrame
 data[data.index == "row_name"].T[data.T.index == "col_name"].T
 ```
 
-4\. Access several columns:
+4\. Доступ до декількох стовпців:
 
 ```python
 # by name
@@ -662,7 +623,7 @@ data.loc[:, ["col1", "col2", "col3"]]
 data.iloc[:, [col1_index, col2_index, col3_index]]
 ```
 
-5\. Access several rows
+5\. Доступ до декількох рядків
 
 ```python
 # by name
@@ -672,7 +633,7 @@ data.loc[["row1", "row2", "row3"]]
 data.iloc[[row1_index, row2_index, row3_index]]
 ```
 
-6\. Access a subset of specific rows and columns
+6\. Доступ до підмножини, заданої визначеними рядками та стовпцями
 
 ```python
 # by names
@@ -688,7 +649,7 @@ data[["col1", "col2", "col3"]].iloc[[row1_index, row2_index, row3_index]]
 data.iloc[:, [col1_index, col2_index, col3_index]].loc[["row1", "row2", "row3"]]
 ```
 
-7\. Access a subset of row and column ranges
+7\. Доступ до підмножини, заданої діапазонами рядків та стовпців
 
 ```python
 # by name
@@ -710,16 +671,16 @@ data.iloc[:, col1_index:col2_index].loc["row1":"row2"]
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Exploring available methods using the `dir()` function
+## Пошук доступних методів використовуючи функцію `dir()`
 
-Python includes a `dir()` function that can be used to display all of the available methods (functions) that are built into a data object.  In Episode 4, we used some methods with a string. But we can see many more are available by using `dir()`:
+У Python є функція `dir()`, яка дозволяє переглянути всі доступні методи (функції), які вбудовані в об’єкт даних.  В епізоді 4 ми використали деякі методи для рядка. Але за допомогою `dir()` можна побачити ще більше доступних методів:
 
 ```python
 my_string = 'Hello world!'   # creation of a string object 
 dir(my_string)
 ```
 
-This command returns:
+Ця команда повертає:
 
 ```python
 ['__add__',
@@ -733,16 +694,15 @@ This command returns:
 'zfill']
 ```
 
-You can use `help()` or <kbd>Shift</kbd>\+<kbd>Tab</kbd> to get more information about what these methods do.
+Ви можете використати `help()` або <kbd>Shift</kbd>\+<kbd>Tab</kbd>, щоб дізнатися більше про призначення цих методів.
 
-Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded as `data`.  Then, use `dir()`
-to find the function that prints out the median per-capita GDP across all European countries for each year that information is available.
+Припустимо, що Pandas вже імпортовано, а дані Gapminder про ВВП Європи завантажено в змінну `data`.  Тоді скористайтеся `dir()`, щоб знайти функцію, яка друкує середній ВВП на душу населення для всіх європейських країн за кожен доступний рік.
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
-Among many choices, `dir()` lists the `median()` function as a possibility.  Thus,
+Серед багатьох варіантів `dir()` пропонує функцію `median()`.  Таким чином,
 
 ```python
 data.median()
@@ -754,13 +714,10 @@ data.median()
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Interpretation
+## Інтерпретація даних
 
-Poland's borders have been stable since 1945,
-but changed several times in the years before then.
-How would you handle this if you were creating a table of GDP per capita for Poland
-for the entire twentieth century?
-
+Кордони Польщі стабільні з 1945 року, але до цього кілька разів змінювалися.
+Як би ви врахували це при створенні таблиці ВВП на душу населення для Польщі за все ХХ століття?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -768,15 +725,14 @@ for the entire twentieth century?
 [pandas-series]: https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.html
 [numpy]: https://www.numpy.org/
 
-
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Use `DataFrame.iloc[..., ...]` to select values by integer location.
-- Use `:` on its own to mean all columns or all rows.
-- Select multiple columns or rows using `DataFrame.loc` and a named slice.
-- Result of slicing can be used in further operations.
-- Use comparisons to select data based on value.
-- Select values or NaN using a Boolean mask.
+- Використовуйте `DataFrame.iloc[..., ...]` для вибору значень за їх позицією
+- Використовуйте лише `:` замість міток для позначення всіх стовпців або всіх рядків.
+- Вибирайте кілька стовпців або рядків за допомогою `DataFrame.loc` та зрізу, заданого іменами стовпців або рядків.
+- Результат застосування операції зрізу може бути використаний у подальших операціях.
+- Використовуйте порівняння для вибору даних на основі їх значень.
+- Вибирайте значення або NaN за допомогою булевої маски.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 

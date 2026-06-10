@@ -1,5 +1,5 @@
 ---
-title: Setup
+title: Інструкції з налаштування
 ---
 
 ## Getting the Data
@@ -13,8 +13,6 @@ server in the root directory (see [Starting JupyterLab](episodes/01-run-quit.md#
 ## Installing Python Using Anaconda
 
 Please refer to the [Python section of the workshop website for installation instructions.](https://carpentries.github.io/workshop-template/install_instructions/#python)
-
-
 
 [gapminder]: https://en.wikipedia.org/wiki/Gapminder_Foundation
 

@@ -29,7 +29,7 @@ title: 'Reference'
     - `stop` is the index of the element after the last desired element.
 - Use `len(...)` to find the length of a variable or string.
 
-## [Data Types and Type Conversion](episodes/03-types-conversion.md)
+## [Типи даних та їх перетворення](episodes/03-types-conversion.md)
 
 - Each value has a type. This controls what can be done with it.
   - `int` represents an integer
@@ -43,7 +43,7 @@ title: 'Reference'
     - Convert string to integer: `int(...)`.
     - Convert integer to string: `str(...)`.
 
-## [Built-in Functions and Help](episodes/04-built-in.md)
+## [Вбудовані функції та Довідка](episodes/04-built-in.md)
 
 - To add a comment, place `#` before the thing you do not with to be executed.
 - Commonly used built-in functions:
@@ -53,7 +53,7 @@ title: 'Reference'
   - `help()` displays documentation for the function in the parenthesis.
     - Other ways to get help include holding down `shift` and pressing `tab` in Jupyter Notebooks.
 
-## [Libraries](episodes/06-libraries.md)
+## [Бібліотеки](episodes/06-libraries.md)
 
 - Importing a library:
   - Use `import ...` to load a library.
@@ -89,7 +89,7 @@ title: 'Reference'
   - We can then use this to select values.
 - To use a select-apply-combine operation we use `data.apply(lambda x: x > x.mean())` where `mean()` can be any operation the user would like to be applied to x.
 
-## [Plotting](episodes/09-plotting.md)
+## [Побудова графіків](episodes/09-plotting.md)
 
 - The most widely used plotting library is `matplotlib`.
   - Usually imported using `import matplotlib.pyplot as plt`.
@@ -119,7 +119,7 @@ plt.legend()
 - To combine two lists use `list_name_1.extend(list_name_2)`.
 - To remove an item from a list use `del list_name[index]`.
 
-## [For Loops](episodes/12-for-loops.md)
+## [Цикли for](episodes/12-for-loops.md)
 
 - Start a for loop with `for number in [1, 2, 3]:`, with the following lines indented.
   - `[1, 2, 3]` is considered the collection.
@@ -132,7 +132,7 @@ for number in range(0,5):
     print(number)
 ```
 
-## [Conditionals](episodes/13-conditionals.md)
+## [Умовні оператори](episodes/13-conditionals.md)
 
 - Defined similarly to a loop, using `if variable conditional value:`.
   - For example, `if variable > 5:`.
@@ -172,7 +172,7 @@ for filename in glob.glob(*.txt):
   data = pd.read_csv(filename)
 ```
 
-## [Writing Functions](episodes/16-writing-functions.md)
+## [Написання функцій](episodes/16-writing-functions.md)
 
 - Define a function using `def function_name(parameters):`. Replace `parameters` with the variables to use when the function is executed.
 - Run by using `function_name(parameters)`.

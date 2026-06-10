@@ -1,14 +1,14 @@
 ---
-title: Lunch
+title: Ланч
 teaching: 0
 exercises: 0
 break: 45
 ---
 
-Over lunch, reflect on and discuss the following:
+За обідом поміркуйте та обговоріть наступне:
 
-- What sort of packages might you use in Python and why would you use them?
-- How would data need to be formatted to be used in Pandas data frames? Would the data you have meet these requirements?
-- What limitations or problems might you run into when thinking about how to apply what we've learned to your own projects or data?
+- Які пакети можна використовувати в Python, і чому ми їх використовуємо?
+- Як мають бути відформатовані дані, щоб використовувати їх у датафреймах Pandas? Чи задовольняють ваші поточні дані ці вимоги?
+- З якими обмеженнями або проблемами ви можете зустрітися, якщо спробуєте застосувати набуті знання до ваших власних проєктів або даних?
 
 

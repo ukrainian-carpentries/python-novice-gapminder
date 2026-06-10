@@ -1,5 +1,5 @@
 ---
-title: Lesson Design
+title: Дизайн уроку
 ---
 
 :::::::::::::::::::::::::::::::::::::::::  callout
@@ -11,17 +11,16 @@ in order to make the lesson plan more concrete.
 Contributions (both in the form of pull requests with filled-in exercises,
 and comments on specific exercises, ordering, and timings) are greatly appreciated.**
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Process Used
 
 > Michael Pollan's advice if he taught R or Python programming:
-> 
+>
 > 1. Write code.
 > 2. Not too much.
 > 3. Mostly plots.
-> 
+>
 > — [Michael Koontz](https://twitter.com/_mikoontz/status/758021742078025728)
 > {: .quotation}
 
@@ -29,24 +28,24 @@ This lesson was developed using a slimmed-down variant of the "Understanding by 
 The main sections are:
 
 1. Assumptions about audience, time, etc.
-  (The current draft also includes some conclusions and decisions in this
-  section - that should be refactored.)
+   (The current draft also includes some conclusions and decisions in this
+   section - that should be refactored.)
 
 2. Desired results:
-  overall goals, summative assessments at half-day granularity, what learners
-  will be able to do, what learners will know.
+   overall goals, summative assessments at half-day granularity, what learners
+   will be able to do, what learners will know.
 
 3. Learning plan:
-  each episode has a heading that summarizes what will be covered,
-  then estimates time that will be spent on teaching and on exercises,
-  while the exercises are given as bullet points.
+   each episode has a heading that summarizes what will be covered,
+   then estimates time that will be spent on teaching and on exercises,
+   while the exercises are given as bullet points.
 
 ## Stage 1: Assumptions
 
 - Audience
   - Graduate students in numerate disciplines from cosmology to archaeology
   - Who have manipulated data in spreadsheets and with interactive tools like SAS
-  - But have *not* programmed beyond CPD (copy-paste-despair)
+  - But have _not_ programmed beyond CPD (copy-paste-despair)
 - Constraints
   - One full day 09:00-16:30
     - 06:15 class time
@@ -60,28 +59,25 @@ The main sections are:
   - Use the Jupyter Notebook
     - Authentic tool used by many instructors
     - There isn't really an alternative
-    - And means that even people who have seen a bit of Python before
-      will probably learn something
+    - І це означає, що навіть ті, хто вже трохи працював із Python, скоріше за все, дізнаються для себе щось нове
 - Motivating Example
-  - Creating 2D plots suitable for inclusion in papers
-  - Appeals to almost everyone
+  - Створення двовимірних графіків, придатних для включення до наукових публікацій
+  - Цікавий майже всім
   - Makes lesson usable by both Carpentries
-    - And means that even people who have seen a bit of Python before
-      will probably learn something
-- Data
+    - І це означає, що навіть ті, хто вже трохи працював із Python, скоріше за все, дізнаються для себе щось нове
+- Дані
   - Use the gapminder data throughout
-  - But break into multiple files by continent
+  - Але розділіть на кілька файлів за континентальною ознакою
     - To make display of output from examples tidier
       (e.g., use Australia/New Zealand, which is only two lines)
-    - And allow examples showing use of multiple data sets
-- Focus on Pandas instead of NumPy
-  - Makes lesson usable by both Data Carpentry and Software Carpentry
+    - І дозволити приклади, що показують використання декількох наборів даних
+- Зробити фокус на Pandas замість NumPy
+  - Зробити урок придатним до використання для Data Carpentry та Software Carpentry
   - Genuine novices are likely to want data analysis
   - And people with some prior experience:
-    - will accept data analysis as an authentic task,
-    - and are unlikely to have encountered Pandas,
-      so they'll still get something useful out of the lesson
-- Challenges will mostly *not* be "write this code from scratch"
+    - сприймуть аналіз даних як реальне завдання,
+    - і навряд чи стикалися з Pandas, тому вони все одно отримають щось корисне з уроку
+- Challenges will mostly _not_ be "write this code from scratch"
   - Want lots of short exercises that can reliably be finished in allotted time
   - So use MCQs, fill-in-the-blanks, Parsons Problems, "tweak this code", etc.
 
@@ -121,15 +117,15 @@ I know...
   - Document purpose and use
 - ...that there is no magic: the programs they use are no different
   in principle from those they build
-- ...how to assign values to variables
+- ... як призначити значення змінним
 - ...what integers, floats, strings, NumPy arrays, and Pandas dataframes are
-- ...how to trace the execution of a `for` loop
-- ...how to trace the execution of `if`/`else` statements
+- ...як відстежувати виконання циклу `for`
+- ...як відстежувати виконання команд `if`/`else`
 - ...how to create and index lists
-- ...how to create and index NumPy arrays
+- ... як створити та індексувати масиви NumPy
 - ...how to create and index Pandas dataframes
 - ...how to create time series plots
-- ...the difference between defining and calling a function
+- ... різниця між визначенням і викликом функції
 - ...where to find documentation on standard libraries
 - ...how to find out what else scientific Python offers
 
@@ -198,9 +194,9 @@ I know...
   - Given what we have seen so far,
     what index expression will get the last character in a string?
 
-### [Coffee](../episodes/05-coffee.md): 15 min (10:20)
+### [Перерва на каву](../episodes/05-coffee.md): 15 min (10:20)
 
-### [Libraries](../episodes/06-libraries.md) (10:35)
+### [Бібліотеки](../episodes/06-libraries.md) (10:35)
 
 - Teaching: 10 min
   - Explain what software libraries are and why programmers create and use them.
@@ -212,7 +208,7 @@ I know...
   - If `help(math)` produces an error, what have you forgotten to do?
   - Fill in the blanks in code below so that the import statement and program run.
 
-### [Reading Tabular Data](../episodes/07-reading-tabular.md) (10:55)
+### [Читання табличних данних](../episodes/07-reading-tabular.md) (10:55)
 
 - Teaching: 10 min
   - Import the Pandas library.
@@ -222,7 +218,7 @@ I know...
   - Read the data for the Americas and display its summary statistics.
   - What do `.head` and `.tail` do?
   - What string(s) should you pass to `read_csv` to read files from other directories?
-  - How can you *write* CSV data?
+  - How can you _write_ CSV data?
 
 ### [DataFrames](../episodes/08-data-frames.md) (11:15)
 
@@ -237,13 +233,13 @@ I know...
   - What does each line in the following short program do?
   - What do `idxmin` and `idxmax` do?
   - Write expressions to get the GDP per capita for all countries in 1982,
-    for all countries *after* 1985,
+    for all countries _after_ 1985,
     etc.
   - Given the way its borders have changed since 1900,
     what would you do if asked to create a table of GDP per capita for Poland
     for the Twentieth Century?
 
-### [Plotting](../episodes/09-plotting.md) (11:45)
+### [Побудова графіків](../episodes/09-plotting.md) (11:45)
 
 - Teaching: 15 min
   - Create a time series plot showing a single data set.
@@ -253,9 +249,9 @@ I know...
   - Modify the example to create a scatter plot of GDP per capita in Asian countries.
   - Explain what each argument to `plot` does in the following example.
 
-### [Lunch](../episodes/10-lunch.md) (12:15): 45 min
+### [Перерва](../episodes/10-lunch.md) (12:15): 45 min
 
-### [Lists](../episodes/11-lists.md) (13:00)
+### [Списки](../episodes/11-lists.md) (13:00)
 
 - Teaching: 10 min
   - Explain why programs need collections of values.
@@ -269,7 +265,7 @@ I know...
   - What are the differences between sorting these two ways?
   - What is the difference between `new = old` and `new = old[:]`?
 
-### [Loops](../episodes/12-for-loops.md) (13:20)
+### [Цикли](../episodes/12-for-loops.md) (13:20)
 
 - Teaching: 10 min
   - Explain what for loops are normally used for.
@@ -289,7 +285,7 @@ I know...
   - Use glob to create lists of files.
   - Write for loops to perform operations on files given their names in a list.
 - Challenges: 10 min
-  - Which filenames are *not* matched by this glob expression?
+  - Which filenames are _not_ matched by this glob expression?
   - Modify this program so that it prints the number of records in the shortest file.
   - Write a program that reads and plots all of the regional data sets.
 
@@ -331,7 +327,7 @@ I know...
   - Modify this program so that it always finds the largest and smallest values in a list
     no matter what the list's values are.
 
-### [Programming Style](../episodes/18-style.md) (15:25)
+### [Стиль програмування](../episodes/18-style.md) (15:25)
 
 - Teaching: 15 min
   - How can I make my programs more readable?
@@ -342,7 +338,7 @@ I know...
   - Turn the comments in this program into docstrings.
   - Rewrite this short program to be more readable.
 
-### [Wrap-Up](../episodes/19-wrap.md) (15:55)
+### [Підведення підсумків](../episodes/19-wrap.md) (15:55)
 
 - Teaching: 20 min
   - Name and locate scientific Python community sites for software, workshops, and help.

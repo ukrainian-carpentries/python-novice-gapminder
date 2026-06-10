@@ -20,7 +20,7 @@ exercises: 10
 
 ## Use a `for` loop to process files given a list of their names.
 
-- A filename is a character string.
+- Ім'я файлу - це рядок символів.
 - And lists can contain character strings.
 
 ```python
@@ -51,17 +51,17 @@ gdpPercap_2007    944
 dtype: float64
 ```
 
-## Use [`glob.glob`](https://docs.python.org/3/library/glob.html#glob.glob) to find sets of files whose names match a pattern.
+## Використовуйте [`glob.glob`](https://docs.python.org/3/library/glob.html#glob.glob), щоб знайти набори файлів, імена яких відповідають шаблону.
 
-- In Unix, the term "globbing" means "matching a set of files with a pattern".
-- The most common patterns are:
-  - `*` meaning "match zero or more characters"
-  - `?` meaning "match exactly one character"
+- В Unix термін "globbing" означає "відповідність набору файлів шаблону".
+- Найпоширеніші шаблони:
+  - `*` означає "відповідати нулю або більшій кількості символів"
+  - `?` означає "відповідати в точності одному символу"
 - Python's standard library contains the [`glob`](https://docs.python.org/3/library/glob.html) module to provide pattern matching functionality
 - The [`glob`](https://docs.python.org/3/library/glob.html) module contains a function also called `glob` to match file patterns
 - E.g., `glob.glob('*.txt')` matches all files in the current directory
   whose names end with `.txt`.
-- Result is a (possibly empty) list of character strings.
+- Результатом є (можливо, порожній) список рядків символів.
 
 ```python
 import glob
@@ -75,7 +75,7 @@ all csv files in data directory: ['data/gapminder_all.csv', 'data/gapminder_gdp_
 ```
 
 ```python
-print('all PDB files:', glob.glob('*.pdb'))
+print('all PDB files:', glob.glob(' .pdb'))
 ```
 
 ```output
@@ -84,8 +84,7 @@ all PDB files: []
 
 ## Use `glob` and `for` to process batches of files.
 
-- Helps a lot if the files are named and stored systematically and consistently
-  so that simple patterns will find the right data.
+- Систематичне та послідовне іменування файлів — запорука ефективного пошуку за шаблонами.
 
 ```python
 for filename in glob.glob('data/gapminder_*.csv'):
@@ -111,7 +110,7 @@ data/gapminder_gdp_oceania.csv 10039.59564
 
 ## Determining Matches
 
-Which of these files is *not* matched by the expression `glob.glob('data/*as*.csv')`?
+Який із цих файлів _не_ відповідає виразу `glob.glob('data/*as*.csv')`?
 
 1. `data/gapminder_gdp_africa.csv`
 2. `data/gapminder_gdp_americas.csv`
@@ -119,11 +118,9 @@ Which of these files is *not* matched by the expression `glob.glob('data/*as*.cs
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
 1 is not matched by the glob.
-
-
 
 :::::::::::::::::::::::::
 
@@ -131,10 +128,10 @@ Which of these files is *not* matched by the expression `glob.glob('data/*as*.cs
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Minimum File Size
+## Мінімальний розмір файлу
 
-Modify this program so that it prints the number of records in
-the file that has the fewest records.
+Змініть цю програму, щоб вона визначала та виводила мінімальну кількість
+записів серед усіх файлів.
 
 ```python
 import glob
@@ -151,7 +148,7 @@ returns a tuple with the number of rows and columns of the data frame.
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
 ```python
 import glob
@@ -163,12 +160,9 @@ for filename in glob.glob('data/*.csv'):
 print('smallest file has', fewest, 'records')
 ```
 
-You might have chosen to initialize the `fewest` variable with a number greater than the numbers
-you're dealing with, but that could lead to trouble if you reuse the code with bigger numbers.
-Python lets you use positive infinity, which will work no matter how big your numbers are.
+Можна було б ініціалізувати змінну `fewest` числом, що перевищує всі числа у наборі даних, однак це може спричинити помилки при повторному використанні коду з більшими числами.
+Python дозволяє використати додатну нескінченність, яка буде працювати незалежно від значень ваших чисел.
 What other special strings does the [`float` function][float-function] recognize?
-
-
 
 :::::::::::::::::::::::::
 
@@ -176,21 +170,16 @@ What other special strings does the [`float` function][float-function] recognize
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Comparing Data
+## Порівняння даних
 
-Write a program that reads in the regional data sets
-and plots the average GDP per capita for each region over time
-in a single chart. Pandas will raise an error if it encounters
-non-numeric columns in a dataframe computation so you may need
-to either filter out those columns or tell pandas to ignore them.
-
+Напишіть програму, яка читає регіональні набори даних і будує графік середнього ВВП на душу населення для кожного регіону в часі в одній діаграмі. Pandas видасть помилку, якщо зустріне при цьому нечислові стовпці, тому ви маєте або відфільтрувати ці стовпці, або вказати Pandas ігнорувати їх.
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
 This solution builds a useful legend by using the [string `split` method][split-method] to
-extract the `region` from the path 'data/gapminder\_gdp\_a\_specific\_region.csv'.
+extract the `region` from the path 'data/gapminder\\_gdp\\_a\\_specific\\_region.csv'.
 
 ```python
 import glob
@@ -256,7 +245,6 @@ gapminder_gdp_africa
 **Hint:** Check all available attributes and methods on the `Path` object with the `dir()`
 function.
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 [shape-method]: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.shape.html
@@ -264,12 +252,11 @@ function.
 [split-method]: https://docs.python.org/3/library/stdtypes.html#str.split
 [pathlib-module]: https://docs.python.org/3/library/pathlib.html
 
-
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - Use a `for` loop to process files given a list of their names.
-- Use `glob.glob` to find sets of files whose names match a pattern.
-- Use `glob` and `for` to process batches of files.
+- Використовуйте `glob.glob` для пошуку наборів файлів, імена яких відповідають шаблону.
+- Використовуйте `glob` і `for` для обробки груп файлів.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
