@@ -202,9 +202,7 @@ for i in range(5):
         print("Whoa!  Something is up with the data.  Check it")
 ```
 
-Just like with arithmetic, you can and should use parentheses whenever there
-is possible ambiguity.  A good general rule is to _always_ use parentheses
-when mixing `and` and `or` in the same condition.  Таким чином, замість:
+Як і в арифметичних виразах, дужки слід використовувати скрізь, де може виникнути неоднозначність.  Надійне правило: завжди розставляти дужки при одночасному використанні `and` та `or` в одній умові.  Таким чином, замість:
 
 ```python
 if mass[i] <= 2 or mass[i] >= 5 and velocity[i] > 20:
@@ -217,7 +215,7 @@ if (mass[i] <= 2 or mass[i] >= 5) and velocity[i] > 20:
 if mass[i] <= 2 or (mass[i] >= 5 and velocity[i] > 20):
 ```
 
-внаслідок чого читачеві (і Python) буде цілком зрозуміло, що ви насправді маєте на увазі.
+so it is perfectly clear to a reader (and to Python) what you really mean.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -250,11 +248,9 @@ print(pressure)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Обрізання значень
+## Trimming Values
 
-Fill in the blanks so that this program creates a new list
-containing zeroes where the original list's values were negative
-and ones where the original list's values were positive.
+Заповніть порожні поля в програмі таким чином, щоб результатом її виконання був новий список, у якому від'ємні елементи вихідного списку замінено на нулі, а додатні — на одиниці.
 
 ```python
 original = [-1.5, 0.2, 0.4, 0.0, -1.3, 0.4]
@@ -292,7 +288,7 @@ print(result)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Обробка малих файлів
+## Processing Small Files
 
 Змініть цю програму так, щоб вона обробляла лише файли, які містять менше ніж 50 записів.
 
@@ -340,8 +336,8 @@ for v in values:
 print(smallest, largest)
 ```
 
-What are the advantages and disadvantages of using this method
-to find the range of the data?
+Які переваги та недоліки притаманні цьому
+методу визначення діапазону даних?
 
 :::::::::::::::  solution
 
@@ -362,10 +358,8 @@ print(smallest, largest)
 Якщо ви напишете `== None` замість `is None`, це теж працює, але програмісти Python завжди
 пишуть `is None` через особливий спосіб обробки `None` у мові.
 
-It can be argued that an advantage of using this method would be to make the code more readable.
-However, a disadvantage is that this code is not efficient because within each iteration of the
-`for` loop statement, there are two more loops that run over two numbers each (the `min` and
-`max` functions). Було б ефективніше опрацьовувати кожне число лише один раз:
+Можна стверджувати, що перевагою цього методу є краща читабельність коду.
+Однак недоліком є те, що цей код не є ефективним, оскільки в кожній ітерації циклу `for` виконуються ще два цикли, кожен з яких опрацьовує два числа (це функції `min` і `max`). Було б ефективніше опрацьовувати кожне число лише один раз:
 
 ```python
 values = [-2,1,65,78,-54,-24,100]
@@ -378,9 +372,7 @@ for v in values:
 print(smallest, largest)
 ```
 
-Тепер маємо один цикл, але чотири тестові порівняння. There are two ways we could improve it further:
-either use fewer comparisons in each iteration, or use two loops that each contain only one
-comparison test. Найпростіше рішення часто є найкращим:
+Тепер маємо один цикл, але чотири тестові порівняння. Подальше вдосконалення можливе двома шляхами: скоротити кількість порівнянь на кожній ітерації або використати два цикли, кожен з яких містить лише одне порівняння. Найпростіше рішення часто є найкращим:
 
 ```python
 values = [-2,1,65,78,-54,-24,100]
@@ -395,9 +387,9 @@ print(smallest, largest)
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Використовуйте оператори if, щоб контролювати виконання блоку коду.
+- Use `if` statements to control whether or not a block of code is executed.
 - Умовні оператори часто використовуються всередині циклів.
-- Use `else` to execute a block of code when an `if` condition is _not_ true.
+- Використовуйте `else` для виконання блоку коду, коли умова `if` _не_ виконується.
 - Використовуйте `elif` для визначення додаткових перевірок.
 - Умови перевіряються один раз, послідовно.
 - Створюйте таблицю зі значеннями змінних для відстеження виконання програми.
