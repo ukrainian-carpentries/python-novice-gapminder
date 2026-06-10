@@ -234,7 +234,7 @@ result = print_time(11, 37, 59)
 print('result of call is:', result)
 ```
 
-gives this output:
+дає такий результат:
 
 ```output
 11:37:59
