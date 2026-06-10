@@ -124,7 +124,7 @@ for p in primes:
 - Вбудована функція [`range`](https://docs.python.org/3/library/stdtypes.html#range) створює послідовність чисел.
   - Це _не_ список: числа генеруються за потребою, щоб зробити перебір по великих діапазонах ефективнішим.
 - `range(N)` є послідовністю чисел від 0 до N-1 включно.
-  - Exactly the legal indices of a list or character string of length N
+  - Це в точності збігається з індексами списку або рядка символів довжиною N.
 
 ```python
 print('a range is not a list: range(0, 3)')
