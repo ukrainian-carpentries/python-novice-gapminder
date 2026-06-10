@@ -1,5 +1,5 @@
 ---
-title: Writing Functions
+title: Створення функцій
 teaching: 10
 exercises: 15
 ---
