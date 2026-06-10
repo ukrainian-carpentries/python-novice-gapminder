@@ -6,22 +6,22 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Навчіться читати та писати вирази модулю glob, які відповідають наборам файлів.
-- Використовуйте модуль glob для створення списків файлів
-- Напишіть цикли for для виконання операцій над файлами, зазначеними в списку.
+- Be able to read and write globbing expressions that match sets of files.
+- Use glob to create lists of files.
+- Write for loops to perform operations on files given their names in a list.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- Як я можу обробляти багато наборів даних за допомогою однієї команди?
+- How can I process many data sets with a single command?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Use a `for` loop to process files given a list of their names.
 
 - Ім'я файлу - це рядок символів.
-- І списки можуть містити рядки символів.
+- And lists can contain character strings.
 
 ```python
 import pandas as pd
@@ -54,11 +54,11 @@ dtype: float64
 ## Використовуйте [`glob.glob`](https://docs.python.org/3/library/glob.html#glob.glob), щоб знайти набори файлів, імена яких відповідають шаблону.
 
 - В Unix термін "globbing" означає "відповідність набору файлів шаблону".
-- The most common patterns are:
+- Найпоширеніші шаблони:
   - `*` означає "відповідати нулю або більшій кількості символів"
   - `?` означає "відповідати в точності одному символу"
-- Python містить бібліотеку [`glob`](https://docs.python.org/3/library/glob.html) для забезпечення функції зіставлення шаблонів
-- Бібліотека [`glob`](https://docs.python.org/3/library/glob.html) містить функцію, яка також називається `glob` для відповідності шаблонам файлів.
+- Python's standard library contains the [`glob`](https://docs.python.org/3/library/glob.html) module to provide pattern matching functionality
+- The [`glob`](https://docs.python.org/3/library/glob.html) module contains a function also called `glob` to match file patterns
 - E.g., `glob.glob('*.txt')` matches all files in the current directory
   whose names end with `.txt`.
 - Результатом є (можливо, порожній) список рядків символів.
@@ -84,8 +84,7 @@ all PDB files: []
 
 ## Use `glob` and `for` to process batches of files.
 
-- Helps a lot if the files are named and stored systematically and consistently
-  so that simple patterns will find the right data.
+- Систематичне та послідовне іменування файлів — запорука ефективного пошуку за шаблонами.
 
 ```python
 for filename in glob.glob('data/gapminder_*.csv'):
@@ -102,14 +101,14 @@ data/gapminder_gdp_europe.csv 973.5331948
 data/gapminder_gdp_oceania.csv 10039.59564
 ```
 
-- Це включає всі дані, а також дані по регіонах.
-- Використовуйте більш конкретний шаблон у вправах, щоб виключити весь набір даних.
+- This includes all data, as well as per-region data.
+- Use a more specific pattern in the exercises to exclude the whole data set.
 - But note that the minimum of the entire data set is also the minimum of one of the data sets,
   which is a nice check on correctness.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Визначення збігів
+## Determining Matches
 
 Який із цих файлів _не_ відповідає виразу `glob.glob('data/*as*.csv')`?
 
@@ -119,7 +118,7 @@ data/gapminder_gdp_oceania.csv 10039.59564
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 1 is not matched by the glob.
 
@@ -131,8 +130,8 @@ data/gapminder_gdp_oceania.csv 10039.59564
 
 ## Мінімальний розмір файлу
 
-Modify this program so that it prints the number of records in
-the file that has the fewest records.
+Змініть цю програму, щоб вона визначала та виводила мінімальну кількість
+записів серед усіх файлів.
 
 ```python
 import glob
@@ -149,7 +148,7 @@ returns a tuple with the number of rows and columns of the data frame.
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 ```python
 import glob
@@ -161,10 +160,9 @@ for filename in glob.glob('data/*.csv'):
 print('smallest file has', fewest, 'records')
 ```
 
-You might have chosen to initialize the `fewest` variable with a number greater than the numbers
-you're dealing with, but that could lead to trouble if you reuse the code with bigger numbers.
+Можна було б ініціалізувати змінну `fewest` числом, що перевищує всі числа у наборі даних, однак це може спричинити помилки при повторному використанні коду з більшими числами.
 Python дозволяє використати додатну нескінченність, яка буде працювати незалежно від значень ваших чисел.
-Які інші спеціальні рядки розпізнає [`float` функція][float-function]?
+What other special strings does the [`float` function][float-function] recognize?
 
 :::::::::::::::::::::::::
 
@@ -174,15 +172,14 @@ Python дозволяє використати додатну нескінчен
 
 ## Порівняння даних
 
-Напишіть програму, яка читає регіональні набори даних і будує графік середнього ВВП на душу населення для кожного регіону в часі в одній діаграмі. Pandas will raise an error if it encounters
-non-numeric columns in a dataframe computation so you may need
-to either filter out those columns or tell pandas to ignore them.
+Напишіть програму, яка читає регіональні набори даних і будує графік середнього ВВП на душу населення для кожного регіону в часі в одній діаграмі. Pandas видасть помилку, якщо зустріне при цьому нечислові стовпці, тому ви маєте або відфільтрувати ці стовпці, або вказати Pandas ігнорувати їх.
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
-Це рішення створює корисну легенду за допомогою [string `split` method][split-method] для вилучення `region` зі шляху 'data/gapminder\\_gdp\\_a\\_specific\\_region.csv'.
+This solution builds a useful legend by using the [string `split` method][split-method] to
+extract the `region` from the path 'data/gapminder\\_gdp\\_a\\_specific\\_region.csv'.
 
 ```python
 import glob
@@ -240,7 +237,9 @@ print(p.suffix)
 ```
 
 ```output
-data/gapminder_gdp_africa.csv
+data
+gapminder_gdp_africa
+.csv
 ```
 
 **Hint:** Check all available attributes and methods on the `Path` object with the `dir()`
@@ -257,7 +256,7 @@ function.
 
 - Use a `for` loop to process files given a list of their names.
 - Використовуйте `glob.glob` для пошуку наборів файлів, імена яких відповідають шаблону.
-- Use `glob` and `for` to process batches of files.
+- Використовуйте `glob` і `for` для обробки груп файлів.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
