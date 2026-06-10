@@ -6,24 +6,24 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Правильно писати програми, які використовують оператори if та else, та прості булеві вирази (без логічних операторів).
-- Trace the execution of unnested conditionals and conditionals inside loops.
+- Правильно писати програми, які використовують оператори `if` та `else`, та прості булеві вирази (без логічних операторів).
+- Відстежувати виконання невкладених умовних операторів і умовних операторів всередині циклів.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can programs do different things for different data?
+- Як програми можуть виконувати різні дії для різних даних?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Використовуйте команди `if`, щоб контролювати, чи виконується блок коду.
 
-- An `if` statement (more properly called a _conditional_ statement)
-  controls whether some block of code is executed or not.
+- Оператор `if` (правильна назва - _умовний_ оператор)
+  контролює, чи буде виконано певний блок коду.
 - Його синтаксис подібний до синтаксису оператора `for`:
   - Перший рядок починається з \`if' і закінчується двокрапкою
-  - Body containing one or more statements is indented (usually by 4 spaces)
+  - Блок коду оператора, що містить одну або кілька команд, має відступ (зазвичай на 4 пробіли)
 
 ```python
 mass = 3.54
@@ -42,7 +42,7 @@ if mass > 3.0:
 ## Умовні оператори часто використовуються всередині циклів.
 
 - Немає особливого сенсу використовувати умовний оператор, коли ми знаємо точне значення (як у прикладі вище).
-- Але це корисно, коли у нас є колекція для обробки.
+- Але це корисно, коли у нас є колекція, яку треба проаналізувати.
 
 ```python
 masses = [3.54, 2.07, 9.22, 1.86, 1.71]
@@ -59,7 +59,7 @@ for m in masses:
 ## Використовуйте `else` для виконання блоку коду, коли умова `if` не виконується.
 
 - `else` можна використовувати після `if`.
-- Це дозволяє вказати альтернативу для виконання, коли умова _гілки_ `if` не виконується.
+- Це дозволяє вказати альтернативні дії, коли умова _гілки_ `if` не виконується.
 
 ```python
 masses = [3.54, 2.07, 9.22, 1.86, 1.71]
@@ -78,12 +78,12 @@ for m in masses:
 1.71 is small
 ```
 
-## Використовуйте `elif` для визначення додаткових перевірок.
+## Використовуйте `elif` для додаткових перевірок.
 
-- May want to provide several alternative choices, each with its own test.
-- Use `elif` (short for "else if") and a condition to specify these.
+- У разі потреби можна надати кілька альтернативних варіантів, кожен з яких має власну умову для виконання.
+- Використовуйте `elif` (скорочення від "else if") та відповідну умову для перевірки.
 - Завжди асоціюється з `if`.
-- Must come before the `else` (which is the "catch all").
+- Має йти перед `else` (що починає блок, який охоплює всі інші випадки).
 
 ```python
 masses = [3.54, 2.07, 9.22, 1.86, 1.71]
@@ -104,10 +104,10 @@ for m in masses:
 1.71 is small
 ```
 
-## Conditions are tested once, in order.
+## Умови перевіряються один раз, послідовно.
 
 - Python послідовно проходить гілки умовного оператора, перевіряючи кожну по черзі.
-- Отже, порядок має значення.
+- Отже, порядок перевірки має значення.
 
 ```python
 grade = 85
@@ -123,7 +123,7 @@ elif grade >= 70:
 grade is B
 ```
 
-- Does _not_ automatically go back and re-evaluate if values change.
+- Програма _не_ повертається назад автоматично і _не_ переоцінює значення, якщо вони змінюються.
 
 ```python
 velocity = 10.0
@@ -138,7 +138,7 @@ else:
 adjusting velocity
 ```
 
-- Often use conditionals in a loop to "evolve" the values of variables.
+- Умовні оператори часто використовуються в циклі для послідовної зміни значень змінних.
 
 ```python
 velocity = 10.0
@@ -176,17 +176,13 @@ final velocity: 30.0
   </tr>
 </tbody></table>
 
-- The program must have a `print` statement _outside_ the body of the loop
-  to show the final value of `velocity`,
-  since its value is updated by the last iteration of the loop.
+- Програма повинна мати оператор `print` _поза_ тілом циклу, щоб вивести кінцеве значення `velocity`, оскільки його значення оновлюється під час останньої ітерації циклу.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Compound Relations Using `and`, `or`, and Parentheses
+## Складені логічні вирази з використанням `and`, `or` та дужок
 
-Often, you want some combination of things to be true.  You can combine
-relations within a conditional using `and` and `or`.  Continuing the example
-above, suppose you have
+Часто потрібно перевірити, що виконується певна сукупність умов.  Логічні вирази можна комбінувати в умовному операторі за допомогою `and` та `or`.  Продовжуючи попередній приклад, застосуємо комбінацію перевірок значень зі списків `mass` та `velocity` в умовному операторі:
 
 ```python
 mass     = [ 3.54,  2.07,  9.22,  1.86,  1.71]
@@ -204,22 +200,20 @@ for i in range(5):
         print("Whoa!  Something is up with the data.  Check it")
 ```
 
-Just like with arithmetic, you can and should use parentheses whenever there
-is possible ambiguity.  A good general rule is to _always_ use parentheses
-when mixing `and` and `or` in the same condition.  That is, instead of:
+Як і в арифметичних виразах, дужки слід використовувати скрізь, де може виникнути неоднозначність.  Надійне правило: завжди розставляти дужки при одночасному використанні `and` та `or` в одній умові.  Таким чином, замість:
 
 ```python
 if mass[i] <= 2 or mass[i] >= 5 and velocity[i] > 20:
 ```
 
-write one of these:
+слід використовувати один з наступних варіантів:
 
 ```python
 if (mass[i] <= 2 or mass[i] >= 5) and velocity[i] > 20:
 if mass[i] <= 2 or (mass[i] >= 5 and velocity[i] > 20):
 ```
 
-so it is perfectly clear to a reader (and to Python) what you really mean.
+внаслідок чого читачеві (а також інтерпретатору Python) буде цілком зрозуміло, що ви насправді маєте на увазі.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -252,11 +246,9 @@ print(pressure)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Обрізання значень
+## Аналіз списку
 
-Fill in the blanks so that this program creates a new list
-containing zeroes where the original list's values were negative
-and ones where the original list's values were positive.
+Заповніть порожні поля в програмі таким чином, щоб результатом її виконання був новий список, у якому від'ємні елементи вихідного списку замінено на нулі, а додатні — на одиниці.
 
 ```python
 original = [-1.5, 0.2, 0.4, 0.0, -1.3, 0.4]
@@ -294,9 +286,9 @@ print(result)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Обробка малих файлів
+## Вибіркова обробка файлів
 
-Modify this program so that it only processes files with fewer than 50 records.
+Змініть цю програму так, щоб вона обробляла лише файли, які містять менше ніж 50 записів.
 
 ```python
 import glob
@@ -328,8 +320,7 @@ for filename in glob.glob('data/*.csv'):
 
 ## Ініціалізація
 
-Modify this program so that it finds the largest and smallest values in the list
-no matter what the range of values originally is.
+Змініть цю програму так, щоб знайти найбільше та найменше значення у списку незалежно від початкового діапазону значень.
 
 ```python
 values = [...деякі тестові дані...]
@@ -343,8 +334,8 @@ for v in values:
 print(smallest, largest)
 ```
 
-What are the advantages and disadvantages of using this method
-to find the range of the data?
+Які переваги та недоліки притаманні цьому
+методу визначення діапазону даних?
 
 :::::::::::::::  solution
 
@@ -362,13 +353,11 @@ for v in values:
 print(smallest, largest)
 ```
 
-If you wrote `== None` instead of `is None`, that works too, but Python programmers always
-write `is None` because of the special way `None` works in the language.
+Якщо ви напишете `== None` замість `is None`, це теж працює, але програмісти Python завжди
+пишуть `is None` через особливий спосіб обробки `None` у цій мові.
 
-It can be argued that an advantage of using this method would be to make the code more readable.
-However, a disadvantage is that this code is not efficient because within each iteration of the
-`for` loop statement, there are two more loops that run over two numbers each (the `min` and
-`max` functions). It would be more efficient to iterate over each number just once:
+Можна стверджувати, що перевагою цього методу є краща читабельність коду.
+Однак недоліком є те, що цей код не є ефективним, оскільки в кожній ітерації циклу `for` виконуються ще два цикли, кожен з яких опрацьовує два числа (це функції `min` і `max`). Було б ефективніше опрацьовувати кожне число лише один раз:
 
 ```python
 values = [-2,1,65,78,-54,-24,100]
@@ -381,9 +370,7 @@ for v in values:
 print(smallest, largest)
 ```
 
-Now we have one loop, but four comparison tests. There are two ways we could improve it further:
-either use fewer comparisons in each iteration, or use two loops that each contain only one
-comparison test. The simplest solution is often the best:
+Тепер маємо один цикл, але чотири тестові порівняння. Подальше вдосконалення можливе двома шляхами: скоротити кількість порівнянь на кожній ітерації або використати два цикли, кожен з яких містить лише одне порівняння. Найпростіше рішення часто є найкращим:
 
 ```python
 values = [-2,1,65,78,-54,-24,100]
@@ -398,12 +385,12 @@ print(smallest, largest)
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Use `if` statements to control whether or not a block of code is executed.
+- Використовуйте оператор `if`, щоб контролювати, чи виконується відповідний блок коду.
 - Умовні оператори часто використовуються всередині циклів.
-- Use `else` to execute a block of code when an `if` condition is _not_ true.
+- Використовуйте `else` для виконання блоку коду, коли умова `if` _не_ виконується.
 - Використовуйте `elif` для визначення додаткових перевірок.
-- Conditions are tested once, in order.
-- Create a table showing variables' values to trace a program's execution.
+- Умови перевіряються один раз, послідовно.
+- Створюйте таблицю зі значеннями змінних для відстеження виконання програми.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 

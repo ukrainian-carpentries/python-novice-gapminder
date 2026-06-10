@@ -1,12 +1,12 @@
 ---
-title: Writing Functions
+title: Створення функцій
 teaching: 10
 exercises: 15
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain and identify the difference between function definition and function call.
+- Знайдіть і поясніть різницю між визначенням функції та викликом функції.
 - Напишіть функцію, яка використовує невелику фіксовану кількість вхідних аргументів, а видає єдиний результат.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -26,16 +26,16 @@ exercises: 15
 - Функції служать тій же меті в програмах.
   - _Encapsulate_ complexity so that we can treat it as a single "thing".
 - Also enables _re-use_.
-  - Write one time, use many times.
+  - Пишемо один раз, використовуємо багаторазово.
 
-## Define a function using `def` with a name, parameters, and a block of code.
+## Визначте функцію за допомогою `def` з назвою, параметрами та блоком коду.
 
 - Почніть визначення нової функції з `def`.
 - Далі йде назва функції.
   - Назви функцій мають відповідати тим самим правилам, що й імена змінних.
-- Then _parameters_ in parentheses.
+- Потім _параметри_ в дужках.
   - Порожні дужки, якщо функція не приймає жодних вхідних даних.
-  - We will discuss this in detail in a moment.
+  - Ми обговоримо це детально нижче.
 - Потім двокрапка.
 - Потім блок коду з відступом.
 
@@ -48,7 +48,7 @@ def print_greeting():
 
 ## Визначення функції не запускає її.
 
-- Defining a function does not run it.
+- Визначення функції не запускає її.
   - Як присвоєння значення змінній.
 - Необхідно викликати функцію, щоб виконати код, який вона містить.
 
@@ -60,12 +60,12 @@ print_greeting()
 Hello!
 ```
 
-## Arguments in a function call are matched to its defined parameters.
+## Аргументи виклику функції відповідають її визначеним параметрам.
 
 - Функції найбільш корисні, коли вони можуть працювати з різними даними.
 - Укажіть _параметри_ під час визначення функції.
   - Вони стають змінними під час виконання функції.
-  - Are assigned the arguments in the call (i.e., the values passed to the function).
+  - Параметрам присвоюються аргументи виклику (тобто значення, передані у функцію).
   - If you don't name the arguments when using them in the call, the arguments will be matched to
     parameters in the order the parameters are defined in the function.
 
@@ -94,15 +94,15 @@ print_date(month=3, day=19, year=1871)
 1871/3/19
 ```
 
-- Via [Twitter](https://twitter.com/minisciencegirl/status/693486088963272705):
-  `()` contains the ingredients for the function
-  while the body contains the recipe.
+- Згідно [Твіттер](https://twitter.com/minisciencegirl/status/693486088963272705):
+  `()` містять інгредієнти для функції,
+  тоді як тіло функції містить рецепт.
 
 ## Функції можуть повертати результат до свого виклику за допомогою `return`.
 
 - Use `return ...` to give a value back to the caller.
 - Може виникнути будь-де у функції.
-- But functions are easier to understand if `return` occurs:
+- Але функції легше зрозуміти, якщо функцію `return` реалізовано:
   - На початку функції для обробки особливих випадків.
   - У самому кінці з остаточним результатом.
 
@@ -123,15 +123,15 @@ average of actual values: 2.6666666666666665
 ```
 
 ```python
-print('середнє порожнього списку:', average([]))
+print('average of empty list:', average([]))
 ```
 
 ```output
 average of empty list: None
 ```
 
-- Remember: [every function returns something](04-built-in.md).
-- A function that doesn't explicitly `return` a value automatically returns `None`.
+- Пам'ятайте: [кожна функція щось повертає](04-built-in.md).
+- Функція, яка не містить `return` явно, автоматично повертає `None`.
 
 ```python
 result = print_date(1871, 3, 19)
