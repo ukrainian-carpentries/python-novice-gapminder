@@ -10,7 +10,7 @@ for a rendered version of this material,
 [the lesson template documentation][sandpaper-docs]
 for instructions on formatting and building lesson material.
 
-Maintainer(s):
+Супровідники:
 
 - [Allen Lee][lee-allen]
 - [Nathan Moore][moore-nathan]
