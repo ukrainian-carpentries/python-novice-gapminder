@@ -306,7 +306,7 @@
 <div class="accordion accordion-flush" id="accordionFlush15">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading15">
-        <a href="14-looping-data-sets.html">14. Looping Over Data Sets</a>
+        <a href="14-looping-data-sets.html">14. Обробка багатьох файлів у циклі</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -442,7 +442,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Створення функцій</h1>
-        <p>Останнє оновлення 2026-06-10 |
+        <p>Останнє оновлення 2026-06-12 |
 
         <a href="https://github.com/ukrainian-carpentries/python-novice-gapminder/edit/main/episodes/16-writing-functions.md" class="external-link">Редагувати цю сторінку <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -658,7 +658,7 @@ result of call is: None</code></pre>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Рішення </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -697,7 +697,7 @@ result of call is: None</code></pre>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Рішення </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">ВИВІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -750,7 +750,7 @@ code:</li>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1" aria-label="code-block-22-1"></a>result <span class="op">=</span> print_time(<span class="dv">11</span>, <span class="dv">37</span>, <span class="dv">59</span>)</span>
 <span id="cb22-2"><a href="#cb22-2" tabindex="-1" aria-label="code-block-22-2"></a><span class="bu">print</span>(<span class="st">'result of call is:'</span>, result)</span></code></pre>
 </div>
-<p>gives this output:</p>
+<p>дає такий результат:</p>
 <div class="codewrapper">
 <h3 class="code-label">ВИВІД<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -766,7 +766,7 @@ result of call is: None</code></pre>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Рішення </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li><p>The problem with the example is that the function
 <code>print_time()</code> is defined <em>after</em> the call to the
@@ -813,7 +813,7 @@ returns the minimum value in that data.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Рішення </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -856,7 +856,7 @@ numbers?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Рішення </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -891,7 +891,7 @@ function, it returns <code>None</code>:</p>
 <div id="calling-by-name" class="callout-inner">
 <h3 class="callout-title">Calling by Name</h3>
 <div class="callout-content">
-<p>Earlier we saw this function:</p>
+<p>Раніше ми розглядали цю функцію:</p>
 <div class="codewrapper sourceCode" id="cb30">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -906,9 +906,8 @@ like this:</p>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" tabindex="-1" aria-label="code-block-31-1"></a>print_date(day<span class="op">=</span><span class="dv">1</span>, month<span class="op">=</span><span class="dv">2</span>, year<span class="op">=</span><span class="dv">2003</span>)</span></code></pre>
 </div>
-<ol style="list-style-type: decimal"><li>What does <code>print_date(day=1, month=2, year=2003)</code>
-print?</li>
-<li>When have you seen a function call like this before?</li>
+<ol style="list-style-type: decimal"><li>Що друкує <code>print_date(day=1, month=2, year=2003)</code>?</li>
+<li>Коли ви раніше бачили подібний виклик функції?</li>
 <li>When and why is it useful to call functions this way?</li>
 </ol></div>
 </div>
@@ -918,7 +917,7 @@ print?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution6" aria-expanded="false" aria-controls="collapseSolution6">
   <h4 class="accordion-header" id="headingSolution6"> Рішення </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li><p><code>2003/2/1</code></p></li>
 <li><p>We saw examples of using <em>named arguments</em> when working
@@ -951,21 +950,21 @@ and then the computer will print a label.</p>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" tabindex="-1" aria-label="code-block-32-1"></a><span class="im">import</span> random</span>
 <span id="cb32-2"><a href="#cb32-2" tabindex="-1" aria-label="code-block-32-2"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
 <span id="cb32-3"><a href="#cb32-3" tabindex="-1" aria-label="code-block-32-3"></a></span>
-<span id="cb32-4"><a href="#cb32-4" tabindex="-1" aria-label="code-block-32-4"></a>    <span class="co"># simulating the mass of a chicken egg</span></span>
+<span id="cb32-4"><a href="#cb32-4" tabindex="-1" aria-label="code-block-32-4"></a>    <span class="co"># імітація маси курячого яйця</span></span>
 <span id="cb32-5"><a href="#cb32-5" tabindex="-1" aria-label="code-block-32-5"></a>    <span class="co"># the (random) mass will be 70 +/- 20 grams</span></span>
 <span id="cb32-6"><a href="#cb32-6" tabindex="-1" aria-label="code-block-32-6"></a>    mass <span class="op">=</span> <span class="dv">70</span> <span class="op">+</span> <span class="fl">20.0</span> <span class="op">*</span> (<span class="fl">2.0</span> <span class="op">*</span> random.random() <span class="op">-</span> <span class="fl">1.0</span>)</span>
 <span id="cb32-7"><a href="#cb32-7" tabindex="-1" aria-label="code-block-32-7"></a></span>
 <span id="cb32-8"><a href="#cb32-8" tabindex="-1" aria-label="code-block-32-8"></a>    <span class="bu">print</span>(mass)</span>
 <span id="cb32-9"><a href="#cb32-9" tabindex="-1" aria-label="code-block-32-9"></a></span>
-<span id="cb32-10"><a href="#cb32-10" tabindex="-1" aria-label="code-block-32-10"></a>    <span class="co"># egg sizing machinery prints a label</span></span>
+<span id="cb32-10"><a href="#cb32-10" tabindex="-1" aria-label="code-block-32-10"></a>    <span class="co"># друк етикетки машиною для сортування яєць </span></span>
 <span id="cb32-11"><a href="#cb32-11" tabindex="-1" aria-label="code-block-32-11"></a>    <span class="cf">if</span> mass <span class="op">&gt;=</span> <span class="dv">85</span>:</span>
-<span id="cb32-12"><a href="#cb32-12" tabindex="-1" aria-label="code-block-32-12"></a>        <span class="bu">print</span>(<span class="st">"jumbo"</span>)</span>
+<span id="cb32-12"><a href="#cb32-12" tabindex="-1" aria-label="code-block-32-12"></a>        <span class="bu">print</span>(<span class="st">"дуже велике"</span>)</span>
 <span id="cb32-13"><a href="#cb32-13" tabindex="-1" aria-label="code-block-32-13"></a>    <span class="cf">elif</span> mass <span class="op">&gt;=</span> <span class="dv">70</span>:</span>
-<span id="cb32-14"><a href="#cb32-14" tabindex="-1" aria-label="code-block-32-14"></a>        <span class="bu">print</span>(<span class="st">"large"</span>)</span>
+<span id="cb32-14"><a href="#cb32-14" tabindex="-1" aria-label="code-block-32-14"></a>        <span class="bu">print</span>(<span class="st">"велике"</span>)</span>
 <span id="cb32-15"><a href="#cb32-15" tabindex="-1" aria-label="code-block-32-15"></a>    <span class="cf">elif</span> mass <span class="op">&lt;</span> <span class="dv">70</span> <span class="kw">and</span> mass <span class="op">&gt;=</span> <span class="dv">55</span>:</span>
-<span id="cb32-16"><a href="#cb32-16" tabindex="-1" aria-label="code-block-32-16"></a>        <span class="bu">print</span>(<span class="st">"medium"</span>)</span>
+<span id="cb32-16"><a href="#cb32-16" tabindex="-1" aria-label="code-block-32-16"></a>        <span class="bu">print</span>(<span class="st">"середнє"</span>)</span>
 <span id="cb32-17"><a href="#cb32-17" tabindex="-1" aria-label="code-block-32-17"></a>    <span class="cf">else</span>:</span>
-<span id="cb32-18"><a href="#cb32-18" tabindex="-1" aria-label="code-block-32-18"></a>        <span class="bu">print</span>(<span class="st">"small"</span>)</span></code></pre>
+<span id="cb32-18"><a href="#cb32-18" tabindex="-1" aria-label="code-block-32-18"></a>        <span class="bu">print</span>(<span class="st">"мале"</span>)</span></code></pre>
 </div>
 <p>The if-block that classifies the eggs might be useful in other
 situations, so to avoid repeating it, we could fold it into a function,
@@ -1002,7 +1001,7 @@ error conditions. Sample output could be
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution7" aria-expanded="false" aria-controls="collapseSolution7">
   <h4 class="accordion-header" id="headingSolution7"> Показати відповідь </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb34">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1078,7 +1077,7 @@ the decade, instead of enumerating them in the code.)</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution8" aria-expanded="false" aria-controls="collapseSolution8">
   <h4 class="accordion-header" id="headingSolution8"> Показати відповідь </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>The average GDP for Japan across the years reported for the 1980s is
 computed with:</li>
@@ -1177,7 +1176,7 @@ values. Is the population trending toward a steady state?</p></li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution9" aria-expanded="false" aria-controls="collapseSolution9">
   <h4 class="accordion-header" id="headingSolution9"> Показати відповідь </h4>
 </button>
-<div id="collapseSolution9" class="accordion-collapse collapse" data-bs-parent="#accordionSolution9" aria-labelledby="headingSolution9">
+<div id="collapseSolution9" class="accordion-collapse collapse" aria-labelledby="headingSolution9" data-bs-parent="#accordionSolution9">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>
 </li></ol><div class="codewrapper sourceCode" id="cb43">
@@ -1362,8 +1361,8 @@ parameters.</li>
   "url": "https://ukrainian-carpentries.github.io/python-novice-gapminder/16-writing-functions.html",
   "identifier": "https://ukrainian-carpentries.github.io/python-novice-gapminder/16-writing-functions.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2026-06-10",
-  "datePublished": "2026-06-10"
+  "dateModified": "2026-06-12",
+  "datePublished": "2026-06-12"
 }
 
   </script><script>
