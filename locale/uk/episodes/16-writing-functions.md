@@ -6,8 +6,8 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Знайдіть і поясніть різницю між визначенням функції та викликом функції.
-- Напишіть функцію, яка використовує невелику фіксовану кількість вхідних аргументів, а видає єдиний результат.
+- Explain and identify the difference between function definition and function call.
+- Write a function that takes a small, fixed number of arguments and produces a single result.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -17,10 +17,10 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Розбийте програми на функції, щоб їх було легше зрозуміти.
+## Break programs down into functions to make them easier to understand.
 
 - Людина може одночасно зберігати лише декілька речей у своїй робочій пам’яті.
-- Understand larger/more complicated ideas by understanding and combining pieces.
+- Розуміння складніших/більших ідей досягається шляхом осмислення та поєднання їхніх складових.
   - Компоненти в машині.
   - Леми при доведенні теорем.
 - Функції служать тій же меті в програмах.
