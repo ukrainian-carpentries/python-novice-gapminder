@@ -234,7 +234,7 @@ result = print_time(11, 37, 59)
 print('result of call is:', result)
 ```
 
-gives this output:
+дає такий результат:
 
 ```output
 11:37:59
@@ -337,7 +337,7 @@ None
 
 ## Calling by Name
 
-Earlier we saw this function:
+Раніше ми розглядали цю функцію:
 
 ```python
 def print_date(year, month, day):
@@ -351,8 +351,8 @@ We saw that we can call the function using _named arguments_, like this:
 print_date(day=1, month=2, year=2003)
 ```
 
-1. What does `print_date(day=1, month=2, year=2003)` print?
-2. When have you seen a function call like this before?
+1. Що друкує `print_date(day=1, month=2, year=2003)`?
+2. Коли ви раніше бачили подібний виклик функції?
 3. When and why is it useful to call functions this way?
 
 :::::::::::::::  solution
@@ -384,21 +384,21 @@ to the computer and then the computer will print a label.
 import random
 for i in range(10):
 
-    # simulating the mass of a chicken egg
+    # імітація маси курячого яйця
     # the (random) mass will be 70 +/- 20 grams
     mass = 70 + 20.0 * (2.0 * random.random() - 1.0)
 
     print(mass)
 
-    # egg sizing machinery prints a label
+    # друк етикетки машиною для сортування яєць 
     if mass >= 85:
-        print("jumbo")
+        print("дуже велике")
     elif mass >= 70:
-        print("large")
+        print("велике")
     elif mass < 70 and mass >= 55:
-        print("medium")
+        print("середнє")
     else:
-        print("small")
+        print("мале")
 ```
 
 The if-block that classifies the eggs might be useful in other situations,
