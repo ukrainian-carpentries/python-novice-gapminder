@@ -1,14 +1,14 @@
 ---
-title: Looping Over Data Sets
+title: Обробка багатьох файлів у циклі
 teaching: 5
 exercises: 10
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Be able to read and write globbing expressions that match sets of files.
-- Use glob to create lists of files.
-- Write for loops to perform operations on files given their names in a list.
+- Навчитися читати та писати вирази модулю glob, які визначають набори файлів.
+- Використовувати модуль glob для створення списків файлів
+- Створювати цикли `for` для виконання операцій зі списком файлів.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
