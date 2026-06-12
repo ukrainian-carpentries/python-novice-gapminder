@@ -14,14 +14,14 @@ exercises: 10
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can I process many data sets with a single command?
+- Як обробляти багато наборів даних за допомогою однієї команди?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Use a `for` loop to process files given a list of their names.
+## Використовуйте цикл `for` для послідовної обробки файлів, імена яких містяться у списку.
 
 - Ім'я файлу - це рядок символів.
-- And lists can contain character strings.
+- Списки, своєю чергою, можуть містити рядки символів.
 
 ```python
 import pandas as pd
@@ -57,10 +57,10 @@ dtype: float64
 - Найпоширеніші шаблони:
   - `*` означає "відповідати нулю або більшій кількості символів"
   - `?` означає "відповідати в точності одному символу"
-- Python's standard library contains the [`glob`](https://docs.python.org/3/library/glob.html) module to provide pattern matching functionality
-- The [`glob`](https://docs.python.org/3/library/glob.html) module contains a function also called `glob` to match file patterns
-- E.g., `glob.glob('*.txt')` matches all files in the current directory
-  whose names end with `.txt`.
+- Стандартна бібліотека Python містить модуль [`glob`](https://docs.python.org/3/library/glob.html) для роботи з наборами файлів, які задані за допомогою шаблонів
+- Модуль [`glob`](https://docs.python.org/3/library/glob.html) містить функцію, яка також називається `glob`, для відбору файлів за шаблоном.
+- Наприклад, `glob.glob('*.txt')` знайде всі файли в поточному каталозі,
+  імена яких закінчуються на `.txt`.
 - Результатом є (можливо, порожній) список рядків символів.
 
 ```python
@@ -82,7 +82,7 @@ print('all PDB files:', glob.glob(' .pdb'))
 all PDB files: []
 ```
 
-## Use `glob` and `for` to process batches of files.
+## Використовуйте `glob` та `for` для обробки груп файлів.
 
 - Систематичне та послідовне іменування файлів — запорука ефективного пошуку за шаблонами.
 
@@ -101,14 +101,13 @@ data/gapminder_gdp_europe.csv 973.5331948
 data/gapminder_gdp_oceania.csv 10039.59564
 ```
 
-- This includes all data, as well as per-region data.
-- Use a more specific pattern in the exercises to exclude the whole data set.
-- But note that the minimum of the entire data set is also the minimum of one of the data sets,
-  which is a nice check on correctness.
+- Перелік має файл `data/gapminder_all.csv` з усіма даними, а також файли з даними по окремих регіонах.
+- У вправах нижче використовуйте більш точний шаблон. Це дозволить виключити загальний набір даних `data/gapminder_all.csv` і відібрати лише файли для окремих регіонів.
+- Слід зазначити, що мінімум у файлі `data/gapminder_all.csv` збігається з мінімумом одного з менших файлів. Це є гарною перевіркою результату.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Determining Matches
+## Розуміння шаблонів
 
 Який із цих файлів _не_ відповідає виразу `glob.glob('data/*as*.csv')`?
 
@@ -120,7 +119,7 @@ data/gapminder_gdp_oceania.csv 10039.59564
 
 ## Відповідь
 
-1 is not matched by the glob.
+Заданому шаблону не відповідає перший з файлів.
 
 :::::::::::::::::::::::::
 
@@ -143,8 +142,8 @@ for filename in glob.glob('data/*.csv'):
 print('smallest file has', fewest, 'records')
 ```
 
-Note that the [`DataFrame.shape()` method][shape-method]
-returns a tuple with the number of rows and columns of the data frame.
+Зверніть увагу, що метод [`DataFrame.shape()`][shape-method]
+повертає кортеж (tuple), елементами якого є кількість рядків та кількість стовпців у датафреймі.
 
 :::::::::::::::  solution
 
@@ -162,7 +161,7 @@ print('smallest file has', fewest, 'records')
 
 Можна було б ініціалізувати змінну `fewest` числом, що перевищує всі числа у наборі даних, однак це може спричинити помилки при повторному використанні коду з більшими числами.
 Python дозволяє використати додатну нескінченність, яка буде працювати незалежно від значень ваших чисел.
-What other special strings does the [`float` function][float-function] recognize?
+Які інші спеціальні рядки розпізнає [функція `float`][float-function]?
 
 :::::::::::::::::::::::::
 
@@ -178,8 +177,7 @@ What other special strings does the [`float` function][float-function] recognize
 
 ## Відповідь
 
-This solution builds a useful legend by using the [string `split` method][split-method] to
-extract the `region` from the path 'data/gapminder\\_gdp\\_a\\_specific\\_region.csv'.
+Це рішення створює корисну легенду за допомогою [методу `split` для рядків][split-method] для вилучення `region` зі шляху 'data/gapminder\\_gdp\\_a\\_specific\\_region.csv'.
 
 ```python
 import glob
@@ -221,11 +219,9 @@ plt.show()
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Dealing with File Paths
+## Робота зі шляхами до файлів та каталогів
 
-The [`pathlib` module][pathlib-module] provides useful abstractions for file and path manipulation like
-returning the name of a file without the file extension. This is very useful when looping over files and
-directories. In the example below, we create a `Path` object and inspect its attributes.
+Модуль [`pathlib`][pathlib-module] надає зручні інструменти для роботи з файлами та шляхами, наприклад отримання назви файлу без його розширення. Застосування цього модуля є особливо доцільним під час перегляду файлів і каталогів у циклах. Цей модуль дозволяє створювати обʼєкти, які відповідають файлам та шляхам, на відміну від звичайних рядків з іменами файлів та каталогів, які ми бачили вище. У прикладі нижче ми створюємо об'єкт типу `Path` і аналізуємо його атрибути.
 
 ```python
 from pathlib import Path
@@ -242,8 +238,7 @@ gapminder_gdp_africa
 .csv
 ```
 
-**Hint:** Check all available attributes and methods on the `Path` object with the `dir()`
-function.
+**Підказка:** Перегляньте всі доступні атрибути та методи для об'єкта типу `Path` за допомогою функції `dir()`.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -254,7 +249,7 @@ function.
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Use a `for` loop to process files given a list of their names.
+- Використовуйте цикл `for` для обробки файлів, імена яких містяться у списку.
 - Використовуйте `glob.glob` для пошуку наборів файлів, імена яких відповідають шаблону.
 - Використовуйте `glob` і `for` для обробки груп файлів.
 
