@@ -28,9 +28,9 @@ exercises: 15
 - Also enables _re-use_.
   - Пишемо один раз, використовуємо багаторазово.
 
-## Визначте функцію за допомогою `def` з назвою, параметрами та блоком коду.
+## Define a function using `def` with a name, parameters, and a block of code.
 
-- Почніть визначення нової функції з `def`.
+- Begin the definition of a new function with `def`.
 - Далі йде назва функції.
   - Назви функцій мають відповідати тим самим правилам, що й імена змінних.
 - Потім _параметри_ в дужках.
@@ -46,11 +46,11 @@ def print_greeting():
     print('Right?')
 ```
 
-## Визначення функції не запускає її.
+## Defining a function does not run it.
 
-- Визначення функції не запускає її.
-  - Як присвоєння значення змінній.
-- Необхідно викликати функцію, щоб виконати код, який вона містить.
+- Defining a function does not run it.
+  - Like assigning a value to a variable.
+- Must call the function to execute the code it contains.
 
 ```python
 print_greeting()
@@ -60,14 +60,13 @@ print_greeting()
 Hello!
 ```
 
-## Аргументи виклику функції відповідають її визначеним параметрам.
+## Arguments in a function call are matched to its defined parameters.
 
 - Функції найбільш корисні, коли вони можуть працювати з різними даними.
 - Укажіть _параметри_ під час визначення функції.
   - Вони стають змінними під час виконання функції.
-  - Параметрам присвоюються аргументи виклику (тобто значення, передані у функцію).
-  - If you don't name the arguments when using them in the call, the arguments will be matched to
-    parameters in the order the parameters are defined in the function.
+  - Are assigned the arguments in the call (i.e., the values passed to the function).
+  - Якщо ви не називаєте аргументи під час їх використання у виклику, аргументи будуть зіставлені з параметрами в тому порядку, у якому параметри визначені у функції.
 
 ```python
 def print_date(year, month, day):
@@ -94,17 +93,17 @@ print_date(month=3, day=19, year=1871)
 1871/3/19
 ```
 
-- Згідно [Твіттер](https://twitter.com/minisciencegirl/status/693486088963272705):
-  `()` містять інгредієнти для функції,
-  тоді як тіло функції містить рецепт.
+- Via [Twitter](https://twitter.com/minisciencegirl/status/693486088963272705):
+  `()` contains the ingredients for the function
+  while the body contains the recipe.
 
-## Функції можуть повертати результат до свого виклику за допомогою `return`.
+## Functions may return a result to their caller using `return`.
 
 - Use `return ...` to give a value back to the caller.
 - Може виникнути будь-де у функції.
-- Але функції легше зрозуміти, якщо функцію `return` реалізовано:
+- But functions are easier to understand if `return` occurs:
   - На початку функції для обробки особливих випадків.
-  - У самому кінці з остаточним результатом.
+  - At the very end, with a final result.
 
 ```python
 def average(values):
