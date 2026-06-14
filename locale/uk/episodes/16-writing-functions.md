@@ -535,14 +535,11 @@ avg_gdp_in_decade('Japan','asia',1983)
 
 ## Моделювання динамічної системи
 
-У математиці [динамічна система](https://en.wikipedia.org/wiki/Dynamical_system) - це система, у якій функція описує залежність розташування точки в геометричному просторі від часу. A canonical
-example of a dynamical system is the [logistic map](https://en.wikipedia.org/wiki/Logistic_map),
-a growth model that computes a new population density (between  0 and 1) based on the current
-density. In the model, time takes discrete values 0, 1, 2, ...
+У математиці [динамічна система](https://en.wikipedia.org/wiki/Dynamical_system) - це система, у якій функція описує залежність розташування точки в геометричному просторі від часу. Канонічний приклад динамічної системи - це [логістичне відображення](https://en.wikipedia.org/wiki/Logistic_map), тобто модель зростання, яка обчислює нову щільність популяції (від 0 до 1) на основі її поточного значення. В цій моделі час приймає дискретні значення 0, 1, 2, ... (тобто змінюється кроками, а не плавно)
 
 1. Define a function called `logistic_map` that takes two inputs: `x`, representing the current
-   population (at time `t`), and a parameter `r = 1`. This function should return a value
-   representing the state of the system (population) at time `t + 1`, using the mapping function:
+   population (at time `t`), and a parameter `r = 1`. Ця функція має повертати значення,
+   що представляє стан системи (популяції) у момент часу `t + 1`, використовуючи наступну функцію:
 
 `f(t+1) = r * f(t) * [1 - f(t)]`
 
