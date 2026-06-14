@@ -49,8 +49,8 @@ def print_greeting():
 ## Визначення функції не виконує її.
 
 - Визначення функції не виконує її.
-  - Like assigning a value to a variable.
-- Must call the function to execute the code it contains.
+  - Аналогічно до присвоєння значення змінній.
+- Щоб виконати код функції, її необхідно викликати.
 
 ```python
 print_greeting()
@@ -390,9 +390,8 @@ for i in range(10):
         print("small")
 ```
 
-The if-block that classifies the eggs might be useful in other situations,
-so to avoid repeating it, we could fold it into a function, `get_egg_label()`.
-Revising the program to use the function would give us this:
+Блок `if`, який класифікує яйця, може бути корисним в інших ситуаціях. Щоб уникнути його повторення доцільно виділити його в окрему функцію `get_egg_label()`.
+Переписавши програму з використанням зазначеної функції, отримаємо такий результат:
 
 ```python
 # revised version
@@ -602,9 +601,7 @@ for period in (10, 100, 1000):
 
 ## Використання функцій з умовними операторами в Pandas
 
-Функції часто містять перевірку умов.  Here is a short example that
-will indicate which quartile the argument is in based on hand-coded values
-for the quartile cut points.
+Функції часто містять перевірку умов.  Нижче наведено короткий приклад, що визначає належність аргументу до певного квартиля на основі попередньо заданих граничних значень квартилів.
 
 ```python
 def calculate_life_quartile(exp):
