@@ -261,9 +261,7 @@ result of call is: None
 
 ## Encapsulation
 
-Fill in the blanks to create a function that takes a single filename as an argument,
-loads the data in the file named by the argument,
-and returns the minimum value in that data.
+Заповніть порожні поля, щоб створити функцію, яка приймає одне ім’я файлу як аргумент і завантажує дані з цього файлу. Функція має повертати мінімальне значення з цих даних.
 
 ```python
 import pandas as pd
@@ -275,7 +273,7 @@ def min_in_data(____):
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 ```python
 import pandas as pd
@@ -291,10 +289,10 @@ def min_in_data(filename):
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Find the First
+## Пошук першого від'ємного значення
 
 Заповніть порожні поля, щоб створити функцію, яка приймає список чисел як аргумент і повертає перше від’ємне значення в списку.
-Що робить ваша функція, якщо список порожній? What if the list has no negative numbers?
+Що робить ваша функція, якщо список порожній? Що відбувається, якщо список не містить жодного від'ємного числа?
 
 ```python
 def first_negative(values):
@@ -305,7 +303,7 @@ def first_negative(values):
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 ```python
 def first_negative(values):
@@ -314,7 +312,7 @@ def first_negative(values):
             return v
 ```
 
-If an empty list or a list with all positive values is passed to this function, it returns `None`:
+Якщо до функції передати порожній список або список з лише додатними значеннями, вона повертає `None`:
 
 ```python
 my_list = []
@@ -331,7 +329,7 @@ None
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Calling by Name
+## Виклик з іменованими аргументами
 
 Раніше ми розглядали цю функцію:
 
@@ -341,7 +339,7 @@ def print_date(year, month, day):
     print(joined)
 ```
 
-We saw that we can call the function using _named arguments_, like this:
+Ми бачили, що можна викликати функцію за допомогою \*іменованих аргументів \*, наприклад:
 
 ```python
 print_date(day=1, month=2, year=2003)
@@ -349,11 +347,11 @@ print_date(day=1, month=2, year=2003)
 
 1. Що друкує `print_date(day=1, month=2, year=2003)`?
 2. Коли ви раніше бачили подібний виклик функції?
-3. When and why is it useful to call functions this way?
+3. За яких умов і з якою метою доцільно використовувати іменовані аргументи при виклику функцій?
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 1. `2003/2/1`
 
@@ -380,21 +378,21 @@ to the computer and then the computer will print a label.
 import random
 for i in range(10):
 
-    # імітація маси курячого яйця
+    # simulating the mass of a chicken egg
     # the (random) mass will be 70 +/- 20 grams
     mass = 70 + 20.0 * (2.0 * random.random() - 1.0)
 
     print(mass)
 
-    # друк етикетки машиною для сортування яєць 
+    # egg sizing machinery prints a label
     if mass >= 85:
-        print("дуже велике")
+        print("jumbo")
     elif mass >= 70:
-        print("велике")
+        print("large")
     elif mass < 70 and mass >= 55:
-        print("середнє")
+        print("medium")
     else:
-        print("мале")
+        print("small")
 ```
 
 The if-block that classifies the eggs might be useful in other situations,
@@ -414,12 +412,12 @@ for i in range(10):
 
 ```
 
-1. Create a function definition for `get_egg_label()` that will work with the revised program above.  Note that the `get_egg_label()` function's return value will be important. Sample output from the above program would be `71.23 large`.
-2. A dirty egg might have a mass of more than 90 grams, and a spoiled or broken egg will probably have a mass that's less than 50 grams.  Modify your `get_egg_label()` function to account for these error conditions. Sample output could be `25 too light, probably spoiled`.
+1. Create a function definition for `get_egg_label()` that will work with the revised program above.  Note that the `get_egg_label()` function's return value will be important. Зразок виводу програми вище буде `71.23 large`.
+2. Брудне яйце може мати масу понад 90 грамів, а зіпсоване чи розбите яйце, ймовірно, матиме масу менше ніж 50 грамів.  Modify your `get_egg_label()` function to account for these error conditions. Sample output could be `25 too light, probably spoiled`.
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
 ```python
 def get_egg_label(mass):
