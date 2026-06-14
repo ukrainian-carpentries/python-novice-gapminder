@@ -146,8 +146,7 @@ result of call is: None
 
 ## Виявлення синтаксичних помилок
 
-1. Read the code below and try to identify what the errors are
-   _without_ running it.
+1. Прочитайте наведений нижче код і спробуйте знайти помилки без його запуску.
 2. Запустіть код і прочитайте повідомлення про помилку.
    Це `SyntaxError` чи `IndentationError`?
 3. Виправте помилку.
@@ -162,7 +161,7 @@ def another_function
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 ```python
 def another_function():
@@ -190,13 +189,13 @@ print('calling', report, 22.5)
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
 ```output
 calling <function report at 0x7fd128ff1bf8> 22.5
 ```
 
-A function call always needs parenthesis, otherwise you get memory address of the function object. So, if we wanted to call the function named report, and give it the value 22.5 to report on, we could have our function call as follows
+Виклик функції завжди потребує круглі дужки, інакше повертається адреса об'єкта функції в пам'яті. Отже, якщо ми хочемо викликати функцію з назвою `report` і надати їй значення 22,5 для обробки, виклик функції матиме такий вигляд:
 
 ```python
 print("calling")
@@ -226,7 +225,7 @@ def print_time(hour, minute, second):
    print(time_string)
 ```
 
-2. After fixing the problem above, explain why running this example code:
+2. Після виправлення проблеми вище поясніть, чому виконання цього прикладу:
 
 ```python
 result = print_time(11, 37, 59)
@@ -244,17 +243,15 @@ result of call is: None
 
 :::::::::::::::  solution
 
-## Рішення
+## Відповідь
 
-1. The problem with the example is that the function `print_time()` is defined _after_ the call to the function is made. Python
-   doesn't know how to resolve the name `print_time` since it hasn't been defined yet and will raise a `NameError` e.g.,
-   `NameError: name 'print_time' is not defined`
+1. Проблема цього прикладу полягає в тому, що функція `print_time()` визначається _після_ виклику функції. Python не може розпізнати ім'я `print_time` оскільки воно ще не визначено і генерує помилку `NameError`, тобто `NameError: name 'print_time' is not defined`
 
-2. The first line of output `11:37:59` is printed by the first line of code, `result = print_time(11, 37, 59)` that binds the value
-   returned by invoking `print_time` to the variable `result`. The second line is from the second print call to print the contents
+2. Перший рядок виводу `11:37:59` з'являється завдяки першому рядку коду `result = print_time(11, 37, 59)`.
+   Він викликає функцію `print_time` і присвоює повернуте нею значення змінній `result`. The second line is from the second print call to print the contents
    of the `result` variable.
 
-3. `print_time()` does not explicitly `return` a value, so it automatically returns `None`.
+3. `print_time()` явно не повертає значення за допомогою `return`, тому автоматично повертає `None`.
 
 :::::::::::::::::::::::::
 
@@ -262,7 +259,7 @@ result of call is: None
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Інкапсуляція
+## Encapsulation
 
 Fill in the blanks to create a function that takes a single filename as an argument,
 loads the data in the file named by the argument,
