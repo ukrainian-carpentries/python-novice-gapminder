@@ -6,18 +6,18 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain and identify the difference between function definition and function call.
-- Write a function that takes a small, fixed number of arguments and produces a single result.
+- Знайдіть і поясніть різницю між визначенням функції та викликом функції.
+- Створити функцію, яка приймає невелику фіксовану кількість вхідних аргументів і повертає єдиний результат.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can I create my own functions?
+- Як створювати власні функції?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Break programs down into functions to make them easier to understand.
+## Щоб програми було легше зрозуміти, розбивайте їх на функції.
 
 - Людина може одночасно зберігати лише декілька речей у своїй робочій пам’яті.
 - Розуміння складніших/більших ідей досягається шляхом осмислення та поєднання їхніх складових.
@@ -25,12 +25,12 @@ exercises: 15
   - Леми при доведенні теорем.
 - Функції служать тій же меті в програмах.
   - _Encapsulate_ complexity so that we can treat it as a single "thing".
-- Also enables _re-use_.
+- Також сприяють _повторному використанню_ кода.
   - Пишемо один раз, використовуємо багаторазово.
 
-## Define a function using `def` with a name, parameters, and a block of code.
+## Функція визначається за допомогою `def` та задається її назвою, параметрами та блоком коду.
 
-- Begin the definition of a new function with `def`.
+- Визначення нової функції починається з `def`.
 - Далі йде назва функції.
   - Назви функцій мають відповідати тим самим правилам, що й імена змінних.
 - Потім _параметри_ в дужках.
@@ -46,7 +46,7 @@ def print_greeting():
     print('Right?')
 ```
 
-## Defining a function does not run it.
+## Визначення функції не виконує її.
 
 - Defining a function does not run it.
   - Like assigning a value to a variable.
@@ -357,9 +357,7 @@ print_date(day=1, month=2, year=2003)
 
 2. Ми бачили приклади використання іменованих аргументів під час роботи з бібліотекою pandas. Наприклад, під час читання набору даних за допомогою `data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')`, останній аргумент `index_col` є іменованим аргументом.
 
-3. Using named arguments can make code more readable since one can see from the function call what name the different arguments
-   have inside the function. It can also reduce the chances of passing arguments in the wrong order, since by using named arguments
-   the order doesn't matter.
+3. Використання іменованих аргументів покращує читабельність коду — з виклику функції можна побачити, які імена мають аргументи всередині функції. Це також зменшує ймовірність передачі аргументів у неправильному порядку, оскільки при використанні іменованих аргументів порядок не має значення.
 
 :::::::::::::::::::::::::
 
@@ -369,8 +367,7 @@ print_date(day=1, month=2, year=2003)
 
 ## Винесення блоку If/Print в окрему функцію
 
-The code below will run on a label-printer for chicken eggs.  A digital scale will report a chicken egg mass (in grams)
-to the computer and then the computer will print a label.
+Наведений нижче код призначений для друку етикеток для курячих яєць.  Цифрові ваги повідомляють комп’ютер про масу курячого яйця (у грамах), після чого комп'ютер друкує етикетку.
 
 ```python
 import random
@@ -411,7 +408,7 @@ for i in range(10):
 ```
 
 1. Create a function definition for `get_egg_label()` that will work with the revised program above.  Зверніть увагу на значення, яке повертає функція `get_egg_label()`. Зразок виводу програми вище буде `71.23 large`.
-2. Брудне яйце може мати масу понад 90 грамів, а зіпсоване чи розбите яйце, ймовірно, матиме масу менше ніж 50 грамів.  Змініть функцію `print_egg_label()` для врахування цих умов. Sample output could be `25 too light, probably spoiled`.
+2. Брудне яйце може мати масу понад 90 грамів, а зіпсоване чи розбите яйце, ймовірно, матиме масу менше ніж 50 грамів.  Змініть функцію `print_egg_label()` для врахування цих умов. Можливий вивід програми: `25 too light, probably spoiled`.
 
 :::::::::::::::  solution
 
@@ -462,7 +459,7 @@ gdp_decade = 'gdpPercap_' + str(year // ____)
 avg = (japan.loc[gdp_decade + ___] + japan.loc[gdp_decade + ___]) / 2
 ```
 
-2. Abstract the code above into a single function.
+2. Перетворіть наведений вище код в окрему функцію.
 
 ```python
 def avg_gdp_in_decade(country, continent, year):
@@ -473,10 +470,9 @@ def avg_gdp_in_decade(country, continent, year):
     return avg
 ```
 
-3. How would you generalize this function
-   if you did not know beforehand which specific years occurred as columns in the data?
-   For instance, what if we also had data from years ending in 1 and 9 for each decade?
-   (Підказка: використовуйте стовпці, щоб відфільтрувати ті, що відповідають потрібному десятиріччю.)
+3. Як узагальнити функцію, якщо роки у стовпцях заздалегідь невідомі?
+   Наприклад, якщо набір даних також містить роки, що закінчуються на 1 та 9 для кожного десятиліття?
+   (Підказка: використовуйте стовпці, щоб відфільтрувати їх за десятиліттям.)
 
 :::::::::::::::  solution
 
@@ -544,10 +540,8 @@ avg_gdp_in_decade('Japan','asia',1983)
 `f(t+1) = r * f(t) * [1 - f(t)]`
 
 2. Using a `for` or `while` loop, iterate the `logistic_map` function defined in part 1, starting
-   from an initial population of 0.5, for a period of time `t_final = 10`. Store the intermediate
-   results in a list so that after the loop terminates you have accumulated a sequence of values
-   representing the state of the logistic map at times `t = [0,1,...,t_final]` (11 values in total).
-   Print this list to see the evolution of the population.
+   from an initial population of 0.5, for a period of time `t_final = 10`. Зберігайте проміжні результати в списку, щоб після завершення циклу ви накопичили послідовність значень, що представляють стан системи в моменти часу `t = [0,1,...,t_final]` (11 значень в цілому).
+   Виведіть цей список, щоб побачити, як змінюється популяція з часом.
 
 3. Encapsulate the logic of your loop into a function called `iterate` that takes the initial
    population as its first input, the parameter `t_final` as its second input and the parameter
@@ -606,9 +600,9 @@ for period in (10, 100, 1000):
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Using Functions With Conditionals in Pandas
+## Використання функцій з умовними операторами в Pandas
 
-Functions will often contain conditionals.  Here is a short example that
+Функції часто містять перевірку умов.  Here is a short example that
 will indicate which quartile the argument is in based on hand-coded values
 for the quartile cut points.
 
@@ -637,10 +631,7 @@ calculate_life_quartile(62.5)
 2
 ```
 
-That function would typically be used within a `for` loop, but Pandas has
-a different, more efficient way of doing the same thing, and that is by
-_applying_ a function to a dataframe or a portion of a dataframe.  Here
-is an example, using the definition above.
+Зазвичай така функція використовується всередині циклу `for`. Але Pandas має інший, більш ефективний спосіб робити те саме - _застосування_ функції до датафрейму або його частини.  Розглянемо приклад, використовуючи наведене вище визначення функції.
 
 ```python
 data = pd.read_csv('data/gapminder_all.csv')
@@ -649,18 +640,16 @@ data['life_qrtl'] = data['lifeExp_1952'].apply(calculate_life_quartile)
 
 У другому рядку коду багато цікавого, тож розберімо його по частинах.
 On the right side of the `=` we start with `data['lifeExp']`, which is the
-column in the dataframe called `data` labeled `lifExp`.  We use the
-`apply()` to do what it says, apply the `calculate_life_quartile` to the
-value of this column for every row in the dataframe.
+column in the dataframe called `data` labeled `lifExp`.  Ми використовуємо `apply()`, щоб застосувати функцію `calculate_life_quartile` до усіх значень цього стовпця.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Break programs down into functions to make them easier to understand.
-- Define a function using `def` with a name, parameters, and a block of code.
-- Defining a function does not run it.
-- Arguments in a function call are matched to its defined parameters.
+- Розбивайте програми на функції, щоб їх було легше зрозуміти.
+- Функції визначаються за допомогою `def` з назвою, параметрами та блоком коду.
+- Визначення функції не запускає її.
+- Аргументи виклику функції зіставляються з її визначеними параметрами.
 - Функції можуть повертати результат свого виклику за допомогою `return`.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
