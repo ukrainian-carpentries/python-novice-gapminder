@@ -4,7 +4,7 @@
 
 # python-novice-gapminder
 
-Introduction to Python for non-programmers with a focus on plotting and data analysis.
+Вступ до Python для тих, хто не має попереднього досвіду програмування, з акцентом на побудову графіків та аналіз даних.
 Будь ласка, перейдіть за посиланням [https://swcarpentry.github.io/python-novice-gapminder/](https://swcarpentry.github.io/python-novice-gapminder/)
 для перегляду відформатованої версії цього матеріалу, та до
 [документації шаблону уроку][sandpaper-docs]
