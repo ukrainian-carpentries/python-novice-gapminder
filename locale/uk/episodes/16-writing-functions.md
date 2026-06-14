@@ -239,7 +239,7 @@ print('result of call is:', result)
 result of call is: None
 ```
 
-3. Why is the result of the call `None`?
+3. Чому результатом виклику є `None`?
 
 :::::::::::::::  solution
 
@@ -355,9 +355,7 @@ print_date(day=1, month=2, year=2003)
 
 1. `2003/2/1`
 
-2. We saw examples of using _named arguments_ when working with the pandas library. For example, when reading in a dataset
-   using `data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')`, the last argument `index_col` is a
-   named argument.
+2. Ми бачили приклади використання іменованих аргументів під час роботи з бібліотекою pandas. Наприклад, під час читання набору даних за допомогою `data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')`, останній аргумент `index_col` є іменованим аргументом.
 
 3. Using named arguments can make code more readable since one can see from the function call what name the different arguments
    have inside the function. It can also reduce the chances of passing arguments in the wrong order, since by using named arguments
@@ -378,13 +376,13 @@ to the computer and then the computer will print a label.
 import random
 for i in range(10):
 
-    # simulating the mass of a chicken egg
-    # the (random) mass will be 70 +/- 20 grams
+    # імітація маси курячого яйця
+    # маса має випадкове значення у диапазоні 70 +/- 20 грамів
     mass = 70 + 20.0 * (2.0 * random.random() - 1.0)
 
     print(mass)
 
-    # egg sizing machinery prints a label
+    # друк етикетки машиною для сортування яєць
     if mass >= 85:
         print("jumbo")
     elif mass >= 70:
@@ -404,16 +402,16 @@ Revising the program to use the function would give us this:
 import random
 for i in range(10):
 
-    # simulating the mass of a chicken egg
-    # the (random) mass will be 70 +/- 20 grams
+    # імітація маси курячого яйця
+    # маса має випадкове значення у диапазоні 70 +/- 20 грамів
     mass = 70 + 20.0 * (2.0 * random.random() - 1.0)
 
     print(mass, get_egg_label(mass))
 
 ```
 
-1. Create a function definition for `get_egg_label()` that will work with the revised program above.  Note that the `get_egg_label()` function's return value will be important. Зразок виводу програми вище буде `71.23 large`.
-2. Брудне яйце може мати масу понад 90 грамів, а зіпсоване чи розбите яйце, ймовірно, матиме масу менше ніж 50 грамів.  Modify your `get_egg_label()` function to account for these error conditions. Sample output could be `25 too light, probably spoiled`.
+1. Create a function definition for `get_egg_label()` that will work with the revised program above.  Зверніть увагу на значення, яке повертає функція `get_egg_label()`. Зразок виводу програми вище буде `71.23 large`.
+2. Брудне яйце може мати масу понад 90 грамів, а зіпсоване чи розбите яйце, ймовірно, матиме масу менше ніж 50 грамів.  Змініть функцію `print_egg_label()` для врахування цих умов. Sample output could be `25 too light, probably spoiled`.
 
 :::::::::::::::  solution
 
@@ -421,7 +419,7 @@ for i in range(10):
 
 ```python
 def get_egg_label(mass):
-    # egg sizing machinery prints a label
+    # друк етикетки машиною для сортування яєць
     egg_label = "Unlabelled"
     if mass >= 90:
         egg_label = "warning: egg might be dirty"
@@ -444,9 +442,9 @@ def get_egg_label(mass):
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Encapsulating Data Analysis
+## Функція для аналізу даних
 
-Assume that the following code has been executed:
+Припустимо, що був виконаний наступний код:
 
 ```python
 import pandas as pd
@@ -478,14 +476,13 @@ def avg_gdp_in_decade(country, continent, year):
 3. How would you generalize this function
    if you did not know beforehand which specific years occurred as columns in the data?
    For instance, what if we also had data from years ending in 1 and 9 for each decade?
-   (Hint: use the columns to filter out the ones that correspond to the decade,
-   instead of enumerating them in the code.)
+   (Підказка: використовуйте стовпці, щоб відфільтрувати ті, що відповідають потрібному десятиріччю.)
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
-1. The average GDP for Japan across the years reported for the 1980s is computed with:
+1. Середній ВВП Японії по відзвітованих роках з 1980-тих обчислюється за допомогою:
 
 ```python
 year = 1983
@@ -493,7 +490,7 @@ gdp_decade = 'gdpPercap_' + str(year // 10)
 avg = (japan.loc[gdp_decade + '2'] + japan.loc[gdp_decade + '7']) / 2
 ```
 
-2. That code as a function is:
+2. Цей код як функція:
 
 ```python
 def avg_gdp_in_decade(country, continent, year):
@@ -504,7 +501,7 @@ def avg_gdp_in_decade(country, continent, year):
     return avg
 ```
 
-3. To obtain the average for the relevant years, we need to loop over them:
+3. Щоб отримати середнє значення за відповідні роки, нам потрібно застосувати цикл:
 
 ```python
 def avg_gdp_in_decade(country, continent, year):
@@ -513,14 +510,14 @@ def avg_gdp_in_decade(country, continent, year):
     gdp_decade = 'gdpPercap_' + str(year // 10)
     total = 0.0
     num_years = 0
-    for yr_header in c.index: # c's index contains reported years
+    for yr_header in c.index: # індекс c містить звітні роки
         if yr_header.startswith(gdp_decade):
             total = total + c.loc[yr_header]
             num_years = num_years + 1
     return total/num_years
 ```
 
-The function can now be called by:
+Ця функція тепер може викликатися наступним чином:
 
 ```python
 avg_gdp_in_decade('Japan','asia',1983)
@@ -536,10 +533,9 @@ avg_gdp_in_decade('Japan','asia',1983)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Simulating a dynamical system
+## Моделювання динамічної системи
 
-In mathematics, a [dynamical system](https://en.wikipedia.org/wiki/Dynamical_system) is a system
-in which a function describes the time dependence of a point in a geometrical space. A canonical
+У математиці [динамічна система](https://en.wikipedia.org/wiki/Dynamical_system) - це система, у якій функція описує залежність розташування точки в геометричному просторі від часу. A canonical
 example of a dynamical system is the [logistic map](https://en.wikipedia.org/wiki/Logistic_map),
 a growth model that computes a new population density (between  0 and 1) based on the current
 density. In the model, time takes discrete values 0, 1, 2, ...
@@ -560,11 +556,11 @@ density. In the model, time takes discrete values 0, 1, 2, ...
    population as its first input, the parameter `t_final` as its second input and the parameter
    `r` as its third input. The function should return the list of values representing the state of
    the logistic map at times `t = [0,1,...,t_final]`. Run this function for periods `t_final = 100`
-   and `1000` and print some of the values. Is the population trending toward a steady state?
+   and `1000` and print some of the values. Чи рухається популяція до стабільного стану?
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
 1.
 
@@ -605,7 +601,7 @@ for period in (10, 100, 1000):
 0.0009913908614406382
 ```
 
-The population seems to be approaching zero.
+Здається, популяція наближається до нуля.
 
 :::::::::::::::::::::::::
 
@@ -622,19 +618,19 @@ for the quartile cut points.
 ```python
 def calculate_life_quartile(exp):
     if exp < 58.41:
-        # This observation is in the first quartile
+        # Це спостереження знаходиться в першому квартилі
         return 1
     elif exp >= 58.41 and exp < 67.05:
-        # This observation is in the second quartile
+        # Це спостереження знаходиться у другому квартилі
        return 2
     elif exp >= 67.05 and exp < 71.70:
-        # This observation is in the third quartile
+        # Це спостереження знаходиться у третьому квартилі
        return 3
     elif exp >= 71.70:
-        # This observation is in the fourth quartile
+        # Це спостереження знаходиться в четвертому квартилі
        return 4
     else:
-        # This observation has bad data
+        # Це спостереження містить невірні дані
        return None
 
 calculate_life_quartile(62.5)
@@ -654,7 +650,7 @@ data = pd.read_csv('data/gapminder_all.csv')
 data['life_qrtl'] = data['lifeExp_1952'].apply(calculate_life_quartile)
 ```
 
-There is a lot in that second line, so let's take it piece by piece.
+У другому рядку коду багато цікавого, тож розберімо його по частинах.
 On the right side of the `=` we start with `data['lifeExp']`, which is the
 column in the dataframe called `data` labeled `lifExp`.  We use the
 `apply()` to do what it says, apply the `calculate_life_quartile` to the
@@ -668,7 +664,7 @@ value of this column for every row in the dataframe.
 - Define a function using `def` with a name, parameters, and a block of code.
 - Defining a function does not run it.
 - Arguments in a function call are matched to its defined parameters.
-- Functions may return a result to their caller using `return`.
+- Функції можуть повертати результат свого виклику за допомогою `return`.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
