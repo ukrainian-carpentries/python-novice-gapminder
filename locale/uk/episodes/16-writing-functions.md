@@ -248,8 +248,8 @@ result of call is: None
 1. Проблема цього прикладу полягає в тому, що функція `print_time()` визначається _після_ виклику функції. Python не може розпізнати ім'я `print_time` оскільки воно ще не визначено і генерує помилку `NameError`, тобто `NameError: name 'print_time' is not defined`
 
 2. Перший рядок виводу `11:37:59` з'являється завдяки першому рядку коду `result = print_time(11, 37, 59)`.
-   Він викликає функцію `print_time` і присвоює повернуте нею значення змінній `result`. The second line is from the second print call to print the contents
-   of the `result` variable.
+   Він викликає функцію `print_time` і присвоює повернуте нею значення змінній `result`. Другий рядок є результатом наступного виклику функції `print`, який виводить вміст
+   змінної `result`.
 
 3. `print_time()` явно не повертає значення за допомогою `return`, тому автоматично повертає `None`.
 
@@ -367,7 +367,7 @@ print_date(day=1, month=2, year=2003)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Encapsulation of an If/Print Block
+## Винесення блоку If/Print в окрему функцію
 
 The code below will run on a label-printer for chicken eggs.  A digital scale will report a chicken egg mass (in grams)
 to the computer and then the computer will print a label.
