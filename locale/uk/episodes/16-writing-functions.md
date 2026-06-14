@@ -48,7 +48,7 @@ def print_greeting():
 
 ## Визначення функції не виконує її.
 
-- Defining a function does not run it.
+- Визначення функції не виконує її.
   - Like assigning a value to a variable.
 - Must call the function to execute the code it contains.
 
