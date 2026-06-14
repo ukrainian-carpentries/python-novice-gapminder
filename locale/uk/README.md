@@ -4,13 +4,13 @@
 
 # python-novice-gapminder
 
-Introduction to Python for non-programmers with a focus on plotting and data analysis.
-Please see [https://swcarpentry.github.io/python-novice-gapminder/](https://swcarpentry.github.io/python-novice-gapminder/)
-for a rendered version of this material,
-[the lesson template documentation][sandpaper-docs]
-for instructions on formatting and building lesson material.
+Вступ до Python для тих, хто не має попереднього досвіду програмування, з акцентом на побудову графіків та аналіз даних.
+Будь ласка, перейдіть за посиланням [https://swcarpentry.github.io/python-novice-gapminder/](https://swcarpentry.github.io/python-novice-gapminder/)
+для перегляду відформатованої версії цього матеріалу, та до
+[документації шаблону уроку][sandpaper-docs]
+для інструкцій щодо його організації та побудови.
 
-Maintainer(s):
+Супровідники:
 
 - [Allen Lee][lee-allen]
 - [Nathan Moore][moore-nathan]
