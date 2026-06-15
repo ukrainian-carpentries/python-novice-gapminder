@@ -80,10 +80,7 @@ print_date(1871, 3, 19)
 1871/3/19
 ```
 
-Or, we can name the arguments when we call the function, which allows us to
-specify them in any order and adds clarity to the call site; otherwise as
-one is reading the code they might forget if the second argument is the month
-or the day for example.
+Ми також можемо назвати аргументи під час виклику, що дозволяє передавати їх у довільному порядку та підвищує читабельність виклику. В іншому випадку під час читання коду може виникнути непорозуміння, наприклад, який аргумент йде другим: місяць або день.
 
 ```python
 print_date(month=3, day=19, year=1871)
@@ -99,11 +96,11 @@ print_date(month=3, day=19, year=1871)
 
 ## Functions may return a result to their caller using `return`.
 
-- Use `return ...` to give a value back to the caller.
+- Використовуйте `return ...` для повернення результату виклику функції.
 - Може виникнути будь-де у функції.
-- But functions are easier to understand if `return` occurs:
+- Але функції легше зрозуміти, якщо `return` зустрічається:
   - На початку функції для обробки особливих випадків.
-  - At the very end, with a final result.
+  - У самому кінці з остаточним результатом.
 
 ```python
 def average(values):
@@ -259,7 +256,7 @@ result of call is: None
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Encapsulation
+## Згортання коду у функцію
 
 Заповніть порожні поля, щоб створити функцію, яка приймає одне ім’я файлу як аргумент і завантажує дані з цього файлу. Функція має повертати мінімальне значення з цих даних.
 
@@ -406,7 +403,7 @@ for i in range(10):
 
 ```
 
-1. Create a function definition for `get_egg_label()` that will work with the revised program above.  Зверніть увагу на значення, яке повертає функція `get_egg_label()`. Зразок виводу програми вище буде `71.23 large`.
+1. Створіть функцію `print_egg_label()`, яка працюватиме з новою версією програми, наведеною вище.  Зверніть увагу на значення, яке повертає функція `get_egg_label()`. Зразок виводу програми вище буде `71.23 large`.
 2. Брудне яйце може мати масу понад 90 грамів, а зіпсоване чи розбите яйце, ймовірно, матиме масу менше ніж 50 грамів.  Змініть функцію `print_egg_label()` для врахування цих умов. Можливий вивід програми: `25 too light, probably spoiled`.
 
 :::::::::::::::  solution
