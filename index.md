@@ -3,20 +3,28 @@ permalink: index.html
 site: sandpaper::sandpaper_site
 ---
 
-Цей урок містить введення до програмування на мові Python для користувачів, які не мають зовсім або мають початковий досвід програмування. Він використовує як мотиваційний приклад побудову графіків, та розроблений для використання на тренінгах [Data Carpentry][dc-lessons] та [Software Carpentry][swc-lessons].
-Цей урок використовує [JupyterLab][jupyterlab], але його також можна викладати за допомогою альтернативних інтерпретаторів Python 3 (наприклад, Repl.it, Anaconda).
+This lesson is an introduction to programming in Python 3 for people with little or no previous
+programming experience. It uses plotting as its motivating example and is designed to be used in
+both [Data Carpentry][dc-lessons] and [Software Carpentry][swc-lessons] workshops.
+This lesson references [JupyterLab][jupyterlab] but can be taught using alternative Python 3 interpreters
+as well (e.g., repl.it, Anaconda).
 
 ::::::::::::::::::::::::::::::::::::::::::  prereq
 
-## Передумови
+## Prerequisites
 
-1. Слухачі мають розуміти що таке файли та каталоги, що таке робочий каталог, та як запустити інтерпретатор мови Python.
+1. Learners need to understand what files and directories are,
+  what a working directory is,
+  and how to start a Python interpreter.
 
-2. Слухачі мають встановити Python до початку тренінгу.
+2. Learners must install Python 3 before the class starts.
 
-3. Слухачі мають отримати необхідну збірку даних (gapminder) перед початком тренінгу: будь ласка, завантажте та розархівуйте файл [python-novice-gapminder-data.zip]({{page.root}}/files/python-novice-gapminder-data.zip).
+3. Learners must get the gapminder data before class starts:
+  please download and unzip the file
+  [python-novice-gapminder-data.zip](episodes/files/python-novice-gapminder-data.zip).
 
-Дивіться [інструкції з налаштування](learners/setup.md) для подальшої інформації.
+Please see [the setup instructions](learners/setup.md)
+for more details.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 

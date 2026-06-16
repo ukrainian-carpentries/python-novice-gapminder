@@ -1,7 +1,7 @@
 ---
-title: Обговорення
+title: Discussion
 ---
 
-FIXME: загальне обговорення та додаткові джерела інформації для учасників.
+FIXME: general discussion and further reading for learners.
 
 
