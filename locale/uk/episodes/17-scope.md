@@ -119,17 +119,12 @@ KeyError: 'Friday'
 ## Рішення
 
 1. Три рівні.
-
 2. `errors_02.py`
-
 3. `print_message`
-
 4. Рядок 11
-
 5. `KeyError`. Ці помилки виникають при спробі звернутися до ключа, який не існує (зазвичай в структурі
    даних на кшталт словника). We can find more information about the `KeyError` and other built-in exceptions
    in the [Python docs](https://docs.python.org/3/library/exceptions.html#KeyError).
-
 6. `KeyError: 'Friday'`
 
 :::::::::::::::::::::::::
