@@ -31,7 +31,7 @@ Some points worth highlighting:
 - use clear, semantically meaningful variable names
 - use white-space, _not_ tabs, to indent lines (tabs can cause problems across different text editors, operating systems, and version control systems)
 
-## Follow standard Python style in your code.
+## Дотримуйтеся стандартного стилю Python у своєму коді.
 
 - [PEP8](https://www.python.org/dev/peps/pep-0008):
   a style guide for Python that discusses topics such as how to name variables,
