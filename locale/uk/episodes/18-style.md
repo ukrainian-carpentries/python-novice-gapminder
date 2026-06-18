@@ -49,7 +49,7 @@ Assertions are a simple but powerful method for making sure that the context in 
 
 ```python
 def calc_bulk_density(mass, volume):
-    '''Return dry bulk density = powder mass / powder volume.'''
+    '''Повертає щільність сухої речовини = маса / об'єм.'''
     assert volume > 0
     return mass / volume
 ```
