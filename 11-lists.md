@@ -1,30 +1,29 @@
 ---
-title: Lists
+title: Списки
 teaching: 10
 exercises: 10
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain why programs need collections of values.
-- Write programs that create flat lists, index them, slice them, and modify them through assignment and method calls.
+- Пояснити, навіщо програмам потрібна можливість працювати з наборами значень.
+- Написати програми, які створюють списки, індексують їх, отримують зрізи, а також змінюють списки через присвоєння значень та виклик методів.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can I store multiple values?
+- Як ефективно зберігати багато значень?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## A list stores many values in a single structure.
+## За допомогою списків можна зберігати кілька значень в одній структурі даних.
 
-- Doing calculations with a hundred variables called `pressure_001`, `pressure_002`, etc.,
-  would be at least as slow as doing them by hand.
-- Use a *list* to store many values together.
-  - Contained within square brackets `[...]`.
-  - Values separated by commas `,`.
-- Use `len` to find out how many values are in a list.
+- Виконання обчислень із сотнею змінних під назвою `pressure_001`, `pressure_002` тощо, було б принаймні так само повільно, як робити їх вручну.
+- Використовуйте список для зберігання багатьох значень разом.
+  - Список позначається квадратними дужками `[...]`.
+  - Значення розділяються комами `,`.
+- Використовуйте `len`, щоб дізнатися, скільки значень у списку.
 
 ```python
 pressures = [0.273, 0.275, 0.277, 0.275, 0.276]
@@ -37,9 +36,9 @@ pressures: [0.273, 0.275, 0.277, 0.275, 0.276]
 length: 5
 ```
 
-## Use an item's index to fetch it from a list.
+## Щоб отримати елемент списку, використовуйте його індекс.
 
-- Just like strings.
+- Це робиться так само, як і при роботі з рядками.
 
 ```python
 print('zeroth item of pressures:', pressures[0])
@@ -51,42 +50,42 @@ zeroth item of pressures: 0.273
 fourth item of pressures: 0.276
 ```
 
-## Lists' values can be replaced by assigning to them.
+## Значення елементів списків можна замінити шляхом присвоєння.
 
-- Use an index expression on the left of assignment to replace a value.
+- Використовуйте індексний вираз ліворуч від знаку присвоєння, щоб замінити значення.
 
 ```python
-pressures[0] = 0.265
-print('pressures is now:', pressures)
+pressures[0] = 0.265 
+print('нові значення pressures:', pressures)
 ```
 
 ```output
-pressures is now: [0.265, 0.275, 0.277, 0.275, 0.276]
+Нові значення pressures: [0.265, 0.275, 0.277, 0.275, 0.276]
 ```
 
-## Appending items to a list lengthens it.
+## Додавання елементів до списку подовжує його.
 
-- Use `list_name.append` to add items to the end of a list.
+- Щоб додати елементи в кінець списку, використовуйте `list_name.append`.
 
 ```python
 primes = [2, 3, 5]
-print('primes is initially:', primes)
+print('Початкові значення primes:', primes)
 primes.append(7)
-print('primes has become:', primes)
+print('Список primes змінився:', primes)
 ```
 
 ```output
-primes is initially: [2, 3, 5]
-primes has become: [2, 3, 5, 7]
+Початкові значення primes: [2, 3, 5] 
+Список primes змінився: [2, 3, 5, 7]
 ```
 
-- `append` is a *method* of lists.
-  - Like a function, but tied to a particular object.
-- Use `object_name.method_name` to call methods.
-  - Deliberately resembles the way we refer to things in a library.
-- We will meet other methods of lists as we go along.
-  - Use `help(list)` for a preview.
-- `extend` is similar to `append`, but it allows you to combine two lists.  For example:
+- `append` є _методом_ списків.
+  - Методи подібні функціям, але вони прив’язані до певних об’єктів.
+- Для виклику методів використовується синтаксис `object_name.method_name` .
+  - Такий запис навмисно відтворює те, як ми звертаємося до функцій у бібліотеці.
+- По ходу роботи ми познайомимося з іншими методами, визначеними для списків.
+  - Використовуйте `help(list)`, якщо бажаєте переглянути їх перелік зараз.
+- `extend` - це метод, схожий на `append`, але він дозволяє об’єднувати два списки.  Наприклад:
 
 ```python
 teen_primes = [11, 13, 17, 19]
@@ -104,64 +103,62 @@ primes has now become: [2, 3, 5, 7, 11, 13, 17, 19]
 primes has finally become: [2, 3, 5, 7, 11, 13, 17, 19, [37, 41, 43, 47]]
 ```
 
-Note that while `extend` maintains the "flat" structure of the list, appending a list to a list means
-the last element in `primes` will itself be a list, not an integer. Lists can contain values of any
-type; therefore, lists of lists are possible.
+Зауважимо, що `extend` зберігає "плоску" структуру списку, тоді як додавання списку до іншого списку за допомогою `append` дає двовимірний результат: останній елемент з `primes` є списком, а не цілим числом. Списки можуть містити значення будь-якого типу; отже, можливі списки списків.
 
-## Use `del` to remove items from a list entirely.
+## Використовуйте `del` для повного видалення елементів зі списку.
 
-- We use `del list_name[index]` to remove an element from a list (in the example, 9 is not a prime number) and thus shorten it.
-- `del` is not a function or a method, but a statement in the language.
+- Ми використовуємо `del list_name[index]` для видалення елемента зі списку (у прикладі нижче, 9 не є простим числом) і таким чином скоротити список.
+- `del` - це не функція і не метод, а оператор мови Python.
 
 ```python
 primes = [2, 3, 5, 7, 9]
-print('primes before removing last item:', primes)
+print('primes перед видаленням останнього елементу:', primes)
 del primes[4]
-print('primes after removing last item:', primes)
+print('primes після видалення останнього елементу:', primes)
 ```
 
 ```output
-primes before removing last item: [2, 3, 5, 7, 9]
-primes after removing last item: [2, 3, 5, 7]
+primes перед видаленням останнього елементу: [2, 3, 5, 7, 9]
+primes після видалення останнього елементу: [2, 3, 5, 7]
 ```
 
-## The empty list contains no values.
+## Порожній список не містить жодних значень.
 
-- Use `[]` on its own to represent a list that doesn't contain any values.
-  - "The zero of lists."
-- Helpful as a starting point for collecting values
-  (which we will see in the [next episode](12-for-loops.md)).
+- Щоб створити порожній список, використовуйте `[]`.
+  - Порожній список - це "нуль списків."
+- Корисний як початкова структура для накопичення значень
+  (як ми побачимо в [наступному епізоді](12-for-loops.md)).
 
-## Lists may contain values of different types.
+## Списки можуть містити значення різних типів.
 
-- A single list may contain numbers, strings, and anything else.
+- Один список може містити числа, рядки та будь-що інше.
 
 ```python
-goals = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lists.']
+goals = [1, 'Створити списки.', 2, 'Вилучити елементи із списків.', 3, 'Змінити списки.']
 ```
 
-## Character strings can be indexed like lists.
+## Рядки символів можна індексувати як списки.
 
-- Get single characters from a character string using indexes in square brackets.
+- Отримати окремі символи з рядка символів можна за допомогою індексів у квадратних дужках.
 
 ```python
 element = 'carbon'
-print('zeroth character:', element[0])
-print('third character:', element[3])
+print('нульовий символ:', element[0])
+print('третій символ:', element[3])
 ```
 
 ```output
-zeroth character: c
-third character: b
+нульовий символ: c
+третій символ: b
 ```
 
-## Character strings are immutable.
+## Рядки символів незмінні.
 
-- Cannot change the characters in a string after it has been created.
-  - *Immutable*: can't be changed after creation.
-  - In contrast, lists are *mutable*: they can be modified in place.
-- Python considers the string to be a single value with parts,
-  not a collection of values.
+- Неможливо змінити символи в рядку після його створення.
+  - _Незмінний_ (_Immutable_): не може бути змінений після створення.
+  - На відміну від рядків, списки можна _змінювати_ після їх створення.
+- Python розглядає рядок як одне значення, яке складається з частин,
+  а не як набір незалежних значень.
 
 ```python
 element[0] = 'C'
@@ -171,14 +168,13 @@ element[0] = 'C'
 TypeError: 'str' object does not support item assignment
 ```
 
-- Lists and character strings are both *collections*.
+- Списки та рядки символів є _колекціями_.
 
-## Indexing beyond the end of the collection is an error.
+## Індексація після кінця колекції призводить до помилки.
 
-- Python reports an `IndexError` if we attempt to access a value that doesn't exist.
-  - This is a kind of [runtime error](04-built-in.md).
-  - Cannot be detected as the code is parsed
-    because the index might be calculated based on data.
+- Python повідомляє про помилку `IndexError`, якщо ми намагаємося звернутися до не наявного значення.
+  - Це різновид помилки виконання ([runtime error](04-built-in.md)).
+  - Її неможливо виявити під час аналізу коду, оскільки індекс може бути розрахований на основі даних, з якими працює програма.
 
 ```python
 print('99th element of element is:', element[99])
@@ -190,9 +186,9 @@ IndexError: string index out of range
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Fill in the Blanks
+## Заповнення пропусків
 
-Fill in the blanks so that the program below produces the output shown.
+Заповніть пропуски так, щоб наведена нижче програма видала показаний результат.
 
 ```python
 values = ____
@@ -211,7 +207,7 @@ second time: [3, 5]
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
 ```python
 values = []
@@ -229,22 +225,19 @@ print('second time:', values)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## How Large is a Slice?
+## Який розмір має зріз?
 
-If `start` and `stop` are both non-negative integers,
-how long is the list `values[start:stop]`?
+Якщо `start` і `stop` є невід'ємними цілими числами,
+якою є довжина списку `values[start:stop:]`?
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
-The list `values[start:stop]` has up to `stop - start` elements.  For example,
-`values[1:4]` has the 3 elements `values[1]`, `values[2]`, and `values[3]`.
-Why 'up to'? As we saw in [episode 2](02-variables.md),
-if `stop` is greater than the total length of the list `values`,
-we will still get a list back but it will be shorter than expected.
-
-
+Список `values[start:stop]` може містити щонайбільше `stop - start` елементів.  Наприклад, `values[1:4]` має 3 елементи `values[1]`, `values[2]`, та `values[3]`.
+Чому 'щонайбільше'? Як ми бачили у [епізоді 2](02-variables.md),
+якщо `stop` перевищує загальну довжину списку `values`,
+результатом усе одно буде список, але коротший, ніж очікувалося.
 
 :::::::::::::::::::::::::
 
@@ -252,9 +245,9 @@ we will still get a list back but it will be shorter than expected.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## From Strings to Lists and Back
+## Від рядків до списків і назад
 
-Given this:
+Нехай ми маємо наступне:
 
 ```python
 print('string to list:', list('tin'))
@@ -266,19 +259,18 @@ string to list: ['t', 'i', 'n']
 list to string: gold
 ```
 
-1. What does `list('some string')` do?
-2. What does `'-'.join(['x', 'y', 'z'])` generate?
+1. Що робить команда `list('some string')`?
+2. Що створює команда `'-'.join(['x', 'y', 'z'])`?
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
-1. [`list('some string')`](https://docs.python.org/3/library/stdtypes.html#list) converts a string into a list containing all of its characters.
-2. [`join`](https://docs.python.org/3/library/stdtypes.html#str.join) returns a string that is the *concatenation*
-  of each string element in the list and adds the separator between each element in the list. This results in
-  `x-y-z`. The separator between the elements is the string that provides this method.
-  
-  
+1. [`list('some string')`](https://docs.python.org/3/library/stdtypes.html#list) перетворює рядок на список окремих символів.
+
+2. [`join`](https://docs.python.org/3/library/stdtypes.html#str.join) повертає рядок, який є _конкатенацією_
+   всіх елементів, та додає роздільник між кожним елементом у списку. У результаті отримуємо
+   `x-y-z`. Рядок, який викликає цей метод, виступає роздільником між елементами.
 
 :::::::::::::::::::::::::
 
@@ -286,37 +278,37 @@ list to string: gold
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Working With the End
+## Робота з кінцем
 
-What does the following program print?
+Що друкує наступна програма?
 
 ```python
 element = 'helium'
 print(element[-1])
 ```
 
-1. How does Python interpret a negative index?
-2. If a list or string has N elements,
-  what is the most negative index that can safely be used with it,
-  and what location does that index represent?
-3. If `values` is a list, what does `del values[-1]` do?
-4. How can you display all elements but the last one without changing `values`?
-  (Hint: you will need to combine slicing and negative indexing.)
+1. Як Python інтерпретує від'ємний індекс?
+2. Якщо список або рядок має N елементів,
+   який найбільший від'ємний індекс можна безпечно використовувати для даного рядка,
+   і яку позицію він означає?
+3. Якщо `values` є списком, що відбувається при виконанні `del values[-1]`?
+4. Як можна показати всі елементи, окрім останнього, не змінюючи `values`?
+   (Підказка: вам знадобиться одночасно використати зрізи та від’ємну індексацію.)
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
-The program prints `m`.
+Програма надрукує `m`.
 
-1. Python interprets a negative index as starting from the end (as opposed to
-  starting from the beginning).  The last element is `-1`.
-2. The last index that can safely be used with a list of N elements is element
-  `-N`, which represents the first element.
-3. `del values[-1]` removes the last element from the list.
+1. Python інтерпретує від’ємний індекс як відлік з кінця (на відміну від
+   звичайного відліку з початку).  Останній елемент має індекс `-1`.
+
+2. Найменший від'ємний індекс, який можна безпечно використовувати зі списком із N елементів - це індекс `-N`, який представляє перший елемент.
+
+3. `del values[-1]` видаляє останній елемент зі списку.
+
 4. `values[:-1]`
-  
-  
 
 :::::::::::::::::::::::::
 
@@ -324,9 +316,9 @@ The program prints `m`.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Stepping Through a List
+## Рух по списку
 
-What does the following program print?
+Що друкує наступна програма?
 
 ```python
 element = 'fluorine'
@@ -334,27 +326,23 @@ print(element[::2])
 print(element[::-1])
 ```
 
-1. If we write a slice as `low:high:stride`, what does `stride` do?
-2. What expression would select all of the even-numbered items from a collection?
+1. Якщо ми визначаємо зріз як `low:high:stride`, що робить `stride`?
+2. Яка команда дозволить вибрати з колекції всі елементи з парними індексами?
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
-The program prints
+Програма виводить
 
 ```python
 furn
 eniroulf
 ```
 
-1. `stride` is the step size of the slice.
-2. The slice `1::2` selects all even-numbered items from a collection: it starts
-  with element `1` (which is the second element, since indexing starts at `0`),
-  goes on until the end (since no `end` is given), and uses a step size of `2`
-  (i.e., selects every second element).
-  
-  
+1. `stride` є довжиною кроку зрізу.
+
+2. Зріз `1::2` вибирає всі елементи з парними номерами з колекції: він починається з елементу `1` (який є другим елементом, оскільки індексація починається з `0`), продовжується до кінця (оскільки `end` не задано) і використовує розмір кроку `2` (таким чином обираючи кожний другий елемент).
 
 :::::::::::::::::::::::::
 
@@ -362,9 +350,9 @@ eniroulf
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Slice Bounds
+## Межі зрізу
 
-What does the following program print?
+Що друкує наступна програма?
 
 ```python
 element = 'lithium'
@@ -374,17 +362,15 @@ print(element[-1:3])
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
 ```output
 lithium
 
 ```
 
-The first statement prints the whole string, since the slice goes beyond the total length of the string.
-The second statement returns an empty string, because the slice goes "out of bounds" of the string.
-
-
+Перша команда повертає весь рядок, оскільки зріз перевищує загальну довжину рядка.
+Друга команда повертає порожній рядок, оскільки зріз виходить "за межі" рядка.
 
 :::::::::::::::::::::::::
 
@@ -392,10 +378,10 @@ The second statement returns an empty string, because the slice goes "out of bou
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Sort and Sorted
+## Сортування на місці чи у новий список
 
-What do these two programs print?
-In simple terms, explain the difference between `sorted(letters)` and `letters.sort()`.
+Що друкують ці дві програми?
+Поясніть простими словами різницю між `sorted(letters)` and `letters.sort()`.
 
 ```python
 # Program A
@@ -413,25 +399,23 @@ print('letters is', letters, 'and result is', result)
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
-Program A prints
+Програма А надрукує
 
 ```output
 letters is ['g', 'o', 'l', 'd'] and result is ['d', 'g', 'l', 'o']
 ```
 
-Program B prints
+Програма В надрукує
 
 ```output
 letters is ['d', 'g', 'l', 'o'] and result is None
 ```
 
-`sorted(letters)` returns a sorted copy of the list `letters` (the original
-list `letters` remains unchanged), while `letters.sort()` sorts the list
-`letters` in-place and does not return anything.
-
-
+`sorted(letters)` повертає відсортовану копію списку `letters` (оригінальний
+список `letters` залишається незмінним), тоді як `letters.sort()` сортує список
+`letters` безпосередньо і нічого не повертає.
 
 :::::::::::::::::::::::::
 
@@ -439,10 +423,10 @@ list `letters` remains unchanged), while `letters.sort()` sorts the list
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Copying (or Not)
+## Копіювання (чи ні)
 
-What do these two programs print?
-In simple terms, explain the difference between `new = old` and `new = old[:]`.
+Що друкують ці дві програми?
+Поясніть простими словами різницю між `new = old` and `new = old[:]`.
 
 ```python
 # Program A
@@ -462,27 +446,23 @@ print('new is', new, 'and old is', old)
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
-Program A prints
+Програма А надрукує
 
 ```output
 new is ['D', 'o', 'l', 'd'] and old is ['D', 'o', 'l', 'd']
 ```
 
-Program B prints
+Програма В надрукує
 
 ```output
 new is ['D', 'o', 'l', 'd'] and old is ['g', 'o', 'l', 'd']
 ```
 
-`new = old` makes `new` a reference to the list `old`; `new` and `old` point
-towards the same object.
+Оператор `new = old` призводить до того, що `new` посилається на той самий об’єкт списку, що й `old`.
 
-`new = old[:]` however creates a new list object `new` containing all elements
-from the list `old`; `new` and `old` are different objects.
-
-
+Однак `new = old[:]` навпаки створює окремий список `new`, який містить усі елементи зі списку `old`; тому `new` та `old` є різними об'єктами.
 
 :::::::::::::::::::::::::
 
@@ -490,16 +470,16 @@ from the list `old`; `new` and `old` are different objects.
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- A list stores many values in a single structure.
-- Use an item's index to fetch it from a list.
-- Lists' values can be replaced by assigning to them.
-- Appending items to a list lengthens it.
-- Use `del` to remove items from a list entirely.
-- The empty list contains no values.
-- Lists may contain values of different types.
-- Character strings can be indexed like lists.
-- Character strings are immutable.
-- Indexing beyond the end of the collection is an error.
+- За допомогою списків можна зберігати кілька значень в одній структурі даних.
+- Щоб отримати елемент списку, використовуйте його індекс.
+- Значення елементів списків можна замінити шляхом присвоєння.
+- Додавання елементів до списку подовжує його.
+- Щоб повністю видалити елементи зі списку, використовуйте `del`.
+- Порожній список не містить жодних значень.
+- Списки можуть містити значення різних типів.
+- Рядки символів можна індексувати як списки.
+- Рядки символів незмінні.
+- Звернення до індексу за межами колекції призводить до помилки.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 

@@ -1,38 +1,38 @@
 ---
-title: Data Types and Type Conversion
+title: Типи даних та їх перетворення
 teaching: 10
 exercises: 10
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain key differences between integers and floating point numbers.
-- Explain key differences between numbers and character strings.
-- Use built-in functions to convert between integers, floating point numbers, and strings.
+- Визначення ключових відмінностей між цілими числами та числами з плаваючою комою.
+- З'ясувати ключові відмінності між числами та символьними рядками.
+- Використання вбудованих функцій для перетворення цілих чисел, чисел з плаваючою комою та рядків.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- What kinds of data do programs store?
-- How can I convert one type to another?
+- Які види даних зберігають програми?
+- Як я можу перетворити один тип в інший?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Every value has a type.
+## Кожне значення має тип.
 
-- Every value in a program has a specific type.
-- Integer (`int`): represents positive or negative whole numbers like 3 or -512.
-- Floating point number (`float`): represents real numbers like 3.14159 or -2.5.
-- Character string (usually called "string", `str`): text.
-  - Written in either single quotes or double quotes (as long as they match).
-  - The quote marks aren't printed when the string is displayed.
+- Кожне значення, яке використовує програма, має певний тип.
+- Ціле число (`int`): зображує додатні або від’ємні цілі числа, наприклад 3 або -512.
+- Число з плаваючою комою (`float`): зображує дійсні числа, наприклад 3.14159 або -2.5.
+- Рядки символів (зазвичай просто "рядки", `str`): представляють текст.
+  - Укладені в одинарні або подвійні лапки (тип лапок має збігатися).
+  - Під час відображення рядку лапки не друкуються.
 
-## Use the built-in function `type` to find the type of a value.
+## Вбудована функція `type` повертає тип значення.
 
-- Use the built-in function `type` to find out what type a value has.
-- Works on variables as well.
-  - But remember: the *value* has the type --- the *variable* is just a label.
+- Використовуйте вбудовану функцію `type`, щоб з'ясувати, який тип має значення.
+- Це також працює зі змінними.
+  - Але запамʼятайте: _значення_ має свій тип, а _змінна_ тільки вказує на деяке значення.
 
 ```python
 print(type(52))
@@ -43,17 +43,16 @@ print(type(52))
 ```
 
 ```python
-fitness = 'average'
-print(type(fitness))
+fitness = 'average' print(type(fitness))
 ```
 
 ```output
 <class 'str'>
 ```
 
-## Types control what operations (or methods) can be performed on a given value.
+## Тип визначає, які операції (або методи) можна виконувати над даним значенням.
 
-- A value's type determines what the program can do to it.
+- Тип значення визначає, що може робити з ним програма.
 
 ```python
 print(5 - 3)
@@ -76,12 +75,12 @@ TypeError                                 Traceback (most recent call last)
 TypeError: unsupported operand type(s) for -: 'str' and 'str'
 ```
 
-## You can use the "+" and "\*" operators on strings.
+## Ви можете використовувати оператори "+" та "\*" для дій над рядками.
 
-- "Adding" character strings concatenates them.
+- "Додавання" рядків об’єднує їх.
 
 ```python
-full_name = 'Ahmed' + ' ' + 'Walsh'
+full_name = 'Ahmed' + ' ' + 'Walsh' 
 print(full_name)
 ```
 
@@ -89,11 +88,11 @@ print(full_name)
 Ahmed Walsh
 ```
 
-- Multiplying a character string by an integer *N* creates a new string that consists of that character string repeated  *N* times.
-  - Since multiplication is repeated addition.
+- Якщо рядок помножити на ціле число _N_, то це створить новий рядок, який буде містити вихідний рядок, повторений _N_ разів.
+  - Оскільки множення - це повторюване додавання.
 
 ```python
-separator = '=' * 10
+separator = '=' * 10 
 print(separator)
 ```
 
@@ -101,9 +100,9 @@ print(separator)
 ==========
 ```
 
-## Strings have a length (but numbers don't).
+## Рядки мають довжину (але числа її не мають).
 
-- The built-in function `len` counts the number of characters in a string.
+- Вбудована функція `len` повертає кількість символів у рядку.
 
 ```python
 print(len(full_name))
@@ -113,7 +112,7 @@ print(len(full_name))
 11
 ```
 
-- But numbers don't have a length (not even zero).
+- Але числа не мають довжини (навіть нульової).
 
 ```python
 print(len(52))
@@ -128,9 +127,9 @@ TypeError                                 Traceback (most recent call last)
 TypeError: object of type 'int' has no len()
 ```
 
-## Must convert numbers to strings or vice versa when operating on them. {#convert-numbers-and-strings}
+## Необхідно перетворювати числа в рядки або навпаки під час виконання певних операцій. {#convert-numbers-and-strings}
 
-- Cannot add numbers and strings.
+- Додавання чисел та рядків неможливе.
 
 ```python
 print(1 + '2')
@@ -145,11 +144,11 @@ TypeError                                 Traceback (most recent call last)
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
 ```
 
-- Not allowed because it's ambiguous: should `1 + '2'` be `3` or `'12'`?
-- Some types can be converted to other types by using the type name as a function.
+- Таке додавання не дозволено, тому що воно не визначене: чи має `1 + '2'` повертати `3` чи `'12'`?
+- Перетворення типу виконується за допомогою функції, яка має те ж саме імʼя, що і потрібний тип.
 
 ```python
-print(1 + int('2'))
+print(1 + int('2')) 
 print(str(1) + '2')
 ```
 
@@ -158,13 +157,13 @@ print(str(1) + '2')
 12
 ```
 
-## Can mix integers and floats freely in operations.
+## З цілими та дійсними числами можна оперувати одночасно.
 
-- Integers and floating-point numbers can be mixed in arithmetic.
-  - Python 3 automatically converts integers to floats as needed.
+- Цілі та дійсні числа можна використовувати разом для арифметичних дій.
+  - Python 3 автоматично перетворить цілі числа у дійсні, якщо це потрібно.
 
 ```python
-print('half is', 1 / 2.0)
+print('half is', 1 / 2.0) 
 print('three squared is', 3.0 ** 2)
 ```
 
@@ -173,12 +172,11 @@ half is 0.5
 three squared is 9.0
 ```
 
-## Variables only change value when something is assigned to them.
+## Змінні можуть змінити своє значення тільки через присвоєння.
 
-- If we make one cell in a spreadsheet depend on another,
-  and update the latter,
-  the former updates automatically.
-- This does **not** happen in programming languages.
+- Якщо в електронних таблицях ми зробимо одну комірку залежною від іншої та оновимо останню,
+  перша оновиться автоматично.
+- Це **не** трапляється у мовах програмування.
 
 ```python
 variable_one = 1
@@ -191,24 +189,22 @@ print('first is', variable_one, 'and second is', variable_two)
 first is 2 and second is 5
 ```
 
-- The computer reads the value of `variable_one` when doing the multiplication,
-  creates a new value, and assigns it to `variable_two`.
-- Afterwards, the value of `variable_two` is set to the new value and *not dependent on `variable_one`* so its value
-  does not automatically change when `variable_one` changes.
+- Комп'ютер зчитує значення `variable_one` під час множення, створює нове значення та призначає цьому значенню ім'я `variable_two`.
+- Після того, як значення `variable_two` встановлено, воно _не залежить від значення `variable_one`_, отже його значення не змінюється автоматично, коли `variable_one` змінюється.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Fractions
+## Дроби
 
-What type of value is 3.4?
-How can you find out?
+Який тип має значення 3.4?
+Як це можна встановити?
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
-It is a floating-point number (often abbreviated "float").
-It is possible to find out by using the built-in function `type()`.
+Це - число з плаваючою комою (або дійсне число чи часто скорочено "float").
+Це можна перевірити, використовуючи вбудовану функцію `type()`.
 
 ```python
 print(type(3.4))
@@ -224,16 +220,15 @@ print(type(3.4))
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Automatic Type Conversion
+## Автоматичне перетворення типів
 
-What type of value is 3.25 + 4?
+Який тип має вираз 3.25 + 4?
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
-It is a float:
-integers are automatically converted to floats as necessary.
+Це - дійсне число: цілі числа автоматично перетворюються у дійсні, коли це необхідно.
 
 ```python
 result = 3.25 + 4
@@ -250,32 +245,34 @@ print(result, 'is', type(result))
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Choose a Type
+## Вибір типу
 
-What type of value (integer, floating point number, or character string)
-would you use to represent each of the following?  Try to come up with more than one good answer for each problem.  For example, in  # 1, when would counting days with a floating point variable make more sense than using an integer?
+Який тип значення (ціле число, число з плаваючою комою або рядок символів) ви б використовували для представлення кожного з наступних значень?  Спробуйте знайти більш ніж одну гарну відповідь для кожної проблеми.  Наприклад у завданні # 1, коли було б доцільніше використовувати змінну з плаваючою комою замість цілого числа для підрахунку днів?
 
-1. Number of days since the start of the year.
-2. Time elapsed from the start of the year until now in days.
-3. Serial number of a piece of lab equipment.
-4. A lab specimen's age
-5. Current population of a city.
-6. Average population of a city over time.
+1. Кількість днів, які пройшли з початку року.
+2. Час, що пройшов від початку року до сьогоднішнього дня.
+3. Серійний номер лабораторного обладнання.
+4. Вік лабораторного зразка
+5. Поточне населення міста.
+6. Середня чисельність населення міста протягом певного часу.
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
-The answers to the questions are:
+Відповіді на запитання:
 
-1. Integer, since the number of days would lie between 1 and 365.
-2. Floating point, since fractional days are required
-3. Character string if serial number contains letters and numbers, otherwise integer if the serial number consists only of numerals
-4. This will vary! How do you define a specimen's age? whole days since collection (integer)? date and time (string)?
-5. Choose floating point to represent population as large aggregates (eg millions), or integer to represent population in units of individuals.
-6. Floating point number, since an average is likely to have a fractional part.
-  
-  
+1. Ціле, оскільки число днів належить діапазону від 1 до 365.
+
+2. Дійсне число, оскільки потрібно використовувати частини дня.
+
+3. Символьний рядок, якщо серійний номер містить літери та цифри, або ціле число, якщо серійний номер складається лише з цифр.
+
+4. Це залежить від багатьох факторів! Як вимірюється вік зразка? Кількість днів з моменту, коли його було створено (ціле число)?  Дата і час (рядок)?
+
+5. Виберіть дійсне число, щоб представити приблизну кількість населення за допомогою округлення (наприклад, до мільйонів), або ціле число, щоб представити точну кількість населення.
+
+6. Дійсне число, оскільки результат усереднення, швидше за все, буде мати дробну частину.
 
 :::::::::::::::::::::::::
 
@@ -283,10 +280,9 @@ The answers to the questions are:
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Division Types
+## Типи операцій ділення
 
-In Python 3, the `//` operator performs integer (whole-number) floor division, the `/` operator performs floating-point
-division, and the `%` (or *modulo*) operator calculates and returns the remainder from integer division:
+У Python 3 оператор `//` виконує ціле ділення (повертає цілу частину результату), оператор `/` виконує ділення з плаваючою комою, та оператор '%' (або _модуль_) повертає залишок від цілого ділення:
 
 ```python
 print('5 // 3:', 5 // 3)
@@ -300,20 +296,17 @@ print('5 % 3:', 5 % 3)
 5 % 3: 2
 ```
 
-If `num_subjects` is the number of subjects taking part in a study,
-and `num_per_survey` is the number that can take part in a single survey,
-write an expression that calculates the number of surveys needed
-to reach everyone once.
+Припустимо, що `num_subjects` - це кількість суб'єктів, які беруть участь у дослідженні,
+а `num_per_survey` — кількість, яка може взяти участь в одному опитуванні. Напишіть вираз, який обчислює кількість необхідних опитувань для
+охоплення кожного хоча б один раз.
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
-We want the minimum number of surveys that reaches everyone once, which is
-the rounded up value of `num_subjects/ num_per_survey`. This is
-equivalent to performing a floor division with `//` and adding 1. Before
-the division we need to subtract 1 from the number of subjects to deal with
-the case where `num_subjects` is evenly divisible by `num_per_survey`.
+Потрібно визначити мінімальну кількість опитувань для охоплення кожного суб'єкта хоча б один раз, тобто округлене значення `num_subjects/num_per_survey`. Це
+еквівалентно виконанню дійсного ділення за допомогою оператору `//` і додаванню 1 до результату. Перед діленням нам потрібно відняти 1 від кількості `num_subjects`, щоб працювати з
+випадком, коли `num_subjects` порівну ділиться на `num_per_survey`.
 
 ```python
 num_subjects = 600
@@ -333,10 +326,9 @@ print(num_subjects, 'subjects,', num_per_survey, 'per survey:', num_surveys)
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Strings to Numbers
+## Перетворення рядків у числа
 
-Where reasonable, `float()` will convert a string to a floating point number,
-and `int()` will convert a floating point number to an integer:
+Якщо потрібно, функція `float()` перетворить рядок у дійсне число, а функція `int()` перетворить дійсне число в ціле:
 
 ```python
 print("string to float:", float("3.4"))
@@ -348,7 +340,7 @@ string to float: 3.4
 float to int: 3
 ```
 
-If the conversion doesn't make sense, however, an error message will occur.
+Якщо перетворення не має сенсу, то генерується повідомлення про помилку.
 
 ```python
 print("string to float:", float("Hello world!"))
@@ -363,11 +355,11 @@ ValueError                                Traceback (most recent call last)
 ValueError: could not convert string to float: 'Hello world!'
 ```
 
-Given this information, what do you expect the following program to do?
+Беручи це до уваги, чого чекати від наступної програми?
 
-What does it actually do?
+Що вона робить насправді?
 
-Why do you think it does that?
+Як це пояснити?
 
 ```python
 print("fractional string to int:", int("3.4"))
@@ -375,11 +367,9 @@ print("fractional string to int:", int("3.4"))
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
-What do you expect this program to do? It would not be so unreasonable to expect the Python 3 `int` command to
-convert the string "3.4" to 3.4 and an additional type conversion to 3. After all, Python 3 performs a lot of other
-magic - isn't that part of its charm?
+Що ви очікуєте від цієї програми? Чому б не очікувати, що у Python 3 команда `int` перетворить рядок "3.4" на 3.4 та виконає додаткове перетворення у ціле число 3. Зрештою, Python 3 вміє робити багато іншої "магії" - хіба це не частина його привабливості?
 
 ```python
 int("3.4")
@@ -393,8 +383,7 @@ ValueError                                Traceback (most recent call last)
 ValueError: invalid literal for int() with base 10: '3.4'
 ```
 
-However, Python 3 throws an error. Why? To be consistent, possibly. If you ask Python to perform two consecutive
-typecasts, you must convert it explicitly in code.
+Однак Python 3 видає помилку. Чому? Можливо, щоб бути послідовним. Якщо вам потрібно, щоб Python виконав два послідовних перетворення типів, ви повинні чітко вказати кожне перетворення у своєму коді.
 
 ```python
 int(float("3.4"))
@@ -410,10 +399,10 @@ int(float("3.4"))
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Arithmetic with Different Types
+## Арифметичні дії з різними типами
 
-Which of the following will return the floating point number `2.0`?
-Note: there may be more than one right answer.
+Яка з наступних команд поверне дійсне число `2.0`?
+Примітка: це питання може мати декілька коректних відповідей.
 
 ```python
 first = 1.0
@@ -430,11 +419,9 @@ third = "1.1"
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
-Answer: 1 and 4
-
-
+Правильні відповіді: 1 та 4
 
 :::::::::::::::::::::::::
 
@@ -442,13 +429,10 @@ Answer: 1 and 4
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Complex Numbers
+## Комплексні числа
 
-Python provides complex numbers,
-which are written as `1.0+2.0j`.
-If `val` is a complex number,
-its real and imaginary parts can be accessed using *dot notation*
-as `val.real` and `val.imag`.
+Python підтримує комплексні числа, які записуються як `1.0 + 2.0j`.
+Якщо `val` є комплексним числом, то до його дійсної та уявної частин можна отримати доступ за допомогою так званої _крапкової нотації_ через `val.real` та `val.imag`.
 
 ```python
 a_complex_number = 6 + 2j
@@ -461,23 +445,19 @@ print(a_complex_number.imag)
 2.0
 ```
 
-1. Why do you think Python uses `j` instead of `i` for the imaginary part?
-2. What do you expect `1 + 2j + 3` to produce?
-3. What do you expect `4j` to be?  What about `4 j` or `4 + j`?
+1. Чому, на вашу думку, Python використовує `j` замість `i` для уявної частини?
+2. Який результат слід очікувати від виразу `1 + 2j + 3`?
+3. Що ви очікуєте від `4j`?  А що від `4 j` або `4 + j`?
 
 :::::::::::::::  solution
 
-## Solution
+## Рішення
 
-1. Standard mathematics treatments typically use `i` to denote an imaginary number. However, from media reports it
-  was an early convention established from electrical engineering that now presents a technically expensive area to
-  change. [Stack Overflow provides additional explanation and
-  discussion.](https://stackoverflow.com/questions/24812444/why-are-complex-numbers-in-python-denoted-with-j-instead-of-i)
+1. Стандартні математичні позначення зазвичай використовують `i` для позначення комплексного числа. Однак різні джерела свідчать про те, що це було раннє позначення, яке використовувалось в електротехніці, та зараз було б дуже складно з технічної точки зору його змінити. [Stack Overflow містить додаткові пояснення та обговорення.](http://stackoverflow.com/questions/24812444/why-are-complex-numbers-in-python-denoted-with-j-instead-of-i)
+
 2. `(4+2j)`
-3. `4j` and `Syntax Error: invalid syntax`. In the latter cases, `j` is considered a variable and the statement
-  depends on if `j` is defined and if so, its assigned value.
-  
-  
+
+3. `4j` або `Syntax Error: invalid syntax`. В останньому випадку `j` вважається змінною і значення виразу залежить від того, чи є `j` визначеним.
 
 :::::::::::::::::::::::::
 
@@ -485,14 +465,14 @@ print(a_complex_number.imag)
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Every value has a type.
-- Use the built-in function `type` to find the type of a value.
-- Types control what operations can be done on values.
-- Strings can be added and multiplied.
-- Strings have a length (but numbers don't).
-- Must convert numbers to strings or vice versa when operating on them.
-- Can mix integers and floats freely in operations.
-- Variables only change value when something is assigned to them.
+- Кожне значення має тип.
+- Вбудована функція `type` повертає тип значення.
+- Типи контролюють, які операції можна виконувати над значеннями.
+- Рядки можна додавати і помножувати.
+- Рядки мають довжину (але числа її не мають).
+- Необхідно перетворювати числа в рядки або навпаки під час виконання певних операцій.
+- Цілі та дійсні числа можна використовувати разом.
+- Змінні можуть набути своє значення тільки через присвоювання.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 

@@ -1,27 +1,27 @@
 ---
-title: Looping Over Data Sets
+title: Обробка багатьох файлів у циклі
 teaching: 5
 exercises: 10
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Be able to read and write globbing expressions that match sets of files.
-- Use glob to create lists of files.
-- Write for loops to perform operations on files given their names in a list.
+- Навчитися читати та писати вирази модулю glob, які визначають набори файлів.
+- Використовувати модуль glob для створення списків файлів
+- Створювати цикли `for` для виконання операцій зі списком файлів.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can I process many data sets with a single command?
+- Як обробляти багато наборів даних за допомогою однієї команди?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Use a `for` loop to process files given a list of their names.
+## Використовуйте цикл `for` для послідовної обробки файлів, імена яких містяться у списку.
 
-- A filename is a character string.
-- And lists can contain character strings.
+- Ім'я файлу - це рядок символів.
+- Списки, своєю чергою, можуть містити рядки символів.
 
 ```python
 import pandas as pd
@@ -51,17 +51,17 @@ gdpPercap_2007    944
 dtype: float64
 ```
 
-## Use [`glob.glob`](https://docs.python.org/3/library/glob.html#glob.glob) to find sets of files whose names match a pattern.
+## Використовуйте [`glob.glob`](https://docs.python.org/3/library/glob.html#glob.glob), щоб знайти набори файлів, імена яких відповідають шаблону.
 
-- In Unix, the term "globbing" means "matching a set of files with a pattern".
-- The most common patterns are:
-  - `*` meaning "match zero or more characters"
-  - `?` meaning "match exactly one character"
-- Python's standard library contains the [`glob`](https://docs.python.org/3/library/glob.html) module to provide pattern matching functionality
-- The [`glob`](https://docs.python.org/3/library/glob.html) module contains a function also called `glob` to match file patterns
-- E.g., `glob.glob('*.txt')` matches all files in the current directory
-  whose names end with `.txt`.
-- Result is a (possibly empty) list of character strings.
+- В Unix термін "globbing" означає "відповідність набору файлів шаблону".
+- Найпоширеніші шаблони:
+  - `*` означає "відповідати нулю або більшій кількості символів"
+  - `?` означає "відповідати в точності одному символу"
+- Стандартна бібліотека Python містить модуль [`glob`](https://docs.python.org/3/library/glob.html) для роботи з наборами файлів, які задані за допомогою шаблонів
+- Модуль [`glob`](https://docs.python.org/3/library/glob.html) містить функцію, яка також називається `glob`, для відбору файлів за шаблоном.
+- Наприклад, `glob.glob('*.txt')` знайде всі файли в поточному каталозі,
+  імена яких закінчуються на `.txt`.
+- Результатом є (можливо, порожній) список рядків символів.
 
 ```python
 import glob
@@ -75,17 +75,16 @@ all csv files in data directory: ['data/gapminder_all.csv', 'data/gapminder_gdp_
 ```
 
 ```python
-print('all PDB files:', glob.glob('*.pdb'))
+print('all PDB files:', glob.glob(' .pdb'))
 ```
 
 ```output
 all PDB files: []
 ```
 
-## Use `glob` and `for` to process batches of files.
+## Використовуйте `glob` та `for` для обробки груп файлів.
 
-- Helps a lot if the files are named and stored systematically and consistently
-  so that simple patterns will find the right data.
+- Систематичне та послідовне іменування файлів — запорука ефективного пошуку за шаблонами.
 
 ```python
 for filename in glob.glob('data/gapminder_*.csv'):
@@ -102,16 +101,15 @@ data/gapminder_gdp_europe.csv 973.5331948
 data/gapminder_gdp_oceania.csv 10039.59564
 ```
 
-- This includes all data, as well as per-region data.
-- Use a more specific pattern in the exercises to exclude the whole data set.
-- But note that the minimum of the entire data set is also the minimum of one of the data sets,
-  which is a nice check on correctness.
+- Перелік має файл `data/gapminder_all.csv` з усіма даними, а також файли з даними по окремих регіонах.
+- У вправах нижче використовуйте більш точний шаблон. Це дозволить виключити загальний набір даних `data/gapminder_all.csv` і відібрати лише файли для окремих регіонів.
+- Слід зазначити, що мінімум у файлі `data/gapminder_all.csv` збігається з мінімумом одного з менших файлів. Це є гарною перевіркою результату.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Determining Matches
+## Розуміння шаблонів
 
-Which of these files is *not* matched by the expression `glob.glob('data/*as*.csv')`?
+Який із цих файлів _не_ відповідає виразу `glob.glob('data/*as*.csv')`?
 
 1. `data/gapminder_gdp_africa.csv`
 2. `data/gapminder_gdp_americas.csv`
@@ -119,11 +117,9 @@ Which of these files is *not* matched by the expression `glob.glob('data/*as*.cs
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
-1 is not matched by the glob.
-
-
+Заданому шаблону не відповідає перший з файлів.
 
 :::::::::::::::::::::::::
 
@@ -131,10 +127,10 @@ Which of these files is *not* matched by the expression `glob.glob('data/*as*.cs
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Minimum File Size
+## Мінімальний розмір файлу
 
-Modify this program so that it prints the number of records in
-the file that has the fewest records.
+Змініть цю програму, щоб вона визначала та виводила мінімальну кількість
+записів серед усіх файлів.
 
 ```python
 import glob
@@ -146,12 +142,12 @@ for filename in glob.glob('data/*.csv'):
 print('smallest file has', fewest, 'records')
 ```
 
-Note that the [`DataFrame.shape()` method][shape-method]
-returns a tuple with the number of rows and columns of the data frame.
+Зверніть увагу, що метод [`DataFrame.shape()`][shape-method]
+повертає кортеж (tuple), елементами якого є кількість рядків та кількість стовпців у датафреймі.
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
 ```python
 import glob
@@ -163,12 +159,9 @@ for filename in glob.glob('data/*.csv'):
 print('smallest file has', fewest, 'records')
 ```
 
-You might have chosen to initialize the `fewest` variable with a number greater than the numbers
-you're dealing with, but that could lead to trouble if you reuse the code with bigger numbers.
-Python lets you use positive infinity, which will work no matter how big your numbers are.
-What other special strings does the [`float` function][float-function] recognize?
-
-
+Можна було б ініціалізувати змінну `fewest` числом, що перевищує всі числа у наборі даних, однак це може спричинити помилки при повторному використанні коду з більшими числами.
+Python дозволяє використати додатну нескінченність, яка буде працювати незалежно від значень ваших чисел.
+Які інші спеціальні рядки розпізнає [функція `float`][float-function]?
 
 :::::::::::::::::::::::::
 
@@ -176,21 +169,15 @@ What other special strings does the [`float` function][float-function] recognize
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Comparing Data
+## Порівняння даних
 
-Write a program that reads in the regional data sets
-and plots the average GDP per capita for each region over time
-in a single chart. Pandas will raise an error if it encounters
-non-numeric columns in a dataframe computation so you may need
-to either filter out those columns or tell pandas to ignore them.
-
+Напишіть програму, яка читає регіональні набори даних і будує графік середнього ВВП на душу населення для кожного регіону в часі в одній діаграмі. Pandas видасть помилку, якщо зустріне при цьому нечислові стовпці, тому ви маєте або відфільтрувати ці стовпці, або вказати Pandas ігнорувати їх.
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
-This solution builds a useful legend by using the [string `split` method][split-method] to
-extract the `region` from the path 'data/gapminder\_gdp\_a\_specific\_region.csv'.
+Це рішення створює корисну легенду за допомогою [методу `split` для рядків][split-method] для вилучення `region` зі шляху 'data/gapminder\\_gdp\\_a\\_specific\\_region.csv'.
 
 ```python
 import glob
@@ -199,28 +186,28 @@ import matplotlib.pyplot as plt
 fig, ax = plt.subplots(1,1)
 for filename in glob.glob('data/gapminder_gdp*.csv'):
     dataframe = pd.read_csv(filename)
-    # extract <region> from the filename, expected to be in the format 'data/gapminder_gdp_<region>.csv'.
-    # we will split the string using the split method and `_` as our separator,
-    # retrieve the last string in the list that split returns (`<region>.csv`), 
-    # and then remove the `.csv` extension from that string.
-    # NOTE: the pathlib module covered in the next callout also offers
-    # convenient abstractions for working with filesystem paths and could solve this as well:
+    # Вилучаємо <region> з назви файлу, який має бути у форматі 'data/gapminder_gdp_<region>.csv'.
+    # Розділимо рядок за допомогою методу split та роздільника `_`,
+    # отримаємо останній рядок зі списку, який повертає split (`<region>.csv`),
+    # а потім видалимо із цього рядка розширення `.csv`.
+    # ПРИМІТКА: модуль pathlib, описаний у наступному блоці, також пропонує
+    # зручні абстракції для роботи зі шляхами файлової системи і може вирішити це завдання:
     # from pathlib import Path
     # region = Path(filename).stem.split('_')[-1]
     region = filename.split('_')[-1][:-4]
-    # extract the years from the columns of the dataframe 
+    # Вилучаємо роки зі стовпців датафрейму
     headings = dataframe.columns[1:]
     years = headings.str.split('_').str.get(1)
-    # pandas raises errors when it encounters non-numeric columns in a dataframe computation
-    # but we can tell pandas to ignore them with the `numeric_only` parameter
+    # Pandas видає помилку, коли зустрічає нечислові стовпці в обчисленнях з датафреймом,
+    # але ми можемо вказати Pandas ігнорувати їх за допомогою параметра `numeric_only`
     dataframe.mean(numeric_only=True).plot(ax=ax, label=region)
-    # NOTE: another way of doing this selects just the columns with gdp in their name using the filter method
+    # ПРИМІТКА: інший спосіб — застосувати метод filter для вибору лише стовпців, що містять gdp у назві
     # dataframe.filter(like="gdp").mean().plot(ax=ax, label=region)
-# set the title and labels
-ax.set_title('GDP Per Capita for Regions Over Time')
+# Встановлюємо заголовок та підписи
+ax.set_title('ВВП на душу населення для регіонів у часі')
 ax.set_xticks(range(len(years)))
 ax.set_xticklabels(years)
-ax.set_xlabel('Year')
+ax.set_xlabel('Рік')
 plt.tight_layout()
 plt.legend()
 plt.show()
@@ -232,11 +219,9 @@ plt.show()
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Dealing with File Paths
+## Робота зі шляхами до файлів та каталогів
 
-The [`pathlib` module][pathlib-module] provides useful abstractions for file and path manipulation like
-returning the name of a file without the file extension. This is very useful when looping over files and
-directories. In the example below, we create a `Path` object and inspect its attributes.
+Модуль [`pathlib`][pathlib-module] надає зручні інструменти для роботи з файлами та шляхами, наприклад отримання назви файлу без його розширення. Застосування цього модуля є особливо доцільним під час перегляду файлів і каталогів у циклах. Цей модуль дозволяє створювати обʼєкти, які відповідають файлам та шляхам, на відміну від звичайних рядків з іменами файлів та каталогів, які ми бачили вище. У прикладі нижче ми створюємо об'єкт типу `Path` і аналізуємо його атрибути.
 
 ```python
 from pathlib import Path
@@ -253,9 +238,7 @@ gapminder_gdp_africa
 .csv
 ```
 
-**Hint:** Check all available attributes and methods on the `Path` object with the `dir()`
-function.
-
+**Підказка:** Перегляньте всі доступні атрибути та методи для об'єкта типу `Path` за допомогою функції `dir()`.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -264,12 +247,11 @@ function.
 [split-method]: https://docs.python.org/3/library/stdtypes.html#str.split
 [pathlib-module]: https://docs.python.org/3/library/pathlib.html
 
-
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Use a `for` loop to process files given a list of their names.
-- Use `glob.glob` to find sets of files whose names match a pattern.
-- Use `glob` and `for` to process batches of files.
+- Використовуйте цикл `for` для обробки файлів, імена яких містяться у списку.
+- Використовуйте `glob.glob` для пошуку наборів файлів, імена яких відповідають шаблону.
+- Використовуйте `glob` і `for` для обробки груп файлів.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
