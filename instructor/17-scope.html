@@ -343,8 +343,8 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C-%D0%B7%D0%BC%D1%96%D0%BD%D0%BD%D0%BE%D1%97---%D1%86%D0%B5-%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B8-%D1%8F%D0%BA%D0%B0-%D0%BC%D0%BE%D0%B6%D0%B5-%D0%B1%D0%B0%D1%87%D0%B8%D1%82%D0%B8-%D1%86%D1%8E-%D0%B7%D0%BC%D1%96%D0%BD%D1%83.">Область змінної - це частина програми, яка може “бачити” цю
-зміну.</a></li>
+        <ul><li><a href="#%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C-%D0%B2%D0%B8%D0%B4%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%96-%D0%B7%D0%BC%D1%96%D0%BD%D0%BD%D0%BE%D1%97---%D1%86%D0%B5-%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B8-%D1%8F%D0%BA%D0%B0-%D0%BC%D0%BE%D0%B6%D0%B5-%D0%B1%D0%B0%D1%87%D0%B8%D1%82%D0%B8-%D1%86%D1%8E-%D0%B7%D0%BC%D1%96%D0%BD%D1%83.">Область видимості змінної - це частина програми, яка може “бачити”
+цю зміну.</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -436,7 +436,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Область видимості змінної</h1>
-        <p>Останнє оновлення 2026-06-18 |
+        <p>Останнє оновлення 2026-06-19 |
 
         <a href="https://github.com/ukrainian-carpentries/python-novice-gapminder/edit/main/episodes/17-scope.md" class="external-link">Редагувати цю сторінку <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -457,7 +457,7 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Питання</h3>
-<ul><li>Як насправді виклики функцій працюють?</li>
+<ul><li>Як насправді працюють виклики функцій?</li>
 <li>Як можна визначити, де виникають помилки?</li>
 </ul></div>
 </div>
@@ -466,23 +466,23 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Цілі</h3>
-<ul><li>Визначення локальних і глобальних змінних.</li>
-<li>Ідентифікація параметрів як локальних змінних.</li>
-<li>Read a traceback and determine the file, function, and line number
-on which the error occurred, the type of error, and the error
-message.</li>
+<ul><li>Розрізняти локальні та глобальні змінні.</li>
+<li>Розглядання параметрів як локальних змінних.</li>
+<li>Аналіз повідомлень про помилки (traceback) та визначення файлу,
+функції й номера рядка, де виникла помилка, тип помилки та текстове
+повідомлення про неї.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="область-змінної---це-частина-програми-яка-може-бачити-цю-зміну-">Область змінної - це частина програми, яка може “бачити” цю
-зміну.<a class="anchor" aria-label="anchor" href="#%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C-%D0%B7%D0%BC%D1%96%D0%BD%D0%BD%D0%BE%D1%97---%D1%86%D0%B5-%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B8-%D1%8F%D0%BA%D0%B0-%D0%BC%D0%BE%D0%B6%D0%B5-%D0%B1%D0%B0%D1%87%D0%B8%D1%82%D0%B8-%D1%86%D1%8E-%D0%B7%D0%BC%D1%96%D0%BD%D1%83-"></a></h2>
-<hr class="half-width"><ul><li>There are only so many sensible names for variables.</li>
-<li>People using functions shouldn’t have to worry about what variable
-names the author of the function used.</li>
-<li>People writing functions shouldn’t have to worry about what variable
-names the function’s caller uses.</li>
+<section><h2 class="section-heading" id="область-видимості-змінної---це-частина-програми-яка-може-бачити-цю-зміну-">Область видимості змінної - це частина програми, яка може “бачити”
+цю зміну.<a class="anchor" aria-label="anchor" href="#%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C-%D0%B2%D0%B8%D0%B4%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%96-%D0%B7%D0%BC%D1%96%D0%BD%D0%BD%D0%BE%D1%97---%D1%86%D0%B5-%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B8-%D1%8F%D0%BA%D0%B0-%D0%BC%D0%BE%D0%B6%D0%B5-%D0%B1%D0%B0%D1%87%D0%B8%D1%82%D0%B8-%D1%86%D1%8E-%D0%B7%D0%BC%D1%96%D0%BD%D1%83-"></a></h2>
+<hr class="half-width"><ul><li>Кількість змістовних імен для змінних є обмеженою.</li>
+<li>Користувачі функцій не повинні турбуватися про те, які імена змінних
+обрав автор функції.</li>
+<li>Автори функцій не повинні турбуватися про те, які імена змінних
+використовує код, що здійснює виклик функції.</li>
 <li>Частина програми, в якій змінна є видимою, називається її
 <em>областю</em>.</li>
 </ul><div class="codewrapper sourceCode" id="cb1">
@@ -499,9 +499,8 @@ names the function’s caller uses.</li>
 <ul><li>Визначається поза будь-якою конкретною функцією.</li>
 <li>Є видимою у будь-якому місці програми.</li>
 </ul></li>
-<li>
-<code>t</code> and <code>temperature</code> are <em>local
-variables</em> in <code>adjust</code>.
+<li>Змінні <code>t</code> та <code>temperature</code> є локальними у
+межах функції <code>adjust</code>.
 <ul><li>Визначені всередині функції.</li>
 <li>Не є видимими у головній програмі.</li>
 <li>Нагадування: параметр функції – це змінна, якій автоматично
@@ -536,7 +535,8 @@ NameError: name 'temperature' is not defined</code></pre>
 змінних</h3>
 <div class="callout-content">
 <p>Відстежте значення всіх змінних у цій програмі під час її виконання.
-(Use ‘—’ as the value of variables before and after they exist.)</p>
+(Використовуйте ‘—’ як значення змінних до моменту їх створення та після
+того, як вони припиняють існувати.)</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -559,8 +559,9 @@ NameError: name 'temperature' is not defined</code></pre>
 <div id="читання-повідомлень-про-помилки" class="callout-inner">
 <h3 class="callout-title">Читання повідомлень про помилки</h3>
 <div class="callout-content">
-<p>Read the traceback below, and identify the following:</p>
-<ol style="list-style-type: decimal"><li>How many levels does the traceback have?</li>
+<p>Прочитайте наведене нижче повідомлення про помилку та визначте
+наступне:</p>
+<ol style="list-style-type: decimal"><li>Скільки рівнів вкладеності відображає це повідомлення?</li>
 <li>Як називається файл, у якому сталася помилка?</li>
 <li>Як називається функція, у якій сталася помилка?</li>
 <li>В якому рядку цієї функції виникла помилка?</li>
@@ -601,16 +602,16 @@ KeyError: 'Friday'</code></pre>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<ol style="list-style-type: decimal"><li><p>Три рівні.</p></li>
-<li><p><code>errors_02.py</code></p></li>
-<li><p><code>print_message</code></p></li>
-<li><p>Рядок 11</p></li>
-<li><p><code>KeyError</code>. Ці помилки виникають при спробі звернутися
-до ключа, який не існує (зазвичай в структурі даних на кшталт словника).
-We can find more information about the <code>KeyError</code> and other
-built-in exceptions in the <a href="https://docs.python.org/3/library/exceptions.html#KeyError" class="external-link">Python
-docs</a>.</p></li>
-<li><p><code>KeyError: 'Friday'</code></p></li>
+<ol style="list-style-type: decimal"><li>Три рівні.</li>
+<li><code>errors_02.py</code></li>
+<li><code>print_message</code></li>
+<li>Рядок 11</li>
+<li>
+<code>KeyError</code>. Ці помилки виникають при спробі звернутися до
+ключа, який не існує (зазвичай в структурі даних на кшталт словника).
+Докладніше про <code>KeyError</code> та інші вбудовані винятки див. <a href="https://docs.python.org/3/library/exceptions.html#KeyError" class="external-link">документацію
+Python</a>.</li>
+<li><code>KeyError: 'Friday'</code></li>
 </ol></div>
 </div>
 </div>
@@ -622,8 +623,8 @@ docs</a>.</p></li>
 <span class="callout-header">Ключові моменти</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>Область змінної - це частина програми, яка може “бачити” цю
-зміну.</li>
+<ul><li>Область видимості змінної - це частина програми, яка може “бачити”
+цю зміну.</li>
 </ul></div>
 </div>
 </div>
@@ -687,8 +688,8 @@ docs</a>.</p></li>
   "url": "https://ukrainian-carpentries.github.io/python-novice-gapminder/instructor/17-scope.html",
   "identifier": "https://ukrainian-carpentries.github.io/python-novice-gapminder/instructor/17-scope.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2026-06-18",
-  "datePublished": "2026-06-18"
+  "dateModified": "2026-06-19",
+  "datePublished": "2026-06-19"
 }
 
   </script><script>

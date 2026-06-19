@@ -338,9 +338,9 @@
 <li><a href="#%D1%84%D1%83%D0%BD%D0%BA%D1%86%D1%96%D1%8F-%D0%B2%D0%B8%D0%B7%D0%BD%D0%B0%D1%87%D0%B0%D1%94%D1%82%D1%8C%D1%81%D1%8F-%D0%B7%D0%B0-%D0%B4%D0%BE%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D0%BE%D1%8E-def-%D1%82%D0%B0-%D0%B7%D0%B0%D0%B4%D0%B0%D1%94%D1%82%D1%8C%D1%81%D1%8F-%D1%97%D1%97-%D0%BD%D0%B0%D0%B7%D0%B2%D0%BE%D1%8E-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B0%D0%BC%D0%B8-%D1%82%D0%B0-%D0%B1%D0%BB%D0%BE%D0%BA%D0%BE%D0%BC-%D0%BA%D0%BE%D0%B4%D1%83.">Функція визначається за допомогою <code>def</code> та задається її
 назвою, параметрами та блоком коду.</a></li>
 <li><a href="#%D0%B2%D0%B8%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%BD%D1%8F-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D1%96%D1%97-%D0%BD%D0%B5-%D0%B2%D0%B8%D0%BA%D0%BE%D0%BD%D1%83%D1%94-%D1%97%D1%97.">Визначення функції не виконує її.</a></li>
-<li><a href="#arguments-in-a-function-call-are-matched-to-its-defined-parameters.">Arguments in a function call are matched to its defined
-parameters.</a></li>
-<li><a href="#functions-may-return-a-result-to-their-caller-using-return.">Functions may return a result to their caller using
+<li><a href="#%D0%B0%D1%80%D0%B3%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8-%D0%B2%D0%B8%D0%BA%D0%BB%D0%B8%D0%BA%D1%83-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D1%96%D1%97-%D0%B7%D1%96%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D1%8F%D1%8E%D1%82%D1%8C%D1%81%D1%8F-%D0%B7-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B0%D0%BC%D0%B8-%D0%B7-%D1%8F%D0%BA%D0%B8%D0%BC%D0%B8-%D0%B2%D0%BE%D0%BD%D0%B0-%D0%B1%D1%83%D0%BB%D0%B0-%D0%B2%D0%B8%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B0.">Аргументи виклику функції зіставляються з параметрами, з якими вона
+була визначена.</a></li>
+<li><a href="#%D1%84%D1%83%D0%BD%D0%BA%D1%86%D1%96%D1%97-%D0%BC%D0%BE%D0%B6%D1%83%D1%82%D1%8C-%D0%BF%D0%BE%D0%B2%D0%B5%D1%80%D1%82%D0%B0%D1%82%D0%B8-%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82-%D1%81%D0%B2%D0%BE%D0%B3%D0%BE-%D0%B2%D0%B8%D0%BA%D0%BB%D0%B8%D0%BA%D1%83-%D0%B7%D0%B0-%D0%B4%D0%BE%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D0%BE%D1%8E-return.">Функції можуть повертати результат свого виклику за допомогою
 <code>return</code>.</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -442,7 +442,7 @@ parameters.</a></li>
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Створення функцій</h1>
-        <p>Останнє оновлення 2026-06-18 |
+        <p>Останнє оновлення 2026-06-19 |
 
         <a href="https://github.com/ukrainian-carpentries/python-novice-gapminder/edit/main/episodes/16-writing-functions.md" class="external-link">Редагувати цю сторінку <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -488,8 +488,8 @@ parameters.</a></li>
 </ul></li>
 <li>Функції служать тій же меті в програмах.
 <ul><li>
-<em>Encapsulate</em> complexity so that we can treat it as a single
-“thing”.</li>
+<em>Інкапсулюють</em> (тобто приховують) складність, щоб ми могли
+розглядати її як єдине “ціле”.</li>
 </ul></li>
 <li>Також сприяють <em>повторному використанню</em> кода.
 <ul><li>Пишемо один раз, використовуємо багаторазово.</li>
@@ -530,14 +530,14 @@ parameters.</a></li>
 </h3>
 <pre class="output" tabindex="0"><code>Hello!</code></pre>
 </div>
-</section><section><h2 class="section-heading" id="arguments-in-a-function-call-are-matched-to-its-defined-parameters-">Arguments in a function call are matched to its defined
-parameters.<a class="anchor" aria-label="anchor" href="#arguments-in-a-function-call-are-matched-to-its-defined-parameters-"></a></h2>
+</section><section><h2 class="section-heading" id="аргументи-виклику-функції-зіставляються-з-параметрами-з-якими-вона-була-визначена-">Аргументи виклику функції зіставляються з параметрами, з якими вона
+була визначена.<a class="anchor" aria-label="anchor" href="#%D0%B0%D1%80%D0%B3%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8-%D0%B2%D0%B8%D0%BA%D0%BB%D0%B8%D0%BA%D1%83-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D1%96%D1%97-%D0%B7%D1%96%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D1%8F%D1%8E%D1%82%D1%8C%D1%81%D1%8F-%D0%B7-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B0%D0%BC%D0%B8-%D0%B7-%D1%8F%D0%BA%D0%B8%D0%BC%D0%B8-%D0%B2%D0%BE%D0%BD%D0%B0-%D0%B1%D1%83%D0%BB%D0%B0-%D0%B2%D0%B8%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B0-"></a></h2>
 <hr class="half-width"><ul><li>Функції найбільш корисні, коли вони можуть працювати з різними
 даними.</li>
 <li>Укажіть <em>параметри</em> під час визначення функції.
 <ul><li>Вони стають змінними під час виконання функції.</li>
-<li>Are assigned the arguments in the call (i.e., the values passed to
-the function).</li>
+<li>Параметрам присвоюються значення аргументів виклику (тобто значення,
+передані у функцію).</li>
 <li>Якщо ви не називаєте аргументи під час їх використання у виклику,
 аргументи будуть зіставлені з параметрами в тому порядку, у якому
 параметри визначені у функції.</li>
@@ -556,10 +556,10 @@ the function).</li>
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="fl">1871</span><span class="op">/</span><span class="fl">3</span><span class="op">/</span><span class="fl">19</span></span></code></pre>
 </div>
-<p>Or, we can name the arguments when we call the function, which allows
-us to specify them in any order and adds clarity to the call site;
-otherwise as one is reading the code they might forget if the second
-argument is the month or the day for example.</p>
+<p>Ми також можемо назвати аргументи під час виклику, що дозволяє
+передавати їх у довільному порядку та підвищує читабельність виклику. В
+іншому випадку під час читання коду може виникнути непорозуміння,
+наприклад, який аргумент йде другим: місяць або день.</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -570,17 +570,17 @@ argument is the month or the day for example.</p>
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="fl">1871</span><span class="op">/</span><span class="fl">3</span><span class="op">/</span><span class="fl">19</span></span></code></pre>
 </div>
-<ul><li>Via <a href="https://twitter.com/minisciencegirl/status/693486088963272705" class="external-link">Twitter</a>:
-<code>()</code> contains the ingredients for the function while the body
-contains the recipe.</li>
-</ul></section><section><h2 class="section-heading" id="functions-may-return-a-result-to-their-caller-using-return-">Functions may return a result to their caller using
-<code>return</code>.<a class="anchor" aria-label="anchor" href="#functions-may-return-a-result-to-their-caller-using-return-"></a></h2>
-<hr class="half-width"><ul><li>Use <code>return ...</code> to give a value back to the caller.</li>
+<ul><li>Корисна аналогія (<a href="https://twitter.com/minisciencegirl/status/693486088963272705" class="external-link uri">https://twitter.com/minisciencegirl/status/693486088963272705</a>):
+<code>()</code> містить інгредієнти для функції, тоді як тіло містить
+рецепт.</li>
+</ul></section><section><h2 class="section-heading" id="функції-можуть-повертати-результат-свого-виклику-за-допомогою-return-">Функції можуть повертати результат свого виклику за допомогою
+<code>return</code>.<a class="anchor" aria-label="anchor" href="#%D1%84%D1%83%D0%BD%D0%BA%D1%86%D1%96%D1%97-%D0%BC%D0%BE%D0%B6%D1%83%D1%82%D1%8C-%D0%BF%D0%BE%D0%B2%D0%B5%D1%80%D1%82%D0%B0%D1%82%D0%B8-%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82-%D1%81%D0%B2%D0%BE%D0%B3%D0%BE-%D0%B2%D0%B8%D0%BA%D0%BB%D0%B8%D0%BA%D1%83-%D0%B7%D0%B0-%D0%B4%D0%BE%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D0%BE%D1%8E-return-"></a></h2>
+<hr class="half-width"><ul><li>Використовуйте <code>return ...</code> для повернення результату
+виклику функції.</li>
 <li>Може виникнути будь-де у функції.</li>
-<li>But functions are easier to understand if <code>return</code>
-occurs:
+<li>Але функції легше зрозуміти, якщо <code>return</code> зустрічається:
 <ul><li>На початку функції для обробки особливих випадків.</li>
-<li>At the very end, with a final result.</li>
+<li>У самому кінці з остаточним результатом.</li>
 </ul></li>
 </ul><div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -791,13 +791,13 @@ Python не може розпізнати ім’я <code>print_time</code> ос
 </div>
 </div>
 </div>
-<div id="encapsulation" class="callout challenge">
+<div id="згортання-коду-у-функцію" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Вправа</span>
-<div id="encapsulation" class="callout-inner">
-<h3 class="callout-title">Encapsulation</h3>
+<div id="згортання-коду-у-функцію" class="callout-inner">
+<h3 class="callout-title">Згортання коду у функцію</h3>
 <div class="callout-content">
 <p>Заповніть порожні поля, щоб створити функцію, яка приймає одне ім’я
 файлу як аргумент і завантажує дані з цього файлу. Функція має повертати
@@ -932,18 +932,17 @@ Python не може розпізнати ім’я <code>print_time</code> ос
 </button>
 <div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
-<ol style="list-style-type: decimal"><li><p><code>2003/2/1</code></p></li>
-<li><p>Ми бачили приклади використання іменованих аргументів під час
-роботи з бібліотекою pandas. Наприклад, під час читання набору даних за
+<ol style="list-style-type: decimal"><li><code>2003/2/1</code></li>
+<li>Ми бачили приклади використання іменованих аргументів під час роботи
+з бібліотекою pandas. Наприклад, під час читання набору даних за
 допомогою
 <code>data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')</code>,
-останній аргумент <code>index_col</code> є іменованим
-аргументом.</p></li>
-<li><p>Використання іменованих аргументів покращує читабельність коду —
-з виклику функції можна побачити, які імена мають аргументи всередині
+останній аргумент <code>index_col</code> є іменованим аргументом.</li>
+<li>Використання іменованих аргументів покращує читабельність коду — з
+виклику функції можна побачити, які імена мають аргументи всередині
 функції. Це також зменшує ймовірність передачі аргументів у
 неправильному порядку, оскільки при використанні іменованих аргументів
-порядок не має значення.</p></li>
+порядок не має значення.</li>
 </ol></div>
 </div>
 </div>
@@ -998,10 +997,10 @@ Python не може розпізнати ім’я <code>print_time</code> ос
 <span id="cb33-8"><a href="#cb33-8" tabindex="-1" aria-label="code-block-33-8"></a></span>
 <span id="cb33-9"><a href="#cb33-9" tabindex="-1" aria-label="code-block-33-9"></a>    <span class="bu">print</span>(mass, get_egg_label(mass))</span></code></pre>
 </div>
-<ol style="list-style-type: decimal"><li>Create a function definition for <code>get_egg_label()</code> that
-will work with the revised program above. Зверніть увагу на значення,
-яке повертає функція <code>get_egg_label()</code>. Зразок виводу
-програми вище буде <code>71.23 large</code>.</li>
+<ol style="list-style-type: decimal"><li>Створіть функцію <code>print_egg_label()</code>, яка працюватиме з
+новою версією програми, наведеною вище. Зверніть увагу на значення, яке
+повертає функція <code>get_egg_label()</code>. Зразок виводу програми
+вище буде <code>71.23 large</code>.</li>
 <li>Брудне яйце може мати масу понад 90 грамів, а зіпсоване чи розбите
 яйце, ймовірно, матиме масу менше ніж 50 грамів. Змініть функцію
 <code>print_egg_label()</code> для врахування цих умов. Можливий вивід
@@ -1059,8 +1058,9 @@ will work with the revised program above. Зверніть увагу на зн�
 <span id="cb35-3"><a href="#cb35-3" tabindex="-1" aria-label="code-block-35-3"></a>data_asia <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_asia.csv'</span>, index_col<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb35-4"><a href="#cb35-4" tabindex="-1" aria-label="code-block-35-4"></a>japan <span class="op">=</span> data_asia.loc[<span class="st">'Japan'</span>]</span></code></pre>
 </div>
-<ol style="list-style-type: decimal"><li>Complete the statements below to obtain the average GDP for Japan
-across the years reported for the 1980s.</li>
+<ol style="list-style-type: decimal"><li>Заповніть наведені нижче пропуски. Результатом має бути середній ВВП
+Японії за роками, які присутні у наборі даних та належать до
+1980-х.</li>
 </ol><div class="codewrapper sourceCode" id="cb36">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1163,28 +1163,27 @@ across the years reported for the 1980s.</li>
 популяції (від 0 до 1) на основі її поточного значення. В цій моделі час
 приймає дискретні значення 0, 1, 2, … (тобто змінюється кроками, а не
 плавно)</p>
-<ol style="list-style-type: decimal"><li>Define a function called <code>logistic_map</code> that takes two
-inputs: <code>x</code>, representing the current population (at time
-<code>t</code>), and a parameter <code>r = 1</code>. Ця функція має
-повертати значення, що представляє стан системи (популяції) у момент
-часу <code>t + 1</code>, використовуючи наступну функцію:</li>
+<ol style="list-style-type: decimal"><li>Визначте функцію під назвою <code>logistic_map</code>, яка приймає
+два аргументи: <code>x</code>, що представляє популяцію в момент часу
+<code>t</code>, та параметр <code>r=1</code>. Ця функція має повертати
+значення, що представляє стан системи (популяції) у момент часу
+<code>t + 1</code>, використовуючи наступну функцію:</li>
 </ol><p><code>f(t+1) = r * f(t) * [1 - f(t)]</code></p>
-<ol start="2" style="list-style-type: decimal"><li><p>Using a <code>for</code> or <code>while</code> loop, iterate the
-<code>logistic_map</code> function defined in part 1, starting from an
-initial population of 0.5, for a period of time
-<code>t_final = 10</code>. Зберігайте проміжні результати в списку, щоб
-після завершення циклу ви накопичили послідовність значень, що
-представляють стан системи в моменти часу
+<ol start="2" style="list-style-type: decimal"><li><p>Використовуючи цикл <code>for</code> або <code>while</code>,
+повторюйте виклик функції <code>logistic_map</code>, визначеної в
+частині 1. Початкове значення густини популяції становить 0.5, а часовий
+інтервал — <code>t_final = 10</code>. Зберігайте проміжні результати в
+списку, щоб після завершення циклу ви накопичили послідовність значень,
+що представляють стан системи в моменти часу
 <code>t = [0,1,...,t_final]</code> (11 значень в цілому). Виведіть цей
 список, щоб побачити, як змінюється популяція з часом.</p></li>
-<li><p>Encapsulate the logic of your loop into a function called
-<code>iterate</code> that takes the initial population as its first
-input, the parameter <code>t_final</code> as its second input and the
-parameter <code>r</code> as its third input. The function should return
-the list of values representing the state of the logistic map at times
-<code>t = [0,1,...,t_final]</code>. Run this function for periods
-<code>t_final = 100</code> and <code>1000</code> and print some of the
-values. Чи рухається популяція до стабільного стану?</p></li>
+<li><p>Помістить цей цикл у функцію під назвою <code>iterate</code>, яка
+отримує три вхідні параметри: початкове значення густини популяції,
+<code>t_final</code> та <code>r</code>. Функція має повертати список
+значень, що представляють стан системи в моменти часу
+<code>t = [0,1,...,t_final]</code>. Виконайте цю функцію для періодів
+<code>t_final = 100</code> та <code>1000</code>, і виведіть деякі з
+отриманих значень. Чи рухається популяція до стабільного стану?</p></li>
 </ol></div>
 </div>
 </div>
@@ -1292,11 +1291,11 @@ Pandas</h3>
 <span id="cb49-2"><a href="#cb49-2" tabindex="-1" aria-label="code-block-49-2"></a>data[<span class="st">'life_qrtl'</span>] <span class="op">=</span> data[<span class="st">'lifeExp_1952'</span>].<span class="bu">apply</span>(calculate_life_quartile)</span></code></pre>
 </div>
 <p>У другому рядку коду багато цікавого, тож розберімо його по частинах.
-On the right side of the <code>=</code> we start with
-<code>data['lifeExp']</code>, which is the column in the dataframe
-called <code>data</code> labeled <code>lifExp</code>. Ми використовуємо
-<code>apply()</code>, щоб застосувати функцію
-<code>calculate_life_quartile</code> до усіх значень цього стовпця.</p>
+Праворуч від <code>=</code> ми починаємо з <code>data['lifeExp']</code>
+— це стовпець датафрейму <code>data</code>, що має мітку
+<code>lifExp</code>. Ми використовуємо <code>apply()</code>, щоб
+застосувати функцію <code>calculate_life_quartile</code> до усіх значень
+цього стовпця.</p>
 </div>
 </div>
 </div>
@@ -1378,8 +1377,8 @@ called <code>data</code> labeled <code>lifExp</code>. Ми використов�
   "url": "https://ukrainian-carpentries.github.io/python-novice-gapminder/16-writing-functions.html",
   "identifier": "https://ukrainian-carpentries.github.io/python-novice-gapminder/16-writing-functions.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2026-06-18",
-  "datePublished": "2026-06-18"
+  "dateModified": "2026-06-19",
+  "datePublished": "2026-06-19"
 }
 
   </script><script>
