@@ -24,7 +24,7 @@ exercises: 15
   - Компоненти в машині.
   - Леми при доведенні теорем.
 - Функції служать тій же меті в програмах.
-  - _Encapsulate_ complexity so that we can treat it as a single "thing".
+  - _Інкапсулюють_ (тобто приховують) складність, щоб ми могли розглядати її як єдине "ціле".
 - Також сприяють _повторному використанню_ кода.
   - Пишемо один раз, використовуємо багаторазово.
 
@@ -60,12 +60,12 @@ print_greeting()
 Hello!
 ```
 
-## Arguments in a function call are matched to its defined parameters.
+## Аргументи виклику функції зіставляються з параметрами, з якими вона була визначена.
 
 - Функції найбільш корисні, коли вони можуть працювати з різними даними.
 - Укажіть _параметри_ під час визначення функції.
   - Вони стають змінними під час виконання функції.
-  - Are assigned the arguments in the call (i.e., the values passed to the function).
+  - Параметрам присвоюються значення аргументів виклику (тобто значення, передані у функцію).
   - Якщо ви не називаєте аргументи під час їх використання у виклику, аргументи будуть зіставлені з параметрами в тому порядку, у якому параметри визначені у функції.
 
 ```python
@@ -80,10 +80,7 @@ print_date(1871, 3, 19)
 1871/3/19
 ```
 
-Or, we can name the arguments when we call the function, which allows us to
-specify them in any order and adds clarity to the call site; otherwise as
-one is reading the code they might forget if the second argument is the month
-or the day for example.
+Ми також можемо назвати аргументи під час виклику, що дозволяє передавати їх у довільному порядку та підвищує читабельність виклику. В іншому випадку під час читання коду може виникнути непорозуміння, наприклад, який аргумент йде другим: місяць або день.
 
 ```python
 print_date(month=3, day=19, year=1871)
@@ -93,17 +90,17 @@ print_date(month=3, day=19, year=1871)
 1871/3/19
 ```
 
-- Via [Twitter](https://twitter.com/minisciencegirl/status/693486088963272705):
-  `()` contains the ingredients for the function
-  while the body contains the recipe.
+- Корисна аналогія (https://twitter.com/minisciencegirl/status/693486088963272705):
+  `()` містить інгредієнти для функції,
+  тоді як тіло містить рецепт.
 
-## Functions may return a result to their caller using `return`.
+## Функції можуть повертати результат свого виклику за допомогою `return`.
 
-- Use `return ...` to give a value back to the caller.
+- Використовуйте `return ...` для повернення результату виклику функції.
 - Може виникнути будь-де у функції.
-- But functions are easier to understand if `return` occurs:
+- Але функції легше зрозуміти, якщо `return` зустрічається:
   - На початку функції для обробки особливих випадків.
-  - At the very end, with a final result.
+  - У самому кінці з остаточним результатом.
 
 ```python
 def average(values):
@@ -259,7 +256,7 @@ result of call is: None
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Encapsulation
+## Згортання коду у функцію
 
 Заповніть порожні поля, щоб створити функцію, яка приймає одне ім’я файлу як аргумент і завантажує дані з цього файлу. Функція має повертати мінімальне значення з цих даних.
 
@@ -354,9 +351,7 @@ print_date(day=1, month=2, year=2003)
 ## Відповідь
 
 1. `2003/2/1`
-
 2. Ми бачили приклади використання іменованих аргументів під час роботи з бібліотекою pandas. Наприклад, під час читання набору даних за допомогою `data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')`, останній аргумент `index_col` є іменованим аргументом.
-
 3. Використання іменованих аргументів покращує читабельність коду — з виклику функції можна побачити, які імена мають аргументи всередині функції. Це також зменшує ймовірність передачі аргументів у неправильному порядку, оскільки при використанні іменованих аргументів порядок не має значення.
 
 :::::::::::::::::::::::::
@@ -406,7 +401,7 @@ for i in range(10):
 
 ```
 
-1. Create a function definition for `get_egg_label()` that will work with the revised program above.  Зверніть увагу на значення, яке повертає функція `get_egg_label()`. Зразок виводу програми вище буде `71.23 large`.
+1. Створіть функцію `print_egg_label()`, яка працюватиме з новою версією програми, наведеною вище.  Зверніть увагу на значення, яке повертає функція `get_egg_label()`. Зразок виводу програми вище буде `71.23 large`.
 2. Брудне яйце може мати масу понад 90 грамів, а зіпсоване чи розбите яйце, ймовірно, матиме масу менше ніж 50 грамів.  Змініть функцію `print_egg_label()` для врахування цих умов. Можливий вивід програми: `25 too light, probably spoiled`.
 
 :::::::::::::::  solution
@@ -449,8 +444,7 @@ data_asia = pd.read_csv('data/gapminder_gdp_asia.csv', index_col=0)
 japan = data_asia.loc['Japan']
 ```
 
-1. Complete the statements below to obtain the average GDP for Japan
-   across the years reported for the 1980s.
+1. Заповніть наведені нижче пропуски. Результатом має бути середній ВВП Японії за роками, які присутні у наборі даних та належать до 1980-х.
 
 ```python
 year = 1983
@@ -532,21 +526,15 @@ avg_gdp_in_decade('Japan','asia',1983)
 
 У математиці [динамічна система](https://en.wikipedia.org/wiki/Dynamical_system) - це система, у якій функція описує залежність розташування точки в геометричному просторі від часу. Канонічний приклад динамічної системи - це [логістичне відображення](https://en.wikipedia.org/wiki/Logistic_map), тобто модель зростання, яка обчислює нову щільність популяції (від 0 до 1) на основі її поточного значення. В цій моделі час приймає дискретні значення 0, 1, 2, ... (тобто змінюється кроками, а не плавно)
 
-1. Define a function called `logistic_map` that takes two inputs: `x`, representing the current
-   population (at time `t`), and a parameter `r = 1`. Ця функція має повертати значення,
+1. Визначте функцію під назвою `logistic_map`, яка приймає два аргументи: `x`, що представляє популяцію в момент часу `t`, та параметр `r=1`. Ця функція має повертати значення,
    що представляє стан системи (популяції) у момент часу `t + 1`, використовуючи наступну функцію:
 
 `f(t+1) = r * f(t) * [1 - f(t)]`
 
-2. Using a `for` or `while` loop, iterate the `logistic_map` function defined in part 1, starting
-   from an initial population of 0.5, for a period of time `t_final = 10`. Зберігайте проміжні результати в списку, щоб після завершення циклу ви накопичили послідовність значень, що представляють стан системи в моменти часу `t = [0,1,...,t_final]` (11 значень в цілому).
+2. Використовуючи цикл `for` або `while`, повторюйте виклик функції `logistic_map`, визначеної в частині 1. Початкове значення густини популяції становить 0.5, а часовий інтервал — `t_final = 10`. Зберігайте проміжні результати в списку, щоб після завершення циклу ви накопичили послідовність значень, що представляють стан системи в моменти часу `t = [0,1,...,t_final]` (11 значень в цілому).
    Виведіть цей список, щоб побачити, як змінюється популяція з часом.
 
-3. Encapsulate the logic of your loop into a function called `iterate` that takes the initial
-   population as its first input, the parameter `t_final` as its second input and the parameter
-   `r` as its third input. The function should return the list of values representing the state of
-   the logistic map at times `t = [0,1,...,t_final]`. Run this function for periods `t_final = 100`
-   and `1000` and print some of the values. Чи рухається популяція до стабільного стану?
+3. Помістить цей цикл у функцію під назвою `iterate`, яка отримує три вхідні параметри: початкове значення густини популяції, `t_final` та `r`. Функція має повертати список значень, що представляють стан системи в моменти часу `t = [0,1,...,t_final]`. Виконайте цю функцію для періодів `t_final = 100` та `1000`, і виведіть деякі з отриманих значень. Чи рухається популяція до стабільного стану?
 
 :::::::::::::::  solution
 
@@ -636,8 +624,7 @@ data['life_qrtl'] = data['lifeExp_1952'].apply(calculate_life_quartile)
 ```
 
 У другому рядку коду багато цікавого, тож розберімо його по частинах.
-On the right side of the `=` we start with `data['lifeExp']`, which is the
-column in the dataframe called `data` labeled `lifExp`.  Ми використовуємо `apply()`, щоб застосувати функцію `calculate_life_quartile` до усіх значень цього стовпця.
+Праворуч від `=` ми починаємо з `data['lifeExp']` — це стовпець датафрейму `data`, що має мітку `lifExp`.  Ми використовуємо `apply()`, щоб застосувати функцію `calculate_life_quartile` до усіх значень цього стовпця.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 

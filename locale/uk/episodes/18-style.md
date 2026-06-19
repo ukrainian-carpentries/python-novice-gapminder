@@ -20,7 +20,7 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Coding style
+## Стиль кодування
 
 A consistent coding style helps others (including our future selves) read and understand code more easily. Code is read much more often than it is written, and as the [Zen of Python](https://www.python.org/dev/peps/pep-0020) states, "Readability counts".
 Python proposed a standard style through one of its first Python Enhancement Proposals (PEP), [PEP8](https://www.python.org/dev/peps/pep-0008).
@@ -31,7 +31,7 @@ Some points worth highlighting:
 - use clear, semantically meaningful variable names
 - use white-space, _not_ tabs, to indent lines (tabs can cause problems across different text editors, operating systems, and version control systems)
 
-## Follow standard Python style in your code.
+## Дотримуйтеся стандартного стилю Python у своєму коді.
 
 - [PEP8](https://www.python.org/dev/peps/pep-0008):
   a style guide for Python that discusses topics such as how to name variables,
@@ -49,7 +49,7 @@ Assertions are a simple but powerful method for making sure that the context in 
 
 ```python
 def calc_bulk_density(mass, volume):
-    '''Return dry bulk density = powder mass / powder volume.'''
+    '''Повертає щільність сухої речовини = маса / об'єм.'''
     assert volume > 0
     return mass / volume
 ```
