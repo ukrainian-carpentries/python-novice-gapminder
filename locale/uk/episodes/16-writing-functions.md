@@ -444,8 +444,7 @@ data_asia = pd.read_csv('data/gapminder_gdp_asia.csv', index_col=0)
 japan = data_asia.loc['Japan']
 ```
 
-1. Complete the statements below to obtain the average GDP for Japan
-   across the years reported for the 1980s.
+1. Заповніть наведені нижче пропуски. Результатом має бути середній ВВП Японії за роками, які присутні у наборі даних та належать до 1980-х.
 
 ```python
 year = 1983
@@ -527,21 +526,15 @@ avg_gdp_in_decade('Japan','asia',1983)
 
 У математиці [динамічна система](https://en.wikipedia.org/wiki/Dynamical_system) - це система, у якій функція описує залежність розташування точки в геометричному просторі від часу. Канонічний приклад динамічної системи - це [логістичне відображення](https://en.wikipedia.org/wiki/Logistic_map), тобто модель зростання, яка обчислює нову щільність популяції (від 0 до 1) на основі її поточного значення. В цій моделі час приймає дискретні значення 0, 1, 2, ... (тобто змінюється кроками, а не плавно)
 
-1. Define a function called `logistic_map` that takes two inputs: `x`, representing the current
-   population (at time `t`), and a parameter `r = 1`. Ця функція має повертати значення,
+1. Визначте функцію під назвою `logistic_map`, яка приймає два аргументи: `x`, що представляє популяцію в момент часу `t`, та параметр `r=1`. Ця функція має повертати значення,
    що представляє стан системи (популяції) у момент часу `t + 1`, використовуючи наступну функцію:
 
 `f(t+1) = r * f(t) * [1 - f(t)]`
 
-2. Using a `for` or `while` loop, iterate the `logistic_map` function defined in part 1, starting
-   from an initial population of 0.5, for a period of time `t_final = 10`. Зберігайте проміжні результати в списку, щоб після завершення циклу ви накопичили послідовність значень, що представляють стан системи в моменти часу `t = [0,1,...,t_final]` (11 значень в цілому).
+2. Використовуючи цикл `for` або `while`, повторюйте виклик функції `logistic_map`, визначеної в частині 1. Початкове значення густини популяції становить 0.5, а часовий інтервал — `t_final = 10`. Зберігайте проміжні результати в списку, щоб після завершення циклу ви накопичили послідовність значень, що представляють стан системи в моменти часу `t = [0,1,...,t_final]` (11 значень в цілому).
    Виведіть цей список, щоб побачити, як змінюється популяція з часом.
 
-3. Encapsulate the logic of your loop into a function called `iterate` that takes the initial
-   population as its first input, the parameter `t_final` as its second input and the parameter
-   `r` as its third input. The function should return the list of values representing the state of
-   the logistic map at times `t = [0,1,...,t_final]`. Run this function for periods `t_final = 100`
-   and `1000` and print some of the values. Чи рухається популяція до стабільного стану?
+3. Помістить цей цикл у функцію під назвою `iterate`, яка отримує три вхідні параметри: початкове значення густини популяції, `t_final` та `r`. Функція має повертати список значень, що представляють стан системи в моменти часу `t = [0,1,...,t_final]`. Виконайте цю функцію для періодів `t_final = 100` та `1000`, і виведіть деякі з отриманих значень. Чи рухається популяція до стабільного стану?
 
 :::::::::::::::  solution
 
@@ -631,8 +624,7 @@ data['life_qrtl'] = data['lifeExp_1952'].apply(calculate_life_quartile)
 ```
 
 У другому рядку коду багато цікавого, тож розберімо його по частинах.
-On the right side of the `=` we start with `data['lifeExp']`, which is the
-column in the dataframe called `data` labeled `lifExp`.  Ми використовуємо `apply()`, щоб застосувати функцію `calculate_life_quartile` до усіх значень цього стовпця.
+Праворуч від `=` ми починаємо з `data['lifeExp']` — це стовпець датафрейму `data`, що має мітку `lifExp`.  Ми використовуємо `apply()`, щоб застосувати функцію `calculate_life_quartile` до усіх значень цього стовпця.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
