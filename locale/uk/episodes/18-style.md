@@ -23,11 +23,11 @@ exercises: 15
 ## Стиль кодування
 
 Дотримання послідовного стилю кодування сприяє кращому розумінню коду іншими особами (зокрема нами самими в майбутньому). Code is read much more often than it is written, and as the [Zen of Python](https://www.python.org/dev/peps/pep-0020) states, "Readability counts".
-Python proposed a standard style through one of its first Python Enhancement Proposals (PEP), [PEP8](https://www.python.org/dev/peps/pep-0008).
+Стандартний стиль для Python було запропоновано в одному з перших документів PEP (Python Enhancement Proposal), [PEP8](https://www.python.org/dev/peps/pep-0008).
 
-Some points worth highlighting:
+Варто відзначити такі моменти:
 
-- document your code and ensure that assumptions, internal algorithms, expected inputs, expected outputs, etc., are clear
+- документуйте ваш код, чітко зазначаючи припущення, внутрішні алгоритми, очікувані вхідні та вихідні дані тощо
 - use clear, semantically meaningful variable names
 - use white-space, _not_ tabs, to indent lines (tabs can cause problems across different text editors, operating systems, and version control systems)
 
@@ -40,8 +40,8 @@ Some points worth highlighting:
   etc.
   Adhering to PEP8 makes it easier for other Python developers to read and understand your code, and to understand what their contributions should look like.
 - To check your code for compliance with PEP8, you can use the [pycodestyle application](https://pypi.org/project/pycodestyle/) and tools like the [black code formatter](https://github.com/psf/black) can automatically format your code to conform to PEP8 and pycodestyle (a Jupyter notebook formatter also exists [nb\_black](https://github.com/dnanhkhoa/nb_black)).
-- Some groups and organizations follow different style guidelines besides PEP8. For example, the [Google style guide on Python](https://google.github.io/styleguide/pyguide.html) makes slightly different recommendations. Google wrote an application that can help you format your code in either their style or PEP8 called [yapf](https://github.com/google/yapf/).
-- With respect to coding style, the key is _consistency_. Choose a style for your project be it PEP8, the Google style, or something else and do your best to ensure that you and anyone else you are collaborating with sticks to it. Consistency within a project is often more impactful than the particular style used. A consistent style will make your software easier to read and understand for others and for your future self.
+- Деякі групи та організації застосовують інші стандарти стилю, відмінні від PEP8. Наприклад, [настанови Google зі стилю Python](https://google.github.io/styleguide/pyguide.html)  містять дещо інші рекомендації. Google створила застосунок під назвою [yapf](https://github.com/google/yapf/), який може допомогти вам форматувати код відповідно до стилю Google або PEP8.
+- Щодо стилю кодування, ключовим фактором є _послідовність_. Оберіть стиль для свого проєкту (PEP8, стиль Google або інший) і подбайте про те, щоб ви та інші учасники команди дотримувалися його. Послідовність у проєкті зазвичай впливає сильніше, ніж вибір конкретного стилю. Послідовний стиль полегшує читання та розуміння коду іншими розробниками, а також вами самими в майбутньому.
 
 ## Use assertions to check for internal errors.
 
@@ -150,7 +150,7 @@ def middle(a, b, c):
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
 ```python
 def middle(a, b, c):
@@ -197,7 +197,7 @@ while i < n:
 
 :::::::::::::::  solution
 
-## Solution
+## Відповідь
 
 Here's one solution.
 
