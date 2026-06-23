@@ -8,7 +8,7 @@ exercises: 15
 
 - Дотримуйтесь основних правил стилю кодування.
 - Виконуйте рефакторинг односторінкових програм, щоб зробити їх більш читабельними та обґрунтувати зміни.
-- Use Python community coding standards (PEP-8).
+- Дотримуйтесь стандартів кодування, прийнятих у спільноті користувачів Python (PEP-8).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -22,14 +22,14 @@ exercises: 15
 
 ## Стиль кодування
 
-Дотримання послідовного стилю кодування сприяє кращому розумінню коду іншими особами (зокрема нами самими в майбутньому). Code is read much more often than it is written, and as the [Zen of Python](https://www.python.org/dev/peps/pep-0020) states, "Readability counts".
+Дотримання послідовного стилю кодування сприяє кращому розумінню коду іншими особами (зокрема нами самими в майбутньому). Код читається набагато частіше, ніж пишеться, і, як стверджує [Дзен Python](https://www.python.org/dev/peps/pep-0020), "читабельність має значення".
 Стандартний стиль для Python було запропоновано в одному з перших документів PEP (Python Enhancement Proposal), [PEP8](https://www.python.org/dev/peps/pep-0008).
 
 Варто відзначити такі моменти:
 
 - документуйте ваш код, чітко зазначаючи припущення, внутрішні алгоритми, очікувані вхідні та вихідні дані тощо
-- use clear, semantically meaningful variable names
-- use white-space, _not_ tabs, to indent lines (tabs can cause problems across different text editors, operating systems, and version control systems)
+- використовуйте зрозумілі, змістовні назви змінних
+- для відступів використовуйте пробіли, а _не табуляцію_ (табуляція може призводити до проблем у різних текстових редакторах, операційних системах і системах контролю версій)
 
 ## Дотримуйтеся стандартного стилю Python у своєму коді.
 
@@ -39,7 +39,7 @@ exercises: 15
   how to structure your `import` statements,
   etc.
   Adhering to PEP8 makes it easier for other Python developers to read and understand your code, and to understand what their contributions should look like.
-- To check your code for compliance with PEP8, you can use the [pycodestyle application](https://pypi.org/project/pycodestyle/) and tools like the [black code formatter](https://github.com/psf/black) can automatically format your code to conform to PEP8 and pycodestyle (a Jupyter notebook formatter also exists [nb\_black](https://github.com/dnanhkhoa/nb_black)).
+- Щоб перевірити свій код на відповідність PEP8, можна використовувати [застосунок pycodestyle](https://pypi.org/project/pycodestyle/, який повідомляє про порушення стилю. Такі інструменти, як [black code formatter](https://github.com/psf/black), можуть автоматично виправити форматування коду відповідно до PEP8 (для Jupyter notebook існує [nb\_black](https://github.com/dnanhkhoa/nb_black)).
 - Деякі групи та організації застосовують інші стандарти стилю, відмінні від PEP8. Наприклад, [настанови Google зі стилю Python](https://google.github.io/styleguide/pyguide.html)  містять дещо інші рекомендації. Google створила застосунок під назвою [yapf](https://github.com/google/yapf/), який може допомогти вам форматувати код відповідно до стилю Google або PEP8.
 - Щодо стилю кодування, ключовим фактором є _послідовність_. Оберіть стиль для свого проєкту (PEP8, стиль Google або інший) і подбайте про те, щоб ви та інші учасники команди дотримувалися його. Послідовність у проєкті зазвичай впливає сильніше, ніж вибір конкретного стилю. Послідовний стиль полегшує читання та розуміння коду іншими розробниками, а також вами самими в майбутньому.
 
