@@ -42,9 +42,9 @@ exercises: 15
 - Деякі групи та організації застосовують інші стандарти стилю, відмінні від PEP8. Наприклад, [настанови Google зі стилю Python](https://google.github.io/styleguide/pyguide.html)  містять дещо інші рекомендації. Google створила застосунок під назвою [yapf](https://github.com/google/yapf/), який може допомогти вам форматувати код відповідно до стилю Google або PEP8.
 - Щодо стилю кодування, ключовим фактором є _послідовність_. Оберіть стиль для свого проєкту (PEP8, стиль Google або інший) і подбайте про те, щоб ви та інші учасники команди дотримувалися його. Послідовність у проєкті зазвичай впливає сильніше, ніж вибір конкретного стилю. Послідовний стиль полегшує читання та розуміння коду іншими розробниками, а також вами самими в майбутньому.
 
-## Use assertions to check for internal errors.
+## Застосовуйте твердження для виявлення внутрішніх помилок.
 
-Assertions are a simple but powerful method for making sure that the context in which your code is executing is as you expect.
+Твердження (assertions) — простий, але дієвий спосіб переконатися, що контекст виконання коду відповідає вашим очікуванням.
 
 ```python
 def calc_bulk_density(mass, volume):
@@ -53,15 +53,15 @@ def calc_bulk_density(mass, volume):
     return mass / volume
 ```
 
-If the assertion is `False`, the Python interpreter raises an `AssertionError` runtime exception. The source code for the expression that failed will be displayed as part of the error message. To ignore assertions in your code run the interpreter with the '-O' (optimize) switch. Assertions should contain only simple checks and never change the state of the program. For example, an assertion should never contain an assignment.
+Якщо твердження має значення `False`, інтерпретатор Python викличе виняток `AssertionError` під час виконання програми. The source code for the expression that failed will be displayed as part of the error message. To ignore assertions in your code run the interpreter with the '-O' (optimize) switch. Твердження повинні містити лише прості перевірки та ніколи не змінювати стан програми. For example, an assertion should never contain an assignment.
 
-## Use docstrings to provide builtin help.
+## Використовуйте рядки документації (docstrings) для створення вбудованої довідки.
 
-If the first thing in a function is a character string that is not assigned directly to a variable, Python attaches it to the function, accessible via the builtin help function. This string that provides documentation is also known as a _docstring_.
+If the first thing in a function is a character string that is not assigned directly to a variable, Python attaches it to the function, accessible via the builtin help function. Цей рядок, що забезпечує документацію, також відомий як _docstring_.
 
 ```python
 def average(values):
-    "Return average of values, or None if no values are supplied."
+    "Повертає середнє значення або None, якщо значення не надано."
 
     if len(values) == 0:
         return None
@@ -74,12 +74,12 @@ help(average)
 Help on function average in module __main__:
 
 average(values)
-    Return average of values, or None if no values are supplied.
+    Повертає середнє значення або None, якщо значення не надано.
 ```
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Multiline Strings
+## Багаторядкові рядки
 
 Often use _multiline strings_ for documentation.
 These start and end with three quote characters (either single or double)
@@ -96,9 +96,9 @@ Blank lines are allowed."""
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## What Will Be Shown?
+## Що буде показано?
 
-Highlight the lines in the code below that will be available as online help.
+Виділіть рядки в коді нижче, які будуть доступні як онлайн-довідка.
 Are there lines that should be made available, but won't be?
 Will any lines produce a syntax error or a runtime error?
 
@@ -125,7 +125,7 @@ def overall_max(sequences):
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Document This
+## Задокументуйте це
 
 Use comments to describe and help others understand potentially unintuitive
 sections or individual lines of code. They are especially useful to whoever
