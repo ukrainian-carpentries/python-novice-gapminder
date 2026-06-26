@@ -16,7 +16,7 @@ exercises: 15
 
 - Як я можу зробити свої програми більш читабельними?
 - Як більшість програмістів форматують свій код?
-- How can programs check their own operation?
+- Яким чином програми можуть самостійно перевіряти, що вони працюють правильно?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -33,12 +33,11 @@ exercises: 15
 
 ## Дотримуйтеся стандартного стилю Python у своєму коді.
 
-- [PEP8](https://www.python.org/dev/peps/pep-0008):
-  a style guide for Python that discusses topics such as how to name variables,
-  how to indent your code,
-  how to structure your `import` statements,
-  etc.
-  Adhering to PEP8 makes it easier for other Python developers to read and understand your code, and to understand what their contributions should look like.
+- [PEP8](https://www.python. rg/dev/peps/pep-0008):
+  рекомендації зі стилю Python, що описують такі аспекти, як назви змінних,
+  відступи в коді, структуру операторів `import`
+  тощо.
+  Дотримання стандарту PEP8 сприяє кращому розумінню коду іншими розробниками Python, а також розумінню того, яким має бути формат їхнього внеску.
 - Щоб перевірити свій код на відповідність PEP8, можна використовувати [застосунок pycodestyle](https://pypi.org/project/pycodestyle/, який повідомляє про порушення стилю. Такі інструменти, як [black code formatter](https://github.com/psf/black), можуть автоматично виправити форматування коду відповідно до PEP8 (для Jupyter notebook існує [nb\_black](https://github.com/dnanhkhoa/nb_black)).
 - Деякі групи та організації застосовують інші стандарти стилю, відмінні від PEP8. Наприклад, [настанови Google зі стилю Python](https://google.github.io/styleguide/pyguide.html)  містять дещо інші рекомендації. Google створила застосунок під назвою [yapf](https://github.com/google/yapf/), який може допомогти вам форматувати код відповідно до стилю Google або PEP8.
 - Щодо стилю кодування, ключовим фактором є _послідовність_. Оберіть стиль для свого проєкту (PEP8, стиль Google або інший) і подбайте про те, щоб ви та інші учасники команди дотримувалися його. Послідовність у проєкті зазвичай впливає сильніше, ніж вибір конкретного стилю. Послідовний стиль полегшує читання та розуміння коду іншими розробниками, а також вами самими в майбутньому.
