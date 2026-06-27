@@ -20,7 +20,7 @@ exercises: 0
 Leslie Lamport once said, "Writing is nature's way of showing you how sloppy your thinking is."
 Те саме стосується програмування: багато речей, які здаються очевидними, коли ми думаємо про них, виявляються зовсім іншим, коли ми маємо точно їх пояснити.
 
-## Python supports a large and diverse community across academia and industry.
+## Навколо Python сформувалася велика й різноманітна спільнота користувачів в академічних і промислових колах.
 
 - [Документація з Python 3](https://docs.python.org/3/) охоплює основні поняття мови програмування та стандартну бібліотеку Python.
 
@@ -41,7 +41,7 @@ Leslie Lamport once said, "Writing is nature's way of showing you how sloppy you
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Python підтримує велику та різноманітну спільноту користувачів в академічних і промислових колах.
+- Навколо Python сформувалася велика й різноманітна спільнота користувачів в академічних і промислових колах.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
