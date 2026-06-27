@@ -13,38 +13,35 @@ exercises: 0
 :::::::::::::::::::::::::::::::::::::::: questions
 
 - Що саме ми вивчили?
-- What else is out there and where do I find it?
+- Що ще існує в екосистемі мови Python, і де це можна знайти?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Leslie Lamport once said, "Writing is nature's way of showing you how sloppy your thinking is."
-The same is true of programming:
-many things that seem obvious when we're thinking about them
-turn out to be anything but when we have to explain them precisely.
+Те саме стосується програмування: багато речей, які здаються очевидними, коли ми думаємо про них, виявляються зовсім іншим, коли ми маємо точно їх пояснити.
 
 ## Python supports a large and diverse community across academia and industry.
 
-- The [Python 3 documentation](https://docs.python.org/3/) covers the core language
-  and the standard library.
+- [Документація з Python 3](https://docs.python.org/3/) охоплює основні поняття мови програмування та стандартну бібліотеку Python.
 
 - [PyCon](https://pycon.org/) є найбільшою щорічною конференцією для спільноти Python.
 
-- [SciPy](https://scipy.org) is a rich collection of scientific utilities.
+- [SciPy](https://scipy.org) - пакет, який надає багато наукових інструментів.
   Це також назва [серії щорічних конференцій](https://conference.scipy.org/).
 
 - [Jupyter](https://jupyter.org) - це офіційний сайт проєкту Jupyter.
 
-- [Pandas](https://pandas.pydata.org) is the home of the Pandas data library.
+- [Pandas](https://pandas.pydata.org) - це офіційний сайт бібліотеки Pandas для роботи з даними.
 
-- Stack Overflow's [general Python section](https://stackoverflow.com/questions/tagged/python?tab=Votes)
-  can be helpful,
-  as well as the sections on [NumPy](https://stackoverflow.com/questions/tagged/numpy?tab=Votes),
-  [SciPy](https://stackoverflow.com/questions/tagged/scipy?tab=Votes), and
+- [Розділ Stack Overflow, приcвячений Python](https://stackoverflow.com/questions/tagged/python?tab=Votes),
+  може бути корисним,
+  так само як і розділи, присвячені [NumPy](https://stackoverflow.com/questions/tagged/numpy?tab=Votes),
+  [SciPy](https://stackoverflow.com/questions/tagged/scipy?tab=Votes), та
   [Pandas](https://stackoverflow.com/questions/tagged/pandas?tab=Votes).
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Python supports a large and diverse community across academia and industry.
+- Python підтримує велику та різноманітну спільноту користувачів в академічних і промислових колах.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
