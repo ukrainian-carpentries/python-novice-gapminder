@@ -81,7 +81,7 @@ average(values)
 
 ## Багаторядкові рядки
 
-Often use _multiline strings_ for documentation.
+Часто для документації використовуються _багаторядкові рядки_.
 Такі рядки починаються трьома символами лапок (одинарними чи подвійними) та закінчуються трьома відповідними символами.
 
 ```python
@@ -128,11 +128,9 @@ def overall_max(sequences):
 
 Застосовуйте коментарі для опису та пояснення розділів коду або окремих рядків, що можуть бути неінтуїтивно зрозумілими для інших. Вони є особливо корисними для будь-кого, хто матиме потребу зрозуміти та відредагувати ваш код у майбутньому, зокрема для вас самих.
 
-Застосовуйте рядки документації для опису допустимих вхідних даних та очікуваних вихідних даних методу чи класу, а також їхнього призначення, припущень і передбачуваної поведінки. Docstrings are displayed
-when a user invokes the builtin `help` method on your method or class.
+Застосовуйте рядки документації для опису допустимих вхідних даних та очікуваних вихідних даних методу чи класу, а також їхнього призначення, припущень і передбачуваної поведінки. Рядки документації зображаються, коли користувач викликає вбудований метод `help` для вашого методу або класу.
 
-Turn the comment in the following function into a docstring
-and check that `help` displays it properly.
+Перетворіть коментар у наступній функції на рядок документації та переконайтеся, що команда `help` правильно його відображає.
 
 ```python
 def middle(a, b, c):
@@ -165,7 +163,7 @@ def middle(a, b, c):
 ## Зробіть цей код більш зрозумілим
 
 1. Прочитайте цю коротку програму та спробуйте передбачити, що вона робить.
-2. Run it: how accurate was your prediction?
+2. Запустіть її: наскільки точним було ваше передбачення?
 3. Переробіть програму, щоб зробити її більш читабельною.
    Не забувайте запускати її після кожної зміни, щоб переконатися, що її поведінка не змінилася.
 4. Порівняйте свій код з результатом когось іншого.
@@ -199,26 +197,26 @@ while i < n:
 ```python
 def string_machine(input_string, iterations):
     """
-    Takes input_string and generates a new string with -'s and *'s
-    corresponding to characters that have identical adjacent characters
-    or not, respectively.  Iterates through this procedure with the resultant
-    strings for the supplied number of iterations.
+    На вхід поступає input_string. Далі генерується новий рядок із символами "-" та "*",
+    що відповідають символам, які мають або не мають ідентичні сусідні
+    символи, відповідно. Ця процедура повторюється з отриманими рядками з
+    попереднього кроку задану кількість разів.
     """
     print(input_string)
     input_string_length = len(input_string)
     old = input_string
     for i in range(iterations):
         new = ''
-        # iterate through characters in previous string
+        # перебираються символи в рядку old.
         for j in range(input_string_length):
             left = j-1
-            right = (j+1) % input_string_length  # ensure right index wraps around
+            right = (j+1) % input_string_length  # перший символ є суміжним для останнього
             if old[left] == old[right]:
                 new = new + '-'
             else:
                 new = new + '*'
         print(new)
-        # store new string as old
+        # Рядок new зберігається як old
         old = new     
 
 string_machine('et cetera', 10)
