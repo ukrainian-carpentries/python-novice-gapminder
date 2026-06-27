@@ -53,11 +53,11 @@ def calc_bulk_density(mass, volume):
     return mass / volume
 ```
 
-Якщо твердження має значення `False`, інтерпретатор Python викличе виняток `AssertionError` під час виконання програми. The source code for the expression that failed will be displayed as part of the error message. To ignore assertions in your code run the interpreter with the '-O' (optimize) switch. Твердження повинні містити лише прості перевірки та ніколи не змінювати стан програми. For example, an assertion should never contain an assignment.
+Якщо твердження має значення `False`, інтерпретатор Python викличе виняток `AssertionError` під час виконання програми. Вихідний код виразу, що спричинив помилку, виводиться як частина повідомлення про помилку. Щоб ігнорувати твердження у вашому коді, запустіть інтерпретатор з опцією '-O' (оптимізація). Твердження повинні містити лише прості перевірки та ніколи не змінювати стан програми. Наприклад, твердження ніколи не повинне містити присвоєння.
 
 ## Використовуйте рядки документації (docstrings) для створення вбудованої довідки.
 
-If the first thing in a function is a character string that is not assigned directly to a variable, Python attaches it to the function, accessible via the builtin help function. Цей рядок, що забезпечує документацію, також відомий як _docstring_.
+У випадку, коли першим елементом тіла функції є рядок символів, який не присвоєно жодній змінній, Python автоматично прив'язує його до функції у вигляді атрибута. Цей атрибут стає доступним за допомогою вбудованої функції  `help`. Цей рядок, що забезпечує документацію, також відомий як _docstring_.
 
 ```python
 def average(values):
