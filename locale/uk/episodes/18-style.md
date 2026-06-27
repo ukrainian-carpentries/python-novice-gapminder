@@ -162,15 +162,15 @@ def middle(a, b, c):
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Clean Up This Code
+## Зробіть цей код більш зрозумілим
 
-1. Read this short program and try to predict what it does.
+1. Прочитайте цю коротку програму та спробуйте передбачити, що вона робить.
 2. Run it: how accurate was your prediction?
-3. Refactor the program to make it more readable.
-   Remember to run it after each change to ensure its behavior hasn't changed.
-4. Compare your rewrite with your neighbor's.
-   What did you do the same?
-   What did you do differently, and why?
+3. Переробіть програму, щоб зробити її більш читабельною.
+   Не забувайте запускати її після кожної зміни, щоб переконатися, що її поведінка не змінилася.
+4. Порівняйте свій код з результатом когось іншого.
+   Що ви зробили так само?
+   Що ви зробили інакше і чому?
 
 ```python
 n = 10
@@ -194,7 +194,7 @@ while i < n:
 
 ## Відповідь
 
-Here's one solution.
+Ось один з варіантів рішення.
 
 ```python
 def string_machine(input_string, iterations):
@@ -244,8 +244,8 @@ et cetera
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Follow standard Python style in your code.
-- Use docstrings to provide builtin help.
+- Дотримуйтеся стандартного стилю Python у своєму коді.
+- Використовуйте рядки документів для надання вбудованої довідки.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
