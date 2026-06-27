@@ -86,10 +86,10 @@ These start and end with three quote characters (either single or double)
 and end with three matching characters.
 
 ```python
-"""This string spans
-multiple lines.
+"""Цей рядок охоплює
+кілька рядків.
 
-Blank lines are allowed."""
+Порожні рядки дозволені."""
 ```
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -98,9 +98,9 @@ Blank lines are allowed."""
 
 ## Що буде показано?
 
-Виділіть рядки в коді нижче, які будуть доступні як онлайн-довідка.
+Highlight the lines in the code below that will be available as online help.
 Are there lines that should be made available, but won't be?
-Will any lines produce a syntax error or a runtime error?
+Чи призведе якийсь із рядків до синтаксичної помилки або помилки виконання?
 
 ```python
 "Find maximum edit distance between multiple sequences."
@@ -125,14 +125,11 @@ def overall_max(sequences):
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Задокументуйте це
+## Document This
 
-Use comments to describe and help others understand potentially unintuitive
-sections or individual lines of code. They are especially useful to whoever
-may need to understand and edit your code in the future, including yourself.
+Застосовуйте коментарі для опису та пояснення розділів коду або окремих рядків, що можуть бути неінтуїтивно зрозумілими для інших. Вони є особливо корисними для будь-кого, хто матиме потребу зрозуміти та відредагувати ваш код у майбутньому, зокрема для вас самих.
 
-Use docstrings to document the acceptable inputs and expected outputs of a method
-or class, its purpose, assumptions and intended behavior. Docstrings are displayed
+Застосовуйте рядки документації для опису допустимих вхідних даних та очікуваних вихідних даних методу чи класу, а також їхнього призначення, припущень і передбачуваної поведінки. Docstrings are displayed
 when a user invokes the builtin `help` method on your method or class.
 
 Turn the comment in the following function into a docstring
@@ -140,8 +137,8 @@ and check that `help` displays it properly.
 
 ```python
 def middle(a, b, c):
-    # Return the middle value of three.
-    # Assumes the values can actually be compared.
+    # Повертає середнє значення для трьох величин.
+    # Передбачається, що значення можна порівняти.
     values = [a, b, c]
     values.sort()
     return values[1]
@@ -153,8 +150,8 @@ def middle(a, b, c):
 
 ```python
 def middle(a, b, c):
-    '''Return the middle value of three.
-    Assumes the values can actually be compared.'''
+    '''Повертає середнє значення для трьох величин.
+    Передбачається, що значення можна порівняти.'''
     values = [a, b, c]
     values.sort()
     return values[1]
