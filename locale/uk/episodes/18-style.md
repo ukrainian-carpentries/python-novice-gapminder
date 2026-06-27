@@ -82,8 +82,7 @@ average(values)
 ## Багаторядкові рядки
 
 Often use _multiline strings_ for documentation.
-These start and end with three quote characters (either single or double)
-and end with three matching characters.
+Такі рядки починаються трьома символами лапок (одинарними чи подвійними) та закінчуються трьома відповідними символами.
 
 ```python
 """Цей рядок охоплює
@@ -98,26 +97,26 @@ and end with three matching characters.
 
 ## Що буде показано?
 
-Highlight the lines in the code below that will be available as online help.
-Are there lines that should be made available, but won't be?
+Виділіть в коді нижче рядки, які будуть доступні як онлайн-довідка.
+Чи є рядки, які мають бути доступні, але не будуть зображатися?
 Чи призведе якийсь із рядків до синтаксичної помилки або помилки виконання?
 
 ```python
-"Find maximum edit distance between multiple sequences."
-# This finds the maximum distance between all sequences.
+"Знаходить максимальну відстань редагування між кількома послідовностями."
+# Знаходить максимальну відстань між усіма послідовностями.
 
 def overall_max(sequences):
-    '''Determine overall maximum edit distance.'''
+    '''Визначає загальну максимальну відстань редагування.'''
 
     highest = 0
     for left in sequences:
         for right in sequences:
-            '''Avoid checking sequence against itself.'''
+            '''Уникаємо порівняння послідовності із самою собою.''
             if left != right:
                 this = edit_distance(left, right)
                 highest = max(highest, this)
 
-    # Report.
+    # Повертаємо результат.
     return highest
 ```
 
@@ -125,7 +124,7 @@ def overall_max(sequences):
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Document This
+## Створюємо документацію
 
 Застосовуйте коментарі для опису та пояснення розділів коду або окремих рядків, що можуть бути неінтуїтивно зрозумілими для інших. Вони є особливо корисними для будь-кого, хто матиме потребу зрозуміти та відредагувати ваш код у майбутньому, зокрема для вас самих.
 
