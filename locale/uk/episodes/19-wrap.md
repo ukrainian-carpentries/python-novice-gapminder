@@ -24,15 +24,15 @@ turn out to be anything but when we have to explain them precisely.
 
 ## Python supports a large and diverse community across academia and industry.
 
-- [Документація з Python 3](https://docs.python.org/3/) охоплює ядро мови
-  та стандартну бібліотеку.
+- The [Python 3 documentation](https://docs.python.org/3/) covers the core language
+  and the standard library.
 
 - [PyCon](https://pycon.org/) є найбільшою щорічною конференцією для спільноти Python.
 
 - [SciPy](https://scipy.org) is a rich collection of scientific utilities.
   Це також назва [серії щорічних конференцій](https://conference.scipy.org/).
 
-- [Jupyter](https://jupyter.org) is the home of Project Jupyter.
+- [Jupyter](https://jupyter.org) - це офіційний сайт проєкту Jupyter.
 
 - [Pandas](https://pandas.pydata.org) is the home of the Pandas data library.
 
