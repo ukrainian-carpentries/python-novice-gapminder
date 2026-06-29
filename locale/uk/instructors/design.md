@@ -67,16 +67,17 @@ The main sections are:
     - І це означає, що навіть ті, хто вже трохи працював із Python, скоріше за все, дізнаються для себе щось нове
 - Дані
   - Use the gapminder data throughout
-  - Але розділіть на кілька файлів за континентальною ознакою
+  - But break into multiple files by continent
     - To make display of output from examples tidier
       (e.g., use Australia/New Zealand, which is only two lines)
-    - І дозволити приклади, що показують використання декількох наборів даних
+    - And allow examples showing use of multiple data sets
 - Зробити фокус на Pandas замість NumPy
   - Зробити урок придатним до використання для Data Carpentry та Software Carpentry
   - Genuine novices are likely to want data analysis
   - And people with some prior experience:
     - сприймуть аналіз даних як реальне завдання,
-    - і навряд чи стикалися з Pandas, тому вони все одно отримають щось корисне з уроку
+    - and are unlikely to have encountered Pandas,
+      so they'll still get something useful out of the lesson
 - Challenges will mostly _not_ be "write this code from scratch"
   - Want lots of short exercises that can reliably be finished in allotted time
   - So use MCQs, fill-in-the-blanks, Parsons Problems, "tweak this code", etc.
