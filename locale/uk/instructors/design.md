@@ -6,16 +6,14 @@ title: Дизайн уроку
 
 ## Де потрібна допомога
 
-**We are filling in the exercises [below](#stage-3-learning-plan)
-in order to make the lesson plan more concrete.
-Contributions (both in the form of pull requests with filled-in exercises,
-and comments on specific exercises, ordering, and timings) are greatly appreciated.**
+**Ми додаємо вправи [нижче](#stage-3-learning-plan) для того, щоб план уроку був більш детальним.
+Будемо вдячні за пропозиції (як у вигляді нових готових вправ, так і у вигляді коментарів щодо конкретних вправ, їх порядку та часу виконання).**
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Процес розробки
 
-> Michael Pollan's advice if he taught R or Python programming:
+> Поради Майкла Поллана, якби він викладав програмування на R або Python:
 >
 > 1. Пишіть код.
 > 2. Не надто багато.
@@ -24,69 +22,62 @@ and comments on specific exercises, ordering, and timings) are greatly appreciat
 > — [Michael Koontz](https://twitter.com/_mikoontz/status/758021742078025728)
 > {: .quotation}
 
-This lesson was developed using a slimmed-down variant of the "Understanding by Design" process.
+Урок розроблено за скороченою версією методу "Розуміння за дизайном".
 The main sections are:
 
-1. Assumptions about audience, time, etc.
-   (The current draft also includes some conclusions and decisions in this
-   section - that should be refactored.)
+1. Припущення щодо аудиторії, часу тощо.
+   (Поточні нотатки також містять певні висновки та рішення в цьому розділі — їх слід переробити.)
 
-2. Desired results:
-   overall goals, summative assessments at half-day granularity, what learners
-   will be able to do, what learners will know.
+2. Бажані результати: загальні цілі, підсумкові оцінювання кожні півдня викладання, що слухачі мають знати та вміти.
 
-3. Learning plan:
-   each episode has a heading that summarizes what will be covered,
-   then estimates time that will be spent on teaching and on exercises,
-   while the exercises are given as bullet points.
+3. Навчальний план: кожен епізод містить заголовок з узагальненням матеріалу, що буде розглянуто, оцінку часу на викладання та виконання вправ, а також перелік вправ у вигляді маркованого списку.
 
-## Stage 1: Assumptions
+## Етап 1: Припущення
 
-- Audience
-  - Graduate students in numerate disciplines from cosmology to archaeology
-  - Who have manipulated data in spreadsheets and with interactive tools like SAS
-  - But have _not_ programmed beyond CPD (copy-paste-despair)
-- Constraints
-  - One full day 09:00-16:30
-    - 06:15 class time
-    - 0:45 lunch
-    - 0:30 total for two coffee breaks
-  - Learners use native installs on their own machines
-    - May use VMs or cloud resources at instructor's discretion
-    - But must keep native local install as an option
-  - No dependence on other Carpentry modules
-    - In particular, does not require knowledge of shell or version control
-  - Use the Jupyter Notebook
-    - Authentic tool used by many instructors
-    - There isn't really an alternative
+- Аудиторія
+  - Аспіранти з різних наукових напрямків — від космології до археології
+  - Які у минулому обробляли дані в електронних таблицях, а також за допомогою інтерактивних інструментів, таких як SAS
+  - Але _не просунулися_ далі CPD (copy-paste-despair / скопіював-вставив-впав в розпач)
+- Обмеження
+  - Один повний день 09:00-16:30
+    - 06:15 час для занять
+    - 0:45 обід
+    - 0:30 загалом на дві перерви на каву
+  - Слухачі використовують власні інсталяції програмного забезпечення на своїх комп'ютерах
+    - Можуть використовувати віртуальні машини або хмарні ресурси на розсуд інструктора
+    - Але локально інстальоване програмне забезпечення на власному комп'ютері має залишатися варіантом
+  - Немає залежності від інших модулів Carpentry
+    - Зокрема, не вимагається знання роботи з командним рядком та системи контролю версій
+  - Використовується Jupyter Notebook
+    - Надійний інструмент, який використовують багато інструкторів
+    - Насправді альтернативи просто немає
     - І це означає, що навіть ті, хто вже трохи працював із Python, скоріше за все, дізнаються для себе щось нове
-- Motivating Example
+- Мотиваційний приклад
   - Створення двовимірних графіків, придатних для включення до наукових публікацій
   - Цікавий майже всім
-  - Makes lesson usable by both Carpentries
+  - Робить урок придатним для використання в обох програмах Carpentries (тобто Software Carpentry, Data Carpentry)
     - І це означає, що навіть ті, хто вже трохи працював із Python, скоріше за все, дізнаються для себе щось нове
 - Дані
-  - Use the gapminder data throughout
-  - But break into multiple files by continent
-    - To make display of output from examples tidier
-      (e.g., use Australia/New Zealand, which is only two lines)
-    - And allow examples showing use of multiple data sets
+  - Використовувати дані gapminder протягом усього уроку
+  - Але розділити на кілька файлів за континентами
+    - Щоб зробити виведення результатів з прикладів охайнішим (наприклад, використовувати Australia/New Zealand, що містять лише два рядки)
+    - Та показати приклади роботи з кількома наборами даних одночасно
 - Зробити фокус на Pandas замість NumPy
   - Зробити урок придатним до використання для Data Carpentry та Software Carpentry
-  - Genuine novices are likely to want data analysis
-  - And people with some prior experience:
+  - Абсолютні початківці, ймовірно, захочуть побачити приклад аналізу даних
+  - Водночас слухачі з деяким попереднім досвідом:
     - сприймуть аналіз даних як реальне завдання,
     - and are unlikely to have encountered Pandas,
       so they'll still get something useful out of the lesson
-- Challenges will mostly _not_ be "write this code from scratch"
-  - Want lots of short exercises that can reliably be finished in allotted time
+- Завдання здебільшого _не_ будуть вимагати "написати цей код з нуля"
+  - Бажано мати багато коротких вправ, які можна надійно закінчити за відведений час
   - So use MCQs, fill-in-the-blanks, Parsons Problems, "tweak this code", etc.
 
-## Stage 2: Desired Results
+## Етап 2: Бажані результати
 
-### Questions
+### Питання
 
-How do I...
+Як мені...
 
 - ...read tabular data?
 - ...plot a single vector of values?
