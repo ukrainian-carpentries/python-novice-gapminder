@@ -4,7 +4,7 @@ title: Дизайн уроку
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Help Wanted
+## Де потрібна допомога
 
 **We are filling in the exercises [below](#stage-3-learning-plan)
 in order to make the lesson plan more concrete.
@@ -13,13 +13,13 @@ and comments on specific exercises, ordering, and timings) are greatly appreciat
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Process Used
+## Процес розробки
 
 > Michael Pollan's advice if he taught R or Python programming:
 >
-> 1. Write code.
-> 2. Not too much.
-> 3. Mostly plots.
+> 1. Пишіть код.
+> 2. Не надто багато.
+> 3. Переважно для побудови графіків.
 >
 > — [Michael Koontz](https://twitter.com/_mikoontz/status/758021742078025728)
 > {: .quotation}
