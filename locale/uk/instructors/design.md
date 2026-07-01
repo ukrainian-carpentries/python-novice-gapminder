@@ -23,7 +23,7 @@ title: Дизайн уроку
 > {: .quotation}
 
 Урок розроблено за скороченою версією методу "Розуміння за дизайном".
-The main sections are:
+Основні етапи:
 
 1. Припущення щодо аудиторії, часу тощо.
    (Поточні нотатки також містять певні висновки та рішення в цьому розділі — їх слід переробити.)
@@ -67,8 +67,7 @@ The main sections are:
   - Абсолютні початківці, ймовірно, захочуть побачити приклад аналізу даних
   - Водночас слухачі з деяким попереднім досвідом:
     - сприймуть аналіз даних як реальне завдання,
-    - and are unlikely to have encountered Pandas,
-      so they'll still get something useful out of the lesson
+    - та, швидше за все, ще не працювали з Pandas, тому урок буде все одно для них корисним
 - Завдання здебільшого _не_ будуть вимагати "написати цей код з нуля"
   - Бажано мати багато коротких вправ, які можна надійно закінчити за відведений час
   - Тому використовуємо питання з множинним вибором, заповнення пропусків, проблеми Парсонса, "змініть цей код" тощо.
@@ -79,31 +78,31 @@ The main sections are:
 
 Як мені...
 
-- ...read tabular data?
-- ...plot a single vector of values?
-- ...create a time series plot?
-- ...create one plot for each of several data sets?
-- ...get extra data from a single data set for plotting?
-- ...write programs I can read and re-use in future?
+- ...читати табличні дані?
+- ...побудувати графік одного набору значень?
+- ...створити графік часового ряду?
+- ...створити окремий графік для кожного набору даних?
+- ...отримати з набору даних додаткові дані для побудови графіку?
+- ...писати зрозумілі програми, якими можна скористатися пізніше?
 
-### Skills
+### Навички
 
-I can...
+Я зможу...
 
-- ...write short scripts using loops and conditionals.
-- ...write functions with a fixed number of parameters that return a single result.
-- ...import libraries using aliases and refer to those libraries' contents.
-- ...do simple data extraction and formatting using Pandas.
+- ...писати короткі скрипти з використанням циклів та умовних операторів.
+- ...писати функції з фіксованою кількістю параметрів, які повертають єдиний результат.
+- ...імпортувати бібліотеки з використанням псевдонімів та звертатися до їхнього вмісту.
+- ...читати та форматувати дані за допомогою Pandas.
 
-### Concepts
+### Визначення
 
-I know...
+Я дізнаюся...
 
-- ...that a program is a piece of lab equipment that implements an analysis
-  - Needs to be validated/calibrated before/during use
-  - Makes analysis reproducible, reviewable, shareable
-- ...that programs are written for people, not for computers
-  - Meaningful variable names
+- ...що програма - це частина лабораторного обладнання, яке виконує аналіз
+  - Програму потрібно перевіряти/налагоджувати перед/під час використання
+  - Програма робить аналіз відтворюваним, придатним для перегляду та поширення
+- ...що програми пишуться для людей, а не для комп'ютерів
+  - Інформативні імена змінних
   - Modularity for readability as well as re-use
   - No duplication
   - Document purpose and use
