@@ -354,8 +354,9 @@
       <div class="accordion-body">
         <ul><li><a href="#%D1%81%D1%82%D0%B8%D0%BB%D1%8C-%D0%BA%D0%BE%D0%B4%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F">Стиль кодування</a></li>
 <li><a href="#%D0%B4%D0%BE%D1%82%D1%80%D0%B8%D0%BC%D1%83%D0%B9%D1%82%D0%B5%D1%81%D1%8F-%D1%81%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%D0%BD%D0%BE%D0%B3%D0%BE-%D1%81%D1%82%D0%B8%D0%BB%D1%8E-python-%D1%83-%D1%81%D0%B2%D0%BE%D1%94%D0%BC%D1%83-%D0%BA%D0%BE%D0%B4%D1%96.">Дотримуйтеся стандартного стилю Python у своєму коді.</a></li>
-<li><a href="#use-assertions-to-check-for-internal-errors.">Use assertions to check for internal errors.</a></li>
-<li><a href="#use-docstrings-to-provide-builtin-help.">Use docstrings to provide builtin help.</a></li>
+<li><a href="#%D0%B7%D0%B0%D1%81%D1%82%D0%BE%D1%81%D0%BE%D0%B2%D1%83%D0%B9%D1%82%D0%B5-%D1%82%D0%B2%D0%B5%D1%80%D0%B4%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B4%D0%BB%D1%8F-%D0%B2%D0%B8%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B2%D0%BD%D1%83%D1%82%D1%80%D1%96%D1%88%D0%BD%D1%96%D1%85-%D0%BF%D0%BE%D0%BC%D0%B8%D0%BB%D0%BE%D0%BA.">Застосовуйте твердження для виявлення внутрішніх помилок.</a></li>
+<li><a href="#%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D0%B9%D1%82%D0%B5-%D1%80%D1%8F%D0%B4%D0%BA%D0%B8-%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D1%96%D1%97-docstrings-%D0%B4%D0%BB%D1%8F-%D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B2%D0%B1%D1%83%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%BE%D1%97-%D0%B4%D0%BE%D0%B2%D1%96%D0%B4%D0%BA%D0%B8.">Використовуйте рядки документації (docstrings) для створення
+вбудованої довідки.</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -438,7 +439,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Стиль програмування</h1>
-        <p>Останнє оновлення 2026-06-19 |
+        <p>Останнє оновлення 2026-07-01 |
 
         <a href="https://github.com/ukrainian-carpentries/python-novice-gapminder/edit/main/episodes/18-style.md" class="external-link">Редагувати цю сторінку <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -459,7 +460,8 @@
 <h3 class="card-title">Питання</h3>
 <ul><li>Як я можу зробити свої програми більш читабельними?</li>
 <li>Як більшість програмістів форматують свій код?</li>
-<li>How can programs check their own operation?</li>
+<li>Яким чином програми можуть самостійно перевіряти, що вони працюють
+правильно?</li>
 </ul></div>
 </div>
 </div>
@@ -470,52 +472,54 @@
 <ul><li>Дотримуйтесь основних правил стилю кодування.</li>
 <li>Виконуйте рефакторинг односторінкових програм, щоб зробити їх більш
 читабельними та обґрунтувати зміни.</li>
-<li>Use Python community coding standards (PEP-8).</li>
+<li>Дотримуйтесь стандартів кодування, прийнятих у спільноті
+користувачів Python (PEP-8).</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
 <section><h2 class="section-heading" id="стиль-кодування">Стиль кодування<a class="anchor" aria-label="anchor" href="#%D1%81%D1%82%D0%B8%D0%BB%D1%8C-%D0%BA%D0%BE%D0%B4%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F"></a></h2>
-<hr class="half-width"><p>A consistent coding style helps others (including our future selves)
-read and understand code more easily. Code is read much more often than
-it is written, and as the <a href="https://www.python.org/dev/peps/pep-0020" class="external-link">Zen of Python</a>
-states, “Readability counts”. Python proposed a standard style through
-one of its first Python Enhancement Proposals (PEP), <a href="https://www.python.org/dev/peps/pep-0008" class="external-link">PEP8</a>.</p>
-<p>Some points worth highlighting:</p>
-<ul><li>document your code and ensure that assumptions, internal algorithms,
-expected inputs, expected outputs, etc., are clear</li>
-<li>use clear, semantically meaningful variable names</li>
-<li>use white-space, <em>not</em> tabs, to indent lines (tabs can cause
-problems across different text editors, operating systems, and version
-control systems)</li>
+<hr class="half-width"><p>Дотримання послідовного стилю кодування сприяє кращому розумінню коду
+іншими особами (зокрема нами самими в майбутньому). Код читається
+набагато частіше, ніж пишеться, і, як стверджує <a href="https://www.python.org/dev/peps/pep-0020" class="external-link">Дзен Python</a>,
+“читабельність має значення”. Стандартний стиль для Python було
+запропоновано в одному з перших документів PEP (Python Enhancement
+Proposal), <a href="https://www.python.org/dev/peps/pep-0008" class="external-link">PEP8</a>.</p>
+<p>Варто відзначити такі моменти:</p>
+<ul><li>документуйте ваш код, чітко зазначаючи припущення, внутрішні
+алгоритми, очікувані вхідні та вихідні дані тощо</li>
+<li>використовуйте зрозумілі, змістовні назви змінних</li>
+<li>для відступів використовуйте пробіли, а <em>не табуляцію</em>
+(табуляція може призводити до проблем у різних текстових редакторах,
+операційних системах і системах контролю версій)</li>
 </ul></section><section><h2 class="section-heading" id="дотримуйтеся-стандартного-стилю-python-у-своєму-коді-">Дотримуйтеся стандартного стилю Python у своєму коді.<a class="anchor" aria-label="anchor" href="#%D0%B4%D0%BE%D1%82%D1%80%D0%B8%D0%BC%D1%83%D0%B9%D1%82%D0%B5%D1%81%D1%8F-%D1%81%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%D0%BD%D0%BE%D0%B3%D0%BE-%D1%81%D1%82%D0%B8%D0%BB%D1%8E-python-%D1%83-%D1%81%D0%B2%D0%BE%D1%94%D0%BC%D1%83-%D0%BA%D0%BE%D0%B4%D1%96-"></a></h2>
 <hr class="half-width"><ul><li>
-<a href="https://www.python.org/dev/peps/pep-0008" class="external-link">PEP8</a>: a style
-guide for Python that discusses topics such as how to name variables,
-how to indent your code, how to structure your <code>import</code>
-statements, etc. Adhering to PEP8 makes it easier for other Python
-developers to read and understand your code, and to understand what
-their contributions should look like.</li>
-<li>To check your code for compliance with PEP8, you can use the <a href="https://pypi.org/project/pycodestyle/" class="external-link">pycodestyle application</a>
-and tools like the <a href="https://github.com/psf/black" class="external-link">black code
-formatter</a> can automatically format your code to conform to PEP8 and
-pycodestyle (a Jupyter notebook formatter also exists <a href="https://github.com/dnanhkhoa/nb_black" class="external-link">nb_black</a>).</li>
-<li>Some groups and organizations follow different style guidelines
-besides PEP8. For example, the <a href="https://google.github.io/styleguide/pyguide.html" class="external-link">Google style
-guide on Python</a> makes slightly different recommendations. Google
-wrote an application that can help you format your code in either their
-style or PEP8 called <a href="https://github.com/google/yapf/" class="external-link">yapf</a>.</li>
-<li>With respect to coding style, the key is <em>consistency</em>.
-Choose a style for your project be it PEP8, the Google style, or
-something else and do your best to ensure that you and anyone else you
-are collaborating with sticks to it. Consistency within a project is
-often more impactful than the particular style used. A consistent style
-will make your software easier to read and understand for others and for
-your future self.</li>
-</ul></section><section><h2 class="section-heading" id="use-assertions-to-check-for-internal-errors-">Use assertions to check for internal errors.<a class="anchor" aria-label="anchor" href="#use-assertions-to-check-for-internal-errors-"></a></h2>
-<hr class="half-width"><p>Assertions are a simple but powerful method for making sure that the
-context in which your code is executing is as you expect.</p>
+<a href="https://www.python.%20rg/dev/peps/pep-0008" class="external-link">PEP8</a>:
+рекомендації зі стилю Python, що описують такі аспекти, як назви
+змінних, відступи в коді, структуру операторів <code>import</code> тощо.
+Дотримання стандарту PEP8 сприяє кращому розумінню коду іншими
+розробниками Python, а також розумінню того, яким має бути формат
+їхнього внеску.</li>
+<li>Щоб перевірити свій код на відповідність PEP8, можна використовувати
+[застосунок pycodestyle](<a href="https://pypi.org/project/pycodestyle/" class="external-link uri">https://pypi.org/project/pycodestyle/</a>, який повідомляє
+про порушення стилю. Такі інструменти, як <a href="https://github.com/psf/black" class="external-link">black code formatter</a>, можуть
+автоматично виправити форматування коду відповідно до PEP8 (для Jupyter
+notebook існує <a href="https://github.com/dnanhkhoa/nb_black" class="external-link">nb_black</a>).</li>
+<li>Деякі групи та організації застосовують інші стандарти стилю,
+відмінні від PEP8. Наприклад, <a href="https://google.github.io/styleguide/pyguide.html" class="external-link">настанови Google
+зі стилю Python</a> містять дещо інші рекомендації. Google створила
+застосунок під назвою <a href="https://github.com/google/yapf/" class="external-link">yapf</a>, який може допомогти вам
+форматувати код відповідно до стилю Google або PEP8.</li>
+<li>Щодо стилю кодування, ключовим фактором є <em>послідовність</em>.
+Оберіть стиль для свого проєкту (PEP8, стиль Google або інший) і
+подбайте про те, щоб ви та інші учасники команди дотримувалися його.
+Послідовність у проєкті зазвичай впливає сильніше, ніж вибір конкретного
+стилю. Послідовний стиль полегшує читання та розуміння коду іншими
+розробниками, а також вами самими в майбутньому.</li>
+</ul></section><section><h2 class="section-heading" id="застосовуйте-твердження-для-виявлення-внутрішніх-помилок-">Застосовуйте твердження для виявлення внутрішніх помилок.<a class="anchor" aria-label="anchor" href="#%D0%B7%D0%B0%D1%81%D1%82%D0%BE%D1%81%D0%BE%D0%B2%D1%83%D0%B9%D1%82%D0%B5-%D1%82%D0%B2%D0%B5%D1%80%D0%B4%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B4%D0%BB%D1%8F-%D0%B2%D0%B8%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B2%D0%BD%D1%83%D1%82%D1%80%D1%96%D1%88%D0%BD%D1%96%D1%85-%D0%BF%D0%BE%D0%BC%D0%B8%D0%BB%D0%BE%D0%BA-"></a></h2>
+<hr class="half-width"><p>Твердження (assertions) — простий, але дієвий спосіб переконатися, що
+контекст виконання коду відповідає вашим очікуванням.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -524,23 +528,25 @@ context in which your code is executing is as you expect.</p>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a>    <span class="cf">assert</span> volume <span class="op">&gt;</span> <span class="dv">0</span></span>
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a>    <span class="cf">return</span> mass <span class="op">/</span> volume</span></code></pre>
 </div>
-<p>If the assertion is <code>False</code>, the Python interpreter raises
-an <code>AssertionError</code> runtime exception. The source code for
-the expression that failed will be displayed as part of the error
-message. To ignore assertions in your code run the interpreter with the
-‘-O’ (optimize) switch. Assertions should contain only simple checks and
-never change the state of the program. For example, an assertion should
-never contain an assignment.</p>
-</section><section><h2 class="section-heading" id="use-docstrings-to-provide-builtin-help-">Use docstrings to provide builtin help.<a class="anchor" aria-label="anchor" href="#use-docstrings-to-provide-builtin-help-"></a></h2>
-<hr class="half-width"><p>If the first thing in a function is a character string that is not
-assigned directly to a variable, Python attaches it to the function,
-accessible via the builtin help function. This string that provides
-documentation is also known as a <em>docstring</em>.</p>
+<p>Якщо твердження має значення <code>False</code>, інтерпретатор Python
+викличе виняток <code>AssertionError</code> під час виконання програми.
+Вихідний код виразу, що спричинив помилку, виводиться як частина
+повідомлення про помилку. Щоб ігнорувати твердження у вашому коді,
+запустіть інтерпретатор з опцією ‘-O’ (оптимізація). Твердження повинні
+містити лише прості перевірки та ніколи не змінювати стан програми.
+Наприклад, твердження ніколи не повинне містити присвоєння.</p>
+</section><section><h2 class="section-heading" id="використовуйте-рядки-документації-docstrings-для-створення-вбудованої-довідки-">Використовуйте рядки документації (docstrings) для створення
+вбудованої довідки.<a class="anchor" aria-label="anchor" href="#%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D0%B9%D1%82%D0%B5-%D1%80%D1%8F%D0%B4%D0%BA%D0%B8-%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D1%96%D1%97-docstrings-%D0%B4%D0%BB%D1%8F-%D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B5%D0%BD%D0%BD%D1%8F-%D0%B2%D0%B1%D1%83%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%BE%D1%97-%D0%B4%D0%BE%D0%B2%D1%96%D0%B4%D0%BA%D0%B8-"></a></h2>
+<hr class="half-width"><p>У випадку, коли першим елементом тіла функції є рядок символів, який
+не присвоєно жодній змінній, Python автоматично прив’язує його до
+функції у вигляді атрибута. Цей атрибут стає доступним за допомогою
+вбудованої функції <code>help</code>. Цей рядок, що забезпечує
+документацію, також відомий як <em>docstring</em>.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="kw">def</span> average(values):</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a>    <span class="co">"Return average of values, or None if no values are supplied."</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a>    <span class="co">"Повертає середнє значення або None, якщо значення не надано."</span></span>
 <span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a></span>
 <span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a>    <span class="cf">if</span> <span class="bu">len</span>(values) <span class="op">==</span> <span class="dv">0</span>:</span>
 <span id="cb2-5"><a href="#cb2-5" tabindex="-1" aria-label="code-block-2-5"></a>        <span class="cf">return</span> <span class="va">None</span></span>
@@ -554,88 +560,91 @@ documentation is also known as a <em>docstring</em>.</p>
 <pre class="output" tabindex="0"><code>Help on function average in module __main__:
 
 average(values)
-    Return average of values, or None if no values are supplied.</code></pre>
+    Повертає середнє значення або None, якщо значення не надано.</code></pre>
 </div>
-<div id="multiline-strings" class="callout">
+<div id="багаторядкові-рядки" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Примітка</span>
-<div id="multiline-strings" class="callout-inner">
-<h3 class="callout-title">Multiline Strings</h3>
+<div id="багаторядкові-рядки" class="callout-inner">
+<h3 class="callout-title">Багаторядкові рядки</h3>
 <div class="callout-content">
-<p>Often use <em>multiline strings</em> for documentation. These start
-and end with three quote characters (either single or double) and end
-with three matching characters.</p>
+<p>Часто для документації використовуються <em>багаторядкові рядки</em>.
+Такі рядки починаються трьома символами лапок (одинарними чи подвійними)
+та закінчуються трьома відповідними символами.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="co">"""This string spans</span></span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a><span class="co">multiple lines.</span></span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="co">"""Цей рядок охоплює</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a><span class="co">кілька рядків.</span></span>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a></span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a><span class="co">Blank lines are allowed."""</span></span></code></pre>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a><span class="co">Порожні рядки дозволені."""</span></span></code></pre>
 </div>
 </div>
 </div>
 </div>
-<div id="what-will-be-shown" class="callout discussion">
+<div id="що-буде-показано" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <span class="callout-header">Обговорення</span>
-<div id="what-will-be-shown" class="callout-inner">
-<h3 class="callout-title">What Will Be Shown?</h3>
+<div id="що-буде-показано" class="callout-inner">
+<h3 class="callout-title">Що буде показано?</h3>
 <div class="callout-content">
-<p>Highlight the lines in the code below that will be available as
-online help. Are there lines that should be made available, but won’t
-be? Will any lines produce a syntax error or a runtime error?</p>
+<p>Виділіть в коді нижче рядки, які будуть доступні як онлайн-довідка.
+Чи є рядки, які мають бути доступні, але не будуть зображатися? Чи
+призведе якийсь із рядків до синтаксичної помилки або помилки
+виконання?</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="co">"Find maximum edit distance between multiple sequences."</span></span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a><span class="co"># This finds the maximum distance between all sequences.</span></span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="co">"Знаходить максимальну відстань редагування між кількома послідовностями."</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a><span class="co"># Знаходить максимальну відстань між усіма послідовностями.</span></span>
 <span id="cb5-3"><a href="#cb5-3" tabindex="-1" aria-label="code-block-5-3"></a></span>
 <span id="cb5-4"><a href="#cb5-4" tabindex="-1" aria-label="code-block-5-4"></a><span class="kw">def</span> overall_max(sequences):</span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1" aria-label="code-block-5-5"></a>    <span class="co">'''Determine overall maximum edit distance.'''</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1" aria-label="code-block-5-5"></a>    <span class="co">'''Визначає загальну максимальну відстань редагування.'''</span></span>
 <span id="cb5-6"><a href="#cb5-6" tabindex="-1" aria-label="code-block-5-6"></a></span>
 <span id="cb5-7"><a href="#cb5-7" tabindex="-1" aria-label="code-block-5-7"></a>    highest <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb5-8"><a href="#cb5-8" tabindex="-1" aria-label="code-block-5-8"></a>    <span class="cf">for</span> left <span class="kw">in</span> sequences:</span>
 <span id="cb5-9"><a href="#cb5-9" tabindex="-1" aria-label="code-block-5-9"></a>        <span class="cf">for</span> right <span class="kw">in</span> sequences:</span>
-<span id="cb5-10"><a href="#cb5-10" tabindex="-1" aria-label="code-block-5-10"></a>            <span class="co">'''Avoid checking sequence against itself.'''</span></span>
-<span id="cb5-11"><a href="#cb5-11" tabindex="-1" aria-label="code-block-5-11"></a>            <span class="cf">if</span> left <span class="op">!=</span> right:</span>
-<span id="cb5-12"><a href="#cb5-12" tabindex="-1" aria-label="code-block-5-12"></a>                this <span class="op">=</span> edit_distance(left, right)</span>
-<span id="cb5-13"><a href="#cb5-13" tabindex="-1" aria-label="code-block-5-13"></a>                highest <span class="op">=</span> <span class="bu">max</span>(highest, this)</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1" aria-label="code-block-5-10"></a>            <span class="co">'''Уникаємо порівняння послідовності із самою собою.''</span></span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1" aria-label="code-block-5-11"></a><span class="co">            if left != right:</span></span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1" aria-label="code-block-5-12"></a><span class="co">                this = edit_distance(left, right)</span></span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1" aria-label="code-block-5-13"></a><span class="co">                highest = max(highest, this)</span></span>
 <span id="cb5-14"><a href="#cb5-14" tabindex="-1" aria-label="code-block-5-14"></a></span>
-<span id="cb5-15"><a href="#cb5-15" tabindex="-1" aria-label="code-block-5-15"></a>    <span class="co"># Report.</span></span>
-<span id="cb5-16"><a href="#cb5-16" tabindex="-1" aria-label="code-block-5-16"></a>    <span class="cf">return</span> highest</span></code></pre>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1" aria-label="code-block-5-15"></a><span class="co">    # Повертаємо результат.</span></span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1" aria-label="code-block-5-16"></a><span class="co">    return highest</span></span></code></pre>
 </div>
 </div>
 </div>
 </div>
-<div id="document-this" class="callout challenge">
+<div id="створюємо-документацію" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Вправа</span>
-<div id="document-this" class="callout-inner">
-<h3 class="callout-title">Document This</h3>
+<div id="створюємо-документацію" class="callout-inner">
+<h3 class="callout-title">Створюємо документацію</h3>
 <div class="callout-content">
-<p>Use comments to describe and help others understand potentially
-unintuitive sections or individual lines of code. They are especially
-useful to whoever may need to understand and edit your code in the
-future, including yourself.</p>
-<p>Use docstrings to document the acceptable inputs and expected outputs
-of a method or class, its purpose, assumptions and intended behavior.
-Docstrings are displayed when a user invokes the builtin
-<code>help</code> method on your method or class.</p>
-<p>Turn the comment in the following function into a docstring and check
-that <code>help</code> displays it properly.</p>
+<p>Застосовуйте коментарі для опису та пояснення розділів коду або
+окремих рядків, що можуть бути неінтуїтивно зрозумілими для інших. Вони
+є особливо корисними для будь-кого, хто матиме потребу зрозуміти та
+відредагувати ваш код у майбутньому, зокрема для вас самих.</p>
+<p>Застосовуйте рядки документації для опису допустимих вхідних даних та
+очікуваних вихідних даних методу чи класу, а також їхнього призначення,
+припущень і передбачуваної поведінки. Рядки документації зображаються,
+коли користувач викликає вбудований метод <code>help</code> для вашого
+методу або класу.</p>
+<p>Перетворіть коментар у наступній функції на рядок документації та
+переконайтеся, що команда <code>help</code> правильно його
+відображає.</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="kw">def</span> middle(a, b, c):</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a>    <span class="co"># Return the middle value of three.</span></span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a>    <span class="co"># Assumes the values can actually be compared.</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a>    <span class="co"># Повертає середнє значення для трьох величин.</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a>    <span class="co"># Передбачається, що значення можна порівняти.</span></span>
 <span id="cb6-4"><a href="#cb6-4" tabindex="-1" aria-label="code-block-6-4"></a>    values <span class="op">=</span> [a, b, c]</span>
 <span id="cb6-5"><a href="#cb6-5" tabindex="-1" aria-label="code-block-6-5"></a>    values.sort()</span>
 <span id="cb6-6"><a href="#cb6-6" tabindex="-1" aria-label="code-block-6-6"></a>    <span class="cf">return</span> values[<span class="dv">1</span>]</span></code></pre>
@@ -646,7 +655,9 @@ that <code>help</code> displays it properly.</p>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Показати відповідь </h4>
+  <h4 class="accordion-header" id="headingSolution1">
+  Відповідь
+  </h4>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
@@ -654,8 +665,8 @@ that <code>help</code> displays it properly.</p>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="kw">def</span> middle(a, b, c):</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a>    <span class="co">'''Return the middle value of three.</span></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1" aria-label="code-block-7-3"></a><span class="co">    Assumes the values can actually be compared.'''</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a>    <span class="co">'''Повертає середнє значення для трьох величин.</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1" aria-label="code-block-7-3"></a><span class="co">    Передбачається, що значення можна порівняти.'''</span></span>
 <span id="cb7-4"><a href="#cb7-4" tabindex="-1" aria-label="code-block-7-4"></a>    values <span class="op">=</span> [a, b, c]</span>
 <span id="cb7-5"><a href="#cb7-5" tabindex="-1" aria-label="code-block-7-5"></a>    values.sort()</span>
 <span id="cb7-6"><a href="#cb7-6" tabindex="-1" aria-label="code-block-7-6"></a>    <span class="cf">return</span> values[<span class="dv">1</span>]</span></code></pre>
@@ -664,20 +675,22 @@ that <code>help</code> displays it properly.</p>
 </div>
 </div>
 </div>
-<div id="clean-up-this-code" class="callout challenge">
+<div id="зробіть-цей-код-більш-зрозумілим" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Вправа</span>
-<div id="clean-up-this-code" class="callout-inner">
-<h3 class="callout-title">Clean Up This Code</h3>
+<div id="зробіть-цей-код-більш-зрозумілим" class="callout-inner">
+<h3 class="callout-title">Зробіть цей код більш зрозумілим</h3>
 <div class="callout-content">
-<ol style="list-style-type: decimal"><li>Read this short program and try to predict what it does.</li>
-<li>Run it: how accurate was your prediction?</li>
-<li>Refactor the program to make it more readable. Remember to run it
-after each change to ensure its behavior hasn’t changed.</li>
-<li>Compare your rewrite with your neighbor’s. What did you do the same?
-What did you do differently, and why?</li>
+<ol style="list-style-type: decimal"><li>Прочитайте цю коротку програму та спробуйте передбачити, що вона
+робить.</li>
+<li>Запустіть її: наскільки точним було ваше передбачення?</li>
+<li>Переробіть програму, щоб зробити її більш читабельною. Не забувайте
+запускати її після кожної зміни, щоб переконатися, що її поведінка не
+змінилася.</li>
+<li>Порівняйте свій код з результатом когось іншого. Що ви зробили так
+само? Що ви зробили інакше і чому?</li>
 </ol><div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -703,36 +716,38 @@ What did you do differently, and why?</li>
 <div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Показати відповідь </h4>
+  <h4 class="accordion-header" id="headingSolution2">
+  Відповідь
+  </h4>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
-<p>Here’s one solution.</p>
+<p>Ось один з варіантів рішення.</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="kw">def</span> string_machine(input_string, iterations):</span>
 <span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a>    <span class="co">"""</span></span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1" aria-label="code-block-9-3"></a><span class="co">    Takes input_string and generates a new string with -'s and *'s</span></span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1" aria-label="code-block-9-4"></a><span class="co">    corresponding to characters that have identical adjacent characters</span></span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1" aria-label="code-block-9-5"></a><span class="co">    or not, respectively.  Iterates through this procedure with the resultant</span></span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1" aria-label="code-block-9-6"></a><span class="co">    strings for the supplied number of iterations.</span></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1" aria-label="code-block-9-3"></a><span class="co">    На вхід поступає input_string. Далі генерується новий рядок із символами "-" та "*",</span></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1" aria-label="code-block-9-4"></a><span class="co">    що відповідають символам, які мають або не мають ідентичні сусідні</span></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1" aria-label="code-block-9-5"></a><span class="co">    символи, відповідно. Ця процедура повторюється з отриманими рядками з</span></span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1" aria-label="code-block-9-6"></a><span class="co">    попереднього кроку задану кількість разів.</span></span>
 <span id="cb9-7"><a href="#cb9-7" tabindex="-1" aria-label="code-block-9-7"></a><span class="co">    """</span></span>
 <span id="cb9-8"><a href="#cb9-8" tabindex="-1" aria-label="code-block-9-8"></a>    <span class="bu">print</span>(input_string)</span>
 <span id="cb9-9"><a href="#cb9-9" tabindex="-1" aria-label="code-block-9-9"></a>    input_string_length <span class="op">=</span> <span class="bu">len</span>(input_string)</span>
 <span id="cb9-10"><a href="#cb9-10" tabindex="-1" aria-label="code-block-9-10"></a>    old <span class="op">=</span> input_string</span>
 <span id="cb9-11"><a href="#cb9-11" tabindex="-1" aria-label="code-block-9-11"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(iterations):</span>
 <span id="cb9-12"><a href="#cb9-12" tabindex="-1" aria-label="code-block-9-12"></a>        new <span class="op">=</span> <span class="st">''</span></span>
-<span id="cb9-13"><a href="#cb9-13" tabindex="-1" aria-label="code-block-9-13"></a>        <span class="co"># iterate through characters in previous string</span></span>
+<span id="cb9-13"><a href="#cb9-13" tabindex="-1" aria-label="code-block-9-13"></a>        <span class="co"># перебираються символи в рядку old.</span></span>
 <span id="cb9-14"><a href="#cb9-14" tabindex="-1" aria-label="code-block-9-14"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(input_string_length):</span>
 <span id="cb9-15"><a href="#cb9-15" tabindex="-1" aria-label="code-block-9-15"></a>            left <span class="op">=</span> j<span class="op">-</span><span class="dv">1</span></span>
-<span id="cb9-16"><a href="#cb9-16" tabindex="-1" aria-label="code-block-9-16"></a>            right <span class="op">=</span> (j<span class="op">+</span><span class="dv">1</span>) <span class="op">%</span> input_string_length  <span class="co"># ensure right index wraps around</span></span>
+<span id="cb9-16"><a href="#cb9-16" tabindex="-1" aria-label="code-block-9-16"></a>            right <span class="op">=</span> (j<span class="op">+</span><span class="dv">1</span>) <span class="op">%</span> input_string_length  <span class="co"># перший символ є суміжним для останнього</span></span>
 <span id="cb9-17"><a href="#cb9-17" tabindex="-1" aria-label="code-block-9-17"></a>            <span class="cf">if</span> old[left] <span class="op">==</span> old[right]:</span>
 <span id="cb9-18"><a href="#cb9-18" tabindex="-1" aria-label="code-block-9-18"></a>                new <span class="op">=</span> new <span class="op">+</span> <span class="st">'-'</span></span>
 <span id="cb9-19"><a href="#cb9-19" tabindex="-1" aria-label="code-block-9-19"></a>            <span class="cf">else</span>:</span>
 <span id="cb9-20"><a href="#cb9-20" tabindex="-1" aria-label="code-block-9-20"></a>                new <span class="op">=</span> new <span class="op">+</span> <span class="st">'*'</span></span>
 <span id="cb9-21"><a href="#cb9-21" tabindex="-1" aria-label="code-block-9-21"></a>        <span class="bu">print</span>(new)</span>
-<span id="cb9-22"><a href="#cb9-22" tabindex="-1" aria-label="code-block-9-22"></a>        <span class="co"># store new string as old</span></span>
+<span id="cb9-22"><a href="#cb9-22" tabindex="-1" aria-label="code-block-9-22"></a>        <span class="co"># Рядок new зберігається як old</span></span>
 <span id="cb9-23"><a href="#cb9-23" tabindex="-1" aria-label="code-block-9-23"></a>        old <span class="op">=</span> new     </span>
 <span id="cb9-24"><a href="#cb9-24" tabindex="-1" aria-label="code-block-9-24"></a></span>
 <span id="cb9-25"><a href="#cb9-25" tabindex="-1" aria-label="code-block-9-25"></a>string_machine(<span class="st">'et cetera'</span>, <span class="dv">10</span>)</span></code></pre>
@@ -763,8 +778,8 @@ What did you do differently, and why?</li>
 <span class="callout-header">Ключові моменти</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>Follow standard Python style in your code.</li>
-<li>Use docstrings to provide builtin help.</li>
+<ul><li>Дотримуйтеся стандартного стилю Python у своєму коді.</li>
+<li>Використовуйте рядки документів для надання вбудованої довідки.</li>
 </ul></div>
 </div>
 </div>
@@ -828,8 +843,8 @@ What did you do differently, and why?</li>
   "url": "https://ukrainian-carpentries.github.io/python-novice-gapminder/18-style.html",
   "identifier": "https://ukrainian-carpentries.github.io/python-novice-gapminder/18-style.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2026-06-19",
-  "datePublished": "2026-06-30"
+  "dateModified": "2026-07-01",
+  "datePublished": "2026-07-01"
 }
 
   </script><script>

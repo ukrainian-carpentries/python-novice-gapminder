@@ -416,7 +416,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Дизайн уроку</h1>
-        <p>Останнє оновлення 2026-06-18 |
+        <p>Останнє оновлення 2026-07-01 |
 
         <a href="https://github.com/ukrainian-carpentries/python-novice-gapminder/edit/main/instructors/design.md" class="external-link">Редагувати цю сторінку <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -430,110 +430,114 @@
 
         
 
-<div id="help-wanted" class="callout">
+<div id="де-потрібна-допомога" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Примітка</span>
-<div id="help-wanted" class="callout-inner">
-<h3 class="callout-title">Help Wanted</h3>
+<div id="де-потрібна-допомога" class="callout-inner">
+<h3 class="callout-title">Де потрібна допомога</h3>
 <div class="callout-content">
-<p><strong>We are filling in the exercises <a href="#stage-3-learning-plan">below</a> in order to make the lesson plan
-more concrete. Contributions (both in the form of pull requests with
-filled-in exercises, and comments on specific exercises, ordering, and
-timings) are greatly appreciated.</strong></p>
+<p><strong>Ми додаємо вправи <a href="#stage-3-learning-plan">нижче</a>
+для того, щоб план уроку був більш детальним. Будемо вдячні за
+пропозиції (як у вигляді нових готових вправ, так і у вигляді коментарів
+щодо конкретних вправ, їх порядку та часу виконання).</strong></p>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="process-used">Process Used<a class="anchor" aria-label="anchor" href="#process-used"></a></h2>
+<section><h2 class="section-heading" id="процес-розробки">Процес розробки<a class="anchor" aria-label="anchor" href="#%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81-%D1%80%D0%BE%D0%B7%D1%80%D0%BE%D0%B1%D0%BA%D0%B8"></a></h2>
 <hr class="half-width"><blockquote>
-<p>Michael Pollan’s advice if he taught R or Python programming:</p>
-<ol style="list-style-type: decimal"><li>Write code.</li>
-<li>Not too much.</li>
-<li>Mostly plots.</li>
+<p>Поради Майкла Поллана, якби він викладав програмування на R або
+Python:</p>
+<ol style="list-style-type: decimal"><li>Пишіть код.</li>
+<li>Не надто багато.</li>
+<li>Переважно для побудови графіків.</li>
 </ol><p>— <a href="https://twitter.com/_mikoontz/status/758021742078025728" class="external-link">Michael
 Koontz</a> {: .quotation}</p>
 </blockquote>
-<p>This lesson was developed using a slimmed-down variant of the
-“Understanding by Design” process. The main sections are:</p>
-<ol style="list-style-type: decimal"><li><p>Assumptions about audience, time, etc. (The current draft also
-includes some conclusions and decisions in this section - that should be
-refactored.)</p></li>
-<li><p>Desired results: overall goals, summative assessments at half-day
-granularity, what learners will be able to do, what learners will
-know.</p></li>
-<li><p>Learning plan: each episode has a heading that summarizes what
-will be covered, then estimates time that will be spent on teaching and
-on exercises, while the exercises are given as bullet points.</p></li>
-</ol></section><section><h2 class="section-heading" id="stage-1-assumptions">Stage 1: Assumptions<a class="anchor" aria-label="anchor" href="#stage-1-assumptions"></a></h2>
-<hr class="half-width"><ul><li>Audience
-<ul><li>Graduate students in numerate disciplines from cosmology to
-archaeology</li>
-<li>Who have manipulated data in spreadsheets and with interactive tools
-like SAS</li>
-<li>But have <em>not</em> programmed beyond CPD
-(copy-paste-despair)</li>
+<p>Урок розроблено за скороченою версією методу “Розуміння за дизайном”.
+The main sections are:</p>
+<ol style="list-style-type: decimal"><li><p>Припущення щодо аудиторії, часу тощо. (Поточні нотатки також
+містять певні висновки та рішення в цьому розділі — їх слід
+переробити.)</p></li>
+<li><p>Бажані результати: загальні цілі, підсумкові оцінювання кожні
+півдня викладання, що слухачі мають знати та вміти.</p></li>
+<li><p>Навчальний план: кожен епізод містить заголовок з узагальненням
+матеріалу, що буде розглянуто, оцінку часу на викладання та виконання
+вправ, а також перелік вправ у вигляді маркованого списку.</p></li>
+</ol></section><section><h2 class="section-heading" id="етап-1-припущення">Етап 1: Припущення<a class="anchor" aria-label="anchor" href="#%D0%B5%D1%82%D0%B0%D0%BF-1-%D0%BF%D1%80%D0%B8%D0%BF%D1%83%D1%89%D0%B5%D0%BD%D0%BD%D1%8F"></a></h2>
+<hr class="half-width"><ul><li>Аудиторія
+<ul><li>Аспіранти з різних наукових напрямків — від космології до
+археології</li>
+<li>Які у минулому обробляли дані в електронних таблицях, а також за
+допомогою інтерактивних інструментів, таких як SAS</li>
+<li>Але <em>не просунулися</em> далі CPD (copy-paste-despair /
+скопіював-вставив-впав в розпач)</li>
 </ul></li>
-<li>Constraints
-<ul><li>One full day 09:00-16:30
-<ul><li>06:15 class time</li>
-<li>0:45 lunch</li>
-<li>0:30 total for two coffee breaks</li>
+<li>Обмеження
+<ul><li>Один повний день 09:00-16:30
+<ul><li>06:15 час для занять</li>
+<li>0:45 обід</li>
+<li>0:30 загалом на дві перерви на каву</li>
 </ul></li>
-<li>Learners use native installs on their own machines
-<ul><li>May use VMs or cloud resources at instructor’s discretion</li>
-<li>But must keep native local install as an option</li>
+<li>Слухачі використовують власні інсталяції програмного забезпечення на
+своїх комп’ютерах
+<ul><li>Можуть використовувати віртуальні машини або хмарні ресурси на
+розсуд інструктора</li>
+<li>Але локально інстальоване програмне забезпечення на власному
+комп’ютері має залишатися варіантом</li>
 </ul></li>
-<li>No dependence on other Carpentry modules
-<ul><li>In particular, does not require knowledge of shell or version
-control</li>
+<li>Немає залежності від інших модулів Carpentry
+<ul><li>Зокрема, не вимагається знання роботи з командним рядком та системи
+контролю версій</li>
 </ul></li>
-<li>Use the Jupyter Notebook
-<ul><li>Authentic tool used by many instructors</li>
-<li>There isn’t really an alternative</li>
+<li>Використовується Jupyter Notebook
+<ul><li>Надійний інструмент, який використовують багато інструкторів</li>
+<li>Насправді альтернативи просто немає</li>
 <li>І це означає, що навіть ті, хто вже трохи працював із Python,
 скоріше за все, дізнаються для себе щось нове</li>
 </ul></li>
 </ul></li>
-<li>Motivating Example
+<li>Мотиваційний приклад
 <ul><li>Створення двовимірних графіків, придатних для включення до наукових
 публікацій</li>
 <li>Цікавий майже всім</li>
-<li>Makes lesson usable by both Carpentries
+<li>Робить урок придатним для використання в обох програмах Carpentries
+(тобто Software Carpentry, Data Carpentry)
 <ul><li>І це означає, що навіть ті, хто вже трохи працював із Python,
 скоріше за все, дізнаються для себе щось нове</li>
 </ul></li>
 </ul></li>
 <li>Дані
-<ul><li>Use the gapminder data throughout</li>
-<li>Але розділіть на кілька файлів за континентальною ознакою
-<ul><li>To make display of output from examples tidier (e.g., use
-Australia/New Zealand, which is only two lines)</li>
-<li>І дозволити приклади, що показують використання декількох наборів
-даних</li>
+<ul><li>Використовувати дані gapminder протягом усього уроку</li>
+<li>Але розділити на кілька файлів за континентами
+<ul><li>Щоб зробити виведення результатів з прикладів охайнішим (наприклад,
+використовувати Australia/New Zealand, що містять лише два рядки)</li>
+<li>Та показати приклади роботи з кількома наборами даних одночасно</li>
 </ul></li>
 </ul></li>
 <li>Зробити фокус на Pandas замість NumPy
 <ul><li>Зробити урок придатним до використання для Data Carpentry та
 Software Carpentry</li>
-<li>Genuine novices are likely to want data analysis</li>
-<li>And people with some prior experience:
+<li>Абсолютні початківці, ймовірно, захочуть побачити приклад аналізу
+даних</li>
+<li>Водночас слухачі з деяким попереднім досвідом:
 <ul><li>сприймуть аналіз даних як реальне завдання,</li>
-<li>і навряд чи стикалися з Pandas, тому вони все одно отримають щось
-корисне з уроку</li>
+<li>and are unlikely to have encountered Pandas, so they’ll still get
+something useful out of the lesson</li>
 </ul></li>
 </ul></li>
-<li>Challenges will mostly <em>not</em> be “write this code from
-scratch”
-<ul><li>Want lots of short exercises that can reliably be finished in
-allotted time</li>
-<li>So use MCQs, fill-in-the-blanks, Parsons Problems, “tweak this
-code”, etc.</li>
+<li>Завдання здебільшого <em>не</em> будуть вимагати “написати цей код з
+нуля”
+<ul><li>Бажано мати багато коротких вправ, які можна надійно закінчити за
+відведений час</li>
+<li>Тому використовуємо питання з множинним вибором, заповнення
+пропусків, проблеми Парсонса, “змініть цей код” тощо.</li>
 </ul></li>
-</ul></section><section><h2 class="section-heading" id="stage-2-desired-results">Stage 2: Desired Results<a class="anchor" aria-label="anchor" href="#stage-2-desired-results"></a></h2>
+</ul></section><section><h2 class="section-heading" id="етап-2-бажані-результати">Етап 2: Бажані результати<a class="anchor" aria-label="anchor" href="#%D0%B5%D1%82%D0%B0%D0%BF-2-%D0%B1%D0%B0%D0%B6%D0%B0%D0%BD%D1%96-%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%D0%B8"></a></h2>
 <hr class="half-width"><div class="section level3">
-<h3 id="questions">Questions<a class="anchor" aria-label="anchor" href="#questions"></a></h3>
-<p>How do I…</p>
+<h3 id="питання">Питання<a class="anchor" aria-label="anchor" href="#%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%BD%D1%8F"></a></h3>
+<p>Як мені…</p>
 <ul><li>…read tabular data?</li>
 <li>…plot a single vector of values?</li>
 <li>…create a time series plot?</li>
@@ -980,8 +984,8 @@ workshops, and help.</li>
   "url": "https://ukrainian-carpentries.github.io/python-novice-gapminder/instructor/design.html",
   "identifier": "https://ukrainian-carpentries.github.io/python-novice-gapminder/instructor/design.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2026-06-18",
-  "datePublished": "2026-06-30"
+  "dateModified": "2026-07-01",
+  "datePublished": "2026-07-01"
 }
 
   </script><script>
