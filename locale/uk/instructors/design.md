@@ -135,8 +135,8 @@ title: Дизайн уроку
   - Створіть та запустіть комірки Python у блокноті.
 - Завдання: 0 хв (враховується в навчальний час - без окремої вправи)
   - Створіть список у Markdown
-  - What is displayed when several expressions are put in a single cell?
-  - Change an existing cell from code to Markdown
+  - Що буде зображатися, якщо кілька виразів помістити в одну комірку?
+  - Змініть тип наявної комірки з коду на Markdown
   - Візуалізація рівнянь у LaTeX
 
 ### [Змінні та присвоєння](../episodes/02-variables.md) (9:15)
@@ -213,132 +213,128 @@ title: Дизайн уроку
 
 - Навчання: 15 хв.
   - Виберіть окремі значення з DataFrame Pandas.
-  - Select entire rows or entire columns from a dataframe.
+  - Виділіть цілі рядки або стовпці з датафрейму.
   - Виберіть підмножину рядків і стовпців із датафрейму за одну операцію.
   - Виберіть підмножину з датафрейму за єдиним булевим критерієм.
 - Завдання: 15 хв.
   - Напишіть вираз для визначення ВВП Сербії на душу населення у 2007 році.
-  - What rule governs what is (or isn't) included in numerical and named slices in Pandas?
+  - Яке правило регулює те, що входить (або не входить) до індексованих та іменованих зрізів у Pandas?
   - Що робить кожен рядок у наступній короткій програмі?
   - Що роблять `idxmin` та `idxmax`?
   - Напишіть вирази для отримання значення ВВП на душу населення для всіх країн у 1982 році,
     та для усіх країн _після_ 1985 тощо.
-  - Given the way its borders have changed since 1900,
-    what would you do if asked to create a table of GDP per capita for Poland
-    for the Twentieth Century?
+  - З огляду на зміни кордонів Польщі після 1900 року — як би ви створили таблицю ВВП на душу населення для Польщі за 20-е сторіччя?
 
 ### [Побудова графіків](../episodes/09-plotting.md) (11:45)
 
 - Навчання: 15 хв.
-  - Create a time series plot showing a single data set.
-  - Create a scatter plot showing relationship between two data sets.
+  - Створити графік часового ряду для одного набору даних.
+  - Створіть діаграму розсіювання, яка показує зв’язок між двома наборами даних.
 - Вправи: 15 хв.
-  - Fill in the blanks to plot the minimum GDP per capita over time for European countries.
-  - Modify the example to create a scatter plot of GDP per capita in Asian countries.
-  - Explain what each argument to `plot` does in the following example.
+  - Заповніть порожні поля, щоб побудувати графік мінімального ВВП на душу населення в європейських країнах.
+  - Змініть приклад так, щоб створити точкову діаграму ВВП на душу населення в країнах Азії.
+  - Поясніть, що робить кожен аргумент `plot` у наступному прикладі.
 
 ### [Перерва](../episodes/10-lunch.md) (12:15): 45 min
 
 ### [Списки](../episodes/11-lists.md) (13:00)
 
-- Teaching: 10 min
-  - Explain why programs need collections of values.
-  - Write programs that create flat lists, index them, slice them, and modify them through assignment and method calls.
-- Challenges: 10 min
-  - Fill in the blanks so that the program produces the output shown.
-  - How large are the following slices?
-  - What do negative index expressions print?
-  - What does a "stride" in a slice do?
-  - How do slices treat out-of-range bounds?
-  - What are the differences between sorting these two ways?
-  - What is the difference between `new = old` and `new = old[:]`?
+- Навчання: 10 хв.
+  - Поясніть, чому програмам потрібні набори значень.
+  - Напишіть програми, які створюють списки, індексують їх, а також розрізають і змінюють їх через присвоєння та виклик методів.
+- Завдання: 10 хв.
+  - Заповніть порожні поля, щоб програма повернула потрібні результати.
+  - Наскільки великими є наступні зрізи?
+  - Що повертають вирази з від’ємним індексом?
+  - Що робить "крок" у зрізі?
+  - Як зрізи реагують на індекси поза межами діапазону?
+  - Які відмінності між цими двома способами сортування?
+  - Яка різниця між `new = old` та `new = old[:]`?
 
 ### [Цикли](../episodes/12-for-loops.md) (13:20)
 
-- Teaching: 10 min
-  - Explain what for loops are normally used for.
-  - Trace the execution of a simple (unnested) loop and correctly state the values of variables in each iteration.
-  - Write for loops that use the Accumulator pattern to aggregate values.
-- Challenges: 15 min
-  - Is an indentation error a syntax error or a runtime error?
-  - Trace which lines of this program are executed in what order.
-  - Fill in the blanks in this program so that it reverses a string.
-  - Fill in the blanks in this series of examples to get practice accumulating values.
-  - Reorder and indent these lines to calculate the cumulative sum of the list values.
+- Навчання: 10 хв.
+  - Поясніть, для чого зазвичай використовуються цикли `for`.
+  - Проаналізуйте виконання простого (невкладеного) циклу та правильно вкажіть значення змінних у кожній ітерації.
+  - Напишіть цикли `for`, які використовують шаблон накопичення для отримання підсумкових значень.
+- Завдання: 15 хв.
+  - Чи є помилка відступу синтаксичною чи помилкою виконання?
+  - Простежте, в якому порядку виконуються рядки цієї програми.
+  - Заповніть пропуски в цій програмі, щоб вона розгорнула рядок у зворотному напрямку.
+  - Заповніть пропуски в цій серії прикладів, щоб навчитися накопичувати підсумкове значення.
+  - Змініть порядок і відступи в цих рядках, щоб обчислити кумулятивні суми значень списку.
 
-### [Looping Over Data Sets](13-looping-data-sets) (13:45)
+### [Перебір наборів даних](13-looping-data-sets) (13:45)
 
-- Teaching: 5 min
-  - Be able to read and write globbing expressions that match sets of files.
-  - Use glob to create lists of files.
-  - Write for loops to perform operations on files given their names in a list.
-- Challenges: 10 min
-  - Which filenames are _not_ matched by this glob expression?
-  - Modify this program so that it prints the number of records in the shortest file.
-  - Write a program that reads and plots all of the regional data sets.
+- Навчання: 5 хв.
+  - Навчіться читати та писати вирази, які відповідають наборам файлів, за допомогою модуля glob.
+  - Використовуйте модуль glob для створення списків файлів.
+  - Напишіть цикли `for` для виконання операцій над файлами, зазначеними в списку.
+- Завдання: 10 хв.
+  - Які імена файлів не відповідають цьому виразу модуля glob?
+  - Змініть цю програму так, щоб вона надрукувала кількість записів у найкоротшому файлі.
+  - Напишіть програму, яка відкриває всі регіональні файли даних і будує для них графіки.
 
-### [Writing Functions](14-writing-functions) (14:00)
+### [Написання функцій](14-writing-functions) (14:00)
 
-- Teaching: 10 min
-  - Explain and identify the difference between function definition and function call.
-  - Write a function that takes a small, fixed number of arguments and produces a single result.
-- Challenges: 15 min
-  - This code defines and calls a function - what does it print when run?
-  - Explain why this short program prints things in the order it does.
-  - Fill in the blanks to create a function that finds the minimum value in a data file.
-  - Fill in the blanks to create a function that finds the first negative value in a list.
-    What does your function do if the list is empty?
-  - Why is it sometimes useful to pass arguments by naming the corresponding parameters?
-  - Fill in the blanks and turn this short piece of code into a function.
+- Навчання: 10 хв.
+  - Знайдіть і поясніть різницю між визначенням функції та викликом функції.
+  - Напишіть функцію, що бере фіксовану кількість аргументів і повертає одне значення.
+- Завдання: 15 хв.
+  - Цей код визначає та викликає функцію. Подумайте, що вона друкує після її виклику?
+  - Поясніть, чому ця коротка програма повертає відповіді саме в такому порядку?
+  - Заповніть порожні поля, щоб створити функцію, яка знаходить мінімальне значення у файлі даних.
+  - Заповніть порожні поля, щоб створити функцію, яка знаходить перше від’ємне значення в списку.
+    Що робить ваша функція, якщо список порожній?
+  - Чому іноді корисно передавати аргументи із зазначенням імен відповідних параметрів?
+  - Заповніть пропуски та перетворіть цей короткий фрагмент коду на функцію.
 
-### [Variable Scope](15-scope) (14:25)
+### [Область видимості змінної](15-scope) (14:25)
 
-- Teaching: 10 min
-  - Identify local and global variables.
-  - Identify parameters as local variables.
-  - Read a traceback and determine the file, function, and line number on which the error occurred.
-- Challenges: 10 min
-  - Trace the changes to the values in this program,
-    being careful to distinguish local from global values.
+- Навчання: 10 хв.
+  - Визначить локальні та глобальні змінні.
+  - Розглядайте параметри як локальні змінні.
+  - Прочитайте повідомлення про помилку та визначте файл, функцію та номер рядка, у якому вона сталася.
+- Завдання: 10 хв.
+  - Відстежте зміни значень у цій програмі, чітко розрізняючи локальні та глобальні змінні.
 
-### [Coffee](16-coffee) (14:45): 15 min
+### [Кава](16-coffee) (14:45): 15 хв.
 
-### [Conditionals](17-conditionals) (15:00)
+### [Умовні оператори](17-conditionals) (15:00)
 
-- Teaching: 10 min
-  - Correctly write programs that use if and else statements and simple Boolean expressions (without logical operators).
-  - Trace the execution of unnested conditionals and conditionals inside loops.
-- Challenges: 15 min
-  - Trace the execution of this conditional statement.
-  - Fill in the blanks so that this function replaces negative values with zeroes.
-  - Modify this program so that it only processes files with fewer than 50 records.
-  - Modify this program so that it always finds the largest and smallest values in a list
-    no matter what the list's values are.
+- Навчання: 10 хв.
+  - Правильне написання програм, які використовують оператори `if` та `else`, а також прості булеві вирази (без логічних операторів).
+  - Відстеження виконання невкладених умовних операторів та умовних операторів усередині циклів.
+- Завдання: 15 хв.
+  - Простежте за виконанням цього умовного оператора.
+  - Заповніть пропуски, щоб функція замінювала всі від'ємні значення на нулі.
+  - Змініть цю програму так, щоб вона обробляла лише файли, які містять менше ніж 50 записів.
+  - Змініть цю програму так, щоб вона завжди знаходила найбільше та найменше значення в списку незалежно від його вигляду.
 
 ### [Стиль програмування](../episodes/18-style.md) (15:25)
 
-- Teaching: 15 min
-  - How can I make my programs more readable?
-  - How do most programmers format their code?
-  - How can programs check their own operation?
-- Challenges: 15 min
-  - Which lines in this code will be available as online help?
-  - Turn the comments in this program into docstrings.
-  - Rewrite this short program to be more readable.
+- Навчання: 15 хв.
+  - Як я можу зробити свої програми зрозумілішими для читання?
+  - Як більшість програмістів форматують свій код?
+  - Яким чином програми можуть самостійно перевіряти, що вони працюють правильно?
+- Завдання: 15 хв.
+  - Які рядки цього коду будуть доступні як онлайн-довідка?
+  - Перетворіть коментарі в цій програмі на рядки документації.
+  - Перепишіть цю коротку програму так, щоб її було легше читати.
 
 ### [Підведення підсумків](../episodes/19-wrap.md) (15:55)
 
-- Teaching: 20 min
-  - Name and locate scientific Python community sites for software, workshops, and help.
-- Challenges: 0 min
-  - None.
+- Навчання: 20 хв.
+  - Назвіть і знайдіть сайти наукової спільноти Python, присвячені програмному забезпеченню, семінарам і допомозі користувачам.
+- Завдання: 0 хв.
+  - Немає завдань.
 
-### [Feedback](../episodes/20-feedback.md) (16:15)
+### [Зворотний зв'язок](../episodes/20-feedback.md) (16:15)
 
-- Teaching: 0 min
-- Challenges: 15 min
-  - Collect feedback
+- Навчання: 0 хв.
+- Завдання: 15 хв.
+  - Збір та обробка відгуків
 
-### Finish (16:30)
+### Завершення (16:30)
 
 
