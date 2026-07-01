@@ -129,112 +129,110 @@ title: Дизайн уроку
 
 ### [Інтерактивний запуск і вихід з програми](../episodes/01-run-quit.md) (9:00)
 
-- Teaching: 15 min (because setup issues)
+- Навчання: 15 хв (з урахуванням проблем із налаштуванням)
   - Запустіть Jupyter Notebook, створіть новий документ та вийдіть із Jupyter Notebook.
-  - Create Markdown cells in a notebook.
-  - Create and run Python cells in a notebook.
-- Challenges: 0 min (accounted for in teaching time - no separate exercise)
-  - Creating lists in Markdown
+  - Створіть в блокноті комірки типу Markdown.
+  - Створіть та запустіть комірки Python у блокноті.
+- Завдання: 0 хв (враховується в навчальний час - без окремої вправи)
+  - Створіть список у Markdown
   - What is displayed when several expressions are put in a single cell?
   - Change an existing cell from code to Markdown
-  - Rendering LaTeX-style equations
+  - Візуалізація рівнянь у LaTeX
 
-### [Variables and Assignment](../episodes/02-variables.md) (9:15)
+### [Змінні та присвоєння](../episodes/02-variables.md) (9:15)
 
-- Teaching: 10 min
-  - Write programs that assign scalar values to variables and perform calculations with those values.
-  - Correctly trace value changes in programs that use scalar assignment.
-- Challenges: 10 min
-  - Trace execution of code swapping two values using an intermediate variable.
-  - Predict final values of variables after several assignments.
-  - What happens if you try to index a number?
-  - Which is a better variable name, `m`, `min`, or `minutes`?
-  - What do the following slice expressions produce?
+- Навчання: 10 хв.
+  - Напишіть програми, які присвоюють скалярні значення змінним і виконують обчислення з цими значеннями.
+  - Правильно відстежуйте значення змінних у програмах, які використовують скалярне присвоєння.
+- Завдання: 10 хв.
+  - Відстеження виконання коду, що міняє місцями два значення за допомогою проміжної змінної.
+  - Передбачення кінцевих значень змінних після виконання декількох присвоєнь.
+  - Що станеться, якщо спробувати звернутися до числа за індексом (а не до списку чи рядку)?
+  - Яке ім'я для змінної є кращим: `m`, `min` або `minutes`?
+  - Що повертають наступні вирази?
 
-### [Data Types and Type Conversion](../episodes/03-types-conversion.md) (09:35)
+### [Типи даних та їх перетворення](../episodes/03-types-conversion.md) (09:35)
 
-- Teaching: 10 min
-  - Explain key differences between integers and floating point numbers.
-  - Explain key differences between numbers and character strings.
-  - Use built-in functions to convert between integers, floating point numbers, and strings.
-- Challenges: 10 min
-  - What type of value is 3.4?
-  - What type of value is 3.25 + 4?
-  - What type of value would you use to represent:
-    - Number of days since the start of the year.
-    - Time elapsed since the start of the year.
-    - Etc.
-  - How can you use `//` (integer division) and `%` (modulo)?
-  - What does `int("3.4")` do?
-  - Given these float, int, and string values, which expressions will print a particular result?
-  - What do you expect `1+2j + 3` to produce?
+- Навчання: 10 хв.
+  - Поясніть, чим цілі числа відрізняються від чисел із плаваючою комою.
+  - Поясніть ключові відмінності між числами та символьними рядками.
+  - Використовуйте вбудовані функції для перетворень між цілими числами, числами з плаваючою комою та символьними рядками.
+- Завдання: 10 хв.
+  - Який тип має значення 3.4?
+  - Який тип має значення 3.25 + 4?
+  - Який тип значення ви б використали для представлення:
+    - Кількості днів, які пройшли з початку року.
+    - Часу, що минув з початку року.
+    - тощо.
+  - Як можна використовувати `//` (цілочисельне ділення) та `%` (залишок від ділення)?
+  - Що поверне функція `int("3.4")`?
+  - Для даних значень типу float, int та string, які з виразів повернуть певний результат?
+  - Що, на вашу думку, виведе вираз `1+2j + 3`?
 
-### [Built-in Functions and Help](../episodes/04-built-in.md) (09:55)
+### [Вбудовані функції та Довідка](../episodes/04-built-in.md) (09:55)
 
-- Teaching: 15 min
-  - Explain the purpose of functions.
-  - Correctly call built-in Python functions.
-  - Correctly nest calls to built-in functions.
-  - Use help to display documentation for built-in functions.
-  - Correctly describe situations in which SyntaxError and NameError occur.
-- Challenges: 10 min
-  - Explain the order of operations in the following complex expression.
-  - What will each nested combination of `min` and `max` calls produce?
-  - Why don't `max` and `min` return `None` when given no arguments?
-  - Given what we have seen so far,
-    what index expression will get the last character in a string?
+- Навчання: 15 хв.
+  - Пояснення призначення функцій.
+  - Правильний виклик вбудованих функцій Python.
+  - Правильні вкладені виклики вбудованих функцій.
+  - Використання довідки для зображення документації про вбудовані функції.
+  - Правильний опис ситуацій, в яких виникають помилки SyntaxError та NameError.
+- Завдання: 10 хв.
+  - Пояснення порядку операцій у певному складному виразі.
+  - Що поверне кожна вкладена комбінація функцій `min` та `max`?
+  - Чому `max` та `min` не повертають `None`, якщо їм не передано аргументів?
+  - Враховуючи те, що ми вже вивчили, який індексний вираз поверне останній символ у рядку?
 
 ### [Перерва на каву](../episodes/05-coffee.md): 15 min (10:20)
 
 ### [Бібліотеки](../episodes/06-libraries.md) (10:35)
 
-- Teaching: 10 min
-  - Explain what software libraries are and why programmers create and use them.
-  - Write programs that import and use libraries from Python's standard library.
-  - Find and read documentation for standard libraries interactively (in the interpreter) and online.
-- Challenges: 10 min
-  - Which function from the standard math library could you use to calculate a square root?
-  - What library would you use to select a random value from data?
-  - If `help(math)` produces an error, what have you forgotten to do?
-  - Fill in the blanks in code below so that the import statement and program run.
+- Навчання: 10 хв.
+  - Поясніть, що таке бібліотека та для чого програмісти їх створюють і використовують.
+  - Пишіть програми, які імпортують і використовують стандартні бібліотеки Python.
+  - Знаходьте та читайте документацію про стандартні бібліотеки в інтерактивному режимі (в інтерпретаторі) та онлайн.
+- Завдання: 10 хв.
+  - Яку функцію зі стандартної математичної бібліотеки можна використати для обчислення квадратного кореня?
+  - Яка бібліотека підходить для вибору випадкового значення з набору даних?
+  - Якщо `help(math)` видає помилку, що ви забули зробити?
+  - Заповніть пропуски в коді нижче, щоб імпорт та програма в цілому запрацювали.
 
 ### [Читання табличних данних](../episodes/07-reading-tabular.md) (10:55)
 
-- Teaching: 10 min
-  - Import the Pandas library.
-  - Use Pandas to load a simple CSV data set.
-  - Get some basic information about a Pandas DataFrame.
-- Challenges: 10 min
-  - Read the data for the Americas and display its summary statistics.
-  - What do `.head` and `.tail` do?
-  - What string(s) should you pass to `read_csv` to read files from other directories?
-  - How can you _write_ CSV data?
+- Навчання: 10 хв.
+  - Імпортуйте бібліотеку Pandas.
+  - Використайте Pandas, щоб завантажити простий набір даних CSV.
+  - Отримайте базову інформацію про датафрейм Pandas.
+- Завдання: 10 хв.
+  - Зчитайте дані про Північну та Південну Америки та відобразіть їхню підсумкову статистику.
+  - Що роблять `.head` та `.tail`?
+  - Який (які) рядок (рядки) слід передати в `read_csv`, щоб зчитати файли з інших каталогів?
+  - Як можна записати дані у форматі CSV?
 
-### [DataFrames](../episodes/08-data-frames.md) (11:15)
+### [Датафрейми](../episodes/08-data-frames.md) (11:15)
 
-- Teaching: 15 min
-  - Select individual values from a Pandas dataframe.
+- Навчання: 15 хв.
+  - Виберіть окремі значення з DataFrame Pandas.
   - Select entire rows or entire columns from a dataframe.
-  - Select a subset of both rows and columns from a dataframe in a single operation.
-  - Select a subset of a dataframe by a single Boolean criterion.
-- Challenges: 15 min
-  - Write an expression to find the Per Capita GDP of Serbia in 2007.
+  - Виберіть підмножину рядків і стовпців із датафрейму за одну операцію.
+  - Виберіть підмножину з датафрейму за єдиним булевим критерієм.
+- Завдання: 15 хв.
+  - Напишіть вираз для визначення ВВП Сербії на душу населення у 2007 році.
   - What rule governs what is (or isn't) included in numerical and named slices in Pandas?
-  - What does each line in the following short program do?
-  - What do `idxmin` and `idxmax` do?
-  - Write expressions to get the GDP per capita for all countries in 1982,
-    for all countries _after_ 1985,
-    etc.
+  - Що робить кожен рядок у наступній короткій програмі?
+  - Що роблять `idxmin` та `idxmax`?
+  - Напишіть вирази для отримання значення ВВП на душу населення для всіх країн у 1982 році,
+    та для усіх країн _після_ 1985 тощо.
   - Given the way its borders have changed since 1900,
     what would you do if asked to create a table of GDP per capita for Poland
     for the Twentieth Century?
 
 ### [Побудова графіків](../episodes/09-plotting.md) (11:45)
 
-- Teaching: 15 min
+- Навчання: 15 хв.
   - Create a time series plot showing a single data set.
   - Create a scatter plot showing relationship between two data sets.
-- Exercise: 15 min
+- Вправи: 15 хв.
   - Fill in the blanks to plot the minimum GDP per capita over time for European countries.
   - Modify the example to create a scatter plot of GDP per capita in Asian countries.
   - Explain what each argument to `plot` does in the following example.
