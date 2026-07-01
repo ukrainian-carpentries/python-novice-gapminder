@@ -157,7 +157,7 @@ for m in [3, 6, 7, 2, 8]:
         print(m, 'is small')
 ```
 
-## [Looping Over Data Sets](episodes/14-looping-data-sets.md)
+## [Перегляд наборів даних в циклі](episodes/14-looping-data-sets.md)
 
 - Use a for loop: `for filename in [file1, file2]:`
 - To find a set of files using a pattern use `glob.glob`
@@ -186,12 +186,12 @@ def add_numbers(a, b):
 add_numbers(1, 4)
 ```
 
-## [Variable Scope](episodes/17-scope.md)
+## [Область видимості змінної](episodes/17-scope.md)
 
 - A local variable is defined in a function and can only be seen and used within that function.
 - A global variable is defined outside of a function and can be seen or used anywhere after definition.
 
-## [Programming Style](episodes/18-style.md)
+## [Стиль програмування](episodes/18-style.md)
 
 - Document your code.
 - Use clear and meaningful variable names.
