@@ -103,35 +103,34 @@ title: Дизайн уроку
   - Програма робить аналіз відтворюваним, придатним для перегляду та поширення
 - ...що програми пишуться для людей, а не для комп'ютерів
   - Інформативні імена змінних
-  - Modularity for readability as well as re-use
-  - No duplication
-  - Document purpose and use
-- ...that there is no magic: the programs they use are no different
-  in principle from those they build
+  - Модульність коду для зручності його читання та повторного використання
+  - Без дублювання коду
+  - Пояснюйте, для чого написана програма і як нею користуватися
+- ... що програми, якими вони користуються, принципово не відрізняються від тих, які вони пишуть
 - ... як призначити значення змінним
-- ...what integers, floats, strings, NumPy arrays, and Pandas dataframes are
+- ... що таке цілі числа, числа з плаваючою комою, рядки, масиви NumPy та датафрейми Pandas
 - ...як відстежувати виконання циклу `for`
 - ...як відстежувати виконання команд `if`/`else`
-- ...how to create and index lists
+- ... як створювати списки та отримувати їхні елементи
 - ... як створити та індексувати масиви NumPy
-- ...how to create and index Pandas dataframes
-- ...how to create time series plots
+- ... як створювати датафрейми Pandas та звертатися до їхніх елементів за індексом
+- ... як створити графік, який показує зміни з часом
 - ... різниця між визначенням і викликом функції
-- ...where to find documentation on standard libraries
-- ...how to find out what else scientific Python offers
+- ... де знайти документацію до стандартних бібліотек
+- ... як дізнатися, що ще пропонує Python для наукових обчислень
 
-## Stage 3: Learning Plan
+## Етап 3: Навчальний план
 
-### Summative Assessment
+### Підсумкове оцінювання
 
-- Midpoint: create time-series plot for each file in a directory.
-- Final: extract data from Pandas dataframe
-  and create comparative multi-line time series plot.
+- Середина курсу: створення графіка часових рядів для кожного файлу в каталозі.
+- Завершення: отримання даних з датафрейма Pandas
+  і зображення декількох часових рядів на одному графіку для їх порівняння.
 
-### [Running and Quitting Interactively](../episodes/01-run-quit.md) (9:00)
+### [Інтерактивний запуск і вихід з програми](../episodes/01-run-quit.md) (9:00)
 
 - Teaching: 15 min (because setup issues)
-  - Launch the Jupyter Notebook, create new notebooks, and exit the Notebook.
+  - Запустіть Jupyter Notebook, створіть новий документ та вийдіть із Jupyter Notebook.
   - Create Markdown cells in a notebook.
   - Create and run Python cells in a notebook.
 - Challenges: 0 min (accounted for in teaching time - no separate exercise)
