@@ -92,7 +92,7 @@
           <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             Більше <i data-feather="chevron-down"></i>
           </button>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><li><a class="dropdown-item" href="design.html">Дизайн уроку</a></li><hr><li><a class="dropdown-item" href="discuss.html">Обговорення</a></li><li><a class="dropdown-item" href="exercises.html">Додаткові вправи</a></li><li><a class="dropdown-item" href="reference.html">Reference</a></li>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><li><a class="dropdown-item" href="design.html">Дизайн уроку</a></li><hr><li><a class="dropdown-item" href="discuss.html">Обговорення</a></li><li><a class="dropdown-item" href="exercises.html">Додаткові вправи</a></li><li><a class="dropdown-item" href="reference.html">Довідник</a></li>
           </ul></li>
       </ul></div>
     <!--
@@ -385,7 +385,7 @@
                       <li>
                         <a href="../instructor/images.html">Переглянути усі зображення</a>
                       </li>
-                      <li><a href="design.html">Дизайн уроку</a></li><hr><li><a class="dropdown-item" href="discuss.html">Обговорення</a></li><li><a class="dropdown-item" href="exercises.html">Додаткові вправи</a></li><li><a class="dropdown-item" href="reference.html">Reference</a></li>
+                      <li><a href="design.html">Дизайн уроку</a></li><hr><li><a class="dropdown-item" href="discuss.html">Обговорення</a></li><li><a class="dropdown-item" href="exercises.html">Додаткові вправи</a></li><li><a class="dropdown-item" href="reference.html">Довідник</a></li>
                     </ul></div>
                 </div>
               </div>
@@ -416,7 +416,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Дизайн уроку</h1>
-        <p>Останнє оновлення 2026-07-01 |
+        <p>Останнє оновлення 2026-07-02 |
 
         <a href="https://github.com/ukrainian-carpentries/python-novice-gapminder/edit/main/instructors/design.md" class="external-link">Редагувати цю сторінку <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -456,7 +456,7 @@ Python:</p>
 Koontz</a> {: .quotation}</p>
 </blockquote>
 <p>Урок розроблено за скороченою версією методу “Розуміння за дизайном”.
-The main sections are:</p>
+Основні етапи:</p>
 <ol style="list-style-type: decimal"><li><p>Припущення щодо аудиторії, часу тощо. (Поточні нотатки також
 містять певні висновки та рішення в цьому розділі — їх слід
 переробити.)</p></li>
@@ -523,8 +523,8 @@ Software Carpentry</li>
 даних</li>
 <li>Водночас слухачі з деяким попереднім досвідом:
 <ul><li>сприймуть аналіз даних як реальне завдання,</li>
-<li>and are unlikely to have encountered Pandas, so they’ll still get
-something useful out of the lesson</li>
+<li>та, швидше за все, ще не працювали з Pandas, тому урок буде все одно
+для них корисним</li>
 </ul></li>
 </ul></li>
 <li>Завдання здебільшого <em>не</em> будуть вимагати “написати цей код з
@@ -538,148 +538,156 @@ something useful out of the lesson</li>
 <hr class="half-width"><div class="section level3">
 <h3 id="питання">Питання<a class="anchor" aria-label="anchor" href="#%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%BD%D1%8F"></a></h3>
 <p>Як мені…</p>
-<ul><li>…read tabular data?</li>
-<li>…plot a single vector of values?</li>
-<li>…create a time series plot?</li>
-<li>…create one plot for each of several data sets?</li>
-<li>…get extra data from a single data set for plotting?</li>
-<li>…write programs I can read and re-use in future?</li>
+<ul><li>…читати табличні дані?</li>
+<li>…побудувати графік одного набору значень?</li>
+<li>…створити графік часового ряду?</li>
+<li>…створити окремий графік для кожного набору даних?</li>
+<li>…отримати з набору даних додаткові дані для побудови графіку?</li>
+<li>…писати зрозумілі програми, якими можна скористатися пізніше?</li>
 </ul></div>
 <div class="section level3">
-<h3 id="skills">Skills<a class="anchor" aria-label="anchor" href="#skills"></a></h3>
-<p>I can…</p>
-<ul><li>…write short scripts using loops and conditionals.</li>
-<li>…write functions with a fixed number of parameters that return a
-single result.</li>
-<li>…import libraries using aliases and refer to those libraries’
-contents.</li>
-<li>…do simple data extraction and formatting using Pandas.</li>
+<h3 id="навички">Навички<a class="anchor" aria-label="anchor" href="#%D0%BD%D0%B0%D0%B2%D0%B8%D1%87%D0%BA%D0%B8"></a></h3>
+<p>Я зможу…</p>
+<ul><li>…писати короткі скрипти з використанням циклів та умовних
+операторів.</li>
+<li>…писати функції з фіксованою кількістю параметрів, які повертають
+єдиний результат.</li>
+<li>…імпортувати бібліотеки з використанням псевдонімів та звертатися до
+їхнього вмісту.</li>
+<li>…читати та форматувати дані за допомогою Pandas.</li>
 </ul></div>
 <div class="section level3">
-<h3 id="concepts">Concepts<a class="anchor" aria-label="anchor" href="#concepts"></a></h3>
-<p>I know…</p>
-<ul><li>…that a program is a piece of lab equipment that implements an
-analysis
-<ul><li>Needs to be validated/calibrated before/during use</li>
-<li>Makes analysis reproducible, reviewable, shareable</li>
+<h3 id="визначення">Визначення<a class="anchor" aria-label="anchor" href="#%D0%B2%D0%B8%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%BD%D1%8F"></a></h3>
+<p>Я дізнаюся…</p>
+<ul><li>…що програма - це частина лабораторного обладнання, яке виконує
+аналіз
+<ul><li>Програму потрібно перевіряти/налагоджувати перед/під час
+використання</li>
+<li>Програма робить аналіз відтворюваним, придатним для перегляду та
+поширення</li>
 </ul></li>
-<li>…that programs are written for people, not for computers
-<ul><li>Meaningful variable names</li>
-<li>Modularity for readability as well as re-use</li>
-<li>No duplication</li>
-<li>Document purpose and use</li>
+<li>…що програми пишуться для людей, а не для комп’ютерів
+<ul><li>Інформативні імена змінних</li>
+<li>Модульність коду для зручності його читання та повторного
+використання</li>
+<li>Без дублювання коду</li>
+<li>Пояснюйте, для чого написана програма і як нею користуватися</li>
 </ul></li>
-<li>…that there is no magic: the programs they use are no different in
-principle from those they build</li>
+<li>… що програми, якими вони користуються, принципово не відрізняються
+від тих, які вони пишуть</li>
 <li>… як призначити значення змінним</li>
-<li>…what integers, floats, strings, NumPy arrays, and Pandas dataframes
-are</li>
+<li>… що таке цілі числа, числа з плаваючою комою, рядки, масиви NumPy
+та датафрейми Pandas</li>
 <li>…як відстежувати виконання циклу <code>for</code>
 </li>
 <li>…як відстежувати виконання команд
 <code>if</code>/<code>else</code>
 </li>
-<li>…how to create and index lists</li>
+<li>… як створювати списки та отримувати їхні елементи</li>
 <li>… як створити та індексувати масиви NumPy</li>
-<li>…how to create and index Pandas dataframes</li>
-<li>…how to create time series plots</li>
+<li>… як створювати датафрейми Pandas та звертатися до їхніх елементів
+за індексом</li>
+<li>… як створити графік, який показує зміни з часом</li>
 <li>… різниця між визначенням і викликом функції</li>
-<li>…where to find documentation on standard libraries</li>
-<li>…how to find out what else scientific Python offers</li>
+<li>… де знайти документацію до стандартних бібліотек</li>
+<li>… як дізнатися, що ще пропонує Python для наукових обчислень</li>
 </ul></div>
-</section><section><h2 class="section-heading" id="stage-3-learning-plan">Stage 3: Learning Plan<a class="anchor" aria-label="anchor" href="#stage-3-learning-plan"></a></h2>
+</section><section><h2 class="section-heading" id="етап-3-навчальний-план">Етап 3: Навчальний план<a class="anchor" aria-label="anchor" href="#%D0%B5%D1%82%D0%B0%D0%BF-3-%D0%BD%D0%B0%D0%B2%D1%87%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9-%D0%BF%D0%BB%D0%B0%D0%BD"></a></h2>
 <hr class="half-width"><div class="section level3">
-<h3 id="summative-assessment">Summative Assessment<a class="anchor" aria-label="anchor" href="#summative-assessment"></a></h3>
-<ul><li>Midpoint: create time-series plot for each file in a directory.</li>
-<li>Final: extract data from Pandas dataframe and create comparative
-multi-line time series plot.</li>
+<h3 id="підсумкове-оцінювання">Підсумкове оцінювання<a class="anchor" aria-label="anchor" href="#%D0%BF%D1%96%D0%B4%D1%81%D1%83%D0%BC%D0%BA%D0%BE%D0%B2%D0%B5-%D0%BE%D1%86%D1%96%D0%BD%D1%8E%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F"></a></h3>
+<ul><li>Середина курсу: створення графіка часових рядів для кожного файлу в
+каталозі.</li>
+<li>Завершення: отримання даних з датафрейма Pandas і зображення
+декількох часових рядів на одному графіку для їх порівняння.</li>
 </ul></div>
 <div class="section level3">
-<h3 id="running-and-quitting-interactively-900">
-<a href="01-run-quit.html">Running and Quitting Interactively</a>
-(9:00)<a class="anchor" aria-label="anchor" href="#running-and-quitting-interactively-900"></a></h3>
-<ul><li>Teaching: 15 min (because setup issues)
-<ul><li>Launch the Jupyter Notebook, create new notebooks, and exit the
-Notebook.</li>
-<li>Create Markdown cells in a notebook.</li>
-<li>Create and run Python cells in a notebook.</li>
+<h3 id="інтерактивний-запуск-і-вихід-з-програми-900">
+<a href="01-run-quit.html">Інтерактивний запуск і вихід з
+програми</a> (9:00)<a class="anchor" aria-label="anchor" href="#%D1%96%D0%BD%D1%82%D0%B5%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%B8%D0%B9-%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%96-%D0%B2%D0%B8%D1%85%D1%96%D0%B4-%D0%B7-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B8-900"></a></h3>
+<ul><li>Навчання: 15 хв (з урахуванням проблем із налаштуванням)
+<ul><li>Запустіть Jupyter Notebook, створіть новий документ та вийдіть із
+Jupyter Notebook.</li>
+<li>Створіть в блокноті комірки типу Markdown.</li>
+<li>Створіть та запустіть комірки Python у блокноті.</li>
 </ul></li>
-<li>Challenges: 0 min (accounted for in teaching time - no separate
-exercise)
-<ul><li>Creating lists in Markdown</li>
-<li>What is displayed when several expressions are put in a single
-cell?</li>
-<li>Change an existing cell from code to Markdown</li>
-<li>Rendering LaTeX-style equations</li>
-</ul></li>
-</ul></div>
-<div class="section level3">
-<h3 id="variables-and-assignment-915">
-<a href="02-variables.html">Variables and Assignment</a> (9:15)<a class="anchor" aria-label="anchor" href="#variables-and-assignment-915"></a></h3>
-<ul><li>Teaching: 10 min
-<ul><li>Write programs that assign scalar values to variables and perform
-calculations with those values.</li>
-<li>Correctly trace value changes in programs that use scalar
-assignment.</li>
-</ul></li>
-<li>Challenges: 10 min
-<ul><li>Trace execution of code swapping two values using an intermediate
-variable.</li>
-<li>Predict final values of variables after several assignments.</li>
-<li>What happens if you try to index a number?</li>
-<li>Which is a better variable name, <code>m</code>, <code>min</code>,
-or <code>minutes</code>?</li>
-<li>What do the following slice expressions produce?</li>
+<li>Завдання: 0 хв (враховується в навчальний час - без окремої вправи)
+<ul><li>Створіть список у Markdown</li>
+<li>Що буде зображатися, якщо кілька виразів помістити в одну
+комірку?</li>
+<li>Змініть тип наявної комірки з коду на Markdown</li>
+<li>Візуалізація рівнянь у LaTeX</li>
 </ul></li>
 </ul></div>
 <div class="section level3">
-<h3 id="data-types-and-type-conversion-0935">
-<a href="03-types-conversion.html">Data Types and Type
-Conversion</a> (09:35)<a class="anchor" aria-label="anchor" href="#data-types-and-type-conversion-0935"></a></h3>
-<ul><li>Teaching: 10 min
-<ul><li>Explain key differences between integers and floating point
-numbers.</li>
-<li>Explain key differences between numbers and character strings.</li>
-<li>Use built-in functions to convert between integers, floating point
-numbers, and strings.</li>
+<h3 id="змінні-та-присвоєння-915">
+<a href="02-variables.html">Змінні та присвоєння</a> (9:15)<a class="anchor" aria-label="anchor" href="#%D0%B7%D0%BC%D1%96%D0%BD%D0%BD%D1%96-%D1%82%D0%B0-%D0%BF%D1%80%D0%B8%D1%81%D0%B2%D0%BE%D1%94%D0%BD%D0%BD%D1%8F-915"></a></h3>
+<ul><li>Навчання: 10 хв.
+<ul><li>Напишіть програми, які присвоюють скалярні значення змінним і
+виконують обчислення з цими значеннями.</li>
+<li>Правильно відстежуйте значення змінних у програмах, які
+використовують скалярне присвоєння.</li>
 </ul></li>
-<li>Challenges: 10 min
-<ul><li>What type of value is 3.4?</li>
-<li>What type of value is 3.25 + 4?</li>
-<li>What type of value would you use to represent:
-<ul><li>Number of days since the start of the year.</li>
-<li>Time elapsed since the start of the year.</li>
-<li>Etc.</li>
-</ul></li>
-<li>How can you use <code>//</code> (integer division) and
-<code>%</code> (modulo)?</li>
-<li>What does <code>int("3.4")</code> do?</li>
-<li>Given these float, int, and string values, which expressions will
-print a particular result?</li>
-<li>What do you expect <code>1+2j + 3</code> to produce?</li>
+<li>Завдання: 10 хв.
+<ul><li>Відстеження виконання коду, що міняє місцями два значення за
+допомогою проміжної змінної.</li>
+<li>Передбачення кінцевих значень змінних після виконання декількох
+присвоєнь.</li>
+<li>Що станеться, якщо спробувати звернутися до числа за індексом (а не
+до списку чи рядку)?</li>
+<li>Яке ім’я для змінної є кращим: <code>m</code>, <code>min</code> або
+<code>minutes</code>?</li>
+<li>Що повертають наступні вирази?</li>
 </ul></li>
 </ul></div>
 <div class="section level3">
-<h3 id="built-in-functions-and-help-0955">
-<a href="04-built-in.html">Built-in Functions and Help</a>
-(09:55)<a class="anchor" aria-label="anchor" href="#built-in-functions-and-help-0955"></a></h3>
-<ul><li>Teaching: 15 min
-<ul><li>Explain the purpose of functions.</li>
-<li>Correctly call built-in Python functions.</li>
-<li>Correctly nest calls to built-in functions.</li>
-<li>Use help to display documentation for built-in functions.</li>
-<li>Correctly describe situations in which SyntaxError and NameError
-occur.</li>
+<h3 id="типи-даних-та-їх-перетворення-0935">
+<a href="03-types-conversion.html">Типи даних та їх перетворення</a>
+(09:35)<a class="anchor" aria-label="anchor" href="#%D1%82%D0%B8%D0%BF%D0%B8-%D0%B4%D0%B0%D0%BD%D0%B8%D1%85-%D1%82%D0%B0-%D1%97%D1%85-%D0%BF%D0%B5%D1%80%D0%B5%D1%82%D0%B2%D0%BE%D1%80%D0%B5%D0%BD%D0%BD%D1%8F-0935"></a></h3>
+<ul><li>Навчання: 10 хв.
+<ul><li>Поясніть, чим цілі числа відрізняються від чисел із плаваючою
+комою.</li>
+<li>Поясніть ключові відмінності між числами та символьними
+рядками.</li>
+<li>Використовуйте вбудовані функції для перетворень між цілими числами,
+числами з плаваючою комою та символьними рядками.</li>
 </ul></li>
-<li>Challenges: 10 min
-<ul><li>Explain the order of operations in the following complex
-expression.</li>
-<li>What will each nested combination of <code>min</code> and
-<code>max</code> calls produce?</li>
-<li>Why don’t <code>max</code> and <code>min</code> return
-<code>None</code> when given no arguments?</li>
-<li>Given what we have seen so far, what index expression will get the
-last character in a string?</li>
+<li>Завдання: 10 хв.
+<ul><li>Який тип має значення 3.4?</li>
+<li>Який тип має значення 3.25 + 4?</li>
+<li>Який тип значення ви б використали для представлення:
+<ul><li>Кількості днів, які пройшли з початку року.</li>
+<li>Часу, що минув з початку року.</li>
+<li>тощо.</li>
+</ul></li>
+<li>Як можна використовувати <code>//</code> (цілочисельне ділення) та
+<code>%</code> (залишок від ділення)?</li>
+<li>Що поверне функція <code>int("3.4")</code>?</li>
+<li>Для даних значень типу float, int та string, які з виразів повернуть
+певний результат?</li>
+<li>Що, на вашу думку, виведе вираз <code>1+2j + 3</code>?</li>
+</ul></li>
+</ul></div>
+<div class="section level3">
+<h3 id="вбудовані-функції-та-довідка-0955">
+<a href="04-built-in.html">Вбудовані функції та Довідка</a>
+(09:55)<a class="anchor" aria-label="anchor" href="#%D0%B2%D0%B1%D1%83%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D1%96-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D1%96%D1%97-%D1%82%D0%B0-%D0%B4%D0%BE%D0%B2%D1%96%D0%B4%D0%BA%D0%B0-0955"></a></h3>
+<ul><li>Навчання: 15 хв.
+<ul><li>Пояснення призначення функцій.</li>
+<li>Правильний виклик вбудованих функцій Python.</li>
+<li>Правильні вкладені виклики вбудованих функцій.</li>
+<li>Використання довідки для зображення документації про вбудовані
+функції.</li>
+<li>Правильний опис ситуацій, в яких виникають помилки SyntaxError та
+NameError.</li>
+</ul></li>
+<li>Завдання: 10 хв.
+<ul><li>Пояснення порядку операцій у певному складному виразі.</li>
+<li>Що поверне кожна вкладена комбінація функцій <code>min</code> та
+<code>max</code>?</li>
+<li>Чому <code>max</code> та <code>min</code> не повертають
+<code>None</code>, якщо їм не передано аргументів?</li>
+<li>Враховуючи те, що ми вже вивчили, який індексний вираз поверне
+останній символ у рядку?</li>
 </ul></li>
 </ul></div>
 <div class="section level3">
@@ -689,81 +697,81 @@ last character in a string?</li>
 <div class="section level3">
 <h3 id="бібліотеки-1035">
 <a href="06-libraries.html">Бібліотеки</a> (10:35)<a class="anchor" aria-label="anchor" href="#%D0%B1%D1%96%D0%B1%D0%BB%D1%96%D0%BE%D1%82%D0%B5%D0%BA%D0%B8-1035"></a></h3>
-<ul><li>Teaching: 10 min
-<ul><li>Explain what software libraries are and why programmers create and
-use them.</li>
-<li>Write programs that import and use libraries from Python’s standard
-library.</li>
-<li>Find and read documentation for standard libraries interactively (in
-the interpreter) and online.</li>
+<ul><li>Навчання: 10 хв.
+<ul><li>Поясніть, що таке бібліотека та для чого програмісти їх створюють і
+використовують.</li>
+<li>Пишіть програми, які імпортують і використовують стандартні
+бібліотеки Python.</li>
+<li>Знаходьте та читайте документацію про стандартні бібліотеки в
+інтерактивному режимі (в інтерпретаторі) та онлайн.</li>
 </ul></li>
-<li>Challenges: 10 min
-<ul><li>Which function from the standard math library could you use to
-calculate a square root?</li>
-<li>What library would you use to select a random value from data?</li>
-<li>If <code>help(math)</code> produces an error, what have you
-forgotten to do?</li>
-<li>Fill in the blanks in code below so that the import statement and
-program run.</li>
+<li>Завдання: 10 хв.
+<ul><li>Яку функцію зі стандартної математичної бібліотеки можна використати
+для обчислення квадратного кореня?</li>
+<li>Яка бібліотека підходить для вибору випадкового значення з набору
+даних?</li>
+<li>Якщо <code>help(math)</code> видає помилку, що ви забули
+зробити?</li>
+<li>Заповніть пропуски в коді нижче, щоб імпорт та програма в цілому
+запрацювали.</li>
 </ul></li>
 </ul></div>
 <div class="section level3">
 <h3 id="читання-табличних-данних-1055">
 <a href="07-reading-tabular.html">Читання табличних данних</a>
 (10:55)<a class="anchor" aria-label="anchor" href="#%D1%87%D0%B8%D1%82%D0%B0%D0%BD%D0%BD%D1%8F-%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%87%D0%BD%D0%B8%D1%85-%D0%B4%D0%B0%D0%BD%D0%BD%D0%B8%D1%85-1055"></a></h3>
-<ul><li>Teaching: 10 min
-<ul><li>Import the Pandas library.</li>
-<li>Use Pandas to load a simple CSV data set.</li>
-<li>Get some basic information about a Pandas DataFrame.</li>
+<ul><li>Навчання: 10 хв.
+<ul><li>Імпортуйте бібліотеку Pandas.</li>
+<li>Використайте Pandas, щоб завантажити простий набір даних CSV.</li>
+<li>Отримайте базову інформацію про датафрейм Pandas.</li>
 </ul></li>
-<li>Challenges: 10 min
-<ul><li>Read the data for the Americas and display its summary
-statistics.</li>
-<li>What do <code>.head</code> and <code>.tail</code> do?</li>
-<li>What string(s) should you pass to <code>read_csv</code> to read
-files from other directories?</li>
-<li>How can you <em>write</em> CSV data?</li>
+<li>Завдання: 10 хв.
+<ul><li>Зчитайте дані про Північну та Південну Америки та відобразіть їхню
+підсумкову статистику.</li>
+<li>Що роблять <code>.head</code> та <code>.tail</code>?</li>
+<li>Який (які) рядок (рядки) слід передати в <code>read_csv</code>, щоб
+зчитати файли з інших каталогів?</li>
+<li>Як можна записати дані у форматі CSV?</li>
 </ul></li>
 </ul></div>
 <div class="section level3">
-<h3 id="dataframes-1115">
-<a href="08-data-frames.html">DataFrames</a> (11:15)<a class="anchor" aria-label="anchor" href="#dataframes-1115"></a></h3>
-<ul><li>Teaching: 15 min
-<ul><li>Select individual values from a Pandas dataframe.</li>
-<li>Select entire rows or entire columns from a dataframe.</li>
-<li>Select a subset of both rows and columns from a dataframe in a
-single operation.</li>
-<li>Select a subset of a dataframe by a single Boolean criterion.</li>
+<h3 id="датафрейми-1115">
+<a href="08-data-frames.html">Датафрейми</a> (11:15)<a class="anchor" aria-label="anchor" href="#%D0%B4%D0%B0%D1%82%D0%B0%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B8-1115"></a></h3>
+<ul><li>Навчання: 15 хв.
+<ul><li>Виберіть окремі значення з DataFrame Pandas.</li>
+<li>Виділіть цілі рядки або стовпці з датафрейму.</li>
+<li>Виберіть підмножину рядків і стовпців із датафрейму за одну
+операцію.</li>
+<li>Виберіть підмножину з датафрейму за єдиним булевим критерієм.</li>
 </ul></li>
-<li>Challenges: 15 min
-<ul><li>Write an expression to find the Per Capita GDP of Serbia in
-2007.</li>
-<li>What rule governs what is (or isn’t) included in numerical and named
-slices in Pandas?</li>
-<li>What does each line in the following short program do?</li>
-<li>What do <code>idxmin</code> and <code>idxmax</code> do?</li>
-<li>Write expressions to get the GDP per capita for all countries in
-1982, for all countries <em>after</em> 1985, etc.</li>
-<li>Given the way its borders have changed since 1900, what would you do
-if asked to create a table of GDP per capita for Poland for the
-Twentieth Century?</li>
+<li>Завдання: 15 хв.
+<ul><li>Напишіть вираз для визначення ВВП Сербії на душу населення у 2007
+році.</li>
+<li>Яке правило регулює те, що входить (або не входить) до індексованих
+та іменованих зрізів у Pandas?</li>
+<li>Що робить кожен рядок у наступній короткій програмі?</li>
+<li>Що роблять <code>idxmin</code> та <code>idxmax</code>?</li>
+<li>Напишіть вирази для отримання значення ВВП на душу населення для
+всіх країн у 1982 році, та для усіх країн <em>після</em> 1985 тощо.</li>
+<li>З огляду на зміни кордонів Польщі після 1900 року — як би ви
+створили таблицю ВВП на душу населення для Польщі за 20-е сторіччя?</li>
 </ul></li>
 </ul></div>
 <div class="section level3">
 <h3 id="побудова-графіків-1145">
 <a href="09-plotting.html">Побудова графіків</a> (11:45)<a class="anchor" aria-label="anchor" href="#%D0%BF%D0%BE%D0%B1%D1%83%D0%B4%D0%BE%D0%B2%D0%B0-%D0%B3%D1%80%D0%B0%D1%84%D1%96%D0%BA%D1%96%D0%B2-1145"></a></h3>
-<ul><li>Teaching: 15 min
-<ul><li>Create a time series plot showing a single data set.</li>
-<li>Create a scatter plot showing relationship between two data
-sets.</li>
+<ul><li>Навчання: 15 хв.
+<ul><li>Створити графік часового ряду для одного набору даних.</li>
+<li>Створіть діаграму розсіювання, яка показує зв’язок між двома
+наборами даних.</li>
 </ul></li>
-<li>Exercise: 15 min
-<ul><li>Fill in the blanks to plot the minimum GDP per capita over time for
-European countries.</li>
-<li>Modify the example to create a scatter plot of GDP per capita in
-Asian countries.</li>
-<li>Explain what each argument to <code>plot</code> does in the
-following example.</li>
+<li>Вправи: 15 хв.
+<ul><li>Заповніть порожні поля, щоб побудувати графік мінімального ВВП на
+душу населення в європейських країнах.</li>
+<li>Змініть приклад так, щоб створити точкову діаграму ВВП на душу
+населення в країнах Азії.</li>
+<li>Поясніть, що робить кожен аргумент <code>plot</code> у наступному
+прикладі.</li>
 </ul></li>
 </ul></div>
 <div class="section level3">
@@ -773,161 +781,163 @@ following example.</li>
 <div class="section level3">
 <h3 id="списки-1300">
 <a href="11-lists.html">Списки</a> (13:00)<a class="anchor" aria-label="anchor" href="#%D1%81%D0%BF%D0%B8%D1%81%D0%BA%D0%B8-1300"></a></h3>
-<ul><li>Teaching: 10 min
-<ul><li>Explain why programs need collections of values.</li>
-<li>Write programs that create flat lists, index them, slice them, and
-modify them through assignment and method calls.</li>
+<ul><li>Навчання: 10 хв.
+<ul><li>Поясніть, чому програмам потрібні набори значень.</li>
+<li>Напишіть програми, які створюють списки, індексують їх, а також
+розрізають і змінюють їх через присвоєння та виклик методів.</li>
 </ul></li>
-<li>Challenges: 10 min
-<ul><li>Fill in the blanks so that the program produces the output
-shown.</li>
-<li>How large are the following slices?</li>
-<li>What do negative index expressions print?</li>
-<li>What does a “stride” in a slice do?</li>
-<li>How do slices treat out-of-range bounds?</li>
-<li>What are the differences between sorting these two ways?</li>
-<li>What is the difference between <code>new = old</code> and
+<li>Завдання: 10 хв.
+<ul><li>Заповніть порожні поля, щоб програма повернула потрібні
+результати.</li>
+<li>Наскільки великими є наступні зрізи?</li>
+<li>Що повертають вирази з від’ємним індексом?</li>
+<li>Що робить “крок” у зрізі?</li>
+<li>Як зрізи реагують на індекси поза межами діапазону?</li>
+<li>Які відмінності між цими двома способами сортування?</li>
+<li>Яка різниця між <code>new = old</code> та
 <code>new = old[:]</code>?</li>
 </ul></li>
 </ul></div>
 <div class="section level3">
 <h3 id="цикли-1320">
 <a href="12-for-loops.html">Цикли</a> (13:20)<a class="anchor" aria-label="anchor" href="#%D1%86%D0%B8%D0%BA%D0%BB%D0%B8-1320"></a></h3>
-<ul><li>Teaching: 10 min
-<ul><li>Explain what for loops are normally used for.</li>
-<li>Trace the execution of a simple (unnested) loop and correctly state
-the values of variables in each iteration.</li>
-<li>Write for loops that use the Accumulator pattern to aggregate
-values.</li>
+<ul><li>Навчання: 10 хв.
+<ul><li>Поясніть, для чого зазвичай використовуються цикли
+<code>for</code>.</li>
+<li>Проаналізуйте виконання простого (невкладеного) циклу та правильно
+вкажіть значення змінних у кожній ітерації.</li>
+<li>Напишіть цикли <code>for</code>, які використовують шаблон
+накопичення для отримання підсумкових значень.</li>
 </ul></li>
-<li>Challenges: 15 min
-<ul><li>Is an indentation error a syntax error or a runtime error?</li>
-<li>Trace which lines of this program are executed in what order.</li>
-<li>Fill in the blanks in this program so that it reverses a
-string.</li>
-<li>Fill in the blanks in this series of examples to get practice
-accumulating values.</li>
-<li>Reorder and indent these lines to calculate the cumulative sum of
-the list values.</li>
-</ul></li>
-</ul></div>
-<div class="section level3">
-<h3 id="looping-over-data-sets-1345">
-<a href="13-looping-data-sets">Looping Over Data Sets</a>
-(13:45)<a class="anchor" aria-label="anchor" href="#looping-over-data-sets-1345"></a></h3>
-<ul><li>Teaching: 5 min
-<ul><li>Be able to read and write globbing expressions that match sets of
-files.</li>
-<li>Use glob to create lists of files.</li>
-<li>Write for loops to perform operations on files given their names in
-a list.</li>
-</ul></li>
-<li>Challenges: 10 min
-<ul><li>Which filenames are <em>not</em> matched by this glob
-expression?</li>
-<li>Modify this program so that it prints the number of records in the
-shortest file.</li>
-<li>Write a program that reads and plots all of the regional data
-sets.</li>
+<li>Завдання: 15 хв.
+<ul><li>Чи є помилка відступу синтаксичною чи помилкою виконання?</li>
+<li>Простежте, в якому порядку виконуються рядки цієї програми.</li>
+<li>Заповніть пропуски в цій програмі, щоб вона розгорнула рядок у
+зворотному напрямку.</li>
+<li>Заповніть пропуски в цій серії прикладів, щоб навчитися накопичувати
+підсумкове значення.</li>
+<li>Змініть порядок і відступи в цих рядках, щоб обчислити кумулятивні
+суми значень списку.</li>
 </ul></li>
 </ul></div>
 <div class="section level3">
-<h3 id="writing-functions-1400">
-<a href="14-writing-functions">Writing Functions</a> (14:00)<a class="anchor" aria-label="anchor" href="#writing-functions-1400"></a></h3>
-<ul><li>Teaching: 10 min
-<ul><li>Explain and identify the difference between function definition and
-function call.</li>
-<li>Write a function that takes a small, fixed number of arguments and
-produces a single result.</li>
+<h3 id="перебір-наборів-даних-1345">
+<a href="13-looping-data-sets">Перебір наборів даних</a>
+(13:45)<a class="anchor" aria-label="anchor" href="#%D0%BF%D0%B5%D1%80%D0%B5%D0%B1%D1%96%D1%80-%D0%BD%D0%B0%D0%B1%D0%BE%D1%80%D1%96%D0%B2-%D0%B4%D0%B0%D0%BD%D0%B8%D1%85-1345"></a></h3>
+<ul><li>Навчання: 5 хв.
+<ul><li>Навчіться читати та писати вирази, які відповідають наборам файлів,
+за допомогою модуля glob.</li>
+<li>Використовуйте модуль glob для створення списків файлів.</li>
+<li>Напишіть цикли <code>for</code> для виконання операцій над файлами,
+зазначеними в списку.</li>
 </ul></li>
-<li>Challenges: 15 min
-<ul><li>This code defines and calls a function - what does it print when
-run?</li>
-<li>Explain why this short program prints things in the order it
-does.</li>
-<li>Fill in the blanks to create a function that finds the minimum value
-in a data file.</li>
-<li>Fill in the blanks to create a function that finds the first
-negative value in a list. What does your function do if the list is
-empty?</li>
-<li>Why is it sometimes useful to pass arguments by naming the
-corresponding parameters?</li>
-<li>Fill in the blanks and turn this short piece of code into a
-function.</li>
+<li>Завдання: 10 хв.
+<ul><li>Які імена файлів не відповідають цьому виразу модуля glob?</li>
+<li>Змініть цю програму так, щоб вона надрукувала кількість записів у
+найкоротшому файлі.</li>
+<li>Напишіть програму, яка відкриває всі регіональні файли даних і будує
+для них графіки.</li>
 </ul></li>
 </ul></div>
 <div class="section level3">
-<h3 id="variable-scope-1425">
-<a href="15-scope">Variable Scope</a> (14:25)<a class="anchor" aria-label="anchor" href="#variable-scope-1425"></a></h3>
-<ul><li>Teaching: 10 min
-<ul><li>Identify local and global variables.</li>
-<li>Identify parameters as local variables.</li>
-<li>Read a traceback and determine the file, function, and line number
-on which the error occurred.</li>
+<h3 id="написання-функцій-1400">
+<a href="14-writing-functions">Написання функцій</a> (14:00)<a class="anchor" aria-label="anchor" href="#%D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%BD%D1%8F-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D1%96%D0%B9-1400"></a></h3>
+<ul><li>Навчання: 10 хв.
+<ul><li>Знайдіть і поясніть різницю між визначенням функції та викликом
+функції.</li>
+<li>Напишіть функцію, що бере фіксовану кількість аргументів і повертає
+одне значення.</li>
 </ul></li>
-<li>Challenges: 10 min
-<ul><li>Trace the changes to the values in this program, being careful to
-distinguish local from global values.</li>
+<li>Завдання: 15 хв.
+<ul><li>Цей код визначає та викликає функцію. Подумайте, що вона друкує
+після її виклику?</li>
+<li>Поясніть, чому ця коротка програма повертає відповіді саме в такому
+порядку?</li>
+<li>Заповніть порожні поля, щоб створити функцію, яка знаходить
+мінімальне значення у файлі даних.</li>
+<li>Заповніть порожні поля, щоб створити функцію, яка знаходить перше
+від’ємне значення в списку. Що робить ваша функція, якщо список
+порожній?</li>
+<li>Чому іноді корисно передавати аргументи із зазначенням імен
+відповідних параметрів?</li>
+<li>Заповніть пропуски та перетворіть цей короткий фрагмент коду на
+функцію.</li>
 </ul></li>
 </ul></div>
 <div class="section level3">
-<h3 id="coffee-1445-15-min">
-<a href="16-coffee">Coffee</a> (14:45): 15 min<a class="anchor" aria-label="anchor" href="#coffee-1445-15-min"></a></h3>
+<h3 id="область-видимості-змінної-1425">
+<a href="15-scope">Область видимості змінної</a> (14:25)<a class="anchor" aria-label="anchor" href="#%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C-%D0%B2%D0%B8%D0%B4%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%96-%D0%B7%D0%BC%D1%96%D0%BD%D0%BD%D0%BE%D1%97-1425"></a></h3>
+<ul><li>Навчання: 10 хв.
+<ul><li>Визначить локальні та глобальні змінні.</li>
+<li>Розглядайте параметри як локальні змінні.</li>
+<li>Прочитайте повідомлення про помилку та визначте файл, функцію та
+номер рядка, у якому вона сталася.</li>
+</ul></li>
+<li>Завдання: 10 хв.
+<ul><li>Відстежте зміни значень у цій програмі, чітко розрізняючи локальні
+та глобальні змінні.</li>
+</ul></li>
+</ul></div>
+<div class="section level3">
+<h3 id="кава-1445-15-хв-">
+<a href="16-coffee">Кава</a> (14:45): 15 хв.<a class="anchor" aria-label="anchor" href="#%D0%BA%D0%B0%D0%B2%D0%B0-1445-15-%D1%85%D0%B2-"></a></h3>
 </div>
 <div class="section level3">
-<h3 id="conditionals-1500">
-<a href="17-conditionals">Conditionals</a> (15:00)<a class="anchor" aria-label="anchor" href="#conditionals-1500"></a></h3>
-<ul><li>Teaching: 10 min
-<ul><li>Correctly write programs that use if and else statements and simple
-Boolean expressions (without logical operators).</li>
-<li>Trace the execution of unnested conditionals and conditionals inside
-loops.</li>
+<h3 id="умовні-оператори-1500">
+<a href="17-conditionals">Умовні оператори</a> (15:00)<a class="anchor" aria-label="anchor" href="#%D1%83%D0%BC%D0%BE%D0%B2%D0%BD%D1%96-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B8-1500"></a></h3>
+<ul><li>Навчання: 10 хв.
+<ul><li>Правильне написання програм, які використовують оператори
+<code>if</code> та <code>else</code>, а також прості булеві вирази (без
+логічних операторів).</li>
+<li>Відстеження виконання невкладених умовних операторів та умовних
+операторів усередині циклів.</li>
 </ul></li>
-<li>Challenges: 15 min
-<ul><li>Trace the execution of this conditional statement.</li>
-<li>Fill in the blanks so that this function replaces negative values
-with zeroes.</li>
-<li>Modify this program so that it only processes files with fewer than
-50 records.</li>
-<li>Modify this program so that it always finds the largest and smallest
-values in a list no matter what the list’s values are.</li>
+<li>Завдання: 15 хв.
+<ul><li>Простежте за виконанням цього умовного оператора.</li>
+<li>Заповніть пропуски, щоб функція замінювала всі від’ємні значення на
+нулі.</li>
+<li>Змініть цю програму так, щоб вона обробляла лише файли, які містять
+менше ніж 50 записів.</li>
+<li>Змініть цю програму так, щоб вона завжди знаходила найбільше та
+найменше значення в списку незалежно від його вигляду.</li>
 </ul></li>
 </ul></div>
 <div class="section level3">
 <h3 id="стиль-програмування-1525">
 <a href="18-style.html">Стиль програмування</a> (15:25)<a class="anchor" aria-label="anchor" href="#%D1%81%D1%82%D0%B8%D0%BB%D1%8C-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-1525"></a></h3>
-<ul><li>Teaching: 15 min
-<ul><li>How can I make my programs more readable?</li>
-<li>How do most programmers format their code?</li>
-<li>How can programs check their own operation?</li>
+<ul><li>Навчання: 15 хв.
+<ul><li>Як я можу зробити свої програми зрозумілішими для читання?</li>
+<li>Як більшість програмістів форматують свій код?</li>
+<li>Яким чином програми можуть самостійно перевіряти, що вони працюють
+правильно?</li>
 </ul></li>
-<li>Challenges: 15 min
-<ul><li>Which lines in this code will be available as online help?</li>
-<li>Turn the comments in this program into docstrings.</li>
-<li>Rewrite this short program to be more readable.</li>
+<li>Завдання: 15 хв.
+<ul><li>Які рядки цього коду будуть доступні як онлайн-довідка?</li>
+<li>Перетворіть коментарі в цій програмі на рядки документації.</li>
+<li>Перепишіть цю коротку програму так, щоб її було легше читати.</li>
 </ul></li>
 </ul></div>
 <div class="section level3">
 <h3 id="підведення-підсумків-1555">
 <a href="19-wrap.html">Підведення підсумків</a> (15:55)<a class="anchor" aria-label="anchor" href="#%D0%BF%D1%96%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%BD%D1%8F-%D0%BF%D1%96%D0%B4%D1%81%D1%83%D0%BC%D0%BA%D1%96%D0%B2-1555"></a></h3>
-<ul><li>Teaching: 20 min
-<ul><li>Name and locate scientific Python community sites for software,
-workshops, and help.</li>
+<ul><li>Навчання: 20 хв.
+<ul><li>Назвіть і знайдіть сайти наукової спільноти Python, присвячені
+програмному забезпеченню, семінарам і допомозі користувачам.</li>
 </ul></li>
-<li>Challenges: 0 min
-<ul><li>None.</li>
-</ul></li>
-</ul></div>
-<div class="section level3">
-<h3 id="feedback-1615">
-<a href="20-feedback.html">Feedback</a> (16:15)<a class="anchor" aria-label="anchor" href="#feedback-1615"></a></h3>
-<ul><li>Teaching: 0 min</li>
-<li>Challenges: 15 min
-<ul><li>Collect feedback</li>
+<li>Завдання: 0 хв.
+<ul><li>Немає завдань.</li>
 </ul></li>
 </ul></div>
 <div class="section level3">
-<h3 id="finish-1630">Finish (16:30)<a class="anchor" aria-label="anchor" href="#finish-1630"></a></h3>
+<h3 id="зворотний-звязок-1615">
+<a href="20-feedback.html">Зворотний зв’язок</a> (16:15)<a class="anchor" aria-label="anchor" href="#%D0%B7%D0%B2%D0%BE%D1%80%D0%BE%D1%82%D0%BD%D0%B8%D0%B9-%D0%B7%D0%B2%D1%8F%D0%B7%D0%BE%D0%BA-1615"></a></h3>
+<ul><li>Навчання: 0 хв.</li>
+<li>Завдання: 15 хв.
+<ul><li>Збір та обробка відгуків</li>
+</ul></li>
+</ul></div>
+<div class="section level3">
+<h3 id="завершення-1630">Завершення (16:30)<a class="anchor" aria-label="anchor" href="#%D0%B7%D0%B0%D0%B2%D0%B5%D1%80%D1%88%D0%B5%D0%BD%D0%BD%D1%8F-1630"></a></h3>
 </div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Попередній і наступний розділи Bottom"><div class="d-block d-sm-block d-md-none">
@@ -984,8 +994,8 @@ workshops, and help.</li>
   "url": "https://ukrainian-carpentries.github.io/python-novice-gapminder/instructor/design.html",
   "identifier": "https://ukrainian-carpentries.github.io/python-novice-gapminder/instructor/design.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2026-07-01",
-  "datePublished": "2026-07-01"
+  "dateModified": "2026-07-02",
+  "datePublished": "2026-07-02"
 }
 
   </script><script>
