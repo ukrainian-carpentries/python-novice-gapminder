@@ -1,104 +1,104 @@
 ---
-title: 'Reference'
+title: 'Довідник'
 ---
 
-## Reference
+## Довідник
 
-## [Running and Quitting](episodes/01-run-quit.md)
+## [Запуск та завершення роботи](episodes/01-run-quit.md)
 
-- Python files have the `.py` extension.
-- Can be written in a text file or a [Jupyter Notebook][jupyter].
-  - Jupyter notebooks have the extension `.ipynb`
-  - Jupyter notebooks can be opened from [Anaconda](https://docs.continuum.io/anaconda/install) or through the command line by entering `$ jupyter notebook`
-    - Markdown and HTML are allowed in markdown cells for documenting code.
+- Файли Python мають розширення `.py`.
+- Можуть бути створені у текстовому редакторі або у [Jupyter Notebook][jupyter].
+  - Блокноти Jupyter мають розширення `.ipynb`
+  - Блокноти Jupyter можуть бути відкриті в [Anaconda](https://docs.continuum.io/anaconda/install) або з командного рядка за допомогою команди `jupyter notebook`
+    - В комірках markdown для документування коду можна використовувати як Markdown так і HTML.
 
-## [Variables and Assignment](episodes/02-variables.md)
+## [Змінні та присвоєння](episodes/02-variables.md)
 
-- Variables are stored using `=`.
-  - Strings are defined in quotations `'...'`.
-  - Integers and floating point numbers are defined without quotations.
-- Variables can contain letters, digits, and underscores `_`.
-  - Cannot start with a digit.
-  - Variables that start with underscores should be avoided.
-- Use `print(...)` to display values as text.
-- Can use indexing on strings.
-  - Indexing starts at 0.
-  - Position is given in square brackets `[position]` following the variable name.
-  - Take a slice using `[start:stop]`. This makes a copy of part of the original string.
-    - `start` is the index of the first element.
-    - `stop` is the index of the element after the last desired element.
-- Use `len(...)` to find the length of a variable or string.
+- Значення змінних зберігаються за допомогою `=`.
+  - Рядки символів визначаються в лапках `'...'`.
+  - Цілі числа та числа з плаваючою комою визначаються без лапок.
+- Імена змінних можуть складатися з літер, цифр та символів підкреслення "_".
+  - Імена змінних не можуть починатися з цифри.
+  - Слід уникати імен змінних, які починаються з підкреслення.
+- Використовуйте `print(...)` для виведення значень у вигляді тексту.
+- До рядків символів можна застосовувати індексацію.
+  - Індексація починається з 0.
+  - Позиція вказується у квадратних дужках `[position]` після імені змінної.
+  - Робіть зріз за допомогою `[start:stop]`. Це створює копію частини оригінального рядка символів.
+    - `start` є індексом першого елемента.
+    - `stop` є індексом елемента після останнього потрібного елемента.
+- Використовуйте `len(...)` для визначення довжини змінної або рядка.
 
 ## [Типи даних та їх перетворення](episodes/03-types-conversion.md)
 
-- Each value has a type. This controls what can be done with it.
-  - `int` represents an integer
-  - `float` represents a floating point number.
-  - `str` represents a string.
-- To determine a variables type, use the built-in function `type(...)`, including the variable name in the parenthesis.
-- Modifying strings:
-  - Use `+` to concatenate strings.
-  - Use `*` to repeat a string.
-  - Numbers and strings cannot be added to on another.
-    - Convert string to integer: `int(...)`.
-    - Convert integer to string: `str(...)`.
+- Кожне значення має тип. Він визначає, що можна робити з цим значенням.
+  - `int` представляє ціле число.
+  - `float` представляє число з плаваючою комою.
+  - `str` представляє рядок символів.
+- Щоб визначити тип змінної, скористайтеся вбудованою функцією `type(...)`, вказавши назву змінної в дужках.
+- Модифікація рядків символів:
+  - Використовуйте `+` для об'єднання (конкатенації) рядків.
+  - Використовуйте `*`, щоб повторити рядок задану кількість разів.
+  - Числа та рядки не можна додавати один до іншого.
+    - Перетворити рядок на ціле число: `int(...)`.
+    - Перетворити ціле число на рядок : `str(...)`.
 
 ## [Вбудовані функції та Довідка](episodes/04-built-in.md)
 
-- To add a comment, place `#` before the thing you do not with to be executed.
-- Commonly used built-in functions:
-  - `min()` finds the smallest value.
-  - `max()` finds the largest value.
-  - `round()` rounds off a floating point number.
-  - `help()` displays documentation for the function in the parenthesis.
-    - Other ways to get help include holding down `shift` and pressing `tab` in Jupyter Notebooks.
+- Щоб додати коментар, поставте `#` перед тим, що ви не хочете виконувати.
+- Вбудовані функції, які часто використовуються:
+  - `min()` визначає найменше значення.
+  - `max()` визначає найбільше значення.
+  - `round()` округлює число з плаваючою комою.
+  - `help()` відображає документацію для функції в дужках.
+    - Серед інших способів отримання допомоги — одночасне натискання `shift` і `tab` у блокнотах Jupyter.
 
 ## [Бібліотеки](episodes/06-libraries.md)
 
-- Importing a library:
-  - Use `import ...` to load a library.
-  - Refer to this library by using `module_name.thing_name`.
-    - `.` indicates 'part of'.
-- To import a specific item from a library: `from ... import ...`
-- To import a library using an alias: `import ... as ...`
-- Importing the math library: `import math`
-  - Example of referring to an item with the module's name: `math.cos(math.pi)`.
-- Importing the plotting library as an alias: `import matplotlib as mpl`
+- Імпорт бібліотеки:
+  - Використовуйте `import ...` для завантаження бібліотеки.
+  - Звертайтеся до цієї бібліотеки у форматі `module_name.thing_name`.
+    - Крапка `.` вказує на 'частину'.
+- Щоб імпортувати певний елемент із бібліотеки, використовуйте команду `from ...  import ...`
+- Щоб імпортувати бібліотеку та створити її псевдонім, використовуйте команду `import ...  as ...`
+- Імпорт математичної бібліотеки: `import math`
+  - Приклад звернення до елемента за допомогою імені модуля: `math.cos(math.pi)`.
+- Імпорт графічної бібліотеки та позначення її за допомогою псевдоніма: `import matplotlib as mpl`
 
-## [Reading Tabular Data into DataFrames](episodes/07-reading-tabular.md)
+## [Імпорт табличних даних у датафрейми](episodes/07-reading-tabular.md)
 
-- Use the pandas library to do statistics on tabular data. Load with `import pandas as pd`.
-  - To read in a csv: `pd.read_csv()`, including the path name in the parenthesis.
-    - To specify a column's values should be used as row headings: `pd.read_csv('path', index_col='column name')`, where path and column name should be replaced with the relevant values.
-- To get more information about a DataFrame, use `DataFrame.info`, replacing `DataFrame` with the variable name of your DataFrame.
-- Use `DataFrame.columns` to view the column names.
-- Use `DataFrame.T` to transpose a DataFrame.
-- Use `DataFrame.describe` to get summary statistics about your data.
+- Використовуйте бібліотеку pandas для статистичного аналізу табличних даних. Завантажуйте її за допомогою `import pandas as pd`.
+  - Щоб прочитати дані у файлі csv, використовуйте команду: `pd.read_csv()`, вказавши шлях до файлу в дужках.
+    - Щоб використовувати значення стовпця як заголовки рядків: використовуйте `pd.read_csv('path', index_col='column name')`, де `path` та `column name` слід замінити відповідними значеннями.
+- Щоб дізнатися більше про датафрейм, використовуйте `DataFrame.info`, замінивши `DataFrame` назвою відповідної змінної.
+- Використовуйте команду `DataFrame.columns` для перегляду назв стовпців.
+- Використовуйте `DataFrame.T` для транспонування датафрейму (тобто, щоб поміняти рядки та стовпці місцями).
+- Використовуйте `DataFrame.describe`, щоб отримати підсумкову статистику для ваших даних.
 
-## [Pandas DataFrames](episodes/08-data-frames.md)
+## [Датафрейми Pandas](episodes/08-data-frames.md)
 
-- Select data using `[i,j]`
-  - To select by entry position: `DataFrame.iloc[..., ...]`
-    - This is inclusive of everything except the final index.
-  - To select by entry label: `DataFrame.loc[..., ...]`
-    - Can select multiple rows or columns by listing labels.
-    - This is inclusive to both ends.
-  - Use `:` to select all rows or columns.
-- Can also select data based on values using `True` and `False`. This is a Boolean mask.
-  - `mask = subset > 10000`
-  - We can then use this to select values.
-- To use a select-apply-combine operation we use `data.apply(lambda x: x > x.mean())` where `mean()` can be any operation the user would like to be applied to x.
+- Вибирайте дані за допомогою `[i,j]`
+  - Вибір за індексом: `DataFrame.iloc[..., ...]`
+    - Це включає весь діапазон, крім останнього індексу.
+  - Для вибору за міткою елемента використовуйте: `DataFrame.loc[..., ...]`
+    - Можна вибрати кілька рядків або стовпців, вказавши їх діапазон.
+    - Включає і початкове, і кінцеве значення.
+  - Використовуйте `:`, щоб обрати всі рядки або стовпці.
+- Також можна вибирати дані на основі булевих значень `True` та `False`. Це булева маска.
+  - Наприклад, `mask = subset > 10000`
+  - Ми можемо потім використовувати вище визначену маску для вибору значень.
+- Формат операції select-apply-combine (вибрати-застосувати-комбінувати) є таким: `data.apply(lambda x: x > x.mean())`, де `mean()` може бути будь-якою операцією, яку користувач хоче застосувати до `x`.
 
 ## [Побудова графіків](episodes/09-plotting.md)
 
-- The most widely used plotting library is `matplotlib`.
-  - Usually imported using `import matplotlib.pyplot as plt`.
-  - To plot we use the command `plt.plot(time, position)`.
-  - To create a legend use `plt.legend(['label1', 'label2'], loc='upper left')`
-    - Can also define labels within the plot statements by using `plt.plot(time, position, label='label')`. To make the legend show up, use `plt.legend()`
-  - To label x and y axis `plt.xlabel('label')` and `plt.ylabel('label')` are used.
-- Pandas DataFrames can be used to plot by using `DataFrame.plot()`. Any operations that can be used on a DataFrame can be applied while plotting.
-  - To plot a bar plot `data.plot(kind='bar')`
+- Найбільш широко використовуваною бібліотекою побудови графіків є `matplotlib`.
+  - Зазвичай імпортується за допомогою `import matplotlib.pyplot as plt`.
+  - Для побудови графіків використовується команда `plt.plot(time, position)`.
+  - Для створення легенди використовується команда `plt.legend(['label1', 'label2'], loc='upper left')`
+    - Можна також визначати мітки безпосередньо в операторах `plot` за допомогою команди `plt.plot(time, position, label='label')`. Щоб зобразити легенду, використовуйте `plt.legend()`
+  - Для позначення осей x і y використовуються команди `plt.xlabel('label')` та `plt.ylabel('label')`.
+- Графіки можна будувати безпосередньо з датафреймів Pandas, застосовуючи команду `DataFrame.plot()`. Будь-які операції, які можна використовувати для датафреймів, можна застосовувати під час побудови графіків.
+  - Для побудови стовпчастої діаграми застосовуйте команду `data.plot(kind='bar')`
 
 ```python
 import matplotlib.puplot as plot
@@ -108,24 +108,24 @@ plt.ylabel('y axis label')
 plt.legend()
 ```
 
-## [Lists](episodes/11-lists.md)
+## [Списки](episodes/11-lists.md)
 
-- Defined within `[...]` and separated by `,`.
-  - An empty list can be created by using `[]`.
-- Can use `len(...)` to determine how many values are in a list.
-- Can index just as done in previous lessons.
-  - Indexing can be used to reassign values `list_name[0] = newvalue`.
-- To add an item to a list use `list_name.append()`, with the item to append in the parenthesis.
-- To combine two lists use `list_name_1.extend(list_name_2)`.
-- To remove an item from a list use `del list_name[index]`.
+- Визначаються у `[...]`, де елементи розділені комами `,`.
+  - Порожній список можна створити за допомогою `[]`.
+- Для визначення кількості елементів у списку, можна використовувати `len(...)`.
+- Значення у списку можна індексувати так само, як це виконувалось в попередніх уроках.
+  - Індексація дозволяє змінювати значення списку: `list_name[0] = newvalue`.
+- Щоб додати елемент до списку, використовуйте `list_name.append()`, вказавши елемент у дужках.
+- Щоб об’єднати два списки, використовуйте `list_name_1.extend(list_name_2)`.
+- Щоб видалити елемент зі списку, використовуйте `del list_name[index]`.
 
 ## [Цикли for](episodes/12-for-loops.md)
 
-- Start a for loop with `for number in [1, 2, 3]:`, with the following lines indented.
-  - `[1, 2, 3]` is considered the collection.
-  - `number` is the loop variable.
-  - The action following the collection is the body.
-- To iterate over a sequence of numbers use `range(start, end)`
+- Почніть цикл for з `for number in [1,2,3]:` з відступом у наступних рядках.
+  - `[1, 2, 3]` розглядається як колекція.
+  - `number` є змінною циклу.
+  - Дії у рядках, які пишуться із відступом, є тілом циклу.
+- Для перебору послідовності цілих чисел використовуйте `range(start, end)`
 
 ```python
 for number in range(0,5):
@@ -134,18 +134,18 @@ for number in range(0,5):
 
 ## [Умовні оператори](episodes/13-conditionals.md)
 
-- Defined similarly to a loop, using `if variable conditional value:`.
-  - For example, `if variable > 5:`.
-- Use `elif:` for additional tests.
-- Use `else:` for when if statement is not true.
-- Can combine more than one conditional by using `and` or `or`.
-- Often used in combination with for loops.
-- Conditions that can be used:
-  - `==` equal to.
-  - `>=` greater than or equal to.
-  - `<=` less than or equal to.
-  - `>` greater than.
-  - `<` less than.
+- Визначаються подібно до циклу з використанням формату `if variable conditional value:`.
+  - Наприклад, `if variable > 5:`.
+- Використовуйте `elif:` для додаткових перевірок.
+- Використовуйте `else:`, якщо твердження `if` є хибним.
+- Можна об’єднати більше ніж одну умову за допомогою `and` або `or`.
+- Часто використовується в поєднанні з циклами `for`.
+- Умови, які можна використовувати:
+  - `==` дорівнює.
+  - `>=` більше або дорівнює.
+  - `<=` менше або дорівнює.
+  - `>` більше за.
+  - `<` менше за.
 
 ```python
 for m in [3, 6, 7, 2, 8]:
@@ -159,13 +159,13 @@ for m in [3, 6, 7, 2, 8]:
 
 ## [Перегляд наборів даних в циклі](episodes/14-looping-data-sets.md)
 
-- Use a for loop: `for filename in [file1, file2]:`
-- To find a set of files using a pattern use `glob.glob`
-  - Must import first using `import glob`.
-  - `*` indicates "match zero or more characters"
-  - `?` indicates "match exactly one character"
-    - For example: `glob.glob(*.txt)` will find all files that end with `.txt` in the current directory.
-- Combine these by writing a loop using: `for filename in glob.glob(*.txt):`
+- Використовуйте цикл `for` для перебору файлів: `for filename in [file1, file2]:`
+- Щоб знайти набір файлів за шаблоном, використовуйте `glob.glob`
+  - Спочатку потрібно імпортувати відповідний модуль за допомогою `import glob`.
+  - `*` вказує, що "нуль або більше символів збігаються"
+  - `?` вказує, що "тільки один символ збігається"
+    - Наприклад: `glob.glob(*.txt)` знайде всі файли з розширенням `.txt` у поточному каталозі.
+- Поєднайте це, написавши цикл: `for filename in glob.glob(*.txt):`
 
 ```python
 for filename in glob.glob(*.txt):
@@ -174,9 +174,9 @@ for filename in glob.glob(*.txt):
 
 ## [Написання функцій](episodes/16-writing-functions.md)
 
-- Define a function using `def function_name(parameters):`. Replace `parameters` with the variables to use when the function is executed.
-- Run by using `function_name(parameters)`.
-- To return a result to the caller use `return ...` in the function.
+- Визначайте функцію за допомогою `def function_name(parameters):`. Змініть `parameters` на змінні, що використовуються при виконанні функції.
+- Викликайте функцію за допомогою `function_name(parameters)`.
+- Щоб повернути результат до місця виклику, використовуйте `return ...` в тілі функції.
 
 ```python
 def add_numbers(a, b):
@@ -188,72 +188,72 @@ add_numbers(1, 4)
 
 ## [Область видимості змінної](episodes/17-scope.md)
 
-- A local variable is defined in a function and can only be seen and used within that function.
-- A global variable is defined outside of a function and can be seen or used anywhere after definition.
+- Локальна змінна визначається у функції та може використовуватися лише всередині цієї функції.
+- Глобальна змінна визначається поза функцією, і її можна побачити або використати будь-де після її визначення.
 
 ## [Стиль програмування](episodes/18-style.md)
 
-- Document your code.
-- Use clear and meaningful variable names.
-- Follow [the PEP8 style guide](https://www.python.org/dev/peps/pep-0008) when setting up your code.
-- Use assertions to check for internal errors.
-- Use docstrings to provide help.
+- Документуйте свій код.
+- Використовуйте чіткі та зрозумілі назви змінних.
+- Притримуйтесь [рекомендацій PEP8](https://www.python.org/dev/peps/pep-0008) під час створення коду.
+- Використовуйте твердження для перевірки внутрішніх помилок.
+- Використовуйте рядки документації (docstrings) для створення довідки.
 
-## Glossary
+## Словник
 
-Arguments
-:     Values passed to functions.
+Аргументи
+:     Значення, що передаються функціям.
 
-Array
-:     A container holding elements of the same type.
+Масив
+:     Контейнер, що містить елементи одного типу.
 
-Boolean
-:     An object composed of `True` and `False`.
+Булевий
+:    Об’єкт, що складається зі значень `True` та `False`.
 
-DataFrame
-:     The way Pandas represents a table; a collection of series.
+Датафрейм
+:     Засіб подання таблиць у Pandas; складається із серій.
 
-Element
-:     An item in a list or an array. For a string, these are the individual characters.
+Елемент
+:     Окреме значення у списку або масиві. Для рядка символів це кожен окремий символ.
 
-Function
-:     A block of code that can be called and re-used elsewhere.
+Функція
+:     Блок коду, який можна викликати та повторно використовувати в інших місцях.
 
-Global variable
-:     A variable defined outside of a function that can be used anywhere.
+Глобальна змінна
+:     Змінна, визначена поза функцією. Таку змінну можна використовувати будь-де.
 
-Index
-:     The position of a given element.
+Індекс
+:     Позиція певного елемента.
 
 Jupyter Notebook
-:     Interactive coding environment allowing a combination of code and markdown.
+:     (Блокнот Jupyter) Інтерактивне середовище кодування, що дозволяє поєднувати код і текст у форматі Markdown.
 
-Library
-:     A collection of files containing functions used by other programs.
+Бібліотека
+:     Колекція файлів, що містять функції, які використовуються іншими програмами.
 
-Local Variable
-:     A variable defined inside of a function that can only be used inside of that function.
+Локальна змінна
+:     Змінна, визначена всередині функції. Її можна використовувати лише всередині цієї функції.
 
-Mask
-:     A boolean object used for selecting data from another object.
+Маска
+:     Булевий об’єкт, який використовується для вибору даних з іншого об’єкта.
 
-Method
-:     An action tied to a particular object. Called by using `object.method`.
+Метод
+:     Дія, прив'язана до певного об'єкта. Викликається за допомогою `object.method`.
 
-Modules
-:     The files within a library containing functions used by other programs.
+Модулі
+:     Файли в бібліотеці, що містять функції, які використовуються іншими програмами.
 
-Parameters
-:     Variables used when executing a function.
+Параметри
+:     Змінні, що використовуються під час виклику функції.
 
-Series
-:     A Pandas data structure to represent a column.
+Серія
+:     Структура даних Pandas, що представляє стовпець.
 
-Substring
-:     A part of a string.
+Підрядок
+:     Частина рядка символів.
 
-Variables
-:     Names for values.
+Змінні
+:     Назви, що присвоюються значенням.
 
 
 
