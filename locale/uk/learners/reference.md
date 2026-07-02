@@ -21,10 +21,10 @@ title: 'Довідник'
   - Імена змінних не можуть починатися з цифри.
   - Слід уникати імен змінних, які починаються з підкреслення.
 - Використовуйте `print(...)` для виведення значень у вигляді тексту.
-- Can use indexing on strings.
+- До рядків символів можна застосовувати індексацію.
   - Індексація починається з 0.
   - Позиція вказується у квадратних дужках `[position]` після імені змінної.
-  - Take a slice using `[start:stop]`. Це створює копію частини оригінального рядка символів.
+  - Робіть зріз за допомогою `[start:stop]`. Це створює копію частини оригінального рядка символів.
     - `start` є індексом першого елемента.
     - `stop` є індексом елемента після останнього потрібного елемента.
 - Використовуйте `len(...)` для визначення довжини змінної або рядка.
@@ -58,7 +58,7 @@ title: 'Довідник'
 - Імпорт бібліотеки:
   - Використовуйте `import ...` для завантаження бібліотеки.
   - Звертайтеся до цієї бібліотеки у форматі `module_name.thing_name`.
-    - `.` indicates 'part of'.
+    - Крапка `.` вказує на 'частину'.
 - Щоб імпортувати певний елемент із бібліотеки, використовуйте команду `from ...  import ...`
 - Щоб імпортувати бібліотеку та створити її псевдонім, використовуйте команду `import ...  as ...`
 - Імпорт математичної бібліотеки: `import math`
@@ -72,7 +72,7 @@ title: 'Довідник'
     - Щоб використовувати значення стовпця як заголовки рядків: використовуйте `pd.read_csv('path', index_col='column name')`, де `path` та `column name` слід замінити відповідними значеннями.
 - Щоб дізнатися більше про датафрейм, використовуйте `DataFrame.info`, замінивши `DataFrame` назвою відповідної змінної.
 - Використовуйте команду `DataFrame.columns` для перегляду назв стовпців.
-- Use `DataFrame.T` to transpose a DataFrame.
+- Використовуйте `DataFrame.T` для транспонування датафрейму (тобто, щоб поміняти рядки та стовпці місцями).
 - Використовуйте `DataFrame.describe`, щоб отримати підсумкову статистику для ваших даних.
 
 ## [Датафрейми Pandas](episodes/08-data-frames.md)
@@ -91,14 +91,14 @@ title: 'Довідник'
 
 ## [Побудова графіків](episodes/09-plotting.md)
 
-- The most widely used plotting library is `matplotlib`.
+- Найбільш широко використовуваною бібліотекою побудови графіків є `matplotlib`.
   - Зазвичай імпортується за допомогою `import matplotlib.pyplot as plt`.
   - Для побудови графіків використовується команда `plt.plot(time, position)`.
   - Для створення легенди використовується команда `plt.legend(['label1', 'label2'], loc='upper left')`
-    - Can also define labels within the plot statements by using `plt.plot(time, position, label='label')`. To make the legend show up, use `plt.legend()`
+    - Можна також визначати мітки безпосередньо в операторах `plot` за допомогою команди `plt.plot(time, position, label='label')`. Щоб зобразити легенду, використовуйте `plt.legend()`
   - Для позначення осей x і y використовуються команди `plt.xlabel('label')` та `plt.ylabel('label')`.
 - Графіки можна будувати безпосередньо з датафреймів Pandas, застосовуючи команду `DataFrame.plot()`. Будь-які операції, які можна використовувати для датафреймів, можна застосовувати під час побудови графіків.
-  - To plot a bar plot `data.plot(kind='bar')`
+  - Для побудови стовпчастої діаграми застосовуйте команду `data.plot(kind='bar')`
 
 ```python
 import matplotlib.puplot as plot
@@ -110,22 +110,22 @@ plt.legend()
 
 ## [Списки](episodes/11-lists.md)
 
-- Defined within `[...]` and separated by `,`.
-  - An empty list can be created by using `[]`.
-- Can use `len(...)` to determine how many values are in a list.
-- Can index just as done in previous lessons.
-  - Indexing can be used to reassign values `list_name[0] = newvalue`.
-- To add an item to a list use `list_name.append()`, with the item to append in the parenthesis.
-- To combine two lists use `list_name_1.extend(list_name_2)`.
-- To remove an item from a list use `del list_name[index]`.
+- Визначаються у `[...]`, де елементи розділені комами `,`.
+  - Порожній список можна створити за допомогою `[]`.
+- Для визначення кількості елементів у списку, можна використовувати `len(...)`.
+- Значення у списку можна індексувати так само, як це виконувалось в попередніх уроках.
+  - Індексація дозволяє змінювати значення списку: `list_name[0] = newvalue`.
+- Щоб додати елемент до списку, використовуйте `list_name.append()`, вказавши елемент у дужках.
+- Щоб об’єднати два списки, використовуйте `list_name_1.extend(list_name_2)`.
+- Щоб видалити елемент зі списку, використовуйте `del list_name[index]`.
 
 ## [Цикли for](episodes/12-for-loops.md)
 
-- Start a for loop with `for number in [1, 2, 3]:`, with the following lines indented.
-  - `[1, 2, 3]` is considered the collection.
-  - `number` is the loop variable.
-  - The action following the collection is the body.
-- To iterate over a sequence of numbers use `range(start, end)`
+- Почніть цикл for з `for number in [1,2,3]:` з відступом у наступних рядках.
+  - `[1, 2, 3]` розглядається як колекція.
+  - `number` є змінною циклу.
+  - Дії у рядках, які пишуться із відступом, є тілом циклу.
+- Для перебору послідовності цілих чисел використовуйте `range(start, end)`
 
 ```python
 for number in range(0,5):
@@ -134,18 +134,18 @@ for number in range(0,5):
 
 ## [Умовні оператори](episodes/13-conditionals.md)
 
-- Defined similarly to a loop, using `if variable conditional value:`.
-  - For example, `if variable > 5:`.
-- Use `elif:` for additional tests.
-- Use `else:` for when if statement is not true.
-- Can combine more than one conditional by using `and` or `or`.
-- Often used in combination with for loops.
-- Conditions that can be used:
-  - `==` equal to.
-  - `>=` greater than or equal to.
-  - `<=` less than or equal to.
-  - `>` greater than.
-  - `<` less than.
+- Визначаються подібно до циклу з використанням формату `if variable conditional value:`.
+  - Наприклад, `if variable > 5:`.
+- Використовуйте `elif:` для додаткових перевірок.
+- Використовуйте `else:`, якщо твердження `if` є хибним.
+- Можна об’єднати більше ніж одну умову за допомогою `and` або `or`.
+- Часто використовується в поєднанні з циклами `for`.
+- Умови, які можна використовувати:
+  - `==` дорівнює.
+  - `>=` більше або дорівнює.
+  - `<=` менше або дорівнює.
+  - `>` більше за.
+  - `<` менше за.
 
 ```python
 for m in [3, 6, 7, 2, 8]:
@@ -159,13 +159,13 @@ for m in [3, 6, 7, 2, 8]:
 
 ## [Перегляд наборів даних в циклі](episodes/14-looping-data-sets.md)
 
-- Use a for loop: `for filename in [file1, file2]:`
-- To find a set of files using a pattern use `glob.glob`
-  - Must import first using `import glob`.
-  - `*` indicates "match zero or more characters"
-  - `?` indicates "match exactly one character"
-    - For example: `glob.glob(*.txt)` will find all files that end with `.txt` in the current directory.
-- Combine these by writing a loop using: `for filename in glob.glob(*.txt):`
+- Використовуйте цикл `for` для перебору файлів: `for filename in [file1, file2]:`
+- Щоб знайти набір файлів за шаблоном, використовуйте `glob.glob`
+  - Спочатку потрібно імпортувати відповідний модуль за допомогою `import glob`.
+  - `*` вказує, що "нуль або більше символів збігаються"
+  - `?` вказує, що "тільки один символ збігається"
+    - Наприклад: `glob.glob(*.txt)` знайде всі файли з розширенням `.txt` у поточному каталозі.
+- Поєднайте це, написавши цикл: `for filename in glob.glob(*.txt):`
 
 ```python
 for filename in glob.glob(*.txt):
@@ -174,9 +174,9 @@ for filename in glob.glob(*.txt):
 
 ## [Написання функцій](episodes/16-writing-functions.md)
 
-- Define a function using `def function_name(parameters):`. Replace `parameters` with the variables to use when the function is executed.
-- Run by using `function_name(parameters)`.
-- To return a result to the caller use `return ...` in the function.
+- Визначайте функцію за допомогою `def function_name(parameters):`. Змініть `parameters` на змінні, що використовуються при виконанні функції.
+- Викликайте функцію за допомогою `function_name(parameters)`.
+- Щоб повернути результат до місця виклику, використовуйте `return ...` в тілі функції.
 
 ```python
 def add_numbers(a, b):
@@ -188,72 +188,72 @@ add_numbers(1, 4)
 
 ## [Область видимості змінної](episodes/17-scope.md)
 
-- A local variable is defined in a function and can only be seen and used within that function.
-- A global variable is defined outside of a function and can be seen or used anywhere after definition.
+- Локальна змінна визначається у функції та може використовуватися лише всередині цієї функції.
+- Глобальна змінна визначається поза функцією, і її можна побачити або використати будь-де після її визначення.
 
 ## [Стиль програмування](episodes/18-style.md)
 
-- Document your code.
-- Use clear and meaningful variable names.
-- Follow [the PEP8 style guide](https://www.python.org/dev/peps/pep-0008) when setting up your code.
-- Use assertions to check for internal errors.
-- Use docstrings to provide help.
+- Документуйте свій код.
+- Використовуйте чіткі та зрозумілі назви змінних.
+- Притримуйтесь [рекомендацій PEP8](https://www.python.org/dev/peps/pep-0008) під час створення коду.
+- Використовуйте твердження для перевірки внутрішніх помилок.
+- Використовуйте рядки документації (docstrings) для створення довідки.
 
-## Glossary
+## Словник
 
-Arguments
-:     Values passed to functions.
+Аргументи
+:     Значення, що передаються функціям.
 
-Array
-:     A container holding elements of the same type.
+Масив
+:     Контейнер, що містить елементи одного типу.
 
-Boolean
-:     An object composed of `True` and `False`.
+Булевий
+:    Об’єкт, що складається зі значень `True` та `False`.
 
-DataFrame
-:     The way Pandas represents a table; a collection of series.
+Датафрейм
+:     Засіб подання таблиць у Pandas; складається із серій.
 
-Element
-:     An item in a list or an array. For a string, these are the individual characters.
+Елемент
+:     Окреме значення у списку або масиві. Для рядка символів це кожен окремий символ.
 
-Function
-:     A block of code that can be called and re-used elsewhere.
+Функція
+:     Блок коду, який можна викликати та повторно використовувати в інших місцях.
 
-Global variable
-:     A variable defined outside of a function that can be used anywhere.
+Глобальна змінна
+:     Змінна, визначена поза функцією. Таку змінну можна використовувати будь-де.
 
-Index
-:     The position of a given element.
+Індекс
+:     Позиція певного елемента.
 
 Jupyter Notebook
-:     Interactive coding environment allowing a combination of code and markdown.
+:     (Блокнот Jupyter) Інтерактивне середовище кодування, що дозволяє поєднувати код і текст у форматі Markdown.
 
-Library
-:     A collection of files containing functions used by other programs.
+Бібліотека
+:     Колекція файлів, що містять функції, які використовуються іншими програмами.
 
-Local Variable
-:     A variable defined inside of a function that can only be used inside of that function.
+Локальна змінна
+:     Змінна, визначена всередині функції. Її можна використовувати лише всередині цієї функції.
 
-Mask
-:     A boolean object used for selecting data from another object.
+Маска
+:     Булевий об’єкт, який використовується для вибору даних з іншого об’єкта.
 
-Method
-:     An action tied to a particular object. Called by using `object.method`.
+Метод
+:     Дія, прив'язана до певного об'єкта. Викликається за допомогою `object.method`.
 
-Modules
-:     The files within a library containing functions used by other programs.
+Модулі
+:     Файли в бібліотеці, що містять функції, які використовуються іншими програмами.
 
-Parameters
-:     Variables used when executing a function.
+Параметри
+:     Змінні, що використовуються під час виклику функції.
 
-Series
-:     A Pandas data structure to represent a column.
+Серія
+:     Структура даних Pandas, що представляє стовпець.
 
-Substring
-:     A part of a string.
+Підрядок
+:     Частина рядка символів.
 
-Variables
-:     Names for values.
+Змінні
+:     Назви, що присвоюються значенням.
 
 
 
